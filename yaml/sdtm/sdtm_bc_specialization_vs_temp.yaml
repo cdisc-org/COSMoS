@@ -1,0 +1,123 @@
+domain: VS
+vlm_group_id: TEMP
+group_short_name: Temperature
+vlm_source: VS.VSTESTCD
+sdtmig_start_version: 3-2
+sdtmig_end_version: .
+biomedical_concept_id: C174446
+sdtm_variable:
+  - id: VSTESTCD
+    codelist:
+      id: C65047
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C65047
+      submission_value: VSTESTCD
+    assigned_term:
+      code: C174446
+      value: TEMP
+    role: Topic
+    relationship:
+      subject: VSTESTCD
+      linking_phrase: is decoded by the value in
+      predicate_term: IS_DECODED_BY
+      object: VSTEST
+    mandatory_variable: true 
+    comparator: EQ
+  - id: VSTEST
+    codelist:
+      id: C67154
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67154
+      submission_value: VSTEST
+    assigned_term:
+      code: C174446
+      value: Body Temperature
+    role: Qualifier
+    relationship:
+      subject: VSTEST
+      linking_phrase: decodes the value in
+      predicate_term: DECODES
+      object: VSTESTCD
+    mandatory_variable: true 
+  - id: VSORRES
+    biomedical_concept_dec_id: C173522
+    role: Qualifier
+    relationship:
+      subject: VSORRES
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: VSTESTCD
+    data_type: float
+    length: 8
+    format: 8.3
+    significant_digits: 3
+    mandatory_variable: true 
+    origin_type: Collected
+    origin_source: Investigator
+    vlm_target: true 
+  - id: VSORRESU
+    biomedical_concept_dec_id: C44276
+    codelist:
+      id: C66770
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
+      submission_value: VSRESU
+      subset_codelist: VSRESU_TEMP
+    role: Qualifier
+    relationship:
+      subject: VSORRESUis the unit for the value in
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
+      object: VSORRES
+    mandatory_variable: true 
+    vlm_target: true 
+  - id: VSSTRESC
+    biomedical_concept_dec_id: C173522
+    role: Qualifier
+    relationship:
+      subject: VSSTRESC
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: VSTESTCD
+    data_type: float
+    length: 8
+    format: 8.3
+    significant_digits: 3
+    vlm_target: true 
+  - id: VSSTRESN
+    biomedical_concept_dec_id: C173522
+    role: Qualifier
+    relationship:
+      subject: VSSTRESN
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: VSTESTCD
+    data_type: float
+    length: 8
+    format: 8.3
+    significant_digits: 3
+    vlm_target: true 
+  - id: VSSTRESU
+    biomedical_concept_dec_id: C44276
+    codelist:
+      id: C66770
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
+      submission_value: VSRESU
+    role: Qualifier
+    relationship:
+      subject: VSSTRESU
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
+      object: VSSTRESN
+    vlm_target: true 
+  - id: VSLOC
+    biomedical_concept_dec_id: C13717
+    codelist:
+      id: C74456
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C74456
+      submission_value: LOC
+      subset_codelist: VSLOC_TEMP
+    role: Qualifier
+    relationship:
+      subject: VSLOC
+      linking_phrase: specifies the anatomical location of the performance of the test in
+      predicate_term: SPECIFIES
+      object: VSTESTCD
+    comparator: IN

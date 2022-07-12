@@ -1,0 +1,34 @@
+id: C174446
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C174446
+parent_id: C49672
+bc_category: Vital Signs
+short_name: Body Temperature
+result_scale: Quantitative
+definition: "A measurement of the temperature of the body."
+coding:
+  - code: 8310-5
+    system: http://loinc.org/
+    system_name: LOINC
+data_element_concept:
+  - id: C173522
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C173522
+    label: Vital Signs Result
+    data_type: decimal
+  - id: C44276
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C44276
+    label: Unit of Temperature
+    data_type: string
+    example_set:
+       - Fahrenheit
+       - Celsius
+       - Kelvin
+  - id: C83088
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C83088
+    label: Vital Signs Location
+    data_type: string
+    example_set:
+       - Axilla
+       - Ear
+       - Forehead
+       - Oral Cavity
+       - Rectum

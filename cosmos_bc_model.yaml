@@ -1,0 +1,123 @@
+id: https://www.cdisc.org/cosmos/1-0
+name: COSMoS-Biomedical-Concepts-Schema
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+default_range: string
+
+classes:
+
+  IdentifiableThing:
+    abstract: true
+    description: >-
+      A databased entity, concept or class. This is a generic class that is the root
+      of all the other classes.
+    slots:
+      - id
+      - id_uri
+
+  BiomedicalConcept:
+    tree_root: true
+    is_a: IdentifiableThing
+    slots:
+      - bc_category
+      - parent_id
+      - short_name
+      - result_scale
+      - definition
+      - coding
+      - data_element_concept
+    slot_usage:
+      id:
+        description: Biomedical Concept identifier
+      id_uri:
+        description: Biomedical Concept identifier uri link
+
+  Coding:
+    slots:
+      - code
+      - system
+      - system_name
+
+  DataElementConcept:
+    is_a: IdentifiableThing
+    slots:
+      - label
+      - data_type
+      - example_set
+    slot_usage:
+      id:
+        description: Biomedical Concept DEC idenfifier
+      id_uri:
+        description: Biomedical Concept DEC idenfifier uri link
+
+slots:
+  id:
+    description: An identifier that uniquely represents an entity
+    identifier: true
+    required: true
+    range: string
+  id_uri:
+    range: uri
+  bc_category:
+    required: true
+    description: Biomedical Concept category for the faciliation of API search and extract
+  parent_id:
+    range: string
+    description: Parent Biomedical Concept identifier
+  short_name:
+    required: true
+    description: Biomedical Concept short name
+  result_scale:
+    range: BiomedicalConceptResultScale
+    description: Biomedical Concept result scale
+  definition:
+    required: true
+    description: Biomedical Concept definition
+  coding:
+    multivalued: true
+    inlined_as_list: true
+    range: Coding
+  system:
+    required: true
+    description: Identifies the coding system that defines the code which is considered a synonym of a Biomedical Concept. If the code is taken from a code system resource then the URL of the code system should be used
+  system_name:
+    description: Human readable name for the code system
+  code:
+    required: true
+    description: A string pattern that identifies a coding concept as defined by the code system
+  data_element_concept:
+    multivalued: true
+    inlined_as_list: true
+    range: DataElementConcept
+    description: Data Element Concept
+  label:
+    range: string
+    required: true
+  data_type:
+    range: DataElementConceptDataType
+    recommended: true
+  example_set:
+    multivalued: true
+    inlined_as_list: true
+
+enums:
+
+  BiomedicalConceptResultScale:
+    permissible_values:
+      Quantitative:
+      Ordinal:
+      Nominal:
+      Narrative:
+
+  DataElementConceptDataType:
+    permissible_values:
+      boolean:
+      decimal:
+      integer:
+      string:
+      uri:

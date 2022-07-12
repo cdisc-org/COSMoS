@@ -1,0 +1,85 @@
+%macro generate_bc(excel_file=, range=, type=, out_folder=, debug=1);
+
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type);
+
+  data bc__&type;
+    set bc_&type(where=(not missing(bc_id)));
+  run;  
+
+  %if &debug %then %do;
+    
+    ods listing close;
+    ods html5 file="get_bc_&range..html";
+
+    proc contents data=bc_&type varnum;
+    run;
+    proc print data=bc_&type;
+    run;
+      
+    ods html5 close;
+    ods listing;
+
+  %end;
+
+  data _null_;
+    set work.bc_&type;
+    retain count 0;
+    length outname value $100 qDefinition $1024;
+    by BC_ID notsorted;
+    outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
+    file dummy filevar=outname dlm=",";
+    if first.bc_id and not(missing(bc_id)) then do;
+      count=0;
+      put "id:" +1 BC_ID;
+      put 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' bc_id;
+      if not missing(parent_bc_id) then do;
+        put "parent_id:" +1 parent_bc_id;
+        * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' parent_bc_id;
+      end;
+      put "bc_category:" +1 bc_category;
+      put "short_name:" +1 short_name;
+      if not missing(result_scale) then put "result_scale:" +1 Result_Scale;
+      if not missing(definition) then do;
+        qDefinition = quote(strip(definition));
+        put "definition:" +1 qDefinition;
+      end;
+      if not missing(system) then do;
+        put "coding:";
+        put +2 "- code:" +1 code; 
+        put +4 "system:" +1 system;
+        if not missing(system_name) then put +4 "system_name:" +1 system_name; 
+      end;
+    end;
+    
+    count+1;
+    if count=2 and not missing(dec_id) then put "data_element_concept:";
+
+    if not missing(dec_id) then do;
+      put "  - id:" +1 dec_id;
+      put +4 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' dec_id;
+      put +4 "label:" +1 dec_label; 
+      if not missing(data_type) then put +4 "data_type:" +1 data_type; 
+      if not missing(example_set) then do;
+        put +4 "example_set:";
+        countwords=countw(example_set, ";");
+        do i=1 to countwords;
+          value=strip(scan(example_set, i, ";"));
+          put +7 "-" +1 value;    
+        end;  
+      end;
+    end;  
+  run;
+
+%mend generate_bc;
+
+
+%let root=C:\_github\cdisc-org\COSMoS;
+%let _debug=0;
+
+options sasautos = ("&root/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
+options ls=256;
+
+%generate_bc(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=.\yaml\bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=.\yaml\bc, range=%str(Conceptual LB (Common) BC));
+
+%sysexec validate_bc.cmd;

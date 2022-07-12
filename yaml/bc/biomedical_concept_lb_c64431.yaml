@@ -1,0 +1,26 @@
+id: C64431
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C64431
+parent_id: C74954
+bc_category: Laboratory Tests
+short_name: Albumin Measurement
+result_scale: Quantitative
+definition: "A quantitative measurement of albumin present in a sample."
+data_element_concept:
+  - id: C36292
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C36292
+    label: Laboratory Test Result
+    data_type: decimal
+  - id: C83309
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C83309
+    label: Laboratory Test Fasting Status
+    data_type: boolean
+  - id: NEW_2
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=NEW_2
+    label: Unit of Mass or Substance Concentration
+    data_type: string
+  - id: C70713
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C70713
+    label: Biospecimen Type
+    data_type: string
+    example_set:
+       - Plasma, Serum, Urine

@@ -1,0 +1,23 @@
+id: C81328
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C81328
+bc_category: Vital Signs
+short_name: Body Weight
+result_scale: Quantitative
+definition: "The weight of a subject."
+coding:
+  - code: 29463-7
+    system: http://loinc.org/
+    system_name: LOINC
+data_element_concept:
+  - id: C173522
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C173522
+    label: Vital Signs Result
+    data_type: decimal
+  - id: C48208
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C48208
+    label: Unit of Weight
+    data_type: string
+    example_set:
+       - Kilogram
+       - Gram
+       - Pound

@@ -1,0 +1,195 @@
+﻿{
+   "$defs": {
+      "BiomedicalConcept": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "bc_category": {
+               "description": "Biomedical Concept category for the faciliation of API search and extract",
+               "type": "string"
+            },
+            "coding": {
+               "items": {
+                  "$ref": "#/$defs/Coding"
+               },
+               "type": "array"
+            },
+            "data_element_concept": {
+               "description": "Data Element Concept",
+               "items": {
+                  "$ref": "#/$defs/DataElementConcept"
+               },
+               "type": "array"
+            },
+            "definition": {
+               "description": "Biomedical Concept definition",
+               "type": "string"
+            },
+            "id": {
+               "description": "Biomedical Concept identifier",
+               "type": "string"
+            },
+            "id_uri": {
+               "description": "Biomedical Concept identifier uri link",
+               "type": "string"
+            },
+            "parent_id": {
+               "description": "Parent Biomedical Concept identifier",
+               "type": "string"
+            },
+            "result_scale": {
+               "$ref": "#/$defs/BiomedicalConceptResultScale",
+               "description": "Biomedical Concept result scale"
+            },
+            "short_name": {
+               "description": "Biomedical Concept short name",
+               "type": "string"
+            }
+         },
+         "required": [
+            "bc_category",
+            "short_name",
+            "definition",
+            "id"
+         ],
+         "title": "BiomedicalConcept",
+         "type": "object"
+      },
+      "BiomedicalConceptResultScale": {
+         "description": "",
+         "enum": [
+            "Quantitative",
+            "Ordinal",
+            "Nominal",
+            "Narrative"
+         ],
+         "title": "BiomedicalConceptResultScale",
+         "type": "string"
+      },
+      "Coding": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "code": {
+               "description": "A string pattern that identifies a coding concept as defined by the code system",
+               "type": "string"
+            },
+            "system": {
+               "description": "Identifies the coding system that defines the code which is considered a synonym of a Biomedical Concept. If the code is taken from a code system resource then the URL of the code system should be used",
+               "type": "string"
+            },
+            "system_name": {
+               "description": "Human readable name for the code system",
+               "type": "string"
+            }
+         },
+         "required": [
+            "code",
+            "system"
+         ],
+         "title": "Coding",
+         "type": "object"
+      },
+      "DataElementConcept": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "data_type": {
+               "$ref": "#/$defs/DataElementConceptDataType"
+            },
+            "example_set": {
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
+            },
+            "id": {
+               "description": "Biomedical Concept DEC idenfifier",
+               "type": "string"
+            },
+            "id_uri": {
+               "description": "Biomedical Concept DEC idenfifier uri link",
+               "type": "string"
+            },
+            "label": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "label",
+            "id"
+         ],
+         "title": "DataElementConcept",
+         "type": "object"
+      },
+      "DataElementConceptDataType": {
+         "description": "",
+         "enum": [
+            "boolean",
+            "decimal",
+            "integer",
+            "string",
+            "uri"
+         ],
+         "title": "DataElementConceptDataType",
+         "type": "string"
+      }
+   },
+   "$id": "https://www.cdisc.org/cosmos/1-0",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
+   "properties": {
+      "bc_category": {
+         "description": "Biomedical Concept category for the faciliation of API search and extract",
+         "type": "string"
+      },
+      "coding": {
+         "items": {
+            "$ref": "#/$defs/Coding"
+         },
+         "type": "array"
+      },
+      "data_element_concept": {
+         "description": "Data Element Concept",
+         "items": {
+            "$ref": "#/$defs/DataElementConcept"
+         },
+         "type": "array"
+      },
+      "definition": {
+         "description": "Biomedical Concept definition",
+         "type": "string"
+      },
+      "id": {
+         "description": "Biomedical Concept identifier",
+         "type": "string"
+      },
+      "id_uri": {
+         "description": "Biomedical Concept identifier uri link",
+         "type": "string"
+      },
+      "parent_id": {
+         "description": "Parent Biomedical Concept identifier",
+         "type": "string"
+      },
+      "result_scale": {
+         "$ref": "#/$defs/BiomedicalConceptResultScale",
+         "description": "Biomedical Concept result scale"
+      },
+      "short_name": {
+         "description": "Biomedical Concept short name",
+         "type": "string"
+      }
+   },
+   "required": [
+      "bc_category",
+      "short_name",
+      "definition",
+      "id"
+   ],
+   "title": "COSMoS-Biomedical-Concepts-Schema",
+   "type": "object",
+   "version": null
+}
+

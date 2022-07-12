@@ -1,0 +1,289 @@
+id: https://www.cdisc.org/cosmos/1-0
+name: COSMoS-Biomedical-Concepts-Schema
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+default_range: string
+
+classes:
+
+  IdentifiableThing:
+    abstract: true
+    description: >-
+      A databased entity, concept or class. This is a generic class that is the root
+      of all the other classes.
+    slots:
+      - id
+      - id_uri
+
+  SDTMGroup:
+    tree_root: true
+    slots:
+      - domain
+      - group_short_name
+      - vlm_group_id
+      - vlm_source
+      - sdtmig_start_version
+      - sdtmig_end_version
+      - biomedical_concept_id
+      - sdtm_variable
+
+  SDTMVariable:
+    is_a: IdentifiableThing
+    slots:
+      - biomedical_concept_dec_id
+      - nsv_flag
+      - codelist
+      - subset_codelist
+      - value_list
+      - assigned_term
+      - role
+      - relationship
+      - data_type
+      - length
+      - format
+      - significant_digits
+      - mandatory_variable
+      - mandatory_value
+      - origin_type
+      - origin_source
+      - comparator
+      - vlm_target
+    slot_usage:
+      id:
+        description: SDTM variable name
+      id_uri:
+        description: SDTM variable name uri link
+
+  RelationShip:
+    attributes:
+      subject:
+        required: true
+        description: Subject in a variable relationship
+      linking_phrase:
+        required: true
+        range: LinkingPhrase
+        description: Variable relationship descriptive linking phrase
+      predicate_term:
+        required: true
+        range: PredicateTerm
+        description: Short variable relatio ship linking phrase for programming purposes
+      object:
+        required: true
+        description: Object in a variable relationship
+
+  CodeList:
+    is_a: IdentifiableThing
+    slots:
+      - submission_value
+    slot_usage:
+      id:
+        description: Codelist C-Code
+
+  CodeListTerm:
+    slots:
+      - term_id
+      - term_value
+
+  SubsetCodeList:
+    slots:
+      - parent_codelist
+      - subset_short_name
+      - subset_label
+      - codelist_term
+
+  AssignedTerm:
+    attributes:
+      code:
+        range: string
+        description: Assigned codelist term (C-code)
+      value:
+        required: true
+        range: string
+        description: Assigned codelist term submission value
+
+slots:
+  id:
+    description: An identifier that uniquely represents an entity
+    identifier: true
+    required: true
+    range: string
+  id_uri:
+    required: false
+    range: uri
+    description: Identifier uri link
+
+  domain:
+    required: true
+    description: SDTM Domain
+  vlm_group_id:
+    required: true
+    range: string
+    description: SDTM Value Level Metadata group
+  vlm_source:
+    required: true
+    range: string
+    description: SDTM VLM Source which categorizes VLM groups by topic variable
+  group_short_name:
+    required: true
+    range: string
+    description: SDTM Value Level Metadata group
+  sdtmig_start_version:
+    required: true
+    description: The earliest SDTMIG version applicable to the BC dataset specialization
+  sdtmig_end_version:
+    description: The last  SDTMIG version that is applicable to the BC dataset specialization
+  biomedical_concept_id:
+    recommended: true
+    range: string
+    description: Biomedical Concept identifier
+
+  sdtm_variable:
+    multivalued: true
+    inlined_as_list: true
+    range: SDTMVariable
+    description: SDTM Variable
+  biomedical_concept_dec_id:
+    range: string
+    description: Biomedical Concept Data Element Concept idenfifier foreign key
+  nsv_flag:
+    range: boolean
+  codelist:
+    range: CodeList
+    description: Codelist
+  subset_codelist:
+    description: Subset codelist short name
+  submission_value:
+    required: true
+    description: Codelist submission value
+  parent_codelist:
+    required: true
+    description: Subset codelist parent codelist
+  subset_short_name:
+    required: true
+    description: Subset codelist short name
+  subset_label:
+    required: true
+    description: Subset codelist label
+  codelist_term:
+    required: true
+    range: CodeListTerm
+    multivalued: true
+    inlined_as_list: true
+  term_id:
+    required: true
+    description: C-code of term
+  term_value:
+    required: true
+    description: term value
+  value_list:
+    multivalued: true
+    inlined_as_list: true
+    description: Value set of codelist term submission values
+  assigned_term:
+    range: AssignedTerm
+    description: Assigned codelist term
+  role:
+    range: string
+    description: Variable role
+  relationship:
+    range: RelationShip
+  data_type:
+    range: SDTMVariableDataType
+    description: Variable data type
+  length:
+    range: integer
+    minimum_value: 1
+    description: Variable length
+  format:
+    description: Variable display format
+  significant_digits:
+    range: integer
+    description: Variable significant_digits
+  mandatory_variable:
+    range: boolean
+    description: Mandatory variable indicator for variable must be present within the SDTM group
+  mandatory_value:
+    range: boolean
+    description: Mandatory value indicator for variable needs to have a value (=SDTM Core=Required)
+  origin_type:
+    range: OriginType
+    description: Variable origin type
+  origin_source:
+    range: OriginSource
+    description: Variable origin source
+  comparator:
+    range: Comparator
+    description: Comparison operator for SDTM group variables included in VLM
+  vlm_target:
+    range: boolean
+    description: Target variable for VLM
+
+enums:
+
+  SDTMVariableDataType:
+    permissible_values:
+      float:
+        text: float
+      integer:
+        text: integer
+      text:
+        text:  text
+
+  LinkingPhrase:
+    permissible_values:
+      decodes the value in:
+      is decoded by the value in:
+      groups values in:
+      is the subject position during performance of the test in:
+      is the result of the test in:
+      is the unit for the value in:
+      is the specimen tested in:
+      specifies the anatomical location of the performance of the test in:
+      further specifies the anatomical location in:
+      is the method for the test in:
+      is the subject's fasting status during the performance of the test in:
+      identifies an observation described by:
+      is the dictionary code for the test in:
+
+  PredicateTerm:
+    permissible_values:
+      DECODES:
+      IS_DECODED_BY:
+      GROUPS:
+      IS_SUBJECT_STATE_FOR:
+      IS_RESULT_OF:
+      IS_UNIT_FOR:
+      IDENTIFIES_OBSERVATION:
+      IS_SPECIMEN_TESTED_IN:
+      SPECIFIES:
+      CODES:
+
+  OriginType:
+    permissible_values:
+      Assigned:
+      Collected:
+      Derived:
+      Predecessor:
+      Protocol:
+
+  OriginSource:
+    permissible_values:
+      Investigator:
+      Sponsor:
+      Subject:
+      Vendor:
+
+  Role:
+    permissible_values:
+      Topic:
+      Qualifier:
+
+  Comparator:
+    permissible_values:
+      EQ:
+      IN:
