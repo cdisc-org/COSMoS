@@ -1,0 +1,170 @@
+domain: LB
+vlm_group_id: BASOBLD
+group_short_name: Basophil Concentration in Blood
+vlm_source: LB.LBTESTCD
+sdtmig_start_version: 3-2
+sdtmig_end_version:
+biomedical_concept_id: C64470
+sdtm_variable:
+  - id: LBTESTCD
+    codelist:
+      id: C65047
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C65047
+      submission_value: LBTESCD
+    assigned_term:
+      code: C64470
+      value: BASO
+    role: Topic
+    relationship:
+      subject: LBTESTCD
+      linking_phrase: is the code for the name in
+      predicate_term: IS_DECODED_BY
+      object: LBTEST
+    mandatory_variable: true
+    comparator: EQ
+  - id: LBTEST
+    codelist:
+      id: C67154
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67154
+      submission_value: LBTEST
+    assigned_term:
+      code: C64470
+      value: Basophils
+    role: Qualifier
+    relationship:
+      subject: LBTEST
+      linking_phrase: decodes the value in
+      predicate_term: DECODES
+      object: LBTESTCD
+    mandatory_variable: true
+  - id: LBCAT
+    assigned_term:
+      code: C16673
+      value: HEMATOLOGY
+    role: Qualifier
+    relationship:
+      subject: LBCAT
+      linking_phrase: groups values in
+      predicate_term: GROUPS
+      object: LBTESTCD
+    mandatory_variable: true
+  - id: LBORRES
+    biomedical_concept_dec_id: C36292
+    role: Qualifier
+    relationship:
+      subject: LBORRES
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: LBTESTCD
+    data_type: float
+    length: 12
+    format: 12.4
+    significant_digits: 4
+    mandatory_variable: true
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true
+  - id: LBORRESU
+    biomedical_concept_dec_id: C67391
+    codelist:
+      id: C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C71620
+      submission_value: UNIT
+    value_list:
+      -  10^9/L
+      - /uL
+    role: Qualifier
+    relationship:
+      subject: LBORRESU
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
+      object: LBORRES
+    mandatory_variable: true
+    vlm_target: true
+  - id: LBSTRESC
+    biomedical_concept_dec_id: C36292
+    role: Qualifier
+    relationship:
+      subject: LBSTRESC
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: LBTESTCD
+    data_type: float
+    length: 12
+    format: 12.4
+    significant_digits: 4
+    mandatory_variable: true
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true
+  - id: LBSTRESN
+    biomedical_concept_dec_id: C36292
+    role: Qualifier
+    relationship:
+      subject: LBSTRESN
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
+      object: LBTESTCD
+    data_type: float
+    length: 12
+    format: 12.4
+    significant_digits: 4
+    mandatory_variable: true
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true
+  - id: LBSTRESU
+    biomedical_concept_dec_id: C67391
+    codelist:
+      id: C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C71620
+      submission_value: UNIT
+    assigned_term:
+      code: C42576
+      value: 10^9/L
+    role: Qualifier
+    relationship:
+      subject: LBSTRESU
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
+      object: LBSTRESN
+    vlm_target: true
+  - id: LBLOINC
+    assigned_term:
+      value: 26444-0
+    role: Qualifier
+    relationship:
+      subject: LBLOINC
+      linking_phrase: identifies an observation described by
+      predicate_term: IDENTIFIES_OBSERVATION
+      object: LBTESTCD
+  - id: LBSPEC
+    biomedical_concept_dec_id: C70713
+    codelist:
+      id: C64470
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C64470
+      submission_value: SPECTYPE
+    assigned_term:
+      code: C12434
+      value: BLOOD
+    role: Qualifier
+    relationship:
+      subject: LBSPEC
+      linking_phrase: is the specimen tested in
+      predicate_term: IS_SPECIMEN_TESTED_IN
+      object: LBTESTCD
+    mandatory_variable: true
+    comparator: EQ
+  - id: LBFAST
+    biomedical_concept_dec_id: C63663
+    codelist:
+      id: C66742
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66742
+      submission_value: NY
+    subset_codelist: NY_NY
+    role: Qualifier
+    relationship:
+      subject: LBFAST
+      linking_phrase: is the subject's fasting status during the performance of the test in
+      predicate_term: IS_SUBJECT_STATUS_FOR
+      object: LBTESTCD
