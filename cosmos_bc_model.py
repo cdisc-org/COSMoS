@@ -1,5 +1,5 @@
 ﻿# Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-07-07T16:11:53
+# Generation date: 2022-07-12T15:50:32
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -92,6 +92,7 @@ class BiomedicalConcept(IdentifiableThing):
     short_name: str = None
     definition: str = None
     parent_id: Optional[str] = None
+    synonym: Optional[Union[str, List[str]]] = empty_list()
     result_scale: Optional[Union[str, "BiomedicalConceptResultScale"]] = None
     coding: Optional[Union[Union[dict, "Coding"], List[Union[dict, "Coding"]]]] = empty_list()
     data_element_concept: Optional[Union[Dict[Union[str, DataElementConceptId], Union[dict, "DataElementConcept"]], List[Union[dict, "DataElementConcept"]]]] = empty_dict()
@@ -120,6 +121,10 @@ class BiomedicalConcept(IdentifiableThing):
 
         if self.parent_id is not None and not isinstance(self.parent_id, str):
             self.parent_id = str(self.parent_id)
+
+        if not isinstance(self.synonym, list):
+            self.synonym = [self.synonym] if self.synonym is not None else []
+        self.synonym = [v if isinstance(v, str) else str(v) for v in self.synonym]
 
         if self.result_scale is not None and not isinstance(self.result_scale, BiomedicalConceptResultScale):
             self.result_scale = BiomedicalConceptResultScale(self.result_scale)
@@ -247,6 +252,9 @@ slots.parent_id = Slot(uri=DEFAULT_.parent_id, name="parent_id", curie=DEFAULT_.
 
 slots.short_name = Slot(uri=DEFAULT_.short_name, name="short_name", curie=DEFAULT_.curie('short_name'),
                    model_uri=DEFAULT_.short_name, domain=None, range=str)
+
+slots.synonym = Slot(uri=DEFAULT_.synonym, name="synonym", curie=DEFAULT_.curie('synonym'),
+                   model_uri=DEFAULT_.synonym, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.result_scale = Slot(uri=DEFAULT_.result_scale, name="result_scale", curie=DEFAULT_.curie('result_scale'),
                    model_uri=DEFAULT_.result_scale, domain=None, range=Optional[Union[str, "BiomedicalConceptResultScale"]])

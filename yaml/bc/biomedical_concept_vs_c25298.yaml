@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C54706
 bc_category: Vital Signs
 short_name: Systolic Blood Pressure
+synonym:
+  - SYSBP
 result_scale: Quantitative
 definition: "The maximum pressure exerted into the systemic arterial circulation during the contraction of the left ventricle of the heart."
 coding:

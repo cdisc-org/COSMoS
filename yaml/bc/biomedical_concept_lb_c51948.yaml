@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C28133
 bc_category: Laboratory Tests
 short_name: Leukocyte Count
+synonym:
+  - WBC
 result_scale: Quantitative
 definition: "A test to determine the number of leukocytes in a biospecimen."
 coding:

@@ -3,4 +3,7 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C49237
 bc_category: Laboratory Tests
 short_name: Urinalysis
+synonym:
+  - Urine Test
+  - UA
 definition: "A test that determines the content of the urine."

@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C49672
 bc_category: Vital Signs
 short_name: Body Temperature
+synonym:
+  - Temperature
 result_scale: Quantitative
 definition: "A measurement of the temperature of the body."
 coding:

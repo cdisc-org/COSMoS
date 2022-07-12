@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C74954
 bc_category: Laboratory Tests
 short_name: Albumin Measurement
+synonym:
+  - Albumin
 result_scale: Quantitative
 definition: "A quantitative measurement of albumin present in a sample."
 data_element_concept:

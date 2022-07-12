@@ -44,6 +44,13 @@
             "short_name": {
                "description": "Biomedical Concept short name",
                "type": "string"
+            },
+            "synonym": {
+               "description": "Biomedical Cconcept synonym considered as equivalent to BC short name",
+               "items": {
+                  "type": "string"
+               },
+               "type": "array"
             }
          },
          "required": [
@@ -180,6 +187,13 @@
       "short_name": {
          "description": "Biomedical Concept short name",
          "type": "string"
+      },
+      "synonym": {
+         "description": "Biomedical Cconcept synonym considered as equivalent to BC short name",
+         "items": {
+            "type": "string"
+         },
+         "type": "array"
       }
    },
    "required": [

@@ -27,6 +27,7 @@ classes:
       - bc_category
       - parent_id
       - short_name
+      - synonym
       - result_scale
       - definition
       - coding
@@ -72,6 +73,11 @@ slots:
   short_name:
     required: true
     description: Biomedical Concept short name
+  synonym:
+    multivalued: true
+    inlined_as_list: true
+    range: string
+    description: Biomedical Cconcept synonym considered as equivalent to BC short name
   result_scale:
     range: BiomedicalConceptResultScale
     description: Biomedical Concept result scale

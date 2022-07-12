@@ -3,4 +3,6 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C17241
 bc_category: Laboratory Tests
 short_name: Urine Dipstick Test
+synonym:
+  - Urine Test Strip
 definition: "Use of a test strip designed to detect one or more specific substances in urine. Results are indicated by a color change and may be qualitative or semi-quantitative."

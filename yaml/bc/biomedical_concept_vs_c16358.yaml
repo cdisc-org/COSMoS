@@ -2,6 +2,9 @@ id: C16358
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C16358
 bc_category: Vital Signs
 short_name: Body Mass Index (BMI)
+synonym:
+  - BMI
+  - Quetelet Index
 result_scale: Quantitative
 definition: "An individual's weight in kilograms divided by the square of the height in meters."
 coding:

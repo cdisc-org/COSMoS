@@ -38,16 +38,33 @@
       end;
       put "bc_category:" +1 bc_category;
       put "short_name:" +1 short_name;
+
+      if not missing(synonym) then do;
+        put "synonym:";
+        countwords=countw(synonym, ";");
+        do i=1 to countwords;
+          value=strip(scan(synonym, i, ";"));
+          put +2 "-" +1 value;    
+        end;  
+      end;
+
       if not missing(result_scale) then put "result_scale:" +1 Result_Scale;
       if not missing(definition) then do;
         qDefinition = quote(strip(definition));
         put "definition:" +1 qDefinition;
       end;
+
       if not missing(system) then do;
         put "coding:";
-        put +2 "- code:" +1 code; 
-        put +4 "system:" +1 system;
-        if not missing(system_name) then put +4 "system_name:" +1 system_name; 
+        countwords=countw(system, ";");
+        do i=1 to countwords;
+          value=strip(scan(code, i, ";"));
+          put +2 "- code:" +1 value; 
+          value=strip(scan(system, i, ";"));
+          put +4 "system:" +1 value;
+          value=strip(scan(system_name, i, ";"));
+          if not missing(value) then put +4 "system_name:" +1 value; 
+        end;
       end;
     end;
     

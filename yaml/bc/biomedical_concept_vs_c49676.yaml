@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C49672
 bc_category: Vital Signs
 short_name: Pulse Rate
+synonym:
+  - Pulse
 result_scale: Quantitative
 definition: "The rate of the pulse as observed in an artery, expressed as beats per minute. It can be measured at several anatomic sites, including the wrist, neck, temple, groin, behind the knees, or on top of the foot."
 data_element_concept:

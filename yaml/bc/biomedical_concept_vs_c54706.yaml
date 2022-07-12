@@ -3,6 +3,8 @@ id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionar
 parent_id: C49672
 bc_category: Vital Signs
 short_name: Blood Pressure
+synonym:
+  - BP
 definition: "The force of circulating blood on the walls of the arteries. Blood pressure is taken using two measurements: systolic (measured when the heart beats, when blood pressure is at its highest) and diastolic (measured between heart beats, when blood pressure is at its lowest). Blood pressure is written with the systolic blood pressure first, followed by the diastolic blood pressure (for example 120/80)."
 coding:
   - code: 55284-4
