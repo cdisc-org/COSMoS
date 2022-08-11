@@ -1,0 +1,314 @@
+openapi: 3.0.0
+info:
+  title: CDISC Conceptual and Operational Standards Metadata (COSMoS)
+  description: REST API documentation for COSMoS
+  version: '0.1'
+  contact:
+    name: CDISC Library Support
+    email: cdisc_library_support@cdisc.org
+  license:
+    name: License for CDISC Members & Open Source Developers
+    url: https://www.cdisc.org/cdisc-library/api-account-request
+externalDocs:
+  description: Media Type Support Matrix
+  url: https://wiki.cdisc.org/display/LIBSUPRT/Media+Type+Support+Matrix
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/CDISC1/cdisc-library/1.5
+  - description: Production CDISC Libray
+    url: https://library.cdisc.org/api
+security:
+  - ApiKeyAuth: []
+paths:
+  /mdr/cosmos/biomedicalconcepts:
+    get:
+      summary: /mdr/cosmos/biomedicalconcepts
+      description: Get Biomedical Concept List
+      tags:
+        - COSMoS
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cosmosBiomedicalConcepts'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+  /mdr/cosmos/biomedicalconcepts/{category}:
+    get:
+      summary: /mdr/cosmos/biomedicalconcepts/{category}
+      description: Get Biomedical Concept List within a category
+      tags:
+        - COSMoS
+      parameters: 
+        - in: path
+          name: category
+          required: true
+          description: COSMoS Biomedical Concept Category
+          schema:
+            type: string
+            example: Vital Signs
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cosmosBiomedicalConceptsCategory'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+  /mdr/cosmos/biomedicalconcepts/{concept}:
+    get:
+      summary: /mdr/cosmos/biomedicalconcepts/{concept}
+      description: Get Biomedical Concept
+      tags:
+        - COSMoS
+      parameters: 
+        - in: path
+          name: concept
+          required: true
+          description: COSMoS Biomedical Concept
+          schema:
+            type: string
+            example: C16358
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cosmosBiomedicalConcept'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: api-key
+#  parameters:
+  schemas:
+    cosmosBiomedicalConcepts:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptsRef'
+        biomedicalconcepts:
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosBiomedicalConceptElement'
+    cosmosBiomedicalConceptsCategory:
+      type: object
+      properties:
+        category:
+          type: string
+          example: Vital Signs
+        self:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptsRef'
+        biomedicalconcepts:
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosBiomedicalConceptElement'
+    cosmosBiomedicalConceptsRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts
+        title:
+          type: string
+          example: COSMoS Biomedical Concepts List
+        type:
+          type: string
+          example: Biomedical Concept List
+    cosmosBiomedicalConceptElement:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C16358
+        title:
+          type: string
+          example: Body Mass Index (BMI)
+        type:
+          type: string
+          example: Biomedical Concept
+
+
+    cosmosBiomedicalConcept:
+      type: object
+      properties:
+        id:
+          type: string
+          example: C16358
+        bc_category:
+          type: string
+          example: Vital Signs
+        short_name: 
+          type: string
+          example: Body Mass Index (BMI)
+        synonym:
+          type: array
+          items:
+            type: string
+          example:
+            - BMI
+            - Quetelet Index
+        result_scale:
+          type: string
+          enum:
+            - Quantitative
+            - Ordinal
+            - Nominal
+            - Narrative
+          example: Quantitative
+        definition:
+          type: string
+          example: An individual's weight in kilograms divided by the square of the height in meters.
+        coding:
+          $ref: '#/components/schemas/conceptCoding'
+      required:
+        - id
+        - bc_category
+        - short_name
+        - definition
+
+    conceptCoding:
+      type: object
+      properties:
+        code:
+          type: string
+          example: 39156-5
+        system:
+          type: string
+          example: http://loinc.org/
+        system_name:
+          type: string
+          example: LOINC
+      required:
+        - code
+        - system
+        
+  
+    defaultErrorResponse:
+      properties:
+        statusCode:
+          description: HTTP Status Code
+          type: string
+        detail:
+          description: Detail
+          type: string
+        message:
+          description: Message
+          type: string
+          
+  responses:
+    statusBadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusForbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusUnauthorized:
+      description: Unauthorized
+      headers:
+        WWW_Authenticate:
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotAllowed:
+      description: Method Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotAcceptable:
+      description: Not Acceptable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusInternalError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusServiceUnavailable:
+      description: Service Unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusGatewayTimeout:
+      description: Gateway Timeout Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
