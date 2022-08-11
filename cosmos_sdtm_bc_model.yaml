@@ -55,26 +55,16 @@ classes:
       - vlm_target
     slot_usage:
       id:
-        description: SDTM variable name
+        description: Variable included in the SDTM dataset specialization
       id_uri:
-        description: SDTM variable name uri link
+        description: Hyperlink to the SDTM variable in CDISC Library.  Not populated if nsv_flag = "Y"
 
   RelationShip:
-    attributes:
-      subject:
-        required: true
-        description: Subject in a variable relationship
-      linking_phrase:
-        required: true
-        range: LinkingPhrase
-        description: Variable relationship descriptive linking phrase
-      predicate_term:
-        required: true
-        range: PredicateTerm
-        description: Short variable relatio ship linking phrase for programming purposes
-      object:
-        required: true
-        description: Object in a variable relationship
+    slots:
+      - subject
+      - linking_phrase
+      - predicate_term
+      - object
 
   CodeList:
     is_a: IdentifiableThing
@@ -82,7 +72,9 @@ classes:
       - submission_value
     slot_usage:
       id:
-        description: Codelist C-Code
+        description: C-code for a codelist in NCIt
+      id_uri:
+        description: Link to NCIt for the codelist
 
   CodeListTerm:
     slots:
@@ -97,14 +89,9 @@ classes:
       - codelist_term
 
   AssignedTerm:
-    attributes:
-      code:
-        range: string
-        description: Assigned codelist term (C-code)
-      value:
-        required: true
-        range: string
-        description: Assigned codelist term submission value
+    slots:
+      - code
+      - value
 
 slots:
   id:
@@ -119,11 +106,11 @@ slots:
 
   domain:
     required: true
-    description: SDTM Domain
+    description: Domain for the SDTM specialization group
   vlm_group_id:
     required: true
     range: string
-    description: SDTM Value Level Metadata group
+    description: Identifier for SDTM Value Level Metadata group
   vlm_source:
     required: true
     range: string
@@ -131,12 +118,12 @@ slots:
   group_short_name:
     required: true
     range: string
-    description: SDTM Value Level Metadata group
+    description: SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id
   sdtmig_start_version:
     required: true
     description: The earliest SDTMIG version applicable to the BC dataset specialization
   sdtmig_end_version:
-    description: The last  SDTMIG version that is applicable to the BC dataset specialization
+    description: The last SDTMIG version that is applicable to the BC dataset specialization
   biomedical_concept_id:
     recommended: true
     range: string
@@ -146,12 +133,13 @@ slots:
     multivalued: true
     inlined_as_list: true
     range: SDTMVariable
-    description: SDTM Variable
+    description: Variable included in the SDTM dataset specialization
   biomedical_concept_dec_id:
     range: string
     description: Biomedical Concept Data Element Concept idenfifier foreign key
   nsv_flag:
     range: boolean
+    description: Flag that indicates if the variable is a non-standard variable
   codelist:
     range: CodeList
     description: Codelist
@@ -159,7 +147,7 @@ slots:
     description: Subset codelist short name
   submission_value:
     required: true
-    description: Codelist submission value
+    description: CDISC submission value for the codelist
   parent_codelist:
     required: true
     description: Subset codelist parent codelist
@@ -176,22 +164,46 @@ slots:
     inlined_as_list: true
   term_id:
     required: true
-    description: C-code of term
+    description: C-code term in subset codelist
   term_value:
     required: true
-    description: term value
+    description: Submision value of term in subset codelist
   value_list:
     multivalued: true
     inlined_as_list: true
-    description: Value set of codelist term submission values
+    description: List of SDTM submission values used if subset codelist is not applicable
+
   assigned_term:
     range: AssignedTerm
-    description: Assigned codelist term
+  code:
+    range: string
+    description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
+  value:
+    required: true
+    range: string
+    description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
+
   role:
     range: string
-    description: Variable role
+    description: SDTM variable role
+
   relationship:
     range: RelationShip
+  subject:
+    required: true
+    description: Subject in a variable relationship
+  linking_phrase:
+    required: true
+    range: LinkingPhrase
+    description: Variable relationship descriptive linking phrase
+  predicate_term:
+    required: true
+    range: PredicateTerm
+    description: Short variable relatio ship linking phrase for programming purposes
+  object:
+    required: true
+    description: Object in a variable relationship
+
   data_type:
     range: SDTMVariableDataType
     description: Variable data type
@@ -206,16 +218,16 @@ slots:
     description: Variable significant_digits
   mandatory_variable:
     range: boolean
-    description: Mandatory variable indicator for variable must be present within the SDTM group
+    description: Indicator that variable must be present within the SDTM group
   mandatory_value:
     range: boolean
-    description: Mandatory value indicator for variable needs to have a value (=SDTM Core=Required)
+    description: Indicator that variable must be populated within the SDTM group
   origin_type:
     range: OriginType
-    description: Variable origin type
+    description: Variable origin type (define-XML v21)
   origin_source:
     range: OriginSource
-    description: Variable origin source
+    description: Variable origin source (define-XML v21)
   comparator:
     range: Comparator
     description: Comparison operator for SDTM group variables included in VLM

@@ -117,7 +117,7 @@
 <polyline fill='none' points='515.5,-90 662.5,-90 ' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='589' y='-71.8'>submission_value:string</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='589' y='-56.8'>id:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='589' y='-41.8'>id_uri(i):uri ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='589' y='-41.8'>id_uri:uri ?</text>
 </g><g class='edge' id='edge12'><title>SDTMVariable-&gt;CodeList</title>
 <path d='M509.095,-240.75C526.883,-200.511 545.591,-159.544 560.477,-128.527' fill='none' stroke='black'/>
 <polygon fill='black' points='564.968,-119.232 564.669,-130.194 562.793,-123.734 560.617,-128.236 560.617,-128.236 560.617,-128.236 562.793,-123.734 556.565,-126.278 564.968,-119.232 564.968,-119.232' stroke='black'/>

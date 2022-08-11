@@ -90,13 +90,13 @@
 %mend generate_bc;
 
 
-%let root=C:\_github\cdisc-org\COSMoS;
+%let root=C:/_github/cdisc-org/COSMoS;
 %let _debug=0;
 
 options sasautos = ("&root/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
 
-%generate_bc(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=.\yaml\bc, range=Conceptual VS BC);
-%generate_bc(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=.\yaml\bc, range=%str(Conceptual LB (Common) BC));
+%generate_bc(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=&root/yaml/bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=&root/yaml/bc, range=%str(Conceptual LB (Common) BC));
 
-%sysexec validate_bc.cmd;
+%sysexec &root/validate_bc.cmd;

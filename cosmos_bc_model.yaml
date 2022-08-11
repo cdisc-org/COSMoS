@@ -34,9 +34,9 @@ classes:
       - data_element_concept
     slot_usage:
       id:
-        description: Biomedical Concept identifier
+        description: NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt
       id_uri:
-        description: Biomedical Concept identifier uri link
+        description: URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt
 
   Coding:
     slots:
@@ -52,9 +52,9 @@ classes:
       - example_set
     slot_usage:
       id:
-        description: Biomedical Concept DEC idenfifier
+        description: NCI C-code for the BC Data Element Concept
       id_uri:
-        description: Biomedical Concept DEC idenfifier uri link
+        description: Link to NCIt for the Data Element Concept
 
 slots:
   id:
@@ -69,33 +69,33 @@ slots:
     description: Biomedical Concept category for the faciliation of API search and extract
   parent_id:
     range: string
-    description: Parent Biomedical Concept identifier
+    description: C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
   short_name:
     required: true
-    description: Biomedical Concept short name
+    description: NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt
   synonym:
     multivalued: true
     inlined_as_list: true
     range: string
-    description: Biomedical Cconcept synonym considered as equivalent to BC short name
+    description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
   result_scale:
     range: BiomedicalConceptResultScale
-    description: Biomedical Concept result scale
+    description: Scale of measurement for the Biomedical Concept result
   definition:
     required: true
-    description: Biomedical Concept definition
+    description: NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
   coding:
     multivalued: true
     inlined_as_list: true
     range: Coding
   system:
     required: true
-    description: Identifies the coding system that defines the code which is considered a synonym of a Biomedical Concept. If the code is taken from a code system resource then the URL of the code system should be used
+    description: Identifies the code system for the synonym concept The URL of the code system should be used if it exists
   system_name:
-    description: Human readable name for the code system
+    description: Human-readable name for the code system
   code:
     required: true
-    description: A string pattern that identifies a coding concept as defined by the code system
+    description: Synonym concept for the Biomedical Concept as defined in a code system
   data_element_concept:
     multivalued: true
     inlined_as_list: true
@@ -103,11 +103,14 @@ slots:
     description: Data Element Concept
   label:
     range: string
+    description: NCI Preferred Name for the Data Element Concept
     required: true
   data_type:
     range: DataElementConceptDataType
     recommended: true
+    description: Data Type for the Data Element Concept
   example_set:
+    description: Example values for the Data Element Concept
     multivalued: true
     inlined_as_list: true
 

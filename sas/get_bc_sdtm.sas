@@ -111,7 +111,7 @@ proc format;
   ;
 run;
 
-%generate_bc_sdtm(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=.\yaml\sdtm, range=SDTM VS BC);
-%generate_bc_sdtm(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=.\yaml\sdtm, range=%str(SDTM LB BC));
+%generate_bc_sdtm(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=.&root/yaml/sdtm, range=SDTM VS BC);
+%generate_bc_sdtm(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=&root/yaml/sdtm, range=%str(SDTM LB BC));
 
-%sysexec validate_bc_sdtm.cmd;
+%sysexec &root/validate_bc_sdtm.cmd;

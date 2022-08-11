@@ -6,6 +6,7 @@ short_name: Urine Glucose Test Strip Measurement
 synonym:
   - Urine Glucose Dipstick
 result_scale: Ordinal
+definition: "definition"
 coding:
   - code: 2349-9
     system: http://loinc.org/
