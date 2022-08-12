@@ -36,7 +36,16 @@
         put "parent_id:" +1 parent_bc_id;
         * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' parent_bc_id;
       end;
-      put "bc_category:" +1 bc_category;
+      
+      if not missing(bc_category) then do;
+        put "bc_category:";
+        countwords=countw(bc_category, ";");
+        do i=1 to countwords;
+          value=strip(scan(bc_category, i, ";"));
+          put +2 "-" +1 value;    
+        end;  
+      end;
+
       put "short_name:" +1 short_name;
 
       if not missing(synonym) then do;
@@ -69,7 +78,7 @@
     end;
     
     count+1;
-    if count=2 and not missing(dec_id) then put "data_element_concept:";
+    if count=2 and not missing(dec_id) then put "data_element_concepts:";
 
     if not missing(dec_id) then do;
       put "  - id:" +1 dec_id;

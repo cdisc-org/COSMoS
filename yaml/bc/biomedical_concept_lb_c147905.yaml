@@ -1,7 +1,8 @@
 id: C147905
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C147905
 parent_id: C17241
-bc_category: Laboratory Tests
+bc_category:
+  - Laboratory Tests
 short_name: Urine Dipstick Test
 synonym:
   - Urine Test Strip

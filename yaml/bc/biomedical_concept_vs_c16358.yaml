@@ -1,6 +1,7 @@
 id: C16358
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C16358
-bc_category: Vital Signs
+bc_category:
+  - Vital Signs
 short_name: Body Mass Index (BMI)
 synonym:
   - BMI
@@ -11,7 +12,7 @@ coding:
   - code: 39156-5
     system: http://loinc.org/
     system_name: LOINC
-data_element_concept:
+data_element_concepts:
   - id: C138901
     id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C138901
     label: Body Mass Index Finding

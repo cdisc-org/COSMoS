@@ -51,59 +51,21 @@ paths:
           $ref: '#/components/responses/statusServiceUnavailable'
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
-  /mdr/cosmos/biomedicalconcepts/{category}:
-    get:
-      summary: /mdr/cosmos/biomedicalconcepts/{category}
-      description: Get Biomedical Concept List within a category
-      tags:
-        - COSMoS
-      parameters: 
-        - in: path
-          name: category
-          required: true
-          description: COSMoS Biomedical Concept Category
-          schema:
-            type: string
-            example: Vital Signs
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/cosmosBiomedicalConceptsCategory'
-        '400':
-          $ref: '#/components/responses/statusBadRequest'
-        '401':
-          $ref: '#/components/responses/statusUnauthorized'
-        '403':
-          $ref: '#/components/responses/statusForbidden'
-        '404':
-          $ref: '#/components/responses/statusNotFound'
-        '405':
-          $ref: '#/components/responses/statusNotAllowed'
-        '406':
-          $ref: '#/components/responses/statusNotAcceptable'
-        '500':
-          $ref: '#/components/responses/statusInternalError'
-        '503':
-          $ref: '#/components/responses/statusServiceUnavailable'
-        '504':
-          $ref: '#/components/responses/statusGatewayTimeout'
+
   /mdr/cosmos/biomedicalconcepts/{concept}:
     get:
       summary: /mdr/cosmos/biomedicalconcepts/{concept}
       description: Get Biomedical Concept
       tags:
         - COSMoS
-      parameters: 
+      parameters:
         - in: path
           name: concept
           required: true
           description: COSMoS Biomedical Concept
           schema:
             type: string
-            example: C16358
+            example: C49676
       responses:
         '200':
           description: OK
@@ -130,36 +92,117 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
+  /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts:
+    get:
+      summary: /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts
+      description: Get Biomedical Concept Data Element Concepts List
+      tags:
+        - COSMoS
+      parameters:
+        - in: path
+          name: concept
+          required: true
+          description: Biomedical Concept
+          schema:
+            type: string
+            example: C49676
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cosmosDataElementConcepts'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}:
+    get:
+      summary: /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}
+      description: Get Data Element Concepts
+      tags:
+        - COSMoS
+      parameters:
+        - in: path
+          name: concept
+          required: true
+          description: Biomedical Concept
+          schema:
+            type: string
+            example: C49676
+        - in: path
+          name: dataelementconcept
+          required: true
+          description: Data Element Concept
+          schema:
+            type: string
+            example: C73688
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cosmosDataElementConcept'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
 
 components:
+
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
       in: header
       name: api-key
-#  parameters:
+
   schemas:
     cosmosBiomedicalConcepts:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptsRef'
-        biomedicalconcepts:
-          type: array
-          items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptElement'
-    cosmosBiomedicalConceptsCategory:
+        _links:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptsLinks'
+    
+    cosmosBiomedicalConceptsLinks:
       type: object
       properties:
-        category:
-          type: string
-          example: Vital Signs
         self:
           $ref: '#/components/schemas/cosmosBiomedicalConceptsRef'
-        biomedicalconcepts:
+        biomedicalConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptElement'
+            $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
     cosmosBiomedicalConceptsRef:
       type: object
       properties:
@@ -168,44 +211,38 @@ components:
           example: /mdr/cosmos/biomedicalconcepts
         title:
           type: string
-          example: COSMoS Biomedical Concepts List
+          example: Biomedical Concepts List
         type:
           type: string
-          example: Biomedical Concept List
-    cosmosBiomedicalConceptElement:
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts/C16358
-        title:
-          type: string
-          example: Body Mass Index (BMI)
-        type:
-          type: string
-          example: Biomedical Concept
-
+          example: Biomedical Concepts List
 
     cosmosBiomedicalConcept:
       type: object
       properties:
+        _links:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
         id:
           type: string
-          example: C16358
-        bc_category:
+          example: C49676
+        URI:
           type: string
-          example: Vital Signs
-        short_name: 
+          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C49676
+        category:
+          type: array
+          items:
+            type: string
+          example: 
+            - Vital Signs
+        shortName:
           type: string
-          example: Body Mass Index (BMI)
+          example: Pulse Rate
         synonym:
           type: array
           items:
             type: string
           example:
-            - BMI
-            - Quetelet Index
-        result_scale:
+            - Pulse
+        resultScale:
           type: string
           enum:
             - Quantitative
@@ -215,16 +252,25 @@ components:
           example: Quantitative
         definition:
           type: string
-          example: An individual's weight in kilograms divided by the square of the height in meters.
+          example: >-
+            The rate of the pulse as observed in an artery, expressed as beats per
+            minute. It can be measured at several anatomic sites, including the wrist,
+            neck, temple, groin, behind the knees, or on top of the foot.
         coding:
-          $ref: '#/components/schemas/conceptCoding'
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
+        dataElementConcepts:
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosDataElementConcept'
       required:
         - id
-        - bc_category
-        - short_name
+        - category
+        - shortName
         - definition
 
-    conceptCoding:
+    cosmosBiomedicalConceptCoding:
       type: object
       properties:
         code:
@@ -233,14 +279,162 @@ components:
         system:
           type: string
           example: http://loinc.org/
-        system_name:
+        systemName:
           type: string
           example: LOINC
       required:
         - code
         - system
+
+    cosmosBiomedicalConceptLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptParentRef'
+
+    cosmosBiomedicalConceptRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676
+        title:
+          type: string
+          example: Pulse Rate
+        type:
+          type: string
+          example: Biomedical Concept
+
+    cosmosBiomedicalConceptParentRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49672
+        title:
+          type: string
+          example: Vital Signs Measurement
+        type:
+          type: string
+          example: Biomedical Concept
+
+
+    cosmosDataElementConcepts:
+      type: object
+      properties:
+        id:
+          type: string
+          example: C49676
+        URI:
+          type: string
+          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C49676
+        category:
+          type: array
+          items:
+            type: string
+          example: 
+            - Vital Signs
+        shortName:
+          type: string
+          example: Pulse Rate
+        synonym:
+          type: array
+          items:
+            type: string
+          example:
+            - Pulse
+        resultScale:
+          type: string
+          enum:
+            - Quantitative
+            - Ordinal
+            - Nominal
+            - Narrative
+          example: Quantitative
+        definition:
+          type: string
+          example: >-
+            The rate of the pulse as observed in an artery, expressed as beats per
+            minute. It can be measured at several anatomic sites, including the wrist,
+            neck, temple, groin, behind the knees, or on top of the foot.
+        coding:
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
+        _links:
+          $ref: '#/components/schemas/cosmosDataElementConceptsLinks'
+    
+    cosmosDataElementConceptsLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/cosmosDataElementConceptsRef'
+        biomedicalConcept:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+        dataElementConcepts:
+          type: array
+          items:
+            $ref: '#/components/schemas/cosmosDataElementConceptRef'
+    cosmosDataElementConceptsRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts
+        title:
+          type: string
+          example: Biomedical Concept Data Element Concepts List
+        type:
+          type: string
+          example: Biomedical Concept Data Element Concepts List
+
+
+
+
+    cosmosDataElementConcept:
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/cosmosDataElementConceptLinks'
+        URI:
+          type: string
+          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C73688
+        label: 
+          type: string
+          example: Count per Minute
+        dataType:
+          type: string
+          example: integer
+        exampleSets:
+          type: array
+          items:
+            type: string
+          example:
+            - Beats per Minute
         
-  
+    cosmosDataElementConceptLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/cosmosDataElementConceptRef'
+        Concept:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+
+    cosmosDataElementConceptRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts/C73688
+        title:
+          type: string
+          example: Count per Minute
+        type:
+          type: string
+          example: Data Element Concept
+
     defaultErrorResponse:
       properties:
         statusCode:
@@ -252,7 +446,7 @@ components:
         message:
           description: Message
           type: string
-          
+
   responses:
     statusBadRequest:
       description: Bad Request

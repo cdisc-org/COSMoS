@@ -1,7 +1,8 @@
 id: C64433
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C64433
 parent_id: C74954
-bc_category: Laboratory Tests
+bc_category:
+  - Laboratory Tests
 short_name: Alanine Aminotransferase Measurement
 synonym:
   - ALT, SGPT
@@ -11,7 +12,7 @@ coding:
   - code: 1742-6
     system: http://loinc.org/
     system_name: LOINC
-data_element_concept:
+data_element_concepts:
   - id: C36292
     id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C36292
     label: Laboratory Test Result

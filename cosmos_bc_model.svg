@@ -49,7 +49,7 @@
 <polygon fill='white' points='127,-390.5 127,-553.5 391,-553.5 391,-390.5 127,-390.5' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-535.3'>BiomedicalConcept</text>
 <polyline fill='none' points='127,-524.5 391,-524.5 ' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-506.3'>bc_category:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-506.3'>bc_category:string +</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-491.3'>parent_id:string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-476.3'>short_name:string</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-461.3'>synonym:string *</text>
@@ -64,7 +64,7 @@
 <path d='M214.699,-379.331C203.436,-353.99 191.99,-326.236 183,-300 163.663,-243.57 147.874,-177.629 137.512,-129.322' fill='none' stroke='black'/>
 <polygon fill='black' points='214.759,-379.465 220.868,-383.298 219.679,-390.41 213.571,-386.578 214.759,-379.465' stroke='black'/>
 <polygon fill='black' points='135.383,-119.292 141.861,-128.14 136.421,-124.183 137.459,-129.074 137.459,-129.074 137.459,-129.074 136.421,-124.183 133.057,-130.008 135.383,-119.292 135.383,-119.292' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='129.802' y='-155.2'> data_element_concept 0..*</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='129.802' y='-155.2'> data_element_concepts 0..*</text>
 </g><g class='node' id='node4'><title>Coding</title>
 <polygon fill='white' points='192,-211 192,-299 326,-299 326,-211 192,-211' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-280.8'>Coding</text>

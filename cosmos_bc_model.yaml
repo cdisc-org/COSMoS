@@ -31,7 +31,7 @@ classes:
       - result_scale
       - definition
       - coding
-      - data_element_concept
+      - data_element_concepts
     slot_usage:
       id:
         description: NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt
@@ -65,6 +65,8 @@ slots:
   id_uri:
     range: uri
   bc_category:
+    multivalued: true
+    inlined_as_list: true
     required: true
     description: Biomedical Concept category for the faciliation of API search and extract
   parent_id:
@@ -96,7 +98,7 @@ slots:
   code:
     required: true
     description: Synonym concept for the Biomedical Concept as defined in a code system
-  data_element_concept:
+  data_element_concepts:
     multivalued: true
     inlined_as_list: true
     range: DataElementConcept

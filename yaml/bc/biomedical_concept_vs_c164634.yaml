@@ -1,6 +1,7 @@
 id: C164634
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C164634
-bc_category: Vital Signs
+bc_category:
+  - Vital Signs
 short_name: Body Height
 synonym:
   - Height
@@ -10,7 +11,7 @@ coding:
   - code: 8302-2
     system: http://loinc.org/
     system_name: LOINC
-data_element_concept:
+data_element_concepts:
   - id: C173522
     id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C173522
     label: Vital Signs Result

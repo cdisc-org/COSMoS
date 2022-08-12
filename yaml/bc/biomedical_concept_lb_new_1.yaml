@@ -1,7 +1,8 @@
 id: NEW_1
 id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=NEW_1
 parent_id: C147905
-bc_category: Laboratory Tests
+bc_category:
+  - Laboratory Tests
 short_name: Urine Glucose Test Strip Measurement
 synonym:
   - Urine Glucose Dipstick
@@ -11,7 +12,7 @@ coding:
   - code: 2349-9
     system: http://loinc.org/
     system_name: LOINC
-data_element_concept:
+data_element_concepts:
   - id: C36292
     id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C36292
     label: Laboratory Test Result
