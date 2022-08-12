@@ -22,8 +22,8 @@ security:
 paths:
   /mdr/cosmos/biomedicalconcepts:
     get:
-      summary: /mdr/cosmos/biomedicalconcepts
-      description: Get Biomedical Concept List
+      operationId: api.cosmos.get_biomedicalconcepts
+      summary: Get Biomedical Concept List
       tags:
         - COSMoS
       responses:
@@ -54,18 +54,12 @@ paths:
 
   /mdr/cosmos/biomedicalconcepts/{concept}:
     get:
-      summary: /mdr/cosmos/biomedicalconcepts/{concept}
-      description: Get Biomedical Concept
+      operationId: api.cosmos.get_biomedicalconcept
+      summary: Get Biomedical Concept
       tags:
         - COSMoS
       parameters:
-        - in: path
-          name: concept
-          required: true
-          description: COSMoS Biomedical Concept
-          schema:
-            type: string
-            example: C49676
+        - $ref: '#/components/parameters/concept'
       responses:
         '200':
           description: OK
@@ -94,18 +88,12 @@ paths:
 
   /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts:
     get:
-      summary: /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts
-      description: Get Biomedical Concept Data Element Concepts List
+      operationId: api.cosmos.get_dataelementconcepts
+      summary: Get Biomedical Concept Data Element Concepts List
       tags:
         - COSMoS
       parameters:
-        - in: path
-          name: concept
-          required: true
-          description: Biomedical Concept
-          schema:
-            type: string
-            example: C49676
+        - $ref: '#/components/parameters/concept'
       responses:
         '200':
           description: OK
@@ -134,25 +122,13 @@ paths:
 
   /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}:
     get:
-      summary: /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}
-      description: Get Data Element Concepts
+      operationId: api.cosmos.get_dataelementconcept
+      summary: Get Data Element Concepts
       tags:
         - COSMoS
       parameters:
-        - in: path
-          name: concept
-          required: true
-          description: Biomedical Concept
-          schema:
-            type: string
-            example: C49676
-        - in: path
-          name: dataelementconcept
-          required: true
-          description: Data Element Concept
-          schema:
-            type: string
-            example: C73688
+        - $ref: '#/components/parameters/concept'
+        - $ref: '#/components/parameters/dataelementconcept'
       responses:
         '200':
           description: OK
@@ -187,7 +163,110 @@ components:
       in: header
       name: api-key
 
+  parameters:
+    concept:
+      in: path
+      name: concept
+      required: true
+      description: COSMoS Biomedical Concept
+      schema:
+        type: string
+        example: C49676
+    dataelementconcept:
+      in: path
+      name: dataelementconcept
+      required: true
+      description: Data Element Concept
+      schema:
+        type: string
+        example: C73688
+
+  responses:
+    statusBadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusForbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusUnauthorized:
+      description: Unauthorized
+      headers:
+        WWW_Authenticate:
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotAllowed:
+      description: Method Not Allowed
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusNotAcceptable:
+      description: Not Acceptable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusInternalError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusServiceUnavailable:
+      description: Service Unavailable
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+    statusGatewayTimeout:
+      description: Gateway Timeout Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/defaultErrorResponse'
+
   schemas:
+    defaultErrorResponse:
+      properties:
+        statusCode:
+          description: HTTP Status Code
+          type: string
+        detail:
+          description: Detail
+          type: string
+        message:
+          description: Message
+          type: string
+    link:
+      description: Resource Reference
+      properties:
+        href:
+          description: href
+          type: string
+          format: uri
+        title:
+          description: title
+          type: string
+        type:
+          description: type
+          type: string
+
     cosmosBiomedicalConcepts:
       type: object
       properties:
@@ -204,17 +283,10 @@ components:
           items:
             $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
     cosmosBiomedicalConceptsRef:
+      description: Biomedical Concepts Reference
       type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts
-        title:
-          type: string
-          example: Biomedical Concepts List
-        type:
-          type: string
-          example: Biomedical Concepts List
+      allOf:
+        - $ref: '#/components/schemas/link'
 
     cosmosBiomedicalConcept:
       type: object
@@ -224,8 +296,9 @@ components:
         id:
           type: string
           example: C49676
-        URI:
+        href:
           type: string
+          format: uri
           example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C49676
         category:
           type: array
@@ -295,30 +368,16 @@ components:
           $ref: '#/components/schemas/cosmosBiomedicalConceptParentRef'
 
     cosmosBiomedicalConceptRef:
+      description: Biomedical Concept Reference
       type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676
-        title:
-          type: string
-          example: Pulse Rate
-        type:
-          type: string
-          example: Biomedical Concept
+      allOf:
+        - $ref: '#/components/schemas/link'
 
     cosmosBiomedicalConceptParentRef:
+      description: Biomedical Concept Parent Reference
       type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49672
-        title:
-          type: string
-          example: Vital Signs Measurement
-        type:
-          type: string
-          example: Biomedical Concept
+      allOf:
+        - $ref: '#/components/schemas/link'
 
 
     cosmosDataElementConcepts:
@@ -327,8 +386,9 @@ components:
         id:
           type: string
           example: C49676
-        URI:
+        href:
           type: string
+          format: uri
           example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C49676
         category:
           type: array
@@ -378,28 +438,19 @@ components:
           items:
             $ref: '#/components/schemas/cosmosDataElementConceptRef'
     cosmosDataElementConceptsRef:
+      description: Data Element Concepts Reference
       type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts
-        title:
-          type: string
-          example: Biomedical Concept Data Element Concepts List
-        type:
-          type: string
-          example: Biomedical Concept Data Element Concepts List
-
-
-
+      allOf:
+        - $ref: '#/components/schemas/link'
 
     cosmosDataElementConcept:
       type: object
       properties:
         _links:
           $ref: '#/components/schemas/cosmosDataElementConceptLinks'
-        URI:
+        href:
           type: string
+          format: uri
           example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C73688
         label: 
           type: string
@@ -423,86 +474,8 @@ components:
           $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
 
     cosmosDataElementConceptRef:
+      description: Data Element Concept Reference
       type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts/C73688
-        title:
-          type: string
-          example: Count per Minute
-        type:
-          type: string
-          example: Data Element Concept
+      allOf:
+        - $ref: '#/components/schemas/link'
 
-    defaultErrorResponse:
-      properties:
-        statusCode:
-          description: HTTP Status Code
-          type: string
-        detail:
-          description: Detail
-          type: string
-        message:
-          description: Message
-          type: string
-
-  responses:
-    statusBadRequest:
-      description: Bad Request
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusForbidden:
-      description: Forbidden
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusUnauthorized:
-      description: Unauthorized
-      headers:
-        WWW_Authenticate:
-          schema:
-            type: string
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusNotFound:
-      description: Not Found
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusNotAllowed:
-      description: Method Not Allowed
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusNotAcceptable:
-      description: Not Acceptable
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusInternalError:
-      description: Internal Server Error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusServiceUnavailable:
-      description: Service Unavailable
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
-    statusGatewayTimeout:
-      description: Gateway Timeout Error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/defaultErrorResponse'
