@@ -100,7 +100,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/cosmosDataElementConcepts'
+                $ref: '#/components/schemas/cosmosBiomedicalConceptDataElementConcepts'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -241,6 +241,7 @@ components:
           schema:
             $ref: '#/components/schemas/defaultErrorResponse'
 
+
   schemas:
     defaultErrorResponse:
       properties:
@@ -253,26 +254,13 @@ components:
         message:
           description: Message
           type: string
-    link:
-      description: Resource Reference
-      properties:
-        href:
-          description: href
-          type: string
-          format: uri
-        title:
-          description: title
-          type: string
-        type:
-          description: type
-          type: string
 
+# BiomedicalConcepts
     cosmosBiomedicalConcepts:
       type: object
       properties:
         _links:
           $ref: '#/components/schemas/cosmosBiomedicalConceptsLinks'
-    
     cosmosBiomedicalConceptsLinks:
       type: object
       properties:
@@ -281,18 +269,39 @@ components:
         biomedicalConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+            $ref: '#/components/schemas/cosmosBiomedicalConceptRefElement'
+            
     cosmosBiomedicalConceptsRef:
       description: Biomedical Concepts Reference
       type: object
-      allOf:
-        - $ref: '#/components/schemas/link'
-
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts
+        title:
+          type: string
+          example: Biomedical Concepts
+        type:
+          type: string
+          example: Biomedical Concept List
+    cosmosBiomedicalConceptRefElement:
+      description: Biomedical Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676
+        title:
+          type: string
+          example: Pulse Rate
+        type:
+          type: string
+          example: Biomedical Concept
+    
+# BiomedicalConcept
     cosmosBiomedicalConcept:
       type: object
       properties:
-        _links:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
         id:
           type: string
           example: C49676
@@ -333,6 +342,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
+        _links:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
         dataElementConcepts:
           type: array
           items:
@@ -342,6 +353,43 @@ components:
         - category
         - shortName
         - definition
+
+    cosmosBiomedicalConceptLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/cosmosBiomedicalConceptParentRef'
+
+    cosmosBiomedicalConceptRef:
+      description: Biomedical Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676
+        title:
+          type: string
+          example: Pulse Rate
+        type:
+          type: string
+          example: Biomedical Concept
+
+
+    cosmosBiomedicalConceptParentRef:
+      description: Biomedical Concept Parent Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49672
+        title:
+          type: string
+          example: Vital Signs Measurement
+        type:
+          type: string
+          example: Biomedical Concept
+
 
     cosmosBiomedicalConceptCoding:
       type: object
@@ -359,28 +407,8 @@ components:
         - code
         - system
 
-    cosmosBiomedicalConceptLinks:
-      type: object
-      properties:
-        self:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
-        parentBiomedicalConcept:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptParentRef'
-
-    cosmosBiomedicalConceptRef:
-      description: Biomedical Concept Reference
-      type: object
-      allOf:
-        - $ref: '#/components/schemas/link'
-
-    cosmosBiomedicalConceptParentRef:
-      description: Biomedical Concept Parent Reference
-      type: object
-      allOf:
-        - $ref: '#/components/schemas/link'
-
-
-    cosmosDataElementConcepts:
+# BiomedicalConceptDataElementConcepts
+    cosmosBiomedicalConceptDataElementConcepts:
       type: object
       properties:
         id:
@@ -424,58 +452,72 @@ components:
           items:
             $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
         _links:
-          $ref: '#/components/schemas/cosmosDataElementConceptsLinks'
-    
-    cosmosDataElementConceptsLinks:
-      type: object
-      properties:
-        self:
-          $ref: '#/components/schemas/cosmosDataElementConceptsRef'
-        biomedicalConcept:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
         dataElementConcepts:
           type: array
           items:
             $ref: '#/components/schemas/cosmosDataElementConceptRef'
-    cosmosDataElementConceptsRef:
-      description: Data Element Concepts Reference
+            
+    cosmosDataElementConceptRef:
+      description: Data Element Concept Reference
       type: object
-      allOf:
-        - $ref: '#/components/schemas/link'
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts/C123975
+        title:
+          type: string
+          example: Vital Signs Laterality
+        type:
+          type: string
+          example: Data Element Concept
 
+# DataElementConcept
     cosmosDataElementConcept:
       type: object
       properties:
-        _links:
-          $ref: '#/components/schemas/cosmosDataElementConceptLinks'
+        id:
+          type: string
+          example: C123975
         href:
           type: string
           format: uri
-          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C73688
+          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C123975
         label: 
           type: string
-          example: Count per Minute
+          example: Vital Signs Laterality
         dataType:
           type: string
-          example: integer
+          example: string
         exampleSets:
           type: array
           items:
             type: string
           example:
-            - Beats per Minute
-        
-    cosmosDataElementConceptLinks:
+            - Left
+            - Right
+        _links:
+          $ref: '#/components/schemas/cosmosDataElementConceptBiomedicalConceptLinks'
+
+    cosmosDataElementConceptBiomedicalConceptLinks:
       type: object
       properties:
-        self:
+        _self:
           $ref: '#/components/schemas/cosmosDataElementConceptRef'
-        Concept:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+        biomedicalConcept:
+          $ref: '#/components/schemas/cosmosDataElementConceptBiomedicalConceptRef'
 
-    cosmosDataElementConceptRef:
-      description: Data Element Concept Reference
+    cosmosDataElementConceptBiomedicalConceptRef:
+      description: Biomedical Concept Reference
       type: object
-      allOf:
-        - $ref: '#/components/schemas/link'
-
+      properties:
+        href:
+          type: string
+          example: /mdr/cosmos/biomedicalconcepts/C49676
+        title:
+          type: string
+          example: Pulse Rate
+        type:
+          type: string
+          example: Biomedical Concept
+        
