@@ -9,7 +9,7 @@ sdtm_variable:
   - id: LBTESTCD
     codelist:
       id: C65047
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C65047
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
       submission_value: LBTESTCD
     assigned_term:
       code: C64809
@@ -25,7 +25,7 @@ sdtm_variable:
   - id: LBTEST
     codelist:
       id: C67154
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67154
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
       submission_value: LBTEST
     assigned_term:
       code: C64809
@@ -67,7 +67,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C67375
     codelist:
       id: C71620
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submission_value: UNIT
     value_list:
        - mEq/L
@@ -117,7 +117,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C67375
     codelist:
       id: C71620
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submission_value: UNIT
     assigned_term:
       code: C64387
@@ -143,7 +143,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C70713
     codelist:
       id: C78734
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C78734
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
       submission_value: SPECTYPE
     assigned_term:
       code: C12434
@@ -160,7 +160,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C63663
     codelist:
       id: C66742
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66742
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submission_value: NY
       subset_codelist: NY_NY
     role: Qualifier

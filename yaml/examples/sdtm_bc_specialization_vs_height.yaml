@@ -9,7 +9,7 @@ sdtm_variable:
   - id: VSTESTCD
     codelist:
       id: C66741
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66741
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
       submission_value: VSTESTCD
     assigned_term:
       code: C25347
@@ -25,7 +25,7 @@ sdtm_variable:
   - id: VSTEST
     codelist:
       id: C67153
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67153
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
       submission_value: VSTEST
     assigned_term:
       code: C25347
@@ -57,7 +57,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C168688
     codelist:
       id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
     subset_codelist: VSRESU_HT
     role: Qualifier
@@ -98,7 +98,7 @@ sdtm_variable:
     biomedical_concept_dec_id: C168688
     codelist:
       id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
     role: Qualifier
     relationship:

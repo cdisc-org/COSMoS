@@ -31,10 +31,10 @@
     if first.bc_id and not(missing(bc_id)) then do;
       count=0;
       put "id:" +1 BC_ID;
-      put 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' bc_id;
+      put 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
       if not missing(parent_bc_id) then do;
         put "parent_id:" +1 parent_bc_id;
-        * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' parent_bc_id;
+        * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
       end;
       
       if not missing(bc_category) then do;
@@ -82,7 +82,7 @@
 
     if not missing(dec_id) then do;
       put "  - id:" +1 dec_id;
-      put +4 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' dec_id;
+      put +4 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
       put +4 "label:" +1 dec_label; 
       if not missing(data_type) then put +4 "data_type:" +1 data_type; 
       if not missing(example_set) then do;

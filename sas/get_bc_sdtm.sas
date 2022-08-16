@@ -47,7 +47,7 @@
         if not missing(codelist) then do;
            put +4 "codelist:";
            put +6 "id:" +1 codelist;
-           put +6 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=' codelist;
+           put +6 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
            if not missing(codelist_submision_value) then put +6 "submission_value:" +1 codelist_submision_value;
         end;
         if not missing(subset_codelist) then put +6 "subset_codelist:" +1 subset_codelist;

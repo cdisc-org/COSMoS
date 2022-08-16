@@ -1,5 +1,5 @@
 id: C49680
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C49680
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49680
 bc_category:
   - Vital Signs
 short_name: Body Frame Size
@@ -7,7 +7,7 @@ result_scale: Ordinal
 definition: "The categorization of a person's body frame into small, medium and large based on the measurement of wrist circumference or the breadth of the elbow."
 data_element_concepts:
   - id: C173522
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C173522
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     label: Vital Signs Result
     data_type: string
     example_set:
