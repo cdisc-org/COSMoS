@@ -302,7 +302,7 @@ components:
     cosmosBiomedicalConcept:
       type: object
       properties:
-        id:
+        conceptId:
           type: string
           example: C49676
         href:
@@ -349,7 +349,7 @@ components:
           items:
             $ref: '#/components/schemas/cosmosDataElementConcept'
       required:
-        - id
+        - conceptId
         - category
         - shortName
         - definition
@@ -411,7 +411,7 @@ components:
     cosmosBiomedicalConceptDataElementConcepts:
       type: object
       properties:
-        id:
+        conceptId:
           type: string
           example: C49676
         href:
@@ -457,6 +457,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/cosmosDataElementConceptRef'
+      required:
+        - conceptId
+        - category
+        - shortName
+        - definition
 
     cosmosDataElementConceptRef:
       description: Data Element Concept Reference
@@ -476,7 +481,7 @@ components:
     cosmosDataElementConcept:
       type: object
       properties:
-        id:
+        conceptId:
           type: string
           example: C123975
         href:
@@ -498,6 +503,9 @@ components:
             - Right
         _links:
           $ref: '#/components/schemas/cosmosDataElementConceptBiomedicalConceptLinks'
+      required:
+        - conceptId
+        - label
 
     cosmosDataElementConceptBiomedicalConceptLinks:
       type: object
