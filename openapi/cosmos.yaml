@@ -20,7 +20,7 @@ servers:
 security:
   - ApiKeyAuth: []
 paths:
-  /mdr/cosmos/biomedicalconcepts:
+  /mdr/bc/biomedicalconcepts:
     get:
       operationId: api.cosmos.get_biomedicalconcepts
       summary: Get Biomedical Concept List
@@ -52,7 +52,7 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/cosmos/biomedicalconcepts/{concept}:
+  /mdr/bc/biomedicalconcepts/{concept}:
     get:
       operationId: api.cosmos.get_biomedicalconcept
       summary: Get Biomedical Concept
@@ -86,7 +86,7 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts:
+  /mdr/bc/biomedicalconcepts/{concept}/dataelementconcepts:
     get:
       operationId: api.cosmos.get_dataelementconcepts
       summary: Get Biomedical Concept Data Element Concepts List
@@ -120,7 +120,7 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/cosmos/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}:
+  /mdr/bc/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}:
     get:
       operationId: api.cosmos.get_dataelementconcept
       summary: Get Data Element Concepts
@@ -277,7 +277,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts
+          example: /mdr/bc/biomedicalconcepts
         title:
           type: string
           example: Biomedical Concepts
@@ -290,7 +290,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676
+          example: /mdr/bc/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
@@ -368,7 +368,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676
+          example: /mdr/bc/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
@@ -382,7 +382,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49672
+          example: /mdr/bc/biomedicalconcepts/C49672
         title:
           type: string
           example: Vital Signs Measurement
@@ -464,7 +464,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676/dataelementconcepts/C123975
+          example: /mdr/bc/biomedicalconcepts/C49676/dataelementconcepts/C123975
         title:
           type: string
           example: Vital Signs Laterality
@@ -513,7 +513,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/cosmos/biomedicalconcepts/C49676
+          example: /mdr/bc/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
