@@ -107,5 +107,3 @@ options ls=256;
 
 %generate_bc(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=&root/yaml/bc, range=Conceptual VS BC);
 %generate_bc(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=&root/yaml/bc, range=%str(Conceptual LB (Common) BC));
-
-%sysexec &root/validate_bc.cmd;
