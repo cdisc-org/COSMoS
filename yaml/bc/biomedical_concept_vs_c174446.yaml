@@ -1,35 +1,36 @@
-id: C174446
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C174446
-parent_id: C49672
-bc_category:
+packageDate: 2022-10-26
+conceptId: C174446
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C174446
+parentConceptId: C49672
+category:
   - Vital Signs
-short_name: Body Temperature
+shortName: Body Temperature
 synonym:
   - Temperature
-result_scale: Quantitative
+resultScale: Quantitative
 definition: "A measurement of the temperature of the body."
 coding:
   - code: 8310-5
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - id: C173522
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C173522
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     label: Vital Signs Result
-    data_type: decimal
-  - id: C44276
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44276
+    datatype: decimal
+  - conceptId: C44276
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44276
     label: Unit of Temperature
-    data_type: string
-    example_set:
+    datatype: string
+    exampleSet:
        - Fahrenheit
        - Celsius
        - Kelvin
-  - id: C83088
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
+  - conceptId: C83088
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     label: Vital Signs Location
-    data_type: string
-    example_set:
+    datatype: string
+    exampleSet:
        - Axilla
        - Ear
        - Forehead

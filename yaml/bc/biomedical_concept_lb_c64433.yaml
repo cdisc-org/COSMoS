@@ -1,33 +1,34 @@
-id: C64433
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64433
-parent_id: C74954
-bc_category:
+packageDate: 2022-10-26
+conceptId: C64433
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64433
+parentConceptId: C74954
+category:
   - Laboratory Tests
-short_name: Alanine Aminotransferase Measurement
+shortName: Alanine Aminotransferase Measurement
 synonym:
   - ALT, SGPT
-result_scale: Quantitative
+resultScale: Quantitative
 definition: "A quantitative measurement of alanine aminotransferase present in a sample."
 coding:
   - code: 1742-6
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - id: C36292
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     label: Laboratory Test Result
-    data_type: decimal
-  - id: C83309
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    datatype: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     label: Laboratory Test Fasting Status
-    data_type: boolean
-  - id: C67365
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67365
+    datatype: boolean
+  - conceptId: C67365
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67365
     label: Unit of Catalytic Activity Concentration
-    data_type: string
-  - id: C70713
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    datatype: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     label: Biospecimen Type
-    data_type: string
-    example_set:
+    datatype: string
+    exampleSet:
        - Plasma, Serum, Blood, Urine

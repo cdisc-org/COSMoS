@@ -1,26 +1,27 @@
-id: C16358
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16358
-bc_category:
+packageDate: 2022-10-26
+conceptId: C16358
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16358
+category:
   - Vital Signs
-short_name: Body Mass Index (BMI)
+shortName: Body Mass Index (BMI)
 synonym:
   - BMI
   - Quetelet Index
-result_scale: Quantitative
+resultScale: Quantitative
 definition: "An individual's weight in kilograms divided by the square of the height in meters."
 coding:
   - code: 39156-5
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - id: C138901
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138901
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C138901
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138901
     label: Body Mass Index Finding
-    data_type: decimal
-  - id: C42575
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42575
+    datatype: decimal
+  - conceptId: C42575
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42575
     label: Unit of Mass Density
-    data_type: string
-    example_set:
+    datatype: string
+    exampleSet:
        - Kilogram per Square Meter
        - Pounds per Square Inch

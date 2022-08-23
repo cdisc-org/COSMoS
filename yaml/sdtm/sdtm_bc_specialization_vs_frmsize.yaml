@@ -1,76 +1,77 @@
+packageDate: 2022-10-26
 domain: VS
-vlm_group_id: FRMSIZE
-group_short_name: Frame Size
-vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-2
-sdtmig_end_version: .
-biomedical_concept_id: C49680
-sdtm_variable:
-  - id: VSTESTCD
+vlmGroupId: FRMSIZE
+vlmSource: VS.VSTESTCD
+shortName: Frame Size
+sdtmigStartVersion: 3-51
+sdtmigEndVersion:  
+biomedicalConceptId: C49680
+SdtmVariables:
+  - variableId: VSTESTCD
     codelist:
-      id: C65047
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C65047
-      submission_value: VSTESTCD
-    assigned_term:
-      code: C49680
-      value: FRMSIZE
+      ConceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C49680
+      submissionValue: FRMSIZE
     role: Topic
     relationship:
       subject: VSTESTCD
-      linking_phrase: is decoded by the value in
-      predicate_term: IS_DECODED_BY
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
       object: VSTEST
-    mandatory_variable: true 
+    mandatoryVariable: true 
     comparator: EQ
-  - id: VSTEST
+  - variableId: VSTEST
     codelist:
-      id: C67154
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67154
-      submission_value: VSTEST
-    assigned_term:
-      code: C49680
-      value: Body Frame Size
+      ConceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C49680
+      submissionValue: Body Frame Size
     role: Qualifier
     relationship:
       subject: VSTEST
-      linking_phrase: decodes the value in
-      predicate_term: DECODES
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
       object: VSTESTCD
-    mandatory_variable: true 
-  - id: VSORRES
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+  - variableId: VSORRES
+    variableConceptId: C173522
     codelist:
-      id: C66733
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66733
-      submission_value: SIZE
-    value_list:
+      ConceptId: C66733
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66733
+      submissionValue: SIZE
+    valuelist:
        - SMALL
        - MEDIUM
        - LARGE
     role: Qualifier
     relationship:
       subject: VSORRES
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: text
+    datatype: text
     length: 20
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Investigator
-    vlm_target: true 
-  - id: VSSTRESC
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - variableId: VSSTRESC
+    variableConceptId: C173522
     codelist:
-      id: C66733
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66733
-      submission_value: SIZE
+      ConceptId: C66733
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66733
+      submissionValue: SIZE
     role: Qualifier
     relationship:
       subject: VSSTRESC
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: text
+    datatype: text
     length: 20
-    vlm_target: true 
+    vlmTarget: true 

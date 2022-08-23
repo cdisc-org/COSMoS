@@ -4,17 +4,18 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "code": {
+            "conceptId": {
                "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
                "type": "string"
             },
-            "value": {
+            "submissionValue": {
                "description": "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value",
                "type": "string"
             }
          },
          "required": [
-            "value"
+            "conceptId",
+            "submissionValue"
          ],
          "title": "AssignedTerm",
          "type": "object"
@@ -23,22 +24,22 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "id": {
+            "conceptId": {
                "description": "C-code for a codelist in NCIt",
                "type": "string"
             },
-            "id_uri": {
+            "href": {
                "description": "Link to NCIt for the codelist",
                "type": "string"
             },
-            "submission_value": {
+            "submissionValue": {
                "description": "CDISC submission value for the codelist",
                "type": "string"
             }
          },
          "required": [
-            "submission_value",
-            "id"
+            "conceptId",
+            "submissionValue"
          ],
          "title": "CodeList",
          "type": "object"
@@ -47,18 +48,18 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "term_id": {
+            "conceptId": {
                "description": "C-code term in subset codelist",
                "type": "string"
             },
-            "term_value": {
+            "submissionValue": {
                "description": "Submision value of term in subset codelist",
                "type": "string"
             }
          },
          "required": [
-            "term_id",
-            "term_value"
+            "conceptId",
+            "submissionValue"
          ],
          "title": "CodeListTerm",
          "type": "object"
@@ -136,7 +137,7 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "linking_phrase": {
+            "linkingPhrase": {
                "$ref": "#/$defs/LinkingPhrase",
                "description": "Variable relationship descriptive linking phrase"
             },
@@ -144,7 +145,7 @@
                "description": "Object in a variable relationship",
                "type": "string"
             },
-            "predicate_term": {
+            "predicateTerm": {
                "$ref": "#/$defs/PredicateTerm",
                "description": "Short variable relatio ship linking phrase for programming purposes"
             },
@@ -155,8 +156,8 @@
          },
          "required": [
             "subject",
-            "linking_phrase",
-            "predicate_term",
+            "linkingPhrase",
+            "predicateTerm",
             "object"
          ],
          "title": "RelationShip",
@@ -171,11 +172,18 @@
          "title": "Role",
          "type": "string"
       },
-      "SDTMGroup": {
+      "SdtmGroup": {
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "biomedical_concept_id": {
+            "SdtmVariables": {
+               "description": "Variable included in the SDTM dataset specialization",
+               "items": {
+                  "$ref": "#/$defs/SdtmVariable"
+               },
+               "type": "array"
+            },
+            "biomedicalConceptId": {
                "description": "Biomedical Concept identifier",
                "type": "string"
             },
@@ -183,53 +191,48 @@
                "description": "Domain for the SDTM specialization group",
                "type": "string"
             },
-            "group_short_name": {
-               "description": "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id",
+            "packageDate": {
+               "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+               "format": "date",
                "type": "string"
             },
-            "sdtm_variable": {
-               "description": "Variable included in the SDTM dataset specialization",
-               "items": {
-                  "$ref": "#/$defs/SDTMVariable"
-               },
-               "type": "array"
-            },
-            "sdtmig_end_version": {
+            "sdtmigEndVersion": {
                "description": "The last SDTMIG version that is applicable to the BC dataset specialization",
                "type": "string"
             },
-            "sdtmig_start_version": {
+            "sdtmigStartVersion": {
                "description": "The earliest SDTMIG version applicable to the BC dataset specialization",
                "type": "string"
             },
-            "vlm_group_id": {
+            "shortName": {
+               "description": "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id",
+               "type": "string"
+            },
+            "vlmGroupId": {
                "description": "Identifier for SDTM Value Level Metadata group",
                "type": "string"
             },
-            "vlm_source": {
+            "vlmSource": {
                "description": "SDTM VLM Source which categorizes VLM groups by topic variable",
                "type": "string"
             }
          },
          "required": [
+            "packageDate",
             "domain",
-            "group_short_name",
-            "vlm_group_id",
-            "vlm_source",
-            "sdtmig_start_version"
+            "shortName",
+            "vlmGroupId",
+            "vlmSource",
+            "sdtmigStartVersion"
          ],
-         "title": "SDTMGroup",
+         "title": "SdtmGroup",
          "type": "object"
       },
-      "SDTMVariable": {
+      "SdtmVariable": {
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "assigned_term": {
-               "$ref": "#/$defs/AssignedTerm"
-            },
-            "biomedical_concept_dec_id": {
-               "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+            "assignedTerm": {
                "type": "string"
             },
             "codelist": {
@@ -240,19 +243,15 @@
                "$ref": "#/$defs/Comparator",
                "description": "Comparison operator for SDTM group variables included in VLM"
             },
-            "data_type": {
-               "$ref": "#/$defs/SDTMVariableDataType",
+            "datatype": {
+               "$ref": "#/$defs/SdtmVariableDataType",
                "description": "Variable data type"
             },
             "format": {
                "description": "Variable display format",
                "type": "string"
             },
-            "id": {
-               "description": "Variable included in the SDTM dataset specialization",
-               "type": "string"
-            },
-            "id_uri": {
+            "href": {
                "description": "Hyperlink to the SDTM variable in CDISC Library.  Not populated if nsv_flag = \"Y\"",
                "type": "string"
             },
@@ -261,23 +260,23 @@
                "minimum": 1,
                "type": "integer"
             },
-            "mandatory_value": {
+            "mandatoryValue": {
                "description": "Indicator that variable must be populated within the SDTM group",
                "type": "boolean"
             },
-            "mandatory_variable": {
+            "mandatoryVariable": {
                "description": "Indicator that variable must be present within the SDTM group",
                "type": "boolean"
             },
-            "nsv_flag": {
+            "nsvFlag": {
                "description": "Flag that indicates if the variable is a non-standard variable",
                "type": "boolean"
             },
-            "origin_source": {
+            "originSource": {
                "$ref": "#/$defs/OriginSource",
                "description": "Variable origin source (define-XML v21)"
             },
-            "origin_type": {
+            "originType": {
                "$ref": "#/$defs/OriginType",
                "description": "Variable origin type (define-XML v21)"
             },
@@ -288,70 +287,78 @@
                "description": "SDTM variable role",
                "type": "string"
             },
-            "significant_digits": {
+            "significantDigits": {
                "description": "Variable significant_digits",
                "type": "integer"
             },
-            "subset_codelist": {
+            "subsetCodelist": {
                "description": "Subset codelist short name",
                "type": "string"
             },
-            "value_list": {
+            "valuelist": {
                "description": "List of SDTM submission values used if subset codelist is not applicable",
                "items": {
                   "type": "string"
                },
                "type": "array"
             },
-            "vlm_target": {
+            "variableConceptId": {
+               "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+               "type": "string"
+            },
+            "variableId": {
+               "description": "Variable included in the SDTM dataset specialization",
+               "type": "string"
+            },
+            "vlmTarget": {
                "description": "Target variable for VLM",
                "type": "boolean"
             }
          },
          "required": [
-            "id"
+            "variableId"
          ],
-         "title": "SDTMVariable",
+         "title": "SdtmVariable",
          "type": "object"
       },
-      "SDTMVariableDataType": {
+      "SdtmVariableDataType": {
          "description": "",
          "enum": [
             "float",
             "integer",
             "text"
          ],
-         "title": "SDTMVariableDataType",
+         "title": "SdtmVariableDataType",
          "type": "string"
       },
       "SubsetCodeList": {
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "codelist_term": {
+            "codelistTerm": {
                "items": {
                   "$ref": "#/$defs/CodeListTerm"
                },
                "type": "array"
             },
-            "parent_codelist": {
+            "parentCodelist": {
                "description": "Subset codelist parent codelist",
                "type": "string"
             },
-            "subset_label": {
+            "subsetLabel": {
                "description": "Subset codelist label",
                "type": "string"
             },
-            "subset_short_name": {
+            "subsetShortName": {
                "description": "Subset codelist short name",
                "type": "string"
             }
          },
          "required": [
-            "parent_codelist",
-            "subset_short_name",
-            "subset_label",
-            "codelist_term"
+            "parentCodelist",
+            "subsetShortName",
+            "subsetLabel",
+            "codelistTerm"
          ],
          "title": "SubsetCodeList",
          "type": "object"
@@ -362,7 +369,14 @@
    "additionalProperties": true,
    "metamodel_version": "1.7.0",
    "properties": {
-      "biomedical_concept_id": {
+      "SdtmVariables": {
+         "description": "Variable included in the SDTM dataset specialization",
+         "items": {
+            "$ref": "#/$defs/SdtmVariable"
+         },
+         "type": "array"
+      },
+      "biomedicalConceptId": {
          "description": "Biomedical Concept identifier",
          "type": "string"
       },
@@ -370,40 +384,39 @@
          "description": "Domain for the SDTM specialization group",
          "type": "string"
       },
-      "group_short_name": {
-         "description": "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id",
+      "packageDate": {
+         "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+         "format": "date",
          "type": "string"
       },
-      "sdtm_variable": {
-         "description": "Variable included in the SDTM dataset specialization",
-         "items": {
-            "$ref": "#/$defs/SDTMVariable"
-         },
-         "type": "array"
-      },
-      "sdtmig_end_version": {
+      "sdtmigEndVersion": {
          "description": "The last SDTMIG version that is applicable to the BC dataset specialization",
          "type": "string"
       },
-      "sdtmig_start_version": {
+      "sdtmigStartVersion": {
          "description": "The earliest SDTMIG version applicable to the BC dataset specialization",
          "type": "string"
       },
-      "vlm_group_id": {
+      "shortName": {
+         "description": "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id",
+         "type": "string"
+      },
+      "vlmGroupId": {
          "description": "Identifier for SDTM Value Level Metadata group",
          "type": "string"
       },
-      "vlm_source": {
+      "vlmSource": {
          "description": "SDTM VLM Source which categorizes VLM groups by topic variable",
          "type": "string"
       }
    },
    "required": [
+      "packageDate",
       "domain",
-      "group_short_name",
-      "vlm_group_id",
-      "vlm_source",
-      "sdtmig_start_version"
+      "shortName",
+      "vlmGroupId",
+      "vlmSource",
+      "sdtmigStartVersion"
    ],
    "title": "COSMoS-Biomedical-Concepts-Schema",
    "type": "object",

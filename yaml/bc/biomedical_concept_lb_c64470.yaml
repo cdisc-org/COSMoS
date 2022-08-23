@@ -1,33 +1,34 @@
-id: C64470
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64470
-parent_id: C51948
-bc_category:
+packageDate: 2022-10-26
+conceptId: C64470
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64470
+parentConceptId: C51948
+category:
   - Laboratory Tests
-short_name: Total Basophil Count
+shortName: Total Basophil Count
 synonym:
   - Basophils
-result_scale: Quantitative
+resultScale: Quantitative
 definition: "The determination of the absolute number of basophils in a blood sample."
 coding:
   - code: 26444-0
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - id: C36292
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     label: Laboratory Test Result
-    data_type: decimal
-  - id: C83309
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    datatype: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     label: Laboratory Test Fasting Status
-    data_type: boolean
-  - id: C67391
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
+    datatype: boolean
+  - conceptId: C67391
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
     label: Unit of Number Concentration
-    data_type: string
-  - id: C70713
-    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    datatype: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     label: Biospecimen Type
-    data_type: string
-    example_set:
+    datatype: string
+    exampleSet:
        - Blood

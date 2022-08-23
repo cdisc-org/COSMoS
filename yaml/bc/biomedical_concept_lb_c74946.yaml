@@ -1,8 +1,9 @@
-id: C74946
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74946
-parent_id: C49237
-bc_category:
+packageDate: 2022-10-26
+conceptId: C74946
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74946
+parentConceptId: C49237
+category:
   - Laboratory Tests
-short_name: Electrolyte Measurement
-result_scale: Quantitative
+shortName: Electrolyte Measurement
+resultScale: Quantitative
 definition: "A quantitative measurement of the amount of an electrolyte present in a sample."

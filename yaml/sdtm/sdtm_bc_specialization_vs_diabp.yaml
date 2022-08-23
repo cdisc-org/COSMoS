@@ -1,150 +1,151 @@
+packageDate: 2022-10-26
 domain: VS
-vlm_group_id: DIABP
-group_short_name: Diastolic Blood Pressure
-vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-2
-sdtmig_end_version: .
-biomedical_concept_id: C25299
-sdtm_variable:
-  - id: VSTESTCD
+vlmGroupId: DIABP
+vlmSource: VS.VSTESTCD
+shortName: Diastolic Blood Pressure
+sdtmigStartVersion: 3-24
+sdtmigEndVersion:  
+biomedicalConceptId: C25299
+SdtmVariables:
+  - variableId: VSTESTCD
     codelist:
-      id: C65047
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C65047
-      submission_value: VSTESTCD
-    assigned_term:
-      code: C25299
-      value: DIABP
+      ConceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C25299
+      submissionValue: DIABP
     role: Topic
     relationship:
       subject: VSTESTCD
-      linking_phrase: is decoded by the value in
-      predicate_term: IS_DECODED_BY
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
       object: VSTEST
-    mandatory_variable: true 
+    mandatoryVariable: true 
     comparator: EQ
-  - id: VSTEST
+  - variableId: VSTEST
     codelist:
-      id: C67154
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67154
-      submission_value: VSTEST
-    assigned_term:
-      code: C25299
-      value: Diastolic Blood Pressure
+      ConceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C25299
+      submissionValue: Diastolic Blood Pressure
     role: Qualifier
     relationship:
       subject: VSTEST
-      linking_phrase: decodes the value in
-      predicate_term: DECODES
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
       object: VSTESTCD
-    mandatory_variable: true 
-  - id: VSORRES
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+  - variableId: VSORRES
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSORRES
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: integer
+    datatype: integer
     length: 3
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Investigator
-    vlm_target: true 
-  - id: VSORRESU
-    biomedical_concept_dec_id: C49669
+    mandatoryVariable: true 
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - variableId: VSORRESU
+    variableConceptId: C49669
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
-      submission_value: VSRESU
-    assigned_term:
-      code: C49670
-      value: mmHG
+      ConceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C49670
+      submissionValue: mmHG
     role: Qualifier
     relationship:
       subject: VSORRESUis the unit for the value in
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSORRES
-    mandatory_variable: true 
-    vlm_target: true 
-  - id: VSSTRESC
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+    vlmTarget: true 
+  - variableId: VSSTRESC
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSSTRESC
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: integer
+    datatype: integer
     length: 3
-    vlm_target: true 
-  - id: VSSTRESN
-    biomedical_concept_dec_id: C173522
+    vlmTarget: true 
+  - variableId: VSSTRESN
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSSTRESN
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: integer
+    datatype: integer
     length: 3
-    vlm_target: true 
-  - id: VSSTRESU
-    biomedical_concept_dec_id: C49669
+    vlmTarget: true 
+  - variableId: VSSTRESU
+    variableConceptId: C49669
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
-      submission_value: VSRESU
-    assigned_term:
-      code: C49670
-      value: mmHG
+      ConceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C49670
+      submissionValue: mmHG
     role: Qualifier
     relationship:
       subject: VSSTRESU
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSSTRESN
-    vlm_target: true 
-  - id: VSPOS
-    biomedical_concept_dec_id: C62164
+    vlmTarget: true 
+  - variableId: VSPOS
+    variableConceptId: C62164
     codelist:
-      id: C71148
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C71148
-      submission_value: POSITION
-      subset_codelist: VSPOS
+      ConceptId: C71148
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71148
+      submissionValue: POSITION
+      subsetCodelist: VSPOS
     role: Qualifier
     relationship:
       subject: VSPOS
-      linking_phrase: is the subject position during performance of the test in
-      predicate_term: IS_SUBJECT_STATE_FOR
+      linkingPhrase: is the subject position during performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
       object: VSTESTCD
     comparator: IN
-  - id: VSLOC
-    biomedical_concept_dec_id: C13717
+  - variableId: VSLOC
+    variableConceptId: C13717
     codelist:
-      id: C74456
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C74456
-      submission_value: LOC
-      subset_codelist: VSLOC_PULSE
+      ConceptId: C74456
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
+      submissionValue: LOC
+      subsetCodelist: VSLOC_PULSE
     role: Qualifier
     relationship:
       subject: VSLOC
-      linking_phrase: specifies the anatomical location of the performance of the test in
-      predicate_term: SPECIFIES
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
       object: VSTESTCD
     comparator: IN
-  - id: VSLAT
-    biomedical_concept_dec_id: C25185
+  - variableId: VSLAT
+    variableConceptId: C25185
     codelist:
-      id: C99073
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C99073
-      submission_value: LAT
-      subset_codelist: VSLAT_BP
+      ConceptId: C99073
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
+      submissionValue: LAT
+      subsetCodelist: VSLAT_BP
     role: Qualifier
     relationship:
       subject: VSLAT
-      linking_phrase: further specifies the anatomical location in
-      predicate_term: SPECIFIES
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
       object: VSLOC
     comparator: IN

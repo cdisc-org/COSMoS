@@ -1,109 +1,110 @@
+packageDate: 2022-10-26
 domain: VS
-vlm_group_id: WEIGHT
-group_short_name: Weight
-vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-2
-sdtmig_end_version: .
-biomedical_concept_id: C81328
-sdtm_variable:
-  - id: VSTESTCD
+vlmGroupId: WEIGHT
+vlmSource: VS.VSTESTCD
+shortName: Weight
+sdtmigStartVersion: 3-7
+sdtmigEndVersion:  
+biomedicalConceptId: C81328
+SdtmVariables:
+  - variableId: VSTESTCD
     codelist:
-      id: C66741
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66741
-      submission_value: VSTESTCD
-    assigned_term:
-      code: C25208
-      value: WEIGHT
+      ConceptId: C66741
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C25208
+      submissionValue: WEIGHT
     role: Topic
     relationship:
       subject: VSTESTCD
-      linking_phrase: is decoded by the value in
-      predicate_term: IS_DECODED_BY
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
       object: VSTEST
-    mandatory_variable: true 
+    mandatoryVariable: true 
     comparator: EQ
-  - id: VSTEST
+  - variableId: VSTEST
     codelist:
-      id: C67153
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C67153
-      submission_value: VSTEST
-    assigned_term:
-      code: C25208
-      value: Weight
+      ConceptId: C67153
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C25208
+      submissionValue: Weight
     role: Qualifier
     relationship:
       subject: VSTEST
-      linking_phrase: decodes the value in
-      predicate_term: DECODES
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
       object: VSTESTCD
-    mandatory_variable: true 
-  - id: VSORRES
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+  - variableId: VSORRES
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSORRES
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: float
+    datatype: float
     length: 8
     format: 8.3
-    significant_digits: 3
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Investigator
-    vlm_target: true 
-  - id: VSORRESU
-    biomedical_concept_dec_id: C48208
+    significantDigits: 3
+    mandatoryVariable: true 
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - variableId: VSORRESU
+    variableConceptId: C48208
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
-      submission_value: VSRESU
-      subset_codelist: VSRESU_WT
+      ConceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+      subsetCodelist: VSRESU_WT
     role: Qualifier
     relationship:
       subject: VSORRESUis the unit for the value in
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSORRES
-    mandatory_variable: true 
-    vlm_target: true 
-  - id: VSSTRESC
-    biomedical_concept_dec_id: C173522
+    mandatoryVariable: true 
+    vlmTarget: true 
+  - variableId: VSSTRESC
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSSTRESC
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: float
+    datatype: float
     length: 8
     format: 8.3
-    significant_digits: 3
-    vlm_target: true 
-  - id: VSSTRESN
-    biomedical_concept_dec_id: C173522
+    significantDigits: 3
+    vlmTarget: true 
+  - variableId: VSSTRESN
+    variableConceptId: C173522
     role: Qualifier
     relationship:
       subject: VSSTRESN
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: float
+    datatype: float
     length: 8
     format: 8.3
-    significant_digits: 3
-    vlm_target: true 
-  - id: VSSTRESU
-    biomedical_concept_dec_id: C48208
+    significantDigits: 3
+    vlmTarget: true 
+  - variableId: VSSTRESU
+    variableConceptId: C48208
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=22.03d&ns=ncit&code=C66770
-      submission_value: VSRESU
+      ConceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
     role: Qualifier
     relationship:
       subject: VSSTRESU
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSSTRESN
-    vlm_target: true 
+    vlmTarget: true 

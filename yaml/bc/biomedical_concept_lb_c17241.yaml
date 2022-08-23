@@ -1,9 +1,10 @@
-id: C17241
-id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17241
-parent_id: C49237
-bc_category:
+packageDate: 2022-10-26
+conceptId: C17241
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17241
+parentConceptId: C49237
+category:
   - Laboratory Tests
-short_name: Urinalysis
+shortName: Urinalysis
 synonym:
   - Urine Test
   - UA
