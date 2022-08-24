@@ -1,76 +1,76 @@
-packageDate: 2022-10-26
+package_date: 2022-10-26
 domain: LB
-vlmGroupId: ALBURIN
-vlmSource: LB.LBTESTCD
-shortName: Albumin Concentration in Urine
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
-biomedicalConceptId: C64467
-SdtmVariables:
-  - variableId: LBTESTCD
+vlm_group_id: ALBURIN
+group_short_name: Albumin Concentration in Urine
+vlm_source: LB.LBTESTCD
+sdtmig_start_version: 3-2
+sdtmig_end_version:  
+biomedical_concept_id: C64467
+sdtm_variable:
+  - id: LBTESTCD
     codelist:
-      ConceptId: C65047
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
-      submissionValue: LBTESTCD
-    assignedTerm:
-      conceptId: C64809
-      submissionValue: ALB
+      id: C65047
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submission_value: LBTESTCD
+    assigned_term:
+      code: C64809
+      value: ALB
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
-      predicateTerm: IS_DECODED_BY
+      linking_phrase: is decoded by the value in
+      predicate_term: IS_DECODED_BY
       object: LBTEST
-    mandatoryVariable: true 
+    mandatory_variable: true 
     comparator: EQ
-  - variableId: LBTEST
+  - id: LBTEST
     codelist:
-      ConceptId: C67154
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
-      submissionValue: LBTEST
-    assignedTerm:
-      conceptId: C64809
-      submissionValue: Albumin
+      id: C67154
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submission_value: LBTEST
+    assigned_term:
+      code: C64809
+      value: Albumin
     role: Qualifier
     relationship:
       subject: LBTEST
-      linkingPhrase: decodes the value in
-      predicateTerm: DECODES
+      linking_phrase: decodes the value in
+      predicate_term: DECODES
       object: LBTESTCD
-    mandatoryVariable: true 
-  - variableId: LBCAT
-    assignedTerm:
-      submissionValue: CHEMISTRY
+    mandatory_variable: true 
+  - id: LBCAT
+    assigned_term:
+      value: CHEMISTRY
     role: Qualifier
     relationship:
       subject: LBCAT
-      linkingPhrase: groups values in
-      predicateTerm: GROUPS
+      linking_phrase: groups values in
+      predicate_term: GROUPS
       object: LBTESTCD
-    mandatoryVariable: true 
-  - variableId: LBORRES
-    variableConceptId: C36292
+    mandatory_variable: true 
+  - id: LBORRES
+    biomedical_concept_dec_id: C36292
     role: Qualifier
     relationship:
       subject: LBORRES
-      linkingPhrase: is the result of the test in
-      predicateTerm: IS_RESULT_OF
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
       object: LBTESTCD
-    datatype: float
+    data_type: float
     length: 12
     format: 12.4
-    significantDigits: 4
-    mandatoryVariable: true 
-    originType: Collected
-    originSource: Vendor
-    vlmTarget: true 
-  - variableId: LBORRESU
-    variableConceptId: C64571
+    significant_digits: 4
+    mandatory_variable: true 
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true 
+  - id: LBORRESU
+    biomedical_concept_dec_id: C64571
     codelist:
-      ConceptId: C71620
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
-      submissionValue: UNIT
-    valuelist:
+      id: C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submission_value: UNIT
+    value_list:
        - g/L
        - g/dL
        - mg/dL
@@ -79,96 +79,96 @@ SdtmVariables:
     role: Qualifier
     relationship:
       subject: LBORRESU
-      linkingPhrase: is the unit for the value in
-      predicateTerm: IS_UNIT_FOR
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
       object: LBORRES
-    mandatoryVariable: true 
-    vlmTarget: true 
-  - variableId: LBSTRESC
-    variableConceptId: C36292
+    mandatory_variable: true 
+    vlm_target: true 
+  - id: LBSTRESC
+    biomedical_concept_dec_id: C36292
     role: Qualifier
     relationship:
       subject: LBSTRESC
-      linkingPhrase: is the result of the test in
-      predicateTerm: IS_RESULT_OF
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
       object: LBTESTCD
-    datatype: float
+    data_type: float
     length: 12
     format: 12.4
-    significantDigits: 4
-    mandatoryVariable: true 
-    originType: Collected
-    originSource: Vendor
-    vlmTarget: true 
-  - variableId: LBSTRESN
-    variableConceptId: C36292
+    significant_digits: 4
+    mandatory_variable: true 
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true 
+  - id: LBSTRESN
+    biomedical_concept_dec_id: C36292
     role: Qualifier
     relationship:
       subject: LBSTRESN
-      linkingPhrase: is the result of the test in
-      predicateTerm: IS_RESULT_OF
+      linking_phrase: is the result of the test in
+      predicate_term: IS_RESULT_OF
       object: LBTESTCD
-    datatype: float
+    data_type: float
     length: 12
     format: 12.4
-    significantDigits: 4
-    mandatoryVariable: true 
-    originType: Collected
-    originSource: Vendor
-    vlmTarget: true 
-  - variableId: LBSTRESU
-    variableConceptId: C64571
+    significant_digits: 4
+    mandatory_variable: true 
+    origin_type: Collected
+    origin_source: Vendor
+    vlm_target: true 
+  - id: LBSTRESU
+    biomedical_concept_dec_id: C64571
     codelist:
-      ConceptId: C71620
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
-      submissionValue: UNIT
-    assignedTerm:
-      conceptId: C42576
-      submissionValue: g/L
+      id: C71620
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submission_value: UNIT
+    assigned_term:
+      code: C42576
+      value: g/L
     role: Qualifier
     relationship:
       subject: LBSTRESU
-      linkingPhrase: is the unit for the value in
-      predicateTerm: IS_UNIT_FOR
+      linking_phrase: is the unit for the value in
+      predicate_term: IS_UNIT_FOR
       object: LBSTRESN
-    mandatoryVariable: true 
-    vlmTarget: true 
-  - variableId: LBLOINC
-    assignedTerm:
-      submissionValue: 1754-1
+    mandatory_variable: true 
+    vlm_target: true 
+  - id: LBLOINC
+    assigned_term:
+      value: 1754-1
     role: Qualifier
     relationship:
       subject: LBLOINC
-      linkingPhrase: identifies an observation described by
-      predicateTerm: IDENTIFIES_OBSERVATION
+      linking_phrase: identifies an observation described by
+      predicate_term: IDENTIFIES_OBSERVATION
       object: LBTESTCD
-  - variableId: LBSPEC
-    variableConceptId: C70713
+  - id: LBSPEC
+    biomedical_concept_dec_id: C70713
     codelist:
-      ConceptId: C78734
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
-      submissionValue: SPECTYPE
-    assignedTerm:
-      conceptId: C105706
-      submissionValue: URINE
+      id: C78734
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submission_value: SPECTYPE
+    assigned_term:
+      code: C105706
+      value: URINE
     role: Qualifier
     relationship:
       subject: LBSPEC
-      linkingPhrase: is the specimen tested in
-      predicateTerm: IS_SPECIMEN_TESTED_IN
+      linking_phrase: is the specimen tested in
+      predicate_term: IS_SPECIMEN_TESTED_IN
       object: LBTESTCD
-    mandatoryVariable: true 
+    mandatory_variable: true 
     comparator: EQ
-  - variableId: LBFAST
-    variableConceptId: C63663
+  - id: LBFAST
+    biomedical_concept_dec_id: C63663
     codelist:
-      ConceptId: C66742
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
-      submissionValue: NY
-      subsetCodelist: NY_NY
+      id: C66742
+      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submission_value: NY
+      subset_codelist: NY_NY
     role: Qualifier
     relationship:
       subject: LBFAST
-      linkingPhrase: is the subject's fasting status during the performance of the test in
-      predicateTerm: IS_SUBJECT_STATE_FOR
+      linking_phrase: is the subject's fasting status during the performance of the test in
+      predicate_term: IS_SUBJECT_STATE_FOR
       object: LBTESTCD

@@ -11,178 +11,182 @@ default_range: string
 
 classes:
 
-  SdtmGroup:
+  IdentifiableThing:
+    abstract: true
+    description: >-
+      A databased entity, concept or class. This is a generic class that is the root
+      of all the other classes.
+    slots:
+      - id
+      - id_uri
+
+  SDTMGroup:
     tree_root: true
     slots:
-      - packageDate
+      - package_date
       - domain
-      - shortName
-      - vlmGroupId
-      - vlmSource
-      - sdtmigStartVersion
-      - sdtmigEndVersion
-      - biomedicalConceptId
-      - SdtmVariables
+      - group_short_name
+      - vlm_group_id
+      - vlm_source
+      - sdtmig_start_version
+      - sdtmig_end_version
+      - biomedical_concept_id
+      - sdtm_variable
 
-  SdtmVariable:
+  SDTMVariable:
+    is_a: IdentifiableThing
     slots:
-      - variableId
-      - href
-      - variableConceptId
-      - nsvFlag
+      - biomedical_concept_dec_id
+      - nsv_flag
       - codelist
-      - subsetCodelist
-      - valuelist
-      - assignedTerm
+      - subset_codelist
+      - value_list
+      - assigned_term
       - role
       - relationship
-      - datatype
+      - data_type
       - length
       - format
-      - significantDigits
-      - mandatoryVariable
-      - mandatoryValue
-      - originType
-      - originSource
+      - significant_digits
+      - mandatory_variable
+      - mandatory_value
+      - origin_type
+      - origin_source
       - comparator
-      - vlmTarget
+      - vlm_target
     slot_usage:
-      href:
+      id:
+        description: Variable included in the SDTM dataset specialization
+      id_uri:
         description: Hyperlink to the SDTM variable in CDISC Library.  Not populated if nsv_flag = "Y"
 
   RelationShip:
     slots:
       - subject
-      - linkingPhrase
-      - predicateTerm
+      - linking_phrase
+      - predicate_term
       - object
 
   CodeList:
+    is_a: IdentifiableThing
     slots:
-      - conceptId
-      - href
-      - submissionValue
+      - submission_value
     slot_usage:
-      conceptId:
+      id:
         description: C-code for a codelist in NCIt
-      href:
+      id_uri:
         description: Link to NCIt for the codelist
-      submissionValue:
-        description: CDISC submission value for the codelist
 
   CodeListTerm:
     slots:
-      - conceptId
-      - submissionValue
-    slot_usage:
-      conceptId:
-        description: C-code term in subset codelist
-      submissionValue:
-        description: Submision value of term in subset codelist
+      - term_id
+      - term_value
 
   SubsetCodeList:
     slots:
-      - parentCodelist
-      - subsetShortName
-      - subsetLabel
-      - codelistTerm
+      - parent_codelist
+      - subset_short_name
+      - subset_label
+      - codelist_term
 
   AssignedTerm:
     slots:
-      - conceptId
-      - submissionValue
-    slot_usage:
-      conceptId:
-        description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
-        required: false
-      submissionValue:
-        description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
+      - code
+      - value
 
 slots:
-  conceptId:
+  id:
     description: An identifier that uniquely represents an entity
     identifier: true
     required: true
     range: string
-  variableId:
-    description: Variable included in the SDTM dataset specialization
-    identifier: true
-    required: true
-    range: string
-  href:
+  id_uri:
     required: false
     range: uri
     description: Identifier uri link
-  variableConceptId:
-    description: Biomedical Concept Data Element Concept idenfifier foreign key
-    range: string
 
-  packageDate:
+  package_date:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
     required: true
   domain:
     required: true
     description: Domain for the SDTM specialization group
-  vlmGroupId:
+  vlm_group_id:
     required: true
     range: string
     description: Identifier for SDTM Value Level Metadata group
-  vlmSource:
+  vlm_source:
     required: true
     range: string
     description: SDTM VLM Source which categorizes VLM groups by topic variable
-  shortName:
+  group_short_name:
     required: true
     range: string
     description: SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id
-  sdtmigStartVersion:
+  sdtmig_start_version:
     required: true
     description: The earliest SDTMIG version applicable to the BC dataset specialization
-  sdtmigEndVersion:
+  sdtmig_end_version:
     description: The last SDTMIG version that is applicable to the BC dataset specialization
-  biomedicalConceptId:
+  biomedical_concept_id:
     recommended: true
     range: string
     description: Biomedical Concept identifier
 
-  SdtmVariables:
+  sdtm_variable:
     multivalued: true
     inlined_as_list: true
-    range: SdtmVariable
+    range: SDTMVariable
     description: Variable included in the SDTM dataset specialization
-  nsvFlag:
+  biomedical_concept_dec_id:
+    range: string
+    description: Biomedical Concept Data Element Concept idenfifier foreign key
+  nsv_flag:
     range: boolean
     description: Flag that indicates if the variable is a non-standard variable
   codelist:
     range: CodeList
     description: Codelist
-  subsetCodelist:
+  subset_codelist:
     description: Subset codelist short name
-  submissionValue:
+  submission_value:
     required: true
     description: CDISC submission value for the codelist
-  parentCodelist:
+  parent_codelist:
     required: true
     description: Subset codelist parent codelist
-  subsetShortName:
+  subset_short_name:
     required: true
     description: Subset codelist short name
-  subsetLabel:
+  subset_label:
     required: true
     description: Subset codelist label
-  codelistTerm:
+  codelist_term:
     required: true
     range: CodeListTerm
     multivalued: true
     inlined_as_list: true
-  valuelist:
+  term_id:
+    required: true
+    description: C-code term in subset codelist
+  term_value:
+    required: true
+    description: Submision value of term in subset codelist
+  value_list:
     multivalued: true
     inlined_as_list: true
     description: List of SDTM submission values used if subset codelist is not applicable
 
-  assignedTerm:
+  assigned_term:
     range: AssignedTerm
+  code:
+    range: string
+    description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
+  value:
+    required: true
+    range: string
+    description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
 
   role:
     range: string
@@ -193,11 +197,11 @@ slots:
   subject:
     required: true
     description: Subject in a variable relationship
-  linkingPhrase:
+  linking_phrase:
     required: true
     range: LinkingPhrase
     description: Variable relationship descriptive linking phrase
-  predicateTerm:
+  predicate_term:
     required: true
     range: PredicateTerm
     description: Short variable relatio ship linking phrase for programming purposes
@@ -205,8 +209,8 @@ slots:
     required: true
     description: Object in a variable relationship
 
-  datatype:
-    range: SdtmVariableDataType
+  data_type:
+    range: SDTMVariableDataType
     description: Variable data type
   length:
     range: integer
@@ -214,31 +218,31 @@ slots:
     description: Variable length
   format:
     description: Variable display format
-  significantDigits:
+  significant_digits:
     range: integer
     description: Variable significant_digits
-  mandatoryVariable:
+  mandatory_variable:
     range: boolean
     description: Indicator that variable must be present within the SDTM group
-  mandatoryValue:
+  mandatory_value:
     range: boolean
     description: Indicator that variable must be populated within the SDTM group
-  originType:
+  origin_type:
     range: OriginType
     description: Variable origin type (define-XML v21)
-  originSource:
+  origin_source:
     range: OriginSource
     description: Variable origin source (define-XML v21)
   comparator:
     range: Comparator
     description: Comparison operator for SDTM group variables included in VLM
-  vlmTarget:
+  vlm_target:
     range: boolean
     description: Target variable for VLM
 
 enums:
 
-  SdtmVariableDataType:
+  SDTMVariableDataType:
     permissible_values:
       float:
         text: float

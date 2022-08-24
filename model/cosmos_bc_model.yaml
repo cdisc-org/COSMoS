@@ -11,66 +11,73 @@ default_range: string
 
 classes:
 
+  IdentifiableThing:
+    abstract: true
+    description: >-
+      A databased entity, concept or class. This is a generic class that is the root
+      of all the other classes.
+    slots:
+      - id
+      - id_uri
+
   BiomedicalConcept:
     tree_root: true
+    is_a: IdentifiableThing
     slots:
-      - packageDate
-      - conceptId
-      - href
-      - category
-      - parentConceptId
-      - shortName
+      - package_date
+      - bc_category
+      - parent_id
+      - short_name
       - synonym
-      - resultScale
+      - result_scale
       - definition
       - coding
-      - dataElementConcepts
+      - data_element_concepts
     slot_usage:
-      conceptId:
+      id:
         description: NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt
-      href:
+      id_uri:
         description: URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt
 
   Coding:
     slots:
       - code
       - system
-      - systemName
+      - system_name
 
   DataElementConcept:
+    is_a: IdentifiableThing
     slots:
-      - conceptId
-      - href
       - label
-      - datatype
-      - exampleSet
+      - data_type
+      - example_set
     slot_usage:
-      conceptId:
+      id:
         description: NCI C-code for the BC Data Element Concept
-      href:
+      id_uri:
         description: Link to NCIt for the Data Element Concept
 
 slots:
-  conceptId:
+  id:
     description: An identifier that uniquely represents an entity
     identifier: true
     required: true
     range: string
-  href:
+  id_uri:
     range: uri
-  packageDate:
+  package_date:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
     required: true
-  category:
+  bc_category:
     multivalued: true
     inlined_as_list: true
     required: true
     description: Biomedical Concept category for the faciliation of API search and extract
-  parentConceptId:
+  parent_id:
     range: string
     description: C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
-  shortName:
+  short_name:
     required: true
     description: NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt
   synonym:
@@ -78,7 +85,7 @@ slots:
     inlined_as_list: true
     range: string
     description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
-  resultScale:
+  result_scale:
     range: BiomedicalConceptResultScale
     description: Scale of measurement for the Biomedical Concept result
   definition:
@@ -91,12 +98,12 @@ slots:
   system:
     required: true
     description: Identifies the code system for the synonym concept The URL of the code system should be used if it exists
-  systemName:
+  system_name:
     description: Human-readable name for the code system
   code:
     required: true
     description: Synonym concept for the Biomedical Concept as defined in a code system
-  dataElementConcepts:
+  data_element_concepts:
     multivalued: true
     inlined_as_list: true
     range: DataElementConcept
@@ -105,11 +112,11 @@ slots:
     range: string
     description: NCI Preferred Name for the Data Element Concept
     required: true
-  datatype:
+  data_type:
     range: DataElementConceptDataType
     recommended: true
     description: Data Type for the Data Element Concept
-  exampleSet:
+  example_set:
     description: Example values for the Data Element Concept
     multivalued: true
     inlined_as_list: true

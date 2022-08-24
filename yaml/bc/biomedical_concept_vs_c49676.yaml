@@ -1,59 +1,59 @@
-packageDate: 2022-10-26
-conceptId: C49676
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
-parentConceptId: C49672
-category:
+package_date: 2022-10-26
+id: C49676
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
+parent_id: C49672
+bc_category:
   - Vital Signs
-shortName: Pulse Rate
+short_name: Pulse Rate
 synonym:
   - Pulse
-resultScale: Quantitative
+result_scale: Quantitative
 definition: "The rate of the pulse as observed in an artery, expressed as beats per minute. It can be measured at several anatomic sites, including the wrist, neck, temple, groin, behind the knees, or on top of the foot."
-dataElementConcepts:
-  - conceptId: C173522
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
+data_element_concepts:
+  - id: C173522
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     label: Vital Signs Result
-    datatype: integer
-  - conceptId: C73688
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
+    data_type: integer
+  - id: C73688
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
     label: Count per Minute
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Beats per Minute
-  - conceptId: C83088
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
+  - id: C83088
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     label: Vital Signs Location
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Wrist
        - Neck
        - Temple
        - Groin
        - Behind the knees
        - On top of the foot
-  - conceptId: C123975
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
+  - id: C123975
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
     label: Vital Signs Laterality
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Left
        - Right
-  - conceptId: C82535
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+  - id: C82535
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
     label: Test Method
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Acoustic Monitoring
        - Auscaltation Manual
        - Palpation
        - Oscillometry
        - Pulse Oximetry
        - EKG/ECG
-  - conceptId: C83114
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83114
+  - id: C83114
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83114
     label: Vital Signs Position
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Decupitus
        - Fowlers
        - Lateral Decupitus

@@ -1,30 +1,30 @@
-packageDate: 2022-10-26
-conceptId: C64431
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64431
-parentConceptId: C74954
-category:
+package_date: 2022-10-26
+id: C64431
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64431
+parent_id: C74954
+bc_category:
   - Laboratory Tests
-shortName: Albumin Measurement
+short_name: Albumin Measurement
 synonym:
   - Albumin
-resultScale: Quantitative
+result_scale: Quantitative
 definition: "A quantitative measurement of albumin present in a sample."
-dataElementConcepts:
-  - conceptId: C36292
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+data_element_concepts:
+  - id: C36292
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     label: Laboratory Test Result
-    datatype: decimal
-  - conceptId: C83309
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    data_type: decimal
+  - id: C83309
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     label: Laboratory Test Fasting Status
-    datatype: boolean
-  - conceptId: NEW_2
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_2
+    data_type: boolean
+  - id: NEW_2
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_2
     label: Unit of Mass or Substance Concentration
-    datatype: string
-  - conceptId: C70713
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    data_type: string
+  - id: C70713
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     label: Biospecimen Type
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Plasma, Serum, Urine

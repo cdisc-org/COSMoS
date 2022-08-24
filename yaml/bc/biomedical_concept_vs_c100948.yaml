@@ -1,27 +1,27 @@
-packageDate: 2022-10-26
-conceptId: C100948
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C100948
-category:
+package_date: 2022-10-26
+id: C100948
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C100948
+bc_category:
   - Vital Signs
-shortName: Waist Circumference
-resultScale: Quantitative
+short_name: Waist Circumference
+result_scale: Quantitative
 definition: "A circumferential measurement of the waist, which may be classified as the area immediately below the lowest rib, at the narrowest part of the torso, midpoint between the lowest rib and the iliac crest, or immediately above the iliac crest."
 coding:
   - code: 56115-9
     system: http://loinc.org/
-    systemName: LOINC
-dataElementConcepts:
-  - conceptId: C173522
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
+    system_name: LOINC
+data_element_concepts:
+  - id: C173522
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     label: Vital Signs Result
-    datatype: decimal
-  - conceptId: C42578
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578
+    data_type: decimal
+  - id: C42578
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42578
     label: Unit of Length
-    datatype: string
-  - conceptId: C93507
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93507
+    data_type: string
+  - id: C93507
+    id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93507
     label: Approach Anatomic Site
-    datatype: string
-    exampleSet:
+    data_type: string
+    example_set:
        - Waist

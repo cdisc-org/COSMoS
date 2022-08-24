@@ -30,16 +30,16 @@
     file dummy filevar=outname dlm=",";
     if first.bc_id and not(missing(bc_id)) then do;
       count=0;
-      put "packageDate:" +1 package_date;
-      put "conceptId:" +1 BC_ID;
-      put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
+      put "package_date:" +1 package_date;
+      put "id:" +1 BC_ID;
+      put 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
       if not missing(parent_bc_id) then do;
-        put "parentConceptId:" +1 parent_bc_id;
+        put "parent_id:" +1 parent_bc_id;
         * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
       end;
       
       if not missing(bc_category) then do;
-        put "category:";
+        put "bc_category:";
         countwords=countw(bc_category, ";");
         do i=1 to countwords;
           value=strip(scan(bc_category, i, ";"));
@@ -47,7 +47,7 @@
         end;  
       end;
 
-      put "shortName:" +1 short_name;
+      put "short_name:" +1 short_name;
 
       if not missing(synonym) then do;
         put "synonym:";
@@ -58,7 +58,7 @@
         end;  
       end;
 
-      if not missing(result_scale) then put "resultScale:" +1 Result_Scale;
+      if not missing(result_scale) then put "result_scale:" +1 Result_Scale;
       if not missing(definition) then do;
         qDefinition = quote(strip(definition));
         put "definition:" +1 qDefinition;
@@ -73,21 +73,21 @@
           value=strip(scan(system, i, ";"));
           put +4 "system:" +1 value;
           value=strip(scan(system_name, i, ";"));
-          if not missing(value) then put +4 "systemName:" +1 value; 
+          if not missing(value) then put +4 "system_name:" +1 value; 
         end;
       end;
     end;
     
     count+1;
-    if count=2 and not missing(dec_id) then put "dataElementConcepts:";
+    if count=2 and not missing(dec_id) then put "data_element_concepts:";
 
     if not missing(dec_id) then do;
-      put "  - conceptId:" +1 dec_id;
-      put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
+      put "  - id:" +1 dec_id;
+      put +4 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
       put +4 "label:" +1 dec_label; 
-      if not missing(data_type) then put +4 "datatype:" +1 data_type; 
+      if not missing(data_type) then put +4 "data_type:" +1 data_type; 
       if not missing(example_set) then do;
-        put +4 "exampleSet:";
+        put +4 "example_set:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;
           value=strip(scan(example_set, i, ";"));

@@ -1,9 +1,9 @@
-packageDate: 2022-10-26
-conceptId: C49672
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49672
-category:
+package_date: 2022-10-26
+id: C49672
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49672
+bc_category:
   - Vital Signs
-shortName: Vital Signs Measurement
+short_name: Vital Signs Measurement
 synonym:
   - Vital Signs
   - VS

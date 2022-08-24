@@ -30,31 +30,31 @@
     file dummy filevar=outname dlm=",";
     if first.vlm_group_id then do;
       count=0;
-      put "packageDate:" +1 package_date;
+      put "package_date:" +1 package_date;
       put "domain:" +1 domain;
-      put "vlmGroupId:" +1 vlm_group_id;
-      put "vlmSource:" +1 vlm_source;
-      put "shortName:" +1 group_short_name;
-      put "sdtmigStartVersion:" +1 sdtmig_start_version;
-      put "sdtmigEndVersion:" +1 sdtmig_end_version;
-      if not missing(bc_id) then put "biomedicalConceptId:" +1 bc_id;
+      put "vlm_group_id:" +1 vlm_group_id;
+      put "group_short_name:" +1 group_short_name;
+      put "vlm_source:" +1 vlm_source;
+      put "sdtmig_start_version:" +1 sdtmig_start_version;
+      put "sdtmig_end_version:" +1 sdtmig_end_version;
+      if not missing(bc_id) then put "biomedical_concept_id:" +1 bc_id;
     end;
     count+1;
-    if count=1 and not missing(sdtm_variable) then put "SdtmVariables:";
+    if count=1 and not missing(sdtm_variable) then put "sdtm_variable:";
     if not missing(sdtm_variable) then do;
-        put +2 "- variableId:" +1 sdtm_variable;
-        if not missing(dec_id) then put +4 "variableConceptId:" +1 dec_id;
-        if upcase(nsv_flag)= "Y" then put +4 "nsvFlag:" +1 nsv_flag $YN.;
+        put +2 "- id:" +1 sdtm_variable;
+        if not missing(dec_id) then put +4 "biomedical_concept_dec_id:" +1 dec_id;
+        if upcase(nsv_flag)= "Y" then put +4 "nsv_flag:" +1 nsv_flag $YN.;
         if not missing(codelist) then do;
            put +4 "codelist:";
-           put +6 "ConceptId:" +1 codelist;
-           put +6 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
-           if not missing(codelist_submision_value) then put +6 "submissionValue:" +1 codelist_submision_value;
+           put +6 "id:" +1 codelist;
+           put +6 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
+           if not missing(codelist_submision_value) then put +6 "submission_value:" +1 codelist_submision_value;
         end;
-        if not missing(subset_codelist) then put +6 "subsetCodelist:" +1 subset_codelist;
+        if not missing(subset_codelist) then put +6 "subset_codelist:" +1 subset_codelist;
 
         if not missing(value_list) then do;
-          put +4 "valuelist:";
+          put +4 "value_list:";
           countwords=countw(value_list, ";");
           do i=1 to countwords;
             value=strip(scan(value_list, i, ";"));
@@ -64,33 +64,33 @@
 
 
         if not missing(assigned_value) then do;
-           put +4 "assignedTerm:";
-           if not missing(assigned_term) then put +6 "conceptId:" +1 assigned_term;
-           put +6 "submissionValue:" +1 assigned_value;
+           put +4 "assigned_term:";
+           if not missing(assigned_term) then put +6 "code:" +1 assigned_term;
+           put +6 "value:" +1 assigned_value;
         end;
         if not missing(role) then put +4 "role:" +1 role;
         if not missing(subject) then do;
           linking_phrase_low = lowcase(linking_phrase);
           put +4 "relationship:";
           put +6 "subject:" +1 subject;
-          put +6 "linkingPhrase:" +1 linking_phrase_low;
-          put +6 "predicateTerm:" +1 predicate_term;
+          put +6 "linking_phrase:" +1 linking_phrase_low;
+          put +6 "predicate_term:" +1 predicate_term;
           put +6 "object:" +1 object;
         end;
 
-        if not missing(data_type) then put +4 "datatype:" +1 data_type;
+        if not missing(data_type) then put +4 "data_type:" +1 data_type;
         if not missing(length) then put +4 "length:" +1 length;
         if not missing(format) then put +4 "format:" +1 format;
-        if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
+        if not missing(significant_digits) then put +4 "significant_digits:" +1 significant_digits;
 
-        if upcase(mandatory_variable)= "Y" then put +4 "mandatoryVariable:" +1 mandatory_variable $YN.;
-        if upcase(mandatory_value)= "Y" then put +4 "mandatoryValue:" +1 mandatory_value $YN.;
+        if upcase(mandatory_variable)= "Y" then put +4 "mandatory_variable:" +1 mandatory_variable $YN.;
+        if upcase(mandatory_value)= "Y" then put +4 "mandatory_value:" +1 mandatory_value $YN.;
 
-        if not missing(origin_type) then put +4 "originType:" +1 origin_type;
-        if not missing(origin_source) then put +4 "originSource:" +1 origin_source;
+        if not missing(origin_type) then put +4 "origin_type:" +1 origin_type;
+        if not missing(origin_source) then put +4 "origin_source:" +1 origin_source;
         if not missing(comparator) then put +4 "comparator:" +1 comparator;
 
-        if upcase(vlm_target)= "Y" then put +4 "vlmTarget:" +1 vlm_target $YN.;
+        if upcase(vlm_target)= "Y" then put +4 "vlm_target:" +1 vlm_target $YN.;
 
     end;
   run;

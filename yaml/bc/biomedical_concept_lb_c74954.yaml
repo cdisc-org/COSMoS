@@ -1,9 +1,9 @@
-packageDate: 2022-10-26
-conceptId: C74954
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74954
-parentConceptId: C49237
-category:
+package_date: 2022-10-26
+id: C74954
+id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74954
+parent_id: C49237
+bc_category:
   - Laboratory Tests
-shortName: Liver Function Test
-resultScale: Quantitative
+short_name: Liver Function Test
+result_scale: Quantitative
 definition: "The quantitative measurement of liver enzymes in the blood, which is useful in assessing the functional state of a patient's liver. Liver function tests include the measurement of albumin, alanine transaminase, aspartate transaminase, alkaline phosphatase"

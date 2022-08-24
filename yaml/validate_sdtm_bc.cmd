@@ -16,6 +16,6 @@ goto:EOF
   echo %counter% *** %1
   echo *** %1 >> %~dpn0.log
 
-  linkml-validate -C SdtmGroup -s ../model/cosmos_sdtm_bc_model.yaml %1 >> %~dpn0.log 2>>&1
+  linkml-validate -C SDTMGroup -s ../model/cosmos_sdtm_bc_model.yaml %1 >> %~dpn0.log 2>>&1
 
 goto :EOF
