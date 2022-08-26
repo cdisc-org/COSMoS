@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-24T04:29:28
+# Generation date: 2022-08-26T16:39:14
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -40,6 +40,10 @@ DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
 
 # Class references
 class IdentifiableThingId(extended_str):
+    pass
+
+
+class SDTMGroupVlmGroupId(extended_str):
     pass
 
 
@@ -87,10 +91,10 @@ class SDTMGroup(YAMLRoot):
     class_name: ClassVar[str] = "SDTMGroup"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMGroup")
 
+    vlm_group_id: Union[str, SDTMGroupVlmGroupId] = None
     package_date: Union[str, XSDDate] = None
     domain: str = None
     group_short_name: str = None
-    vlm_group_id: str = None
     vlm_source: str = None
     sdtmig_start_version: str = None
     sdtmig_end_version: Optional[str] = None
@@ -98,6 +102,11 @@ class SDTMGroup(YAMLRoot):
     sdtm_variable: Optional[Union[Dict[Union[str, SDTMVariableId], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.vlm_group_id):
+            self.MissingRequiredField("vlm_group_id")
+        if not isinstance(self.vlm_group_id, SDTMGroupVlmGroupId):
+            self.vlm_group_id = SDTMGroupVlmGroupId(self.vlm_group_id)
+
         if self._is_empty(self.package_date):
             self.MissingRequiredField("package_date")
         if not isinstance(self.package_date, XSDDate):
@@ -112,11 +121,6 @@ class SDTMGroup(YAMLRoot):
             self.MissingRequiredField("group_short_name")
         if not isinstance(self.group_short_name, str):
             self.group_short_name = str(self.group_short_name)
-
-        if self._is_empty(self.vlm_group_id):
-            self.MissingRequiredField("vlm_group_id")
-        if not isinstance(self.vlm_group_id, str):
-            self.vlm_group_id = str(self.vlm_group_id)
 
         if self._is_empty(self.vlm_source):
             self.MissingRequiredField("vlm_source")
@@ -514,7 +518,7 @@ slots.domain = Slot(uri=DEFAULT_.domain, name="domain", curie=DEFAULT_.curie('do
                    model_uri=DEFAULT_.domain, domain=None, range=str)
 
 slots.vlm_group_id = Slot(uri=DEFAULT_.vlm_group_id, name="vlm_group_id", curie=DEFAULT_.curie('vlm_group_id'),
-                   model_uri=DEFAULT_.vlm_group_id, domain=None, range=str)
+                   model_uri=DEFAULT_.vlm_group_id, domain=None, range=URIRef)
 
 slots.vlm_source = Slot(uri=DEFAULT_.vlm_source, name="vlm_source", curie=DEFAULT_.curie('vlm_source'),
                    model_uri=DEFAULT_.vlm_source, domain=None, range=str)

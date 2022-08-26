@@ -3,7 +3,7 @@ domain: VS
 vlm_group_id: DIABP
 group_short_name: Diastolic Blood Pressure
 vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-24
+sdtmig_start_version: 3-2
 sdtmig_end_version:  
 biomedical_concept_id: C25299
 sdtm_variable:

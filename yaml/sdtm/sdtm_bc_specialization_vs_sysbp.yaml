@@ -3,7 +3,7 @@ domain: VS
 vlm_group_id: SYSBP
 group_short_name: Systolic Blood Pressure
 vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-14
+sdtmig_start_version: 3-2
 sdtmig_end_version:  
 biomedical_concept_id: C25298
 sdtm_variable:

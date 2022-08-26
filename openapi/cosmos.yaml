@@ -20,19 +20,24 @@ servers:
 security:
   - ApiKeyAuth: []
 paths:
-  /mdr/bc/biomedicalconcepts:
+
+################################################################################
+
+# Biomedical Concept Paths
+
+  /mdr/bc/packages:
     get:
-      operationId: api.cosmos.get_biomedicalconcepts
-      summary: Get Biomedical Concept List
+      operationId: api.products.bc.get_packages
+      description: Get Biomedical Concept Package List
       tags:
-        - COSMoS
+        - Biomedical Concepts (BC)
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/cosmosBiomedicalConcepts'
+                $ref: '#/components/schemas/bcPackages'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -52,21 +57,22 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/biomedicalconcepts/{concept}:
+
+  /mdr/bc/packages/{package}/biomedicalconcepts:
     get:
-      operationId: api.cosmos.get_biomedicalconcept
-      summary: Get Biomedical Concept
+      operationId: api.products.bc.get_package_biomedicalconcepts
+      description: Get Biomedical Concept List
       tags:
-        - COSMoS
+        - Biomedical Concepts (BC)
       parameters:
-        - $ref: '#/components/parameters/concept'
+        - $ref: '#/components/parameters/bcPackage'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/cosmosBiomedicalConcept'
+                $ref: '#/components/schemas/bcBiomedicalConcepts'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -86,21 +92,22 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/biomedicalconcepts/{concept}/dataelementconcepts:
+  /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}:
     get:
-      operationId: api.cosmos.get_dataelementconcepts
-      summary: Get Biomedical Concept Data Element Concepts List
+      operationId: api.products.bc.get_package_biomedicalconcept
+      description: Get Biomedical Concept
       tags:
-        - COSMoS
+        - Biomedical Concepts (BC)
       parameters:
-        - $ref: '#/components/parameters/concept'
+        - $ref: '#/components/parameters/bcPackage'
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/cosmosBiomedicalConceptDataElementConcepts'
+                $ref: '#/components/schemas/bcBiomedicalConcept'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -120,22 +127,22 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/biomedicalconcepts/{concept}/dataelementconcepts/{dataelementconcept}:
+  /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}/dataelementconcepts:
     get:
-      operationId: api.cosmos.get_dataelementconcept
-      summary: Get Data Element Concepts
+      operationId: api.products.bc.get_package_biomedicalconcept_dataelementconcepts
+      description: Get Biomedical Concept Data Element Concept List
       tags:
-        - COSMoS
+        - Biomedical Concepts (BC)
       parameters:
-        - $ref: '#/components/parameters/concept'
-        - $ref: '#/components/parameters/dataelementconcept'
+        - $ref: '#/components/parameters/bcPackage'
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/cosmosDataElementConcept'
+                $ref: '#/components/schemas/bcDataElementConcepts'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -155,6 +162,217 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
+  /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}/dataelementconcepts/{dataelementconcept}:
+    get:
+      operationId: api.products.bc.get_package_biomedicalconcept_dataelementconcept
+      description: Get Biomedical Concept Data Element Concept
+      tags:
+        - Biomedical Concepts (BC)
+      parameters:
+        - $ref: '#/components/parameters/bcPackage'
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
+        - $ref: '#/components/parameters/bcDataElementConcept'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bcDataElementConcept'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+################################################################################
+
+# SDTM Dataset Specialization Paths
+
+  /mdr/specializations/sdtm/packages:
+    get:
+      operationId: api.products.specializations.sdtm.get_packages
+      description: Get Study Data Tabulation Model Dataset Specialization Package List
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmPackages'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/packages/{package}/datasetspecializations:
+    get:
+      operationId: api.products.specializations.sdtm.get_package_datasetspecializations
+      description: Get Dataset Specialization List
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmPackage'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmDatasetSpecializations'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}:
+    get:
+      operationId: api.products.specializations.sdtm.get_package_datasetspecialization
+      description: Get Dataset Specialization
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmPackage'
+        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmDatasetSpecialization'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables:
+    get:
+      operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variables
+      description: Get Dataset Specialization Variable List
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmPackage'
+        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmSpecializationVariables'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables/{variable}:
+    get:
+      operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variable
+      description: Get Dataset Specialization Variable
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmPackage'
+        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
+        - $ref: '#/components/parameters/sdtmDatasetSpecializationVariable'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmSpecializationVariables'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
 components:
 
   securitySchemes:
@@ -164,15 +382,26 @@ components:
       name: api-key
 
   parameters:
-    concept:
+  
+# Biomedical Concept Parameters
+  
+    bcPackage:
       in: path
-      name: concept
+      name: package
       required: true
-      description: COSMoS Biomedical Concept
+      description: Biomedical Concept Package Identifier
+      schema:
+        type: string
+        example: bc-2022-10-26
+    bcBiomedicalConcept:
+      in: path
+      name: biomedicalconcept
+      required: true
+      description: Biomedical Concept
       schema:
         type: string
         example: C49676
-    dataelementconcept:
+    bcDataElementConcept:
       in: path
       name: dataelementconcept
       required: true
@@ -180,6 +409,35 @@ components:
       schema:
         type: string
         example: C73688
+
+# SDTM Dataset Specialization Parameters
+
+    sdtmPackage:
+      in: path
+      name: package
+      required: true
+      description: SDTM Dataset Specialization Package Identifier
+      schema:
+        type: string
+        example: sdtm-2022-10-26
+    sdtmDatasetSpecialization:
+      in: path
+      name: datasetspecialization
+      required: true
+      description: SDTM Dataset Specialization
+      schema:
+        type: string
+        example: SYSBP
+    sdtmDatasetSpecializationVariable:
+      in: path
+      name: variable
+      required: true
+      description: SDTM Dataset Specialization Variable
+      schema:
+        type: string
+        example: VSORRESU
+
+# Responses
 
   responses:
     statusBadRequest:
@@ -241,8 +499,10 @@ components:
           schema:
             $ref: '#/components/schemas/defaultErrorResponse'
 
+# Schemas
 
   schemas:
+
     defaultErrorResponse:
       properties:
         statusCode:
@@ -255,42 +515,96 @@ components:
           description: Message
           type: string
 
-# BiomedicalConcepts
-    cosmosBiomedicalConcepts:
+################################################################################
+
+# Biomedical Concept Packages
+    bcPackages:
       type: object
       properties:
         _links:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptsLinks'
-    cosmosBiomedicalConceptsLinks:
+          $ref: '#/components/schemas/bcPackagesLinks'
+    bcPackagesLinks:
       type: object
       properties:
         self:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptsRef'
+          $ref: '#/components/schemas/bcPackagesRef'
+        packages:
+          type: array
+          items:
+            $ref: '#/components/schemas/bcPackageRefElement'
+    bcPackagesRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/packages
+        title:
+          type: string
+          example: Product Group Biomedical Concepts
+        type:
+          type: string
+          example: Biomedical Concept Package List
+    bcPackageRefElement:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts
+        title:
+          type: string
+          example: Biomedical Concept Package Effective 2022-10-26
+        type:
+          type: string
+          example: Biomedical Concepts
+
+# Biomedical Concepts
+    bcBiomedicalConcepts:
+      type: object
+      properties:
+        name:
+          type: string
+          example: BC 2022-10-26
+        label:
+          type: string
+          example: Biomedical Concept Package Effective 2022-10-26
+        effectiveDate:
+          type: string
+          example: '2022-10-26'
+        version:
+          type: string
+          example: 'bc-2022-10-26'
+        _links:
+          $ref: '#/components/schemas/bcBiomedicalConceptsLinks'
+    bcBiomedicalConceptsLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptsRef'
         biomedicalConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptRefElement'
+            $ref: '#/components/schemas/bcBiomedicalConceptRefElement'
 
-    cosmosBiomedicalConceptsRef:
+    bcBiomedicalConceptsRef:
       description: Biomedical Concepts Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts
         title:
           type: string
           example: Biomedical Concepts
         type:
           type: string
           example: Biomedical Concept List
-    cosmosBiomedicalConceptRefElement:
+    bcBiomedicalConceptRefElement:
       description: Biomedical Concept Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts/C49676
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
@@ -298,8 +612,8 @@ components:
           type: string
           example: Biomedical Concept
 
-# BiomedicalConcept
-    cosmosBiomedicalConcept:
+# Biomedical Concept
+    bcBiomedicalConcept:
       type: object
       properties:
         conceptId:
@@ -341,34 +655,36 @@ components:
         coding:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
+            $ref: '#/components/schemas/bcBiomedicalConceptCoding'
         _links:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
+          $ref: '#/components/schemas/bcBiomedicalConceptLinks'
         dataElementConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosDataElementConcept'
+            $ref: '#/components/schemas/bcDataElementConceptElement'
       required:
         - conceptId
         - category
         - shortName
         - definition
 
-    cosmosBiomedicalConceptLinks:
+    bcBiomedicalConceptLinks:
       type: object
       properties:
         self:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptRef'
+          $ref: '#/components/schemas/bcBiomedicalConceptRef'
         parentBiomedicalConcept:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptParentRef'
+          $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
+        parentPackage:
+          $ref: '#/components/schemas/bcPackageRefElement'
 
-    cosmosBiomedicalConceptRef:
+    bcBiomedicalConceptRef:
       description: Biomedical Concept Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts/C49676
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
@@ -377,12 +693,12 @@ components:
           example: Biomedical Concept
 
 
-    cosmosBiomedicalConceptParentRef:
+    bcBiomedicalConceptParentRef:
       description: Biomedical Concept Parent Reference
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts/C49672
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49672
         title:
           type: string
           example: Vital Signs Measurement
@@ -391,7 +707,7 @@ components:
           example: Biomedical Concept
 
 
-    cosmosBiomedicalConceptCoding:
+    bcBiomedicalConceptCoding:
       type: object
       properties:
         code:
@@ -407,8 +723,35 @@ components:
         - code
         - system
 
-# BiomedicalConceptDataElementConcepts
-    cosmosBiomedicalConceptDataElementConcepts:
+    bcDataElementConceptElement:
+      type: object
+      properties:
+        conceptId:
+          type: string
+          example: C123975
+        href:
+          type: string
+          format: uri
+          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
+        label:
+          type: string
+          example: Vital Signs Laterality
+        dataType:
+          type: string
+          example: string
+        exampleSets:
+          type: array
+          items:
+            type: string
+          example:
+            - Left
+            - Right
+      required:
+        - conceptId
+        - label
+
+# Data Element Concepts
+    bcDataElementConcepts:
       type: object
       properties:
         conceptId:
@@ -450,26 +793,50 @@ components:
         coding:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosBiomedicalConceptCoding'
+            $ref: '#/components/schemas/bcBiomedicalConceptCoding'
         _links:
-          $ref: '#/components/schemas/cosmosBiomedicalConceptLinks'
+          $ref: '#/components/schemas/bcBiomedicalConceptDataElementConceptsLinks'
         dataElementConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/cosmosDataElementConceptRef'
+            $ref: '#/components/schemas/bcDataElementConceptRef'
       required:
         - conceptId
         - category
         - shortName
         - definition
 
-    cosmosDataElementConceptRef:
+    bcBiomedicalConceptDataElementConceptsLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptDataElementConceptRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
+        parentPackage:
+          $ref: '#/components/schemas/bcPackageRefElement'
+
+    bcBiomedicalConceptDataElementConceptRef:
       description: Data Element Concept Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts/C49676/dataelementconcepts/C123975
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676/dataelementconcepts
+        title:
+          type: string
+          example: Pulse Rate Biomedical Concept
+        type:
+          type: string
+          example: Data Element Concept List
+
+    bcDataElementConceptRef:
+      description: Data Element Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676/dataelementconcepts/C123975
         title:
           type: string
           example: Vital Signs Laterality
@@ -477,8 +844,8 @@ components:
           type: string
           example: Data Element Concept
 
-# DataElementConcept
-    cosmosDataElementConcept:
+# Data Element Concept
+    bcDataElementConcept:
       type: object
       properties:
         conceptId:
@@ -502,30 +869,218 @@ components:
             - Left
             - Right
         _links:
-          $ref: '#/components/schemas/cosmosDataElementConceptBiomedicalConceptLinks'
+          $ref: '#/components/schemas/bcDataElementConceptBiomedicalConceptLinks'
       required:
         - conceptId
         - label
 
-    cosmosDataElementConceptBiomedicalConceptLinks:
+    bcDataElementConceptBiomedicalConceptLinks:
       type: object
       properties:
         _self:
-          $ref: '#/components/schemas/cosmosDataElementConceptRef'
+          $ref: '#/components/schemas/bcDataElementConceptRef'
         biomedicalConcept:
-          $ref: '#/components/schemas/cosmosDataElementConceptBiomedicalConceptRef'
+          $ref: '#/components/schemas/bcDataElementConceptBiomedicalConceptRef'
+        parentPackage:
+          $ref: '#/components/schemas/bcPackageRefElement'
 
-    cosmosDataElementConceptBiomedicalConceptRef:
+    bcDataElementConceptBiomedicalConceptRef:
       description: Biomedical Concept Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/bc/biomedicalconcepts/C49676
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676
         title:
           type: string
           example: Pulse Rate
         type:
           type: string
           example: Biomedical Concept
+
+################################################################################
+
+# SDTM Dataset Specialization Packages
+    sdtmPackages:
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/sdtmPackagesLinks'
+    sdtmPackagesLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmPackagesRef'
+        packages:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmPackageRefElement'
+    sdtmPackagesRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages
+        title:
+          type: string
+          example: Product Group SDTM Dataset Specializations
+        type:
+          type: string
+          example: SDTM Dataset Specialization Package List
+    sdtmPackageRefElement:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations
+        title:
+          type: string
+          example: SDTM Dataset Specialization Package Effective 2022-10-26
+        type:
+          type: string
+          example: SDTM Dataset Specializations
+
+# SDTM Dataset Specializations
+    sdtmDatasetSpecializations:
+      type: object
+      properties:
+        name:
+          type: string
+          example: SDTM 2022-10-26
+        label:
+          type: string
+          example: SDTM Dataset Specialization Package Effective 2022-10-26
+        effectiveDate:
+          type: string
+          example: '2022-10-26'
+        version:
+          type: string
+          example: 'sdtm-2022-10-26'
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsLinks'
+    sdtmDatasetSpecializationsLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
+        DatasetSpecializations:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmDatasetSpecializationRefElement'
+    sdtmDatasetSpecializationsRef:
+      description: SDTM Dataset Specializations Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations
+        title:
+          type: string
+          example: SDTM Dataset Specializations
+        type:
+          type: string
+          example: SDTM Dataset Specialization List
+
+    sdtmDatasetSpecializationRefElement:
+      description: SDTM Dataset Specialization Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations/SYSBP
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: SDTM Dataset Specialization
+
+# SDTM Dataset Specialization
+    sdtmDatasetSpecialization:
+      type: object
+      properties:
+        datasetSpecializationId:
+          type: string
+          example: SYSBP
+        domain:
+          type: string
+          example: VS
+        shortName:
+          type: string
+          example: Systolic Blood Pressure
+        source:
+          type: string
+          example: VS.VSTESTCD
+        sdtmigStartVersion:
+          type: string
+          example: '3-2'
+        sdtmigEndVersion:
+          type: string
+          example:
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationLinks'
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmSpecializationVariableElement'
+      required:
+        - datasetSpecializationId
+        - domain
+        - shortName
+        - source
+        - sdtmStartVersion
+
+    sdtmDatasetSpecializationLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
+        parentPackage:
+          $ref: '#/components/schemas/sdtmPackageRefElement'
+
+    sdtmDatasetSpecializationRef:
+      description: Biomedical Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
+        title:
+          type: string
+          example: Pulse Rate
+        type:
+          type: string
+          example: Biomedical Concept
+
+
+    sdtmDatasetSpecializationBiomedicalConceptRef:
+      description: Biomedical Concept Parent Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C25298
+        title:
+          type: string
+          example: Vital Signs Measurement
+        type:
+          type: string
+          example: Biomedical Concept
+
+
+    sdtmSpecializationVariableElement:
+      type: object
+      properties:
+        name:
+          type: string
+          example: VSSTRESC
+        dataType:
+          type: string
+          example: integer
+      required:
+        - Id
+        - label
+
+
 

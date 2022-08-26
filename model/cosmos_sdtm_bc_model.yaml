@@ -96,23 +96,24 @@ classes:
 
 slots:
   id:
-    description: An identifier that uniquely represents an entity
     identifier: true
     required: true
     range: string
+    description: An identifier that uniquely represents an entity
   id_uri:
     required: false
     range: uri
     description: Identifier uri link
 
   package_date:
+    required: true
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
-    required: true
   domain:
     required: true
     description: Domain for the SDTM specialization group
   vlm_group_id:
+    identifier: true
     required: true
     range: string
     description: Identifier for SDTM Value Level Metadata group
