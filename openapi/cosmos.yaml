@@ -1016,7 +1016,7 @@ components:
           example: '3-2'
         sdtmigEndVersion:
           type: string
-          example:
+          example: '3-4'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationLinks'
         variables:
@@ -1074,13 +1074,107 @@ components:
       properties:
         name:
           type: string
-          example: VSSTRESC
+          example: VSSTRESU
+        dataElementConceptId: 
+          type: string
+          example: C49669
+        isNonStandard:
+          type: boolean
+          default: false
+        codelist:
+          $ref: '#/components/schemas/sdtmSDatasetSpecializationCodeList'
+        subsetCodelist:
+          type: string
+        valuelist:
+          type: array
+          items:
+            type: string
+        assignedTerm:
+          $ref: '#/components/schemas/sdtmSDatasetpecializationAssignedTerm'
+        role: 
+          type: string
+          example: Qualifier
         dataType:
           type: string
-          example: integer
+          example: string
+        length:
+          type: integer
+          example: 20
+        format:
+          type: string
+        significantDigits:
+          type: integer
+        relationship:
+          $ref: '#/components/schemas/sdtmSDatasetpecializationRelationship' 
+        mandatoryVariable: 
+          type: boolean
+          default: false
+        mandatoryValue: 
+          type: boolean
+          default: false
+        originType:
+          type: string
+          example: Assigned
+        originSource:
+          type: string
+          example: Sponsor
+        comparator:
+          type: string
+        vlmTarget: 
+          type: boolean
+          default: false
+          example: true 
       required:
-        - Id
-        - label
+        - name
 
+    sdtmSDatasetpecializationRelationship:
+      type: object
+      properties:
+        subject: 
+          type: string
+          example: VSSTRESU
+        linkingPhrase: 
+          type: string
+          example: 'is the unit for the value in'
+        predicateTerm:
+          type: string
+          example: IS_UNIT_FOR
+        object: 
+          type: string
+          example: VSSTRESN
+      required:
+        - subject
+        - linkingPrase
+        - predicateTerm
+        - object
+
+    sdtmSDatasetpecializationAssignedTerm:
+      type: object
+      properties:
+        conceptId: 
+          type: string
+          example: C49670
+        value: 
+          type: string
+          example: mmHG
+      required:
+        - value
+        
+    sdtmSDatasetSpecializationCodeList:
+      type: object
+      properties:
+        conceptId: 
+          type: string
+          example: C66770
+        href: 
+          type: string
+          format: uri
+          example: 'https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770'
+        submissionValue: 
+          type: string
+          example: VSRESU  
+      required:
+        - conceptId
+        - submissionValue
 
 

@@ -176,7 +176,7 @@ sdtm_variable:
       id: C66742
       id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submission_value: NY
-      subset_codelist: NY_NY
+    subset_codelist: NY_NY
     role: Qualifier
     relationship:
       subject: LBFAST

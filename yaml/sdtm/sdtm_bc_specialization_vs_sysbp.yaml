@@ -113,7 +113,7 @@ sdtm_variable:
       id: C71148
       id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71148
       submission_value: POSITION
-      subset_codelist: VSPOS
+    subset_codelist: VSPOS
     role: Qualifier
     relationship:
       subject: VSPOS
@@ -127,7 +127,7 @@ sdtm_variable:
       id: C74456
       id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
       submission_value: LOC
-      subset_codelist: VSLOC_PULSE
+    subset_codelist: VSLOC_PULSE
     role: Qualifier
     relationship:
       subject: VSLOC
@@ -141,7 +141,7 @@ sdtm_variable:
       id: C99073
       id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
       submission_value: LAT
-      subset_codelist: VSLAT_BP
+    subset_codelist: VSLAT_BP
     role: Qualifier
     relationship:
       subject: VSLAT
