@@ -318,7 +318,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/sdtmSpecializationVariables'
+                $ref: '#/components/schemas/sdtmDatasetSpecializationVariables'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -341,7 +341,7 @@ paths:
   /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables/{variable}:
     get:
       operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variable
-      description: Get Dataset Specialization Variable
+      description: Get Dataset Specialization Variable (TBD)
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       parameters:
@@ -354,7 +354,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/sdtmSpecializationVariables'
+                $ref: '#/components/schemas/sdtmDatasetSpecializationVariable'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -555,7 +555,7 @@ components:
           example: Biomedical Concept Package Effective 2022-10-26
         type:
           type: string
-          example: Biomedical Concepts
+          example: Biomedical Concept Package
 
 # Biomedical Concepts
     bcBiomedicalConcepts:
@@ -580,6 +580,8 @@ components:
       properties:
         self:
           $ref: '#/components/schemas/bcBiomedicalConceptsRef'
+        parentPackage:
+          $ref: '#/components/schemas/bcPackageRefElement'
         biomedicalConcepts:
           type: array
           items:
@@ -825,7 +827,7 @@ components:
           example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676/dataelementconcepts
         title:
           type: string
-          example: Pulse Rate Biomedical Concept
+          example: Pulse Rate Data Element Concept List
         type:
           type: string
           example: Data Element Concept List
@@ -839,7 +841,7 @@ components:
           example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676/dataelementconcepts/C123975
         title:
           type: string
-          example: Vital Signs Laterality
+          example: Vital Signs Laterality (Pulse Rate)
         type:
           type: string
           example: Data Element Concept
@@ -963,6 +965,8 @@ components:
       properties:
         self:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
+        parentPackage:
+          $ref: '#/components/schemas/sdtmPackageRefElement'
         DatasetSpecializations:
           type: array
           items:
@@ -1041,7 +1045,7 @@ components:
           $ref: '#/components/schemas/sdtmPackageRefElement'
 
     sdtmDatasetSpecializationRef:
-      description: Biomedical Concept Reference
+      description: SDTM Dataset Specialization Reference
       type: object
       properties:
         href:
@@ -1052,7 +1056,7 @@ components:
           example: Pulse Rate
         type:
           type: string
-          example: Biomedical Concept
+          example: SDTM Dataset Specialization
 
 
     sdtmDatasetSpecializationBiomedicalConceptRef:
@@ -1063,7 +1067,7 @@ components:
           example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C25298
         title:
           type: string
-          example: Vital Signs Measurement
+          example: Systolic Blood Pressure
         type:
           type: string
           example: Biomedical Concept
@@ -1177,4 +1181,82 @@ components:
         - conceptId
         - submissionValue
 
+# SDTM Dataset Specialization Variables
+    sdtmDatasetSpecializationVariables:
+      type: object
+      properties:
+        datasetSpecializationId:
+          type: string
+          example: SYSBP
+        domain:
+          type: string
+          example: VS
+        shortName:
+          type: string
+          example: Systolic Blood Pressure
+        source:
+          type: string
+          example: VS.VSTESTCD
+        sdtmigStartVersion:
+          type: string
+          example: '3-2'
+        sdtmigEndVersion:
+          type: string
+          example: '3-4'
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationVariablesLinks'
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmVariableRef'
+      required:
+        - datasetSpecializationId
+        - domain
+        - shortName
+        - source
+        - sdtmStartVersion
+
+    sdtmDatasetSpecializationVariablesLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationVariablesRef'
+        parentDatasetSpecialization:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
+        parentPackage:
+          $ref: '#/components/schemas/sdtmPackageRefElement'
+
+    sdtmDatasetSpecializationVariablesRef:
+      description: SDTM Dataset Specialization Variables Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables
+        title:
+          type: string
+          example: Systolic Blood Pressure Variables
+        type:
+          type: string
+          example: SDTM Dataset Specialization Variables
+
+    sdtmVariableRef:
+      description: Data Element Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESC
+        title:
+          type: string
+          example: VSSTRESC (SYSPB))
+        type:
+          type: string
+          example: SDTM Dataset Specialization Variable
+
+# SDTM Dataset Specialization Variable
+    sdtmDatasetSpecializationVariable:
+      type: object
 
