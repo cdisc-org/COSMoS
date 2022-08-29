@@ -205,7 +205,7 @@ paths:
   /mdr/specializations/sdtm/packages:
     get:
       operationId: api.products.specializations.sdtm.get_packages
-      description: Get Study Data Tabulation Model Dataset Specialization Package List
+      description: Get SDTM Dataset Specialization Package List
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       responses:
@@ -237,7 +237,7 @@ paths:
   /mdr/specializations/sdtm/packages/{package}/datasetspecializations:
     get:
       operationId: api.products.specializations.sdtm.get_package_datasetspecializations
-      description: Get Dataset Specialization List
+      description: Get SDTM Dataset Specialization List
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       parameters:
@@ -271,7 +271,7 @@ paths:
   /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}:
     get:
       operationId: api.products.specializations.sdtm.get_package_datasetspecialization
-      description: Get Dataset Specialization
+      description: Get SDTM Dataset Specialization
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       parameters:
@@ -306,7 +306,7 @@ paths:
   /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables:
     get:
       operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variables
-      description: Get Dataset Specialization Variable List
+      description: Get SDTM Dataset Specialization Variable List
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       parameters:
@@ -341,7 +341,7 @@ paths:
   /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables/{variable}:
     get:
       operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variable
-      description: Get Dataset Specialization Variable (TBD)
+      description: Get SDTM Dataset Specialization Variable
       tags:
         - Study Data Tabulation Model Dataset Specializations (SDTM)
       parameters:
@@ -523,6 +523,7 @@ components:
       properties:
         _links:
           $ref: '#/components/schemas/bcPackagesLinks'
+
     bcPackagesLinks:
       type: object
       properties:
@@ -531,7 +532,8 @@ components:
         packages:
           type: array
           items:
-            $ref: '#/components/schemas/bcPackageRefElement'
+            $ref: '#/components/schemas/bcPackageRef'
+
     bcPackagesRef:
       type: object
       properties:
@@ -544,7 +546,8 @@ components:
         type:
           type: string
           example: Biomedical Concept Package List
-    bcPackageRefElement:
+
+    bcPackageRef:
       type: object
       properties:
         href:
@@ -575,17 +578,18 @@ components:
           example: 'bc-2022-10-26'
         _links:
           $ref: '#/components/schemas/bcBiomedicalConceptsLinks'
+          
     bcBiomedicalConceptsLinks:
       type: object
       properties:
         self:
           $ref: '#/components/schemas/bcBiomedicalConceptsRef'
         parentPackage:
-          $ref: '#/components/schemas/bcPackageRefElement'
+          $ref: '#/components/schemas/bcPackageRef'
         biomedicalConcepts:
           type: array
           items:
-            $ref: '#/components/schemas/bcBiomedicalConceptRefElement'
+            $ref: '#/components/schemas/bcBiomedicalConceptRef'
 
     bcBiomedicalConceptsRef:
       description: Biomedical Concepts Reference
@@ -600,7 +604,8 @@ components:
         type:
           type: string
           example: Biomedical Concept List
-    bcBiomedicalConceptRefElement:
+          
+    bcBiomedicalConceptRef:
       description: Biomedical Concept Reference
       type: object
       properties:
@@ -678,22 +683,7 @@ components:
         parentBiomedicalConcept:
           $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
         parentPackage:
-          $ref: '#/components/schemas/bcPackageRefElement'
-
-    bcBiomedicalConceptRef:
-      description: Biomedical Concept Reference
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676
-        title:
-          type: string
-          example: Pulse Rate
-        type:
-          type: string
-          example: Biomedical Concept
-
+          $ref: '#/components/schemas/bcPackageRef'
 
     bcBiomedicalConceptParentRef:
       description: Biomedical Concept Parent Reference
@@ -798,10 +788,6 @@ components:
             $ref: '#/components/schemas/bcBiomedicalConceptCoding'
         _links:
           $ref: '#/components/schemas/bcBiomedicalConceptDataElementConceptsLinks'
-        dataElementConcepts:
-          type: array
-          items:
-            $ref: '#/components/schemas/bcDataElementConceptRef'
       required:
         - conceptId
         - category
@@ -816,7 +802,11 @@ components:
         parentBiomedicalConcept:
           $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
         parentPackage:
-          $ref: '#/components/schemas/bcPackageRefElement'
+          $ref: '#/components/schemas/bcPackageRef'
+        dataElementConcepts:
+          type: array
+          items:
+            $ref: '#/components/schemas/bcDataElementConceptRef'
 
     bcBiomedicalConceptDataElementConceptRef:
       description: Data Element Concept Reference
@@ -882,23 +872,9 @@ components:
         _self:
           $ref: '#/components/schemas/bcDataElementConceptRef'
         biomedicalConcept:
-          $ref: '#/components/schemas/bcDataElementConceptBiomedicalConceptRef'
+          $ref: '#/components/schemas/bcBiomedicalConceptRef'
         parentPackage:
-          $ref: '#/components/schemas/bcPackageRefElement'
-
-    bcDataElementConceptBiomedicalConceptRef:
-      description: Biomedical Concept Reference
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C49676
-        title:
-          type: string
-          example: Pulse Rate
-        type:
-          type: string
-          example: Biomedical Concept
+          $ref: '#/components/schemas/bcPackageRef'
 
 ################################################################################
 
@@ -908,6 +884,7 @@ components:
       properties:
         _links:
           $ref: '#/components/schemas/sdtmPackagesLinks'
+          
     sdtmPackagesLinks:
       type: object
       properties:
@@ -916,7 +893,8 @@ components:
         packages:
           type: array
           items:
-            $ref: '#/components/schemas/sdtmPackageRefElement'
+            $ref: '#/components/schemas/sdtmPackageRef'
+            
     sdtmPackagesRef:
       type: object
       properties:
@@ -929,7 +907,8 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization Package List
-    sdtmPackageRefElement:
+          
+    sdtmPackageRef:
       type: object
       properties:
         href:
@@ -940,7 +919,7 @@ components:
           example: SDTM Dataset Specialization Package Effective 2022-10-26
         type:
           type: string
-          example: SDTM Dataset Specializations
+          example: SDTM Dataset Specialization Package
 
 # SDTM Dataset Specializations
     sdtmDatasetSpecializations:
@@ -960,17 +939,19 @@ components:
           example: 'sdtm-2022-10-26'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsLinks'
+          
     sdtmDatasetSpecializationsLinks:
       type: object
       properties:
         self:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
         parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRefElement'
+          $ref: '#/components/schemas/sdtmPackageRef'
         DatasetSpecializations:
           type: array
           items:
-            $ref: '#/components/schemas/sdtmDatasetSpecializationRefElement'
+            $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
+            
     sdtmDatasetSpecializationsRef:
       description: SDTM Dataset Specializations Reference
       type: object
@@ -985,13 +966,13 @@ components:
           type: string
           example: SDTM Dataset Specialization List
 
-    sdtmDatasetSpecializationRefElement:
+    sdtmDatasetSpecializationRef:
       description: SDTM Dataset Specialization Reference
       type: object
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations/SYSBP
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
         title:
           type: string
           example: Systolic Blood Pressure
@@ -1026,7 +1007,7 @@ components:
         variables:
           type: array
           items:
-            $ref: '#/components/schemas/sdtmSpecializationVariableElement'
+            $ref: '#/components/schemas/sdtmDataSpecializationVariableElement'
       required:
         - datasetSpecializationId
         - domain
@@ -1042,22 +1023,7 @@ components:
         parentBiomedicalConcept:
           $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
         parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRefElement'
-
-    sdtmDatasetSpecializationRef:
-      description: SDTM Dataset Specialization Reference
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
-        title:
-          type: string
-          example: Systolic Blood Pressure
-        type:
-          type: string
-          example: SDTM Dataset Specialization
-
+          $ref: '#/components/schemas/sdtmPackageRef'
 
     sdtmDatasetSpecializationBiomedicalConceptRef:
       description: Biomedical Concept Parent Reference
@@ -1072,8 +1038,7 @@ components:
           type: string
           example: Biomedical Concept
 
-
-    sdtmSpecializationVariableElement:
+    sdtmDataSpecializationVariableElement:
       type: object
       properties:
         name:
@@ -1086,7 +1051,7 @@ components:
           type: boolean
           default: false
         codelist:
-          $ref: '#/components/schemas/sdtmSDatasetSpecializationCodeList'
+          $ref: '#/components/schemas/sdtmDatasetSpecializationCodeList'
         subsetCodelist:
           type: string
         valuelist:
@@ -1094,7 +1059,7 @@ components:
           items:
             type: string
         assignedTerm:
-          $ref: '#/components/schemas/sdtmSDatasetpecializationAssignedTerm'
+          $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
         role: 
           type: string
           example: Qualifier
@@ -1109,7 +1074,7 @@ components:
         significantDigits:
           type: integer
         relationship:
-          $ref: '#/components/schemas/sdtmSDatasetpecializationRelationship' 
+          $ref: '#/components/schemas/sdtmDatasetpecializationRelationship' 
         mandatoryVariable: 
           type: boolean
           default: false
@@ -1131,7 +1096,7 @@ components:
       required:
         - name
 
-    sdtmSDatasetpecializationRelationship:
+    sdtmDatasetpecializationRelationship:
       type: object
       properties:
         subject: 
@@ -1152,7 +1117,7 @@ components:
         - predicateTerm
         - object
 
-    sdtmSDatasetpecializationAssignedTerm:
+    sdtmDatasetpecializationAssignedTerm:
       type: object
       properties:
         conceptId: 
@@ -1164,7 +1129,7 @@ components:
       required:
         - value
         
-    sdtmSDatasetSpecializationCodeList:
+    sdtmDatasetSpecializationCodeList:
       type: object
       properties:
         conceptId: 
@@ -1205,10 +1170,6 @@ components:
           example: '3-4'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationVariablesLinks'
-        variables:
-          type: array
-          items:
-            $ref: '#/components/schemas/sdtmVariableRef'
       required:
         - datasetSpecializationId
         - domain
@@ -1226,7 +1187,11 @@ components:
         parentBiomedicalConcept:
           $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
         parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRefElement'
+          $ref: '#/components/schemas/sdtmPackageRef'
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmDatasetSpecializationVariableRef'
 
     sdtmDatasetSpecializationVariablesRef:
       description: SDTM Dataset Specialization Variables Reference
@@ -1242,7 +1207,7 @@ components:
           type: string
           example: SDTM Dataset Specialization Variables
 
-    sdtmVariableRef:
+    sdtmDatasetSpecializationVariableRef:
       description: Data Element Concept Reference
       type: object
       properties:
@@ -1270,7 +1235,7 @@ components:
           type: boolean
           default: false
         codelist:
-          $ref: '#/components/schemas/sdtmSDatasetSpecializationCodeList'
+          $ref: '#/components/schemas/sdtmDatasetSpecializationCodeList'
         subsetCodelist:
           type: string
         valuelist:
@@ -1278,7 +1243,7 @@ components:
           items:
             type: string
         assignedTerm:
-          $ref: '#/components/schemas/sdtmSDatasetpecializationAssignedTerm'
+          $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
         role: 
           type: string
           example: Qualifier
@@ -1293,7 +1258,7 @@ components:
         significantDigits:
           type: integer
         relationship:
-          $ref: '#/components/schemas/sdtmSDatasetpecializationRelationship' 
+          $ref: '#/components/schemas/sdtmDatasetpecializationRelationship' 
         mandatoryVariable: 
           type: boolean
           default: false
@@ -1321,23 +1286,8 @@ components:
       type: object
       properties:
         self:
-          $ref: '#/components/schemas/sdtmVariableRef'
+          $ref: '#/components/schemas/sdtmDatasetSpecializationVariableRef'
         DatasetSpecialization:
-          $ref: '#/components/schemas/sdtmVariableDatasetSpecializationRef'
+          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
         parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRefElement'
-
-    sdtmVariableDatasetSpecializationRef:
-      description: Biomedical Concept Reference
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
-        title:
-          type: string
-          example: Systolic Blood Pressure
-        type:
-          type: string
-          example: SDTM Dataset Specialization
-
+          $ref: '#/components/schemas/sdtmPackageRef'
