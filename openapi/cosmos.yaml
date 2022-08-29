@@ -435,7 +435,7 @@ components:
       description: SDTM Dataset Specialization Variable
       schema:
         type: string
-        example: VSORRESU
+        example: VSSTRESU
 
 # Responses
 
@@ -1053,7 +1053,7 @@ components:
           example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
         title:
           type: string
-          example: Pulse Rate
+          example: Systolic Blood Pressure
         type:
           type: string
           example: SDTM Dataset Specialization
@@ -1248,10 +1248,10 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESC
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESU
         title:
           type: string
-          example: VSSTRESC (SYSPB))
+          example: VSSTRESU (SYSPB))
         type:
           type: string
           example: SDTM Dataset Specialization Variable
@@ -1259,4 +1259,85 @@ components:
 # SDTM Dataset Specialization Variable
     sdtmDatasetSpecializationVariable:
       type: object
+      properties:
+        name:
+          type: string
+          example: VSSTRESU
+        dataElementConceptId: 
+          type: string
+          example: C49669
+        isNonStandard:
+          type: boolean
+          default: false
+        codelist:
+          $ref: '#/components/schemas/sdtmSDatasetSpecializationCodeList'
+        subsetCodelist:
+          type: string
+        valuelist:
+          type: array
+          items:
+            type: string
+        assignedTerm:
+          $ref: '#/components/schemas/sdtmSDatasetpecializationAssignedTerm'
+        role: 
+          type: string
+          example: Qualifier
+        dataType:
+          type: string
+          example: string
+        length:
+          type: integer
+          example: 20
+        format:
+          type: string
+        significantDigits:
+          type: integer
+        relationship:
+          $ref: '#/components/schemas/sdtmSDatasetpecializationRelationship' 
+        mandatoryVariable: 
+          type: boolean
+          default: false
+        mandatoryValue: 
+          type: boolean
+          default: false
+        originType:
+          type: string
+          example: Assigned
+        originSource:
+          type: string
+          example: Sponsor
+        comparator:
+          type: string
+        vlmTarget: 
+          type: boolean
+          default: false
+          example: true 
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationVariableLinks'
+      required:
+        - name
+
+    sdtmDatasetSpecializationVariableLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmVariableRef'
+        DatasetSpecialization:
+          $ref: '#/components/schemas/sdtmVariableDatasetSpecializationRef'
+        parentPackage:
+          $ref: '#/components/schemas/sdtmPackageRefElement'
+
+    sdtmVariableDatasetSpecializationRef:
+      description: Biomedical Concept Reference
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: SDTM Dataset Specialization
 
