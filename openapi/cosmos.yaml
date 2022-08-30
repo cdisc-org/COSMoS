@@ -788,18 +788,18 @@ components:
           items:
             $ref: '#/components/schemas/bcBiomedicalConceptCoding'
         _links:
-          $ref: '#/components/schemas/bcBiomedicalConceptDataElementConceptsLinks'
+          $ref: '#/components/schemas/bcDataElementConceptsLinks'
       required:
         - conceptId
         - category
         - shortName
         - definition
 
-    bcBiomedicalConceptDataElementConceptsLinks:
+    bcDataElementConceptsLinks:
       type: object
       properties:
         self:
-          $ref: '#/components/schemas/bcBiomedicalConceptDataElementConceptRef'
+          $ref: '#/components/schemas/bcDataElementConceptsRef'
         parentBiomedicalConcept:
           $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
         parentPackage:
@@ -809,7 +809,7 @@ components:
           items:
             $ref: '#/components/schemas/bcDataElementConceptRef'
 
-    bcBiomedicalConceptDataElementConceptRef:
+    bcDataElementConceptsRef:
       type: object
       description: Data Element Concept Reference
       properties:
@@ -862,12 +862,12 @@ components:
             - Left
             - Right
         _links:
-          $ref: '#/components/schemas/bcDataElementConceptBiomedicalConceptLinks'
+          $ref: '#/components/schemas/bcDataElementConceptLinks'
       required:
         - conceptId
         - label
 
-    bcDataElementConceptBiomedicalConceptLinks:
+    bcDataElementConceptLinks:
       type: object
       properties:
         _self:
@@ -1022,11 +1022,11 @@ components:
         self:
           $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
         parentBiomedicalConcept:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
+          $ref: '#/components/schemas/sdtmBiomedicalConceptRef'
         parentPackage:
           $ref: '#/components/schemas/sdtmPackageRef'
 
-    sdtmDatasetSpecializationBiomedicalConceptRef:
+    sdtmBiomedicalConceptRef:
       type: object
       description: Biomedical Concept Parent Reference
       properties:
@@ -1187,7 +1187,7 @@ components:
         parentDatasetSpecialization:
           $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
         parentBiomedicalConcept:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationBiomedicalConceptRef'
+          $ref: '#/components/schemas/sdtmBiomedicalConceptRef'
         parentPackage:
           $ref: '#/components/schemas/sdtmPackageRef'
         variables:
