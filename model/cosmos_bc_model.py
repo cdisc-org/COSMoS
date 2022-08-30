@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-24T04:29:11
+# Generation date: 2022-08-30T12:01:16
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -39,15 +39,15 @@ DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
 # Types
 
 # Class references
-class IdentifiableThingId(extended_str):
+class IdentifiableThingConceptId(extended_str):
     pass
 
 
-class BiomedicalConceptId(IdentifiableThingId):
+class BiomedicalConceptConceptId(IdentifiableThingConceptId):
     pass
 
 
-class DataElementConceptId(IdentifiableThingId):
+class DataElementConceptConceptId(IdentifiableThingConceptId):
     pass
 
 
@@ -63,17 +63,17 @@ class IdentifiableThing(YAMLRoot):
     class_name: ClassVar[str] = "IdentifiableThing"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/IdentifiableThing")
 
-    id: Union[str, IdentifiableThingId] = None
-    id_uri: Optional[Union[str, URI]] = None
+    concept_id: Union[str, IdentifiableThingConceptId] = None
+    concept_uri: Optional[Union[str, URI]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, IdentifiableThingId):
-            self.id = IdentifiableThingId(self.id)
+        if self._is_empty(self.concept_id):
+            self.MissingRequiredField("concept_id")
+        if not isinstance(self.concept_id, IdentifiableThingConceptId):
+            self.concept_id = IdentifiableThingConceptId(self.concept_id)
 
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
+        if self.concept_uri is not None and not isinstance(self.concept_uri, URI):
+            self.concept_uri = URI(self.concept_uri)
 
         super().__post_init__(**kwargs)
 
@@ -87,7 +87,7 @@ class BiomedicalConcept(IdentifiableThing):
     class_name: ClassVar[str] = "BiomedicalConcept"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/BiomedicalConcept")
 
-    id: Union[str, BiomedicalConceptId] = None
+    concept_id: Union[str, BiomedicalConceptConceptId] = None
     package_date: Union[str, XSDDate] = None
     bc_category: Union[str, List[str]] = None
     short_name: str = None
@@ -96,14 +96,14 @@ class BiomedicalConcept(IdentifiableThing):
     synonym: Optional[Union[str, List[str]]] = empty_list()
     result_scale: Optional[Union[str, "BiomedicalConceptResultScale"]] = None
     coding: Optional[Union[Union[dict, "Coding"], List[Union[dict, "Coding"]]]] = empty_list()
-    data_element_concepts: Optional[Union[Dict[Union[str, DataElementConceptId], Union[dict, "DataElementConcept"]], List[Union[dict, "DataElementConcept"]]]] = empty_dict()
-    id_uri: Optional[Union[str, URI]] = None
+    data_element_concepts: Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, "DataElementConcept"]], List[Union[dict, "DataElementConcept"]]]] = empty_dict()
+    concept_uri: Optional[Union[str, URI]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, BiomedicalConceptId):
-            self.id = BiomedicalConceptId(self.id)
+        if self._is_empty(self.concept_id):
+            self.MissingRequiredField("concept_id")
+        if not isinstance(self.concept_id, BiomedicalConceptConceptId):
+            self.concept_id = BiomedicalConceptConceptId(self.concept_id)
 
         if self._is_empty(self.package_date):
             self.MissingRequiredField("package_date")
@@ -140,10 +140,10 @@ class BiomedicalConcept(IdentifiableThing):
             self.coding = [self.coding] if self.coding is not None else []
         self.coding = [v if isinstance(v, Coding) else Coding(**as_dict(v)) for v in self.coding]
 
-        self._normalize_inlined_as_list(slot_name="data_element_concepts", slot_type=DataElementConcept, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="data_element_concepts", slot_type=DataElementConcept, key_name="concept_id", keyed=True)
 
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
+        if self.concept_uri is not None and not isinstance(self.concept_uri, URI):
+            self.concept_uri = URI(self.concept_uri)
 
         super().__post_init__(**kwargs)
 
@@ -187,17 +187,17 @@ class DataElementConcept(IdentifiableThing):
     class_name: ClassVar[str] = "DataElementConcept"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/DataElementConcept")
 
-    id: Union[str, DataElementConceptId] = None
+    concept_id: Union[str, DataElementConceptConceptId] = None
     label: str = None
     data_type: Optional[Union[str, "DataElementConceptDataType"]] = None
     example_set: Optional[Union[str, List[str]]] = empty_list()
-    id_uri: Optional[Union[str, URI]] = None
+    concept_uri: Optional[Union[str, URI]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, DataElementConceptId):
-            self.id = DataElementConceptId(self.id)
+        if self._is_empty(self.concept_id):
+            self.MissingRequiredField("concept_id")
+        if not isinstance(self.concept_id, DataElementConceptConceptId):
+            self.concept_id = DataElementConceptConceptId(self.concept_id)
 
         if self._is_empty(self.label):
             self.MissingRequiredField("label")
@@ -211,8 +211,8 @@ class DataElementConcept(IdentifiableThing):
             self.example_set = [self.example_set] if self.example_set is not None else []
         self.example_set = [v if isinstance(v, str) else str(v) for v in self.example_set]
 
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
+        if self.concept_uri is not None and not isinstance(self.concept_uri, URI):
+            self.concept_uri = URI(self.concept_uri)
 
         super().__post_init__(**kwargs)
 
@@ -245,11 +245,11 @@ class DataElementConceptDataType(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.id = Slot(uri=DEFAULT_.id, name="id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.id, domain=None, range=URIRef)
+slots.concept_id = Slot(uri=DEFAULT_.concept_id, name="concept_id", curie=DEFAULT_.curie('concept_id'),
+                   model_uri=DEFAULT_.concept_id, domain=None, range=URIRef)
 
-slots.id_uri = Slot(uri=DEFAULT_.id_uri, name="id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.id_uri, domain=None, range=Optional[Union[str, URI]])
+slots.concept_uri = Slot(uri=DEFAULT_.concept_uri, name="concept_uri", curie=DEFAULT_.curie('concept_uri'),
+                   model_uri=DEFAULT_.concept_uri, domain=None, range=Optional[Union[str, URI]])
 
 slots.package_date = Slot(uri=DEFAULT_.package_date, name="package_date", curie=DEFAULT_.curie('package_date'),
                    model_uri=DEFAULT_.package_date, domain=None, range=Union[str, XSDDate])
@@ -285,7 +285,7 @@ slots.code = Slot(uri=DEFAULT_.code, name="code", curie=DEFAULT_.curie('code'),
                    model_uri=DEFAULT_.code, domain=None, range=str)
 
 slots.data_element_concepts = Slot(uri=DEFAULT_.data_element_concepts, name="data_element_concepts", curie=DEFAULT_.curie('data_element_concepts'),
-                   model_uri=DEFAULT_.data_element_concepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
+                   model_uri=DEFAULT_.data_element_concepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
 
 slots.label = Slot(uri=DEFAULT_.label, name="label", curie=DEFAULT_.curie('label'),
                    model_uri=DEFAULT_.label, domain=None, range=str)
@@ -296,14 +296,14 @@ slots.data_type = Slot(uri=DEFAULT_.data_type, name="data_type", curie=DEFAULT_.
 slots.example_set = Slot(uri=DEFAULT_.example_set, name="example_set", curie=DEFAULT_.curie('example_set'),
                    model_uri=DEFAULT_.example_set, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.BiomedicalConcept_id = Slot(uri=DEFAULT_.id, name="BiomedicalConcept_id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.BiomedicalConcept_id, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptId])
+slots.BiomedicalConcept_concept_id = Slot(uri=DEFAULT_.concept_id, name="BiomedicalConcept_concept_id", curie=DEFAULT_.curie('concept_id'),
+                   model_uri=DEFAULT_.BiomedicalConcept_concept_id, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId])
 
-slots.BiomedicalConcept_id_uri = Slot(uri=DEFAULT_.id_uri, name="BiomedicalConcept_id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.BiomedicalConcept_id_uri, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
+slots.BiomedicalConcept_concept_uri = Slot(uri=DEFAULT_.concept_uri, name="BiomedicalConcept_concept_uri", curie=DEFAULT_.curie('concept_uri'),
+                   model_uri=DEFAULT_.BiomedicalConcept_concept_uri, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
 
-slots.DataElementConcept_id = Slot(uri=DEFAULT_.id, name="DataElementConcept_id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.DataElementConcept_id, domain=DataElementConcept, range=Union[str, DataElementConceptId])
+slots.DataElementConcept_concept_id = Slot(uri=DEFAULT_.concept_id, name="DataElementConcept_concept_id", curie=DEFAULT_.curie('concept_id'),
+                   model_uri=DEFAULT_.DataElementConcept_concept_id, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId])
 
-slots.DataElementConcept_id_uri = Slot(uri=DEFAULT_.id_uri, name="DataElementConcept_id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.DataElementConcept_id_uri, domain=DataElementConcept, range=Optional[Union[str, URI]])
+slots.DataElementConcept_concept_uri = Slot(uri=DEFAULT_.concept_uri, name="DataElementConcept_concept_uri", curie=DEFAULT_.curie('concept_uri'),
+                   model_uri=DEFAULT_.DataElementConcept_concept_uri, domain=DataElementConcept, range=Optional[Union[str, URI]])

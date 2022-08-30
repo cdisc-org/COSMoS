@@ -17,6 +17,14 @@
                },
                "type": "array"
             },
+            "concept_id": {
+               "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
+               "type": "string"
+            },
+            "concept_uri": {
+               "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
+               "type": "string"
+            },
             "data_element_concepts": {
                "description": "Data Element Concept",
                "items": {
@@ -26,14 +34,6 @@
             },
             "definition": {
                "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
-               "type": "string"
-            },
-            "id": {
-               "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
-               "type": "string"
-            },
-            "id_uri": {
-               "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
                "type": "string"
             },
             "package_date": {
@@ -66,7 +66,7 @@
             "bc_category",
             "short_name",
             "definition",
-            "id"
+            "concept_id"
          ],
          "title": "BiomedicalConcept",
          "type": "object"
@@ -110,6 +110,14 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
+            "concept_id": {
+               "description": "NCI C-code for the BC Data Element Concept",
+               "type": "string"
+            },
+            "concept_uri": {
+               "description": "Link to NCIt for the Data Element Concept",
+               "type": "string"
+            },
             "data_type": {
                "$ref": "#/$defs/DataElementConceptDataType",
                "description": "Data Type for the Data Element Concept"
@@ -121,14 +129,6 @@
                },
                "type": "array"
             },
-            "id": {
-               "description": "NCI C-code for the BC Data Element Concept",
-               "type": "string"
-            },
-            "id_uri": {
-               "description": "Link to NCIt for the Data Element Concept",
-               "type": "string"
-            },
             "label": {
                "description": "NCI Preferred Name for the Data Element Concept",
                "type": "string"
@@ -136,7 +136,7 @@
          },
          "required": [
             "label",
-            "id"
+            "concept_id"
          ],
          "title": "DataElementConcept",
          "type": "object"
@@ -172,6 +172,14 @@
          },
          "type": "array"
       },
+      "concept_id": {
+         "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
+         "type": "string"
+      },
+      "concept_uri": {
+         "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
+         "type": "string"
+      },
       "data_element_concepts": {
          "description": "Data Element Concept",
          "items": {
@@ -181,14 +189,6 @@
       },
       "definition": {
          "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
-         "type": "string"
-      },
-      "id": {
-         "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
-         "type": "string"
-      },
-      "id_uri": {
-         "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
          "type": "string"
       },
       "package_date": {
@@ -221,7 +221,7 @@
       "bc_category",
       "short_name",
       "definition",
-      "id"
+      "concept_id"
    ],
    "title": "COSMoS-Biomedical-Concepts-Schema",
    "type": "object",

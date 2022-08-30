@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-08-26T16:39:14
+# Generation date: 2022-08-30T12:01:55
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -39,47 +39,16 @@ DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
 # Types
 
 # Class references
-class IdentifiableThingId(extended_str):
-    pass
-
-
 class SDTMGroupVlmGroupId(extended_str):
     pass
 
 
-class SDTMVariableId(IdentifiableThingId):
+class SDTMVariableName(extended_str):
     pass
 
 
-class CodeListId(IdentifiableThingId):
+class CodeListConceptId(extended_str):
     pass
-
-
-@dataclass
-class IdentifiableThing(YAMLRoot):
-    """
-    A databased entity, concept or class. This is a generic class that is the root of all the other classes.
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/IdentifiableThing")
-    class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "IdentifiableThing"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/IdentifiableThing")
-
-    id: Union[str, IdentifiableThingId] = None
-    id_uri: Optional[Union[str, URI]] = None
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, IdentifiableThingId):
-            self.id = IdentifiableThingId(self.id)
-
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
-
-        super().__post_init__(**kwargs)
 
 
 @dataclass
@@ -99,7 +68,7 @@ class SDTMGroup(YAMLRoot):
     sdtmig_start_version: str = None
     sdtmig_end_version: Optional[str] = None
     biomedical_concept_id: Optional[str] = None
-    sdtm_variable: Optional[Union[Dict[Union[str, SDTMVariableId], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]]] = empty_dict()
+    sdtm_variables: Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.vlm_group_id):
@@ -138,13 +107,13 @@ class SDTMGroup(YAMLRoot):
         if self.biomedical_concept_id is not None and not isinstance(self.biomedical_concept_id, str):
             self.biomedical_concept_id = str(self.biomedical_concept_id)
 
-        self._normalize_inlined_as_list(slot_name="sdtm_variable", slot_type=SDTMVariable, key_name="id", keyed=True)
+        self._normalize_inlined_as_list(slot_name="sdtm_variables", slot_type=SDTMVariable, key_name="name", keyed=True)
 
         super().__post_init__(**kwargs)
 
 
 @dataclass
-class SDTMVariable(IdentifiableThing):
+class SDTMVariable(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
     class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
@@ -152,10 +121,10 @@ class SDTMVariable(IdentifiableThing):
     class_name: ClassVar[str] = "SDTMVariable"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
 
-    id: Union[str, SDTMVariableId] = None
+    name: Union[str, SDTMVariableName] = None
     biomedical_concept_dec_id: Optional[str] = None
     nsv_flag: Optional[Union[bool, Bool]] = None
-    codelist: Optional[Union[str, CodeListId]] = None
+    codelist: Optional[Union[str, CodeListConceptId]] = None
     subset_codelist: Optional[str] = None
     value_list: Optional[Union[str, List[str]]] = empty_list()
     assigned_term: Optional[Union[dict, "AssignedTerm"]] = None
@@ -171,13 +140,12 @@ class SDTMVariable(IdentifiableThing):
     origin_source: Optional[Union[str, "OriginSource"]] = None
     comparator: Optional[Union[str, "Comparator"]] = None
     vlm_target: Optional[Union[bool, Bool]] = None
-    id_uri: Optional[Union[str, URI]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, SDTMVariableId):
-            self.id = SDTMVariableId(self.id)
+        if self._is_empty(self.name):
+            self.MissingRequiredField("name")
+        if not isinstance(self.name, SDTMVariableName):
+            self.name = SDTMVariableName(self.name)
 
         if self.biomedical_concept_dec_id is not None and not isinstance(self.biomedical_concept_dec_id, str):
             self.biomedical_concept_dec_id = str(self.biomedical_concept_dec_id)
@@ -185,8 +153,8 @@ class SDTMVariable(IdentifiableThing):
         if self.nsv_flag is not None and not isinstance(self.nsv_flag, Bool):
             self.nsv_flag = Bool(self.nsv_flag)
 
-        if self.codelist is not None and not isinstance(self.codelist, CodeListId):
-            self.codelist = CodeListId(self.codelist)
+        if self.codelist is not None and not isinstance(self.codelist, CodeListConceptId):
+            self.codelist = CodeListConceptId(self.codelist)
 
         if self.subset_codelist is not None and not isinstance(self.subset_codelist, str):
             self.subset_codelist = str(self.subset_codelist)
@@ -234,9 +202,6 @@ class SDTMVariable(IdentifiableThing):
         if self.vlm_target is not None and not isinstance(self.vlm_target, Bool):
             self.vlm_target = Bool(self.vlm_target)
 
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
-
         super().__post_init__(**kwargs)
 
 
@@ -279,7 +244,7 @@ class RelationShip(YAMLRoot):
 
 
 @dataclass
-class CodeList(IdentifiableThing):
+class CodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
     class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeList")
@@ -287,23 +252,23 @@ class CodeList(IdentifiableThing):
     class_name: ClassVar[str] = "CodeList"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeList")
 
-    id: Union[str, CodeListId] = None
+    concept_id: Union[str, CodeListConceptId] = None
     submission_value: str = None
-    id_uri: Optional[Union[str, URI]] = None
+    concept_uri: Optional[Union[str, URI]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, CodeListId):
-            self.id = CodeListId(self.id)
+        if self._is_empty(self.concept_id):
+            self.MissingRequiredField("concept_id")
+        if not isinstance(self.concept_id, CodeListConceptId):
+            self.concept_id = CodeListConceptId(self.concept_id)
 
         if self._is_empty(self.submission_value):
             self.MissingRequiredField("submission_value")
         if not isinstance(self.submission_value, str):
             self.submission_value = str(self.submission_value)
 
-        if self.id_uri is not None and not isinstance(self.id_uri, URI):
-            self.id_uri = URI(self.id_uri)
+        if self.concept_uri is not None and not isinstance(self.concept_uri, URI):
+            self.concept_uri = URI(self.concept_uri)
 
         super().__post_init__(**kwargs)
 
@@ -505,12 +470,6 @@ class Comparator(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.id = Slot(uri=DEFAULT_.id, name="id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.id, domain=None, range=URIRef)
-
-slots.id_uri = Slot(uri=DEFAULT_.id_uri, name="id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.id_uri, domain=None, range=Optional[Union[str, URI]])
-
 slots.package_date = Slot(uri=DEFAULT_.package_date, name="package_date", curie=DEFAULT_.curie('package_date'),
                    model_uri=DEFAULT_.package_date, domain=None, range=Union[str, XSDDate])
 
@@ -535,8 +494,11 @@ slots.sdtmig_end_version = Slot(uri=DEFAULT_.sdtmig_end_version, name="sdtmig_en
 slots.biomedical_concept_id = Slot(uri=DEFAULT_.biomedical_concept_id, name="biomedical_concept_id", curie=DEFAULT_.curie('biomedical_concept_id'),
                    model_uri=DEFAULT_.biomedical_concept_id, domain=None, range=Optional[str])
 
-slots.sdtm_variable = Slot(uri=DEFAULT_.sdtm_variable, name="sdtm_variable", curie=DEFAULT_.curie('sdtm_variable'),
-                   model_uri=DEFAULT_.sdtm_variable, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableId], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
+slots.sdtm_variables = Slot(uri=DEFAULT_.sdtm_variables, name="sdtm_variables", curie=DEFAULT_.curie('sdtm_variables'),
+                   model_uri=DEFAULT_.sdtm_variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
+
+slots.name = Slot(uri=DEFAULT_.name, name="name", curie=DEFAULT_.curie('name'),
+                   model_uri=DEFAULT_.name, domain=None, range=URIRef)
 
 slots.biomedical_concept_dec_id = Slot(uri=DEFAULT_.biomedical_concept_dec_id, name="biomedical_concept_dec_id", curie=DEFAULT_.curie('biomedical_concept_dec_id'),
                    model_uri=DEFAULT_.biomedical_concept_dec_id, domain=None, range=Optional[str])
@@ -545,10 +507,16 @@ slots.nsv_flag = Slot(uri=DEFAULT_.nsv_flag, name="nsv_flag", curie=DEFAULT_.cur
                    model_uri=DEFAULT_.nsv_flag, domain=None, range=Optional[Union[bool, Bool]])
 
 slots.codelist = Slot(uri=DEFAULT_.codelist, name="codelist", curie=DEFAULT_.curie('codelist'),
-                   model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[str, CodeListId]])
+                   model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[str, CodeListConceptId]])
 
 slots.subset_codelist = Slot(uri=DEFAULT_.subset_codelist, name="subset_codelist", curie=DEFAULT_.curie('subset_codelist'),
                    model_uri=DEFAULT_.subset_codelist, domain=None, range=Optional[str])
+
+slots.concept_id = Slot(uri=DEFAULT_.concept_id, name="concept_id", curie=DEFAULT_.curie('concept_id'),
+                   model_uri=DEFAULT_.concept_id, domain=None, range=URIRef)
+
+slots.concept_uri = Slot(uri=DEFAULT_.concept_uri, name="concept_uri", curie=DEFAULT_.curie('concept_uri'),
+                   model_uri=DEFAULT_.concept_uri, domain=None, range=Optional[Union[str, URI]])
 
 slots.submission_value = Slot(uri=DEFAULT_.submission_value, name="submission_value", curie=DEFAULT_.curie('submission_value'),
                    model_uri=DEFAULT_.submission_value, domain=None, range=str)
@@ -630,15 +598,3 @@ slots.comparator = Slot(uri=DEFAULT_.comparator, name="comparator", curie=DEFAUL
 
 slots.vlm_target = Slot(uri=DEFAULT_.vlm_target, name="vlm_target", curie=DEFAULT_.curie('vlm_target'),
                    model_uri=DEFAULT_.vlm_target, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.SDTMVariable_id = Slot(uri=DEFAULT_.id, name="SDTMVariable_id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.SDTMVariable_id, domain=SDTMVariable, range=Union[str, SDTMVariableId])
-
-slots.SDTMVariable_id_uri = Slot(uri=DEFAULT_.id_uri, name="SDTMVariable_id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.SDTMVariable_id_uri, domain=SDTMVariable, range=Optional[Union[str, URI]])
-
-slots.CodeList_id = Slot(uri=DEFAULT_.id, name="CodeList_id", curie=DEFAULT_.curie('id'),
-                   model_uri=DEFAULT_.CodeList_id, domain=CodeList, range=Union[str, CodeListId])
-
-slots.CodeList_id_uri = Slot(uri=DEFAULT_.id_uri, name="CodeList_id_uri", curie=DEFAULT_.curie('id_uri'),
-                   model_uri=DEFAULT_.CodeList_id_uri, domain=CodeList, range=Optional[Union[str, URI]])

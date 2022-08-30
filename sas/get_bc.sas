@@ -31,8 +31,8 @@
     if first.bc_id and not(missing(bc_id)) then do;
       count=0;
       put "package_date:" +1 package_date;
-      put "id:" +1 BC_ID;
-      put 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
+      put "concept_id:" +1 BC_ID;
+      put 'concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
       if not missing(parent_bc_id) then do;
         put "parent_id:" +1 parent_bc_id;
         * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
@@ -82,8 +82,8 @@
     if count=2 and not missing(dec_id) then put "data_element_concepts:";
 
     if not missing(dec_id) then do;
-      put "  - id:" +1 dec_id;
-      put +4 'id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
+      put "  - concept_id:" +1 dec_id;
+      put +4 'concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
       put +4 "label:" +1 dec_label; 
       if not missing(data_type) then put +4 "data_type:" +1 data_type; 
       if not missing(example_set) then do;

@@ -592,8 +592,8 @@ components:
             $ref: '#/components/schemas/bcBiomedicalConceptRef'
 
     bcBiomedicalConceptsRef:
-      description: Biomedical Concepts Reference
       type: object
+      description: Biomedical Concepts Reference
       properties:
         href:
           type: string
@@ -606,8 +606,8 @@ components:
           example: Biomedical Concept List
           
     bcBiomedicalConceptRef:
-      description: Biomedical Concept Reference
       type: object
+      description: Biomedical Concept Reference
       properties:
         href:
           type: string
@@ -686,6 +686,7 @@ components:
           $ref: '#/components/schemas/bcPackageRef'
 
     bcBiomedicalConceptParentRef:
+      type: object
       description: Biomedical Concept Parent Reference
       properties:
         href:
@@ -809,8 +810,8 @@ components:
             $ref: '#/components/schemas/bcDataElementConceptRef'
 
     bcBiomedicalConceptDataElementConceptRef:
-      description: Data Element Concept Reference
       type: object
+      description: Data Element Concept Reference
       properties:
         href:
           type: string
@@ -823,8 +824,8 @@ components:
           example: Data Element Concept List
 
     bcDataElementConceptRef:
-      description: Data Element Concept Reference
       type: object
+      description: Data Element Concept Reference
       properties:
         href:
           type: string
@@ -953,8 +954,8 @@ components:
             $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
             
     sdtmDatasetSpecializationsRef:
-      description: SDTM Dataset Specializations Reference
       type: object
+      description: SDTM Dataset Specializations Reference
       properties:
         href:
           type: string
@@ -967,8 +968,8 @@ components:
           example: SDTM Dataset Specialization List
 
     sdtmDatasetSpecializationRef:
-      description: SDTM Dataset Specialization Reference
       type: object
+      description: SDTM Dataset Specialization Reference
       properties:
         href:
           type: string
@@ -1007,7 +1008,7 @@ components:
         variables:
           type: array
           items:
-            $ref: '#/components/schemas/sdtmDataSpecializationVariableElement'
+            $ref: '#/components/schemas/sdtmDatasetSpecializationVariableElement'
       required:
         - datasetSpecializationId
         - domain
@@ -1026,6 +1027,7 @@ components:
           $ref: '#/components/schemas/sdtmPackageRef'
 
     sdtmDatasetSpecializationBiomedicalConceptRef:
+      type: object
       description: Biomedical Concept Parent Reference
       properties:
         href:
@@ -1038,7 +1040,7 @@ components:
           type: string
           example: Biomedical Concept
 
-    sdtmDataSpecializationVariableElement:
+    sdtmDatasetSpecializationVariableElement:
       type: object
       properties:
         name:
@@ -1208,15 +1210,15 @@ components:
           example: SDTM Dataset Specialization Variables
 
     sdtmDatasetSpecializationVariableRef:
-      description: Data Element Concept Reference
       type: object
+      description: Data Element Concept Reference
       properties:
         href:
           type: string
           example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESU
         title:
           type: string
-          example: VSSTRESU (SYSPB))
+          example: VSSTRESU (SYSPB)
         type:
           type: string
           example: SDTM Dataset Specialization Variable

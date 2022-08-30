@@ -11,15 +11,6 @@ default_range: string
 
 classes:
 
-  IdentifiableThing:
-    abstract: true
-    description: >-
-      A databased entity, concept or class. This is a generic class that is the root
-      of all the other classes.
-    slots:
-      - id
-      - id_uri
-
   SDTMGroup:
     tree_root: true
     slots:
@@ -31,11 +22,11 @@ classes:
       - sdtmig_start_version
       - sdtmig_end_version
       - biomedical_concept_id
-      - sdtm_variable
+      - sdtm_variables
 
   SDTMVariable:
-    is_a: IdentifiableThing
     slots:
+      - name
       - biomedical_concept_dec_id
       - nsv_flag
       - codelist
@@ -54,11 +45,6 @@ classes:
       - origin_source
       - comparator
       - vlm_target
-    slot_usage:
-      id:
-        description: Variable included in the SDTM dataset specialization
-      id_uri:
-        description: Hyperlink to the SDTM variable in CDISC Library.  Not populated if nsv_flag = "Y"
 
   RelationShip:
     slots:
@@ -68,14 +54,10 @@ classes:
       - object
 
   CodeList:
-    is_a: IdentifiableThing
     slots:
+      - concept_id
+      - concept_uri
       - submission_value
-    slot_usage:
-      id:
-        description: C-code for a codelist in NCIt
-      id_uri:
-        description: Link to NCIt for the codelist
 
   CodeListTerm:
     slots:
@@ -95,15 +77,6 @@ classes:
       - value
 
 slots:
-  id:
-    identifier: true
-    required: true
-    range: string
-    description: An identifier that uniquely represents an entity
-  id_uri:
-    required: false
-    range: uri
-    description: Identifier uri link
 
   package_date:
     required: true
@@ -135,11 +108,16 @@ slots:
     range: string
     description: Biomedical Concept identifier
 
-  sdtm_variable:
+  sdtm_variables:
     multivalued: true
     inlined_as_list: true
     range: SDTMVariable
     description: Variable included in the SDTM dataset specialization
+  name:
+    description: Variable included in the SDTM dataset specialization
+    range: string
+    required: true
+    identifier: true
   biomedical_concept_dec_id:
     range: string
     description: Biomedical Concept Data Element Concept idenfifier foreign key
@@ -151,9 +129,20 @@ slots:
     description: Codelist
   subset_codelist:
     description: Subset codelist short name
+
+  concept_id:
+    identifier: true
+    required: true
+    range: string
+    description: C-code for a codelist in NCIt
+  concept_uri:
+    required: false
+    range: uri
+    description: Link to NCIt for the codelist
   submission_value:
     required: true
     description: CDISC submission value for the codelist
+
   parent_codelist:
     required: true
     description: Subset codelist parent codelist

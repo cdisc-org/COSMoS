@@ -17,8 +17,8 @@ classes:
       A databased entity, concept or class. This is a generic class that is the root
       of all the other classes.
     slots:
-      - id
-      - id_uri
+      - concept_id
+      - concept_uri
 
   BiomedicalConcept:
     tree_root: true
@@ -34,9 +34,9 @@ classes:
       - coding
       - data_element_concepts
     slot_usage:
-      id:
+      concept_id:
         description: NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt
-      id_uri:
+      concept_uri:
         description: URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt
 
   Coding:
@@ -52,18 +52,18 @@ classes:
       - data_type
       - example_set
     slot_usage:
-      id:
+      concept_id:
         description: NCI C-code for the BC Data Element Concept
-      id_uri:
+      concept_uri:
         description: Link to NCIt for the Data Element Concept
 
 slots:
-  id:
+  concept_id:
     description: An identifier that uniquely represents an entity
     identifier: true
     required: true
     range: string
-  id_uri:
+  concept_uri:
     range: uri
   package_date:
     range: date

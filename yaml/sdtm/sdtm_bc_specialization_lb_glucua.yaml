@@ -6,11 +6,11 @@ vlm_source: LB.LBTESTCD
 sdtmig_start_version: 3-2
 sdtmig_end_version:  
 biomedical_concept_id: NEW_1
-sdtm_variable:
-  - id: LBTESTCD
+sdtm_variables:
+  - name: LBTESTCD
     codelist:
-      id: C65047
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      concept_id: C65047
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
       submission_value: LBTESTCD
     assigned_term:
       code: C64848
@@ -23,10 +23,10 @@ sdtm_variable:
       object: LBTEST
     mandatory_variable: true 
     comparator: EQ
-  - id: LBTEST
+  - name: LBTEST
     codelist:
-      id: C67154
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      concept_id: C67154
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
       submission_value: LBTEST
     assigned_term:
       code: C64848
@@ -38,7 +38,7 @@ sdtm_variable:
       predicate_term: DECODES
       object: LBTESTCD
     mandatory_variable: true 
-  - id: LBCAT
+  - name: LBCAT
     assigned_term:
       value: URINALYSIS
     role: Qualifier
@@ -48,7 +48,7 @@ sdtm_variable:
       predicate_term: GROUPS
       object: LBTESTCD
     mandatory_variable: true 
-  - id: LBORRES
+  - name: LBORRES
     biomedical_concept_dec_id: C36292
     role: Qualifier
     relationship:
@@ -62,7 +62,7 @@ sdtm_variable:
     origin_type: Collected
     origin_source: Vendor
     vlm_target: true 
-  - id: LBSTRESC
+  - name: LBSTRESC
     biomedical_concept_dec_id: C36292
     role: Qualifier
     relationship:
@@ -76,7 +76,7 @@ sdtm_variable:
     origin_type: Collected
     origin_source: Vendor
     vlm_target: true 
-  - id: LBLOINC
+  - name: LBLOINC
     assigned_term:
       value: 25428-4
     role: Qualifier
@@ -85,11 +85,11 @@ sdtm_variable:
       linking_phrase: identifies an observation described by
       predicate_term: IDENTIFIES_OBSERVATION
       object: LBTESTCD
-  - id: LBSPEC
+  - name: LBSPEC
     biomedical_concept_dec_id: C70713
     codelist:
-      id: C78734
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      concept_id: C78734
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
       submission_value: SPECTYPE
     assigned_term:
       code: C12434
@@ -102,7 +102,7 @@ sdtm_variable:
       object: LBTESTCD
     mandatory_variable: true 
     comparator: EQ
-  - id: LBMETHOD
+  - name: LBMETHOD
     biomedical_concept_dec_id: C82535
     assigned_term:
       code: C50322
@@ -115,11 +115,11 @@ sdtm_variable:
       object: LBTESTCD
     mandatory_variable: true 
     comparator: EQ
-  - id: LBFAST
+  - name: LBFAST
     biomedical_concept_dec_id: C63663
     codelist:
-      id: C66742
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      concept_id: C66742
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submission_value: NY
     subset_codelist: NY_NY
     role: Qualifier

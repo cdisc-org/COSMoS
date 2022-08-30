@@ -6,11 +6,11 @@ vlm_source: VS.VSTESTCD
 sdtmig_start_version: 3-2
 sdtmig_end_version:  
 biomedical_concept_id: C16358
-sdtm_variable:
-  - id: VSTESTCD
+sdtm_variables:
+  - name: VSTESTCD
     codelist:
-      id: C65047
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      concept_id: C65047
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
       submission_value: VSTESTCD
     assigned_term:
       code: C16358
@@ -23,10 +23,10 @@ sdtm_variable:
       object: VSTEST
     mandatory_variable: true 
     comparator: EQ
-  - id: VSTEST
+  - name: VSTEST
     codelist:
-      id: C67154
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      concept_id: C67154
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
       submission_value: VSTEST
     assigned_term:
       code: C16358
@@ -38,7 +38,7 @@ sdtm_variable:
       predicate_term: DECODES
       object: VSTESTCD
     mandatory_variable: true 
-  - id: VSORRES
+  - name: VSORRES
     biomedical_concept_dec_id: C138901
     role: Qualifier
     relationship:
@@ -53,11 +53,11 @@ sdtm_variable:
     origin_type: Derived
     origin_source: Sponsor
     vlm_target: true 
-  - id: VSORRESU
+  - name: VSORRESU
     biomedical_concept_dec_id: C42575
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      concept_id: C66770
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
     subset_codelist: VSRESU_BMI
     role: Qualifier
@@ -68,7 +68,7 @@ sdtm_variable:
       object: VSORRES
     mandatory_variable: true 
     vlm_target: true 
-  - id: VSSTRESC
+  - name: VSSTRESC
     biomedical_concept_dec_id: C138901
     role: Qualifier
     relationship:
@@ -81,7 +81,7 @@ sdtm_variable:
     format: 8.3
     significant_digits: 3
     vlm_target: true 
-  - id: VSSTRESN
+  - name: VSSTRESN
     biomedical_concept_dec_id: C138901
     role: Qualifier
     relationship:
@@ -94,11 +94,11 @@ sdtm_variable:
     format: 8.3
     significant_digits: 3
     vlm_target: true 
-  - id: VSSTRESU
+  - name: VSSTRESU
     biomedical_concept_dec_id: C42575
     codelist:
-      id: C66770
-      id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      concept_id: C66770
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
     role: Qualifier
     relationship:

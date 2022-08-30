@@ -31,8 +31,8 @@
 <polygon fill='white' points='124.5,-660.5 124.5,-733.5 233.5,-733.5 233.5,-660.5 124.5,-660.5' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='179' y='-715.3'>IdentifiableThing</text>
 <polyline fill='none' points='124.5,-704.5 233.5,-704.5 ' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='179' y='-686.3'>id:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='179' y='-671.3'>id_uri:uri ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='179' y='-686.3'>concept_id:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='179' y='-671.3'>concept_uri:uri ?</text>
 </g><g class='node' id='node2'><title>DataElementConcept</title>
 <polygon fill='white' points='-1,-1 -1,-119 249,-119 249,-1 -1,-1' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-100.8'>DataElementConcept</text>
@@ -40,8 +40,8 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-71.8'>label:string</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-56.8'>data_type:DataElementConceptDataType ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-41.8'>example_set:string *</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-26.8'>id:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-11.8'>id_uri:uri ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-26.8'>concept_id:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='124' y='-11.8'>concept_uri:uri ?</text>
 </g><g class='edge' id='edge1'><title>IdentifiableThing-&gt;DataElementConcept</title>
 <path d='M151.326,-651.463C138.446,-628.136 124.546,-598.546 118,-570 81.3558,-410.214 100.967,-214.738 114.548,-119.192' fill='none' stroke='black'/>
 <polygon fill='none' points='148.412,-653.421 156.381,-660.404 154.506,-649.976 148.412,-653.421' stroke='black'/>
@@ -56,8 +56,8 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-461.8'>synonym:string *</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-446.8'>result_scale:BiomedicalConceptResultScale ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-431.8'>definition:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-416.8'>id:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-401.8'>id_uri:uri ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-416.8'>concept_id:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='259' y='-401.8'>concept_uri:uri ?</text>
 </g><g class='edge' id='edge2'><title>IdentifiableThing-&gt;BiomedicalConcept</title>
 <path d='M195.711,-651.089C204.517,-627.422 215.635,-597.544 226.086,-569.457' fill='none' stroke='black'/>
 <polygon fill='none' points='192.417,-649.904 192.21,-660.497 198.978,-652.345 192.417,-649.904' stroke='black'/>

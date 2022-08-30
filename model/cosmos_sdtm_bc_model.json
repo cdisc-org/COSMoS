@@ -23,11 +23,11 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "id": {
+            "concept_id": {
                "description": "C-code for a codelist in NCIt",
                "type": "string"
             },
-            "id_uri": {
+            "concept_uri": {
                "description": "Link to NCIt for the codelist",
                "type": "string"
             },
@@ -37,8 +37,8 @@
             }
          },
          "required": [
-            "submission_value",
-            "id"
+            "concept_id",
+            "submission_value"
          ],
          "title": "CodeList",
          "type": "object"
@@ -192,7 +192,7 @@
                "format": "date",
                "type": "string"
             },
-            "sdtm_variable": {
+            "sdtm_variables": {
                "description": "Variable included in the SDTM dataset specialization",
                "items": {
                   "$ref": "#/$defs/SDTMVariable"
@@ -254,14 +254,6 @@
                "description": "Variable display format",
                "type": "string"
             },
-            "id": {
-               "description": "Variable included in the SDTM dataset specialization",
-               "type": "string"
-            },
-            "id_uri": {
-               "description": "Hyperlink to the SDTM variable in CDISC Library.  Not populated if nsv_flag = \"Y\"",
-               "type": "string"
-            },
             "length": {
                "description": "Variable length",
                "minimum": 1,
@@ -274,6 +266,10 @@
             "mandatory_variable": {
                "description": "Indicator that variable must be present within the SDTM group",
                "type": "boolean"
+            },
+            "name": {
+               "description": "Variable included in the SDTM dataset specialization",
+               "type": "string"
             },
             "nsv_flag": {
                "description": "Flag that indicates if the variable is a non-standard variable",
@@ -315,7 +311,7 @@
             }
          },
          "required": [
-            "id"
+            "name"
          ],
          "title": "SDTMVariable",
          "type": "object"
@@ -385,7 +381,7 @@
          "format": "date",
          "type": "string"
       },
-      "sdtm_variable": {
+      "sdtm_variables": {
          "description": "Variable included in the SDTM dataset specialization",
          "items": {
             "$ref": "#/$defs/SDTMVariable"
