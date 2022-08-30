@@ -1056,10 +1056,14 @@ components:
           $ref: '#/components/schemas/sdtmDatasetSpecializationCodeList'
         subsetCodelist:
           type: string
+          example: XYZ
         valuelist:
           type: array
           items:
             type: string
+          example:
+            - ABC
+            - DEF
         assignedTerm:
           $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
         role: 
@@ -1240,10 +1244,15 @@ components:
           $ref: '#/components/schemas/sdtmDatasetSpecializationCodeList'
         subsetCodelist:
           type: string
+          example:
+            - XYZ
         valuelist:
           type: array
           items:
             type: string
+          example:
+            - ABC
+            - DEF
         assignedTerm:
           $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
         role: 
