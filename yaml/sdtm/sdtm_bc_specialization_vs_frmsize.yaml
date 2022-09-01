@@ -45,9 +45,9 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66733
       submission_value: SIZE
     value_list:
-       - SMALL
-       - MEDIUM
-       - LARGE
+      - SMALL
+      - MEDIUM
+      - LARGE
     role: Qualifier
     relationship:
       subject: VSORRES

@@ -59,7 +59,10 @@ sdtm_variables:
       concept_id: C66770
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
-    subset_codelist: VSRESU_BMI
+    subset_codelist: UNIT_BMI
+    value_list:
+      - kg/m2
+      - psi
     role: Qualifier
     relationship:
       subject: VSORRESUis the unit for the value in

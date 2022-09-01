@@ -4,7 +4,20 @@
 
   data bc_sdtm_&type;
     set bc_sdtm_&type(where=(not missing(vlm_group_id)));
+    order=_n_;
   run;
+
+  proc sql;
+    create table bc_sdtm_&type._merged
+    as select
+      bcsdtm.*,
+      ss.subset_value_list
+    from work.bc_sdtm_&type bcsdtm
+      left join subsets ss
+    on bcsdtm.subset_codelist = ss.subset_short_name
+    order by vlm_group_id, order
+    ;
+  quit;     
 
   %if &debug %then %do;
 
@@ -13,7 +26,7 @@
 
     proc contents data=bc_sdtm_&type varnum;
     run;
-    proc print data=bc_sdtm_&type;
+    proc print data=bc_sdtm_&type._merged;
     run;
 
     ods html5 close;
@@ -22,7 +35,7 @@
   %end;
 
   data _null_;
-    set work.bc_sdtm_&type;
+    set work.bc_sdtm_&type._merged;
     retain count 0;
     length outname $100 linking_phrase_low $512 value $100;
     by vlm_group_id notsorted;
@@ -51,17 +64,25 @@
            put +6 'concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
            if not missing(codelist_submision_value) then put +6 "submission_value:" +1 codelist_submision_value;
         end;
-        if not missing(subset_codelist) then put +4 "subset_codelist:" +1 subset_codelist;
+        if not missing(subset_codelist) then do;
+          put +4 "subset_codelist:" +1 subset_codelist;
+          if not missing(value_list) then do;
+            putlog "WAR" "NING: both subset_codelist and value_list not empty. " vlm_group_id= sdtm_variable= subset_codelist= value_list=;
+          end;
+          if missing(value_list) and missing(subset_value_list) then do;
+            putlog "WAR" "NING: both value_list and subset_value_list missing. " vlm_group_id= sdtm_variable= subset_codelist= value_list= subset_value_list=;
+          end;
+          value_list = subset_value_list;
+        end;
 
         if not missing(value_list) then do;
           put +4 "value_list:";
           countwords=countw(value_list, ";");
           do i=1 to countwords;
             value=strip(scan(value_list, i, ";"));
-            put +7 "-" +1 value;
+            put +6 "-" +1 value;
           end;
         end;
-
 
         if not missing(assigned_value) then do;
            put +4 "assigned_term:";
@@ -98,7 +119,7 @@
 %mend generate_bc_sdtm;
 
 %let root=C:\_github\cdisc-org\COSMoS;
-%let _debug=0;
+%let _debug=1;
 
 options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
@@ -111,6 +132,22 @@ proc format;
     "n" = "false"
   ;
 run;
+
+%ReadExcel(file=&root\BC Curation Template.xlsx, range=Subset Codelist Example$, dsout=subsets);
+
+proc sort data=subsets;
+  by Subset_Short_Name Submission_Value;
+run;  
+
+data subsets(keep=Subset_Short_Name subset_value_list);
+  length subset_value_list $8192;
+  retain subset_value_list;
+  set subsets;
+  by Subset_Short_Name Submission_Value;
+  if first.Subset_Short_Name then subset_value_list="";
+  subset_value_list=catx(";", subset_value_list, Submission_Value);
+  if last.Subset_Short_Name then output;
+run;    
 
 %generate_bc_sdtm(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=&root/yaml/sdtm, range=SDTM VS BC);
 %generate_bc_sdtm(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=&root/yaml/sdtm, range=%str(SDTM LB BC));

@@ -71,9 +71,9 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submission_value: UNIT
     value_list:
-       - mg/dL
-       - g/L
-       - mmol/L
+      - mg/dL
+      - g/L
+      - mmol/L
     role: Qualifier
     relationship:
       subject: LBORRESU
@@ -161,6 +161,9 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submission_value: NY
     subset_codelist: NY_NY
+    value_list:
+      - N
+      - Y
     role: Qualifier
     relationship:
       subject: LBFAST

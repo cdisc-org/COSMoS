@@ -114,6 +114,10 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71148
       submission_value: POSITION
     subset_codelist: VSPOS
+    value_list:
+      - SITTING
+      - STANDING
+      - SUPINE
     role: Qualifier
     relationship:
       subject: VSPOS
@@ -128,6 +132,12 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
       submission_value: LOC
     subset_codelist: VSLOC_PULSE
+    value_list:
+      - BRACHIAL ARTERY
+      - COROTID ARTERY
+      - DORSALIS PEDIS ARTERY
+      - FEMORAL ARTERY
+      - RADIAL ARTER
     role: Qualifier
     relationship:
       subject: VSLOC
@@ -142,6 +152,9 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
       submission_value: LAT
     subset_codelist: VSLAT_BP
+    value_list:
+      - LEFT
+      - RIGHT
     role: Qualifier
     relationship:
       subject: VSLAT

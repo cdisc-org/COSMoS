@@ -61,6 +61,10 @@ sdtm_variables:
       concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
       submission_value: VSRESU
     subset_codelist: VSRESU_WSTCIR
+    value_list:
+      - cm
+      - in
+      - mm
     role: Qualifier
     relationship:
       subject: VSORRESUis the unit for the value in
