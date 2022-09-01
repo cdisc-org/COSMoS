@@ -63,7 +63,7 @@ sdtm_variables:
       value: mmHG
     role: Qualifier
     relationship:
-      subject: VSORRESUis the unit for the value in
+      subject: VSORRESU
       linking_phrase: is the unit for the value in
       predicate_term: IS_UNIT_FOR
       object: VSORRES
