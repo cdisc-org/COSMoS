@@ -56,9 +56,9 @@ sdtm_variables:
   - name: VSORRESU
     biomedical_concept_dec_id: C42575
     codelist:
-      concept_id: C66770
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
-      submission_value: VSRESU
+      concept_id: C71620
+      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submission_value: UNIT
     subset_codelist: UNIT_BMI
     value_list:
       - kg/m2
