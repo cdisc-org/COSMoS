@@ -4,7 +4,7 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "bc_category": {
+            "category": {
                "description": "Biomedical Concept category for the faciliation of API search and extract",
                "items": {
                   "type": "string"
@@ -17,15 +17,11 @@
                },
                "type": "array"
             },
-            "concept_id": {
+            "conceptId": {
                "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
                "type": "string"
             },
-            "concept_uri": {
-               "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
-               "type": "string"
-            },
-            "data_element_concepts": {
+            "dataElementConcepts": {
                "description": "Data Element Concept",
                "items": {
                   "$ref": "#/$defs/DataElementConcept"
@@ -36,20 +32,28 @@
                "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
                "type": "string"
             },
-            "package_date": {
+            "href": {
+               "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
+               "type": "string"
+            },
+            "packageDate": {
                "description": "Biomedical Concept package release date indicating when the BC package was published to production",
                "format": "date",
                "type": "string"
             },
-            "parent_id": {
+            "packageType": {
+               "$ref": "#/$defs/BiomedicalConceptPackageType",
+               "description": "Package type (bc for Biomedical Concepts)"
+            },
+            "parentConceptId": {
                "description": "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt",
                "type": "string"
             },
-            "result_scale": {
+            "resultScale": {
                "$ref": "#/$defs/BiomedicalConceptResultScale",
                "description": "Scale of measurement for the Biomedical Concept result"
             },
-            "short_name": {
+            "shortName": {
                "description": "NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt",
                "type": "string"
             },
@@ -62,14 +66,23 @@
             }
          },
          "required": [
-            "package_date",
-            "bc_category",
-            "short_name",
-            "definition",
-            "concept_id"
+            "conceptId",
+            "packageDate",
+            "packageType",
+            "category",
+            "shortName",
+            "definition"
          ],
          "title": "BiomedicalConcept",
          "type": "object"
+      },
+      "BiomedicalConceptPackageType": {
+         "description": "",
+         "enum": [
+            "bc"
+         ],
+         "title": "BiomedicalConceptPackageType",
+         "type": "string"
       },
       "BiomedicalConceptResultScale": {
          "description": "",
@@ -94,7 +107,7 @@
                "description": "Identifies the code system for the synonym concept The URL of the code system should be used if it exists",
                "type": "string"
             },
-            "system_name": {
+            "systemName": {
                "description": "Human-readable name for the code system",
                "type": "string"
             }
@@ -110,24 +123,24 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "concept_id": {
+            "conceptId": {
                "description": "NCI C-code for the BC Data Element Concept",
                "type": "string"
             },
-            "concept_uri": {
-               "description": "Link to NCIt for the Data Element Concept",
-               "type": "string"
-            },
-            "data_type": {
+            "dataType": {
                "$ref": "#/$defs/DataElementConceptDataType",
                "description": "Data Type for the Data Element Concept"
             },
-            "example_set": {
+            "exampleSets": {
                "description": "Example values for the Data Element Concept",
                "items": {
                   "type": "string"
                },
                "type": "array"
+            },
+            "href": {
+               "description": "Link to NCIt for the Data Element Concept",
+               "type": "string"
             },
             "label": {
                "description": "NCI Preferred Name for the Data Element Concept",
@@ -135,8 +148,8 @@
             }
          },
          "required": [
-            "label",
-            "concept_id"
+            "conceptId",
+            "label"
          ],
          "title": "DataElementConcept",
          "type": "object"
@@ -159,7 +172,7 @@
    "additionalProperties": true,
    "metamodel_version": "1.7.0",
    "properties": {
-      "bc_category": {
+      "category": {
          "description": "Biomedical Concept category for the faciliation of API search and extract",
          "items": {
             "type": "string"
@@ -172,15 +185,11 @@
          },
          "type": "array"
       },
-      "concept_id": {
+      "conceptId": {
          "description": "NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt",
          "type": "string"
       },
-      "concept_uri": {
-         "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
-         "type": "string"
-      },
-      "data_element_concepts": {
+      "dataElementConcepts": {
          "description": "Data Element Concept",
          "items": {
             "$ref": "#/$defs/DataElementConcept"
@@ -191,20 +200,28 @@
          "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
          "type": "string"
       },
-      "package_date": {
+      "href": {
+         "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
+         "type": "string"
+      },
+      "packageDate": {
          "description": "Biomedical Concept package release date indicating when the BC package was published to production",
          "format": "date",
          "type": "string"
       },
-      "parent_id": {
+      "packageType": {
+         "$ref": "#/$defs/BiomedicalConceptPackageType",
+         "description": "Package type (bc for Biomedical Concepts)"
+      },
+      "parentConceptId": {
          "description": "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt",
          "type": "string"
       },
-      "result_scale": {
+      "resultScale": {
          "$ref": "#/$defs/BiomedicalConceptResultScale",
          "description": "Scale of measurement for the Biomedical Concept result"
       },
-      "short_name": {
+      "shortName": {
          "description": "NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt",
          "type": "string"
       },
@@ -217,11 +234,12 @@
       }
    },
    "required": [
-      "package_date",
-      "bc_category",
-      "short_name",
-      "definition",
-      "concept_id"
+      "conceptId",
+      "packageDate",
+      "packageType",
+      "category",
+      "shortName",
+      "definition"
    ],
    "title": "COSMoS-Biomedical-Concepts-Schema",
    "type": "object",

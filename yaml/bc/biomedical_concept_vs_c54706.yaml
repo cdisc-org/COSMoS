@@ -1,14 +1,15 @@
-package_date: 2022-10-26
-concept_id: C54706
-concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54706
-parent_id: C49672
-bc_category:
+packageDate: "2022-10-26"
+packageType: bc
+conceptId: C54706
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54706
+parentConceptId: C49672
+category:
   - Vital Signs
-short_name: Blood Pressure
+shortName: Blood Pressure
 synonym:
   - BP
 definition: "The force of circulating blood on the walls of the arteries. Blood pressure is taken using two measurements: systolic (measured when the heart beats, when blood pressure is at its highest) and diastolic (measured between heart beats, when blood pressure is at its lowest). Blood pressure is written with the systolic blood pressure first, followed by the diastolic blood pressure (for example 120/80)."
 coding:
   - code: 55284-4
     system: http://loinc.org/
-    system_name: LOINC
+    systemName: LOINC

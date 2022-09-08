@@ -1,114 +1,132 @@
-package_date: 2022-10-26
+packageDate: "2022-10-26"
+packageType: sdtm
+datasetSpecializationId: WEIGHT
 domain: VS
-vlm_group_id: WEIGHT
-group_short_name: Weight
-vlm_source: VS.VSTESTCD
-sdtmig_start_version: 3-2
-sdtmig_end_version:  
-biomedical_concept_id: C81328
-sdtm_variables:
+shortName: Weight
+source: VS.VSTESTCD
+sdtmigStartVersion: 3-2
+sdtmigEndVersion:  
+biomedicalConceptId: C81328
+variables:
   - name: VSTESTCD
+    isNonStandard: false
     codelist:
-      concept_id: C66741
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
-      submission_value: VSTESTCD
-    assigned_term:
-      code: C25208
+      conceptId: C66741
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C25208
       value: WEIGHT
     role: Topic
     relationship:
       subject: VSTESTCD
-      linking_phrase: is decoded by the value in
-      predicate_term: IS_DECODED_BY
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
       object: VSTEST
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
     comparator: EQ
   - name: VSTEST
+    isNonStandard: false
     codelist:
-      concept_id: C67153
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
-      submission_value: VSTEST
-    assigned_term:
-      code: C25208
+      conceptId: C67153
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C25208
       value: Weight
     role: Qualifier
     relationship:
       subject: VSTEST
-      linking_phrase: decodes the value in
-      predicate_term: DECODES
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
       object: VSTESTCD
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
   - name: VSORRES
-    biomedical_concept_dec_id: C173522
+    dataElementConceptId: C173522
+    isNonStandard: false
     role: Qualifier
-    relationship:
-      subject: VSORRES
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
-      object: VSTESTCD
-    data_type: float
+    dataType: float
     length: 8
     format: 8.3
-    significant_digits: 3
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Investigator
-    vlm_target: true 
+    significantDigits: 3
+    relationship:
+      subject: VSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
   - name: VSORRESU
-    biomedical_concept_dec_id: C48208
+    dataElementConceptId: C48208
+    isNonStandard: false
     codelist:
-      concept_id: C66770
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
-      submission_value: VSRESU
-    subset_codelist: VSRESU_WT
-    value_list:
+      conceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+    subsetCodelist: VSRESU_WT
+    valueList:
       - LB
       - g
       - kg
     role: Qualifier
     relationship:
       subject: VSORRESU
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSORRES
-    mandatory_variable: true 
-    vlm_target: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
   - name: VSSTRESC
-    biomedical_concept_dec_id: C173522
+    dataElementConceptId: C173522
+    isNonStandard: false
     role: Qualifier
+    dataType: float
+    length: 8
+    format: 8.3
+    significantDigits: 3
     relationship:
       subject: VSSTRESC
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: float
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESN
+    dataElementConceptId: C173522
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
     length: 8
     format: 8.3
-    significant_digits: 3
-    vlm_target: true 
-  - name: VSSTRESN
-    biomedical_concept_dec_id: C173522
-    role: Qualifier
+    significantDigits: 3
     relationship:
       subject: VSSTRESN
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: VSTESTCD
-    data_type: float
-    length: 8
-    format: 8.3
-    significant_digits: 3
-    vlm_target: true 
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
   - name: VSSTRESU
-    biomedical_concept_dec_id: C48208
+    dataElementConceptId: C48208
+    isNonStandard: false
     codelist:
-      concept_id: C66770
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
-      submission_value: VSRESU
+      conceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
     role: Qualifier
     relationship:
       subject: VSSTRESU
-      linking_phrase: is the unit for the value in
-      predicate_term: IS_UNIT_FOR
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
       object: VSSTRESN
-    vlm_target: true 
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 

@@ -1,133 +1,154 @@
-package_date: 2022-10-26
+packageDate: "2022-10-26"
+packageType: sdtm
+datasetSpecializationId: GLUCUA
 domain: LB
-vlm_group_id: GLUCUA
-group_short_name: Glucose in Urine by Dipstick
-vlm_source: LB.LBTESTCD
-sdtmig_start_version: 3-2
-sdtmig_end_version:  
-biomedical_concept_id: NEW_1
-sdtm_variables:
+shortName: Glucose in Urine by Dipstick
+source: LB.LBTESTCD
+sdtmigStartVersion: 3-2
+sdtmigEndVersion:  
+biomedicalConceptId: NEW_1
+variables:
   - name: LBTESTCD
+    isNonStandard: false
     codelist:
-      concept_id: C65047
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
-      submission_value: LBTESTCD
-    assigned_term:
-      code: C64848
+      conceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: LBTESTCD
+    assignedTerm:
+      conceptId: C64848
       value: GLUC
     role: Topic
     relationship:
       subject: LBTESTCD
-      linking_phrase: is decoded by the value in
-      predicate_term: IS_DECODED_BY
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
       object: LBTEST
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
     comparator: EQ
   - name: LBTEST
+    isNonStandard: false
     codelist:
-      concept_id: C67154
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
-      submission_value: LBTEST
-    assigned_term:
-      code: C64848
+      conceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: LBTEST
+    assignedTerm:
+      conceptId: C64848
       value: Glucose
     role: Qualifier
     relationship:
       subject: LBTEST
-      linking_phrase: decodes the value in
-      predicate_term: DECODES
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
       object: LBTESTCD
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
   - name: LBCAT
-    assigned_term:
+    isNonStandard: false
+    assignedTerm:
       value: URINALYSIS
     role: Qualifier
     relationship:
       subject: LBCAT
-      linking_phrase: groups values in
-      predicate_term: GROUPS
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
       object: LBTESTCD
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
   - name: LBORRES
-    biomedical_concept_dec_id: C36292
+    dataElementConceptId: C36292
+    isNonStandard: false
     role: Qualifier
+    dataType: text
+    length: 20
     relationship:
       subject: LBORRES
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: LBTESTCD
-    data_type: text
-    length: 20
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Vendor
-    vlm_target: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
   - name: LBSTRESC
-    biomedical_concept_dec_id: C36292
+    dataElementConceptId: C36292
+    isNonStandard: false
     role: Qualifier
+    dataType: text
+    length: 20
     relationship:
       subject: LBSTRESC
-      linking_phrase: is the result of the test in
-      predicate_term: IS_RESULT_OF
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
       object: LBTESTCD
-    data_type: text
-    length: 20
-    mandatory_variable: true 
-    origin_type: Collected
-    origin_source: Vendor
-    vlm_target: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
   - name: LBLOINC
-    assigned_term:
+    isNonStandard: false
+    assignedTerm:
       value: 25428-4
     role: Qualifier
     relationship:
       subject: LBLOINC
-      linking_phrase: identifies an observation described by
-      predicate_term: IDENTIFIES_OBSERVATION
+      linkingPhrase: identifies an observation described by
+      predicateTerm: IDENTIFIES_OBSERVATION
       object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
   - name: LBSPEC
-    biomedical_concept_dec_id: C70713
+    dataElementConceptId: C70713
+    isNonStandard: false
     codelist:
-      concept_id: C78734
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
-      submission_value: SPECTYPE
-    assigned_term:
-      code: C12434
+      conceptId: C78734
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C12434
       value: URINE
     role: Qualifier
     relationship:
       subject: LBSPEC
-      linking_phrase: is the specimen tested in
-      predicate_term: IS_SPECIMEN_TESTED_IN
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
       object: LBTESTCD
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
     comparator: EQ
   - name: LBMETHOD
-    biomedical_concept_dec_id: C82535
-    assigned_term:
-      code: C50322
+    dataElementConceptId: C82535
+    isNonStandard: false
+    assignedTerm:
+      conceptId: C50322
       value: TEST STRIP
     role: Qualifier
     relationship:
       subject: LBMETHOD
-      linking_phrase: is the method for the test in
-      predicate_term: SPECIFIES
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
       object: LBTESTCD
-    mandatory_variable: true 
+    mandatoryVariable: true 
+    mandatoryValue: false
     comparator: EQ
   - name: LBFAST
-    biomedical_concept_dec_id: C63663
+    dataElementConceptId: C63663
+    isNonStandard: false
     codelist:
-      concept_id: C66742
-      concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
-      submission_value: NY
-    subset_codelist: NY_NY
-    value_list:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
       - N
       - Y
     role: Qualifier
     relationship:
       subject: LBFAST
-      linking_phrase: is the subject's fasting status during the performance of the test in
-      predicate_term: IS_SUBJECT_STATE_FOR
+      linkingPhrase: is the subject's fasting status during the performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
       object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

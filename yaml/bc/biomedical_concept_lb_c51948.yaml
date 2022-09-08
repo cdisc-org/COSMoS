@@ -1,34 +1,35 @@
-package_date: 2022-10-26
-concept_id: C51948
-concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51948
-parent_id: C28133
-bc_category:
+packageDate: "2022-10-26"
+packageType: bc
+conceptId: C51948
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51948
+parentConceptId: C28133
+category:
   - Laboratory Tests
-short_name: Leukocyte Count
+shortName: Leukocyte Count
 synonym:
   - WBC
-result_scale: Quantitative
+resultScale: Quantitative
 definition: "A test to determine the number of leukocytes in a biospecimen."
 coding:
   - code: 26464-8
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - concept_id: C36292
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     label: Laboratory Test Result
-    data_type: decimal
-  - concept_id: C83309
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    dataType: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     label: Laboratory Test Fasting Status
-    data_type: boolean
-  - concept_id: C67391
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
+    dataType: boolean
+  - conceptId: C67391
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
     label: Unit of Number Concentration
-    data_type: string
-  - concept_id: C70713
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    dataType: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     label: Biospecimen Type
-    data_type: string
-    example_set:
+    dataType: string
+    exampleSets:
        - Blood

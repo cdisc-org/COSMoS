@@ -1,36 +1,37 @@
-package_date: 2022-10-26
-concept_id: NEW_1
-concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_1
-parent_id: C147905
-bc_category:
+packageDate: "2022-10-26"
+packageType: bc
+conceptId: NEW_1
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_1
+parentConceptId: C147905
+category:
   - Laboratory Tests
-short_name: Urine Glucose Test Strip Measurement
+shortName: Urine Glucose Test Strip Measurement
 synonym:
   - Urine Glucose Dipstick
-result_scale: Ordinal
+resultScale: Ordinal
 definition: "An ordinal measurement of glucose present in a sample (placeholder)"
 coding:
   - code: 2349-9
     system: http://loinc.org/
-    system_name: LOINC
-data_element_concepts:
-  - concept_id: C36292
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     label: Laboratory Test Result
-    data_type: string
-  - concept_id: C83309
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    dataType: string
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     label: Laboratory Test Fasting Status
-    data_type: boolean
-  - concept_id: C70713
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    dataType: boolean
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     label: Biospecimen Type
-    data_type: string
-    example_set:
+    dataType: string
+    exampleSets:
        - Urine
-  - concept_id: C83312
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
+  - conceptId: C83312
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     label: Laboratory Test Method
-    data_type: string
-    example_set:
+    dataType: string
+    exampleSets:
        - Test Strip
