@@ -11,73 +11,71 @@ default_range: string
 
 classes:
 
-  IdentifiableThing:
-    abstract: true
-    description: >-
-      A databased entity, concept or class. This is a generic class that is the root
-      of all the other classes.
-    slots:
-      - concept_id
-      - concept_uri
-
   BiomedicalConcept:
     tree_root: true
-    is_a: IdentifiableThing
     slots:
-      - package_date
-      - bc_category
-      - parent_id
-      - short_name
+      - conceptId
+      - href
+      - packageDate
+      - packageType
+      - category
+      - parentConceptId
+      - shortName
       - synonym
-      - result_scale
+      - resultScale
       - definition
       - coding
-      - data_element_concepts
+      - dataElementConcepts
     slot_usage:
-      concept_id:
+      conceptId:
         description: NCIt C-code for the Biomedical Concept; placeholder ID will be used if concept is not available in NCIt
-      concept_uri:
+      href:
         description: URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt
 
   Coding:
     slots:
       - code
       - system
-      - system_name
+      - systemName
 
   DataElementConcept:
-    is_a: IdentifiableThing
     slots:
+      - conceptId
+      - href
       - label
-      - data_type
-      - example_set
+      - dataType
+      - exampleSets
     slot_usage:
-      concept_id:
+      conceptId:
         description: NCI C-code for the BC Data Element Concept
-      concept_uri:
+      href:
         description: Link to NCIt for the Data Element Concept
 
 slots:
-  concept_id:
+  conceptId:
     description: An identifier that uniquely represents an entity
     identifier: true
     required: true
     range: string
-  concept_uri:
+  href:
     range: uri
-  package_date:
+  packageDate:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
     required: true
-  bc_category:
+  packageType:
+    range: BiomedicalConceptPackageType
+    description: Package type (bc for Biomedical Concepts)
+    required: true
+  category:
     multivalued: true
     inlined_as_list: true
     required: true
     description: Biomedical Concept category for the faciliation of API search and extract
-  parent_id:
+  parentConceptId:
     range: string
     description: C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
-  short_name:
+  shortName:
     required: true
     description: NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt
   synonym:
@@ -85,7 +83,7 @@ slots:
     inlined_as_list: true
     range: string
     description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
-  result_scale:
+  resultScale:
     range: BiomedicalConceptResultScale
     description: Scale of measurement for the Biomedical Concept result
   definition:
@@ -98,12 +96,12 @@ slots:
   system:
     required: true
     description: Identifies the code system for the synonym concept The URL of the code system should be used if it exists
-  system_name:
+  systemName:
     description: Human-readable name for the code system
   code:
     required: true
     description: Synonym concept for the Biomedical Concept as defined in a code system
-  data_element_concepts:
+  dataElementConcepts:
     multivalued: true
     inlined_as_list: true
     range: DataElementConcept
@@ -112,16 +110,20 @@ slots:
     range: string
     description: NCI Preferred Name for the Data Element Concept
     required: true
-  data_type:
+  dataType:
     range: DataElementConceptDataType
     recommended: true
     description: Data Type for the Data Element Concept
-  example_set:
+  exampleSets:
     description: Example values for the Data Element Concept
     multivalued: true
     inlined_as_list: true
 
 enums:
+
+  BiomedicalConceptPackageType:
+    permissible_values:
+      bc:
 
   BiomedicalConceptResultScale:
     permissible_values:

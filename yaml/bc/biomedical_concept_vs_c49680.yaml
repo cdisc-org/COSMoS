@@ -1,17 +1,18 @@
-package_date: 2022-10-26
-concept_id: C49680
-concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49680
-bc_category:
+packageDate: "2022-10-26"
+packageType: bc
+conceptId: C49680
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49680
+category:
   - Vital Signs
-short_name: Body Frame Size
-result_scale: Ordinal
+shortName: Body Frame Size
+resultScale: Ordinal
 definition: "The categorization of a person's body frame into small, medium and large based on the measurement of wrist circumference or the breadth of the elbow."
-data_element_concepts:
-  - concept_id: C173522
-    concept_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
+dataElementConcepts:
+  - conceptId: C173522
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     label: Vital Signs Result
-    data_type: string
-    example_set:
+    dataType: string
+    exampleSets:
        - Small
        - Medium
        - Large
