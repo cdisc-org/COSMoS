@@ -4,7 +4,7 @@ This repository contains working files to implement Biomedical Concepts and Data
 
 - model
   - Model files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [linkml](https://linkml.io/linkml/) specification.
-  It also contains several files (.json, .py, .svg, .yuml) generated from the model.
+    It also contains several files (.json, .py, .svg, .yuml) generated from the model.
 
 - openapi
   - OpenAPI definition of the API (cosmos.yaml)
