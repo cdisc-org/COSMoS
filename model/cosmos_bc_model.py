@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-08T16:36:09
+# Generation date: 2022-09-09T11:18:23
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -163,7 +163,7 @@ class DataElementConcept(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/DataElementConcept")
 
     conceptId: Union[str, DataElementConceptConceptId] = None
-    label: str = None
+    shortName: str = None
     href: Optional[Union[str, URI]] = None
     dataType: Optional[Union[str, "DataElementConceptDataType"]] = None
     exampleSets: Optional[Union[str, List[str]]] = empty_list()
@@ -174,10 +174,10 @@ class DataElementConcept(YAMLRoot):
         if not isinstance(self.conceptId, DataElementConceptConceptId):
             self.conceptId = DataElementConceptConceptId(self.conceptId)
 
-        if self._is_empty(self.label):
-            self.MissingRequiredField("label")
-        if not isinstance(self.label, str):
-            self.label = str(self.label)
+        if self._is_empty(self.shortName):
+            self.MissingRequiredField("shortName")
+        if not isinstance(self.shortName, str):
+            self.shortName = str(self.shortName)
 
         if self.href is not None and not isinstance(self.href, URI):
             self.href = URI(self.href)
@@ -272,9 +272,6 @@ slots.code = Slot(uri=DEFAULT_.code, name="code", curie=DEFAULT_.curie('code'),
 
 slots.dataElementConcepts = Slot(uri=DEFAULT_.dataElementConcepts, name="dataElementConcepts", curie=DEFAULT_.curie('dataElementConcepts'),
                    model_uri=DEFAULT_.dataElementConcepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
-
-slots.label = Slot(uri=DEFAULT_.label, name="label", curie=DEFAULT_.curie('label'),
-                   model_uri=DEFAULT_.label, domain=None, range=str)
 
 slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
                    model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "DataElementConceptDataType"]])

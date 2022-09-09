@@ -13,19 +13,19 @@ definition: "A quantitative measurement of albumin present in a sample."
 dataElementConcepts:
   - conceptId: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
-    label: Laboratory Test Result
+    shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
-    label: Laboratory Test Fasting Status
+    shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: NEW_2
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_2
-    label: Unit of Mass or Substance Concentration
+    shortName: Unit of Mass or Substance Concentration
     dataType: string
   - conceptId: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
-    label: Biospecimen Type
+    shortName: Biospecimen Type
     dataType: string
     exampleSets:
        - Plasma, Serum, Urine

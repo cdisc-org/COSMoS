@@ -584,8 +584,6 @@ components:
       properties:
         self:
           $ref: '#/components/schemas/bcBiomedicalConceptsRef'
-        parentPackage:
-          $ref: '#/components/schemas/bcPackageRef'
         biomedicalConcepts:
           type: array
           items:

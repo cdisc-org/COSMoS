@@ -17,11 +17,11 @@ coding:
 dataElementConcepts:
   - conceptId: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
-    label: Vital Signs Result
+    shortName: Vital Signs Result
     dataType: integer
   - conceptId: C49669
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49669
-    label: Unit of Pressure
+    shortName: Unit of Pressure
     dataType: string
     exampleSets:
        - cmHg
@@ -29,7 +29,7 @@ dataElementConcepts:
        - Pascal
   - conceptId: C83088
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
-    label: Vital Signs Location
+    shortName: Vital Signs Location
     dataType: string
     exampleSets:
        - Arm
@@ -40,14 +40,14 @@ dataElementConcepts:
        - Vein
   - conceptId: C123975
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
-    label: Vital Signs Laterality
+    shortName: Vital Signs Laterality
     dataType: string
     exampleSets:
        - Left
        - Right
   - conceptId: C82535
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
-    label: Test Method
+    shortName: Test Method
     dataType: string
     exampleSets:
        - Auscultation automatic
@@ -60,7 +60,7 @@ dataElementConcepts:
        - Continuous noninvasive arterial pressure (CNAP)
   - conceptId: C83114
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83114
-    label: Vital Signs Position
+    shortName: Vital Signs Position
     dataType: string
     exampleSets:
        - Decupitus

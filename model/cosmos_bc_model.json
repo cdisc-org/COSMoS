@@ -54,7 +54,7 @@
                "description": "Scale of measurement for the Biomedical Concept result"
             },
             "shortName": {
-               "description": "NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt",
+               "description": "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt",
                "type": "string"
             },
             "synonym": {
@@ -142,14 +142,14 @@
                "description": "Link to NCIt for the Data Element Concept",
                "type": "string"
             },
-            "label": {
-               "description": "NCI Preferred Name for the Data Element Concept",
+            "shortName": {
+               "description": "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt",
                "type": "string"
             }
          },
          "required": [
             "conceptId",
-            "label"
+            "shortName"
          ],
          "title": "DataElementConcept",
          "type": "object"
@@ -222,7 +222,7 @@
          "description": "Scale of measurement for the Biomedical Concept result"
       },
       "shortName": {
-         "description": "NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt",
+         "description": "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt",
          "type": "string"
       },
       "synonym": {
