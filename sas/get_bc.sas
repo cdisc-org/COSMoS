@@ -86,7 +86,7 @@
     if not missing(dec_id) then do;
       put "  - conceptId:" +1 dec_id;
       put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
-      put +4 "label:" +1 dec_label; 
+      put +4 "shortName:" +1 dec_label; 
       if not missing(data_type) then put +4 "dataType:" +1 data_type; 
       if not missing(example_set) then do;
         put +4 "exampleSets:";

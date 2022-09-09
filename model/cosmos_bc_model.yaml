@@ -42,7 +42,7 @@ classes:
     slots:
       - conceptId
       - href
-      - label
+      - shortName
       - dataType
       - exampleSets
     slot_usage:
@@ -77,7 +77,7 @@ slots:
     description: C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
   shortName:
     required: true
-    description: NCI Preferred Name for the concept in bc_id; provisional name will be used if concept is not available in NCIt
+    description: NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
   synonym:
     multivalued: true
     inlined_as_list: true
@@ -106,10 +106,6 @@ slots:
     inlined_as_list: true
     range: DataElementConcept
     description: Data Element Concept
-  label:
-    range: string
-    description: NCI Preferred Name for the Data Element Concept
-    required: true
   dataType:
     range: DataElementConceptDataType
     recommended: true

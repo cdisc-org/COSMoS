@@ -17,19 +17,19 @@ coding:
 dataElementConcepts:
   - conceptId: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
-    label: Laboratory Test Result
+    shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
-    label: Laboratory Test Fasting Status
+    shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C67365
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67365
-    label: Unit of Catalytic Activity Concentration
+    shortName: Unit of Catalytic Activity Concentration
     dataType: string
   - conceptId: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
-    label: Biospecimen Type
+    shortName: Biospecimen Type
     dataType: string
     exampleSets:
        - Plasma, Serum, Blood, Urine

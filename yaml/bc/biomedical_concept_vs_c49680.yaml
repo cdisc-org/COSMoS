@@ -10,7 +10,7 @@ definition: "The categorization of a person's body frame into small, medium and 
 dataElementConcepts:
   - conceptId: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
-    label: Vital Signs Result
+    shortName: Vital Signs Result
     dataType: string
     exampleSets:
        - Small

@@ -15,11 +15,11 @@ coding:
 dataElementConcepts:
   - conceptId: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
-    label: Vital Signs Result
+    shortName: Vital Signs Result
     dataType: integer
   - conceptId: C73688
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
-    label: Count per Minute
+    shortName: Count per Minute
     dataType: string
     exampleSets:
        - Breaths per Minute

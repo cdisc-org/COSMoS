@@ -17,11 +17,11 @@ coding:
 dataElementConcepts:
   - conceptId: C138901
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138901
-    label: Body Mass Index Finding
+    shortName: Body Mass Index Finding
     dataType: decimal
   - conceptId: C42575
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42575
-    label: Unit of Mass Density
+    shortName: Unit of Mass Density
     dataType: string
     exampleSets:
        - Kilogram per Square Meter
