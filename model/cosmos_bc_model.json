@@ -131,7 +131,7 @@
                "$ref": "#/$defs/DataElementConceptDataType",
                "description": "Data Type for the Data Element Concept"
             },
-            "exampleSets": {
+            "exampleSet": {
                "description": "Example values for the Data Element Concept",
                "items": {
                   "type": "string"

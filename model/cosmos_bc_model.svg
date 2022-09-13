@@ -49,7 +49,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='123' y='-56.8'>href:uri ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='123' y='-41.8'>shortName:string</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='123' y='-26.8'>dataType:DataElementConceptDataType ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='123' y='-11.8'>exampleSets:string *</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='123' y='-11.8'>exampleSet:string *</text>
 </g><g class='edge' id='edge1'><title>BiomedicalConcept-&gt;DataElementConcept</title>
 <path d='M152.126,-378.088C148.465,-352.528 144.843,-325.334 142,-300 135.557,-242.58 130.515,-177.159 127.249,-129.296' fill='none' stroke='black'/>
 <polygon fill='black' points='152.145,-378.219 156.964,-383.583 153.866,-390.095 149.047,-384.731 152.145,-378.219' stroke='black'/>

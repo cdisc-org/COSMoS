@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-09T11:18:23
+# Generation date: 2022-09-13T17:27:42
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -166,7 +166,7 @@ class DataElementConcept(YAMLRoot):
     shortName: str = None
     href: Optional[Union[str, URI]] = None
     dataType: Optional[Union[str, "DataElementConceptDataType"]] = None
-    exampleSets: Optional[Union[str, List[str]]] = empty_list()
+    exampleSet: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.conceptId):
@@ -185,9 +185,9 @@ class DataElementConcept(YAMLRoot):
         if self.dataType is not None and not isinstance(self.dataType, DataElementConceptDataType):
             self.dataType = DataElementConceptDataType(self.dataType)
 
-        if not isinstance(self.exampleSets, list):
-            self.exampleSets = [self.exampleSets] if self.exampleSets is not None else []
-        self.exampleSets = [v if isinstance(v, str) else str(v) for v in self.exampleSets]
+        if not isinstance(self.exampleSet, list):
+            self.exampleSet = [self.exampleSet] if self.exampleSet is not None else []
+        self.exampleSet = [v if isinstance(v, str) else str(v) for v in self.exampleSet]
 
         super().__post_init__(**kwargs)
 
@@ -276,8 +276,8 @@ slots.dataElementConcepts = Slot(uri=DEFAULT_.dataElementConcepts, name="dataEle
 slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
                    model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "DataElementConceptDataType"]])
 
-slots.exampleSets = Slot(uri=DEFAULT_.exampleSets, name="exampleSets", curie=DEFAULT_.curie('exampleSets'),
-                   model_uri=DEFAULT_.exampleSets, domain=None, range=Optional[Union[str, List[str]]])
+slots.exampleSet = Slot(uri=DEFAULT_.exampleSet, name="exampleSet", curie=DEFAULT_.curie('exampleSet'),
+                   model_uri=DEFAULT_.exampleSet, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.BiomedicalConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="BiomedicalConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
                    model_uri=DEFAULT_.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId])

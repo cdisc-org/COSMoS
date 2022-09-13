@@ -24,5 +24,5 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93507
     shortName: Approach Anatomic Site
     dataType: string
-    exampleSets:
+    exampleSet:
        - Waist

@@ -89,7 +89,7 @@
       put +4 "shortName:" +1 dec_label; 
       if not missing(data_type) then put +4 "dataType:" +1 data_type; 
       if not missing(example_set) then do;
-        put +4 "exampleSets:";
+        put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;
           value=strip(scan(example_set, i, ";"));

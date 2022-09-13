@@ -23,7 +23,7 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44276
     shortName: Unit of Temperature
     dataType: string
-    exampleSets:
+    exampleSet:
        - Fahrenheit
        - Celsius
        - Kelvin
@@ -31,7 +31,7 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     shortName: Vital Signs Location
     dataType: string
-    exampleSets:
+    exampleSet:
        - Axilla
        - Ear
        - Forehead

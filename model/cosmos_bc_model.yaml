@@ -44,7 +44,7 @@ classes:
       - href
       - shortName
       - dataType
-      - exampleSets
+      - exampleSet
     slot_usage:
       conceptId:
         description: NCI C-code for the BC Data Element Concept
@@ -110,7 +110,7 @@ slots:
     range: DataElementConceptDataType
     recommended: true
     description: Data Type for the Data Element Concept
-  exampleSets:
+  exampleSet:
     description: Example values for the Data Element Concept
     multivalued: true
     inlined_as_list: true

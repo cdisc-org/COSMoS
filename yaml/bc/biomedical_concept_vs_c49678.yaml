@@ -21,5 +21,5 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
     shortName: Count per Minute
     dataType: string
-    exampleSets:
+    exampleSet:
        - Breaths per Minute

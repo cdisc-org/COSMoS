@@ -27,11 +27,11 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
-    exampleSets:
+    exampleSet:
        - Urine
   - conceptId: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string
-    exampleSets:
+    exampleSet:
        - Test Strip
