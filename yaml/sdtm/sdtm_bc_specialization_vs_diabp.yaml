@@ -4,8 +4,8 @@ datasetSpecializationId: DIABP
 domain: VS
 shortName: Diastolic Blood Pressure
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C25299
 variables:
   - name: VSTESTCD

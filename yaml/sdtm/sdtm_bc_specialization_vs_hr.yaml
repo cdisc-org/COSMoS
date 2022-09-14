@@ -4,8 +4,8 @@ datasetSpecializationId: HR
 domain: VS
 shortName: Heart Rate
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C49677
 variables:
   - name: VSTESTCD

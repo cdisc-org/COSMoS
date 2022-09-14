@@ -4,8 +4,8 @@ datasetSpecializationId: SYSBP
 domain: VS
 shortName: Systolic Blood Pressure
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C25298
 variables:
   - name: VSTESTCD

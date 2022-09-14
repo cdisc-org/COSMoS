@@ -73,12 +73,14 @@ classes:
       - codelistTerm
 
   AssignedTerm:
-    slots:
-      - conceptId
-      - value
-    slot_usage:
+    attributes:
       conceptId:
+        required: false
         description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
+      value:
+        required: true
+        range: string
+        description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
 
 slots:
 
@@ -134,6 +136,7 @@ slots:
     description: Flag that indicates if the variable is a non-standard variable
   codelist:
     range: CodeList
+    inlined: true
     description: Codelist
   subsetCodelist:
     description: Subset codelist short name
@@ -178,10 +181,6 @@ slots:
 
   assignedTerm:
     range: AssignedTerm
-  value:
-    required: true
-    range: string
-    description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
 
   role:
     range: string

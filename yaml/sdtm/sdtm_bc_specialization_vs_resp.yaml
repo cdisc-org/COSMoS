@@ -4,8 +4,8 @@ datasetSpecializationId: RESP
 domain: VS
 shortName: Respiratory Rate
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C49678
 variables:
   - name: VSTESTCD

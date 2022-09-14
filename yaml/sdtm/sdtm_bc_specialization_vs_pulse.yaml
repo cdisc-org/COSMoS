@@ -4,8 +4,8 @@ datasetSpecializationId: PULSE
 domain: VS
 shortName: Pulse
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C49676
 variables:
   - name: VSTESTCD

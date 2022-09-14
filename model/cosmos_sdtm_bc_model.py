@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-08T16:36:03
+# Generation date: 2022-09-14T17:40:33
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -48,10 +48,6 @@ class SDTMVariableName(extended_str):
 
 
 class CodeListConceptId(extended_str):
-    pass
-
-
-class AssignedTermConceptId(extended_str):
     pass
 
 
@@ -134,10 +130,10 @@ class SDTMVariable(YAMLRoot):
     name: Union[str, SDTMVariableName] = None
     dataElementConceptId: Optional[str] = None
     isNonStandard: Optional[Union[bool, Bool]] = None
-    codelist: Optional[Union[str, CodeListConceptId]] = None
+    codelist: Optional[Union[dict, "CodeList"]] = None
     subsetCodelist: Optional[str] = None
     valueList: Optional[Union[str, List[str]]] = empty_list()
-    assignedTerm: Optional[Union[str, AssignedTermConceptId]] = None
+    assignedTerm: Optional[Union[dict, "AssignedTerm"]] = None
     role: Optional[str] = None
     relationship: Optional[Union[dict, "RelationShip"]] = None
     dataType: Optional[Union[str, "SDTMVariableDataType"]] = None
@@ -163,8 +159,8 @@ class SDTMVariable(YAMLRoot):
         if self.isNonStandard is not None and not isinstance(self.isNonStandard, Bool):
             self.isNonStandard = Bool(self.isNonStandard)
 
-        if self.codelist is not None and not isinstance(self.codelist, CodeListConceptId):
-            self.codelist = CodeListConceptId(self.codelist)
+        if self.codelist is not None and not isinstance(self.codelist, CodeList):
+            self.codelist = CodeList(**as_dict(self.codelist))
 
         if self.subsetCodelist is not None and not isinstance(self.subsetCodelist, str):
             self.subsetCodelist = str(self.subsetCodelist)
@@ -173,8 +169,8 @@ class SDTMVariable(YAMLRoot):
             self.valueList = [self.valueList] if self.valueList is not None else []
         self.valueList = [v if isinstance(v, str) else str(v) for v in self.valueList]
 
-        if self.assignedTerm is not None and not isinstance(self.assignedTerm, AssignedTermConceptId):
-            self.assignedTerm = AssignedTermConceptId(self.assignedTerm)
+        if self.assignedTerm is not None and not isinstance(self.assignedTerm, AssignedTerm):
+            self.assignedTerm = AssignedTerm(**as_dict(self.assignedTerm))
 
         if self.role is not None and not isinstance(self.role, str):
             self.role = str(self.role)
@@ -357,19 +353,17 @@ class AssignedTerm(YAMLRoot):
     class_name: ClassVar[str] = "AssignedTerm"
     class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/AssignedTerm")
 
-    conceptId: Union[str, AssignedTermConceptId] = None
     value: str = None
+    conceptId: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.conceptId):
-            self.MissingRequiredField("conceptId")
-        if not isinstance(self.conceptId, AssignedTermConceptId):
-            self.conceptId = AssignedTermConceptId(self.conceptId)
-
         if self._is_empty(self.value):
             self.MissingRequiredField("value")
         if not isinstance(self.value, str):
             self.value = str(self.value)
+
+        if self.conceptId is not None and not isinstance(self.conceptId, str):
+            self.conceptId = str(self.conceptId)
 
         super().__post_init__(**kwargs)
 
@@ -530,7 +524,7 @@ slots.isNonStandard = Slot(uri=DEFAULT_.isNonStandard, name="isNonStandard", cur
                    model_uri=DEFAULT_.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
 
 slots.codelist = Slot(uri=DEFAULT_.codelist, name="codelist", curie=DEFAULT_.curie('codelist'),
-                   model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[str, CodeListConceptId]])
+                   model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
 slots.subsetCodelist = Slot(uri=DEFAULT_.subsetCodelist, name="subsetCodelist", curie=DEFAULT_.curie('subsetCodelist'),
                    model_uri=DEFAULT_.subsetCodelist, domain=None, range=Optional[str])
@@ -566,10 +560,7 @@ slots.valueList = Slot(uri=DEFAULT_.valueList, name="valueList", curie=DEFAULT_.
                    model_uri=DEFAULT_.valueList, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.assignedTerm = Slot(uri=DEFAULT_.assignedTerm, name="assignedTerm", curie=DEFAULT_.curie('assignedTerm'),
-                   model_uri=DEFAULT_.assignedTerm, domain=None, range=Optional[Union[str, AssignedTermConceptId]])
-
-slots.value = Slot(uri=DEFAULT_.value, name="value", curie=DEFAULT_.curie('value'),
-                   model_uri=DEFAULT_.value, domain=None, range=str)
+                   model_uri=DEFAULT_.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
 
 slots.role = Slot(uri=DEFAULT_.role, name="role", curie=DEFAULT_.curie('role'),
                    model_uri=DEFAULT_.role, domain=None, range=Optional[str])
@@ -619,5 +610,8 @@ slots.comparator = Slot(uri=DEFAULT_.comparator, name="comparator", curie=DEFAUL
 slots.vlmTarget = Slot(uri=DEFAULT_.vlmTarget, name="vlmTarget", curie=DEFAULT_.curie('vlmTarget'),
                    model_uri=DEFAULT_.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.AssignedTerm_conceptId = Slot(uri=DEFAULT_.conceptId, name="AssignedTerm_conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.AssignedTerm_conceptId, domain=AssignedTerm, range=Union[str, AssignedTermConceptId])
+slots.assignedTerm__conceptId = Slot(uri=DEFAULT_.conceptId, name="assignedTerm__conceptId", curie=DEFAULT_.curie('conceptId'),
+                   model_uri=DEFAULT_.assignedTerm__conceptId, domain=None, range=Optional[str])
+
+slots.assignedTerm__value = Slot(uri=DEFAULT_.value, name="assignedTerm__value", curie=DEFAULT_.curie('value'),
+                   model_uri=DEFAULT_.assignedTerm__value, domain=None, range=str)

@@ -89,36 +89,38 @@
 <polygon fill='black' points='276.089,-592.295 271.93,-582.149 276.258,-587.298 276.427,-582.301 276.427,-582.301 276.427,-582.301 276.258,-587.298 280.924,-582.453 276.089,-592.295 276.089,-592.295' stroke='black'/>
 <text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287.297' y='-560.767'> relationship 0..1</text>
 </g><g class='node' id='node5'><title>AssignedTerm</title>
-<polygon fill='white' points='149,-8.5 149,-81.5 251,-81.5 251,-8.5 149,-8.5' stroke='black' style='fill:white;stroke:black;'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='200' y='-63.3'>AssignedTerm</text>
-<polyline fill='none' points='149,-52.5 251,-52.5 ' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='200' y='-34.3'>conceptId:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='200' y='-19.3'>value:string</text>
+<polygon fill='white' points='142,-8.5 142,-81.5 254,-81.5 254,-8.5 142,-8.5' stroke='black' style='fill:white;stroke:black;'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='198' y='-63.3'>AssignedTerm</text>
+<polyline fill='none' points='142,-52.5 254,-52.5 ' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='198' y='-34.3'>conceptId:string ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='198' y='-19.3'>value:string</text>
 </g><g class='edge' id='edge9'><title>SDTMVariable-&gt;AssignedTerm</title>
-<path d='M227.92,-180.278C219.683,-148.248 211.995,-116.453 206.653,-91.8468' fill='none' stroke='black'/>
-<polygon fill='black' points='204.512,-81.7619 210.99,-90.6094 205.55,-86.6529 206.588,-91.5439 206.588,-91.5439 206.588,-91.5439 205.55,-86.6529 202.186,-92.4785 204.512,-81.7619 204.512,-81.7619' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='200.329' y='-107.769'> assignedTerm 0..1</text>
+<path d='M223.75,-168.291C216.454,-140.294 209.761,-113.148 204.925,-91.5742' fill='none' stroke='black'/>
+<polygon fill='black' points='223.849,-168.671 229.242,-173.459 226.896,-180.278 221.504,-175.49 223.849,-168.671' stroke='black'/>
+<polygon fill='black' points='202.772,-81.7619 209.31,-90.565 203.843,-86.6457 204.915,-91.5295 204.915,-91.5295 204.915,-91.5295 203.843,-86.6457 200.52,-92.4941 202.772,-81.7619 202.772,-81.7619' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='198.792' y='-107.797'> assignedTerm 0..1</text>
 </g><g class='node' id='node6'><title>CodeList</title>
-<polygon fill='white' points='269.5,-1 269.5,-89 412.5,-89 412.5,-1 269.5,-1' stroke='black' style='fill:white;stroke:black;'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='341' y='-70.8'>CodeList</text>
-<polyline fill='none' points='269.5,-60 412.5,-60 ' stroke='black'/>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='341' y='-41.8'>conceptId:string</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='341' y='-26.8'>href:uri ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='341' y='-11.8'>submissionValue:string</text>
+<polygon fill='white' points='272.5,-1 272.5,-89 415.5,-89 415.5,-1 272.5,-1' stroke='black' style='fill:white;stroke:black;'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='344' y='-70.8'>CodeList</text>
+<polyline fill='none' points='272.5,-60 415.5,-60 ' stroke='black'/>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='344' y='-41.8'>conceptId:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='344' y='-26.8'>href:uri ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='344' y='-11.8'>submissionValue:string</text>
 </g><g class='edge' id='edge8'><title>SDTMVariable-&gt;CodeList</title>
-<path d='M300.072,-180.278C307.489,-151.255 315.259,-122.424 322.064,-98.9598' fill='none' stroke='black'/>
-<polygon fill='black' points='324.917,-89.2476 326.416,-100.111 323.507,-94.0449 322.098,-98.8421 322.098,-98.8421 322.098,-98.8421 323.507,-94.0449 317.781,-97.5736 324.917,-89.2476 324.917,-89.2476' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='313.056' y='-101.651'> codelist 0..1</text>
+<path d='M304.73,-168.639C311.496,-143.6 318.386,-119.226 324.506,-98.8911' fill='none' stroke='black'/>
+<polygon fill='black' points='304.717,-168.688 307.025,-175.519 301.607,-180.278 299.299,-173.446 304.717,-168.688' stroke='black'/>
+<polygon fill='black' points='327.445,-89.2476 328.835,-100.125 325.988,-94.0305 324.53,-98.8133 324.53,-98.8133 324.53,-98.8133 325.988,-94.0305 320.226,-97.5016 327.445,-89.2476 327.445,-89.2476' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='315.423' y='-101.531'> codelist 0..1</text>
 </g><g class='edge' id='edge3'><title>AssignedTerm-&gt;SDTMVariable</title>
-<path d='M216.923,-91.5177C224.306,-116.169 233.077,-148.105 241.416,-180.278' fill='none' stroke='black'/>
-<polygon fill='black' points='213.955,-81.7619 221.17,-90.0192 215.41,-86.5455 216.865,-91.329 216.865,-91.329 216.865,-91.329 215.41,-86.5455 212.56,-92.6388 213.955,-81.7619 213.955,-81.7619' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='243.294' y='-156.666'> </text>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='212.88' y='-98.0331'>assignedTerm 0..1</text>
+<path d='M215.271,-91.5742C221.889,-113.148 229.608,-140.294 237.176,-168.291' fill='none' stroke='black'/>
+<polygon fill='black' points='212.215,-81.7619 219.485,-89.9713 213.702,-86.5357 215.189,-91.3095 215.189,-91.3095 215.189,-91.3095 213.702,-86.5357 210.892,-92.6478 212.215,-81.7619 212.215,-81.7619' stroke='black'/>
+<polygon fill='black' points='237.282,-168.688 242.701,-173.446 240.393,-180.278 234.974,-175.52 237.282,-168.688' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='211.273' y='-98.0397'>assignedTerm 0..1</text>
 </g><g class='edge' id='edge4'><title>CodeList-&gt;SDTMVariable</title>
-<path d='M332.906,-99.2744C327.773,-122.681 320.894,-151.384 313.569,-180.278' fill='none' stroke='black'/>
-<polygon fill='black' points='335.066,-89.2476 337.359,-99.971 334.013,-94.1355 332.96,-99.0233 332.96,-99.0233 332.96,-99.0233 334.013,-94.1355 328.561,-98.0756 335.066,-89.2476 335.066,-89.2476' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='324.796' y='-160.027'> </text>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='324.421' y='-102.479'>codelist 0..1</text>
+<path d='M335.349,-99.1686C330.682,-119.448 324.658,-143.714 318.16,-168.639' fill='none' stroke='black'/>
+<polygon fill='black' points='337.594,-89.2476 339.776,-99.9942 336.491,-94.1243 335.387,-99.001 335.387,-99.001 335.387,-99.001 336.491,-94.1243 330.998,-98.0078 337.594,-89.2476 337.594,-89.2476' stroke='black'/>
+<polygon fill='black' points='318.151,-168.671 320.496,-175.49 315.104,-180.278 312.759,-173.458 318.151,-168.671' stroke='black'/>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='326.775' y='-102.368'>codelist 0..1</text>
 </g><g class='node' id='node7'><title>SDTMGroup</title>
 <polygon fill='white' points='377.5,-555 377.5,-733 686.5,-733 686.5,-555 377.5,-555' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='532' y='-714.8'>SDTMGroup</text>

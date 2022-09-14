@@ -37,7 +37,7 @@
   data _null_;
     set work.bc_sdtm_&type._merged;
     retain count 0;
-    length outname $100 qpackage_date $20 linking_phrase_low $512 value $100;
+    length outname $100 qpackage_date qsdtmig_start_version qsdtmig_end_version qformat $20 linking_phrase_low $512 value $100;
     by vlm_group_id notsorted;
     outname=catt("&out_folder\sdtm_bc_specialization_&type._", lowcase(strip(vlm_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
@@ -50,8 +50,10 @@
       put "domain:" +1 domain;
       put "shortName:" +1 group_short_name;
       put "source:" +1 vlm_source;
-      put "sdtmigStartVersion:" +1 sdtmig_start_version;
-      put "sdtmigEndVersion:" +1 sdtmig_end_version;
+      qsdtmig_start_version = quote(strip(sdtmig_start_version));
+      put "sdtmigStartVersion:" +1 qsdtmig_start_version;
+      qsdtmig_end_version = quote(strip(sdtmig_end_version));
+      put "sdtmigEndVersion:" +1 qsdtmig_end_version;
       if not missing(bc_id) then put "biomedicalConceptId:" +1 bc_id;
     end;
     count+1;
@@ -96,7 +98,8 @@
 
         if not missing(data_type) then put +4 "dataType:" +1 data_type;
         if not missing(length) then put +4 "length:" +1 length;
-        if not missing(format) then put +4 "format:" +1 format;
+        qformat=quote(strip(format));
+        if not missing(format) then put +4 "format:" +1 qformat;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
 
         if not missing(subject) then do;

@@ -4,8 +4,8 @@ datasetSpecializationId: GLUCUA
 domain: LB
 shortName: Glucose in Urine by Dipstick
 source: LB.LBTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: NEW_1
 variables:
   - name: LBTESTCD

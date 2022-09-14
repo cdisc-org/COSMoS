@@ -4,8 +4,8 @@ datasetSpecializationId: BMI
 domain: VS
 shortName: Body Mass Index
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C16358
 variables:
   - name: VSTESTCD
@@ -49,7 +49,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 8
-    format: 8.3
+    format: "8.3"
     relationship:
       subject: VSORRES
       linkingPhrase: is the result of the test in
@@ -86,7 +86,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 8
-    format: 8.3
+    format: "8.3"
     significantDigits: 3
     relationship:
       subject: VSSTRESC
@@ -102,7 +102,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 8
-    format: 8.3
+    format: "8.3"
     significantDigits: 3
     relationship:
       subject: VSSTRESN

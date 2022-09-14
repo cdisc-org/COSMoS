@@ -4,8 +4,8 @@ datasetSpecializationId: GLUCURIN
 domain: LB
 shortName: Glucose Concentration in Urine
 source: LB.LBTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C105585
 variables:
   - name: LBTESTCD
@@ -81,7 +81,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBORRESU
@@ -111,7 +111,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBSTRESN
@@ -136,7 +136,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBSTRESU

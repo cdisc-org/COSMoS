@@ -4,8 +4,8 @@ datasetSpecializationId: CREATURIN
 domain: LB
 shortName: Creatinine Concentration in Urine
 source: LB.LBTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C61048
 variables:
   - name: LBTESTCD
@@ -61,7 +61,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBORRES
@@ -100,7 +100,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBSTRESC
@@ -118,7 +118,7 @@ variables:
     role: Qualifier
     dataType: float
     length: 12
-    format: 12.4
+    format: "12.4"
     significantDigits: 4
     relationship:
       subject: LBSTRESN

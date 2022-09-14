@@ -4,8 +4,8 @@ datasetSpecializationId: FRMSIZE
 domain: VS
 shortName: Frame Size
 source: VS.VSTESTCD
-sdtmigStartVersion: 3-2
-sdtmigEndVersion:  
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
 biomedicalConceptId: C49680
 variables:
   - name: VSTESTCD
