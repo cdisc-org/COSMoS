@@ -22,4 +22,4 @@ dataElementConcepts:
     shortName: Count per Minute
     dataType: string
     exampleSet:
-       - Breaths per Minute
+      - Breaths per Minute

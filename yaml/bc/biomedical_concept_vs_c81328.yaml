@@ -23,6 +23,6 @@ dataElementConcepts:
     shortName: Unit of Weight
     dataType: string
     exampleSet:
-       - Kilogram
-       - Gram
-       - Pound
+      - Kilogram
+      - Gram
+      - Pound

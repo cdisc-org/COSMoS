@@ -93,7 +93,7 @@
         countwords=countw(example_set, ";");
         do i=1 to countwords;
           value=strip(scan(example_set, i, ";"));
-          put +7 "-" +1 value;    
+          put +6 "-" +1 value;    
         end;  
       end;
     end;  

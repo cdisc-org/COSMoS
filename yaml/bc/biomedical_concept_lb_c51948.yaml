@@ -32,4 +32,4 @@ dataElementConcepts:
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-       - Blood
+      - Blood

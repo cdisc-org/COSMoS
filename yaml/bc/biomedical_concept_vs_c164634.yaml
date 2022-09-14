@@ -23,7 +23,7 @@ dataElementConcepts:
     shortName: Unit of Height
     dataType: string
     exampleSet:
-       - Centimeter
-       - Inch
-       - Millimeter
-       - Meter
+      - Centimeter
+      - Inch
+      - Millimeter
+      - Meter

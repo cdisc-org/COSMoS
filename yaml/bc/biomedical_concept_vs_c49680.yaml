@@ -13,6 +13,6 @@ dataElementConcepts:
     shortName: Vital Signs Result
     dataType: string
     exampleSet:
-       - Small
-       - Medium
-       - Large
+      - Small
+      - Medium
+      - Large

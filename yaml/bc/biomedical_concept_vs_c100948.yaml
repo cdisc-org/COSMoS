@@ -25,4 +25,4 @@ dataElementConcepts:
     shortName: Approach Anatomic Site
     dataType: string
     exampleSet:
-       - Waist
+      - Waist

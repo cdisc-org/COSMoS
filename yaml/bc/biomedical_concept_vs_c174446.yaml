@@ -24,16 +24,16 @@ dataElementConcepts:
     shortName: Unit of Temperature
     dataType: string
     exampleSet:
-       - Fahrenheit
-       - Celsius
-       - Kelvin
+      - Fahrenheit
+      - Celsius
+      - Kelvin
   - conceptId: C83088
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     shortName: Vital Signs Location
     dataType: string
     exampleSet:
-       - Axilla
-       - Ear
-       - Forehead
-       - Oral Cavity
-       - Rectum
+      - Axilla
+      - Ear
+      - Forehead
+      - Oral Cavity
+      - Rectum

@@ -32,4 +32,7 @@ dataElementConcepts:
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-       - Plasma, Serum, Blood, Urine
+      - Plasma
+      - Serum
+      - Blood
+      - Urine

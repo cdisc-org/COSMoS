@@ -24,5 +24,5 @@ dataElementConcepts:
     shortName: Unit of Mass Density
     dataType: string
     exampleSet:
-       - Kilogram per Square Meter
-       - Pounds per Square Inch
+      - Kilogram per Square Meter
+      - Pounds per Square Inch
