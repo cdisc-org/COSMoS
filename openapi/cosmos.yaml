@@ -1244,7 +1244,7 @@ components:
           type: string
           example:
             - XYZ
-        valuelist:
+        valueList:
           type: array
           items:
             type: string
