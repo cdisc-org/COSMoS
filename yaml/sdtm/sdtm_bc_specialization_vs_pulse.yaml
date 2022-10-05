@@ -60,7 +60,7 @@ variables:
     originSource: Investigator
     vlmTarget: true 
   - name: VSORRESU
-    dataElementConceptId: C73688
+    dataElementConceptId: C49669
     isNonStandard: false
     codelist:
       conceptId: C66770
@@ -107,7 +107,7 @@ variables:
     mandatoryValue: false
     vlmTarget: true 
   - name: VSSTRESU
-    dataElementConceptId: C73688
+    dataElementConceptId: C49669
     isNonStandard: false
     codelist:
       conceptId: C66770
@@ -126,7 +126,7 @@ variables:
     mandatoryValue: false
     vlmTarget: true 
   - name: VSPOS
-    dataElementConceptId: C62164
+    dataElementConceptId: C83114
     isNonStandard: false
     codelist:
       conceptId: C71148
@@ -147,7 +147,7 @@ variables:
     mandatoryValue: false
     comparator: IN
   - name: VSLOC
-    dataElementConceptId: C13717
+    dataElementConceptId: C83088
     isNonStandard: false
     codelist:
       conceptId: C74456
@@ -170,7 +170,7 @@ variables:
     mandatoryValue: false
     comparator: IN
   - name: VSLAT
-    dataElementConceptId: C25185
+    dataElementConceptId: C123975
     isNonStandard: false
     codelist:
       conceptId: C99073

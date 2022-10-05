@@ -392,7 +392,7 @@ components:
       description: Biomedical Concept Package Identifier
       schema:
         type: string
-        example: bc-2022-10-26
+        example: 2022-10-26
     bcBiomedicalConcept:
       in: path
       name: biomedicalconcept
@@ -419,7 +419,7 @@ components:
       description: SDTM Dataset Specialization Package Identifier
       schema:
         type: string
-        example: sdtm-2022-10-26
+        example: 2022-10-26
     sdtmDatasetSpecialization:
       in: path
       name: datasetspecialization
@@ -912,7 +912,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations
+          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations
         title:
           type: string
           example: SDTM Dataset Specialization Package Effective 2022-10-26
@@ -935,7 +935,7 @@ components:
           example: '2022-10-26'
         version:
           type: string
-          example: 'sdtm-2022-10-26'
+          example: '2022-10-26'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsLinks'
           
@@ -957,7 +957,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/sdtm-2022-10-26/datasetspecializations
+          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations
         title:
           type: string
           example: SDTM Dataset Specializations
@@ -971,7 +971,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP
+          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP
         title:
           type: string
           example: Systolic Blood Pressure
@@ -1030,7 +1030,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/bc/packages/bc-2022-10-26/biomedicalconcepts/C25298
+          example: /mdr/bc/packages/2022-10-26/biomedicalconcepts/C25298
         title:
           type: string
           example: Systolic Blood Pressure
@@ -1203,7 +1203,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables
+          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP/variables
         title:
           type: string
           example: Systolic Blood Pressure Variables
@@ -1217,7 +1217,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/sdtm/packages/bc-2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESU
+          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESU
         title:
           type: string
           example: VSSTRESU (SYSPB)

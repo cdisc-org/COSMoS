@@ -48,7 +48,7 @@
       put "packageType:" +1 "sdtm";
       put "datasetSpecializationId:" +1 vlm_group_id;
       put "domain:" +1 domain;
-      put "shortName:" +1 group_short_name;
+      put "shortName:" +1 short_name;
       put "source:" +1 vlm_source;
       qsdtmig_start_version = quote(strip(sdtmig_start_version));
       put "sdtmigStartVersion:" +1 qsdtmig_start_version;
