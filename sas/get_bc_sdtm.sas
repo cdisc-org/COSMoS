@@ -128,7 +128,7 @@
 %mend generate_bc_sdtm;
 
 %let root=C:\_github\cdisc-org\COSMoS;
-%let _debug=1;
+%let _debug=0;
 
 options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;

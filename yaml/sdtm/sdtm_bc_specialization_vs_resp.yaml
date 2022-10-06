@@ -60,6 +60,7 @@ variables:
     originSource: Investigator
     vlmTarget: true 
   - name: VSORRESU
+    dataElementConceptId: C73688
     isNonStandard: false
     codelist:
       conceptId: C66770

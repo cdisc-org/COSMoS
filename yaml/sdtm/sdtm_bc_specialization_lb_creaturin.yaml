@@ -6,7 +6,7 @@ shortName: Creatinine Concentration in Urine
 source: LB.LBTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
-biomedicalConceptId: C61048
+biomedicalConceptId: C64547
 variables:
   - name: LBTESTCD
     isNonStandard: false

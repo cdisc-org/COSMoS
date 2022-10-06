@@ -75,7 +75,7 @@ variables:
     originSource: Vendor
     vlmTarget: true 
   - name: LBORRESU
-    dataElementConceptId: C67375
+    dataElementConceptId: C64567
     isNonStandard: false
     codelist:
       conceptId: C71620
@@ -131,7 +131,7 @@ variables:
     originSource: Vendor
     vlmTarget: true 
   - name: LBSTRESU
-    dataElementConceptId: C67375
+    dataElementConceptId: C64567
     isNonStandard: false
     codelist:
       conceptId: C71620
