@@ -6,7 +6,7 @@ shortName: Albumin Concentration in Serum/Plasma
 source: LB.LBTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
-biomedicalConceptId: C64467
+biomedicalConceptId: C64431
 variables:
   - name: LBTESTCD
     isNonStandard: false
@@ -179,7 +179,7 @@ variables:
     mandatoryValue: false
     comparator: EQ
   - name: LBFAST
-    dataElementConceptId: C63663
+    dataElementConceptId: C83309
     isNonStandard: false
     codelist:
       conceptId: C66742

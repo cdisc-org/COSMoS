@@ -119,7 +119,7 @@ variables:
     mandatoryValue: false
     comparator: EQ
   - name: LBMETHOD
-    dataElementConceptId: C82535
+    dataElementConceptId: C83312
     isNonStandard: false
     assignedTerm:
       conceptId: C50322
@@ -134,7 +134,7 @@ variables:
     mandatoryValue: false
     comparator: EQ
   - name: LBFAST
-    dataElementConceptId: C63663
+    dataElementConceptId: C83309
     isNonStandard: false
     codelist:
       conceptId: C66742

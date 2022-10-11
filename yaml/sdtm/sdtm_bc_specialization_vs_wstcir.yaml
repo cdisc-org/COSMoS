@@ -131,7 +131,7 @@ variables:
     mandatoryValue: false
     vlmTarget: true 
   - name: VSLOC
-    dataElementConceptId: C83088
+    dataElementConceptId: C93507
     isNonStandard: false
     codelist:
       conceptId: C74456

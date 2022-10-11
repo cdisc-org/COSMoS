@@ -8,8 +8,9 @@ category:
 shortName: Total Basophil Count
 synonym:
   - Basophils
+  - Absolute Basophil Count
 resultScale: Quantitative
-definition: "The determination of the absolute number of basophils in a blood sample."
+definition: "The total number of white blood cells that are basophils. It is calculated by multiplying the white blood cell count by the percent of basophils in the differential white blood cell count."
 coding:
   - code: 26444-0
     system: http://loinc.org/
@@ -33,3 +34,7 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - Blood
+  - conceptId: C83312
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
+    shortName: Laboratory Test Method
+    dataType: string

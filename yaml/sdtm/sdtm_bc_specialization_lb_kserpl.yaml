@@ -182,7 +182,7 @@ variables:
     mandatoryVariable: true 
     mandatoryValue: false
   - name: LBFAST
-    dataElementConceptId: C63663
+    dataElementConceptId: C83309
     isNonStandard: false
     codelist:
       conceptId: C66742
