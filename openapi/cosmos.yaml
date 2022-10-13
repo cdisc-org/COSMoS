@@ -566,7 +566,7 @@ components:
       properties:
         name:
           type: string
-          example: BC 2022-10-26
+          example: Biomedical Concepts 2022-10-26
         label:
           type: string
           example: Biomedical Concept Package Effective 2022-10-26
@@ -926,7 +926,7 @@ components:
       properties:
         name:
           type: string
-          example: SDTM 2022-10-26
+          example: SDTM Dataset Specializations 2022-10-26
         label:
           type: string
           example: SDTM Dataset Specialization Package Effective 2022-10-26
@@ -944,8 +944,6 @@ components:
       properties:
         self:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
-        parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRef'
         DatasetSpecializations:
           type: array
           items:
