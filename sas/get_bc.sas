@@ -60,11 +60,15 @@
         end;  
       end;
 
-      if not missing(result_scale) then put "resultScale:" +1 Result_Scale;
+      if not missing(result_scale) 
+        then put "resultScale:" +1 Result_Scale;
+        else putlog 'WARNING: ' BC_ID short_name 'no resultscale';
+
       if not missing(definition) then do;
         qDefinition = quote(strip(definition));
         put "definition:" +1 qDefinition;
       end;
+      else putlog 'WARNING: ' BC_ID short_name 'no definition';
 
       if not missing(system) then do;
         put "coding:";
@@ -103,11 +107,12 @@
 
 
 %let root=C:/_github/cdisc-org/COSMoS;
+%let package=20221026;
 %let _debug=0;
 
 options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
 
-%generate_bc(excel_file=&root\BC Curation Template.xlsx, type=vs, out_folder=&root/yaml/bc, range=Conceptual VS BC);
-%generate_bc(excel_file=&root\\BC Curation Template.xlsx, type=lb, out_folder=&root/yaml/bc, range=%str(Conceptual LB (Common) BC));
+%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/bc, range=%str(Conceptual LB (Common) BC));
   

@@ -6,7 +6,7 @@ shortName: Albumin Concentration in Urine
 source: LB.LBTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
-biomedicalConceptId: C64467
+biomedicalConceptId: C64431
 variables:
   - name: LBTESTCD
     isNonStandard: false
@@ -74,7 +74,7 @@ variables:
     originSource: Vendor
     vlmTarget: true 
   - name: LBORRESU
-    dataElementConceptId: C64571
+    dataElementConceptId: NEW_2
     isNonStandard: false
     codelist:
       conceptId: C71620
@@ -132,7 +132,7 @@ variables:
     originSource: Vendor
     vlmTarget: true 
   - name: LBSTRESU
-    dataElementConceptId: C64571
+    dataElementConceptId: NEW_2
     isNonStandard: false
     codelist:
       conceptId: C71620
@@ -182,7 +182,7 @@ variables:
     mandatoryValue: false
     comparator: EQ
   - name: LBFAST
-    dataElementConceptId: C63663
+    dataElementConceptId: C83309
     isNonStandard: false
     codelist:
       conceptId: C66742
