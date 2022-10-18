@@ -7,7 +7,8 @@ category:
   - Laboratory Tests
 shortName: Alanine Aminotransferase Measurement
 synonym:
-  - ALT, SGPT
+  - ALT
+  - SGPT
 resultScale: Quantitative
 definition: "A quantitative measurement of alanine aminotransferase present in a sample."
 coding:
