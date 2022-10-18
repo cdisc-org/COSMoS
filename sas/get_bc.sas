@@ -52,6 +52,7 @@
       put "shortName:" +1 short_name;
 
       if not missing(synonym) then do;
+        if index(synonym, ",") > 0 then putlog 'WARNING: ' BC_ID 'Synonym issue: '  synonym;
         put "synonym:";
         countwords=countw(synonym, ";");
         do i=1 to countwords;

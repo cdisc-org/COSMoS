@@ -7,7 +7,8 @@ category:
   - Laboratory Tests
 shortName: Aspartate Aminotransferase Measurement
 synonym:
-  - AST, SGOT
+  - AST
+  - SGOT
 resultScale: Quantitative
 definition: "A quantitative measurement of aspartate aminotransferase present in a sample."
 coding:
