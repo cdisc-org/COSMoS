@@ -17,7 +17,7 @@
     on bcsdtm.subset_codelist = ss.subset_short_name
     order by vlm_group_id, order
     ;
-  quit;     
+  quit;
 
   %if &debug %then %do;
 
@@ -147,7 +147,7 @@ run;
 
 proc sort data=subsets;
   by Subset_Short_Name Submission_Value;
-run;  
+run;
 
 data subsets(keep=Subset_Short_Name subset_value_list);
   length subset_value_list $8192;
@@ -157,7 +157,7 @@ data subsets(keep=Subset_Short_Name subset_value_list);
   if first.Subset_Short_Name then subset_value_list="";
   subset_value_list=catx(";", subset_value_list, Submission_Value);
   if last.Subset_Short_Name then output;
-run;    
+run;
 
-%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/sdtm, range=SDTM VS BC);
-%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/sdtm, range=%str(SDTM LB BC));
+%generate_bc_sdtm(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/sdtm, range=SDTM VS BC);
+%generate_bc_sdtm(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/sdtm, range=%str(SDTM LB BC));

@@ -4,10 +4,10 @@
 
   data bc__&type;
     set bc_&type(where=(not missing(bc_id)));
-  run;  
+  run;
 
   %if &debug %then %do;
-    
+
     ods listing close;
     ods html5 file="get_bc_&range..html";
 
@@ -15,7 +15,7 @@
     run;
     proc print data=bc_&type;
     run;
-      
+
     ods html5 close;
     ods listing;
 
@@ -39,14 +39,14 @@
         put "parentConceptId:" +1 parent_bc_id;
         * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
       end;
-      
+
       if not missing(bc_category) then do;
         put "category:";
         countwords=countw(bc_category, ";");
         do i=1 to countwords;
           value=strip(scan(bc_category, i, ";"));
-          put +2 "-" +1 value;    
-        end;  
+          put +2 "-" +1 value;
+        end;
       end;
 
       put "shortName:" +1 short_name;
@@ -57,11 +57,11 @@
         countwords=countw(synonym, ";");
         do i=1 to countwords;
           value=strip(scan(synonym, i, ";"));
-          put +2 "-" +1 value;    
-        end;  
+          put +2 "-" +1 value;
+        end;
       end;
 
-      if not missing(result_scale) 
+      if not missing(result_scale)
         then put "resultScale:" +1 Result_Scale;
         else putlog 'WARNING: ' BC_ID short_name 'no resultscale';
 
@@ -76,32 +76,32 @@
         countwords=countw(system, ";");
         do i=1 to countwords;
           value=strip(scan(code, i, ";"));
-          put +2 "- code:" +1 value; 
+          put +2 "- code:" +1 value;
           value=strip(scan(system, i, ";"));
           put +4 "system:" +1 value;
           value=strip(scan(system_name, i, ";"));
-          if not missing(value) then put +4 "systemName:" +1 value; 
+          if not missing(value) then put +4 "systemName:" +1 value;
         end;
       end;
     end;
-    
+
     count+1;
     if count=2 and not missing(dec_id) then put "dataElementConcepts:";
 
     if not missing(dec_id) then do;
       put "  - conceptId:" +1 dec_id;
       put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
-      put +4 "shortName:" +1 dec_label; 
-      if not missing(data_type) then put +4 "dataType:" +1 data_type; 
+      put +4 "shortName:" +1 dec_label;
+      if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;
         put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;
           value=strip(scan(example_set, i, ";"));
-          put +6 "-" +1 value;    
-        end;  
+          put +6 "-" +1 value;
+        end;
       end;
-    end;  
+    end;
   run;
 
 %mend generate_bc;
@@ -114,6 +114,5 @@
 options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
 
-%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/bc, range=Conceptual VS BC);
-%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/bc, range=%str(Conceptual LB (Common) BC));
-  
+%generate_bc(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/bc, range=%str(Conceptual LB (Common) BC));

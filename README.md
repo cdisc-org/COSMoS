@@ -16,5 +16,5 @@ This repository contains working files to implement Biomedical Concepts and Data
   - Utilities to generate YAML files from the BC Curation Template.xlsx
 
 - yaml
-  - YAML files generated from the BC Curation Template.xlsx
+  - YAML files generated from the Curation spreadsheets
   - Scripts to validate the YAML files
