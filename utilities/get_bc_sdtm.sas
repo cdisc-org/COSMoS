@@ -159,5 +159,5 @@ data subsets(keep=Subset_Short_Name subset_value_list);
   if last.Subset_Short_Name then output;
 run;    
 
-%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/sdtm, range=SDTM VS BC);
-%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/sdtm, range=%str(SDTM LB BC));
+%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/sdtm, range=SDTM VS BC);
+%generate_bc_sdtm(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/sdtm, range=%str(SDTM LB BC));

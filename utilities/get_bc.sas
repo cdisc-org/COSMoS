@@ -114,6 +114,6 @@
 options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
 
-%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/bc, range=Conceptual VS BC);
-%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/bc, range=%str(Conceptual LB (Common) BC));
+%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root\bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/bc, range=%str(Conceptual LB (Common) BC));
   
