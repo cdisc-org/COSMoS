@@ -397,7 +397,7 @@ components:
       in: path
       name: biomedicalconcept
       required: true
-      description: Biomedical Concept
+      description: Biomedical Concept Identifier
       schema:
         type: string
         example: C49676
@@ -405,7 +405,7 @@ components:
       in: path
       name: dataelementconcept
       required: true
-      description: Data Element Concept
+      description: Data Element Concept Identifier
       schema:
         type: string
         example: C73688
@@ -424,7 +424,7 @@ components:
       in: path
       name: datasetspecialization
       required: true
-      description: SDTM Dataset Specialization
+      description: SDTM Dataset Specialization Identifier
       schema:
         type: string
         example: SYSBP
@@ -432,7 +432,7 @@ components:
       in: path
       name: variable
       required: true
-      description: SDTM Dataset Specialization Variable
+      description: SDTM Dataset Specialization Variable Identifier
       schema:
         type: string
         example: VSSTRESU
