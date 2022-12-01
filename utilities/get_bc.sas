@@ -106,13 +106,15 @@
 
 %mend generate_bc;
 
+/*******************************************************************************/
 
-%let root=C:/_github/cdisc-org/COSMoS;
-%let package=20221026;
+%let root=C:\_github\cdisc-org\COSMoS;
+options sasautos = ("&root/utilities", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
+options ls=256;
 %let _debug=0;
 
-options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options ls=256;
+%let package=20221026;
+%let Excelfile=BC_Package_2022_10_26.xlsx;
 
-%generate_bc(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/bc, range=Conceptual VS BC);
-%generate_bc(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/bc, range=%str(Conceptual LB (Common) BC));
+%generate_bc(excel_file=&root/curation/&Excelfile, type=vs, out_folder=&root/yaml/&package/bc, range=Conceptual VS BC);
+%generate_bc(excel_file=&root/curation/&Excelfile, type=lb, out_folder=&root/yaml/&package/bc, range=%str(Conceptual LB (Common) BC));

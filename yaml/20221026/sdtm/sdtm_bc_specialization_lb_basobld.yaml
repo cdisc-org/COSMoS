@@ -2,7 +2,7 @@ packageDate: "2022-10-26"
 packageType: sdtm
 datasetSpecializationId: BASOBLD
 domain: LB
-shortName: Basophil Concentration in Blood
+shortName: Basophil Count in Blood
 source: LB.LBTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""

@@ -127,12 +127,15 @@
 
 %mend generate_bc_sdtm;
 
+/*******************************************************************************/
+
 %let root=C:\_github\cdisc-org\COSMoS;
-%let package=20221026;
+options sasautos = ("&root/utilities", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
+options ls=256;
 %let _debug=0;
 
-options sasautos = ("&root/sas", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options ls=256;
+%let package=20221026;
+%let Excelfile=BC_Package_2022_10_26.xlsx;
 
 proc format;
   value $YN
@@ -143,7 +146,7 @@ proc format;
   ;
 run;
 
-%ReadExcel(file=&root\bc_curation_template_&package..xlsx, range=Subset Codelist Example$, dsout=subsets);
+%ReadExcel(file=&root/curation/&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
 proc sort data=subsets;
   by Subset_Short_Name Submission_Value;
@@ -159,5 +162,5 @@ data subsets(keep=Subset_Short_Name subset_value_list);
   if last.Subset_Short_Name then output;
 run;
 
-%generate_bc_sdtm(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=vs, out_folder=&root/yaml/&package/sdtm, range=SDTM VS BC);
-%generate_bc_sdtm(excel_file=&root/curation/bc_curation_template_&package..xlsx, type=lb, out_folder=&root/yaml/&package/sdtm, range=%str(SDTM LB BC));
+%generate_bc_sdtm(excel_file=&root/curation/&Excelfile, type=vs, out_folder=&root/yaml/&package/sdtm, range=SDTM VS BC);
+%generate_bc_sdtm(excel_file=&root/curation/&Excelfile, type=lb, out_folder=&root/yaml/&package/sdtm, range=%str(SDTM LB BC));
