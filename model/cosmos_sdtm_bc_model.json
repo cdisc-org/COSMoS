@@ -215,11 +215,7 @@
             "variables": {
                "description": "Variable included in the SDTM dataset specialization",
                "items": {
-                  "oneOf": [
-                     {
-                        "$ref": "#/$defs/SDTMVariable"
-                     }
-                  ]
+                  "$ref": "#/$defs/SDTMVariable"
                },
                "type": "array"
             }
@@ -241,19 +237,11 @@
          "description": "",
          "properties": {
             "assignedTerm": {
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/AssignedTerm"
-                  }
-               ]
+               "$ref": "#/$defs/AssignedTerm"
             },
             "codelist": {
-               "description": "Codelist",
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/CodeList"
-                  }
-               ]
+               "$ref": "#/$defs/CodeList",
+               "description": "Codelist"
             },
             "comparator": {
                "$ref": "#/$defs/Comparator",
@@ -301,11 +289,7 @@
                "description": "Variable origin type (define-XML v21)"
             },
             "relationship": {
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/RelationShip"
-                  }
-               ]
+               "$ref": "#/$defs/RelationShip"
             },
             "role": {
                "description": "SDTM variable role",
@@ -361,11 +345,7 @@
          "properties": {
             "codelistTerm": {
                "items": {
-                  "oneOf": [
-                     {
-                        "$ref": "#/$defs/CodeListTerm"
-                     }
-                  ]
+                  "$ref": "#/$defs/CodeListTerm"
                },
                "type": "array"
             },
@@ -437,11 +417,7 @@
       "variables": {
          "description": "Variable included in the SDTM dataset specialization",
          "items": {
-            "oneOf": [
-               {
-                  "$ref": "#/$defs/SDTMVariable"
-               }
-            ]
+            "$ref": "#/$defs/SDTMVariable"
          },
          "type": "array"
       }

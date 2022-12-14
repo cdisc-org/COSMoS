@@ -1,0 +1,291 @@
+id: https://www.cdisc.org/cosmos/1-0
+name: COSMoS-Biomedical-Concepts-Schema
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+
+default_range: string
+
+classes:
+
+  CDASHGroup:
+    tree_root: true
+    slots:
+      - packageDate
+      - packageType
+      - domain
+      - shortName
+      - datasetSpecializationId
+      - cdashigStartVersion
+      - cdashigEndVersion
+      - biomedicalConceptId
+      - variables
+
+  CDASHVariable:
+    slots:
+      - name
+      - questionText
+      - dataElementConceptId
+      - prompt
+      - codelist
+      - subsetCodelist
+      - valueList
+      - valueDisplayList
+      - assignedValue
+      - relationship
+      - dataType
+      - length
+      - significantDigits
+      - sdtmTarget
+
+  RelationShip:
+    slots:
+      - subject
+      - linkingPhrase
+      - predicateTerm
+      - object
+
+  SdtmTarget:
+    slots:
+      - sdtmTargetVariable
+      - sdtmTargetMapping
+      - sdtmTargetGroup
+
+  CodeList:
+    slots:
+      - conceptId
+      - href
+      - submissionValue
+
+  CodeListTerm:
+    slots:
+      - termId
+      - termValue
+
+  SubsetCodeList:
+    slots:
+      - parentCodelist
+      - subsetShortName
+      - subsetLabel
+      - codelistTerm
+
+slots:
+
+  packageDate:
+    required: true
+    range: date
+    description: Biomedical Concept package release date indicating when the BC package was published to production
+  packageType:
+    range: CdashDatasetSpecializationPackageType
+    description: Package type (cdash for CDASH Dataset Specializations)
+    required: true
+  domain:
+    required: true
+    description: Domain for the CDASH specialization group
+  datasetSpecializationId:
+    identifier: true
+    required: true
+    range: string
+    description: Identifier for CDASH Value Level Metadata group
+  shortName:
+    required: true
+    range: string
+    description: CDASH group short name which provides a user friendly and intuitive name for the cdash_group_id
+  cdashigStartVersion:
+    required: true
+    description: The earliest CDASHIG version applicable to the BC dataset specialization
+  cdashigEndVersion:
+    description: The last CDASHIG version that is applicable to the BC dataset specialization
+  biomedicalConceptId:
+    recommended: true
+    range: string
+    description: Biomedical Concept identifier
+
+  variables:
+    multivalued: true
+    inlined_as_list: true
+    range: CDASHVariable
+    description: Variable included in the CDASH dataset specialization
+  name:
+    description: Variable included in the CDASH dataset specialization
+    range: string
+    required: true
+    identifier: true
+  dataElementConceptId:
+    range: string
+    description: Biomedical Concept Data Element Concept idenfifier foreign key
+  questionText:
+    recommended: true
+    range: string
+    description: CDASH variable question text
+  prompt:
+    recommended: true
+    range: string
+    description: CDASH variable prompt
+  codelist:
+    range: CodeList
+    inlined: true
+    description: Codelist
+  subsetCodelist:
+    description: Subset codelist short name
+
+  assignedValue:
+    range: string
+    description: Pre-populated value on a CRF
+
+  conceptId:
+    identifier: true
+    required: true
+    range: string
+    description: C-code for a codelist in NCIt
+  href:
+    required: false
+    range: uri
+    description: Link to NCIt for the codelist
+  submissionValue:
+    required: true
+    description: CDISC submission value for the codelist
+
+  parentCodelist:
+    required: true
+    description: Subset codelist parent codelist
+  subsetShortName:
+    required: true
+    description: Subset codelist short name
+  subsetLabel:
+    required: true
+    description: Subset codelist label
+  codelistTerm:
+    required: true
+    range: CodeListTerm
+    multivalued: true
+    inlined_as_list: true
+  termId:
+    required: true
+    description: C-code term in subset codelist
+  termValue:
+    required: true
+    description: Submision value of term in subset codelist
+  valueList:
+    multivalued: true
+    inlined_as_list: true
+    description: A set of valid CDISC submission values for a CDASH variable
+  valueDisplayList:
+    multivalued: true
+    inlined_as_list: true
+    description: A set of valid user-friendly CDISC submission values for a CDASH variable
+
+  sdtmTarget:
+    range: SdtmTarget
+  sdtmTargetVariable:
+    required: true
+    description: SDTM target variable for CDASH variable
+  sdtmTargetMapping:
+    required: true
+    description: Rule for mapping from CDASH variable to SDTM target variable.
+  sdtmTargetGroup:
+    required: true
+    description: SDTM target dataset specialization id for CDASH variable
+
+
+  relationship:
+    range: RelationShip
+  subject:
+    required: true
+    description: Subject in a variable relationship
+  linkingPhrase:
+    required: true
+    range: LinkingPhrase
+    description: Variable relationship descriptive linking phrase
+  predicateTerm:
+    required: true
+    range: PredicateTerm
+    description: Short variable relatio ship linking phrase for programming purposes
+  object:
+    required: true
+    description: Object in a variable relationship
+
+  dataType:
+    range: CDASHVariableDataType
+    description: Variable data type
+  length:
+    range: integer
+    minimum_value: 1
+    description: Variable length
+  significantDigits:
+    range: integer
+    description: Variable significant_digits
+
+enums:
+
+  CdashDatasetSpecializationPackageType:
+    permissible_values:
+      cdash:
+
+  CDASHVariableDataType:
+    permissible_values:
+      boolean:
+        text: boolean
+      float:
+        text: float
+      integer:
+        text: integer
+      text:
+        text:  text
+
+  LinkingPhrase:
+    permissible_values:
+      decodes the value in:
+      is decoded by the value in:
+      groups values in:
+      is the subject position during performance of the test in:
+      is the result of the test in:
+      is the unit for the value in:
+      is the specimen tested in:
+      specifies the anatomical location of the performance of the test in:
+      further specifies the anatomical location in:
+      is the method for the test in:
+      is the subject's fasting status during the performance of the test in:
+      identifies an observation described by:
+      is the dictionary code for the test in:
+
+  PredicateTerm:
+    permissible_values:
+      DECODES:
+      IS_DECODED_BY:
+      GROUPS:
+      IS_SUBJECT_STATE_FOR:
+      IS_RESULT_OF:
+      IS_UNIT_FOR:
+      IDENTIFIES_OBSERVATION:
+      IS_SPECIMEN_TESTED_IN:
+      SPECIFIES:
+      CODES:
+
+  OriginType:
+    permissible_values:
+      Assigned:
+      Collected:
+      Derived:
+      Predecessor:
+      Protocol:
+
+  OriginSource:
+    permissible_values:
+      Investigator:
+      Sponsor:
+      Subject:
+      Vendor:
+
+  Role:
+    permissible_values:
+      Topic:
+      Qualifier:
+
+  Comparator:
+    permissible_values:
+      EQ:
+      IN:
