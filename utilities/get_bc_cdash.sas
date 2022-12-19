@@ -15,7 +15,7 @@
     from work.bc_cdash_&type bccdash
       left join subsets ss
     on bccdash.subset_codelist = ss.subset_short_name
-    order by cdash_group_id, order
+    order by cdash_group_id, scenario, order
     ;
   quit;
 
@@ -38,10 +38,13 @@
     set work.bc_cdash_&type._merged;
     retain count 0;
     length outname $100 qpackage_date qcdashig_start_version qcdashig_end_version $20 linking_phrase_low $512 value $100;
-    by cdash_group_id notsorted;
-    outname=catt("&out_folder\cdash_bc_specialization_&type._", lowcase(strip(cdash_group_id)), ".yaml");
+    by cdash_group_id scenario notsorted;
+    if missing(scenario) then
+      outname=catt("&out_folder\cdash_bc_specialization_&type._", lowcase(strip(cdash_group_id)), ".yaml");
+    else
+      outname=catt("&out_folder\cdash_bc_specialization_&type._", lowcase(strip(cdash_group_id)), "_", lowcase(strip(scenario)), ".yaml");
     file dummy filevar=outname dlm=",";
-    if first.cdash_group_id then do;
+    if first.scenario then do;
       count=0;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;
@@ -49,6 +52,7 @@
       put "datasetSpecializationId:" +1 cdash_group_id;
       put "domain:" +1 domain;
       put "shortName:" +1 short_name;
+      if not missing(scenario) then put "scenario:" +1 scenario;
       qcdashig_start_version = quote(strip(cdashig_start_version));
       put "cdashigStartVersion:" +1 qcdashig_start_version;
       qcdashig_end_version = quote(strip(cdashig_end_version));
@@ -89,11 +93,12 @@
           end;
         end;
 
-        if not missing(assigned_value) then put +4 "assignedValue:" +1 assigned_value;
+        if not missing(prepopulated_value) then put +4 "prepopulatedValue:" +1 prepopulated_value;
 
         if not missing(data_type) then put +4 "dataType:" +1 data_type;
         if not missing(length) then put +4 "length:" +1 length;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
+        if not missing(cdashig_core) then put +4 "cdashigCore:" +1 cdashig_core;
 
         if not missing(subject) then do;
           object=tranwrd(object, '93'x, '"');
@@ -125,8 +130,8 @@ options sasautos = ("&root/utilities", %sysfunc(compress(%sysfunc(getoption(sasa
 options ls=256;
 %let _debug=0;
 
-%let package=2023mmdd;
-%let Excelfile=Draft_BC_Package_R2_13Dec22.xlsx;
+%let package=20230131;
+%let Excelfile=Draft_BC_Package_R2_15Dec22.xlsx;
 
 proc format;
   value $YN
@@ -154,3 +159,4 @@ data subsets(keep=Subset_Short_Name subset_value_list);
 run;
 
 %generate_bc_cdash(excel_file=&root/curation/&Excelfile, type=vs, out_folder=&root/yaml/&package/cdash, range=CDASH VS);
+%generate_bc_cdash(excel_file=&root/curation/&Excelfile, type=lb, out_folder=&root/yaml/&package/cdash, range=CDASH LB BC);

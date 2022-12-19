@@ -171,6 +171,14 @@
          "title": "Role",
          "type": "string"
       },
+      "SDTMDatasetSpecializationPackageType": {
+         "description": "",
+         "enum": [
+            "sdtm"
+         ],
+         "title": "SDTMDatasetSpecializationPackageType",
+         "type": "string"
+      },
       "SDTMGroup": {
          "additionalProperties": false,
          "description": "",
@@ -193,7 +201,7 @@
                "type": "string"
             },
             "packageType": {
-               "$ref": "#/$defs/SdtmDatasetSpecializationPackageType",
+               "$ref": "#/$defs/SDTMDatasetSpecializationPackageType",
                "description": "Package type (sdtm for SDTM Dataset Specializations)"
             },
             "sdtmigEndVersion": {
@@ -331,14 +339,6 @@
          "title": "SDTMVariableDataType",
          "type": "string"
       },
-      "SdtmDatasetSpecializationPackageType": {
-         "description": "",
-         "enum": [
-            "sdtm"
-         ],
-         "title": "SdtmDatasetSpecializationPackageType",
-         "type": "string"
-      },
       "SubsetCodeList": {
          "additionalProperties": false,
          "description": "",
@@ -395,7 +395,7 @@
          "type": "string"
       },
       "packageType": {
-         "$ref": "#/$defs/SdtmDatasetSpecializationPackageType",
+         "$ref": "#/$defs/SDTMDatasetSpecializationPackageType",
          "description": "Package type (sdtm for SDTM Dataset Specializations)"
       },
       "sdtmigEndVersion": {

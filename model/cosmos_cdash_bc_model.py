@@ -1,5 +1,5 @@
-# Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-12-19T15:56:40
+# Auto generated from cosmos_cdash_bc_model.yaml by pythongen.py version: 0.9.0
+# Generation date: 2022-12-19T16:23:17
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -22,8 +22,8 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uri
-from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
+from linkml_runtime.linkml_model.types import Date, Integer, String, Uri
+from linkml_runtime.utils.metamodelcore import URI, XSDDate
 
 metamodel_version = "1.7.0"
 version = None
@@ -39,11 +39,11 @@ DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
 # Types
 
 # Class references
-class SDTMGroupDatasetSpecializationId(extended_str):
+class CDASHGroupDatasetSpecializationId(extended_str):
     pass
 
 
-class SDTMVariableName(extended_str):
+class CDASHVariableName(extended_str):
     pass
 
 
@@ -52,30 +52,30 @@ class CodeListConceptId(extended_str):
 
 
 @dataclass
-class SDTMGroup(YAMLRoot):
+class CDASHGroup(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMGroup")
+    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CDASHGroup")
     class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "SDTMGroup"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMGroup")
+    class_name: ClassVar[str] = "CDASHGroup"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CDASHGroup")
 
-    datasetSpecializationId: Union[str, SDTMGroupDatasetSpecializationId] = None
+    datasetSpecializationId: Union[str, CDASHGroupDatasetSpecializationId] = None
     packageDate: Union[str, XSDDate] = None
-    packageType: Union[str, "SDTMDatasetSpecializationPackageType"] = None
+    packageType: Union[str, "CDASHDatasetSpecializationPackageType"] = None
     domain: str = None
     shortName: str = None
-    source: str = None
-    sdtmigStartVersion: str = None
-    sdtmigEndVersion: Optional[str] = None
+    cdashigStartVersion: str = None
+    scenario: Optional[Union[str, "CDASHScenario"]] = None
+    cdashigEndVersion: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
-    variables: Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]]] = empty_dict()
+    variables: Optional[Union[Dict[Union[str, CDASHVariableName], Union[dict, "CDASHVariable"]], List[Union[dict, "CDASHVariable"]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.datasetSpecializationId):
             self.MissingRequiredField("datasetSpecializationId")
-        if not isinstance(self.datasetSpecializationId, SDTMGroupDatasetSpecializationId):
-            self.datasetSpecializationId = SDTMGroupDatasetSpecializationId(self.datasetSpecializationId)
+        if not isinstance(self.datasetSpecializationId, CDASHGroupDatasetSpecializationId):
+            self.datasetSpecializationId = CDASHGroupDatasetSpecializationId(self.datasetSpecializationId)
 
         if self._is_empty(self.packageDate):
             self.MissingRequiredField("packageDate")
@@ -84,8 +84,8 @@ class SDTMGroup(YAMLRoot):
 
         if self._is_empty(self.packageType):
             self.MissingRequiredField("packageType")
-        if not isinstance(self.packageType, SDTMDatasetSpecializationPackageType):
-            self.packageType = SDTMDatasetSpecializationPackageType(self.packageType)
+        if not isinstance(self.packageType, CDASHDatasetSpecializationPackageType):
+            self.packageType = CDASHDatasetSpecializationPackageType(self.packageType)
 
         if self._is_empty(self.domain):
             self.MissingRequiredField("domain")
@@ -97,67 +97,69 @@ class SDTMGroup(YAMLRoot):
         if not isinstance(self.shortName, str):
             self.shortName = str(self.shortName)
 
-        if self._is_empty(self.source):
-            self.MissingRequiredField("source")
-        if not isinstance(self.source, str):
-            self.source = str(self.source)
+        if self._is_empty(self.cdashigStartVersion):
+            self.MissingRequiredField("cdashigStartVersion")
+        if not isinstance(self.cdashigStartVersion, str):
+            self.cdashigStartVersion = str(self.cdashigStartVersion)
 
-        if self._is_empty(self.sdtmigStartVersion):
-            self.MissingRequiredField("sdtmigStartVersion")
-        if not isinstance(self.sdtmigStartVersion, str):
-            self.sdtmigStartVersion = str(self.sdtmigStartVersion)
+        if self.scenario is not None and not isinstance(self.scenario, CDASHScenario):
+            self.scenario = CDASHScenario(self.scenario)
 
-        if self.sdtmigEndVersion is not None and not isinstance(self.sdtmigEndVersion, str):
-            self.sdtmigEndVersion = str(self.sdtmigEndVersion)
+        if self.cdashigEndVersion is not None and not isinstance(self.cdashigEndVersion, str):
+            self.cdashigEndVersion = str(self.cdashigEndVersion)
 
         if self.biomedicalConceptId is not None and not isinstance(self.biomedicalConceptId, str):
             self.biomedicalConceptId = str(self.biomedicalConceptId)
 
-        self._normalize_inlined_as_list(slot_name="variables", slot_type=SDTMVariable, key_name="name", keyed=True)
+        self._normalize_inlined_as_list(slot_name="variables", slot_type=CDASHVariable, key_name="name", keyed=True)
 
         super().__post_init__(**kwargs)
 
 
 @dataclass
-class SDTMVariable(YAMLRoot):
+class CDASHVariable(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
+    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CDASHVariable")
     class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "SDTMVariable"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
+    class_name: ClassVar[str] = "CDASHVariable"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CDASHVariable")
 
-    name: Union[str, SDTMVariableName] = None
+    name: Union[str, CDASHVariableName] = None
+    cdashigCore: Union[str, "CDASHIGCore"] = None
+    questionText: Optional[str] = None
     dataElementConceptId: Optional[str] = None
-    isNonStandard: Optional[Union[bool, Bool]] = None
+    prompt: Optional[str] = None
     codelist: Optional[Union[dict, "CodeList"]] = None
     subsetCodelist: Optional[str] = None
     valueList: Optional[Union[str, List[str]]] = empty_list()
-    assignedTerm: Optional[Union[dict, "AssignedTerm"]] = None
-    role: Optional[str] = None
+    valueDisplayList: Optional[Union[str, List[str]]] = empty_list()
+    prepopulatedValue: Optional[str] = None
     relationship: Optional[Union[dict, "RelationShip"]] = None
-    dataType: Optional[Union[str, "SDTMVariableDataType"]] = None
+    dataType: Optional[Union[str, "CDASHVariableDataType"]] = None
     length: Optional[int] = None
-    format: Optional[str] = None
     significantDigits: Optional[int] = None
-    mandatoryVariable: Optional[Union[bool, Bool]] = None
-    mandatoryValue: Optional[Union[bool, Bool]] = None
-    originType: Optional[Union[str, "OriginType"]] = None
-    originSource: Optional[Union[str, "OriginSource"]] = None
-    comparator: Optional[Union[str, "Comparator"]] = None
-    vlmTarget: Optional[Union[bool, Bool]] = None
+    sdtmTarget: Optional[Union[dict, "SDTMTarget"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
             self.MissingRequiredField("name")
-        if not isinstance(self.name, SDTMVariableName):
-            self.name = SDTMVariableName(self.name)
+        if not isinstance(self.name, CDASHVariableName):
+            self.name = CDASHVariableName(self.name)
+
+        if self._is_empty(self.cdashigCore):
+            self.MissingRequiredField("cdashigCore")
+        if not isinstance(self.cdashigCore, CDASHIGCore):
+            self.cdashigCore = CDASHIGCore(self.cdashigCore)
+
+        if self.questionText is not None and not isinstance(self.questionText, str):
+            self.questionText = str(self.questionText)
 
         if self.dataElementConceptId is not None and not isinstance(self.dataElementConceptId, str):
             self.dataElementConceptId = str(self.dataElementConceptId)
 
-        if self.isNonStandard is not None and not isinstance(self.isNonStandard, Bool):
-            self.isNonStandard = Bool(self.isNonStandard)
+        if self.prompt is not None and not isinstance(self.prompt, str):
+            self.prompt = str(self.prompt)
 
         if self.codelist is not None and not isinstance(self.codelist, CodeList):
             self.codelist = CodeList(**as_dict(self.codelist))
@@ -169,44 +171,27 @@ class SDTMVariable(YAMLRoot):
             self.valueList = [self.valueList] if self.valueList is not None else []
         self.valueList = [v if isinstance(v, str) else str(v) for v in self.valueList]
 
-        if self.assignedTerm is not None and not isinstance(self.assignedTerm, AssignedTerm):
-            self.assignedTerm = AssignedTerm(**as_dict(self.assignedTerm))
+        if not isinstance(self.valueDisplayList, list):
+            self.valueDisplayList = [self.valueDisplayList] if self.valueDisplayList is not None else []
+        self.valueDisplayList = [v if isinstance(v, str) else str(v) for v in self.valueDisplayList]
 
-        if self.role is not None and not isinstance(self.role, str):
-            self.role = str(self.role)
+        if self.prepopulatedValue is not None and not isinstance(self.prepopulatedValue, str):
+            self.prepopulatedValue = str(self.prepopulatedValue)
 
         if self.relationship is not None and not isinstance(self.relationship, RelationShip):
             self.relationship = RelationShip(**as_dict(self.relationship))
 
-        if self.dataType is not None and not isinstance(self.dataType, SDTMVariableDataType):
-            self.dataType = SDTMVariableDataType(self.dataType)
+        if self.dataType is not None and not isinstance(self.dataType, CDASHVariableDataType):
+            self.dataType = CDASHVariableDataType(self.dataType)
 
         if self.length is not None and not isinstance(self.length, int):
             self.length = int(self.length)
 
-        if self.format is not None and not isinstance(self.format, str):
-            self.format = str(self.format)
-
         if self.significantDigits is not None and not isinstance(self.significantDigits, int):
             self.significantDigits = int(self.significantDigits)
 
-        if self.mandatoryVariable is not None and not isinstance(self.mandatoryVariable, Bool):
-            self.mandatoryVariable = Bool(self.mandatoryVariable)
-
-        if self.mandatoryValue is not None and not isinstance(self.mandatoryValue, Bool):
-            self.mandatoryValue = Bool(self.mandatoryValue)
-
-        if self.originType is not None and not isinstance(self.originType, OriginType):
-            self.originType = OriginType(self.originType)
-
-        if self.originSource is not None and not isinstance(self.originSource, OriginSource):
-            self.originSource = OriginSource(self.originSource)
-
-        if self.comparator is not None and not isinstance(self.comparator, Comparator):
-            self.comparator = Comparator(self.comparator)
-
-        if self.vlmTarget is not None and not isinstance(self.vlmTarget, Bool):
-            self.vlmTarget = Bool(self.vlmTarget)
+        if self.sdtmTarget is not None and not isinstance(self.sdtmTarget, SDTMTarget):
+            self.sdtmTarget = SDTMTarget(**as_dict(self.sdtmTarget))
 
         super().__post_init__(**kwargs)
 
@@ -245,6 +230,38 @@ class RelationShip(YAMLRoot):
             self.MissingRequiredField("object")
         if not isinstance(self.object, str):
             self.object = str(self.object)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class SDTMTarget(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMTarget")
+    class_class_curie: ClassVar[str] = None
+    class_name: ClassVar[str] = "SDTMTarget"
+    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMTarget")
+
+    sdtmTargetVariable: str = None
+    sdtmTargetMapping: str = None
+    sdtmTargetGroup: str = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.sdtmTargetVariable):
+            self.MissingRequiredField("sdtmTargetVariable")
+        if not isinstance(self.sdtmTargetVariable, str):
+            self.sdtmTargetVariable = str(self.sdtmTargetVariable)
+
+        if self._is_empty(self.sdtmTargetMapping):
+            self.MissingRequiredField("sdtmTargetMapping")
+        if not isinstance(self.sdtmTargetMapping, str):
+            self.sdtmTargetMapping = str(self.sdtmTargetMapping)
+
+        if self._is_empty(self.sdtmTargetGroup):
+            self.MissingRequiredField("sdtmTargetGroup")
+        if not isinstance(self.sdtmTargetGroup, str):
+            self.sdtmTargetGroup = str(self.sdtmTargetGroup)
 
         super().__post_init__(**kwargs)
 
@@ -344,47 +361,47 @@ class SubsetCodeList(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
-class AssignedTerm(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/AssignedTerm")
-    class_class_curie: ClassVar[str] = None
-    class_name: ClassVar[str] = "AssignedTerm"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/AssignedTerm")
-
-    value: str = None
-    conceptId: Optional[str] = None
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.value):
-            self.MissingRequiredField("value")
-        if not isinstance(self.value, str):
-            self.value = str(self.value)
-
-        if self.conceptId is not None and not isinstance(self.conceptId, str):
-            self.conceptId = str(self.conceptId)
-
-        super().__post_init__(**kwargs)
-
-
 # Enumerations
-class SDTMDatasetSpecializationPackageType(EnumDefinitionImpl):
+class CDASHDatasetSpecializationPackageType(EnumDefinitionImpl):
 
-    sdtm = PermissibleValue(text="sdtm")
+    cdash = PermissibleValue(text="cdash")
 
     _defn = EnumDefinition(
-        name="SDTMDatasetSpecializationPackageType",
+        name="CDASHDatasetSpecializationPackageType",
     )
 
-class SDTMVariableDataType(EnumDefinitionImpl):
+class CDASHScenario(EnumDefinitionImpl):
 
+    Horizontal = PermissibleValue(text="Horizontal")
+    Vertical = PermissibleValue(text="Vertical")
+
+    _defn = EnumDefinition(
+        name="CDASHScenario",
+    )
+
+class CDASHIGCore(EnumDefinitionImpl):
+
+    HR = PermissibleValue(text="HR")
+    O = PermissibleValue(text="O")
+
+    _defn = EnumDefinition(
+        name="CDASHIGCore",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "R/C",
+                PermissibleValue(text="R/C") )
+
+class CDASHVariableDataType(EnumDefinitionImpl):
+
+    boolean = PermissibleValue(text="boolean")
     float = PermissibleValue(text="float")
     integer = PermissibleValue(text="integer")
     text = PermissibleValue(text="text")
 
     _defn = EnumDefinition(
-        name="SDTMVariableDataType",
+        name="CDASHVariableDataType",
     )
 
 class LinkingPhrase(EnumDefinitionImpl):
@@ -488,7 +505,7 @@ slots.packageDate = Slot(uri=DEFAULT_.packageDate, name="packageDate", curie=DEF
                    model_uri=DEFAULT_.packageDate, domain=None, range=Union[str, XSDDate])
 
 slots.packageType = Slot(uri=DEFAULT_.packageType, name="packageType", curie=DEFAULT_.curie('packageType'),
-                   model_uri=DEFAULT_.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageType"])
+                   model_uri=DEFAULT_.packageType, domain=None, range=Union[str, "CDASHDatasetSpecializationPackageType"])
 
 slots.domain = Slot(uri=DEFAULT_.domain, name="domain", curie=DEFAULT_.curie('domain'),
                    model_uri=DEFAULT_.domain, domain=None, range=str)
@@ -496,23 +513,23 @@ slots.domain = Slot(uri=DEFAULT_.domain, name="domain", curie=DEFAULT_.curie('do
 slots.datasetSpecializationId = Slot(uri=DEFAULT_.datasetSpecializationId, name="datasetSpecializationId", curie=DEFAULT_.curie('datasetSpecializationId'),
                    model_uri=DEFAULT_.datasetSpecializationId, domain=None, range=URIRef)
 
-slots.source = Slot(uri=DEFAULT_.source, name="source", curie=DEFAULT_.curie('source'),
-                   model_uri=DEFAULT_.source, domain=None, range=str)
-
 slots.shortName = Slot(uri=DEFAULT_.shortName, name="shortName", curie=DEFAULT_.curie('shortName'),
                    model_uri=DEFAULT_.shortName, domain=None, range=str)
 
-slots.sdtmigStartVersion = Slot(uri=DEFAULT_.sdtmigStartVersion, name="sdtmigStartVersion", curie=DEFAULT_.curie('sdtmigStartVersion'),
-                   model_uri=DEFAULT_.sdtmigStartVersion, domain=None, range=str)
+slots.scenario = Slot(uri=DEFAULT_.scenario, name="scenario", curie=DEFAULT_.curie('scenario'),
+                   model_uri=DEFAULT_.scenario, domain=None, range=Optional[Union[str, "CDASHScenario"]])
 
-slots.sdtmigEndVersion = Slot(uri=DEFAULT_.sdtmigEndVersion, name="sdtmigEndVersion", curie=DEFAULT_.curie('sdtmigEndVersion'),
-                   model_uri=DEFAULT_.sdtmigEndVersion, domain=None, range=Optional[str])
+slots.cdashigStartVersion = Slot(uri=DEFAULT_.cdashigStartVersion, name="cdashigStartVersion", curie=DEFAULT_.curie('cdashigStartVersion'),
+                   model_uri=DEFAULT_.cdashigStartVersion, domain=None, range=str)
+
+slots.cdashigEndVersion = Slot(uri=DEFAULT_.cdashigEndVersion, name="cdashigEndVersion", curie=DEFAULT_.curie('cdashigEndVersion'),
+                   model_uri=DEFAULT_.cdashigEndVersion, domain=None, range=Optional[str])
 
 slots.biomedicalConceptId = Slot(uri=DEFAULT_.biomedicalConceptId, name="biomedicalConceptId", curie=DEFAULT_.curie('biomedicalConceptId'),
                    model_uri=DEFAULT_.biomedicalConceptId, domain=None, range=Optional[str])
 
 slots.variables = Slot(uri=DEFAULT_.variables, name="variables", curie=DEFAULT_.curie('variables'),
-                   model_uri=DEFAULT_.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
+                   model_uri=DEFAULT_.variables, domain=None, range=Optional[Union[Dict[Union[str, CDASHVariableName], Union[dict, CDASHVariable]], List[Union[dict, CDASHVariable]]]])
 
 slots.name = Slot(uri=DEFAULT_.name, name="name", curie=DEFAULT_.curie('name'),
                    model_uri=DEFAULT_.name, domain=None, range=URIRef)
@@ -520,14 +537,20 @@ slots.name = Slot(uri=DEFAULT_.name, name="name", curie=DEFAULT_.curie('name'),
 slots.dataElementConceptId = Slot(uri=DEFAULT_.dataElementConceptId, name="dataElementConceptId", curie=DEFAULT_.curie('dataElementConceptId'),
                    model_uri=DEFAULT_.dataElementConceptId, domain=None, range=Optional[str])
 
-slots.isNonStandard = Slot(uri=DEFAULT_.isNonStandard, name="isNonStandard", curie=DEFAULT_.curie('isNonStandard'),
-                   model_uri=DEFAULT_.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
+slots.questionText = Slot(uri=DEFAULT_.questionText, name="questionText", curie=DEFAULT_.curie('questionText'),
+                   model_uri=DEFAULT_.questionText, domain=None, range=Optional[str])
+
+slots.prompt = Slot(uri=DEFAULT_.prompt, name="prompt", curie=DEFAULT_.curie('prompt'),
+                   model_uri=DEFAULT_.prompt, domain=None, range=Optional[str])
 
 slots.codelist = Slot(uri=DEFAULT_.codelist, name="codelist", curie=DEFAULT_.curie('codelist'),
                    model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
 slots.subsetCodelist = Slot(uri=DEFAULT_.subsetCodelist, name="subsetCodelist", curie=DEFAULT_.curie('subsetCodelist'),
                    model_uri=DEFAULT_.subsetCodelist, domain=None, range=Optional[str])
+
+slots.prepopulatedValue = Slot(uri=DEFAULT_.prepopulatedValue, name="prepopulatedValue", curie=DEFAULT_.curie('prepopulatedValue'),
+                   model_uri=DEFAULT_.prepopulatedValue, domain=None, range=Optional[str])
 
 slots.conceptId = Slot(uri=DEFAULT_.conceptId, name="conceptId", curie=DEFAULT_.curie('conceptId'),
                    model_uri=DEFAULT_.conceptId, domain=None, range=URIRef)
@@ -559,11 +582,20 @@ slots.termValue = Slot(uri=DEFAULT_.termValue, name="termValue", curie=DEFAULT_.
 slots.valueList = Slot(uri=DEFAULT_.valueList, name="valueList", curie=DEFAULT_.curie('valueList'),
                    model_uri=DEFAULT_.valueList, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.assignedTerm = Slot(uri=DEFAULT_.assignedTerm, name="assignedTerm", curie=DEFAULT_.curie('assignedTerm'),
-                   model_uri=DEFAULT_.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
+slots.valueDisplayList = Slot(uri=DEFAULT_.valueDisplayList, name="valueDisplayList", curie=DEFAULT_.curie('valueDisplayList'),
+                   model_uri=DEFAULT_.valueDisplayList, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.role = Slot(uri=DEFAULT_.role, name="role", curie=DEFAULT_.curie('role'),
-                   model_uri=DEFAULT_.role, domain=None, range=Optional[str])
+slots.sdtmTarget = Slot(uri=DEFAULT_.sdtmTarget, name="sdtmTarget", curie=DEFAULT_.curie('sdtmTarget'),
+                   model_uri=DEFAULT_.sdtmTarget, domain=None, range=Optional[Union[dict, SDTMTarget]])
+
+slots.sdtmTargetVariable = Slot(uri=DEFAULT_.sdtmTargetVariable, name="sdtmTargetVariable", curie=DEFAULT_.curie('sdtmTargetVariable'),
+                   model_uri=DEFAULT_.sdtmTargetVariable, domain=None, range=str)
+
+slots.sdtmTargetMapping = Slot(uri=DEFAULT_.sdtmTargetMapping, name="sdtmTargetMapping", curie=DEFAULT_.curie('sdtmTargetMapping'),
+                   model_uri=DEFAULT_.sdtmTargetMapping, domain=None, range=str)
+
+slots.sdtmTargetGroup = Slot(uri=DEFAULT_.sdtmTargetGroup, name="sdtmTargetGroup", curie=DEFAULT_.curie('sdtmTargetGroup'),
+                   model_uri=DEFAULT_.sdtmTargetGroup, domain=None, range=str)
 
 slots.relationship = Slot(uri=DEFAULT_.relationship, name="relationship", curie=DEFAULT_.curie('relationship'),
                    model_uri=DEFAULT_.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
@@ -581,37 +613,13 @@ slots.object = Slot(uri=DEFAULT_.object, name="object", curie=DEFAULT_.curie('ob
                    model_uri=DEFAULT_.object, domain=None, range=str)
 
 slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
-                   model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataType"]])
+                   model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "CDASHVariableDataType"]])
 
 slots.length = Slot(uri=DEFAULT_.length, name="length", curie=DEFAULT_.curie('length'),
                    model_uri=DEFAULT_.length, domain=None, range=Optional[int])
 
-slots.format = Slot(uri=DEFAULT_.format, name="format", curie=DEFAULT_.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
-
 slots.significantDigits = Slot(uri=DEFAULT_.significantDigits, name="significantDigits", curie=DEFAULT_.curie('significantDigits'),
                    model_uri=DEFAULT_.significantDigits, domain=None, range=Optional[int])
 
-slots.mandatoryVariable = Slot(uri=DEFAULT_.mandatoryVariable, name="mandatoryVariable", curie=DEFAULT_.curie('mandatoryVariable'),
-                   model_uri=DEFAULT_.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.mandatoryValue = Slot(uri=DEFAULT_.mandatoryValue, name="mandatoryValue", curie=DEFAULT_.curie('mandatoryValue'),
-                   model_uri=DEFAULT_.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.originType = Slot(uri=DEFAULT_.originType, name="originType", curie=DEFAULT_.curie('originType'),
-                   model_uri=DEFAULT_.originType, domain=None, range=Optional[Union[str, "OriginType"]])
-
-slots.originSource = Slot(uri=DEFAULT_.originSource, name="originSource", curie=DEFAULT_.curie('originSource'),
-                   model_uri=DEFAULT_.originSource, domain=None, range=Optional[Union[str, "OriginSource"]])
-
-slots.comparator = Slot(uri=DEFAULT_.comparator, name="comparator", curie=DEFAULT_.curie('comparator'),
-                   model_uri=DEFAULT_.comparator, domain=None, range=Optional[Union[str, "Comparator"]])
-
-slots.vlmTarget = Slot(uri=DEFAULT_.vlmTarget, name="vlmTarget", curie=DEFAULT_.curie('vlmTarget'),
-                   model_uri=DEFAULT_.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.assignedTerm__conceptId = Slot(uri=DEFAULT_.conceptId, name="assignedTerm__conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.assignedTerm__conceptId, domain=None, range=Optional[str])
-
-slots.assignedTerm__value = Slot(uri=DEFAULT_.value, name="assignedTerm__value", curie=DEFAULT_.curie('value'),
-                   model_uri=DEFAULT_.assignedTerm__value, domain=None, range=str)
+slots.cdashigCore = Slot(uri=DEFAULT_.cdashigCore, name="cdashigCore", curie=DEFAULT_.curie('cdashigCore'),
+                   model_uri=DEFAULT_.cdashigCore, domain=None, range=Union[str, "CDASHIGCore"])

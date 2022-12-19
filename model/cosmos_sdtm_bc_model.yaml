@@ -89,7 +89,7 @@ slots:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
   packageType:
-    range: SdtmDatasetSpecializationPackageType
+    range: SDTMDatasetSpecializationPackageType
     description: Package type (sdtm for SDTM Dataset Specializations)
     required: true
   domain:
@@ -236,7 +236,7 @@ slots:
 
 enums:
 
-  SdtmDatasetSpecializationPackageType:
+  SDTMDatasetSpecializationPackageType:
     permissible_values:
       sdtm:
 

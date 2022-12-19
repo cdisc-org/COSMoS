@@ -18,6 +18,7 @@ classes:
       - packageType
       - domain
       - shortName
+      - scenario
       - datasetSpecializationId
       - cdashigStartVersion
       - cdashigEndVersion
@@ -34,11 +35,12 @@ classes:
       - subsetCodelist
       - valueList
       - valueDisplayList
-      - assignedValue
+      - prepopulatedValue
       - relationship
       - dataType
       - length
       - significantDigits
+      - cdashigCore
       - sdtmTarget
 
   RelationShip:
@@ -48,7 +50,7 @@ classes:
       - predicateTerm
       - object
 
-  SdtmTarget:
+  SDTMTarget:
     slots:
       - sdtmTargetVariable
       - sdtmTargetMapping
@@ -79,7 +81,7 @@ slots:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
   packageType:
-    range: CdashDatasetSpecializationPackageType
+    range: CDASHDatasetSpecializationPackageType
     description: Package type (cdash for CDASH Dataset Specializations)
     required: true
   domain:
@@ -94,6 +96,9 @@ slots:
     required: true
     range: string
     description: CDASH group short name which provides a user friendly and intuitive name for the cdash_group_id
+  scenario:
+    range: CDASHScenario
+    description: CDASH collection scenario which serves to differentiate the way the data is being collected, e.g., horizontal vs. vertical structure
   cdashigStartVersion:
     required: true
     description: The earliest CDASHIG version applicable to the BC dataset specialization
@@ -132,7 +137,7 @@ slots:
   subsetCodelist:
     description: Subset codelist short name
 
-  assignedValue:
+  prepopulatedValue:
     range: string
     description: Pre-populated value on a CRF
 
@@ -179,7 +184,7 @@ slots:
     description: A set of valid user-friendly CDISC submission values for a CDASH variable
 
   sdtmTarget:
-    range: SdtmTarget
+    range: SDTMTarget
   sdtmTargetVariable:
     required: true
     description: SDTM target variable for CDASH variable
@@ -218,12 +223,27 @@ slots:
   significantDigits:
     range: integer
     description: Variable significant_digits
+  cdashigCore:
+    required: true
+    range: CDASHIGCore
+    description: Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'
 
 enums:
 
-  CdashDatasetSpecializationPackageType:
+  CDASHDatasetSpecializationPackageType:
     permissible_values:
       cdash:
+
+  CDASHScenario:
+    permissible_values:
+      Horizontal:
+      Vertical:
+
+  CDASHIGCore:
+    permissible_values:
+      HR:
+      R/C:
+      O:
 
   CDASHVariableDataType:
     permissible_values:
