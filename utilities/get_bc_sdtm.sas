@@ -129,8 +129,8 @@
 
 /*******************************************************************************/
 
-%let root=C:\_github\cdisc-org\COSMoS;
-options sasautos = ("&root/utilities", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
+%let root=C:/_github/cdisc-org/COSMoS;
+options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=256;
 %let _debug=0;
 
