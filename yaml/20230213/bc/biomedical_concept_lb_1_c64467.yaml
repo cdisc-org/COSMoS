@@ -1,0 +1,37 @@
+packageDate: "2023-02-13"
+packageType: bc
+conceptId: C64467
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64467
+parentConceptId: C74954
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Liver Function Tests
+shortName: Aspartate Aminotransferase Measurement
+synonym:
+  - AST
+  - SGOT
+resultScale: Quantitative
+definition: "A quantitative measurement of aspartate aminotransferase present in a sample."
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C67365
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67365
+    shortName: Unit of Catalytic Activity Concentration
+    dataType: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"

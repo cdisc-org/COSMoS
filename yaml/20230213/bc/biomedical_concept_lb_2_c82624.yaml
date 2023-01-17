@@ -1,0 +1,13 @@
+packageDate: "2023-02-13"
+packageType: bc
+conceptId: C82624
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82624
+parentConceptId: C49237
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Gas Measurements
+shortName: Gas Measurement
+synonym:
+  - Gas
+definition: "A quantitative measurement of the amount of an electrolyte present in a sample."
