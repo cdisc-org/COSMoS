@@ -151,7 +151,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: Aug-20
+      value: 1920-8
     role: Qualifier
     relationship:
       subject: LBLOINC
