@@ -10,7 +10,7 @@ options ls=max;
 %ReadExcel(file=&excel_file, range=SDTM VS BC$, dsout=sdtm3);
 %ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm4);
 
-%let excel_file=&root/curation/BC_Package_2023_02_13_draft2.xlsx;
+%let excel_file=&root/curation/BC_Package_2023_02_13.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc1);
 %ReadExcel(file=&excel_file, range=%str(BC LB (TIG Biomarkers))$, dsout=bc2);
 %ReadExcel(file=&excel_file, range=%str(SDTM LB)$, dsout=sdtm1);

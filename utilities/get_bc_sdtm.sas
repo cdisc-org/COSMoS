@@ -24,7 +24,7 @@ run;
 */
 
 %let package=20230213;
-%let Excelfile=&root/curation/BC_Package_2023_02_13_draft2.xlsx;
+%let Excelfile=&root/curation/BC_Package_2023_02_13.xlsx;
 %let TargetFolder=&root/yaml/&package/sdtm;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelists$, dsout=subsets);
