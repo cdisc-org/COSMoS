@@ -9,7 +9,7 @@ category:
   - Hemaglobin Measurements
 shortName: Carboxyhemoglobin to Total Hemoglobin Ratio Measurement
 resultScale: Quantitative
-definition: " The determination of the ratio of carboxyhemoglobin compared to total hemoglobin present in a sample. The measurement may be expressed as a ratio or percentage."
+definition: "The determination of the ratio of carboxyhemoglobin compared to total hemoglobin present in a sample. The measurement may be expressed as a ratio or percentage."
 coding:
   - code: 20563-3
     system: http://loinc.org/
