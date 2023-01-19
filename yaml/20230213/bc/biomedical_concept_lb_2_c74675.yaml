@@ -1,0 +1,10 @@
+packageDate: "2023-02-13"
+packageType: bc
+conceptId: C74675
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74675
+parentConceptId: C49237
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Drug Class Measurement
+definition: "The determination of the levels of all members of a specific drug class present in a sample."

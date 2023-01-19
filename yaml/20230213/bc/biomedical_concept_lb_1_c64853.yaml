@@ -1,0 +1,37 @@
+packageDate: "2023-02-13"
+packageType: bc
+conceptId: C64853
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64853
+parentConceptId: C74946
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Electrolyte Measurements
+shortName: Potassium Measurement
+synonym:
+  - Potassium
+  - K
+resultScale: Quantitative
+definition: "A quantitative measurement of the amount of potassium present in a sample."
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C64567
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64567
+    shortName: Molarity Unit
+    dataType: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"

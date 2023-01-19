@@ -1,0 +1,38 @@
+packageDate: "2023-02-13"
+packageType: bc
+conceptId: C64823
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64823
+parentConceptId: C51948
+category:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - White Blood Cell Counts
+shortName: Monocyte Count
+synonym:
+  - Monocytes
+resultScale: Quantitative
+definition: "The determination of the number of monocytes in a blood sample."
+coding:
+  - code: 26484-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C67391
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
