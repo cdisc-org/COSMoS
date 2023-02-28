@@ -127,22 +127,19 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}/dataelementconcepts:
+  /mdr/bc/biomedicalconcepts/categories:
     get:
-      operationId: api.products.bc.get_package_biomedicalconcept_dataelementconcepts
-      description: Get Biomedical Concept Data Element Concept List
+      operationId: api.products.bc.get_biomedicalconcepts_categories
+      description: Get Biomedical Concept Categories List
       tags:
         - Biomedical Concepts (BC)
-      parameters:
-        - $ref: '#/components/parameters/bcPackage'
-        - $ref: '#/components/parameters/bcBiomedicalConcept'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/bcDataElementConcepts'
+                $ref: '#/components/schemas/bcBiomedicalConceptsCategories'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -162,23 +159,55 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}/dataelementconcepts/{dataelementconcept}:
+  /mdr/bc/biomedicalconcepts:
     get:
-      operationId: api.products.bc.get_package_biomedicalconcept_dataelementconcept
-      description: Get Biomedical Concept Data Element Concept
+      operationId: api.products.bc.get_latest_biomedicalconcepts
+      description: Get Biomedical Concept List across Packages
       tags:
         - Biomedical Concepts (BC)
       parameters:
-        - $ref: '#/components/parameters/bcPackage'
-        - $ref: '#/components/parameters/bcBiomedicalConcept'
-        - $ref: '#/components/parameters/bcDataElementConcept'
+        - $ref: '#/components/parameters/bcCategory'
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/bcDataElementConcept'
+                $ref: '#/components/schemas/bcLatestBiomedicalConcepts'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/bc/packages/biomedicalconcepts/{biomedicalconcept}/datasetspecializations:
+    get:
+      operationId: api.products.bc.get_biomedicalconcept_datasetspecializations
+      description: Get Dataset Specialization List that specialize Biomedical Concept
+      tags:
+        - Biomedical Concepts (BC)
+      parameters:
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bcBiomedicalConceptDatasetSpecializations'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -303,76 +332,8 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables:
-    get:
-      operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variables
-      description: Get SDTM Dataset Specialization Variable List
-      tags:
-        - Study Data Tabulation Model Dataset Specializations (SDTM)
-      parameters:
-        - $ref: '#/components/parameters/sdtmPackage'
-        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/sdtmDatasetSpecializationVariables'
-        '400':
-          $ref: '#/components/responses/statusBadRequest'
-        '401':
-          $ref: '#/components/responses/statusUnauthorized'
-        '403':
-          $ref: '#/components/responses/statusForbidden'
-        '404':
-          $ref: '#/components/responses/statusNotFound'
-        '405':
-          $ref: '#/components/responses/statusNotAllowed'
-        '406':
-          $ref: '#/components/responses/statusNotAcceptable'
-        '500':
-          $ref: '#/components/responses/statusInternalError'
-        '503':
-          $ref: '#/components/responses/statusServiceUnavailable'
-        '504':
-          $ref: '#/components/responses/statusGatewayTimeout'
+################################################################################
 
-  /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}/variables/{variable}:
-    get:
-      operationId: api.products.specializations.sdtm.get_package_datasetspecialization_variable
-      description: Get SDTM Dataset Specialization Variable
-      tags:
-        - Study Data Tabulation Model Dataset Specializations (SDTM)
-      parameters:
-        - $ref: '#/components/parameters/sdtmPackage'
-        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
-        - $ref: '#/components/parameters/sdtmDatasetSpecializationVariable'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/sdtmDatasetSpecializationVariable'
-        '400':
-          $ref: '#/components/responses/statusBadRequest'
-        '401':
-          $ref: '#/components/responses/statusUnauthorized'
-        '403':
-          $ref: '#/components/responses/statusForbidden'
-        '404':
-          $ref: '#/components/responses/statusNotFound'
-        '405':
-          $ref: '#/components/responses/statusNotAllowed'
-        '406':
-          $ref: '#/components/responses/statusNotAcceptable'
-        '500':
-          $ref: '#/components/responses/statusInternalError'
-        '503':
-          $ref: '#/components/responses/statusServiceUnavailable'
-        '504':
-          $ref: '#/components/responses/statusGatewayTimeout'
 components:
 
   securitySchemes:
@@ -409,6 +370,13 @@ components:
       schema:
         type: string
         example: C73688
+    bcCategory:
+      in: query
+      name: category
+      description: Biomedical Concept Category
+      schema:
+        type: string
+        example: Vital Signs
 
 # SDTM Dataset Specialization Parameters
 
@@ -741,140 +709,6 @@ components:
         - conceptId
         - shortName
 
-# Data Element Concepts
-    bcDataElementConcepts:
-      type: object
-      properties:
-        conceptId:
-          type: string
-          example: C49676
-        href:
-          type: string
-          format: uri
-          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
-        category:
-          type: array
-          items:
-            type: string
-          example:
-            - Vital Signs
-        shortName:
-          type: string
-          example: Pulse Rate
-        synonym:
-          type: array
-          items:
-            type: string
-          example:
-            - Pulse
-        resultScale:
-          type: string
-          enum:
-            - Quantitative
-            - Ordinal
-            - Nominal
-            - Narrative
-          example: Quantitative
-        definition:
-          type: string
-          example: >-
-            The rate of the pulse as observed in an artery, expressed as beats per
-            minute. It can be measured at several anatomic sites, including the wrist,
-            neck, temple, groin, behind the knees, or on top of the foot.
-        coding:
-          type: array
-          items:
-            $ref: '#/components/schemas/bcBiomedicalConceptCoding'
-        _links:
-          $ref: '#/components/schemas/bcDataElementConceptsLinks'
-      required:
-        - conceptId
-        - category
-        - shortName
-        - definition
-
-    bcDataElementConceptsLinks:
-      type: object
-      properties:
-        self:
-          $ref: '#/components/schemas/bcDataElementConceptsRef'
-        parentBiomedicalConcept:
-          $ref: '#/components/schemas/bcBiomedicalConceptParentRef'
-        parentPackage:
-          $ref: '#/components/schemas/bcPackageRef'
-        dataElementConcepts:
-          type: array
-          items:
-            $ref: '#/components/schemas/bcDataElementConceptRef'
-
-    bcDataElementConceptsRef:
-      type: object
-      description: Data Element Concept Reference
-      properties:
-        href:
-          type: string
-          example: /mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676/dataelementconcepts
-        title:
-          type: string
-          example: Pulse Rate Data Element Concept List
-        type:
-          type: string
-          example: Data Element Concept List
-
-    bcDataElementConceptRef:
-      type: object
-      description: Data Element Concept Reference
-      properties:
-        href:
-          type: string
-          example: /mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676/dataelementconcepts/C123975
-        title:
-          type: string
-          example: Vital Signs Laterality (Pulse Rate)
-        type:
-          type: string
-          example: Data Element Concept
-
-# Data Element Concept
-    bcDataElementConcept:
-      type: object
-      properties:
-        conceptId:
-          type: string
-          example: C123975
-        href:
-          type: string
-          format: uri
-          example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
-        shortName:
-          type: string
-          example: Vital Signs Laterality
-        dataType:
-          type: string
-          example: string
-        exampleSet:
-          type: array
-          items:
-            type: string
-          example:
-            - Left
-            - Right
-        _links:
-          $ref: '#/components/schemas/bcDataElementConceptLinks'
-      required:
-        - conceptId
-        - shortName
-
-    bcDataElementConceptLinks:
-      type: object
-      properties:
-        _self:
-          $ref: '#/components/schemas/bcDataElementConceptRef'
-        biomedicalConcept:
-          $ref: '#/components/schemas/bcBiomedicalConceptRef'
-        parentPackage:
-          $ref: '#/components/schemas/bcPackageRef'
-
 ################################################################################
 
 # SDTM Dataset Specialization Packages
@@ -1148,153 +982,3 @@ components:
         - conceptId
         - submissionValue
 
-# SDTM Dataset Specialization Variables
-    sdtmDatasetSpecializationVariables:
-      type: object
-      properties:
-        datasetSpecializationId:
-          type: string
-          example: SYSBP
-        domain:
-          type: string
-          example: VS
-        shortName:
-          type: string
-          example: Systolic Blood Pressure
-        source:
-          type: string
-          example: VS.VSTESTCD
-        sdtmigStartVersion:
-          type: string
-          example: '3-2'
-        sdtmigEndVersion:
-          type: string
-          example: '3-4'
-        _links:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationVariablesLinks'
-      required:
-        - datasetSpecializationId
-        - domain
-        - shortName
-        - source
-        - sdtmStartVersion
-
-    sdtmDatasetSpecializationVariablesLinks:
-      type: object
-      properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationVariablesRef'
-        parentDatasetSpecialization:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
-        parentBiomedicalConcept:
-          $ref: '#/components/schemas/sdtmBiomedicalConceptRef'
-        parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRef'
-        variables:
-          type: array
-          items:
-            $ref: '#/components/schemas/sdtmDatasetSpecializationVariableRef'
-
-    sdtmDatasetSpecializationVariablesRef:
-      description: SDTM Dataset Specialization Variables Reference
-      type: object
-      properties:
-        href:
-          type: string
-          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP/variables
-        title:
-          type: string
-          example: Systolic Blood Pressure Variables
-        type:
-          type: string
-          example: SDTM Dataset Specialization Variables
-
-    sdtmDatasetSpecializationVariableRef:
-      type: object
-      description: Data Element Concept Reference
-      properties:
-        href:
-          type: string
-          example: /mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP/variables/VSSTRESU
-        title:
-          type: string
-          example: VSSTRESU (SYSPB)
-        type:
-          type: string
-          example: SDTM Dataset Specialization Variable
-
-# SDTM Dataset Specialization Variable
-    sdtmDatasetSpecializationVariable:
-      type: object
-      properties:
-        name:
-          type: string
-          example: VSSTRESU
-        dataElementConceptId: 
-          type: string
-          example: C49669
-        isNonStandard:
-          type: boolean
-          default: false
-        codelist:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationCodeList'
-        subsetCodelist:
-          type: string
-          example:
-            - XYZ
-        valueList:
-          type: array
-          items:
-            type: string
-          example:
-            - ABC
-            - DEF
-        assignedTerm:
-          $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
-        role: 
-          type: string
-          example: Qualifier
-        dataType:
-          type: string
-          example: string
-        length:
-          type: integer
-          example: 20
-        format:
-          type: string
-        significantDigits:
-          type: integer
-        relationship:
-          $ref: '#/components/schemas/sdtmDatasetpecializationRelationship' 
-        mandatoryVariable: 
-          type: boolean
-          default: false
-        mandatoryValue: 
-          type: boolean
-          default: false
-        originType:
-          type: string
-          example: Assigned
-        originSource:
-          type: string
-          example: Sponsor
-        comparator:
-          type: string
-        vlmTarget: 
-          type: boolean
-          default: false
-          example: true 
-        _links:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationVariableLinks'
-      required:
-        - name
-
-    sdtmDatasetSpecializationVariableLinks:
-      type: object
-      properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationVariableRef'
-        DatasetSpecialization:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
-        parentPackage:
-          $ref: '#/components/schemas/sdtmPackageRef'
