@@ -3,16 +3,20 @@
 This repository contains working files to implement Biomedical Concepts and Dataset Specializations in the CDISC Library:
 
 - **curation**
-  - Spreadsheets that were used for initial loading of BCs and SDTM Specializations.
+  Spreadsheets that were used for loading of BCs and SDTM Specializations.
+
+- **curation/draft**
+  This folder contains draft curation spreadsheets that are still work in progress.
+  The content in these draft spreadsheets is neither validated nor loaded in the CDISC Library.
 
 - **model**
-  - Model files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [linkml](https://linkml.io/linkml/) specification.
+  Model files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [linkml](https://linkml.io/linkml/) specification.
     It also contains several other files auto generated from the model:
-    - cosmos_bc_model.json amd cosmos_sdtm_bc_model.json:
+  - cosmos_bc_model.json amd cosmos_sdtm_bc_model.json:
     JSON schema files describing the machine-readable YAML files
-    - cosmos_bc_model.svg, cosmos_bc_model.yuml, cosmos_sdtm_bc_model.svg, cosmos_sdtm_bc_model.yuml:
+  - cosmos_bc_model.svg, cosmos_bc_model.yuml, cosmos_sdtm_bc_model.svg, cosmos_sdtm_bc_model.yuml:
     Entity diagrams
-    - cosmos_bc_model.py, cosmos_sdtm_bc_model.py:
+  - cosmos_bc_model.py, cosmos_sdtm_bc_model.py:
     Python models
 
 - **openapi**

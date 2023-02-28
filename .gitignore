@@ -1,0 +1,12 @@
+.vscode/
+.hypothesis/
+__pycache__/
+test/
+venv/
+work/
+~$*.*
+*.log
+*.lst
+get_*.html
+validate_*.html
+*.code-workspace
