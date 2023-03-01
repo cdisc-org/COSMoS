@@ -193,7 +193,41 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/packages/biomedicalconcepts/{biomedicalconcept}/datasetspecializations:
+  /mdr/bc/biomedicalconcepts/{biomedicalconcept}:
+    get:
+      operationId: api.products.bc.get_biomedicalconcept
+      description: Get Biomedical Latest Concept
+      tags:
+        - Biomedical Concepts (BC)
+      parameters:
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bcLatestBiomedicalConcept'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/bc/biomedicalconcepts/{biomedicalconcept}/datasetspecializations:
     get:
       operationId: api.products.bc.get_biomedicalconcept_datasetspecializations
       description: Get Dataset Specialization List that specialize Biomedical Concept
