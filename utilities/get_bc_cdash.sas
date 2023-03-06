@@ -4,7 +4,7 @@ options ls=256;
 %let _debug=0;
 
 %let package=20230131;
-%let Excelfile=&root/curation/Draft_BC_Package_R2_20Dec22.xlsx;
+%let Excelfile=&root/curation/draft/CDASH_draft.xlsx;
 %let TargetFolder=&root/yaml/&package/cdash;
 
 proc format;
