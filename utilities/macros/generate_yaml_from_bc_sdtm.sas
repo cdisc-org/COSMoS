@@ -35,13 +35,13 @@
   %end;
 
   data _null_;
-    length outname $100 qpackage_date qsdtmig_start_version qsdtmig_end_version qformat $20 linking_phrase_low $512 value qvalue $100 value_list qvalue_list $4096;
+    length prev_vlm_group_id $32 outname $100 qpackage_date qsdtmig_start_version qsdtmig_end_version qformat $20 linking_phrase_low $512 value qvalue $100 value_list $4096;
+    retain prev_vlm_group_id "" count 0;
     set work.bc_sdtm_&type._&package._merged;
-    retain count 0;
-    by vlm_group_id notsorted;
     outname=catt("&out_folder\sdtm_bc_specialization_&type._", lowcase(strip(vlm_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
-    if first.vlm_group_id then do;
+    prev_vlm_group_id = lag(vlm_group_id);
+    if not(missing(vlm_group_id)) and (prev_vlm_group_id ne vlm_group_id) then do;
       count=0;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;

@@ -23,12 +23,12 @@
 
   data _null_;
     set work.bc_&type._&package;
-    retain count 0;
-    length outname value qvalue $100 qpackage_date $20 qDefinition $1024;
-    by BC_ID notsorted;
+    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20 qDefinition $1024;
+    retain prev_BC_ID "" count 0;
     outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
-    if first.bc_id and not(missing(bc_id)) then do;
+    prev_BC_ID = lag(BC_ID);
+    if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;
       count=0;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;

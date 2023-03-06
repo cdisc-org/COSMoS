@@ -35,16 +35,17 @@
   %end;
 
   data _null_;
-    length outname $100 qpackage_date qcdashig_start_version qcdashig_end_version $20 linking_phrase_low $512 value $100 value_list $4096;
+    length prev_cdash_group_id $32 prev_scenario $40 outname $100 qpackage_date qcdashig_start_version qcdashig_end_version $20 linking_phrase_low $512 value $100 value_list $4096;
+    retain prev_cdash_group_id prev_scenario "" count 0;
     set work.bc_cdash_&type._&package._merged;
-    retain count 0;
-    by cdash_group_id scenario notsorted;
     if missing(scenario) then
       outname=catt("&out_folder\cdash_bc_specialization_&type._", lowcase(strip(cdash_group_id)), ".yaml");
     else
       outname=catt("&out_folder\cdash_bc_specialization_&type._", lowcase(strip(cdash_group_id)), "_", lowcase(strip(scenario)), ".yaml");
     file dummy filevar=outname dlm=",";
-    if first.scenario then do;
+    prev_cdash_group_id = lag(cdash_group_id);
+    prev_scenario = lag(scenario);
+    if not(missing(cdash_group_id)) and ((prev_cdash_group_id ne cdash_group_id) or (prev_scenario ne scenario)) then do;
       count=0;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;
