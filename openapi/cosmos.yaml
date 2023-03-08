@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: CDISC Conceptual and Operational Standards Metadata (COSMoS)
   description: REST API documentation for COSMoS
-  version: '0.2'
+  version: '0.3'
   contact:
     name: CDISC Library Support
     email: cdisc_library_support@cdisc.org
@@ -129,7 +129,7 @@ paths:
 
   /mdr/bc/biomedicalconcepts/categories:
     get:
-      operationId: api.products.bc.get_biomedicalconcepts_categories
+      operationId: api.products.bc.get_biomedicalconcept_categories
       description: Get Biomedical Concept Categories List
       tags:
         - Biomedical Concepts (BC)
@@ -161,7 +161,7 @@ paths:
 
   /mdr/bc/biomedicalconcepts:
     get:
-      operationId: api.products.bc.get_latest_biomedicalconcepts
+      operationId: api.products.bc.get_biomedicalconcepts
       description: Get Biomedical Concept List across Packages, optionally limited to a category
       tags:
         - Biomedical Concepts (BC)
@@ -332,6 +332,140 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
+  /mdr/specializations/sdtm/domains:
+    get:
+      operationId: api.products.specializations.sdtm.get_datasetspecialization_domains
+      description: Get SDTM Dataset Specialization Domains List
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmDatasetSpecializationDomains'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/datasetspecializations:
+    get:
+      operationId: api.products.specializations.sdtm.get_datasetspecializations
+      description: Get SDTM Dataset Specialization List across Packages, optionally limited to a domain
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmDatasetSpecializationDomain'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmDatasetSpecializationsLatest'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/sdtm/datasetspecialization/{datasetspecialization}:
+    get:
+      operationId: api.products.specializations.sdtm.get_datasetspecialization
+      description: Get SDTM Dataset Specialization (Latest)
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/sdtmDatasetSpecialization'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/sdtmDatasetSpecializationLatest'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
+  /mdr/specializations/{biomedicalconcept}/datasetspecializations:
+    get:
+      operationId: api.products.bc.get_datasetspecializations
+      description: Get SDTM Dataset Specialization that specialize a Biomedical Concept
+      tags:
+        - Study Data Tabulation Model Dataset Specializations (SDTM)
+      parameters:
+        - $ref: '#/components/parameters/bcBiomedicalConcept'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bcBiomedicalConceptDatasetSpecializations'
+        '400':
+          $ref: '#/components/responses/statusBadRequest'
+        '401':
+          $ref: '#/components/responses/statusUnauthorized'
+        '403':
+          $ref: '#/components/responses/statusForbidden'
+        '404':
+          $ref: '#/components/responses/statusNotFound'
+        '405':
+          $ref: '#/components/responses/statusNotAllowed'
+        '406':
+          $ref: '#/components/responses/statusNotAcceptable'
+        '500':
+          $ref: '#/components/responses/statusInternalError'
+        '503':
+          $ref: '#/components/responses/statusServiceUnavailable'
+        '504':
+          $ref: '#/components/responses/statusGatewayTimeout'
+
 ################################################################################
 
 components:
@@ -404,6 +538,13 @@ components:
       schema:
         type: string
         example: VSSTRESU
+    sdtmDatasetSpecializationDomain:
+      in: query
+      name: domain
+      description: SDTM Dataset Specialization Domain
+      schema:
+        type: string
+        example: VS
 
 # Responses
 
@@ -1143,3 +1284,27 @@ components:
         - conceptId
         - submissionValue
 
+# SDTM Dataset Specialization Domains
+    sdtmDatasetSpecializationDomains:
+      type: object
+      properties:
+        domains:
+          type: array
+          items:
+            type: string
+          example:
+            - LB
+            - VS
+            
+# SDTM Dataset Specializations (latest)
+    sdtmDatasetSpecializationsLatest:
+      type: object
+            
+# SDTM Dataset Specialization (latest)
+    sdtmDatasetSpecializationLatest:
+      type: object
+      
+# SDTM Dataset Specialization (Biomedical Concept)
+    bcBiomedicalConceptDatasetSpecializations:
+      type: object
+            
