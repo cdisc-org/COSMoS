@@ -398,7 +398,7 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/specializations/sdtm/datasetspecialization/{datasetspecialization}:
+  /mdr/specializations/sdtm/datasetspecializations/{datasetspecialization}:
     get:
       operationId: api.products.specializations.sdtm.get_datasetspecialization
       description: Get SDTM Dataset Specialization (Latest)
@@ -432,12 +432,16 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/specializations/{biomedicalconcept}/datasetspecializations:
+################################################################################
+
+# Dataset Specialization Paths
+
+  /mdr/specializations/datasetspecializations/{biomedicalconcept}:
     get:
       operationId: api.products.bc.get_datasetspecializations
-      description: Get SDTM Dataset Specialization that specialize a Biomedical Concept
+      description: Get SDTM Dataset Specializations that specialize a Biomedical Concept
       tags:
-        - Study Data Tabulation Model Dataset Specializations (SDTM)
+        - Dataset Specializations
       parameters:
         - $ref: '#/components/parameters/bcBiomedicalConcept'
       responses:
@@ -446,7 +450,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/bcBiomedicalConceptDatasetSpecializations'
+                $ref: '#/components/schemas/datasetSpecializationsBiomedicalConcept'
         '400':
           $ref: '#/components/responses/statusBadRequest'
         '401':
@@ -990,7 +994,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/bc/packages/2022-10-26/biomedicalconcepts/C49672
+          example: /mdr/bc/biomedicalconcepts/C49672
         title:
           type: string
           example: Vital Signs Measurement
@@ -1299,12 +1303,177 @@ components:
 # SDTM Dataset Specializations (latest)
     sdtmDatasetSpecializationsLatest:
       type: object
+      properties:
+        name:
+          type: string
+          example: SDTM Dataset Specializations
+        label:
+          type: string
+          example: SDTM Dataset Specializations
+        domain:
+          type: string
+          example: 'VS'
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsLatestLinks'
+          
+    sdtmDatasetSpecializationsLatestLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsLatestRef'
+        DatasetSpecializations:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
+            
+    sdtmDatasetSpecializationsLatestRef:
+      type: object
+      description: SDTM Dataset Specializations Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/datasetspecializations
+        title:
+          type: string
+          example: SDTM Dataset Specializations (Latest version)
+        type:
+          type: string
+          example: SDTM Dataset Specialization List
+
+    sdtmDatasetSpecializationLatestRef:
+      type: object
+      description: SDTM Dataset Specialization Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/datasetspecializations/SYSBP
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: SDTM Dataset Specialization
             
 # SDTM Dataset Specialization (latest)
     sdtmDatasetSpecializationLatest:
       type: object
-      
-# SDTM Dataset Specialization (Biomedical Concept)
-    bcBiomedicalConceptDatasetSpecializations:
+      properties:
+        datasetSpecializationId:
+          type: string
+          example: SYSBP
+        domain:
+          type: string
+          example: VS
+        shortName:
+          type: string
+          example: Systolic Blood Pressure
+        source:
+          type: string
+          example: VS.VSTESTCD
+        sdtmigStartVersion:
+          type: string
+          example: '3-2'
+        sdtmigEndVersion:
+          type: string
+          example: '3-4'
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationLatestLinks'
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/sdtmDatasetSpecializationVariableElement'
+      required:
+        - datasetSpecializationId
+        - domain
+        - shortName
+        - source
+        - sdtmStartVersion
+
+    sdtmDatasetSpecializationLatestLinks:
       type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/sdtmBiomedicalConceptLatestRef'
+        parentPackage:
+          $ref: '#/components/schemas/sdtmPackageLatestRef'
+
+    sdtmBiomedicalConceptLatestRef:
+      type: object
+      description: Biomedical Concept Parent Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/biomedicalconcepts/C25298
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: Biomedical Concept
+
+    sdtmPackageLatestRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/packages/2023-02-13/datasetspecializations
+        title:
+          type: string
+          example: SDTM Dataset Specialization Package Effective 2023-02-13
+        type:
+          type: string
+          example: SDTM Dataset Specialization Package
+      
+# Dataset Specializations (Biomedical Concept)
+    datasetSpecializationsBiomedicalConcept:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Dataset Specializations
+        label:
+          type: string
+          example: Dataset Specializations
+        _links:
+          $ref: '#/components/schemas/datasetSpecializationsLatestLinks'
+          
+    datasetSpecializationsLatestLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/datasetSpecializationsLatestRef'
+        DatasetSpecializations:
+          type: array
+          items:
+            $ref: '#/components/schemas/datasetSpecializationLatestRef'
+            
+    datasetSpecializationsLatestRef:
+      type: object
+      description: Dataset Specializations Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/datasetspecializations/C25298
+        title:
+          type: string
+          example: Dataset Specializations that specialize a Biomedical Concept
+        type:
+          type: string
+          example: Dataset Specialization List
+
+    datasetSpecializationLatestRef:
+      type: object
+      description: SDTM Dataset Specialization Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/datasetspecializations/SYSBP
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: SDTM Dataset Specialization
             
