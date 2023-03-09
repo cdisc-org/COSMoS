@@ -438,8 +438,8 @@ paths:
 
   /mdr/specializations/datasetspecializations/{biomedicalconcept}:
     get:
-      operationId: api.products.bc.get_datasetspecializations
-      description: Get SDTM Dataset Specializations that specialize a Biomedical Concept
+      operationId: api.products.specializations.get_datasetspecializations_biomedicalconcept
+      description: Get Dataset Specializations that specialize a Biomedical Concept
       tags:
         - Dataset Specializations
       parameters:
@@ -481,9 +481,9 @@ components:
       name: api-key
 
   parameters:
-  
+
 # Biomedical Concept Parameters
-  
+
     bcPackage:
       in: path
       name: package
@@ -691,7 +691,7 @@ components:
           example: '2022-10-26'
         _links:
           $ref: '#/components/schemas/bcBiomedicalConceptsLinks'
-          
+
     bcBiomedicalConceptsLinks:
       type: object
       properties:
@@ -715,7 +715,7 @@ components:
         type:
           type: string
           example: Biomedical Concept List
-          
+
     bcBiomedicalConceptRef:
       type: object
       description: Biomedical Concept Reference
@@ -867,7 +867,7 @@ components:
             - Laboratory Tests
             - Chemistry Tests
             - Gas Measurements
-            
+
 # Biomedical Concepts (latest)
     bcBiomedicalConceptsLatest:
       type: object
@@ -883,7 +883,7 @@ components:
           example: "Vital Signs"
         _links:
           $ref: '#/components/schemas/bcBiomedicalConceptsLatestLinks'
-          
+
     bcBiomedicalConceptsLatestLinks:
       type: object
       properties:
@@ -1023,7 +1023,7 @@ components:
       properties:
         _links:
           $ref: '#/components/schemas/sdtmPackagesLinks'
-          
+
     sdtmPackagesLinks:
       type: object
       properties:
@@ -1033,7 +1033,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/sdtmPackageRef'
-            
+
     sdtmPackagesRef:
       type: object
       properties:
@@ -1046,7 +1046,7 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization Package List
-          
+
     sdtmPackageRef:
       type: object
       properties:
@@ -1078,7 +1078,7 @@ components:
           example: '2022-10-26'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsLinks'
-          
+
     sdtmDatasetSpecializationsLinks:
       type: object
       properties:
@@ -1088,7 +1088,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
-            
+
     sdtmDatasetSpecializationsRef:
       type: object
       description: SDTM Dataset Specializations Reference
@@ -1182,7 +1182,7 @@ components:
         name:
           type: string
           example: VSSTRESU
-        dataElementConceptId: 
+        dataElementConceptId:
           type: string
           example: C49669
         isNonStandard:
@@ -1202,7 +1202,7 @@ components:
             - DEF
         assignedTerm:
           $ref: '#/components/schemas/sdtmDatasetpecializationAssignedTerm'
-        role: 
+        role:
           type: string
           example: Qualifier
         dataType:
@@ -1216,11 +1216,11 @@ components:
         significantDigits:
           type: integer
         relationship:
-          $ref: '#/components/schemas/sdtmDatasetpecializationRelationship' 
-        mandatoryVariable: 
+          $ref: '#/components/schemas/sdtmDatasetpecializationRelationship'
+        mandatoryVariable:
           type: boolean
           default: false
-        mandatoryValue: 
+        mandatoryValue:
           type: boolean
           default: false
         originType:
@@ -1231,26 +1231,26 @@ components:
           example: Sponsor
         comparator:
           type: string
-        vlmTarget: 
+        vlmTarget:
           type: boolean
           default: false
-          example: true 
+          example: true
       required:
         - name
 
     sdtmDatasetpecializationRelationship:
       type: object
       properties:
-        subject: 
+        subject:
           type: string
           example: VSSTRESU
-        linkingPhrase: 
+        linkingPhrase:
           type: string
           example: 'is the unit for the value in'
         predicateTerm:
           type: string
           example: IS_UNIT_FOR
-        object: 
+        object:
           type: string
           example: VSSTRESN
       required:
@@ -1262,28 +1262,28 @@ components:
     sdtmDatasetpecializationAssignedTerm:
       type: object
       properties:
-        conceptId: 
+        conceptId:
           type: string
           example: C49670
-        value: 
+        value:
           type: string
           example: mmHG
       required:
         - value
-        
+
     sdtmDatasetSpecializationCodeList:
       type: object
       properties:
-        conceptId: 
+        conceptId:
           type: string
           example: C66770
-        href: 
+        href:
           type: string
           format: uri
           example: 'https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770'
-        submissionValue: 
+        submissionValue:
           type: string
-          example: VSRESU  
+          example: VSRESU
       required:
         - conceptId
         - submissionValue
@@ -1299,7 +1299,7 @@ components:
           example:
             - LB
             - VS
-            
+
 # SDTM Dataset Specializations (latest)
     sdtmDatasetSpecializationsLatest:
       type: object
@@ -1315,7 +1315,7 @@ components:
           example: 'VS'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationsLatestLinks'
-          
+
     sdtmDatasetSpecializationsLatestLinks:
       type: object
       properties:
@@ -1325,7 +1325,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
-            
+
     sdtmDatasetSpecializationsLatestRef:
       type: object
       description: SDTM Dataset Specializations Reference
@@ -1353,7 +1353,7 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization
-            
+
 # SDTM Dataset Specialization (latest)
     sdtmDatasetSpecializationLatest:
       type: object
@@ -1425,7 +1425,7 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization Package
-      
+
 # Dataset Specializations (Biomedical Concept)
     datasetSpecializationsBiomedicalConcept:
       type: object
@@ -1438,7 +1438,7 @@ components:
           example: Dataset Specializations
         _links:
           $ref: '#/components/schemas/datasetSpecializationsLatestLinks'
-          
+
     datasetSpecializationsLatestLinks:
       type: object
       properties:
@@ -1448,7 +1448,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/datasetSpecializationLatestRef'
-            
+
     datasetSpecializationsLatestRef:
       type: object
       description: Dataset Specializations Reference
@@ -1476,4 +1476,4 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization
-            
+
