@@ -436,14 +436,14 @@ paths:
 
 # Dataset Specialization Paths
 
-  /mdr/specializations/datasetspecializations/{biomedicalconcept}:
+  /mdr/specializations/datasetspecializations:
     get:
       operationId: api.products.specializations.get_datasetspecializations_biomedicalconcept
       description: Get Dataset Specializations that specialize a Biomedical Concept
       tags:
         - Dataset Specializations
       parameters:
-        - $ref: '#/components/parameters/bcBiomedicalConcept'
+        - $ref: '#/components/parameters/bcBiomedicalConceptQuery'
       responses:
         '200':
           description: OK
@@ -549,6 +549,15 @@ components:
       schema:
         type: string
         example: VS
+
+# Dataset Specialization Parameters
+    bcBiomedicalConceptQuery:
+      in: query
+      name: biomedicalconcept
+      description: Biomedical Concept Identifier
+      schema:
+        type: string
+        example: C25298
 
 # Responses
 
@@ -1444,7 +1453,30 @@ components:
       properties:
         self:
           $ref: '#/components/schemas/datasetSpecializationsLatestRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/biomedicalConceptLatestRef'
         DatasetSpecializations:
+          type: object
+          description: Dataset Specializations
+          properties:
+            sdtm:
+              $ref: '#/components/schemas/datasetSpecilatizationTypesRef'
+
+    biomedicalConceptLatestRef:
+      type: object
+      description: Biomedical Concept Parent Reference
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/biomedicalconcepts/C25298
+        title:
+          type: string
+          example: Systolic Blood Pressure
+        type:
+          type: string
+          example: Biomedical Concept
+
+    datasetSpecilatizationTypesRef:
           type: array
           items:
             $ref: '#/components/schemas/datasetSpecializationLatestRef'
@@ -1455,7 +1487,7 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/datasetspecializations/C25298
+          example: /mdr/specializations/datasetspecializations
         title:
           type: string
           example: Dataset Specializations that specialize a Biomedical Concept
