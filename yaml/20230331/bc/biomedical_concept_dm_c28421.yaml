@@ -1,0 +1,21 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C28421
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28421
+category:
+  - Demographic Data
+  - Demographics
+  - Personal Attribute
+shortName: Sex
+resultScale: Nominal
+definition: The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.
+dataElementConcepts:
+  - conceptId: C28421
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28421
+    shortName: Sex
+    dataType: string
+    exampleSet:
+      - "Male"
+      - "Female"
+      - "Unknown"
+      - "Undifferentiated"

@@ -1,0 +1,32 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C16735
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16735
+parentConceptId: C74588
+category:
+  - Subject Disposition
+  - Protocol Milestones
+shortName: Informed Consent
+synonym:
+  - Informed Consent Obtained
+resultScale: Nominal
+definition: Consent by a patient to a surgical or medical procedure or participation in a clinical study after achieving an understanding of the relevant medical facts and the risks involved.
+dataElementConcepts:
+  - conceptId: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C83122
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83122
+    shortName: Disposition Dictionary Derived Term
+    dataType: string
+    exampleSet:
+      - "INFORMED CONSENT OBTAINED"
+  - conceptId: C83245
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83245
+    shortName: Disposition Category
+    dataType: string
+  - conceptId: C83248)
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248)
+    shortName: Disposition Subcategory
+    dataType: string

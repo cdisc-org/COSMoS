@@ -1,0 +1,28 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C69260
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C69260
+category:
+  - Demographic Data
+  - Demographics
+  - Personal Attribute
+  - Age
+shortName: Subject Age
+synonym:
+  - Age
+resultScale: Quantitative
+definition: The age of a person who is the subject in a study.
+dataElementConcepts:
+  - conceptId: C170981
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170981
+    shortName: Numeric Age for Data Tabulation
+    dataType: decimal
+  - conceptId: C50400
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C50400
+    shortName: Age Unit
+    dataType: string
+    exampleSet:
+      - "Years"
+      - "Months"
+      - "Weeks"
+      - "Days"

@@ -4,7 +4,9 @@
 
   data bc_&type._&package;
     set bc_&type._&package(where=(not missing(bc_id)));
+    bc_id = kcompress(bc_id, , 's');
   run;
+
 
   %if &debug %then %do;
 
@@ -21,12 +23,20 @@
 
   %end;
 
+
   data _null_;
     set work.bc_&type._&package;
-    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20 qDefinition $1024;
+    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20;
     retain prev_BC_ID "" count 0;
     outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
+
+    short_Name=translate(short_Name, " ", "00A0"x);
+    short_Name = compress(short_Name, , 'kw');
+    parent_bc_id=kcompress(parent_bc_id, , 's');
+    dec_id=kcompress(dec_id, , 's');
+    definition=tranwrd(definition, '"', '\"');
+
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;
       count=0;
@@ -48,11 +58,13 @@
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
+      else putlog "ERROR: &type - category missing: " BC_ID "- " short_name;
 
+      if missing(short_name) then putlog "ERROR: &type - short_name missing: " BC_ID;
       put "shortName:" +1 short_name;
 
       if not missing(synonym) then do;
-        if index(synonym, ",") > 0 then putlog 'WARNING: ' BC_ID 'Synonym issue: '  synonym;
+        if index(synonym, ",") > 0 then putlog "WARNING: &type - synonym issue: " BC_ID "- " short_name "- " synonym;
         put "synonym:";
         countwords=countw(synonym, ";");
         do i=1 to countwords;
@@ -63,13 +75,12 @@
 
       if not missing(result_scale)
         then put "resultScale:" +1 Result_Scale;
-        else putlog 'WARNING: ' BC_ID short_name 'no resultscale';
+        else putlog "### NOTE: &type - resultscale missing: " BC_ID "- " short_name;
 
       if not missing(definition) then do;
-        qDefinition = quote(strip(definition));
-        put "definition:" +1 qDefinition;
+        put "definition:" +1 Definition;
       end;
-      else putlog 'WARNING: ' BC_ID short_name 'no definition';
+      else putlog "ERROR: &type - definition missing: " BC_ID "- " short_name;
 
       if not missing(system) then do;
         put "coding:";
@@ -94,6 +105,7 @@
       put +4 "shortName:" +1 dec_label;
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;
+        if index(example_set, ",") > 0 then putlog "WARNING: &type - example_set issue: " BC_ID "- " DEC_ID "- " dec_label"- " example_set;
         put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;

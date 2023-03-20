@@ -1,0 +1,9 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C64430
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64430
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Protein or Enzyme Type Measurement
+definition: A term that refers to a chemistry test measuring a specific protein or enzyme in the peripheral blood or body fluid.

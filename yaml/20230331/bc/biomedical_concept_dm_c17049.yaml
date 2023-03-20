@@ -1,0 +1,24 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C17049
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049
+category:
+  - Demographic Data
+  - Demographics
+  - Population Group
+shortName: Race
+synonym:
+  - Racial Group
+resultScale: Nominal
+definition: A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.
+dataElementConcepts:
+  - conceptId: C17049
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049
+    shortName: Race
+    dataType: string
+    exampleSet:
+      - "Asian"
+      - "Black or African American"
+      - "White"
+      - "American Indian or Alaska Native"
+      - "Unknown"

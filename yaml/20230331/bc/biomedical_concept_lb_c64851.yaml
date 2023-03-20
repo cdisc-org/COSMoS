@@ -1,0 +1,32 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C64851
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64851
+parentConceptId: C147128
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hormone Measurements
+  - Choriogonadotropin Measurements
+  - HCG Measurements
+shortName: Choriogonadotropin Beta Measurement
+synonym:
+  - beta-hCG
+  - Choriogonadotropin Beta
+  - Pregnancy Test
+  - HCG
+resultScale: Ordinal
+definition: A determination of the presence of Choriogonadotropin Beta protein.
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
