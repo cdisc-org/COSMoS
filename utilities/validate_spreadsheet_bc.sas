@@ -1,5 +1,5 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-%let _debug=0;
+%let _debug=1;
 
 options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 options ls=max;
@@ -39,6 +39,8 @@ options ls=max;
 
 
 data bc(drop=change_history F1:);
+  retain order package_date bc_id parent_bc_id bc_category short_name 
+         synonym result_scale definition system system_name	code dec_id dec_label data_type example_set;
   length order 8 package_date $64 bc_id parent_bc_id $32 bc_category synonym result_scale definition 
          system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set $1024;
   set 
@@ -58,13 +60,13 @@ run;
 %end;
 
 data sdtm(drop=change_history F3: F4:);
-  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
-         subset_codelist value_list assigned_value linking_phrase predicate_term 
-         short_name format data_type origin_source vlm_target change_history $512;
   retain order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
          sdtm_variable dec_id nsv_flag codelist codelist_submision_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
+  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
+         subset_codelist value_list assigned_value linking_phrase predicate_term 
+         short_name format data_type origin_source vlm_target change_history $512;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
 run;  
