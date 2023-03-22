@@ -1,4 +1,4 @@
-%macro read_bc_from_json(json_path=, jsonlib=, template=, out=);
+%macro read_bc_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0);
 
   filename jsonfile "&json_path";
   filename mapfile "%sysfunc(pathname(work))/bc.map";
@@ -55,16 +55,25 @@
     create table &out
     as select
       %if %sysfunc(exist(&jsonlib.._links_parentpackage)) %then %do;    
-        scan(pp.title, -1, " ") as packageDate length=10,
+        scan(pp.title, -1, " ") as packageDate length=10
       %end;
       %if not %sysfunc(exist(&jsonlib.._links_parentpackage)) %then %do;    
-        root.packageDate length=10,
+        root.packageDate length=10
       %end;
       
-      root.conceptId
+      %if &include_package_dates %then %do;
+        %if %sysfunc(exist(&jsonlib.._links_self)) %then %do;    
+          , scan(self.href, -3, "\/") as ConceptId_PackageDate length=10
+        %end;
+      %end;
+
+      , root.conceptId
 
       %if %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , scan(pbc.href, -1, "\/") as parentConceptId length=64
+        %if &include_package_dates %then %do; 
+          , scan(pbc.href, -3, "\/") as parentConceptId_PackageDate length=10 
+        %end;
       %end;
       %if not %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , root.parentConceptId length=64
@@ -98,6 +107,10 @@
       %end;  
     from
       &jsonlib..root root
+  %if %sysfunc(exist(&jsonlib.._links_self)) %then %do;    
+      left join &jsonlib.._links_self self 
+    on (self.ordinal_self=root.ordinal_root)
+  %end;  
   %if %sysfunc(exist(&jsonlib.._links_parentpackage)) %then %do;    
       left join &jsonlib.._links_parentpackage pp 
     on (pp.ordinal_parentpackage=root.ordinal_root)
