@@ -1,4 +1,4 @@
-%macro read_sdtm_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0), clean=1;
+%macro read_sdtm_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0, clean=1);
 
 
   filename jsonfile "&json_path";
@@ -8,6 +8,14 @@
   proc copy in=jsonfile out=&jsonlib;
   run;
 
+  data work.root;
+    set &template &jsonlib..root;
+  run;  
+  
+  data work.variables;
+    set &template %if %sysfunc(exist(&jsonlib..variables)) %then &jsonlib..variables;;
+  run;  
+  
   %if %sysfunc(exist(&jsonlib..variables_valuelist)) %then %do;    
     data work.variables_valuelist(drop=valueList:);
       set &jsonlib..variables_valuelist;
@@ -91,7 +99,7 @@
         , varrel.object
       %end;
     from
-      &jsonlib..root root
+      work.root root
   %if %sysfunc(exist(&jsonlib.._links_self)) %then %do;    
       left join &jsonlib.._links_self self 
     on (self.ordinal_self=root.ordinal_root)
@@ -105,7 +113,7 @@
     on (pbc.ordinal_parentbiomedicalconcept=root.ordinal_root)
   %end;  
   %if %sysfunc(exist(&jsonlib..variables)) %then %do;    
-      left join &jsonlib..variables var 
+      left join work.variables var 
     on (var.ordinal_root=root.ordinal_root)
   %end;  
   %if %sysfunc(exist(&jsonlib..variables_codelist)) %then %do;    
