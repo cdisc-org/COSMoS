@@ -1,4 +1,4 @@
-%macro read_bc_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0);
+%macro read_bc_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0, clean=1);
 
   filename jsonfile "&json_path";
   filename mapfile "%sysfunc(pathname(work))/bc.map";
@@ -6,6 +6,10 @@
   libname jsonfile json map=mapfile automap=create fileref=jsonfile /* noalldata ordinalcount=none */;
   proc copy in=jsonfile out=&jsonlib;
   run;
+
+  data work.root;
+    set &template &jsonlib..root;
+  run;  
 
   %if %sysfunc(exist(&jsonlib..dataelementconcepts_exampleset)) %then %do;    
     data work.dataelementconcepts_exampleset(drop=exampleSet:);
@@ -106,7 +110,7 @@
         , decex._exampleSets as dec_exampleSet
       %end;  
     from
-      &jsonlib..root root
+      work.root root
   %if %sysfunc(exist(&jsonlib.._links_self)) %then %do;    
       left join &jsonlib.._links_self self 
     on (self.ordinal_self=root.ordinal_root)
@@ -139,7 +143,7 @@
       left join work.dataelementconcepts_exampleset decex 
     on (decex.ordinal_dataelementconcepts=dec.ordinal_dataelementconcepts)
   %end;
-    order by conceptId, dec.ordinal_dataElementConcepts, dec_ConceptId;
+    order by conceptId %if %sysfunc(exist(&jsonlib..dataelementconcepts)) %then, dec.ordinal_dataElementConcepts, dec_ConceptId;;
     ;
   quit;  
 
@@ -149,5 +153,11 @@
   data &out;
     set &template &out;
   run;   
+
+  %if &clean %then %do;
+    proc datasets library=&jsonlib kill nolist;
+    quit;
+    run;
+  %end;  
 
 %mend read_bc_from_json;

@@ -1,4 +1,4 @@
-%macro read_sdtm_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0);
+%macro read_sdtm_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0), clean=1;
 
 
   filename jsonfile "&json_path";
@@ -135,5 +135,11 @@
   data &out;
     set &template &out;
   run;   
+
+  %if &clean %then %do;
+    proc datasets library=&jsonlib kill nolist;
+    quit;
+    run;
+  %end;  
 
 %mend read_sdtm_from_json;

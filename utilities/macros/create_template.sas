@@ -1,6 +1,5 @@
 %macro create_template(type=, out=);
 
-
   %if %upcase(&type) eq BC %then %do;
     proc sql;
       create table &out
