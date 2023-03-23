@@ -1,0 +1,45 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C171439
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171439
+parentConceptId: C171532
+category:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Virology Tests
+  - COVID-19 Tests
+  - SARS-CoV-2 Tests
+shortName: Severe Acute Respiratory Syndrome Coronavirus 2 Antibody Measurement
+synonym:
+  - SARS-CoV-2 Antibody Detection
+  - SARS-CoV-2 Antibody Test
+  - COVID-19 Antibody Test
+  - COVID-19 Antibody Detection
+resultScale: Quantitative
+definition: The determination of the amount of severe acute respiratory syndrome coronavirus 2 antibody in a sample.
+dataElementConcepts:
+  - conceptId: C117062
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Antibody Titer"
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+    exampleSet:
+      - "1:200"
+  - conceptId: C83312
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
+    shortName: Laboratory Test Method
+    dataType: string
+    exampleSet:
+      - "Immunofluorescence"
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"

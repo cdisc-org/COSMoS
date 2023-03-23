@@ -1,0 +1,41 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C82621
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82621
+parentConceptId: C49237
+category:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Measurements
+  - Fibrin Degragation Products
+shortName: D-Dimer Measurement
+synonym:
+  - D-Dimer
+  - DDIMER
+  - FDP
+  - Fibrin Degragation Products
+resultScale: Quantitative
+definition: The determination of the amount of d-dimers present in a sample.
+dataElementConcepts:
+  - conceptId: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C64571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64571
+    shortName: Unit of Mass Concentration
+    dataType: string
+    exampleSet:
+      - "ug/L"
+      - "mg/L"
+      - "ng/mL"
+  - conceptId: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Platelet Poor Plasma"

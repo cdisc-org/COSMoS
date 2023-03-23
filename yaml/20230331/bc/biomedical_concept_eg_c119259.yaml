@@ -1,0 +1,59 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C119259
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C119259
+parentConceptId: C62085
+category:
+  - Electrocardiogram Findings
+shortName: Mean Heart Rate by Electrocardiogram
+synonym:
+  - ECG Mean Heart Rate
+  - EKG Mean Heart Rate
+  - EGHRMN
+resultScale: Quantitative
+definition: The calculated average rate of depolarisation of a specific region of the heart, most often the ventricles, as measured and recorded by an electrocardiograph during a specified, extended period of time, and which is usually expressed in beats per minute.
+coding:
+  - code: 76282-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C83254
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83254
+    shortName: Electrocardiogram Category
+    dataType: string
+    exampleSet:
+      - "Measurement"
+  - conceptId: C83113
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83113
+    shortName: Electrocardiogram Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C49148
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49148
+    shortName: Quantitative Result
+    dataType: integer
+  - conceptId: C73688
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
+    shortName: Count per Minute
+    dataType: string
+    exampleSet:
+      - "Beats per Minute"
+  - conceptId: C83089
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83089
+    shortName: Electrocardiogram Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C83259
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83259
+    shortName: Electrocardiogram Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

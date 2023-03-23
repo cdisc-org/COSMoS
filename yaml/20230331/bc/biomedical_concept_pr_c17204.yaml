@@ -1,0 +1,38 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C17204
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17204
+parentConceptId: C16502
+category:
+  - Diagnostic Imaging
+  - Medical Imaging
+shortName: Computed Tomography
+synonym:
+  - CAT Scan
+  - Computed Axial Tomography
+  - Computed Tomography
+  - Computerized Tomography
+  - CT
+resultScale: Nominal
+definition: A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis.
+dataElementConcepts:
+  - conceptId: C117515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117515
+    shortName: Procedure Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117516
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117516
+    shortName: Procedure Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117525
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117525
+    shortName: Procedure Location
+    dataType: string
+    exampleSet:
+      - "Chest"

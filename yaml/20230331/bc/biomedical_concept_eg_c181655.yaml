@@ -1,0 +1,68 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C181655
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181655
+parentConceptId: C25391
+category:
+  - Electrocardiogram Findings
+shortName: Electrocardiogram Analysis
+synonym:
+  - ECG Analysis
+  - EKG Analysis
+  - Electrocardiogram Interpretation
+  - ECG Interpretation
+  - EKG Interpretation
+resultScale: Nominal
+definition: The examination and interpretation of electrocardiogram data
+coding:
+  - code: 8601-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C83254
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83254
+    shortName: Electrocardiogram Category
+    dataType: string
+    exampleSet:
+      - "Interval"
+      - "Measurement"
+      - "Finding"
+  - conceptId: C83113
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83113
+    shortName: Electrocardiogram Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C125009
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C125009
+    shortName: Clinical Interpretation
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Abnormal"
+  - conceptId: C83089
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83089
+    shortName: Electrocardiogram Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C83259
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83259
+    shortName: Electrocardiogram Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"
+  - conceptId: C83019
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83019
+    shortName: Electrocardiogram Results Clinically Significant Occurrence
+    dataType: string
+    exampleSet:
+      - "Y"
+      - "N"
+      - "Unknown"
