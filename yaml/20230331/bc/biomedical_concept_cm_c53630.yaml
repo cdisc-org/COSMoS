@@ -34,14 +34,14 @@ dataElementConcepts:
   - conceptId: C113355
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C113355
     shortName: Concomitant Medication Pre-specified
-    dataType: string
+    dataType: boolean
     exampleSet:
       - "Y"
       - "N"
   - conceptId: C83230
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83230
     shortName: Concomitant Medication Use Occurrence
-    dataType: string
+    dataType: boolean
     exampleSet:
       - "Y"
       - "N"
@@ -80,19 +80,19 @@ dataElementConcepts:
     shortName: Concomitant Medication Dose Form
     dataType: string
     exampleSet:
-      - "CAPSULE"
-      - "INJECTION"
-      - "PATCH"
-      - "SOLUTION"
-      - "SUPPOSITORY"
-      - "TABLET"
+      - "Capsule"
+      - "Injection"
+      - "Patch"
+      - "Solution"
+      - "Suppository"
+      - "Tablet"
   - conceptId: C83120
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83120
     shortName: Concomitant Medication Route of Administration
     dataType: string
     exampleSet:
-      - "INTRAVENOUS"
-      - "ORAL"
-      - "NASOGASTRIC"
-      - "SUBCUTANEOUS"
-      - "TOPICAL"
+      - "Intravenous"
+      - "Oral"
+      - "Nasogastric"
+      - "Subcutaneous"
+      - "Topical"

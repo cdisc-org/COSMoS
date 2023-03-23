@@ -57,6 +57,7 @@ slots:
     identifier: true
     required: true
     range: string
+    "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$"
   href:
     range: uri
   packageDate:
@@ -108,7 +109,7 @@ slots:
     description: Data Element Concept
   dataType:
     range: DataElementConceptDataType
-    recommended: true
+    required: true
     description: Data Type for the Data Element Concept
   exampleSet:
     description: Example values for the Data Element Concept

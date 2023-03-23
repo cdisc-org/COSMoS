@@ -48,7 +48,7 @@ dataElementConcepts:
     exampleSet:
       - "12 Lead Standard"
       - "12 Lead Continuous ECG"
-      - "10  Lead Standard"
+      - "10 Lead Standard"
       - "6 Lead Standard"
   - conceptId: C83259
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83259
@@ -62,3 +62,7 @@ dataElementConcepts:
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83019
     shortName: Electrocardiogram Results Clinically Significant Occurrence
     dataType: string
+    exampleSet:
+      - "Y"
+      - "N"
+      - "Unknown"

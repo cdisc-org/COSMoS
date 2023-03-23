@@ -26,7 +26,7 @@
 
   data _null_;
     set work.bc_&type._&package;
-    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20;
+    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20 definition2 $4000;;
     retain prev_BC_ID "" count 0;
     outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
@@ -36,6 +36,9 @@
     parent_bc_id=kcompress(parent_bc_id, , 's');
     dec_id=kcompress(dec_id, , 's');
     definition=tranwrd(definition, '"', '\"');
+    definition = strip(definition);
+    definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
+    if definition ne definition2 then putlog "WARNING: &type " definition= / definition2=;
 
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;

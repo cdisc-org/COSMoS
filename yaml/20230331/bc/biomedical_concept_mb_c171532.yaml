@@ -22,42 +22,43 @@ dataElementConcepts:
     shortName: Measurement, Test or Examination Detail
     dataType: string
     exampleSet:
-      - "DETECTION"
+      - "Detection"
   - conceptId: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: string
     exampleSet:
-      - "POSITIVE"
-      - "NEGATIVE"
+      - "Positive"
+      - "Negative"
   - conceptId: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string
     exampleSet:
-      - "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION"
+      - "Quantitative Reverse Transcriptase Polymerase Chain Reaction"
   - conceptId: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - "ENDOTRACHIAL FLUID"
-      - "SWABBED MATERIAL"
-      - "LAVAGE FLUID"
-      - "BLOOD"
-      - "SERUM"
+      - "Endotrachial Fluid"
+      - "Swabbed Material"
+      - "Lavage Fluid"
+      - "Blood"
+      - "Serum"
+      - "Sputum"
   - conceptId: C70700
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70700
     shortName: Biospecimen Collection Method
     dataType: string
     exampleSet:
-      - "SWAB"
-      - "LAVAGE"
+      - "Swab"
+      - "Lavage"
   - conceptId: C171435
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171435
     shortName: Sample Anatomic Site
     dataType: string
     exampleSet:
-      - "NASOPHARYNX"
-      - "THROAT"
-      - "ALVEOLUS"
+      - "Nasopharynx"
+      - "Throat"
+      - "Alveolus"

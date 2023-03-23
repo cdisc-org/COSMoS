@@ -23,7 +23,7 @@ dataElementConcepts:
     shortName: Measurement, Test or Examination Detail
     dataType: string
     exampleSet:
-      - "ANTIBODY TITER"
+      - "Antibody Titer"
   - conceptId: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
@@ -41,5 +41,5 @@ dataElementConcepts:
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - "SERUM"
-      - "PLASMA"
+      - "Serum"
+      - "Plasma"

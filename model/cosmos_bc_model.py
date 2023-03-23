@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-09-13T17:27:42
+# Generation date: 2023-03-23T14:06:11
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -164,8 +164,8 @@ class DataElementConcept(YAMLRoot):
 
     conceptId: Union[str, DataElementConceptConceptId] = None
     shortName: str = None
+    dataType: Union[str, "DataElementConceptDataType"] = None
     href: Optional[Union[str, URI]] = None
-    dataType: Optional[Union[str, "DataElementConceptDataType"]] = None
     exampleSet: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -179,11 +179,13 @@ class DataElementConcept(YAMLRoot):
         if not isinstance(self.shortName, str):
             self.shortName = str(self.shortName)
 
+        if self._is_empty(self.dataType):
+            self.MissingRequiredField("dataType")
+        if not isinstance(self.dataType, DataElementConceptDataType):
+            self.dataType = DataElementConceptDataType(self.dataType)
+
         if self.href is not None and not isinstance(self.href, URI):
             self.href = URI(self.href)
-
-        if self.dataType is not None and not isinstance(self.dataType, DataElementConceptDataType):
-            self.dataType = DataElementConceptDataType(self.dataType)
 
         if not isinstance(self.exampleSet, list):
             self.exampleSet = [self.exampleSet] if self.exampleSet is not None else []
@@ -229,7 +231,8 @@ class slots:
     pass
 
 slots.conceptId = Slot(uri=DEFAULT_.conceptId, name="conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.conceptId, domain=None, range=URIRef)
+                   model_uri=DEFAULT_.conceptId, domain=None, range=URIRef,
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
 slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.href, domain=None, range=Optional[Union[str, URI]])
@@ -274,19 +277,21 @@ slots.dataElementConcepts = Slot(uri=DEFAULT_.dataElementConcepts, name="dataEle
                    model_uri=DEFAULT_.dataElementConcepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
 
 slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
-                   model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "DataElementConceptDataType"]])
+                   model_uri=DEFAULT_.dataType, domain=None, range=Union[str, "DataElementConceptDataType"])
 
 slots.exampleSet = Slot(uri=DEFAULT_.exampleSet, name="exampleSet", curie=DEFAULT_.curie('exampleSet'),
                    model_uri=DEFAULT_.exampleSet, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.BiomedicalConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="BiomedicalConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId])
+                   model_uri=DEFAULT_.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
 slots.BiomedicalConcept_href = Slot(uri=DEFAULT_.href, name="BiomedicalConcept_href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.BiomedicalConcept_href, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
 
 slots.DataElementConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="DataElementConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId])
+                   model_uri=DEFAULT_.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
 slots.DataElementConcept_href = Slot(uri=DEFAULT_.href, name="DataElementConcept_href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.DataElementConcept_href, domain=DataElementConcept, range=Optional[Union[str, URI]])

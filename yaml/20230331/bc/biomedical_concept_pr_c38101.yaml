@@ -13,19 +13,19 @@ synonym:
   - X-Ray
   - Static X-Ray
 resultScale: Nominal
-definition: A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.
+definition: A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.
 dataElementConcepts:
   - conceptId: C117515
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117515
     shortName: Procedure Pre-specified
-    dataType: string
+    dataType: boolean
     exampleSet:
       - "Y"
       - "N"
   - conceptId: C117516
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117516
     shortName: Procedure Occurrence
-    dataType: string
+    dataType: boolean
     exampleSet:
       - "Y"
       - "N"
@@ -34,4 +34,4 @@ dataElementConcepts:
     shortName: Procedure Location
     dataType: string
     exampleSet:
-      - "CHEST"
+      - "Chest"

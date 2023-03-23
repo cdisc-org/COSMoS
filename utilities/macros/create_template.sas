@@ -16,9 +16,9 @@
          system char(1024),
          systemname char(1024),
          code char (1024),
-         dec_ConceptId char(64),
+         dec_conceptId char(64),
          dec_href char(1024),
-         dec_ShortName char(256),
+         dec_shortName char(256),
          dec_dataType char(16),
          dec_exampleSet char(2048)
         );

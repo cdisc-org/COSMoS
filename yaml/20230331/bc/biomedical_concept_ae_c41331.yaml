@@ -32,7 +32,7 @@ dataElementConcepts:
   - conceptId: C87840
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C87840
     shortName: Adverse Event Pre-specified
-    dataType: string
+    dataType: boolean
     exampleSet:
       - "Y"
       - "N"
@@ -41,9 +41,9 @@ dataElementConcepts:
     shortName: Severity of Adverse Event
     dataType: string
     exampleSet:
-      - "MILD"
-      - "MODERATE"
-      - "SEVERE"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
   - conceptId: C78605
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78605
     shortName: Adverse Event Toxicity Grade
@@ -56,42 +56,45 @@ dataElementConcepts:
   - conceptId: C53252
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53252
     shortName: Seriousness of Adverse Event
-    dataType: string
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
   - conceptId: C83013
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83013
     shortName: Adverse Event Action Taken with Study Treatment
     dataType: string
     exampleSet:
-      - "DRUG WITHDRAWN"
-      - "DOSE REDUCED"
-      - "DOSE INCREASED"
-      - "DOSE NOT CHANGED"
-      - "UNKNOWN"
+      - "Drug Withdrawn"
+      - "Dose Reduced"
+      - "Dose Increased"
+      - "Dose Not Changed"
+      - "Unknown"
   - conceptId: C41358
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C41358
     shortName: Adverse Event Attribution to Product or Procedure
     dataType: string
     exampleSet:
-      - "NOT RELATED"
-      - "UNLIKELY RELATED"
-      - "POSSIBLY RELATED"
-      - "RELATED"
+      - "Not related"
+      - "Unlikely Related"
+      - "Possibly Related"
+      - "Related"
   - conceptId: C83208
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83208
     shortName: Adverse Event Pattern
     dataType: string
     exampleSet:
-      - "INTERMITTENT"
-      - "CONTINUOUS"
-      - "SINGLE EVENT"
+      - "Intermittent"
+      - "Continuous"
+      - "Single Event"
   - conceptId: C49489
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49489
     shortName: Adverse Event Outcome
     dataType: string
     exampleSet:
-      - "FATAL"
-      - "NOT RECOVERED/NOT RESOLVED"
-      - "RECOVERED/RESOLVED WITH SEQUELAE"
-      - "RECOVERED/RESOLVED"
-      - "RECOVERING/RESOLVING"
-      - "UNKNOWN"
+      - "Fatal"
+      - "Not Recovered/Not Resolved"
+      - "Recovered/Resolved With Sequelae"
+      - "Recovered/Resolved"
+      - "Recovering/Resolving"
+      - "Unknown"

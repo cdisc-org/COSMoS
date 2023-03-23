@@ -21,7 +21,7 @@ dataElementConcepts:
     shortName: Dictionary-derived Term
     dataType: string
     exampleSet:
-      - "COLLECTING"
+      - "Collecting"
   - conceptId: C25372
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
     shortName: Category

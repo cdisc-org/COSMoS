@@ -21,12 +21,12 @@ dataElementConcepts:
     shortName: Disposition Dictionary Derived Term
     dataType: string
     exampleSet:
-      - "RANDOMIZED"
+      - "Randomized"
   - conceptId: C83245
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83245
     shortName: Disposition Category
     dataType: string
-  - conceptId: C83248)
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248)
+  - conceptId: C83248
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248
     shortName: Disposition Subcategory
     dataType: string

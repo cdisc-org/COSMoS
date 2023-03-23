@@ -101,9 +101,9 @@
         , cd._code as code
       %end;  
       %if %sysfunc(exist(&jsonlib..dataelementconcepts)) %then %do;
-        , dec.conceptId as dec_ConceptId
+        , dec.conceptId as dec_conceptId
         , dec.href as dec_href
-        , dec.shortName as dec_ShortName
+        , dec.shortName as dec_shortName
         , dec.dataType as dec_dataType
       %end;
       %if %sysfunc(exist(&jsonlib..dataelementconcepts_exampleset)) %then %do;    

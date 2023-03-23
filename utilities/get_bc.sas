@@ -22,7 +22,7 @@ options ls=256;
 */
 
 %let package=20230331;
-%let ExcelFile=&root/curation/draft/BC_Package_2023_03_31_draft.xlsx;
+%let ExcelFile=&root/curation/BC_Package_2023_03_31.xlsx;
 %let TargetFolder=&root/yaml/&package/bc;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=dm, package=&package, out_folder=&TargetFolder, range=%str(BC_DM));
