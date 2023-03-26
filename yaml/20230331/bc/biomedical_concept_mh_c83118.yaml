@@ -1,0 +1,47 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C83118
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83118
+parentConceptId: C82571
+category:
+  - Reported Events
+  - Medical History Events
+  - Medical Conditions
+  - Presenting Conditions
+shortName: Medical History Reported Term
+synonym:
+  - Medical History
+  - MHTERM
+resultScale: Nominal
+definition: The verbatim description of the medical history being reported.
+dataElementConcepts:
+  - conceptId: C83118
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83118
+    shortName: Medical History Reported Term
+    dataType: string
+  - conceptId: C83346
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83346
+    shortName: Medical History Dictionary Derived Term
+    dataType: string
+  - conceptId: C83018
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83018
+    shortName: Medical History Category
+    dataType: string
+  - conceptId: C83143
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83143
+    shortName: Medical History Subcategory
+    dataType: string
+  - conceptId: C87897
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C87897
+    shortName: Medical History Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83067
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83067
+    shortName: Medical History Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"

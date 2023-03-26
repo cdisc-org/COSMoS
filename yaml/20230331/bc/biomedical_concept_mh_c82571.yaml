@@ -1,0 +1,11 @@
+packageDate: "2023-03-31"
+packageType: bc
+conceptId: C82571
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+category:
+  - Reported Events
+  - Medical History Events
+  - Medical Conditions
+  - Presenting Conditions
+shortName: Reported Event Term
+definition: The collected name for an event observation.
