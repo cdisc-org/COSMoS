@@ -81,7 +81,8 @@
         else putlog "### NOTE: &type - resultscale missing: " BC_ID "- " short_name;
 
       if not missing(definition) then do;
-        put "definition:" +1 Definition;
+        if index(definition, '"') then put "definition:" +1 '"' Definition +(-1) '"';
+                                  else put "definition:" +1 Definition;
       end;
       else putlog "ERROR: &type - definition missing: " BC_ID "- " short_name;
 
