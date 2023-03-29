@@ -33,6 +33,7 @@
         (
          packageDate char(10),
          biomedicalConceptId char(64),
+         dataElementConceptId char(64),
          sdtmigStartVersion char(32),
          sdtmigEndVersion char(32),
          domain char(32),

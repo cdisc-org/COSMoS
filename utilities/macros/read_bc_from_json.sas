@@ -1,4 +1,7 @@
-%macro read_bc_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0, clean=1);
+%macro read_bc_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0);
+
+  proc datasets library=&jsonlib kill nolist;
+  quit;
 
   filename jsonfile "&json_path";
   filename mapfile "%sysfunc(pathname(work))/bc.map";
@@ -7,9 +10,25 @@
   proc copy in=jsonfile out=&jsonlib;
   run;
 
+  %if &SYSERR %then %do;
+    %put ### &_package - &bc;
+    %goto exit_get_json;
+  %end;
+
   data work.root;
     set &template &jsonlib..root;
   run;  
+
+  %if not %sysfunc(exist(&jsonlib..._links_parentbiomedicalconcept)) and &include_package_dates %then %do;    
+
+    data work.root;
+      merge work.root(in=in1) data.latest_bc(keep=biomedicalConceptId latest_package_date rename=(biomedicalConceptId=parentConceptId) );
+      by parentConceptId;
+      if in1;
+    run;  
+
+  %end;
+
 
   %if %sysfunc(exist(&jsonlib..dataelementconcepts_exampleset)) %then %do;    
     data work.dataelementconcepts_exampleset(drop=exampleSet:);
@@ -69,6 +88,9 @@
         %if %sysfunc(exist(&jsonlib.._links_self)) %then %do;    
           , scan(self.href, -3, "\/") as ConceptId_PackageDate length=10
         %end;
+        %if not %sysfunc(exist(out._links_self)) %then %do;    
+          , root.packageDate as ConceptId_PackageDate length=10
+        %end;
       %end;
 
       , root.conceptId
@@ -81,6 +103,9 @@
       %end;
       %if not %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , root.parentConceptId length=64
+        %if &include_package_dates %then %do; 
+          , root.latest_package_date as parentConceptId_PackageDate length=10
+        %end;
       %end;
       
       %if %sysfunc(exist(&jsonlib..category)) %then %do;    
@@ -147,17 +172,16 @@
     ;
   quit;  
 
-  filename jsonfile clear;
-  filename mapfile clear;
-
   data &out;
     set &template &out;
   run;   
 
-  %if &clean %then %do;
-    proc datasets library=&jsonlib kill nolist;
-    quit;
-    run;
-  %end;  
+  %****************************;
+  %*  Handle any errors here  *;
+  %****************************;
+  %exit_get_json:
+
+  filename jsonfile clear;
+  filename mapfile clear;
 
 %mend read_bc_from_json;
