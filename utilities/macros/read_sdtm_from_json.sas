@@ -1,10 +1,10 @@
-%macro read_sdtm_from_json(json_path=, jsonlib=, template=, out=, include_package_dates=0);
+%macro read_sdtm_from_json(json_path=, jsonlib=, maplib=work, template=, out=, include_package_dates=0);
 
   proc datasets library=&jsonlib kill nolist;
   quit;
 
   filename jsonfile "&json_path";
-  filename mapfile "%sysfunc(pathname(work))/sdtm_specialization.map";
+  filename mapfile "%sysfunc(pathname(&maplib))/specialization_&specialization..map";
 
   libname jsonfile json map=mapfile automap=create fileref=jsonfile /* noalldata ordinalcount=none */;
   proc copy in=jsonfile out=&jsonlib;
