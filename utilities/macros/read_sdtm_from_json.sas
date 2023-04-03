@@ -106,7 +106,7 @@
       %if %sysfunc(exist(&jsonlib..variables_codelist)) %then %do;    
         , varcl.conceptId as codelist
         , varcl.href as codelist_href
-        , varcl.submissionValue as codelist_submision_value
+        , varcl.submissionValue as codelist_submission_value
       %end;
        
       %if %sysfunc(exist(&jsonlib..variables_valuelist)) %then %do;    
