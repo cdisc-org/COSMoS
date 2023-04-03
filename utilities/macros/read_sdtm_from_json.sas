@@ -4,7 +4,7 @@
   quit;
 
   filename jsonfile "&json_path";
-  filename mapfile "%sysfunc(pathname(&maplib))/specialization_&specialization..map";
+  filename mapfile "%sysfunc(pathname(&maplib))/specialization.map";
 
   libname jsonfile json map=mapfile automap=create fileref=jsonfile /* noalldata ordinalcount=none */;
   proc copy in=jsonfile out=&jsonlib;
