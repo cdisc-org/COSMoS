@@ -1,25 +1,29 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C49678
+ncitCode: C49678
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49678
 parentConceptId: C49672
-category:
+categories:
   - Vital Signs
 shortName: Respiration Rate
-resultScale: Quantitative
-definition: "The rate of breathing (inhalation and exhalation) measured within in a unit time, usually expressed as breaths per minute."
+resultScales:
+  - Quantitative
+definition: The rate of breathing (inhalation and exhalation) measured within in a unit time, usually expressed as breaths per minute.
 coding:
   - code: 9279-1
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C173522
+    ncitCode: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     shortName: Vital Signs Result
     dataType: integer
   - conceptId: C73688
+    ncitCode: C73688
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
     shortName: Count per Minute
     dataType: string
     exampleSet:
-      - Breaths per Minute
+      - "Breaths per Minute"

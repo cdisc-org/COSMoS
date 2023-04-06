@@ -70,6 +70,7 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
 
     def query_DataElementConcept(self,
              conceptId: Union[str, MatchExpression] = None,
+             ncitCode: Union[str, MatchExpression] = None,
              href: Union[str, MatchExpression] = None,
              shortName: Union[str, MatchExpression] = None,
              dataType: Union[str, MatchExpression] = None,
@@ -80,6 +81,7 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         Queries for instances of `DataElementConcept`
 
         :param conceptId: NCI C-code for the BC Data Element Concept
+        :param ncitCode: An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
         :param href: Link to NCIt for the Data Element Concept
         :param shortName: NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
         :param dataType: Data Type for the Data Element Concept
@@ -90,6 +92,8 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         results = self.query_engine.simple_query(DataElementConcept.class_name,
                                                  
                                                  conceptId=conceptId,
+                                                 
+                                                 ncitCode=ncitCode,
                                                  
                                                  href=href,
                                                  

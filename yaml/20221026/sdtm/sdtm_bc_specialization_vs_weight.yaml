@@ -70,9 +70,9 @@ variables:
       submissionValue: VSRESU
     subsetCodelist: VSRESU_WT
     valueList:
-      - LB
-      - g
-      - kg
+      - "LB"
+      - "g"
+      - "kg"
     role: Qualifier
     relationship:
       subject: VSORRESU

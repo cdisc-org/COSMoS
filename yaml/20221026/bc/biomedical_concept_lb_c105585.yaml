@@ -1,40 +1,45 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C105585
+ncitCode: C105585
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C105585
 parentConceptId: C49237
-category:
+categories:
   - Laboratory Tests
 shortName: Glucose Measurement
-synonym:
+synonyms:
   - Glucose
-resultScale: Quantitative
-definition: "The determination of the amount of glucose present in a sample."
+resultScales:
+  - Quantitative
+definition: The determination of the amount of glucose present in a sample.
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: NEW_2
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_2
     shortName: Unit of Mass or Substance Concentration
     dataType: string
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - Blood
-      - Plasma
-      - Serum
-      - Urine
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"
   - conceptId: C83312
+    ncitCode: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string
     exampleSet:
-      - Test Strip
+      - "Test Strip"

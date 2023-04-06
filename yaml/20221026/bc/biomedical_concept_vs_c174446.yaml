@@ -1,39 +1,44 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C174446
+ncitCode: C174446
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C174446
 parentConceptId: C49672
-category:
+categories:
   - Vital Signs
 shortName: Body Temperature
-synonym:
+synonyms:
   - Temperature
-resultScale: Quantitative
-definition: "A measurement of the temperature of the body."
+resultScales:
+  - Quantitative
+definition: A measurement of the temperature of the body.
 coding:
   - code: 8310-5
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C173522
+    ncitCode: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     shortName: Vital Signs Result
     dataType: decimal
   - conceptId: C44276
+    ncitCode: C44276
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44276
     shortName: Unit of Temperature
     dataType: string
     exampleSet:
-      - Fahrenheit
-      - Celsius
-      - Kelvin
+      - "Fahrenheit"
+      - "Celsius"
+      - "Kelvin"
   - conceptId: C83088
+    ncitCode: C83088
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     shortName: Vital Signs Location
     dataType: string
     exampleSet:
-      - Axilla
-      - Ear
-      - Forehead
-      - Oral Cavity
-      - Rectum
+      - "Axilla"
+      - "Ear"
+      - "Forehead"
+      - "Oral Cavity"
+      - "Rectum"

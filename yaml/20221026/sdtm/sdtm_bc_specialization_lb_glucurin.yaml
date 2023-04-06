@@ -75,9 +75,9 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submissionValue: UNIT
     valueList:
-      - mg/dL
-      - mmol/L
-      - umol/L
+      - "mg/dL"
+      - "mmol/L"
+      - "umol/L"
     role: Qualifier
     dataType: float
     length: 12
@@ -186,8 +186,8 @@ variables:
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
-      - N
-      - Y
+      - "N"
+      - "Y"
     role: Qualifier
     relationship:
       subject: LBFAST

@@ -134,9 +134,9 @@ variables:
       submissionValue: POSITION
     subsetCodelist: VSPOS
     valueList:
-      - SITTING
-      - STANDING
-      - SUPINE
+      - "SITTING"
+      - "STANDING"
+      - "SUPINE"
     role: Qualifier
     relationship:
       subject: VSPOS
@@ -155,11 +155,11 @@ variables:
       submissionValue: LOC
     subsetCodelist: VSLOC_PULSE
     valueList:
-      - BRACHIAL ARTERY
-      - COROTID ARTERY
-      - DORSALIS PEDIS ARTERY
-      - FEMORAL ARTERY
-      - RADIAL ARTER
+      - "BRACHIAL ARTERY"
+      - "CAROTID ARTERY"
+      - "DORSALIS PEDIS ARTERY"
+      - "FEMORAL ARTERY"
+      - "RADIAL ARTERY"
     role: Qualifier
     relationship:
       subject: VSLOC
@@ -178,8 +178,8 @@ variables:
       submissionValue: LAT
     subsetCodelist: VSLAT_BP
     valueList:
-      - LEFT
-      - RIGHT
+      - "LEFT"
+      - "RIGHT"
     role: Qualifier
     relationship:
       subject: VSLAT

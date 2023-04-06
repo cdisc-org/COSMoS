@@ -1,28 +1,32 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C16358
+ncitCode: C16358
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16358
-category:
+categories:
   - Vital Signs
 shortName: Body Mass Index (BMI)
-synonym:
+synonyms:
   - BMI
   - Quetelet Index
-resultScale: Quantitative
-definition: "An individual's weight in kilograms divided by the square of the height in meters."
+resultScales:
+  - Quantitative
+definition: An individual's weight in kilograms divided by the square of the height in meters.
 coding:
   - code: 39156-5
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C138901
+    ncitCode: C138901
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C138901
     shortName: Body Mass Index Finding
     dataType: decimal
   - conceptId: C42575
+    ncitCode: C42575
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42575
     shortName: Unit of Mass Density
     dataType: string
     exampleSet:
-      - Kilogram per Square Meter
-      - Pounds per Square Inch
+      - "Kilogram per Square Meter"
+      - "Pounds per Square Inch"

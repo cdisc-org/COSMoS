@@ -1,11 +1,12 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C49286
+ncitCode: C49286
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49286
-category:
+categories:
   - Laboratory Tests
 shortName: Hematology Test
-synonym:
+synonyms:
   - Blood Test
   - Hematology Procedure
-definition: "A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample."
+definition: A laboratory test to measure hematopoietic components and investigate hematologic disorders in a blood sample.

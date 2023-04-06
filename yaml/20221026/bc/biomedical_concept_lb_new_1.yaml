@@ -1,37 +1,41 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: NEW_1
-href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_1
 parentConceptId: C147905
-category:
+categories:
   - Laboratory Tests
 shortName: Urine Glucose Test Strip Measurement
-synonym:
+synonyms:
   - Urine Glucose Dipstick
-resultScale: Ordinal
-definition: "An ordinal measurement of glucose present in a sample (placeholder)"
+resultScales:
+  - Ordinal
+definition: An ordinal measurement of glucose present in a sample (placeholder)
 coding:
   - code: 2349-9
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: string
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - Urine
+      - "Urine"
   - conceptId: C83312
+    ncitCode: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string
     exampleSet:
-      - Test Strip
+      - "Test Strip"

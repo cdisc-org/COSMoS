@@ -1,39 +1,45 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C64433
+ncitCode: C64433
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64433
 parentConceptId: C74954
-category:
+categories:
   - Laboratory Tests
 shortName: Alanine Aminotransferase Measurement
-synonym:
+synonyms:
   - ALT
   - SGPT
-resultScale: Quantitative
-definition: "A quantitative measurement of alanine aminotransferase present in a sample."
+resultScales:
+  - Quantitative
+definition: A quantitative measurement of alanine aminotransferase present in a sample.
 coding:
   - code: 1742-6
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C67365
+    ncitCode: C67365
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67365
     shortName: Unit of Catalytic Activity Concentration
     dataType: string
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - Blood
-      - Plasma
-      - Serum
-      - Urine
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"

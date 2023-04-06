@@ -47,42 +47,52 @@
       put "packageDate:" +1 qpackage_date;
       put "packageType:" +1 "bc";
       put "conceptId:" +1 BC_ID;
-      put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' bc_id;
+      if not missing(ncit_code) then do;
+        put "ncitCode:" +1 ncit_code;
+        put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_code;
+      end;
       if not missing(parent_bc_id) then do;
         put "parentConceptId:" +1 parent_bc_id;
         * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
       end;
 
-      if not missing(bc_category) then do;
-        put "category:";
-        countwords=countw(bc_category, ";");
+      if not missing(bc_categories) then do;
+        put "categories:";
+        countwords=countw(bc_categories, ";");
         do i=1 to countwords;
-          value=strip(scan(bc_category, i, ";"));
+          value=strip(scan(bc_categories, i, ";"));
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
-      else putlog "ERROR: &type - category missing: " BC_ID "- " short_name;
+      else putlog "ERROR: &type - categories missing: " BC_ID "- " short_name;
 
       if missing(short_name) then putlog "ERROR: &type - short_name missing: " BC_ID;
       put "shortName:" +1 short_name;
 
-      if not missing(synonym) then do;
-        if index(synonym, ",") > 0 then putlog "WARNING: &type - synonym issue: " BC_ID "- " short_name "- " synonym;
-        put "synonym:";
-        countwords=countw(synonym, ";");
+      if not missing(synonyms) then do;
+        if index(synonyms, ",") > 0 then putlog "WARNING: &type - synonyms issue: " BC_ID "- " short_name "- " synonyms;
+        put "synonyms:";
+        countwords=countw(synonyms, ";");
         do i=1 to countwords;
-          value=strip(scan(synonym, i, ";"));
+          value=strip(scan(synonyms, i, ";"));
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
 
-      if not missing(result_scale)
-        then put "resultScale:" +1 Result_Scale;
-        else putlog "### NOTE: &type - resultscale missing: " BC_ID "- " short_name;
+      if not missing(result_scales) then do;
+        put "resultScales:";
+        countwords=countw(result_scales, ";");
+        do i=1 to countwords;
+          value=strip(scan(result_scales, i, ";"));
+          if not missing(value) then put +2 "-" +1 value;
+        end;
+      end;
+      else putlog "### NOTE: &type - result_scales missing: " BC_ID "- " short_name;
 
       if not missing(definition) then do;
-        if index(definition, '"') then put "definition:" +1 '"' Definition +(-1) '"';
-                                  else put "definition:" +1 Definition;
+        if index(definition, '"') or index(definition, ":") or index(definition, "-") 
+          then put "definition:" +1 '"' Definition +(-1) '"';
+          else put "definition:" +1 Definition;
       end;
       else putlog "ERROR: &type - definition missing: " BC_ID "- " short_name;
 
@@ -105,7 +115,10 @@
 
     if not missing(dec_id) then do;
       put "  - conceptId:" +1 dec_id;
-      put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' dec_id;
+      if not missing(ncit_dec_code) then do;
+        put +4 "ncitCode:" +1 ncit_dec_code;
+        put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_dec_code;
+      end;
       put +4 "shortName:" +1 dec_label;
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;

@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-03-23T14:06:11
+# Generation date: 2023-04-06T14:51:48
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -59,13 +59,14 @@ class BiomedicalConcept(YAMLRoot):
     conceptId: Union[str, BiomedicalConceptConceptId] = None
     packageDate: Union[str, XSDDate] = None
     packageType: Union[str, "BiomedicalConceptPackageType"] = None
-    category: Union[str, List[str]] = None
+    categories: Union[str, List[str]] = None
     shortName: str = None
     definition: str = None
+    ncitCode: Optional[str] = None
     href: Optional[Union[str, URI]] = None
     parentConceptId: Optional[str] = None
-    synonym: Optional[Union[str, List[str]]] = empty_list()
-    resultScale: Optional[Union[str, "BiomedicalConceptResultScale"]] = None
+    synonyms: Optional[Union[str, List[str]]] = empty_list()
+    resultScales: Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]] = empty_list()
     coding: Optional[Union[Union[dict, "Coding"], List[Union[dict, "Coding"]]]] = empty_list()
     dataElementConcepts: Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, "DataElementConcept"]], List[Union[dict, "DataElementConcept"]]]] = empty_dict()
 
@@ -85,11 +86,11 @@ class BiomedicalConcept(YAMLRoot):
         if not isinstance(self.packageType, BiomedicalConceptPackageType):
             self.packageType = BiomedicalConceptPackageType(self.packageType)
 
-        if self._is_empty(self.category):
-            self.MissingRequiredField("category")
-        if not isinstance(self.category, list):
-            self.category = [self.category] if self.category is not None else []
-        self.category = [v if isinstance(v, str) else str(v) for v in self.category]
+        if self._is_empty(self.categories):
+            self.MissingRequiredField("categories")
+        if not isinstance(self.categories, list):
+            self.categories = [self.categories] if self.categories is not None else []
+        self.categories = [v if isinstance(v, str) else str(v) for v in self.categories]
 
         if self._is_empty(self.shortName):
             self.MissingRequiredField("shortName")
@@ -101,18 +102,22 @@ class BiomedicalConcept(YAMLRoot):
         if not isinstance(self.definition, str):
             self.definition = str(self.definition)
 
+        if self.ncitCode is not None and not isinstance(self.ncitCode, str):
+            self.ncitCode = str(self.ncitCode)
+
         if self.href is not None and not isinstance(self.href, URI):
             self.href = URI(self.href)
 
         if self.parentConceptId is not None and not isinstance(self.parentConceptId, str):
             self.parentConceptId = str(self.parentConceptId)
 
-        if not isinstance(self.synonym, list):
-            self.synonym = [self.synonym] if self.synonym is not None else []
-        self.synonym = [v if isinstance(v, str) else str(v) for v in self.synonym]
+        if not isinstance(self.synonyms, list):
+            self.synonyms = [self.synonyms] if self.synonyms is not None else []
+        self.synonyms = [v if isinstance(v, str) else str(v) for v in self.synonyms]
 
-        if self.resultScale is not None and not isinstance(self.resultScale, BiomedicalConceptResultScale):
-            self.resultScale = BiomedicalConceptResultScale(self.resultScale)
+        if not isinstance(self.resultScales, list):
+            self.resultScales = [self.resultScales] if self.resultScales is not None else []
+        self.resultScales = [v if isinstance(v, BiomedicalConceptResultScale) else BiomedicalConceptResultScale(v) for v in self.resultScales]
 
         if not isinstance(self.coding, list):
             self.coding = [self.coding] if self.coding is not None else []
@@ -165,6 +170,7 @@ class DataElementConcept(YAMLRoot):
     conceptId: Union[str, DataElementConceptConceptId] = None
     shortName: str = None
     dataType: Union[str, "DataElementConceptDataType"] = None
+    ncitCode: Optional[str] = None
     href: Optional[Union[str, URI]] = None
     exampleSet: Optional[Union[str, List[str]]] = empty_list()
 
@@ -183,6 +189,9 @@ class DataElementConcept(YAMLRoot):
             self.MissingRequiredField("dataType")
         if not isinstance(self.dataType, DataElementConceptDataType):
             self.dataType = DataElementConceptDataType(self.dataType)
+
+        if self.ncitCode is not None and not isinstance(self.ncitCode, str):
+            self.ncitCode = str(self.ncitCode)
 
         if self.href is not None and not isinstance(self.href, URI):
             self.href = URI(self.href)
@@ -234,6 +243,10 @@ slots.conceptId = Slot(uri=DEFAULT_.conceptId, name="conceptId", curie=DEFAULT_.
                    model_uri=DEFAULT_.conceptId, domain=None, range=URIRef,
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
+slots.ncitCode = Slot(uri=DEFAULT_.ncitCode, name="ncitCode", curie=DEFAULT_.curie('ncitCode'),
+                   model_uri=DEFAULT_.ncitCode, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
+
 slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.href, domain=None, range=Optional[Union[str, URI]])
 
@@ -243,8 +256,8 @@ slots.packageDate = Slot(uri=DEFAULT_.packageDate, name="packageDate", curie=DEF
 slots.packageType = Slot(uri=DEFAULT_.packageType, name="packageType", curie=DEFAULT_.curie('packageType'),
                    model_uri=DEFAULT_.packageType, domain=None, range=Union[str, "BiomedicalConceptPackageType"])
 
-slots.category = Slot(uri=DEFAULT_.category, name="category", curie=DEFAULT_.curie('category'),
-                   model_uri=DEFAULT_.category, domain=None, range=Union[str, List[str]])
+slots.categories = Slot(uri=DEFAULT_.categories, name="categories", curie=DEFAULT_.curie('categories'),
+                   model_uri=DEFAULT_.categories, domain=None, range=Union[str, List[str]])
 
 slots.parentConceptId = Slot(uri=DEFAULT_.parentConceptId, name="parentConceptId", curie=DEFAULT_.curie('parentConceptId'),
                    model_uri=DEFAULT_.parentConceptId, domain=None, range=Optional[str])
@@ -252,11 +265,11 @@ slots.parentConceptId = Slot(uri=DEFAULT_.parentConceptId, name="parentConceptId
 slots.shortName = Slot(uri=DEFAULT_.shortName, name="shortName", curie=DEFAULT_.curie('shortName'),
                    model_uri=DEFAULT_.shortName, domain=None, range=str)
 
-slots.synonym = Slot(uri=DEFAULT_.synonym, name="synonym", curie=DEFAULT_.curie('synonym'),
-                   model_uri=DEFAULT_.synonym, domain=None, range=Optional[Union[str, List[str]]])
+slots.synonyms = Slot(uri=DEFAULT_.synonyms, name="synonyms", curie=DEFAULT_.curie('synonyms'),
+                   model_uri=DEFAULT_.synonyms, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.resultScale = Slot(uri=DEFAULT_.resultScale, name="resultScale", curie=DEFAULT_.curie('resultScale'),
-                   model_uri=DEFAULT_.resultScale, domain=None, range=Optional[Union[str, "BiomedicalConceptResultScale"]])
+slots.resultScales = Slot(uri=DEFAULT_.resultScales, name="resultScales", curie=DEFAULT_.curie('resultScales'),
+                   model_uri=DEFAULT_.resultScales, domain=None, range=Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]])
 
 slots.definition = Slot(uri=DEFAULT_.definition, name="definition", curie=DEFAULT_.curie('definition'),
                    model_uri=DEFAULT_.definition, domain=None, range=str)
@@ -286,12 +299,20 @@ slots.BiomedicalConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="Biomedica
                    model_uri=DEFAULT_.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
+slots.BiomedicalConcept_ncitCode = Slot(uri=DEFAULT_.ncitCode, name="BiomedicalConcept_ncitCode", curie=DEFAULT_.curie('ncitCode'),
+                   model_uri=DEFAULT_.BiomedicalConcept_ncitCode, domain=BiomedicalConcept, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
+
 slots.BiomedicalConcept_href = Slot(uri=DEFAULT_.href, name="BiomedicalConcept_href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.BiomedicalConcept_href, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
 
 slots.DataElementConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="DataElementConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
                    model_uri=DEFAULT_.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
+
+slots.DataElementConcept_ncitCode = Slot(uri=DEFAULT_.ncitCode, name="DataElementConcept_ncitCode", curie=DEFAULT_.curie('ncitCode'),
+                   model_uri=DEFAULT_.DataElementConcept_ncitCode, domain=DataElementConcept, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
 
 slots.DataElementConcept_href = Slot(uri=DEFAULT_.href, name="DataElementConcept_href", curie=DEFAULT_.curie('href'),
                    model_uri=DEFAULT_.DataElementConcept_href, domain=DataElementConcept, range=Optional[Union[str, URI]])
