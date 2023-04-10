@@ -1,11 +1,12 @@
 packageDate: "2023-02-13"
 packageType: bc
 conceptId: C75342
+ncitCode: C75342
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C75342
 parentConceptId: C74675
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
   - Drug Class Measurements
 shortName: CNS Stimulant Drug Measurement
-definition: "The determination of the amount of any drug that affects the central nervous system (CNS) present in a sample."
+definition: The determination of the amount of any drug that affects the central nervous system (CNS) present in a sample.

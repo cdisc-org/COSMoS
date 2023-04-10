@@ -1,9 +1,10 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C74588
+ncitCode: C74588
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74588
-category:
+categories:
   - Subject Disposition
   - Protocol Milestones
 shortName: Protocol Milestone
-definition: Occurrences within some epochs that are initiated by a protocol-specified event. The most common protocol milestone is \"Informed Consent Obtained\" which usually documents the start of the study.
+definition: "Occurrences within some epochs that are initiated by a protocol-specified event. The most common protocol milestone is \"Informed Consent Obtained\" which usually documents the start of the study."

@@ -1,31 +1,37 @@
 packageDate: "2023-02-13"
 packageType: bc
 conceptId: C74667
+ncitCode: C74667
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74667
 parentConceptId: C49237
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
 shortName: Bicarbonate Measurement
-synonym:
+synonyms:
   - Bicarbonate
   - HCO3
-resultScale: Quantitative
-definition: "The determination of the amount of bicarbonate present in a sample."
+resultScales:
+  - Quantitative
+definition: The determination of the amount of bicarbonate present in a sample.
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C64567
+    ncitCode: C64567
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64567
     shortName: Molarity Unit
     dataType: string
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

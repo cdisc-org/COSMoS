@@ -1,12 +1,13 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C25218
+ncitCode: C25218
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25218
-category:
+categories:
   - Procedures
   - Interventions
 shortName: Intervention or Procedure
-synonym:
+synonyms:
   - Procedure
   - Intervention
 definition: An activity that produces an effect, or that is intended to alter the course of a disease in a patient or population. This is a general term that encompasses the medical, social, behavioral, and environmental acts that can have preventive, therapeutic, or palliative effects.

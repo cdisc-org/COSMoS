@@ -1,29 +1,33 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C171532
+ncitCode: C171532
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171532
 parentConceptId: C171456
-category:
+categories:
   - Laboratory Tests
   - Microbiology Tests
   - Virology Tests
   - COVID-19 Tests
   - SARS-CoV-2 Tests
 shortName: Severe Acute Respiratory Syndrome Coronavirus 2 Measurement
-synonym:
+synonyms:
   - SARSCOV2
   - SARS-CoV-2 Infection
   - COVID-19 Infection
-resultScale: Nominal
+resultScales:
+  - Nominal
 definition: The determination of the amount of severe acute respiratory syndrome coronavirus 2 in a sample.
 dataElementConcepts:
   - conceptId: C117062
+    ncitCode: C117062
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117062
     shortName: Measurement, Test or Examination Detail
     dataType: string
     exampleSet:
       - "Detection"
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: string
@@ -31,12 +35,14 @@ dataElementConcepts:
       - "Positive"
       - "Negative"
   - conceptId: C83312
+    ncitCode: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string
     exampleSet:
       - "Quantitative Reverse Transcriptase Polymerase Chain Reaction"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
@@ -48,6 +54,7 @@ dataElementConcepts:
       - "Serum"
       - "Sputum"
   - conceptId: C70700
+    ncitCode: C70700
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70700
     shortName: Biospecimen Collection Method
     dataType: string
@@ -55,6 +62,7 @@ dataElementConcepts:
       - "Swab"
       - "Lavage"
   - conceptId: C171435
+    ncitCode: C171435
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171435
     shortName: Sample Anatomic Site
     dataType: string

@@ -1,28 +1,31 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C74737
+ncitCode: C74737
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74737
 parentConceptId: C49237
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
   - Protein or Enzyme Measurements
 shortName: Ferritin Measurement
-synonym:
+synonyms:
   - Ferritin
-resultScale: Quantitative
+resultScales:
+  - Quantitative
 definition: The determination of the amount of ferritin present in a sample.
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: NEW_2
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=NEW_2
     shortName: Unit of Mass or Substance Concentration
     dataType: string
     exampleSet:
@@ -30,6 +33,7 @@ dataElementConcepts:
       - "ng/mL"
       - "pmol/L"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

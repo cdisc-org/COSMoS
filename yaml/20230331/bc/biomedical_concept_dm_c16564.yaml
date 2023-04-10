@@ -1,19 +1,22 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C16564
+ncitCode: C16564
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564
-category:
+categories:
   - Demographic Data
   - Demographics
   - Ethnicity
 shortName: Ethnic Group
-synonym:
+synonyms:
   - Ethnicity
   - Ethnic Origin
-resultScale: Nominal
+resultScales:
+  - Nominal
 definition: A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.
 dataElementConcepts:
   - conceptId: C16564
+    ncitCode: C16564
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564
     shortName: Ethnic Group
     dataType: string

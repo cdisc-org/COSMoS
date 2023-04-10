@@ -38,7 +38,7 @@
     definition=tranwrd(definition, '"', '\"');
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog "WARNING: &type " definition= / definition2=;
+    if definition ne definition2 then putlog "WARNING: &type " bc_id @30 definition= / @29 definition2=;
 
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;

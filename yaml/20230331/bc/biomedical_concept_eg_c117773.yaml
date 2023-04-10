@@ -1,17 +1,19 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C117773
+ncitCode: C117773
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117773
 parentConceptId: C62085
-category:
+categories:
   - Electrocardiogram Findings
 shortName: Aggregate PR Interval
-synonym:
+synonyms:
   - PR Interval Aggregate
   - PQ Interval Aggregate
   - PRAG
   - PQAG
-resultScale: Quantitative
+resultScales:
+  - Quantitative
 definition: An aggregate PR value based on the measurement of PR intervals from multiple beats within a single ECG. The method of aggregation, which can vary, is typically a measure of central tendency such as the mean. (CDISC)
 coding:
   - code: 8625-6
@@ -19,12 +21,14 @@ coding:
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C83254
+    ncitCode: C83254
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83254
     shortName: Electrocardiogram Category
     dataType: string
     exampleSet:
       - "Interval"
   - conceptId: C83113
+    ncitCode: C83113
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83113
     shortName: Electrocardiogram Position
     dataType: string
@@ -32,10 +36,12 @@ dataElementConcepts:
       - "Supine"
       - "Sitting"
   - conceptId: C93499
+    ncitCode: C93499
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93499
     shortName: Actual Duration
     dataType: integer
   - conceptId: C42574
+    ncitCode: C42574
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42574
     shortName: Unit of Time
     dataType: string
@@ -43,6 +49,7 @@ dataElementConcepts:
       - "Milliseconds"
       - "Seconds"
   - conceptId: C83089
+    ncitCode: C83089
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83089
     shortName: Electrocardiogram Method
     dataType: string
@@ -52,6 +59,7 @@ dataElementConcepts:
       - "10 Lead Standard"
       - "6 Lead Standard"
   - conceptId: C83259
+    ncitCode: C83259
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83259
     shortName: Electrocardiogram Evaluator
     dataType: string

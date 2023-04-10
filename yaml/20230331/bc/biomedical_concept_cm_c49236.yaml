@@ -1,13 +1,14 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C49236
+ncitCode: C49236
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49236
 parentConceptId: C25218
-category:
+categories:
   - Procedures
   - Interventions
 shortName: Therapeutic Procedure
-synonym:
+synonyms:
   - Treatment
   - Therapeutic Intervention
 definition: An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process.

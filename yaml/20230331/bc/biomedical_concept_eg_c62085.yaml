@@ -1,11 +1,12 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C62085
+ncitCode: C62085
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62085
-category:
+categories:
   - Electrocardiogram Findings
 shortName: ECG Measurement
-synonym:
+synonyms:
   - Electrocardiogram Measurement
   - EKG Measurement
 definition: Measurements or calculations on measurements obtained from electrocardiographic tracings

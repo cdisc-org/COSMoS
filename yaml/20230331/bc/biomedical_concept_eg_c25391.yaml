@@ -1,11 +1,12 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C25391
+ncitCode: C25391
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25391
-category:
+categories:
   - Analysis
 shortName: Analysis
-synonym:
+synonyms:
   - Analytical
   - Analyzed
 definition: Examination and interpretation; the process of identifying an issue to be understood and addressed, modelling the issue, investigating the model results, interpreting the results, and possibly making a recommendation. The concept also refers to the examination and study of a whole in terms of the parts composing it.

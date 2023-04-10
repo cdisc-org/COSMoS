@@ -1,11 +1,12 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C49188
+ncitCode: C49188
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49188
-category:
+categories:
   - Microbiology Tests
 shortName: Microbiology Test
-synonym:
+synonyms:
   - Laboratory Testing
   - Microbiology
 definition: A laboratory procedure to detect microorganisms in a sample.

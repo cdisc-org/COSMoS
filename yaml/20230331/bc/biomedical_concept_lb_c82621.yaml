@@ -1,31 +1,36 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C82621
+ncitCode: C82621
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82621
 parentConceptId: C49237
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
   - Protein or Enzyme Measurements
   - Fibrin Degragation Products
 shortName: D-Dimer Measurement
-synonym:
+synonyms:
   - D-Dimer
   - DDIMER
   - FDP
   - Fibrin Degragation Products
-resultScale: Quantitative
-definition: The determination of the amount of d-dimers present in a sample.
+resultScales:
+  - Quantitative
+definition: "The determination of the amount of d-dimers present in a sample."
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C64571
+    ncitCode: C64571
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64571
     shortName: Unit of Mass Concentration
     dataType: string
@@ -34,6 +39,7 @@ dataElementConcepts:
       - "mg/L"
       - "ng/mL"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

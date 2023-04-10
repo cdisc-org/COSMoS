@@ -1,35 +1,42 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C41331
+ncitCode: C41331
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C41331
 parentConceptId: C36291
-category:
+categories:
   - Reported Events
   - Adverse Events
 shortName: Adverse Event
-synonym:
+synonyms:
   - Adverse Event Reported Term
   - AETERM
-resultScale: Nominal
+resultScales:
+  - Nominal
 definition: Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).
 dataElementConcepts:
   - conceptId: C78541
+    ncitCode: C78541
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78541
     shortName: Adverse Event Verbatim Description
     dataType: string
   - conceptId: C83344
+    ncitCode: C83344
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83344
     shortName: Adverse Event Dictionary Derived Term
     dataType: string
   - conceptId: C83198
+    ncitCode: C83198
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83198
     shortName: Adverse Event Category
     dataType: string
   - conceptId: C83212
+    ncitCode: C83212
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83212
     shortName: Adverse Event Subcategory
     dataType: string
   - conceptId: C87840
+    ncitCode: C87840
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C87840
     shortName: Adverse Event Pre-specified
     dataType: boolean
@@ -37,6 +44,7 @@ dataElementConcepts:
       - "Y"
       - "N"
   - conceptId: C53253
+    ncitCode: C53253
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53253
     shortName: Severity of Adverse Event
     dataType: string
@@ -45,6 +53,7 @@ dataElementConcepts:
       - "Moderate"
       - "Severe"
   - conceptId: C78605
+    ncitCode: C78605
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78605
     shortName: Adverse Event Toxicity Grade
     dataType: string
@@ -54,6 +63,7 @@ dataElementConcepts:
       - "3"
       - "4"
   - conceptId: C53252
+    ncitCode: C53252
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53252
     shortName: Seriousness of Adverse Event
     dataType: boolean
@@ -61,6 +71,7 @@ dataElementConcepts:
       - "Y"
       - "N"
   - conceptId: C83013
+    ncitCode: C83013
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83013
     shortName: Adverse Event Action Taken with Study Treatment
     dataType: string
@@ -71,6 +82,7 @@ dataElementConcepts:
       - "Dose Not Changed"
       - "Unknown"
   - conceptId: C41358
+    ncitCode: C41358
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C41358
     shortName: Adverse Event Attribution to Product or Procedure
     dataType: string
@@ -80,6 +92,7 @@ dataElementConcepts:
       - "Possibly Related"
       - "Related"
   - conceptId: C83208
+    ncitCode: C83208
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83208
     shortName: Adverse Event Pattern
     dataType: string
@@ -88,6 +101,7 @@ dataElementConcepts:
       - "Continuous"
       - "Single Event"
   - conceptId: C49489
+    ncitCode: C49489
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49489
     shortName: Adverse Event Outcome
     dataType: string

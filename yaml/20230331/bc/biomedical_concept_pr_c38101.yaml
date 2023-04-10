@@ -1,21 +1,24 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C38101
+ncitCode: C38101
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38101
 parentConceptId: C16502
-category:
+categories:
   - Diagnostic Imaging
   - Medical Imaging
 shortName: X-Ray Imaging
-synonym:
+synonyms:
   - Conventional X-Ray
   - Medical Imaging
   - X-Ray
   - Static X-Ray
-resultScale: Nominal
-definition: A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation.
+resultScales:
+  - Nominal
+definition: "A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation."
 dataElementConcepts:
   - conceptId: C117515
+    ncitCode: C117515
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117515
     shortName: Procedure Pre-specified
     dataType: boolean
@@ -23,6 +26,7 @@ dataElementConcepts:
       - "Y"
       - "N"
   - conceptId: C117516
+    ncitCode: C117516
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117516
     shortName: Procedure Occurrence
     dataType: boolean
@@ -30,6 +34,7 @@ dataElementConcepts:
       - "Y"
       - "N"
   - conceptId: C117525
+    ncitCode: C117525
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117525
     shortName: Procedure Location
     dataType: string
