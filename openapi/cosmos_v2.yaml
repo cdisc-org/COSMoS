@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: CDISC Conceptual and Operational Standards Metadata (COSMoS)
   description: REST API documentation for COSMoS
-  version: '0.3'
+  version: '2.0'
   contact:
     name: CDISC Library Support
     email: cdisc_library_support@cdisc.org
