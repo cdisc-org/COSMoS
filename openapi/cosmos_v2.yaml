@@ -746,11 +746,14 @@ components:
         conceptId:
           type: string
           example: C49676
+        ncitCode:
+          type: string
+          example: C49676
         href:
           type: string
           format: uri
           example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
-        category:
+        categories:
           type: array
           items:
             type: string
@@ -759,20 +762,23 @@ components:
         shortName:
           type: string
           example: Pulse Rate
-        synonym:
+        synonyms:
           type: array
           items:
             type: string
           example:
             - Pulse
-        resultScale:
-          type: string
-          enum:
+        resultScales:
+          type: array
+          items:
+            type: string
+            enum:
+              - Quantitative
+              - Ordinal
+              - Nominal
+              - Narrative
+          example: 
             - Quantitative
-            - Ordinal
-            - Nominal
-            - Narrative
-          example: Quantitative
         definition:
           type: string
           example: >-
@@ -791,7 +797,7 @@ components:
             $ref: '#/components/schemas/bcDataElementConceptElement'
       required:
         - conceptId
-        - category
+        - categories
         - shortName
         - definition
 
@@ -842,6 +848,9 @@ components:
         conceptId:
           type: string
           example: C123975
+        ncitCode:
+          type: string
+          example: C123975
         href:
           type: string
           format: uri
@@ -887,7 +896,7 @@ components:
         label:
           type: string
           example: Biomedical Concepts
-        category:
+        categories:
           type: string
           example: "Vital Signs"
         _links:
@@ -938,11 +947,14 @@ components:
         conceptId:
           type: string
           example: C49676
+        ncitCode:
+          type: string
+          example: C49676
         href:
           type: string
           format: uri
           example: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
-        category:
+        categories:
           type: array
           items:
             type: string
@@ -951,20 +963,23 @@ components:
         shortName:
           type: string
           example: Pulse Rate
-        synonym:
+        synonyms:
           type: array
           items:
             type: string
           example:
             - Pulse
-        resultScale:
-          type: string
-          enum:
+        resultScales:
+          type: array
+          items:
+            type: string
+            enum:
+              - Quantitative
+              - Ordinal
+              - Nominal
+              - Narrative
+          example: 
             - Quantitative
-            - Ordinal
-            - Nominal
-            - Narrative
-          example: Quantitative
         definition:
           type: string
           example: >-
@@ -983,7 +998,7 @@ components:
             $ref: '#/components/schemas/bcDataElementConceptElement'
       required:
         - conceptId
-        - category
+        - categories
         - shortName
         - definition
 
@@ -1508,3 +1523,4 @@ components:
         type:
           type: string
           example: SDTM Dataset Specialization
+
