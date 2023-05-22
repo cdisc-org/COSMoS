@@ -1,10 +1,11 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C18020
+ncitCode: C18020
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18020
-category:
+categories:
   - Procedures
 shortName: Diagnostic Procedure
-synonym:
+synonyms:
   - Diagnostic Tests
 definition: Any procedure or test to diagnose a disease or disorder.

@@ -1,29 +1,33 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C164634
+ncitCode: C164634
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164634
-category:
+categories:
   - Vital Signs
 shortName: Body Height
-synonym:
+synonyms:
   - Height
-resultScale: Quantitative
-definition: "The vertical measurement or distance from the base to the top of a subject or participant."
+resultScales:
+  - Quantitative
+definition: The vertical measurement or distance from the base to the top of a subject or participant.
 coding:
   - code: 8302-2
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C173522
+    ncitCode: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     shortName: Vital Signs Result
     dataType: decimal
   - conceptId: C168688
+    ncitCode: C168688
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C168688
     shortName: Unit of Height
     dataType: string
     exampleSet:
-      - Centimeter
-      - Inch
-      - Millimeter
-      - Meter
+      - "Centimeter"
+      - "Inch"
+      - "Millimeter"
+      - "Meter"

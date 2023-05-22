@@ -1,11 +1,12 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C16502
+ncitCode: C16502
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16502
-category:
+categories:
   - Diagnostic Imaging
   - Medical Imaging
 shortName: Diagnostic Imaging
-synonym:
+synonyms:
   - Medical Imaging
 definition: Any method that uses a visual display of structural or functional patterns of organs or tissues for diagnostic evaluation.

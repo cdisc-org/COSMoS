@@ -1,11 +1,12 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C74590
+ncitCode: C74590
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74590
-category:
+categories:
   - Subject Disposition
   - Protocol Disposition Events
 shortName: Protocol Disposition Event
-synonym:
+synonyms:
   - Disposition Event
 definition: The group of incidents that occur during a clinical trial and describe whether a subject completed the study epoch or the reason this event did not occur. The subject's disposition is often described for each phase of the study.

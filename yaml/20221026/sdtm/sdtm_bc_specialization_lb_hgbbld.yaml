@@ -81,9 +81,9 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submissionValue: UNIT
     valueList:
-      - g/dL
-      - g/L
-      - mg/dL
+      - "g/dL"
+      - "g/L"
+      - "mg/dL"
     role: Qualifier
     relationship:
       subject: LBORRESU
@@ -188,8 +188,8 @@ variables:
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
-      - N
-      - Y
+      - "N"
+      - "Y"
     role: Qualifier
     relationship:
       subject: LBFAST

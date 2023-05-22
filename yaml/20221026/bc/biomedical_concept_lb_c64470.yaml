@@ -1,40 +1,47 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C64470
+ncitCode: C64470
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64470
 parentConceptId: C51948
-category:
+categories:
   - Laboratory Tests
 shortName: Total Basophil Count
-synonym:
+synonyms:
   - Basophils
   - Absolute Basophil Count
-resultScale: Quantitative
-definition: "The total number of white blood cells that are basophils. It is calculated by multiplying the white blood cell count by the percent of basophils in the differential white blood cell count."
+resultScales:
+  - Quantitative
+definition: The total number of white blood cells that are basophils. It is calculated by multiplying the white blood cell count by the percent of basophils in the differential white blood cell count.
 coding:
   - code: 26444-0
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C67391
+    ncitCode: C67391
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67391
     shortName: Unit of Number Concentration
     dataType: string
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - Blood
+      - "Blood"
   - conceptId: C83312
+    ncitCode: C83312
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
     shortName: Laboratory Test Method
     dataType: string

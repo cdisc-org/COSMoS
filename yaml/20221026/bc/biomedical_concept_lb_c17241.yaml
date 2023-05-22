@@ -1,12 +1,13 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C17241
+ncitCode: C17241
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17241
 parentConceptId: C49237
-category:
+categories:
   - Laboratory Tests
 shortName: Urinalysis
-synonym:
+synonyms:
   - Urine Test
   - UA
-definition: "A test that determines the content of the urine."
+definition: A test that determines the content of the urine.

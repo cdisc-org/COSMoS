@@ -67,7 +67,7 @@
            put +4 "codelist:";
            put +6 "conceptId:" +1 codelist;
            put +6 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
-           if not missing(codelist_submision_value) then put +6 "submissionValue:" +1 codelist_submission_value;
+           if not missing(codelist_submission_value) then put +6 "submissionValue:" +1 codelist_submission_value;
         end;
         if not missing(subset_codelist) then do;
           put +4 "subsetCodelist:" +1 subset_codelist;
@@ -89,7 +89,6 @@
               qvalue=quote(strip(value));
               put +6 "-" +1 qvalue;
             end;
-            
           end;
         end;
 

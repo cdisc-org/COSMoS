@@ -70,9 +70,9 @@ variables:
       submissionValue: VSRESU
     subsetCodelist: VSRESU_HT
     valueList:
-      - cm
-      - in
-      - m
+      - "cm"
+      - "in"
+      - "m"
     role: Qualifier
     relationship:
       subject: VSORRESU

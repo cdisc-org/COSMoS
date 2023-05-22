@@ -1,36 +1,42 @@
 packageDate: "2023-02-13"
 packageType: bc
 conceptId: C64796
+ncitCode: C64796
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64796
 parentConceptId: C49286
-category:
+categories:
   - Laboratory Tests
   - Hematology Tests
 shortName: Hematocrit Measurement
-synonym:
+synonyms:
   - Hematocrit
   - Packed Cell Volume
   - PCV
   - Erythrocyte Volume Fraction
   - EVF
-resultScale: Quantitative
+resultScales:
+  - Quantitative
 definition: "A measure of the volume of red blood cells expressed as a percentage of the total blood volume. Normal in males is 43-49%, in females 37-43%."
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C83309
+    ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
     shortName: Laboratory Test Fasting Status
     dataType: boolean
   - conceptId: C69174
+    ncitCode: C69174
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C69174
     shortName: Unit of Volume Fraction
     dataType: string
     exampleSet:
       - "%"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

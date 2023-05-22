@@ -142,8 +142,8 @@ variables:
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
-      - N
-      - Y
+      - "N"
+      - "Y"
     role: Qualifier
     relationship:
       subject: LBFAST

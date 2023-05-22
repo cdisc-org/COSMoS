@@ -70,9 +70,9 @@ variables:
       submissionValue: VSRESU
     subsetCodelist: VSRESU_TEMP
     valueList:
-      - C
-      - F
-      - K
+      - "C"
+      - "F"
+      - "K"
     role: Qualifier
     relationship:
       subject: VSORRESU
@@ -139,11 +139,11 @@ variables:
       submissionValue: LOC
     subsetCodelist: VSLOC_TEMP
     valueList:
-      - AXILLA
-      - EAR
-      - FOREHEAD
-      - ORAL CAVITY
-      - RECTUM
+      - "AXILLA"
+      - "EAR"
+      - "FOREHEAD"
+      - "ORAL CAVITY"
+      - "RECTUM"
     role: Qualifier
     relationship:
       subject: VSLOC

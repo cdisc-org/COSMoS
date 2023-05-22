@@ -1,19 +1,21 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C119293
+ncitCode: C119293
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C119293
 parentConceptId: C82624
-category:
+categories:
   - Laboratory Tests
   - Blood Oxygen Levels
 shortName: PaO2/FiO2 ratio
-synonym:
+synonyms:
   - Horowitz Index
   - Carrico index
   - P/F ratio
   - Partial Pressure Arterial Oxygen to Fraction Inspired Oxygen Ratio Measurement
   - PO2FIO2
-resultScale: Quantitative
+resultScales:
+  - Quantitative
 definition: The determination of the ratio of the pressure of oxygen dissolved in arterial blood to the percentage oxygen of an inhaled mixture of gasses in a biological specimen.
 coding:
   - code: 50984-4
@@ -21,16 +23,19 @@ coding:
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C49669
+    ncitCode: C49669
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49669
     shortName: Unit of Pressure
     dataType: string
     exampleSet:
       - "mmHg"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

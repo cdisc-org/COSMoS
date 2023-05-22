@@ -1,32 +1,38 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C132447
+ncitCode: C132447
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132447
 parentConceptId: C74588
-category:
+categories:
   - Subject Disposition
   - Protocol Milestones
 shortName: Eligibility Criteria Met By Subject
-synonym:
+synonyms:
   - Eligibility Criteria Met
-resultScale: Nominal
+resultScales:
+  - Nominal
 definition: An indication that the subject has fulfilled the criteria needed to continue to the next study period.
 dataElementConcepts:
   - conceptId: C82571
+    ncitCode: C82571
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
     shortName: Reported Event Term
     dataType: string
   - conceptId: C83122
+    ncitCode: C83122
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83122
     shortName: Disposition Dictionary Derived Term
     dataType: string
     exampleSet:
       - "Eligibility Criteria Met"
   - conceptId: C83245
+    ncitCode: C83245
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83245
     shortName: Disposition Category
     dataType: string
   - conceptId: C83248
+    ncitCode: C83248
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248
     shortName: Disposition Subcategory
     dataType: string

@@ -39,21 +39,30 @@
     run;
   %end;
     
-  %if %sysfunc(exist(&jsonlib..category)) %then %do;    
-    data work.category;
-      set &jsonlib..category;
-      length _category $ 1024; 
-      array category_{*} $ 32 category:;
-      _category = catx(";", OF category_{*});
+  %if %sysfunc(exist(&jsonlib..categories)) %then %do;    
+    data work.categories;
+      set &jsonlib..categories;
+      length _categories $ 1024; 
+      array categories_{*} $ 32 categories:;
+      _categories = catx(";", OF categories_{*});
     run;
   %end;
 
-  %if %sysfunc(exist(&jsonlib..synonym)) %then %do;    
-    data work.synonym;
-      set &jsonlib..synonym;
-      length _synonym $ 1024; 
-      array synonym_{*} $ 32 synonym:;
-      _synonym = catx(";", OF synonym_{*});
+  %if %sysfunc(exist(&jsonlib..synonyms)) %then %do;    
+    data work.synonyms;
+      set &jsonlib..synonyms;
+      length _synonyms $ 1024; 
+      array synonyms_{*} $ 32 synonyms:;
+      _synonyms = catx(";", OF synonyms_{*});
+    run;
+  %end;
+
+  %if %sysfunc(exist(&jsonlib..resultscales)) %then %do;    
+    data work.resultscales;
+      set &jsonlib..resultscales;
+      length _resultscales $ 256; 
+      array resultscales_{*} $ 32 resultscales:;
+      _resultscales = catx(";", OF resultscales_{*});
     run;
   %end;
 
@@ -108,17 +117,20 @@
         %end;
       %end;
       
-      %if %sysfunc(exist(&jsonlib..category)) %then %do;    
-        , catd._category as category
+      %if %sysfunc(exist(&jsonlib..categories)) %then %do;    
+        , catd._categories as categories
       %end;
       
       , root.href
+      , root.ncitCode as ncitCode
       
       , root.shortName
-      %if %sysfunc(exist(&jsonlib..synonym)) %then %do;      
-        , synd._synonym as synonym
+      %if %sysfunc(exist(&jsonlib..synonyms)) %then %do;      
+        , synd._synonyms as synonyms
       %end;
-      , root.resultScale
+      %if %sysfunc(exist(&jsonlib..resultscales)) %then %do;      
+        , res._resultscales as resultscales
+      %end;
       , root.Definition
       %if %sysfunc(exist(&jsonlib..coding)) %then %do;      
         , cd._system as system
@@ -128,6 +140,7 @@
       %if %sysfunc(exist(&jsonlib..dataelementconcepts)) %then %do;
         , dec.conceptId as dec_conceptId
         , dec.href as dec_href
+        , dec.ncitCode as dec_ncitCode
         , dec.shortName as dec_shortName
         , dec.dataType as dec_dataType
       %end;
@@ -152,13 +165,17 @@
       left join work.coding cd 
     on (coding.ordinal_root=root.ordinal_root)
   %end;
-  %if %sysfunc(exist(&jsonlib..synonym)) %then %do;      
-      left join work.synonym synd 
-    on (synonym.ordinal_root=root.ordinal_root)
+  %if %sysfunc(exist(&jsonlib..synonyms)) %then %do;      
+      left join work.synonyms synd 
+    on (synonyms.ordinal_root=root.ordinal_root)
   %end;
-  %if %sysfunc(exist(&jsonlib..category)) %then %do;    
-      left join work.category catd 
-    on (category.ordinal_root=root.ordinal_root)
+  %if %sysfunc(exist(&jsonlib..resultscales)) %then %do;      
+      left join work.resultscales res 
+    on (res.ordinal_root=root.ordinal_root)
+  %end;
+  %if %sysfunc(exist(&jsonlib..categories)) %then %do;    
+      left join work.categories catd 
+    on (categories.ordinal_root=root.ordinal_root)
   %end;
   %if %sysfunc(exist(&jsonlib..dataelementconcepts)) %then %do;
         left join &jsonlib..dataelementconcepts dec 

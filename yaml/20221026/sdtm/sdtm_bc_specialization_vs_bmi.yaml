@@ -69,8 +69,8 @@ variables:
       submissionValue: UNIT
     subsetCodelist: UNIT_BMI
     valueList:
-      - kg/m2
-      - psi
+      - "kg/m2"
+      - "psi"
     role: Qualifier
     relationship:
       subject: VSORRESU

@@ -1,15 +1,16 @@
 packageDate: "2023-03-31"
 packageType: bc
 conceptId: C147128
+ncitCode: C147128
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C147128
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
   - Hormone Measurements
   - Choriogonadotropin Measurements
   - HCG Measurements
 shortName: Choriogonadotropin Measurement
-synonym:
+synonyms:
   - Choriogonadotropin
   - Human Chorionic Gonadotropin
   - HCGND

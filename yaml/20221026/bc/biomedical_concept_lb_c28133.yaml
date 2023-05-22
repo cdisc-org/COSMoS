@@ -1,14 +1,15 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C28133
+ncitCode: C28133
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28133
 parentConceptId: C49286
-category:
+categories:
   - Laboratory Tests
 shortName: Blood Cell Count
-synonym:
+synonyms:
   - Complete Blood Count
   - CBC
   - Full Blood Count
   - FBC
-definition: "The determination of the number of red blood cells, white blood cells, and platelets in a biospecimen."
+definition: The determination of the number of red blood cells, white blood cells, and platelets in a biospecimen.

@@ -1,31 +1,36 @@
 packageDate: "2023-02-13"
 packageType: bc
 conceptId: C147355
+ncitCode: C147355
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C147355
 parentConceptId: C64848
-category:
+categories:
   - Laboratory Tests
   - Chemistry Tests
   - Hemaglobin Measurements
 shortName: Carboxyhemoglobin to Total Hemoglobin Ratio Measurement
-resultScale: Quantitative
-definition: "The determination of the ratio of carboxyhemoglobin compared to total hemoglobin present in a sample. The measurement may be expressed as a ratio or percentage."
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of carboxyhemoglobin compared to total hemoglobin present in a sample. The measurement may be expressed as a ratio or percentage.
 coding:
   - code: 20563-3
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C36292
+    ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
     dataType: decimal
   - conceptId: C48570
+    ncitCode: C48570
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48570
     shortName: Percent Unit
     dataType: string
     exampleSet:
       - "%"
   - conceptId: C70713
+    ncitCode: C70713
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
     shortName: Biospecimen Type
     dataType: string

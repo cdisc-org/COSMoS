@@ -1,79 +1,87 @@
 packageDate: "2022-10-26"
 packageType: bc
 conceptId: C25299
+ncitCode: C25299
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25299
 parentConceptId: C54706
-category:
+categories:
   - Vital Signs
 shortName: Diastolic Blood Pressure
-synonym:
+synonyms:
   - DIABP
-resultScale: Quantitative
-definition: "The minimum pressure exerted into the systemic arterial circulation during cardiac ventricular relaxation and filling."
+resultScales:
+  - Quantitative
+definition: The minimum pressure exerted into the systemic arterial circulation during cardiac ventricular relaxation and filling.
 coding:
   - code: 8462-4
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
   - conceptId: C173522
+    ncitCode: C173522
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C173522
     shortName: Vital Signs Result
     dataType: integer
   - conceptId: C49669
+    ncitCode: C49669
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49669
     shortName: Unit of Pressure
     dataType: string
     exampleSet:
-      - cmHg
-      - mmHG
-      - Pascal
+      - "cmHg"
+      - "mmHG"
+      - "Pascal"
   - conceptId: C83088
+    ncitCode: C83088
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83088
     shortName: Vital Signs Location
     dataType: string
     exampleSet:
-      - Arm
-      - Artery
-      - Calf
-      - Forearm
-      - Thigh
-      - Vein
+      - "Arm"
+      - "Artery"
+      - "Calf"
+      - "Forearm"
+      - "Thigh"
+      - "Vein"
   - conceptId: C123975
+    ncitCode: C123975
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975
     shortName: Vital Signs Laterality
     dataType: string
     exampleSet:
-      - Left
-      - Right
+      - "Left"
+      - "Right"
   - conceptId: C82535
+    ncitCode: C82535
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
     shortName: Test Method
     dataType: string
     exampleSet:
-      - Auscultation automatic
-      - Auscaltation manual
-      - Cuff-manual palpated
-      - Doppler
-      - Oscillometry
-      - Arterial line
-      - Venous line
-      - Continuous noninvasive arterial pressure (CNAP)
+      - "Auscultation automatic"
+      - "Auscaltation manual"
+      - "Cuff-manual palpated"
+      - "Doppler"
+      - "Oscillometry"
+      - "Arterial line"
+      - "Venous line"
+      - "Continuous noninvasive arterial pressure (CNAP)"
   - conceptId: C83114
+    ncitCode: C83114
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83114
     shortName: Vital Signs Position
     dataType: string
     exampleSet:
-      - Decupitus
-      - Fowlers
-      - Lateral Decupitus
-      - Prone
-      - Reverse Trendelenburg
-      - Semi-Fowlers
-      - Semi-Recumbent
-      - Sitting
-      - Sitting Legs Dependent
-      - Sling
-      - Standing
-      - Supine
-      - Trendelenburg
-      - Unconstrained
+      - "Decupitus"
+      - "Fowlers"
+      - "Lateral Decupitus"
+      - "Prone"
+      - "Reverse Trendelenburg"
+      - "Semi-Fowlers"
+      - "Semi-Recumbent"
+      - "Sitting"
+      - "Sitting Legs Dependent"
+      - "Sling"
+      - "Standing"
+      - "Supine"
+      - "Trendelenburg"
+      - "Unconstrained"
