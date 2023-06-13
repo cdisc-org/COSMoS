@@ -70,6 +70,37 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq BC_ISSUE %then %do;
+    proc sql;
+    create table &out
+      (
+       _excel_file_  char(128),
+       _tab_  char(128),
+       BC_ID char(64),
+       dec_id char(64),
+       issue_type char(64),
+       expected_value char(2048),
+       actual_value char(2048),
+       comment char(2048)
+      );
+    quit;
+  %end;
+  
+  %if %upcase(&type) eq SDTM_ISSUE %then %do;
+    proc sql;
+    create table &out
+      (
+       _excel_file_  char(128),
+       _tab_  char(128),
+       vlm_group_id char(64),
+       sdtm_variable char(64),
+       issue_type char(64),
+       expected_value char(2048),
+       actual_value char(2048),
+       comment char(2048)
+      );
+    quit;
+  %end;
   
 %mend;
   

@@ -1,0 +1,10 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C82547
+ncitCode: C82547
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82547
+categories:
+  - Findings
+  - Clinical Test Results
+shortName: Abnormal Finding
+definition: A decision that an observation or result is outside the parameters considered normal.

@@ -1,0 +1,10 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C25285
+ncitCode: C25285
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25285
+categories:
+  - Properties
+  - Quantitative Concepts
+shortName: Diameter
+definition: The length of a straight line passing through the center of a circle or sphere and connecting two points on the circumference.

@@ -1,36 +1,73 @@
 %let root=C:/_github/cdisc-org/COSMoS;
+
+%include "&root/utilities/config.sas";
+
 %let _debug=0;
+%let print_html=1;
 
-options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options ls=max;
+title01 "%sysfunc(datetime(), is8601dt.)";
 
+/* Package 1*/
 %let excel_file=&root/curation/BC_Package_2022_10_26.xlsx;
-%ReadExcel(file=&excel_file, range=Conceptual VS BC$, dsout=bc3);
-%ReadExcel(file=&excel_file, range=%str(Conceptual LB (Common) BC)$, dsout=bc4);
-%ReadExcel(file=&excel_file, range=SDTM VS BC$, dsout=sdtm3);
-%ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm4);
+%ReadExcel(file=&excel_file, range=Conceptual VS BC$, dsout=bc1_1);
+%ReadExcel(file=&excel_file, range=%str(Conceptual LB (Common) BC)$, dsout=bc1_2);
 
+%ReadExcel(file=&excel_file, range=SDTM VS BC$, dsout=sdtm1_1);
+%ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm1_2);
+
+/* Package 2 */
 %let excel_file=&root/curation/BC_Package_2023_02_13.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc1);
-%ReadExcel(file=&excel_file, range=%str(BC LB (TIG Biomarkers))$, dsout=bc2);
-%ReadExcel(file=&excel_file, range=%str(SDTM LB)$, dsout=sdtm1);
-%ReadExcel(file=&excel_file, range=%str(SDTM LB (TIG Biomarkers))$, dsout=sdtm2);
+%ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc2_1);
+%ReadExcel(file=&excel_file, range=%str(BC LB (TIG Biomarkers))$, dsout=bc2_2);
 
+%ReadExcel(file=&excel_file, range=%str(SDTM LB)$, dsout=sdtm2_1);
+%ReadExcel(file=&excel_file, range=%str(SDTM LB (TIG Biomarkers))$, dsout=sdtm2_2);
 
-data bc;
-  length order 8 parent_bc_id bc_id dec_id $32 bc_category $5124 short_name synonym dec_label $256;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelists$, dsout=subsets);
+
+/* Package 3 */
+%let excel_file=&root/curation/BC_Package_2023_03_31.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc3_1);
+%ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc3_2);
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc3_3);
+%ReadExcel(file=&excel_file, range=%str(BC_MB)$, dsout=bc3_4);
+%ReadExcel(file=&excel_file, range=%str(BC_AE)$, dsout=bc3_5);
+%ReadExcel(file=&excel_file, range=%str(BC_CM)$, dsout=bc3_6);
+%ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc3_7);
+%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc3_8);
+%ReadExcel(file=&excel_file, range=%str(BC_BE)$, dsout=bc3_9);
+%ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_10);
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_12);
+
+/* Oncology Package */
+%let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc_onco_1);
+
+%ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm_onco_1, drop=%str(drop=significant_digits));
+%ReadExcel(file=&excel_file, range=%str(SDTM_TR)$, dsout=sdtm_onco_2, drop=%str(drop=length significant_digits));
+%ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm_onco_3, drop=%str(drop=length significant_digits));
+
+/************************************************************************************************************************/
+
+data bc(drop=change_history F1: F2:);
+  retain order package_date bc_id parent_bc_id bc_categories short_name 
+         synonyms result_scales definition system system_name code dec_id dec_label data_type example_set;
+  length order 8 package_date $64 bc_id parent_bc_id $32 bc_categories synonyms result_scales definition 
+         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set $1024;
   set 
-      bc1(where=(not missing(bc_id))) 
-      bc2(where=(not missing(bc_id)))
-      bc3(where=(not missing(bc_id))) 
-      bc4(where=(not missing(bc_id)))
-      ;
+      bc:(where=(not missing(bc_id)));
   order=_n_;
 run;  
 
 %if &_debug=1 %then %do;
+  proc freq data=bc;
+    tables bc_id * package_date / nopercent norow nocol;
+  run;  
+%end;  
+
+%if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="validate_spreadsheet_sdtm_bc.html";
+  ods html5 file="&root/utilities/validate_spreadsheet_sdtm_bc.html";
 
     proc print data=bc;
     run;
@@ -39,24 +76,24 @@ run;
   ods listing;
 %end;
 
-data sdtm;
-  length order 8 bc_id dec_id $32 vlm_group_id $64 short_name value_list assigned_value predicate_term format vlm_target $256 linking_phrase $512;
-  set 
-      sdtm1(where=(not missing(vlm_group_id)))
-      sdtm2(where=(not missing(vlm_group_id)))
-      sdtm3(where=(not missing(vlm_group_id)))
-      sdtm4(where=(not missing(vlm_group_id)))
-      ;
+data sdtm(drop=change_history F3: F4:);
+  retain order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
+         sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
+         subject linking_phrase predicate_term object format 
+         vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
+  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
+         codelist subset_codelist value_list assigned_value linking_phrase predicate_term 
+         short_name role format data_type origin_source vlm_target change_history $1024;
+  set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
 run;  
 
 %if &_debug=1 %then %do;
   proc freq data=sdtm;
-    tables vlm_group_id;
+    tables vlm_group_id * package_date / nopercent norow nocol;
   run;  
 %end;  
 
-%get_Subset_Codelists(file=&excel_file, range=Subset Codelists$, dsout=subsets);
 
 proc sql;
   create table sdtm_merged
@@ -66,13 +103,13 @@ proc sql;
   from work.sdtm sdtm
     left join subsets ss
   on sdtm.subset_codelist = ss.subset_short_name
-  order by vlm_group_id, order
+  order by _excel_file_, _tab_, vlm_group_id, order
   ;
 quit;     
 
-%if &_debug=1 %then %do;
+%if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="validate_spreadsheet_sdtm.html";
+  ods html5 file="&root/utilities/validate_spreadsheet_sdtm.html";
 
     proc print data=sdtm_merged;
     run;
@@ -81,93 +118,196 @@ quit;
   ods listing;
 %end;
 
+ods listing close;
+ods html5 file="&root/utilities/validate_spreadsheet_sdtm_bc_issues_%sysfunc(date(), b8601da8.).html";
 
-/* Unresolved BC Parent BCs */
-proc sql;
-  title01 "Missing BC parent_bc_id link to BC bc_id";
-  title02 "Source: &excel_file";
-  create table parent_bc_missing as
-    select bc_category, bc_id, short_name, parent_bc_id
-    from bc
-    where 
-      parent_bc_id not in (select bc_id from bc)
-      and not missing(parent_bc_id)
-    order by bc_category, bc_id
+  /* Unresolved BC Parent BCs */
+  proc sql;
+    title02 "Missing BC parent_bc_id link to BC bc_id";
+    /* create table parent_bc_missing as */
+      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, parent_bc_id
+      from bc
+      where 
+        parent_bc_id not in (select bc_id from bc)
+        and not missing(parent_bc_id)
+      order by _excel_file_, _tab_, bc_categories, bc_id
+      ;
+  quit;
+
+/*
+  proc print data=parent_bc_missing;
+    title02 "Missing BC parent_bc_id link to BC bc_id";
+  run;  
+*/
+
+  /* Unresolved SDTM BCs */
+  proc sql;
+    title02 "Missing SDTM Specialization bc_id link to BC bc_id";
+    /* create table sdtm_bc_missing as */
+      select _excel_file_, _tab_, package_date, vlm_group_id, sdtm_variable, sd.bc_id
+      from sdtm_merged sd
+      where 
+        sd.bc_id not in (select bc_id from bc)
+      order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
+      ;
+  quit;
+
+/*
+  proc print data=sdtm_bc_missing;
+    title02 "Missing SDTM Specialization bc_id link to BC bc_id";
+  run;  
+*/
+
+
+  /* Unresolved SDTM BCs/DECs */
+  proc sql;
+    title02 "Missing SDTM Specialization bc_id/dec_id link to BC bc_id/dec_id";
+    create table sdtm_bc_dec as
+      select unique catx('-', bc_id, dec_id) as bc_dec
+      from sdtm_merged
+      where not missing(dec_id);
+
+   /*  create table sdtm_bc_dec_missing as */
+      select sbdi._excel_file_, sbdi._tab_, sbdi.package_date, sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id 
+      from sdtm_bc_dec sbd, sdtm_merged sbdi
+      where 
+        sbd.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
+        catx('-', sbdi.bc_id, sbdi.dec_id) = sbd.bc_dec
+      order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
+      ;
+  quit;
+
+/*
+  proc print data=sdtm_bc_dec_missing;
+    title02 "Missing SDTM Specialization bc_id/dec_id link to BC bc_id/dec_id";
+  run;  
+*/
+
+  /* Duplicate BC records */
+  proc sql;
+    title02 "Duplicate BC records (package_date, bc_id, dec_id)";
+  /*  create table sdtm_bc_missing as*/
+      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id
+      from bc
+      /* group by package_date, bc_categories, bc_id, short_name, dec_id */
+      group by package_date, bc_id, dec_id
+      having count(*) > 1
+      ;
+  run;
+
+  /* Duplicate SDTM records */
+  proc sql;
+    title02 "Duplicate SDTM Specialization records (package_date, vlm_group_id, sdtm_variable)";
+  /*  create table sdtm_bc_missing as*/
+      select _excel_file_, _tab_, package_date, vlm_group_id, sdtm_variable
+      from sdtm_merged
+      group by package_date, vlm_group_id, sdtm_variable
+      having count(*) > 1
+      ;
+  run;
+
+
+
+/************************************************************************************************************************/
+
+  /*  codelists */   
+  
+  /*
+  %let rest_debug=%str(OUTPUT_TEXT REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
+  %let base_url=https://library.cdisc.org/api;
+
+  %get_latest_codelist_package(package=sdtmct, jsonout=&root/utilities/data/latest_codelist_package_sdtm.json, dsout=data.codelist_package_sdtm);
+
+
+  title01;
+
+  proc sort data=data.codelist_package_sdtm 
+    out=work.codelist_package_sdtm_cl(keep=codelist_conceptId codelist_submissionValue extensible) nodupkey;
+    by codelist_conceptId ;
+  run;  
+  
+  proc sql;
+    create table work.codelists_sdtm as
+    select 
+        sdtm.*,
+        sdtm_ct.codelist_submissionValue as nci_codelist_submissionValue
+    from 
+      sdtm_merged sdtm
+    left join 
+      codelist_package_sdtm_cl sdtm_ct
+    on (sdtm.codelist = sdtm_ct.codelist_conceptId)
+    where (not missing(sdtm.codelist))
+    order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
     ;
-quit;
+  quit;
 
-proc print data=parent_bc_missing;
-  title01 "Missing BC parent_bc_id link to BC bc_id";
-  title02 "Source: &excel_file";
-run;  
+  proc print data=codelists_sdtm;
+    title02 "Mismatch in codelist submission values";
+    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_submissionValue;
+    where codelist_submission_value ne nci_codelist_submissionValue;
+  run;  
 
+    data work.sdtm_merged_terms(drop=i countwords);
+    length term $200;
+    set work.sdtm_merged(
+      where=(not missing(codelist))
+      );
+    if not missing(value_list) then do;
+      countwords=countw(value_list, ";");
+      do i=1 to countwords;
+        term=strip(scan(value_list, i, ";"));
+        if not missing(term) then output;
+      end;
+    end;
+    else do;
+      term  = assigned_value;
+      output;
+    end;  
+  run;  
 
-/* Unresolved SDTM BCs */
-proc sql;
-  title01 "Missing SDTM bc_id link to BC bc_id";
-  title02 "Source: &excel_file";
-  create table sdtm_bc_missing as
-    select vlm_group_id, sdtm_variable, sd.bc_id
-    from sdtm_merged sd
-    where 
-      sd.bc_id not in (select bc_id from bc)
-    order by vlm_group_id, sdtm_variable
+  proc sql;
+    create table work.codelists_sdtm_values as
+    select 
+        sdtm.*,
+        sdtm_ctcl.codelist_submissionValue as nci_codelist_submissionValue,
+        sdtm_ctcl.codelist_conceptId as nci_codelist_conceptId,
+        sdtm_ctcl.extensible as nci_extensible,
+        sdtm_ctcli.codedValue as nci_codedValue,
+        sdtm_ctcli.codedValue_conceptId as nci_codedValue_conceptId
+    from 
+      sdtm_merged_terms sdtm
+    left join 
+      codelist_package_sdtm_cl sdtm_ctcl
+    on (sdtm.codelist = sdtm_ctcl.codelist_conceptId)
+    left join 
+      data.codelist_package_sdtm sdtm_ctcli
+    on (sdtm.codelist = sdtm_ctcli.codelist_conceptId) and (sdtm.term = sdtm_ctcli.codedValue)
+    where (not missing(sdtm.codelist)) and (not missing(sdtm.term))
+    order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
     ;
-quit;
+  quit;
 
-proc print data=sdtm_bc_missing;
-  title01 "Missing SDTM bc_id link to BC bc_id";
-  title02 "Source: &excel_file";
-run;  
+  proc print data=codelists_sdtm_values;
+    title02 "Terms not found in NCIt - assigned_value";
+    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
+         nci_extensible assigned_value assigned_term term;
+    where missing(nci_codedValue) and (not missing(assigned_value));
+  run;  
 
+  proc print data=codelists_sdtm_values;
+    title02 "Terms not found in NCIt - value_list";
+    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
+         nci_extensible value_list term;
+    where missing(nci_codedValue) and (not missing(value_list));
+  run;  
 
+  proc print data=codelists_sdtm_values;
+    title02 "Terms NCIt conceptId mismatch";
+    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
+        nci_extensible value_list assigned_value assigned_term term nci_codedValue nci_codedValue_conceptId;
+    where (not missing(assigned_term)) and (not missing(nci_codedValue_conceptId)) and (assigned_term ne nci_codedValue_conceptId);
+  run;  
+*/
 
-/* Unresolved SDTM BCs/DECs */
-proc sql;
-  title01 "Missing SDTM bc_id/dec_id link to BC bc_id/dec_id";
-  title02 "Source: &excel_file";
-  create table sdtm_bc_dec as
-    select unique catx('-', bc_id, dec_id) as bc_dec
-    from sdtm_merged
-    where not missing(dec_id);
-
-  create table sdtm_bc_dec_missing as
-    select sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id 
-    from sdtm_bc_dec sbd, sdtm_merged sbdi
-    where 
-      sbd.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
-      catx('-', sbdi.bc_id, sbdi.dec_id) = sbd.bc_dec
-    order by vlm_group_id, sdtm_variable
-    ;
-quit;
-
-proc print data=sdtm_bc_dec_missing;
-  title01 "Missing SDTM bc_id/dec_id link to BC bc_id/dec_id";
-  title02 "Source: &excel_file";
-run;  
-
-
-/* Duplicate BC records */
-proc sql;
-  title01 "Duplicate BC records (bc_category bc_id short_name)";
-  title02 "Source: &excel_file";
-/*  create table sdtm_bc_missing as*/
-    select package_date, bc_category, bc_id, short_name, dec_id
-    from bc
-    group by package_date, bc_category, bc_id, short_name, dec_id
-    having count(*) > 1
-    ;
-run;
-
-/* Duplicate SDTM records */
-proc sql;
-  title01 "Duplicate SDTM records (vlm_group_id sdtm_variable)";
-  title02 "Source: &excel_file";
-/*  create table sdtm_bc_missing as*/
-    select package_date, vlm_group_id, sdtm_variable
-    from sdtm_merged
-    group by package_date, vlm_group_id, sdtm_variable
-    having count(*) > 1
-    ;
-run;
-   
+ods html5 close;
+ods listing;

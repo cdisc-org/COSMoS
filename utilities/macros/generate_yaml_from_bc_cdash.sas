@@ -1,4 +1,4 @@
-%macro generate_yaml_from_bc_cdash(excel_file=, range=, type=, package=, out_folder=, subsetsDS=, debug=0);
+%macro generate_yaml_from_bc_cdash(excel_file=, range=, type=, package=, override_package_date=, out_folder=, subsetsDS=, debug=0);
 
 %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_cdash_&type._&package);
 
@@ -47,6 +47,7 @@
     prev_scenario = lag(scenario);
     if not(missing(cdash_group_id)) and ((prev_cdash_group_id ne cdash_group_id) or (prev_scenario ne scenario)) then do;
       count=0;
+      %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;
       put "packageType:" +1 "cdash";

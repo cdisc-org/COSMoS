@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-12-19T15:56:40
+# Generation date: 2023-06-13T15:13:08
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -421,6 +421,26 @@ class LinkingPhrase(EnumDefinitionImpl):
                 PermissibleValue(text="identifies an observation described by") )
         setattr(cls, "is the dictionary code for the test in",
                 PermissibleValue(text="is the dictionary code for the test in") )
+        setattr(cls, "is the role of the assessor who performed the test in",
+                PermissibleValue(text="is the role of the assessor who performed the test in") )
+        setattr(cls, "is the epoch of the performance of the test in",
+                PermissibleValue(text="is the epoch of the performance of the test in") )
+        setattr(cls, "identifies overall response supported by tumor assessments identified by",
+                PermissibleValue(text="identifies overall response supported by tumor assessments identified by") )
+        setattr(cls, "identifies the image from the procedure in",
+                PermissibleValue(text="identifies the image from the procedure in") )
+        setattr(cls, "identifies the tumor found by the test in",
+                PermissibleValue(text="identifies the tumor found by the test in") )
+        setattr(cls, "groups tumor assessments used in overall response identified by",
+                PermissibleValue(text="groups tumor assessments used in overall response identified by") )
+        setattr(cls, "is the identifier for the source data used in the performance of the test in",
+                PermissibleValue(text="is the identifier for the source data used in the performance of the test in") )
+        setattr(cls, "associates the tumor identified in",
+                PermissibleValue(text="associates the tumor identified in") )
+        setattr(cls, "indicates the previous irradiation status of the tumor identified by",
+                PermissibleValue(text="indicates the previous irradiation status of the tumor identified by") )
+        setattr(cls, "indicates the progression status of the previous irradiated tumor identified by",
+                PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by") )
 
 class PredicateTerm(EnumDefinitionImpl):
 
@@ -434,6 +454,11 @@ class PredicateTerm(EnumDefinitionImpl):
     IS_SPECIMEN_TESTED_IN = PermissibleValue(text="IS_SPECIMEN_TESTED_IN")
     SPECIFIES = PermissibleValue(text="SPECIFIES")
     CODES = PermissibleValue(text="CODES")
+    PERFORMED = PermissibleValue(text="PERFORMED")
+    IS_EPOCH_OF = PermissibleValue(text="IS_EPOCH_OF")
+    GROUPS_BY = PermissibleValue(text="GROUPS_BY")
+    IDENTIFIES_PRODUCT_IN = PermissibleValue(text="IDENTIFIES_PRODUCT_IN")
+    IDENTIFIES_TUMOR_IN = PermissibleValue(text="IDENTIFIES_TUMOR_IN")
 
     _defn = EnumDefinition(
         name="PredicateTerm",

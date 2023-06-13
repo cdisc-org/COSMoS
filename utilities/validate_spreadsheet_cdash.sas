@@ -1,8 +1,8 @@
 %let root=C:\_github\cdisc-org\COSMoS;
-%let _debug=0;
 
-options sasautos = ("&root/utilities", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options ls=256 formchar='|_ _ ||||||+=|-/\<>*';
+%include "&root/utilities/config.sas";
+
+%let _debug=0;
 
 /******************************************************************************/
 /* Read BCs                                                                   */

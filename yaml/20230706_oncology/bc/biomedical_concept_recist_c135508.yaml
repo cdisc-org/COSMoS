@@ -1,0 +1,11 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C135508
+ncitCode: C135508
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C135508
+categories:
+  - Findings
+  - Status
+  - Medical Status
+shortName: Organ State
+definition: A condition or state of an organ at a particular time.

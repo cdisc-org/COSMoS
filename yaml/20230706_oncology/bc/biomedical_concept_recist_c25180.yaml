@@ -1,0 +1,10 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C25180
+ncitCode: C25180
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25180
+categories:
+  - Findings
+  - Indicators
+shortName: Indicator
+definition: An event, entity or condition that typically characterizes a prescribed environment or situation and determines or aids in determining whether certain stated circumstances exist or criteria are satisfied.

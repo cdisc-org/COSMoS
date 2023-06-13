@@ -1,0 +1,10 @@
+site_name: CDISC Biomedical Concepts
+site_url: https://cdisc-org.github.io/COSMoS/
+nav:
+    - Home: index.md
+    #- About: about.md
+plugins:
+    - search
+    - mermaid2
+docs_dir: project/docs
+site_dir: docs

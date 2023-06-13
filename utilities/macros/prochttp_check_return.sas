@@ -1,0 +1,15 @@
+%macro prochttp_check_return(code);
+  %if %symexist(SYS_PROCHTTP_STATUS_CODE) ne 1 %then %do;
+    %put ERROR: Expected &code., but a response was not received from the HTTP Procedure;
+    %abort;
+  %end;
+  %else %do;
+    %if &SYS_PROCHTTP_STATUS_CODE. ne &code. %then %do;
+      %put ERROR: Expected &code., but received &SYS_PROCHTTP_STATUS_CODE. &SYS_PROCHTTP_STATUS_PHRASE.;
+      %abort;
+    %end;
+    %else %do;
+      %put NOTE: Expected code received &SYS_PROCHTTP_STATUS_CODE. &SYS_PROCHTTP_STATUS_PHRASE.;
+  %end;  
+  %end;
+%mend prochttp_check_return;

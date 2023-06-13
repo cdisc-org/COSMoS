@@ -1,0 +1,291 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: TUMIDENT
+domain: TU
+shortName: Tumor Identification
+source: TU.TUTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: "."
+biomedicalConceptId: C94523
+variables:
+  - name: TUTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C96784
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C96784
+      submissionValue: TUTESTCD
+    assignedTerm:
+      conceptId: C94523
+      value: TUMIDENT
+    role: Topic
+    relationship:
+      subject: TUTESTCD
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
+      object: TUTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TUTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C96783
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C96783
+      submissionValue: TUTEST
+    assignedTerm:
+      conceptId: C94523
+      value: Tumor Identification
+    role: Qualifier
+    relationship:
+      subject: TUTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: TUORRES
+    dataElementConceptId: C117221
+    isNonStandard: false
+    codelist:
+      conceptId: C123650
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123650
+      submissionValue: TUIDRS
+    valueList:
+      - "TARGET"
+      - "NON-TARGET"
+      - "NEW"
+    role: Qualifier
+    dataType: text
+    length: 24
+    relationship:
+      subject: TUORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: TUSTRESC
+    dataElementConceptId: C117222
+    isNonStandard: false
+    codelist:
+      conceptId: C123650
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123650
+      submissionValue: TUIDRS
+    valueList:
+      - "TARGET"
+      - "NON-TARGET"
+      - "NEW"
+    role: Qualifier
+    dataType: text
+    length: 24
+    relationship:
+      subject: TUSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: TULOC
+    dataElementConceptId: C170500
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: TULOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TULAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
+      submissionValue: LAT
+    role: Qualifier
+    relationship:
+      subject: TULAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: TULOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TUDIR
+    dataElementConceptId: C54215
+    isNonStandard: false
+    codelist:
+      conceptId: C99074
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99074
+      submissionValue: DIR
+    role: Qualifier
+    relationship:
+      subject: TUDIR
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: TULOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TUMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C85492
+      submissionValue: METHOD
+    valueList:
+      - "CT SCAN"
+      - "CALIPER MEASUREMENT METHOD"
+      - "ENDOSCOPY"
+      - "LYMPHANGIOGRAPHY"
+      - "MAMMOGRAPHY"
+      - "MRI"
+      - "NUCLEAR RADIOLOGY"
+      - "PET SCAN"
+      - "PET/CT SCAN"
+      - "PET/MRI SCAN"
+      - "PHOTOGRAPHY"
+      - "SCINTIGRAPHY"
+      - "TOTAL BODY RADIOGRAPHY"
+      - "ULTRASOUND"
+      - "X-RAY"
+    role: Qualifier
+    relationship:
+      subject: TUMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    comparator: IN
+  - name: TUEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78735
+      submissionValue: EVAL
+    valueList:
+      - "INVESTIGATOR"
+      - "ADJUDICATOR"
+      - "INDEPENDENT ASSESSOR"
+    role: Qualifier
+    relationship:
+      subject: TUEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMED
+      object: TUTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: IN
+  - name: EPOCH
+    dataElementConceptId: C71738
+    isNonStandard: false
+    codelist:
+      conceptId: C99079
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99079
+      submissionValue: EPOCH
+    valueList:
+      - "SCREENING"
+      - "TREATMENT"
+    role: Timing
+    relationship:
+      subject: EPOCH
+      linkingPhrase: is the epoch of the performance of the test in
+      predicateTerm: IS_EPOCH_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: IN
+  - name: TUREFID
+    dataElementConceptId: C117442
+    isNonStandard: false
+    role: Identifier
+    relationship:
+      subject: TUREFID
+      linkingPhrase: identifies the image from the procedure in
+      predicateTerm: IDENTIFIES_PRODUCT_IN
+      object: PRTRT
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: TULNKID
+    dataElementConceptId: C117436
+    isNonStandard: false
+    role: Identifier
+    relationship:
+      subject: TULNKID
+      linkingPhrase: identifies the tumor found by the test in
+      predicateTerm: IDENTIFIES_TUMOR_IN
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRVIR
+    isNonStandard: true 
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    relationship:
+      subject: PRVIR
+      linkingPhrase: indicates the previous irradiation status of the tumor identified by
+      predicateTerm: SPECIFIES
+      object: TULNKID
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRVIRP
+    isNonStandard: true 
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    relationship:
+      subject: PRVIRP
+      linkingPhrase: indicates the progression status of the previous irradiated tumor identified by
+      predicateTerm: SPECIFIES
+      object: TULNKID
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

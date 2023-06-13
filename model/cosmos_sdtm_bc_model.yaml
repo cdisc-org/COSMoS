@@ -264,6 +264,16 @@ enums:
       is the subject's fasting status during the performance of the test in:
       identifies an observation described by:
       is the dictionary code for the test in:
+      is the role of the assessor who performed the test in:
+      is the epoch of the performance of the test in:
+      identifies overall response supported by tumor assessments identified by:
+      identifies the image from the procedure in:
+      identifies the tumor found by the test in:
+      groups tumor assessments used in overall response identified by:
+      is the identifier for the source data used in the performance of the test in:
+      associates the tumor identified in:
+      indicates the previous irradiation status of the tumor identified by:
+      indicates the progression status of the previous irradiated tumor identified by:
 
   PredicateTerm:
     permissible_values:
@@ -277,6 +287,13 @@ enums:
       IS_SPECIMEN_TESTED_IN:
       SPECIFIES:
       CODES:
+      PERFORMED:
+      IS_EPOCH_OF:
+      GROUPS_BY:
+      IDENTIFIES_PRODUCT_IN:
+      IDENTIFIES_TUMOR_IN:
+
+
 
   OriginType:
     permissible_values:
