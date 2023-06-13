@@ -1,6 +1,7 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
-options ls=256;
+
+%include "&root/utilities/config.sas";
+
 %let _debug=0;
 
 %let package=20230131;

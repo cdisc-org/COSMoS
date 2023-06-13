@@ -2,24 +2,24 @@
 cd %~dp0
 
 if /i (a%1) == (a) (REM
-     set /p package=Package ^[yyyymmdd^]: 
+     set /p folder=Folder ^[folder^]: 
      ) else (
-     set package=%1
+     set folder=%1
 )
 
-if not exist "%~dp0\%package%\bc\." (
-    echo Folder %~dp0%package%\bc does not exist.
+if not exist "%~dp0\%folder%\bc\." (
+    echo Folder %~dp0%folder%\bc does not exist.
     goto :EOF
     )
 
 
 call ..\venv\Scripts\activate
 
-set logfile=%~dpn0_%package%.log
+set logfile=%~dpn0_%folder%.log
 echo.>%logfile%
 
 set counter=0
-for /F "eol=; tokens=1 delims=" %%i IN ('dir /b /s %~dp0%package%\bc\*.yaml') do @call :ValidateFile %%i
+for /F "eol=; tokens=1 delims=" %%i IN ('dir /b /s %~dp0%folder%\bc\*.yaml') do @call :ValidateFile %%i
 
 findstr /i /s "error" %logfile%
 goto:EOF

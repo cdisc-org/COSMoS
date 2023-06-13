@@ -1,0 +1,11 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C94189
+ncitCode: C94189
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94189
+categories:
+  - Findings
+  - Identification
+  - Work-ups
+shortName: Lesion Identification
+definition: "The identification of a non-neoplastic or neoplastic pathologic process during the diagnostic work-up of a disease."

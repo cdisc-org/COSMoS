@@ -2,11 +2,14 @@
 .hypothesis/
 __pycache__/
 test/
+tools/
 venv/
 work/
 ~$*.*
 *.log
 *.lst
+*.sas7b*
 get_*.html
+create_*.html
 validate_*.html
 *.code-workspace

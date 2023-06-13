@@ -1,0 +1,6 @@
+extends: recommended
+rules:
+  standard_naming:
+    level: disabled
+  tree_root_class:
+    level: error

@@ -1,0 +1,57 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C103420
+ncitCode: C103420
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103420
+parentConceptId: C35461
+categories:
+  - Response Evaluation Criteria in Solid Tumors
+  -  Response Evaluation Criteria in Solid Tumors Version 1.1
+  - Disease Response Assessment Test
+  -  Disease Response
+  - RECIST 1.1
+  - New Lesion
+shortName: New Lesion Progression
+synonyms:
+  - NEWLPROG
+resultScales:
+  - Nominal
+definition: An assessment of the equivocality of disease progression based on a newly identified lesion.
+dataElementConcepts:
+  - conceptId: C117388
+    ncitCode: C117388
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117388
+    shortName: Disease Response Category
+    dataType: string
+    exampleSet:
+      - "RECIST 1.1"
+  - conceptId: C117221
+    ncitCode: C117221
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117221
+    shortName: Original Result or Finding
+    dataType: string
+    exampleSet:
+      - "EQUIVOCAL"
+      - "UNEQUIVOCAL"
+  - conceptId: C117222
+    ncitCode: C117222
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117222
+    shortName: Character Result or Finding in Standard Format
+    dataType: string
+    exampleSet:
+      - "EQUIVOCAL"
+      - "UNEQUIVOCAL"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "INVESTIGATOR"
+  - conceptId: C71738
+    ncitCode: C71738
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71738
+    shortName: Clinical Trial Epoch
+    dataType: string
+    exampleSet:
+      - "TREATMENT"

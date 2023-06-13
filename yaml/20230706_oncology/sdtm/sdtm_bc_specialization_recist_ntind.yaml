@@ -1,0 +1,139 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: NTIND
+domain: TU
+shortName: Non-Target Indicator
+source: TU.TUTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: "."
+biomedicalConceptId: C161483
+variables:
+  - name: TUTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C96784
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C96784
+      submissionValue: TUTESTCD
+    assignedTerm:
+      conceptId: C161483
+      value: NTIND
+    role: Topic
+    relationship:
+      subject: TUTESTCD
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
+      object: TUTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TUTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C96783
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C96783
+      submissionValue: TUTEST
+    assignedTerm:
+      conceptId: C161483
+      value: Non-Target Indicator
+    role: Qualifier
+    relationship:
+      subject: TUTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: TUORRES
+    dataElementConceptId: C117221
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    valueList:
+      - "Y"
+      - "N"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 24
+    relationship:
+      subject: TUORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: TUSTRESC
+    dataElementConceptId: C117222
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    valueList:
+      - "Y"
+      - "N"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 24
+    relationship:
+      subject: TUSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: TUEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78735
+      submissionValue: EVAL
+    assignedTerm:
+      conceptId: C25936
+      value: INVESTIGATOR
+    role: Qualifier
+    relationship:
+      subject: TUEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMED
+      object: TUTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: EPOCH
+    dataElementConceptId: C71738
+    isNonStandard: false
+    codelist:
+      conceptId: C99079
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99079
+      submissionValue: EPOCH
+    assignedTerm:
+      conceptId: C48262
+      value: SCREENING
+    role: Timing
+    relationship:
+      subject: EPOCH
+      linkingPhrase: is the epoch of the performance of the test in
+      predicateTerm: IS_EPOCH_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ

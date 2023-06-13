@@ -1,6 +1,6 @@
-%macro generate_yaml_from_bc(excel_file=, package=, range=, type=, out_folder=, debug=0);
+%macro generate_yaml_from_bc(excel_file=, range=, type=, package=, override_package_date=, out_folder=, debug=0);
 
-  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package);
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package, print=999);
 
   data bc_&type._&package;
     set bc_&type._&package(where=(not missing(bc_id)));
@@ -24,22 +24,32 @@
   %end;
 
 
-  data _null_;
+  data issues(keep=_excel_file_ _tab_ BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
+    length prev_BC_ID parent_bc_id_nci $32 outname value qvalue $100 qpackage_date $20 definition2 definition_nci definition_cdisc 
+           short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
+           issue_type $64 expected_value  actual_value comment $2048;
     set work.bc_&type._&package;
-    length prev_BC_ID $32 outname value qvalue $100 qpackage_date $20 definition2 $4000;;
     retain prev_BC_ID "" count 0;
+
+    call missing(short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
+    
     outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
 
+    %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
+
     short_Name=translate(short_Name, " ", "00A0"x);
     short_Name = compress(short_Name, , 'kw');
+    ncit_code = kcompress(ncit_code, , 's');
+    dec_id = kcompress(dec_id, , 's');
     parent_bc_id=kcompress(parent_bc_id, , 's');
     dec_id=kcompress(dec_id, , 's');
     definition=tranwrd(definition, '"', '\"');
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog "WARNING: &type " bc_id @30 definition= / @29 definition2=;
+    if definition ne definition2 then putlog / "WARNING: &type " bc_id @30 definition= / @29 definition2=;
 
+    BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;
       count=0;
@@ -50,10 +60,17 @@
       if not missing(ncit_code) then do;
         put "ncitCode:" +1 ncit_code;
         put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_code;
+        %add2issues_bc(bc_id ne ncit_code, 
+                       %str(BC_ID_NCIT_CODEMISMATCH), 
+                       bc_id, ncit_code, "");
       end;
       if not missing(parent_bc_id) then do;
+        call get_shortname(parent_bc_id, short_name_parent);
+        call get_parent_code_shortname(BC_ID, parent_bc_id_nci, short_name_parent_nci);
+        %add2issues_bc(parent_bc_id ne parent_bc_id_nci, 
+                       %str(PARENT_ID_MISMATCH), 
+                       parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)));
         put "parentConceptId:" +1 parent_bc_id;
-        * put 'parent_id_uri: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' parent_bc_id;
       end;
 
       if not missing(bc_categories) then do;
@@ -64,13 +81,17 @@
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
-      else putlog "ERROR: &type - categories missing: " BC_ID "- " short_name;
+      %add2issues_bc(missing(bc_categories), 
+                     %str(CATEGORIES_MISSING), "", "", "");
 
-      if missing(short_name) then putlog "ERROR: &type - short_name missing: " BC_ID;
+
       put "shortName:" +1 short_name;
-
+      call get_shortname(ncit_code, short_name_nci);
+      %add2issues_bc((short_name ne short_name_nci) or (missing(short_name)), 
+                     %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "");
       if not missing(synonyms) then do;
-        if index(synonyms, ",") > 0 then putlog "WARNING: &type - synonyms issue: " BC_ID "- " short_name "- " synonyms;
+        %add2issues_bc(index(synonyms, ",") > 0, 
+                       %str(SYNONYM_ISSUE_COMMA), "", synonyms, "");
         put "synonyms:";
         countwords=countw(synonyms, ";");
         do i=1 to countwords;
@@ -87,14 +108,18 @@
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
-      else putlog "### NOTE: &type - result_scales missing: " BC_ID "- " short_name;
-
+      %add2issues_bc(missing(result_scales), 
+                     %str(RESULTSCALE_MISSING), "", "", "");
+      call get_definitions(ncit_code, definition_nci, definition_cdisc);
+      definition_nci=tranwrd(definition_nci, '"', '\"');
+      definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
+      %add2issues_bc((definition ne definition_nci) or (missing(definition)), 
+                     %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
       if not missing(definition) then do;
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then put "definition:" +1 '"' Definition +(-1) '"';
           else put "definition:" +1 Definition;
       end;
-      else putlog "ERROR: &type - definition missing: " BC_ID "- " short_name;
 
       if not missing(system) then do;
         put "coding:";
@@ -114,15 +139,24 @@
     if count=2 and not missing(dec_id) then put "dataElementConcepts:";
 
     if not missing(dec_id) then do;
+      dec_id=strip(dec_id);
       put "  - conceptId:" +1 dec_id;
       if not missing(ncit_dec_code) then do;
         put +4 "ncitCode:" +1 ncit_dec_code;
         put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_dec_code;
       end;
-      put +4 "shortName:" +1 dec_label;
+      
+      if not missing(ncit_dec_code) then do;
+        call get_shortname(ncit_dec_code, short_name_dec_nci);
+        %add2issues_bc((dec_label ne short_name_dec_nci) or (missing(dec_label)), 
+                       %str(DEC_SHORTNAME MISMATCH_OR_MISSING), short_name_dec_nci, dec_label, "");
+        put +4 "shortName:" +1 dec_label;
+      end;
+      
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;
-        if index(example_set, ",") > 0 then putlog "WARNING: &type - example_set issue: " BC_ID "- " DEC_ID "- " dec_label"- " example_set;
+        %add2issues_bc(index(example_set, ",") > 0, 
+                       %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "");
         put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;
@@ -135,6 +169,10 @@
       end;
     end;
   run;
+
+  data all_issues_bc;
+    set all_issues_bc issues;
+  run;  
 
 %mend generate_YAML_from_BC;
 
