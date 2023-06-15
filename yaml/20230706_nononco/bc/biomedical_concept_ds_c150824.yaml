@@ -1,0 +1,12 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C150824
+ncitCode: C150824
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C150824
+categories:
+  - Subject Disposition
+  - Non-Protocol Disposition Events
+shortName: Non-Protocol Disposition Event
+synonyms:
+  - Other Event
+definition: The group of incidents that are not driven by the protocol but that may occur during a clinical trial and describe whether a subject completed the study epoch or the reason this event did not occur.

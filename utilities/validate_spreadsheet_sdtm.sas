@@ -5,7 +5,7 @@
 %let _debug=0;
 %let print_html=1;
 
-title01 "%sysfunc(datetime(), is8601dt.)";
+title01 "&now";
 
 /* Package 1*/
 %let excel_file=&root/curation/BC_Package_2022_10_26.xlsx;
@@ -39,25 +39,72 @@ title01 "%sysfunc(datetime(), is8601dt.)";
 %ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_10);
 %ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_12);
 
-/* Oncology Package */
+/* Package 4 - Oncology */
 %let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc_onco_1);
+%ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc4_onco_1);
 
-%ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm_onco_1, drop=%str(drop=significant_digits));
-%ReadExcel(file=&excel_file, range=%str(SDTM_TR)$, dsout=sdtm_onco_2, drop=%str(drop=length significant_digits));
-%ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm_onco_3, drop=%str(drop=length significant_digits));
+%ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm4_onco_1, drop=%str(drop=significant_digits));
+%ReadExcel(file=&excel_file, range=%str(SDTM_TR)$, dsout=sdtm4_onco_2, drop=%str(drop=length significant_digits));
+%ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm4_onco_3, drop=%str(drop=length significant_digits));
+
+
+/* Package 4 - Non-oncology*/
+%let excel_file=&root/curation/draft/BC_Package_R4_draft.xlsx;
+
+%ReadExcel(file=&excel_file, range=%str(BC_AE)$, dsout=bc4_1);
+%ReadExcel(file=&excel_file, range=%str(BC_BE)$, dsout=bc4_2);
+%ReadExcel(file=&excel_file, range=%str(BC_BE_EDITS)$, dsout=bc4_3);
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc4_4);
+%ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc4_5);
+%ReadExcel(file=&excel_file, range=%str(BC_EG_EDITS)$, dsout=bc4_6);
+%ReadExcel(file=&excel_file, range=%str(BC_LB_(TIG)_Biomarkers)$, dsout=bc4_7);
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc4_8);
+%ReadExcel(file=&excel_file, range=%str(BC_MH)$, dsout=bc4_9);
+%ReadExcel(file=&excel_file, range=%str(BC_PR_EDITS)$, dsout=bc4_10);
+%ReadExcel(file=&excel_file, range=%str(BC_VS_EDITS)$, dsout=bc4_11);
+
+%ReadExcel(file=&excel_file, range=%str(SDTM_AE)$, dsout=sdtm4_1, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_BE)$, dsout=sdtm4_2, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS)$, dsout=sdtm4_3, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm4_4, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm4_5, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm4_6, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm4_7, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm4_8, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm4_9, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm4_10, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm4_11, drop=%str(drop=length significant_digits format));
 
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2:);
-  retain order package_date bc_id parent_bc_id bc_categories short_name 
-         synonyms result_scales definition system system_name code dec_id dec_label data_type example_set;
-  length order 8 package_date $64 bc_id parent_bc_id $32 bc_categories synonyms result_scales definition 
-         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set $1024;
+  retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
+         synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
+  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $32 bc_categories synonyms result_scales definition 
+         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set value $32000 name $32;
   set 
       bc:(where=(not missing(bc_id)));
+  
+  array carray{*} _character_;
+  do i=1 to dim(carray);
+    name = vname(carray[i]);
+    value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    if value ne carray[i] then do;
+     put '### ' _excel_file_= _tab_= name= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 value ;
+    end; 
+  end;
+
   order=_n_;
+  
+/*
+  bc_id=kcompress(bc_id, 'C2A0'x);
+  ncit_code=kcompress(ncit_code, 'C2A0'x);
+  parent_bc_id=kcompress(parent_bc_id, 'C2A0'x);
+  dec_id=kcompress(dec_id, 'C2A0'x);
+  ncit_dec_code=kcompress(ncit_dec_code, 'C2A0'x);
+*/
 run;  
+
 
 %if &_debug=1 %then %do;
   proc freq data=bc;
@@ -67,25 +114,40 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_sdtm_bc.html";
+  ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc.html";
+  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._sdtm_bc.xlsx";
 
     proc print data=bc;
     run;
 
   ods html5 close;
+  ods excel close;
   ods listing;
 %end;
 
 data sdtm(drop=change_history F3: F4:);
-  retain order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
+  retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
          codelist subset_codelist value_list assigned_value linking_phrase predicate_term 
-         short_name role format data_type origin_source vlm_target change_history $1024;
+         short_name role format data_type origin_source vlm_target change_history value $1024 name $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
+/*
+  bc_id=kcompress(bc_id, 'C2A0'x);
+  dec_id=kcompress(dec_id, 'C2A0'x);
+*/
+  array carray{*} _character_;
+  do i=1 to dim(carray);
+    name = vname(carray[i]);
+    value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    if value ne carray[i] then do;
+     put '### ' _excel_file_= _tab_= name= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 value ;
+    end; 
+  end;
+
 run;  
 
 %if &_debug=1 %then %do;
@@ -109,17 +171,19 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_sdtm.html";
+  ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm.html";
+  ods excel options(sheet_name="SDTM" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._sdtm.xlsx";
 
     proc print data=sdtm_merged;
     run;
 
   ods html5 close;
+  ods excel close;
   ods listing;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/validate_spreadsheet_sdtm_bc_issues_%sysfunc(date(), b8601da8.).html";
+ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc_issues.html";
 
   /* Unresolved BC Parent BCs */
   proc sql;
@@ -199,7 +263,7 @@ ods html5 file="&root/utilities/validate_spreadsheet_sdtm_bc_issues_%sysfunc(dat
   proc sql;
     title02 "Duplicate SDTM Specialization records (package_date, vlm_group_id, sdtm_variable)";
   /*  create table sdtm_bc_missing as*/
-      select _excel_file_, _tab_, package_date, vlm_group_id, sdtm_variable
+      select _excel_file_, _tab_, package_date, sdtmig_start_version,	sdtmig_end_version, vlm_group_id, sdtm_variable
       from sdtm_merged
       group by package_date, vlm_group_id, sdtm_variable
       having count(*) > 1

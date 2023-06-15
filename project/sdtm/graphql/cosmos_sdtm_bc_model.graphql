@@ -1,0 +1,72 @@
+type AssignedTerm
+  {
+    conceptId: String
+    value: String!
+  }
+
+type CodeList
+  {
+    conceptId: String!
+    href: Uri
+    submissionValue: String!
+  }
+
+type CodeListTerm
+  {
+    termId: String!
+    termValue: String!
+  }
+
+type RelationShip
+  {
+    subject: String!
+    linkingPhrase: LinkingPhrase!
+    predicateTerm: PredicateTerm!
+    object: String!
+  }
+
+type SDTMGroup
+  {
+    packageDate: Date!
+    packageType: SDTMDatasetSpecializationPackageType!
+    domain: String!
+    shortName: String!
+    datasetSpecializationId: String!
+    source: String!
+    sdtmigStartVersion: String!
+    sdtmigEndVersion: String
+    biomedicalConceptId: String
+    variables: [SDTMVariable]
+  }
+
+type SDTMVariable
+  {
+    name: String!
+    dataElementConceptId: String
+    isNonStandard: Boolean
+    codelist: CodeList
+    subsetCodelist: String
+    valueList: [String]
+    assignedTerm: AssignedTerm
+    role: String
+    relationship: RelationShip
+    dataType: SDTMVariableDataType
+    length: Integer
+    format: String
+    significantDigits: Integer
+    mandatoryVariable: Boolean
+    mandatoryValue: Boolean
+    originType: OriginType
+    originSource: OriginSource
+    comparator: Comparator
+    vlmTarget: Boolean
+  }
+
+type SubsetCodeList
+  {
+    parentCodelist: String!
+    subsetShortName: String!
+    subsetLabel: String!
+    codelistTerm: [CodeListTerm]!
+  }
+

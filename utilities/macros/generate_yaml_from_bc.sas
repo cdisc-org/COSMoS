@@ -25,7 +25,7 @@
 
 
   data issues(keep=_excel_file_ _tab_ BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
-    length prev_BC_ID parent_bc_id_nci $32 outname value qvalue $100 qpackage_date $20 definition2 definition_nci definition_cdisc 
+    length prev_BC_ID parent_bc_id_nci $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value  actual_value comment $2048;
     set work.bc_&type._&package;
@@ -43,7 +43,8 @@
     ncit_code = kcompress(ncit_code, , 's');
     dec_id = kcompress(dec_id, , 's');
     parent_bc_id=kcompress(parent_bc_id, , 's');
-    dec_id=kcompress(dec_id, , 's');
+    bc_id=kcompress(bc_id, , 's');
+    ncit_dec_code=kcompress(ncit_dec_code, , 's');
     definition=tranwrd(definition, '"', '\"');
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
@@ -58,6 +59,7 @@
       put "packageType:" +1 "bc";
       put "conceptId:" +1 BC_ID;
       if not missing(ncit_code) then do;
+        ncit_code=strip(ncit_code);
         put "ncitCode:" +1 ncit_code;
         put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_code;
         %add2issues_bc(bc_id ne ncit_code, 
@@ -141,17 +143,23 @@
     if not missing(dec_id) then do;
       dec_id=strip(dec_id);
       put "  - conceptId:" +1 dec_id;
+      
       if not missing(ncit_dec_code) then do;
         put +4 "ncitCode:" +1 ncit_dec_code;
         put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_dec_code;
       end;
       
+      %add2issues_bc(dec_id ne ncit_dec_code, 
+                     %str(BC_DEC_ID_NCIT_CODEMISMATCH), 
+                     dec_id, ncit_dec_code, "");
+
       if not missing(ncit_dec_code) then do;
+
         call get_shortname(ncit_dec_code, short_name_dec_nci);
         %add2issues_bc((dec_label ne short_name_dec_nci) or (missing(dec_label)), 
                        %str(DEC_SHORTNAME MISMATCH_OR_MISSING), short_name_dec_nci, dec_label, "");
-        put +4 "shortName:" +1 dec_label;
       end;
+      put +4 "shortName:" +1 dec_label;
       
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;

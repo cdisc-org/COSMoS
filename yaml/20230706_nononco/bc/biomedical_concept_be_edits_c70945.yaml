@@ -1,0 +1,63 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C70945
+ncitCode: C70945
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70945
+categories:
+  - Biospecimen Events
+shortName: Biospecimen Collection
+synonyms:
+  - Collecting
+  - Collected
+  - Sample Collection
+resultScales:
+  - Nominal
+definition: The act or process of gathering biospecimens for testing, diagnostic, propagation, treatment or research purposes.
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C82977
+    ncitCode: C82977
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82977
+    shortName: Dictionary-derived Term
+    dataType: string
+    exampleSet:
+      - "Collecting"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Collection"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171435
+    shortName: Sample Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Brain"
+      - "Lung"
+  - conceptId: C117052
+    ncitCode: C117052
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117052
+    shortName: Accountable Party
+    dataType: string
+    exampleSet:
+      - "Site"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Tumor Tisue"

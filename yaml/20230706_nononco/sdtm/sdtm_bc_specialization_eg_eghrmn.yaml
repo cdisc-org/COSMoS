@@ -1,0 +1,196 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: EGHRMN
+domain: EG
+shortName: Mean Heart Rate by Electrocardiogram
+source: EG.EGTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C119259
+variables:
+  - name: EGTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C71153
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71153
+      submissionValue: EGTESTCD
+    assignedTerm:
+      conceptId: C119259
+      value: EGHRMN
+    role: Topic
+    relationship:
+      subject: EGTESTCD
+      linkingPhrase: is the code for the name in
+      predicateTerm: IS_DECODED_BY
+      object: EGTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: EGTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C71152
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71152
+      submissionValue: EGTEST
+    assignedTerm:
+      conceptId: C119259
+      value: ECG Mean Heart Rate
+    role: Qualifier
+    relationship:
+      subject: EGTEST
+      linkingPhrase: decodes
+      predicateTerm: DECODES
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: EGORRES
+    dataElementConceptId: C49148
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: EGORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: EGORRESU
+    dataElementConceptId: C73688
+    isNonStandard: false
+    assignedTerm:
+      value: beats/min
+    role: Qualifier
+    relationship:
+      subject: EGORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: EGORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+    vlmTarget: true 
+  - name: EGSTRESC
+    dataElementConceptId: C49148
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: EGSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: EGSTRESN
+    dataElementConceptId: C49148
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: EGSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: EGSTRESU
+    dataElementConceptId: C73688
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    assignedTerm:
+      value: beats/min
+    role: Qualifier
+    relationship:
+      subject: EGSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: EGSTRESN
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+    vlmTarget: true 
+  - name: EGCAT
+    dataElementConceptId: C83254
+    isNonStandard: false
+    assignedTerm:
+      value: MEASUREMENT
+    role: Qualifier
+    relationship:
+      subject: EGCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: EGPOS
+    dataElementConceptId: C83113
+    isNonStandard: false
+    codelist:
+      conceptId: C71148
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71148
+      submissionValue: POSITION
+    role: Qualifier
+    relationship:
+      subject: EGPOS
+      linkingPhrase: was the subject position during performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: EGMETHOD
+    dataElementConceptId: C83089
+    isNonStandard: false
+    codelist:
+      conceptId: C71151
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71151
+      submissionValue: EGMETHOD
+    role: Qualifier
+    relationship:
+      subject: EGMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: EGEVAL
+    dataElementConceptId: C83259
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78735
+      submissionValue: EVAL
+    subsetCodelist: EVAL_EG
+    valueList:
+      - "ADJUDICATION COMMITTEE"
+      - "INDEPENDENT ASSESSOR"
+      - "INVESTIGATOR"
+      - "VENDOR"
+    role: Qualifer
+    relationship:
+      subject: EGEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN

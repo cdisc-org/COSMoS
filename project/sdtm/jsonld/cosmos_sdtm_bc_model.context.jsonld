@@ -1,0 +1,208 @@
+{
+   "_comments": "Auto generated from cosmos_sdtm_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2023-06-15T17:04:38\n    Schema: COSMoS-Biomedical-Concepts-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/1-0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "COSMoS-Biomedical-Concepts-Schema": "https://www.cdisc.org/cosmos/1-0/",
+      "linkml": "https://w3id.org/linkml/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://www.cdisc.org/cosmos/1-0/",
+      "assignedTerm": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/assignedTerm"
+      },
+      "conceptId": "@id",
+      "value": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/value"
+      },
+      "biomedicalConceptId": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/biomedicalConceptId"
+      },
+      "codelist": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/codelist"
+      },
+      "codelistTerm": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/codelistTerm"
+      },
+      "comparator": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/comparator"
+      },
+      "dataElementConceptId": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/dataElementConceptId"
+      },
+      "datasetSpecializationId": "@id",
+      "dataType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/dataType"
+      },
+      "domain": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/domain"
+      },
+      "format": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/format"
+      },
+      "href": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/href"
+      },
+      "isNonStandard": {
+         "@type": "xsd:boolean",
+         "@id": "https://www.cdisc.org/cosmos/1-0/isNonStandard"
+      },
+      "length": {
+         "@type": "xsd:integer",
+         "@id": "https://www.cdisc.org/cosmos/1-0/length"
+      },
+      "linkingPhrase": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/linkingPhrase"
+      },
+      "mandatoryValue": {
+         "@type": "xsd:boolean",
+         "@id": "https://www.cdisc.org/cosmos/1-0/mandatoryValue"
+      },
+      "mandatoryVariable": {
+         "@type": "xsd:boolean",
+         "@id": "https://www.cdisc.org/cosmos/1-0/mandatoryVariable"
+      },
+      "name": "@id",
+      "object": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/object"
+      },
+      "originSource": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/originSource"
+      },
+      "originType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/originType"
+      },
+      "packageDate": {
+         "@type": "xsd:date",
+         "@id": "https://www.cdisc.org/cosmos/1-0/packageDate"
+      },
+      "packageType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/packageType"
+      },
+      "parentCodelist": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/parentCodelist"
+      },
+      "predicateTerm": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "https://www.cdisc.org/cosmos/1-0/predicateTerm"
+      },
+      "relationship": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/relationship"
+      },
+      "role": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/role"
+      },
+      "sdtmigEndVersion": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/sdtmigEndVersion"
+      },
+      "sdtmigStartVersion": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/sdtmigStartVersion"
+      },
+      "shortName": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/shortName"
+      },
+      "significantDigits": {
+         "@type": "xsd:integer",
+         "@id": "https://www.cdisc.org/cosmos/1-0/significantDigits"
+      },
+      "source": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/source"
+      },
+      "subject": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/subject"
+      },
+      "submissionValue": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/submissionValue"
+      },
+      "subsetCodelist": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/subsetCodelist"
+      },
+      "subsetLabel": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/subsetLabel"
+      },
+      "subsetShortName": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/subsetShortName"
+      },
+      "termId": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/termId"
+      },
+      "termValue": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/termValue"
+      },
+      "valueList": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/valueList"
+      },
+      "variables": {
+         "@type": "@id",
+         "@id": "https://www.cdisc.org/cosmos/1-0/variables"
+      },
+      "vlmTarget": {
+         "@type": "xsd:boolean",
+         "@id": "https://www.cdisc.org/cosmos/1-0/vlmTarget"
+      },
+      "AssignedTerm": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/AssignedTerm"
+      },
+      "CodeList": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/CodeList"
+      },
+      "CodeListTerm": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/CodeListTerm"
+      },
+      "RelationShip": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/RelationShip"
+      },
+      "SDTMGroup": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/SDTMGroup"
+      },
+      "SDTMVariable": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/SDTMVariable"
+      },
+      "SubsetCodeList": {
+         "@id": "https://www.cdisc.org/cosmos/1-0/SubsetCodeList"
+      }
+   }
+}

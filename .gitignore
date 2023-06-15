@@ -10,6 +10,9 @@ work/
 *.lst
 *.sas7b*
 get_*.html
+get_*.xlsx
 create_*.html
+create_*.xlsx
 validate_*.html
+validate_*.xlsx
 *.code-workspace

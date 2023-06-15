@@ -1,4 +1,4 @@
-%macro ReadExcel(file=, range=, dsout=, drop=, keep=, rename=, print=10);
+%macro ReadExcel(file=, range=, dsout=, drop=, keep=, rename=, print=20);
 
 /*
 Problem Note 46472: Character strings can be truncated at 255 or 1024 characters when importing Excel files into SAS
@@ -29,11 +29,11 @@ run;
 
 %if &_Debug %then %do;
   proc contents data=&dsout varnum;
-  title "ReadExcel";
+  title01 "ReadExcel - %sysfunc(datetime(), is8601dt.)";
   run;
 
   proc print data=&dsout(obs=&print);
-  title "ReadExcel";
+  title01 "ReadExcel - %sysfunc(datetime(), is8601dt.)";
   run;
 
 %end;

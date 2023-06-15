@@ -1,0 +1,249 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.cdisc.org/cosmos/1-0/:SDTMGroup> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Identifier for SDTM Value Level Metadata group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 4 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:datasetSpecializationId> ],
+        [ sh:description "The earliest SDTMIG version applicable to the BC dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 6 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:sdtmigStartVersion> ],
+        [ sh:class <https://www.cdisc.org/cosmos/1-0/:SDTMVariable> ;
+            sh:description "Variable included in the SDTM dataset specialization" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 9 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:variables> ],
+        [ sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:packageDate> ],
+        [ sh:description "Domain for the SDTM specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:domain> ],
+        [ sh:description "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 3 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:shortName> ],
+        [ sh:description "The last SDTMIG version that is applicable to the BC dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:sdtmigEndVersion> ],
+        [ sh:description "Package type (sdtm for SDTM Dataset Specializations)" ;
+            sh:in ( "sdtm" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:packageType> ],
+        [ sh:description "Biomedical Concept identifier" ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:biomedicalConceptId> ],
+        [ sh:description "SDTM VLM Source which categorizes VLM groups by topic variable" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 5 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:source> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:SDTMGroup> .
+
+<https://www.cdisc.org/cosmos/1-0/:SubsetCodeList> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Subset codelist short name" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:subsetShortName> ],
+        [ sh:class <https://www.cdisc.org/cosmos/1-0/:CodeListTerm> ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 3 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:codelistTerm> ],
+        [ sh:description "Subset codelist label" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:subsetLabel> ],
+        [ sh:description "Subset codelist parent codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:parentCodelist> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:SubsetCodeList> .
+
+<https://www.cdisc.org/cosmos/1-0/:AssignedTerm> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:conceptId> ],
+        [ sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:value> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:AssignedTerm> .
+
+<https://www.cdisc.org/cosmos/1-0/:CodeList> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Link to NCIt for the codelist" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:href> ],
+        [ sh:description "CDISC submission value for the codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:submissionValue> ],
+        [ sh:description "C-code for a codelist in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:conceptId> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:CodeList> .
+
+<https://www.cdisc.org/cosmos/1-0/:CodeListTerm> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Submision value of term in subset codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:termValue> ],
+        [ sh:description "C-code term in subset codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:termId> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:CodeListTerm> .
+
+<https://www.cdisc.org/cosmos/1-0/:RelationShip> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Variable relationship descriptive linking phrase" ;
+            sh:in ( "decodes the value in" "is decoded by the value in" "groups values in" "is the subject position during performance of the test in" "is the result of the test in" "is the unit for the value in" "is the specimen tested in" "specifies the anatomical location of the performance of the test in" "further specifies the anatomical location in" "is the method for the test in" "is the subject's fasting status during the performance of the test in" "identifies an observation described by" "is the dictionary code for the test in" "is the role of the assessor who performed the test in" "is the epoch of the performance of the test in" "identifies overall response supported by tumor assessments identified by" "identifies the image from the procedure in" "identifies the tumor found by the test in" "groups tumor assessments used in overall response identified by" "is the identifier for the source data used in the performance of the test in" "associates the tumor identified in" "indicates the previous irradiation status of the tumor identified by" "indicates the progression status of the previous irradiated tumor identified by" "further describes the test in" "is a dictionary-derived term for the value in" "is original text for" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:linkingPhrase> ],
+        [ sh:description "Subject in a variable relationship" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:subject> ],
+        [ sh:description "Short variable relatio ship linking phrase for programming purposes" ;
+            sh:in ( "DECODES" "IS_DECODED_BY" "GROUPS" "IS_SUBJECT_STATE_FOR" "IS_RESULT_OF" "IS_UNIT_FOR" "IDENTIFIES_OBSERVATION" "IS_SPECIMEN_TESTED_IN" "SPECIFIES" "CODES" "PERFORMED" "IS_EPOCH_OF" "GROUPS_BY" "IDENTIFIES_PRODUCT_IN" "IDENTIFIES_TUMOR_IN" "IS_ORIGINAL_TEXT_FOR" "IS_DERIVED_FROM" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:predicateTerm> ],
+        [ sh:description "Object in a variable relationship" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 3 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:object> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:RelationShip> .
+
+<https://www.cdisc.org/cosmos/1-0/:SDTMVariable> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "Variable significant_digits" ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:significantDigits> ],
+        [ sh:description "Target variable for VLM" ;
+            sh:maxCount 1 ;
+            sh:order 18 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:vlmTarget> ],
+        [ sh:description "Comparison operator for SDTM group variables included in VLM" ;
+            sh:in ( "EQ" "IN" ) ;
+            sh:maxCount 1 ;
+            sh:order 17 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:comparator> ],
+        [ sh:description "Variable length" ;
+            sh:maxCount 1 ;
+            sh:minInclusive 1 ;
+            sh:order 10 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:length> ],
+        [ sh:description "Biomedical Concept Data Element Concept idenfifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:dataElementConceptId> ],
+        [ sh:description "Flag that indicates if the variable is a non-standard variable" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:isNonStandard> ],
+        [ sh:description "Subset codelist short name" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:subsetCodelist> ],
+        [ sh:description "Variable data type" ;
+            sh:in ( "float" "integer" "text" ) ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:dataType> ],
+        [ sh:description "Variable included in the SDTM dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:name> ],
+        [ sh:class <https://www.cdisc.org/cosmos/1-0/:AssignedTerm> ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 6 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:assignedTerm> ],
+        [ sh:description "Variable display format" ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:format> ],
+        [ sh:description "Variable origin source (define-XML v21)" ;
+            sh:in ( "Investigator" "Sponsor" "Subject" "Vendor" ) ;
+            sh:maxCount 1 ;
+            sh:order 16 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:originSource> ],
+        [ sh:class <https://www.cdisc.org/cosmos/1-0/:CodeList> ;
+            sh:description "Codelist" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:codelist> ],
+        [ sh:description "Indicator that variable must be present within the SDTM group" ;
+            sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:mandatoryVariable> ],
+        [ sh:description "Indicator that variable must be populated within the SDTM group" ;
+            sh:maxCount 1 ;
+            sh:order 14 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:mandatoryValue> ],
+        [ sh:description "SDTM variable role" ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:role> ],
+        [ sh:description "Variable origin type (define-XML v21)" ;
+            sh:in ( "Assigned" "Collected" "Derived" "Predecessor" "Protocol" ) ;
+            sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:originType> ],
+        [ sh:description "List of SDTM submission values used if subset codelist is not applicable" ;
+            sh:order 5 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:valueList> ],
+        [ sh:class <https://www.cdisc.org/cosmos/1-0/:RelationShip> ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 8 ;
+            sh:path <https://www.cdisc.org/cosmos/1-0/:relationship> ] ;
+    sh:targetClass <https://www.cdisc.org/cosmos/1-0/:SDTMVariable> .
+

@@ -1,0 +1,74 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C111307
+ncitCode: C111307
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111307
+parentConceptId: C83146
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Abnormalities
+  - ECG Findings
+  - ECG Abnormalities
+shortName: Rhythm Not Otherwise Specified ECG Assessment
+synonyms:
+  - RHYNOS
+  - Rhythm Not Otherwise Specified
+resultScales:
+  - Nominal
+definition: An electrocardiographic assessment of a cardiac rhythm that is not specified in a particular list.
+dataElementConcepts:
+  - conceptId: C83254
+    ncitCode: C83254
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83254
+    shortName: Electrocardiogram Category
+    dataType: string
+    exampleSet:
+      - "Finding"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Asystole"
+      - "Bradycardia"
+      - "Pause"
+      - "Pause > 3.0 Seconds"
+      - "Tachycardia"
+      - "Undetermined Rhythym"
+      - "Undetermined Supraventricular Rhythm"
+  - conceptId: C83113
+    ncitCode: C83113
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83113
+    shortName: Electrocardiogram Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C83089
+    ncitCode: C83089
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83089
+    shortName: Electrocardiogram Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C123976
+    ncitCode: C123976
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123976
+    shortName: Electrocardiogram Lead
+    dataType: string
+    exampleSet:
+      - "Lead 1"
+      - "Lead 2"
+  - conceptId: C83259
+    ncitCode: C83259
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83259
+    shortName: Electrocardiogram Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

@@ -1,0 +1,184 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: OXYSAT
+domain: VS
+shortName: Oxygen Saturation
+source: VS.VSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C60832
+variables:
+  - name: VSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C66741
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C60832
+      value: OXYSAT
+    role: Topic
+    relationship:
+      subject: VSTESTCD
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
+      object: VSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: VSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67153
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C60832
+      value: Oxygen Saturation
+    role: Qualifier
+    relationship:
+      subject: VSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: VSORRES
+    dataElementConceptId: C173522
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: VSORRESU
+    dataElementConceptId: C48570
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C25613
+      value: %
+    role: Qualifier
+    relationship:
+      subject: VSORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESC
+    dataElementConceptId: C173522
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESN
+    dataElementConceptId: C173522
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESU
+    dataElementConceptId: C48570
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C25613
+      value: %
+    role: Qualifier
+    relationship:
+      subject: VSSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C189603
+      value: PULSE OXIMETRY
+    role: Qualifier
+    relationship:
+      subject: VSMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: VSLOC
+    dataElementConceptId: C83088
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
+      submissionValue: LOC
+    valueList:
+      - "FINGER"
+      - "EARLOBE"
+    role: Qualifier
+    relationship:
+      subject: VSLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: VSLAT
+    dataElementConceptId: C123975
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
+      submissionValue: LAT
+    valueList:
+      - "LEFT"
+      - "RIGHT"
+    role: Qualifier
+    relationship:
+      subject: VSLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: VSLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN

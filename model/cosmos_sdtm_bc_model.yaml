@@ -274,6 +274,10 @@ enums:
       associates the tumor identified in:
       indicates the previous irradiation status of the tumor identified by:
       indicates the progression status of the previous irradiated tumor identified by:
+      further describes the test in:
+      is a dictionary-derived term for the value in:
+      is original text for:
+      
 
   PredicateTerm:
     permissible_values:
@@ -292,8 +296,8 @@ enums:
       GROUPS_BY:
       IDENTIFIES_PRODUCT_IN:
       IDENTIFIES_TUMOR_IN:
-
-
+      IS_ORIGINAL_TEXT_FOR:
+      IS_DERIVED_FROM:
 
   OriginType:
     permissible_values:

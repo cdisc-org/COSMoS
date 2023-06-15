@@ -1,0 +1,122 @@
+BASE <https://www.cdisc.org/cosmos/1-0/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<AssignedTerm> CLOSED {
+    (  $<AssignedTerm_tes> (  <conceptId> @linkml:String ? ;
+          <value> @linkml:String
+       ) ;
+       rdf:type [ <AssignedTerm> ] ?
+    )
+}
+
+<CodeList> CLOSED {
+    (  $<CodeList_tes> (  <href> @linkml:Uri ? ;
+          <submissionValue> @linkml:String
+       ) ;
+       rdf:type [ <CodeList> ]
+    )
+}
+
+<CodeListTerm> CLOSED {
+    (  $<CodeListTerm_tes> (  <termId> @linkml:String ;
+          <termValue> @linkml:String
+       ) ;
+       rdf:type [ <CodeListTerm> ] ?
+    )
+}
+
+<RelationShip> CLOSED {
+    (  $<RelationShip_tes> (  <subject> @linkml:String ;
+          <linkingPhrase> @<LinkingPhrase> ;
+          <predicateTerm> @<PredicateTerm> ;
+          <object> @linkml:String
+       ) ;
+       rdf:type [ <RelationShip> ] ?
+    )
+}
+
+<SDTMGroup> CLOSED {
+    (  $<SDTMGroup_tes> (  <packageDate> @linkml:Date ;
+          <packageType> @<SDTMDatasetSpecializationPackageType> ;
+          <domain> @linkml:String ;
+          <shortName> @linkml:String ;
+          <source> @linkml:String ;
+          <sdtmigStartVersion> @linkml:String ;
+          <sdtmigEndVersion> @linkml:String ? ;
+          <biomedicalConceptId> @linkml:String ? ;
+          <variables> @<SDTMVariable> *
+       ) ;
+       rdf:type [ <SDTMGroup> ]
+    )
+}
+
+<SDTMVariable> CLOSED {
+    (  $<SDTMVariable_tes> (  <dataElementConceptId> @linkml:String ? ;
+          <isNonStandard> @linkml:Boolean ? ;
+          <codelist> @<CodeList> ? ;
+          <subsetCodelist> @linkml:String ? ;
+          <valueList> @linkml:String * ;
+          <assignedTerm> @<AssignedTerm> ? ;
+          <role> @linkml:String ? ;
+          <relationship> @<RelationShip> ? ;
+          <dataType> @<SDTMVariableDataType> ? ;
+          <length> @linkml:Integer ? ;
+          <format> @linkml:String ? ;
+          <significantDigits> @linkml:Integer ? ;
+          <mandatoryVariable> @linkml:Boolean ? ;
+          <mandatoryValue> @linkml:Boolean ? ;
+          <originType> @<OriginType> ? ;
+          <originSource> @<OriginSource> ? ;
+          <comparator> @<Comparator> ? ;
+          <vlmTarget> @linkml:Boolean ?
+       ) ;
+       rdf:type [ <SDTMVariable> ]
+    )
+}
+
+<SubsetCodeList> CLOSED {
+    (  $<SubsetCodeList_tes> (  <parentCodelist> @linkml:String ;
+          <subsetShortName> @linkml:String ;
+          <subsetLabel> @linkml:String ;
+          <codelistTerm> @<CodeListTerm> +
+       ) ;
+       rdf:type [ <SubsetCodeList> ] ?
+    )
+}
+
+

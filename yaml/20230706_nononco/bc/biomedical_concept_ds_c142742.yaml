@@ -1,0 +1,39 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C142742
+ncitCode: C142742
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C142742
+parentConceptId: C150824
+categories:
+  - Subject Disposition
+  - Non-Protocol Disposition Events
+shortName: Unblinding
+synonyms:
+  - Unblinded
+  - Unmasking
+resultScales:
+  - Nominal
+definition: The process by which identifying information for a patient or group of outcomes from a clinical trial is revealed to the subject and/or investigators conducting the clinical study.
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C83122
+    ncitCode: C83122
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83122
+    shortName: Disposition Dictionary Derived Term
+    dataType: string
+    exampleSet:
+      - "Treatment Unblinded"
+  - conceptId: C83245
+    ncitCode: C83245
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83245
+    shortName: Disposition Category
+    dataType: string
+  - conceptId: C83248
+    ncitCode: C83248
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248
+    shortName: Disposition Subcategory
+    dataType: string

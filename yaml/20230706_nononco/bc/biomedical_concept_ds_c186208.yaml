@@ -1,0 +1,39 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C186208
+ncitCode: C186208
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C186208
+parentConceptId: C150824
+categories:
+  - Subject Disposition
+  - Non-Protocol Disposition Events
+shortName: Study Site Transfer
+synonyms:
+  - Site Transfer
+  - Study Subject Site Transfer
+resultScales:
+  - Nominal
+definition: The study subject has been assigned to a different study site.
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C83122
+    ncitCode: C83122
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83122
+    shortName: Disposition Dictionary Derived Term
+    dataType: string
+    exampleSet:
+      - "Site Transfer"
+  - conceptId: C83245
+    ncitCode: C83245
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83245
+    shortName: Disposition Category
+    dataType: string
+  - conceptId: C83248
+    ncitCode: C83248
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83248
+    shortName: Disposition Subcategory
+    dataType: string

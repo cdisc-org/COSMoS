@@ -1,0 +1,12 @@
+{
+   "linkml": "https://w3id.org/linkml/",
+   "BiomedicalConcept": {
+      "@id": "https://www.cdisc.org/cosmos/1-0/BiomedicalConcept"
+   },
+   "Coding": {
+      "@id": "https://www.cdisc.org/cosmos/1-0/Coding"
+   },
+   "DataElementConcept": {
+      "@id": "https://www.cdisc.org/cosmos/1-0/DataElementConcept"
+   }
+}

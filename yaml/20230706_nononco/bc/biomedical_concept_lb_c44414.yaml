@@ -1,0 +1,33 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C44414
+ncitCode: C44414
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44414
+parentConceptId: C45398
+categories:
+  - Laboratory Tests
+  - Nitroso Carcinogens
+  - Carcinogenic Nitrosamines
+shortName: Nitrosonornicotine
+synonyms:
+  - NNN
+  - N-nitrosonornicotine
+resultScales:
+  - Quantitative
+definition: A yellow, oily liquid nitrosamine that solidifies at cold temperatures and emits toxic fumes of nitrogen oxides when heated to decomposition. Nitrosonornicotine is found in tobacco products and is likely produced by the nitrosation of nicotine during the making and smoking of tobacco products. This substance is only used in research to induce tumors in experimental animals. Exposure to nitrosonornicotine affects the liver and nitrosonornicotine is reasonably anticipated to be a human carcinogen. (NCI05)
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: NEW_2
+    shortName: Unit of Mass or Substance Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"

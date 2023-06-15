@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-13T15:13:08
+# Generation date: 2023-06-15T17:04:30
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -441,6 +441,12 @@ class LinkingPhrase(EnumDefinitionImpl):
                 PermissibleValue(text="indicates the previous irradiation status of the tumor identified by") )
         setattr(cls, "indicates the progression status of the previous irradiated tumor identified by",
                 PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by") )
+        setattr(cls, "further describes the test in",
+                PermissibleValue(text="further describes the test in") )
+        setattr(cls, "is a dictionary-derived term for the value in",
+                PermissibleValue(text="is a dictionary-derived term for the value in") )
+        setattr(cls, "is original text for",
+                PermissibleValue(text="is original text for") )
 
 class PredicateTerm(EnumDefinitionImpl):
 
@@ -459,6 +465,8 @@ class PredicateTerm(EnumDefinitionImpl):
     GROUPS_BY = PermissibleValue(text="GROUPS_BY")
     IDENTIFIES_PRODUCT_IN = PermissibleValue(text="IDENTIFIES_PRODUCT_IN")
     IDENTIFIES_TUMOR_IN = PermissibleValue(text="IDENTIFIES_TUMOR_IN")
+    IS_ORIGINAL_TEXT_FOR = PermissibleValue(text="IS_ORIGINAL_TEXT_FOR")
+    IS_DERIVED_FROM = PermissibleValue(text="IS_DERIVED_FROM")
 
     _defn = EnumDefinition(
         name="PredicateTerm",

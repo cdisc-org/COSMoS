@@ -97,7 +97,10 @@
             "is the identifier for the source data used in the performance of the test in",
             "associates the tumor identified in",
             "indicates the previous irradiation status of the tumor identified by",
-            "indicates the progression status of the previous irradiated tumor identified by"
+            "indicates the progression status of the previous irradiated tumor identified by",
+            "further describes the test in",
+            "is a dictionary-derived term for the value in",
+            "is original text for"
          ],
          "title": "LinkingPhrase",
          "type": "string"
@@ -142,7 +145,9 @@
             "IS_EPOCH_OF",
             "GROUPS_BY",
             "IDENTIFIES_PRODUCT_IN",
-            "IDENTIFIES_TUMOR_IN"
+            "IDENTIFIES_TUMOR_IN",
+            "IS_ORIGINAL_TEXT_FOR",
+            "IS_DERIVED_FROM"
          ],
          "title": "PredicateTerm",
          "type": "string"

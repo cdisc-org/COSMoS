@@ -1,0 +1,58 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C179747
+ncitCode: C179747
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C179747
+categories:
+  - Biospecimen Events
+shortName: Biospecimen Shipping
+synonyms:
+  - Biological Sample Shipment
+  - Biological Sample Shipping
+  - Biological Sample Transport
+  - Specimen Ship
+  - Shipped
+resultScales:
+  - Nominal
+definition: The act or process of the logistical considerations for transporting a biological sample from the sender to the receiver.
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C82977
+    ncitCode: C82977
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82977
+    shortName: Dictionary-derived Term
+    dataType: string
+    exampleSet:
+      - "Shipping"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Transport"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C117052
+    ncitCode: C117052
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117052
+    shortName: Accountable Party
+    dataType: string
+    exampleSet:
+      - "Lab"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Tumor Tissue"
+      - "Blood"

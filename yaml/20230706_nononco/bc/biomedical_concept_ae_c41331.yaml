@@ -1,0 +1,12 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C41331
+ncitCode: C41331
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C41331
+parentConceptId: C36291
+categories:
+  - Events
+  - Reported Events
+  - Adverse Events
+shortName: Adverse Event
+definition: Any unfavorable or unintended disease, sign, or symptom (including an abnormal laboratory finding) that is temporally associated with the use of a medical treatment or procedure, and that may or may not be considered related to the medical treatment or procedure. Such events can be related to the intervention, dose, route of administration, patient, or caused by an interaction with another drug(s) or procedure(s).

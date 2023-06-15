@@ -1,0 +1,737 @@
+{
+  "name": "COSMoS-Biomedical-Concepts-Schema",
+  "id": "https://www.cdisc.org/cosmos/1-0",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "prefixes": [
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    }
+  ],
+  "default_prefix": "https://www.cdisc.org/cosmos/1-0/",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "BiomedicalConceptPackageType",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/BiomedicalConceptPackageType",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "permissible_values": [
+        {
+          "text": "bc"
+        }
+      ]
+    },
+    {
+      "name": "BiomedicalConceptResultScale",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/BiomedicalConceptResultScale",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "permissible_values": [
+        {
+          "text": "Quantitative"
+        },
+        {
+          "text": "Ordinal"
+        },
+        {
+          "text": "Nominal"
+        },
+        {
+          "text": "Narrative"
+        }
+      ]
+    },
+    {
+      "name": "DataElementConceptDataType",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/DataElementConceptDataType",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "permissible_values": [
+        {
+          "text": "boolean"
+        },
+        {
+          "text": "decimal"
+        },
+        {
+          "text": "integer"
+        },
+        {
+          "text": "string"
+        },
+        {
+          "text": "uri"
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "description": "An identifier that uniquely represents an entity",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "identifier": true,
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "BiomedicalConcept",
+        "DataElementConcept"
+      ],
+      "range": "string",
+      "required": true,
+      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "description": "NCIt code",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "BiomedicalConcept",
+        "DataElementConcept"
+      ],
+      "range": "string",
+      "pattern": "^(C[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "href",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "BiomedicalConcept",
+        "DataElementConcept"
+      ],
+      "range": "uri",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "packageDate",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/packageDate",
+      "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/packageDate",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "date",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "packageType",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/packageType",
+      "description": "Package type (bc for Biomedical Concepts)",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/packageType",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "BiomedicalConceptPackageType",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "categories",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/categories",
+      "description": "Biomedical Concept category for the faciliation of API search and extract",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/categories",
+      "multivalued": true,
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "string",
+      "required": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "parentConceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/parentConceptId",
+      "description": "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/parentConceptId",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "shortName",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/shortName",
+      "description": "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/shortName",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "BiomedicalConcept",
+        "DataElementConcept"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "synonyms",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/synonyms",
+      "description": "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/synonyms",
+      "multivalued": true,
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "string",
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "resultScales",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/resultScales",
+      "description": "Scale of measurement for the Biomedical Concept result",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/resultScales",
+      "multivalued": true,
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "BiomedicalConceptResultScale",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "definition",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/definition",
+      "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/definition",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "coding",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/coding",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/coding",
+      "multivalued": true,
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "Coding",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "system",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/system",
+      "description": "Identifies the code system for the synonym concept The URL of the code system should be used if it exists",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/system",
+      "owner": "Coding",
+      "domain_of": [
+        "Coding"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "systemName",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/systemName",
+      "description": "Human-readable name for the code system",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/systemName",
+      "owner": "Coding",
+      "domain_of": [
+        "Coding"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "code",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/code",
+      "description": "Synonym concept for the Biomedical Concept as defined in a code system",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/code",
+      "owner": "Coding",
+      "domain_of": [
+        "Coding"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dataElementConcepts",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/dataElementConcepts",
+      "description": "Data Element Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/dataElementConcepts",
+      "multivalued": true,
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "range": "DataElementConcept",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dataType",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/dataType",
+      "description": "Data Type for the Data Element Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/dataType",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "DataElementConcept"
+      ],
+      "range": "DataElementConceptDataType",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "exampleSet",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/exampleSet",
+      "description": "Example values for the Data Element Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/exampleSet",
+      "multivalued": true,
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "DataElementConcept"
+      ],
+      "range": "string",
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "BiomedicalConcept_conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "description": "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "conceptId",
+      "domain": "BiomedicalConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "identifier": true,
+      "alias": "conceptId",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "conceptId",
+      "range": "string",
+      "required": true,
+      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "BiomedicalConcept_ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "description": "NCIt C-code for the Biomedical Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "ncitCode",
+      "domain": "BiomedicalConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "alias": "ncitCode",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ncitCode",
+      "range": "string",
+      "pattern": "^(C[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "BiomedicalConcept_href",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "href",
+      "domain": "BiomedicalConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "alias": "href",
+      "owner": "BiomedicalConcept",
+      "domain_of": [
+        "BiomedicalConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "href",
+      "range": "uri",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "DataElementConcept_conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "description": "NCI C-code for the BC Data Element Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "conceptId",
+      "domain": "DataElementConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/conceptId",
+      "identifier": true,
+      "alias": "conceptId",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "DataElementConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "conceptId",
+      "range": "string",
+      "required": true,
+      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "DataElementConcept_ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "description": "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "ncitCode",
+      "domain": "DataElementConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/ncitCode",
+      "alias": "ncitCode",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "DataElementConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "ncitCode",
+      "range": "string",
+      "pattern": "^(C[0123456789]+)$",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "DataElementConcept_href",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "description": "Link to NCIt for the Data Element Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "is_a": "href",
+      "domain": "DataElementConcept",
+      "slot_uri": "https://www.cdisc.org/cosmos/1-0/href",
+      "alias": "href",
+      "owner": "DataElementConcept",
+      "domain_of": [
+        "DataElementConcept"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "href",
+      "range": "uri",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "BiomedicalConcept",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/BiomedicalConcept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slots": [
+        "BiomedicalConcept_conceptId",
+        "BiomedicalConcept_ncitCode",
+        "BiomedicalConcept_href",
+        "packageDate",
+        "packageType",
+        "categories",
+        "parentConceptId",
+        "shortName",
+        "synonyms",
+        "resultScales",
+        "definition",
+        "coding",
+        "dataElementConcepts"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://www.cdisc.org/cosmos/1-0/BiomedicalConcept",
+      "tree_root": true,
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Coding",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/Coding",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slots": [
+        "code",
+        "system",
+        "systemName"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://www.cdisc.org/cosmos/1-0/Coding",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DataElementConcept",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0/DataElementConcept",
+      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "slots": [
+        "DataElementConcept_conceptId",
+        "DataElementConcept_ncitCode",
+        "DataElementConcept_href",
+        "shortName",
+        "dataType",
+        "exampleSet"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://www.cdisc.org/cosmos/1-0/DataElementConcept",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "cosmos_bc_model.yaml",
+  "source_file_date": "2023-05-23T12:31:15",
+  "source_file_size": 4353,
+  "generation_date": "2023-06-15T17:07:28",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "../project/bc/jsonld/cosmos_bc_model.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://www.cdisc.org/cosmos/1-0/"
+    }
+  ]
+}

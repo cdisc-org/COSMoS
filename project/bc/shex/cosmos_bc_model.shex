@@ -1,0 +1,77 @@
+BASE <https://www.cdisc.org/cosmos/1-0/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<BiomedicalConcept> CLOSED {
+    (  $<BiomedicalConcept_tes> (  <ncitCode> @linkml:String ? ;
+          <href> @linkml:Uri ? ;
+          <packageDate> @linkml:Date ;
+          <packageType> @<BiomedicalConceptPackageType> ;
+          <categories> @linkml:String + ;
+          <parentConceptId> @linkml:String ? ;
+          <shortName> @linkml:String ;
+          <synonyms> @linkml:String * ;
+          <resultScales> @<BiomedicalConceptResultScale> * ;
+          <definition> @linkml:String ;
+          <coding> @<Coding> * ;
+          <dataElementConcepts> @<DataElementConcept> *
+       ) ;
+       rdf:type [ <BiomedicalConcept> ]
+    )
+}
+
+<Coding> CLOSED {
+    (  $<Coding_tes> (  <code> @linkml:String ;
+          <system> @linkml:String ;
+          <systemName> @linkml:String ?
+       ) ;
+       rdf:type [ <Coding> ] ?
+    )
+}
+
+<DataElementConcept> CLOSED {
+    (  $<DataElementConcept_tes> (  <ncitCode> @linkml:String ? ;
+          <href> @linkml:Uri ? ;
+          <shortName> @linkml:String ;
+          <dataType> @<DataElementConceptDataType> ;
+          <exampleSet> @linkml:String *
+       ) ;
+       rdf:type [ <DataElementConcept> ]
+    )
+}
+
+
