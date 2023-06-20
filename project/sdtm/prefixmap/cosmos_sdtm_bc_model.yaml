@@ -1,24 +1,5 @@
 {
-   "linkml": "https://w3id.org/linkml/",
-   "AssignedTerm": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/AssignedTerm"
-   },
-   "CodeList": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/CodeList"
-   },
-   "CodeListTerm": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/CodeListTerm"
-   },
-   "RelationShip": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/RelationShip"
-   },
-   "SDTMGroup": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/SDTMGroup"
-   },
-   "SDTMVariable": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/SDTMVariable"
-   },
-   "SubsetCodeList": {
-      "@id": "https://www.cdisc.org/cosmos/1-0/SubsetCodeList"
-   }
+   "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
+   "cosmos": "https://www.cdisc.org/cosmos/1-0",
+   "linkml": "https://w3id.org/linkml/"
 }

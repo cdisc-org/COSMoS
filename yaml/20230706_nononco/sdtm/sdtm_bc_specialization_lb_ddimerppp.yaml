@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C82621
-      value: DDIMER
+      value: "DDIMER"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C82621
-      value: D-Dimer
+      value: "D-Dimer"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: CHEMISTRY
+      value: "CHEMISTRY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -167,7 +167,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C106556
-      value: PLATELET POOR PLASMA
+      value: "PLATELET POOR PLASMA"
     role: Qualifier
     relationship:
       subject: LBSPEC

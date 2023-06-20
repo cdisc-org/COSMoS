@@ -6,6 +6,10 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  cosmos: https://www.cdisc.org/cosmos/1-0
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+
+default_prefix: cosmos
 
 default_range: string
 
@@ -251,68 +255,110 @@ enums:
 
   LinkingPhrase:
     permissible_values:
+      associates the tumor identified in:
       decodes the value in:
-      is decoded by the value in:
-      groups values in:
-      is the subject position during performance of the test in:
-      is the result of the test in:
-      is the unit for the value in:
-      is the specimen tested in:
-      specifies the anatomical location of the performance of the test in:
+      describes actions taken:
+      describes relationship of:
+      describes the outcome of:
+      further describes the test in:
       further specifies the anatomical location in:
-      is the method for the test in:
-      is the subject's fasting status during the performance of the test in:
+      groups tumor assessments used in overall response identified by:
+      groups values in:
+      identifies a pattern of:
       identifies an observation described by:
-      is the dictionary code for the test in:
-      is the role of the assessor who performed the test in:
-      is the epoch of the performance of the test in:
       identifies overall response supported by tumor assessments identified by:
       identifies the image from the procedure in:
       identifies the tumor found by the test in:
-      groups tumor assessments used in overall response identified by:
-      is the identifier for the source data used in the performance of the test in:
-      associates the tumor identified in:
+      indicates occurrence of the value in:
+      indicates pre-specification of the value in:
+      indicates severity of:
       indicates the previous irradiation status of the tumor identified by:
       indicates the progression status of the previous irradiated tumor identified by:
-      further describes the test in:
       is a dictionary-derived term for the value in:
+      is decoded by the value in:
       is original text for:
-      
+      is the administration anatomical location for the treatment in:
+      is the clinical significance interpretation for:
+      is the code for the value in:
+      is the dictionary code for the test in:
+      is the epoch of the performance of the test in:
+      is the identifier for the source data used in the performance of the test in:
+      is the material type of the subject of the activity in:
+      is the method for the test in:
+      is the result of the test in:
+      is the role of the assessor who performed the test in:
+      is the specimen tested in:
+      is the subject position during performance of the test in:
+      is the subject's fasting status during the performance of the test in:
+      is the unit for the value in:
+      specifies the anatomical location of:
+      specifies the anatomical location of the performance of the test in:
+      specifies the severity of:
+      values are grouped by:
+      was the subject position during performance of the test in:
 
   PredicateTerm:
     permissible_values:
       DECODES:
-      IS_DECODED_BY:
+      DESCRIBES:
       GROUPS:
-      IS_SUBJECT_STATE_FOR:
-      IS_RESULT_OF:
-      IS_UNIT_FOR:
-      IDENTIFIES_OBSERVATION:
-      IS_SPECIMEN_TESTED_IN:
-      SPECIFIES:
-      CODES:
-      PERFORMED:
-      IS_EPOCH_OF:
       GROUPS_BY:
+      IDENTIFIES:
+      IDENTIFIES_OBSERVATION:
       IDENTIFIES_PRODUCT_IN:
       IDENTIFIES_TUMOR_IN:
-      IS_ORIGINAL_TEXT_FOR:
+      INDICATES:
+      IS_ATTRIBUTE_FOR:
+      IS_DECODED_BY:
       IS_DERIVED_FROM:
+      IS_EPOCH_OF:
+      IS_GROUPED_BY:
+      IS_INDICATOR_FOR:
+      IS_ORIGINAL_TEXT_FOR:
+      IS_RESULT_OF:
+      IS_SPECIMEN_TESTED_IN:
+      IS_SUBJECT_STATE_FOR:
+      IS_UNIT_FOR:
+      PERFORMED:
+      PERFORMS:
+      SPECIFIES:
 
   OriginType:
+    description: Terminology relevant to the origin type for datasets in the Define-XML document.
+    code_set: NCIT:C170449
     permissible_values:
       Assigned:
+        description: A value that is derived through designation, such as values from a look up table or a label on a CRF.
+        meaning: NCIT:C170547
       Collected:
+        description: A value that is actually observed and recorded by a person or obtained by an instrument.
+        meaning: NCIT:C170548
       Derived:
+        description: A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.
+        meaning: NCIT:C170549
       Predecessor:
+        description: A value that is copied from a variable in another dataset.
+        meaning: NCIT:C170550
       Protocol:
+        description: A value that is included as part of the study protocol.
+        meaning: NCIT:C170551
 
   OriginSource:
+    description: Terminology relevant to the origin source for datasets in the Define-XML document.
+    code_set: NCIT:C170450
     permissible_values:
       Investigator:
+        description: A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.
+        meaning: NCIT:C25936
       Sponsor:
+        description: An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]
+        meaning: NCIT:C70793
       Subject:
+        description: An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.
+        meaning: NCIT:C41189
       Vendor:
+        description: A person or agency that promotes or exchanges goods or services for money. (NCI)
+        meaning: NCIT:C68608
 
   Role:
     permissible_values:

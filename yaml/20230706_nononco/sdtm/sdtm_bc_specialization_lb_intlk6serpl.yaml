@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C74834
-      value: INTLK6
+      value: "INTLK6"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C74834
-      value: Interleukin 6
+      value: "Interleukin 6"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: CHEMISTRY
+      value: "CHEMISTRY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -138,7 +138,7 @@ variables:
       submissionValue: UNIT
     assignedTerm:
       conceptId: C67327
-      value: ng/L
+      value: "ng/L"
     role: Qualifier
     relationship:
       subject: LBSTRESU
@@ -151,7 +151,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 26881-3
+      value: "26881-3"
     role: Qualifier
     relationship:
       subject: LBLOINC
@@ -169,7 +169,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C105706
-      value: SERUM OR PLASMA
+      value: "SERUM OR PLASMA"
     role: Qualifier
     relationship:
       subject: LBSPEC

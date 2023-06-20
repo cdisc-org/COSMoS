@@ -4,7 +4,7 @@
 
 Biomedical Concept package release date indicating when the BC package was published to production
 
-URI: [https://www.cdisc.org/cosmos/1-0/packageDate](https://www.cdisc.org/cosmos/1-0/packageDate)
+URI: [cosmos:packageDate](https://www.cdisc.org/cosmos/1-0packageDate)
 
 
 ## Domain and Range

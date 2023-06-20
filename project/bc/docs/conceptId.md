@@ -4,7 +4,7 @@
 
 An identifier that uniquely represents an entity
 
-URI: [https://www.cdisc.org/cosmos/1-0/conceptId](https://www.cdisc.org/cosmos/1-0/conceptId)
+URI: [cosmos:conceptId](https://www.cdisc.org/cosmos/1-0conceptId)
 
 
 ## Domain and Range

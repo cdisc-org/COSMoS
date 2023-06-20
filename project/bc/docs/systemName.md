@@ -4,7 +4,7 @@
 
 Human-readable name for the code system
 
-URI: [https://www.cdisc.org/cosmos/1-0/systemName](https://www.cdisc.org/cosmos/1-0/systemName)
+URI: [cosmos:systemName](https://www.cdisc.org/cosmos/1-0systemName)
 
 
 ## Domain and Range

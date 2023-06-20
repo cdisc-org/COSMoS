@@ -16,11 +16,11 @@ variables:
       submissionValue: EGTESTCD
     assignedTerm:
       conceptId: C111320
-      value: SPRARRY
+      value: "SPRARRY"
     role: Topic
     relationship:
       subject: EGTESTCD
-      linkingPhrase: is the code for the name in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: EGTEST
     mandatoryVariable: true 
@@ -34,11 +34,11 @@ variables:
       submissionValue: EGTEST
     assignedTerm:
       conceptId: C111320
-      value: Supraventricular Arrhythmias
+      value: "Supraventricular Arrhythmias"
     role: Qualifier
     relationship:
       subject: EGTEST
-      linkingPhrase: decodes
+      linkingPhrase: decodes the value in
       predicateTerm: DECODES
       object: EGTESTCD
     mandatoryVariable: true 
@@ -108,7 +108,7 @@ variables:
     dataElementConceptId: C83254
     isNonStandard: false
     assignedTerm:
-      value: FINDING
+      value: "FINDING"
     role: Qualifier
     relationship:
       subject: EGCAT

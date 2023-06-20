@@ -4,7 +4,7 @@
 
 Biomedical Concept Data Element Concept idenfifier foreign key
 
-URI: [https://www.cdisc.org/cosmos/1-0/dataElementConceptId](https://www.cdisc.org/cosmos/1-0/dataElementConceptId)
+URI: [cosmos:dataElementConceptId](https://www.cdisc.org/cosmos/1-0dataElementConceptId)
 
 
 ## Domain and Range

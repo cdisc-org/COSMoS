@@ -4,7 +4,7 @@
 
 Submision value of term in subset codelist
 
-URI: [https://www.cdisc.org/cosmos/1-0/termValue](https://www.cdisc.org/cosmos/1-0/termValue)
+URI: [cosmos:termValue](https://www.cdisc.org/cosmos/1-0termValue)
 
 
 ## Domain and Range

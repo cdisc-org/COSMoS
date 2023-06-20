@@ -12,7 +12,7 @@ variables:
     dataElementConceptId: C25372
     isNonStandard: false
     assignedTerm:
-      value: TRANSPORT
+      value: "TRANSPORT"
     role: Qualifier
     dataType: text
     length: 200
@@ -32,7 +32,7 @@ variables:
       submissionValue: BEDECOD
     assignedTerm:
       conceptId: C40353
-      value: SHIPPING
+      value: "SHIPPING"
     role: Qualifier
     dataType: text
     length: 200
@@ -49,7 +49,7 @@ variables:
     dataElementConceptId: C82571
     isNonStandard: false
     assignedTerm:
-      value: Shipping
+      value: "Shipping"
     role: Topic
     dataType: text
     length: 200
@@ -70,11 +70,6 @@ variables:
     role: Topic
     dataType: text
     length: 200
-    relationship:
-      subject: BEPARTY
-      linkingPhrase:  
-      predicateTerm:  
-      object: BETERM
     mandatoryVariable: false
     mandatoryValue: false
   - name: BESPEC
@@ -89,8 +84,8 @@ variables:
     length: 200
     relationship:
       subject: BESPEC
-      linkingPhrase:  
-      predicateTerm:  
+      linkingPhrase: is the material type of the subject of the activity in
+      predicateTerm: IS_ATTRIBUTE_FOR
       object: BETERM
     mandatoryVariable: false
     mandatoryValue: false

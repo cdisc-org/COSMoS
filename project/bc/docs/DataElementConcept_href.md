@@ -4,7 +4,7 @@
 
 Link to NCIt for the Data Element Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/DataElementConcept_href](https://www.cdisc.org/cosmos/1-0/DataElementConcept_href)
+URI: [cosmos:DataElementConcept_href](https://www.cdisc.org/cosmos/1-0DataElementConcept_href)
 
 
 ## Domain and Range

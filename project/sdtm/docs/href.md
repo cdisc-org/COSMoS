@@ -4,7 +4,7 @@
 
 Link to NCIt for the codelist
 
-URI: [https://www.cdisc.org/cosmos/1-0/href](https://www.cdisc.org/cosmos/1-0/href)
+URI: [cosmos:href](https://www.cdisc.org/cosmos/1-0href)
 
 
 ## Domain and Range

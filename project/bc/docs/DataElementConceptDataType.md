@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/DataElementConceptDataType](https://www.cdisc.org/cosmos/1-0/DataElementConceptDataType)
+URI: [cosmos:DataElementConceptDataType](https://www.cdisc.org/cosmos/1-0DataElementConceptDataType)
 
 
 ## Other properties

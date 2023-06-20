@@ -4,7 +4,7 @@
 
 Example values for the Data Element Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/exampleSet](https://www.cdisc.org/cosmos/1-0/exampleSet)
+URI: [cosmos:exampleSet](https://www.cdisc.org/cosmos/1-0exampleSet)
 
 
 ## Domain and Range

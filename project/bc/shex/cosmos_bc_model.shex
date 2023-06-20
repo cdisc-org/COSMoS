@@ -36,41 +36,47 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<BiomedicalConcept> CLOSED {
-    (  $<BiomedicalConcept_tes> (  <ncitCode> @linkml:String ? ;
-          <href> @linkml:Uri ? ;
-          <packageDate> @linkml:Date ;
-          <packageType> @<BiomedicalConceptPackageType> ;
-          <categories> @linkml:String + ;
-          <parentConceptId> @linkml:String ? ;
-          <shortName> @linkml:String ;
-          <synonyms> @linkml:String * ;
-          <resultScales> @<BiomedicalConceptResultScale> * ;
-          <definition> @linkml:String ;
-          <coding> @<Coding> * ;
-          <dataElementConcepts> @<DataElementConcept> *
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<https://www.cdisc.org/cosmos/1-0BiomedicalConcept> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0BiomedicalConcept_tes> (  <https://www.cdisc.org/cosmos/1-0ncitCode> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
+          <https://www.cdisc.org/cosmos/1-0packageDate> @linkml:Date ;
+          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType> ;
+          <https://www.cdisc.org/cosmos/1-0categories> @linkml:String + ;
+          <https://www.cdisc.org/cosmos/1-0parentConceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0synonyms> @linkml:String * ;
+          <https://www.cdisc.org/cosmos/1-0resultScales> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale> * ;
+          <https://www.cdisc.org/cosmos/1-0definition> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0coding> @<https://www.cdisc.org/cosmos/1-0Coding> * ;
+          <https://www.cdisc.org/cosmos/1-0dataElementConcepts> @<https://www.cdisc.org/cosmos/1-0DataElementConcept> *
        ) ;
-       rdf:type [ <BiomedicalConcept> ]
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0BiomedicalConcept> ]
     )
 }
 
-<Coding> CLOSED {
-    (  $<Coding_tes> (  <code> @linkml:String ;
-          <system> @linkml:String ;
-          <systemName> @linkml:String ?
+<https://www.cdisc.org/cosmos/1-0Coding> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0Coding_tes> (  <https://www.cdisc.org/cosmos/1-0code> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0system> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0systemName> @linkml:String ?
        ) ;
-       rdf:type [ <Coding> ] ?
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0Coding> ] ?
     )
 }
 
-<DataElementConcept> CLOSED {
-    (  $<DataElementConcept_tes> (  <ncitCode> @linkml:String ? ;
-          <href> @linkml:Uri ? ;
-          <shortName> @linkml:String ;
-          <dataType> @<DataElementConceptDataType> ;
-          <exampleSet> @linkml:String *
+<https://www.cdisc.org/cosmos/1-0DataElementConcept> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0DataElementConcept_tes> (  <https://www.cdisc.org/cosmos/1-0ncitCode> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
+          <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType> ;
+          <https://www.cdisc.org/cosmos/1-0exampleSet> @linkml:String *
        ) ;
-       rdf:type [ <DataElementConcept> ]
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0DataElementConcept> ]
     )
 }
 

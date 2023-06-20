@@ -4,7 +4,7 @@
 
 Subset codelist parent codelist
 
-URI: [https://www.cdisc.org/cosmos/1-0/parentCodelist](https://www.cdisc.org/cosmos/1-0/parentCodelist)
+URI: [cosmos:parentCodelist](https://www.cdisc.org/cosmos/1-0parentCodelist)
 
 
 ## Domain and Range

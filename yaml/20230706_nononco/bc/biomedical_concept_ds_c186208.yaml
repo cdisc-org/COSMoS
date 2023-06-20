@@ -6,7 +6,9 @@ href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=
 parentConceptId: C150824
 categories:
   - Subject Disposition
+  - Disposition Events
   - Non-Protocol Disposition Events
+  - Other Events
 shortName: Study Site Transfer
 synonyms:
   - Site Transfer

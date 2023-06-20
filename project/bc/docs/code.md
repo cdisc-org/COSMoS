@@ -4,7 +4,7 @@
 
 Synonym concept for the Biomedical Concept as defined in a code system
 
-URI: [https://www.cdisc.org/cosmos/1-0/code](https://www.cdisc.org/cosmos/1-0/code)
+URI: [cosmos:code](https://www.cdisc.org/cosmos/1-0code)
 
 
 ## Domain and Range

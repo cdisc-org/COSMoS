@@ -4,7 +4,7 @@
 
 Package type (bc for Biomedical Concepts)
 
-URI: [https://www.cdisc.org/cosmos/1-0/packageType](https://www.cdisc.org/cosmos/1-0/packageType)
+URI: [cosmos:packageType](https://www.cdisc.org/cosmos/1-0packageType)
 
 
 ## Domain and Range

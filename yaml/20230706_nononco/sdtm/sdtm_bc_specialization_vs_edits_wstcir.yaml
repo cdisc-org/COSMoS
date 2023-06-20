@@ -15,12 +15,12 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
       submissionValue: VSTESTCD
     assignedTerm:
-      conceptId: C174446
-      value: WSTCIR
+      conceptId: C100948
+      value: "WSTCIR"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -33,8 +33,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
       submissionValue: VSTEST
     assignedTerm:
-      conceptId: C174446
-      value: Waist Circumference
+      conceptId: C100948
+      value: "Waist Circumference"
     role: Qualifier
     relationship:
       subject: VSTEST
@@ -139,7 +139,7 @@ variables:
       submissionValue: LOC
     assignedTerm:
       conceptId: C64192
-      value: WAIST
+      value: "WAIST"
     role: Qualifier
     relationship:
       subject: VSLOC

@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/RelationShip](https://www.cdisc.org/cosmos/1-0/RelationShip)
+URI: [cosmos:RelationShip](https://www.cdisc.org/cosmos/1-0RelationShip)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable]++-%20relationship%200..1>[RelationShip&#124;subject:string;linkingPhrase:LinkingPhrase;predicateTerm:PredicateTerm;object:string],[SDTMVariable])](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable]++-%20relationship%200..1>[RelationShip&#124;subject:string;linkingPhrase:LinkingPhrase;predicateTerm:PredicateTerm;object:string],[SDTMVariable])

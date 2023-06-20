@@ -4,7 +4,7 @@
 
 Variable included in the SDTM dataset specialization
 
-URI: [https://www.cdisc.org/cosmos/1-0/name](https://www.cdisc.org/cosmos/1-0/name)
+URI: [cosmos:name](https://www.cdisc.org/cosmos/1-0name)
 
 
 ## Domain and Range

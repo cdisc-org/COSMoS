@@ -16,11 +16,11 @@ variables:
       submissionValue: EGTESTCD
     assignedTerm:
       conceptId: C117791
-      value: RRAG
+      value: "RRAG"
     role: Topic
     relationship:
       subject: EGTESTCD
-      linkingPhrase: is the code for the name in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: EGTEST
     mandatoryVariable: true 
@@ -34,11 +34,11 @@ variables:
       submissionValue: EGTEST
     assignedTerm:
       conceptId: C117791
-      value: RR Interval, Aggregate
+      value: "RR Interval, Aggregate"
     role: Qualifier
     relationship:
       subject: EGTEST
-      linkingPhrase: decodes
+      linkingPhrase: decodes the value in
       predicateTerm: DECODES
       object: EGTESTCD
     mandatoryVariable: true 
@@ -63,9 +63,13 @@ variables:
   - name: EGORRESU
     dataElementConceptId: C42574
     isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
     valueList:
-      - "msec"
-      - "sec"
+      - "ms"
+      - "/s"
     role: Qualifier
     relationship:
       subject: EGORRESU
@@ -117,7 +121,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submissionValue: UNIT
     assignedTerm:
-      value: msec
+      conceptId: C41140
+      value: "ms"
     role: Qualifier
     relationship:
       subject: EGSTRESU
@@ -126,13 +131,12 @@ variables:
       object: EGSTRESN
     mandatoryVariable: true 
     mandatoryValue: false
-    comparator: EQ
     vlmTarget: true 
   - name: EGCAT
     dataElementConceptId: C83254
     isNonStandard: false
     assignedTerm:
-      value: INTERVAL
+      value: "INTERVAL"
     role: Qualifier
     relationship:
       subject: EGCAT

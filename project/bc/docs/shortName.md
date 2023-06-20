@@ -4,7 +4,7 @@
 
 NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/shortName](https://www.cdisc.org/cosmos/1-0/shortName)
+URI: [cosmos:shortName](https://www.cdisc.org/cosmos/1-0shortName)
 
 
 ## Domain and Range

@@ -16,11 +16,11 @@ variables:
       submissionValue: VSTESTCD
     assignedTerm:
       conceptId: C49680
-      value: FRMSIZE
+      value: "FRMSIZE"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: VSTEST
     assignedTerm:
       conceptId: C49680
-      value: Body Frame Size
+      value: "Body Frame Size"
     role: Qualifier
     relationship:
       subject: VSTEST

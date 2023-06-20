@@ -4,7 +4,7 @@
 
 SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id
 
-URI: [https://www.cdisc.org/cosmos/1-0/shortName](https://www.cdisc.org/cosmos/1-0/shortName)
+URI: [cosmos:shortName](https://www.cdisc.org/cosmos/1-0shortName)
 
 
 ## Domain and Range

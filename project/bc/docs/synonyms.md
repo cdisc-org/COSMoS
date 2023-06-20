@@ -4,7 +4,7 @@
 
 Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
 
-URI: [https://www.cdisc.org/cosmos/1-0/synonyms](https://www.cdisc.org/cosmos/1-0/synonyms)
+URI: [cosmos:synonyms](https://www.cdisc.org/cosmos/1-0synonyms)
 
 
 ## Domain and Range

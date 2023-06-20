@@ -2,7 +2,7 @@
 
 %include "&root/utilities/config.sas";
 
-%let _debug=0;
+%let _debug=2;
 %let print_html=1;
 
 title01 "&now";
@@ -49,7 +49,7 @@ title01 "&now";
 
 
 /* Package 4 - Non-oncology*/
-%let excel_file=&root/curation/draft/BC_Package_R4_draft.xlsx;
+%let excel_file=&root/curation/BC_Package_R4_2023_07_06.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_AE)$, dsout=bc4_1);
 %ReadExcel(file=&excel_file, range=%str(BC_BE)$, dsout=bc4_2);
@@ -69,11 +69,12 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm4_4, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm4_5, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm4_6, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm4_7, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm4_8, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm4_9, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm4_10, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm4_11, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS_2)$, dsout=sdtm4_7, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm4_8, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm4_9, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm4_10, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm4_11, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm4_12, drop=%str(drop=length significant_digits format));
 
 /************************************************************************************************************************/
 
@@ -90,7 +91,7 @@ data bc(drop=change_history F1: F2:);
     name = vname(carray[i]);
     value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if value ne carray[i] then do;
-     put '### ' _excel_file_= _tab_= name= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 value ;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= name= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 value ;
     end; 
   end;
 
@@ -106,7 +107,7 @@ data bc(drop=change_history F1: F2:);
 run;  
 
 
-%if &_debug=1 %then %do;
+%if &_debug gt 2 %then %do;
   proc freq data=bc;
     tables bc_id * package_date / nopercent norow nocol;
   run;  
@@ -144,15 +145,17 @@ data sdtm(drop=change_history F3: F4:);
     name = vname(carray[i]);
     value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if value ne carray[i] then do;
-     put '### ' _excel_file_= _tab_= name= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 value ;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= name= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 value ;
     end; 
   end;
 
 run;  
 
-%if &_debug=1 %then %do;
+%if &_debug gt 1 %then %do;
   proc freq data=sdtm;
     tables vlm_group_id * package_date / nopercent norow nocol;
+    tables linking_phrase / nopercent norow nocol;
+    tables predicate_term / nopercent norow nocol;
   run;  
 %end;  
 

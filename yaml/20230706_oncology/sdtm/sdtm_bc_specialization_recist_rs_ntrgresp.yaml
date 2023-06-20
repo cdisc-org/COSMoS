@@ -16,11 +16,11 @@ variables:
       submissionValue: ONCRTSCD
     assignedTerm:
       conceptId: C94535
-      value: NTRGRESP
+      value: "NTRGRESP"
     role: Topic
     relationship:
       subject: RSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: RSTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: ONCRTS
     assignedTerm:
       conceptId: C94535
-      value: Non-target Response
+      value: "Non-target Response"
     role: Qualifier
     relationship:
       subject: RSTEST
@@ -56,7 +56,7 @@ variables:
       submissionValue: ONCRSCAT
     assignedTerm:
       conceptId: C124415
-      value: RECIST 1.1
+      value: "RECIST 1.1"
     role: Qualifier
     relationship:
       subject: RSCAT
@@ -125,7 +125,7 @@ variables:
       submissionValue: EVAL
     assignedTerm:
       conceptId: C25936
-      value: INVESTIGATOR
+      value: "INVESTIGATOR"
     role: Qualifier
     relationship:
       subject: RSEVAL
@@ -146,7 +146,7 @@ variables:
       submissionValue: EPOCH
     assignedTerm:
       conceptId: C101526
-      value: TREATMENT
+      value: "TREATMENT"
     role: Timing
     relationship:
       subject: EPOCH

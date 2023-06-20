@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C64488
-      value: CA
+      value: "CA"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C64488
-      value: Calcium
+      value: "Calcium"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: CHEMISTRY
+      value: "CHEMISTRY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -140,7 +140,7 @@ variables:
       submissionValue: UNIT
     assignedTerm:
       conceptId: C64387
-      value: mmol/L
+      value: "mmol/L"
     role: Qualifier
     relationship:
       subject: LBSTRESU
@@ -153,7 +153,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 1996-8
+      value: "1996-8"
     role: Qualifier
     relationship:
       subject: LBLOINC
@@ -171,7 +171,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C12434
-      value: BLOOD
+      value: "BLOOD"
     role: Qualifier
     relationship:
       subject: LBSPEC

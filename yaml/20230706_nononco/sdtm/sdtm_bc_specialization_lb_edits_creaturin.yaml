@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C64547
-      value: CREAT
+      value: "CREAT"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C64547
-      value: Creatinine
+      value: "Creatinine"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: CHEMISTRY
+      value: "CHEMISTRY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -139,7 +139,7 @@ variables:
       submissionValue: UNIT
     assignedTerm:
       conceptId: C64387
-      value: mmol/L
+      value: "mmol/L"
     role: Qualifier
     relationship:
       subject: LBSTRESU
@@ -152,7 +152,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 35204-7
+      value: "35204-7"
     role: Qualifier
     relationship:
       subject: LBLOINC
@@ -169,8 +169,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
       submissionValue: SPECTYPE
     assignedTerm:
-      conceptId: C105706
-      value: URINE
+      conceptId: C13283
+      value: "URINE"
     role: Qualifier
     relationship:
       subject: LBSPEC

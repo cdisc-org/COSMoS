@@ -4,7 +4,7 @@
 
 Subject in a variable relationship
 
-URI: [https://www.cdisc.org/cosmos/1-0/subject](https://www.cdisc.org/cosmos/1-0/subject)
+URI: [cosmos:subject](https://www.cdisc.org/cosmos/1-0subject)
 
 
 ## Domain and Range

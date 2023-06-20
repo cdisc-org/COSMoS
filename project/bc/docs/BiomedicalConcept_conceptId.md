@@ -4,7 +4,7 @@
 
 A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_conceptId](https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_conceptId)
+URI: [cosmos:BiomedicalConcept_conceptId](https://www.cdisc.org/cosmos/1-0BiomedicalConcept_conceptId)
 
 
 ## Domain and Range

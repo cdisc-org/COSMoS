@@ -4,7 +4,7 @@
 
 Variable length
 
-URI: [https://www.cdisc.org/cosmos/1-0/length](https://www.cdisc.org/cosmos/1-0/length)
+URI: [cosmos:length](https://www.cdisc.org/cosmos/1-0length)
 
 
 ## Domain and Range

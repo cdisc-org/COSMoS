@@ -4,7 +4,7 @@
 
 Variable relationship descriptive linking phrase
 
-URI: [https://www.cdisc.org/cosmos/1-0/linkingPhrase](https://www.cdisc.org/cosmos/1-0/linkingPhrase)
+URI: [cosmos:linkingPhrase](https://www.cdisc.org/cosmos/1-0linkingPhrase)
 
 
 ## Domain and Range

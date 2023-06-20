@@ -11,16 +11,16 @@ variables:
   - name: VSTESTCD
     isNonStandard: false
     codelist:
-      conceptId: C65047
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      conceptId: C66741
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66741
       submissionValue: VSTESTCD
     assignedTerm:
       conceptId: C49677
-      value: HR
+      value: "HR"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -29,12 +29,12 @@ variables:
   - name: VSTEST
     isNonStandard: false
     codelist:
-      conceptId: C67154
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      conceptId: C67153
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67153
       submissionValue: VSTEST
     assignedTerm:
       conceptId: C49677
-      value: Heart Rate
+      value: "Heart Rate"
     role: Qualifier
     relationship:
       subject: VSTEST
@@ -68,7 +68,7 @@ variables:
       submissionValue: VSRESU
     assignedTerm:
       conceptId: C49673
-      value: beats/min
+      value: "beats/min"
     role: Qualifier
     relationship:
       subject: VSORRESU
@@ -115,7 +115,7 @@ variables:
       submissionValue: VSRESU
     assignedTerm:
       conceptId: C49673
-      value: beats/min
+      value: "beats/min"
     role: Qualifier
     relationship:
       subject: VSSTRESU

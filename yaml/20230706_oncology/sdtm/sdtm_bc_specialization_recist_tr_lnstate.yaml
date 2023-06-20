@@ -16,11 +16,11 @@ variables:
       submissionValue: TRTESTCD
     assignedTerm:
       conceptId: C124448
-      value: LNSTATE
+      value: "LNSTATE"
     role: Topic
     relationship:
       subject: TRTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TRTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: TRTEST
     assignedTerm:
       conceptId: C124448
-      value: Lymph Node State
+      value: "Lymph Node State"
     role: Qualifier
     relationship:
       subject: TRTEST

@@ -32,13 +32,13 @@ variables:
       submissionValue: PROCEDUR
     assignedTerm:
       conceptId: C17204
-      value: CT SCAN
+      value: "CT SCAN"
     role: Qualifier
     dataType: text
     length: 200
     relationship:
       subject: PRDECOD
-      linkingPhrase: is the dictionary-derived term for the value in
+      linkingPhrase: is a dictionary-derived term for the value in
       predicateTerm: DECODES
       object: PRTRT
     mandatoryVariable: true 
@@ -129,7 +129,7 @@ variables:
       submissionValue: LOC
     assignedTerm:
       conceptId: C25389
-      value: CHEST
+      value: "CHEST"
     role: Qualifier
     dataType: text
     length: 200

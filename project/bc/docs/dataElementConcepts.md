@@ -4,7 +4,7 @@
 
 Data Element Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/dataElementConcepts](https://www.cdisc.org/cosmos/1-0/dataElementConcepts)
+URI: [cosmos:dataElementConcepts](https://www.cdisc.org/cosmos/1-0dataElementConcepts)
 
 
 ## Domain and Range

@@ -29,8 +29,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124297
       submissionValue: BEDECOD
     assignedTerm:
-      conceptId: C48165
-      value: COLLECTING
+      conceptId: C25453
+      value: "COLLECTING"
     role: Qualifier
     dataType: text
     length: 200
@@ -47,7 +47,7 @@ variables:
     dataElementConceptId: C82571
     isNonStandard: false
     assignedTerm:
-      value: Collecting
+      value: "Collecting"
     role: Topic
     dataType: text
     length: 200
@@ -70,11 +70,6 @@ variables:
     role: Topic
     dataType: text
     length: 200
-    relationship:
-      subject: BEPARTY
-      linkingPhrase:  
-      predicateTerm:  
-      object: BETERM
     mandatoryVariable: false
     mandatoryValue: false
   - name: BESPEC
@@ -90,7 +85,7 @@ variables:
     relationship:
       subject: BESPEC
       linkingPhrase: is the material type of the subject of the activity in
-      predicateTerm:  
+      predicateTerm: IS_ATTRIBUTE_FOR
       object: BETERM
     mandatoryVariable: false
     mandatoryValue: false

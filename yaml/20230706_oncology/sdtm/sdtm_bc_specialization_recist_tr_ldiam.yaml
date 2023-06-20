@@ -16,11 +16,11 @@ variables:
       submissionValue: TRTESTCD
     assignedTerm:
       conceptId: C96684
-      value: LDIAM
+      value: "LDIAM"
     role: Topic
     relationship:
       subject: TRTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TRTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: TRTEST
     assignedTerm:
       conceptId: C96684
-      value: Longest Diameter
+      value: "Longest Diameter"
     role: Qualifier
     relationship:
       subject: TRTEST
@@ -71,7 +71,7 @@ variables:
       submissionValue: UNIT
     assignedTerm:
       conceptId: C28251
-      value: mm
+      value: "mm"
     role: Qualifier
     relationship:
       subject: TRORRESU
@@ -122,7 +122,7 @@ variables:
       submissionValue: UNIT
     assignedTerm:
       conceptId: C28251
-      value: mm
+      value: "mm"
     role: Qualifier
     relationship:
       subject: TRSTRESU

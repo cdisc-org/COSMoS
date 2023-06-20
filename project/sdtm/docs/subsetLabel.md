@@ -4,7 +4,7 @@
 
 Subset codelist label
 
-URI: [https://www.cdisc.org/cosmos/1-0/subsetLabel](https://www.cdisc.org/cosmos/1-0/subsetLabel)
+URI: [cosmos:subsetLabel](https://www.cdisc.org/cosmos/1-0subsetLabel)
 
 
 ## Domain and Range

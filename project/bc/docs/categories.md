@@ -4,7 +4,7 @@
 
 Biomedical Concept category for the faciliation of API search and extract
 
-URI: [https://www.cdisc.org/cosmos/1-0/categories](https://www.cdisc.org/cosmos/1-0/categories)
+URI: [cosmos:categories](https://www.cdisc.org/cosmos/1-0categories)
 
 
 ## Domain and Range

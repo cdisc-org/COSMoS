@@ -4,7 +4,7 @@
 
 Identifier for SDTM Value Level Metadata group
 
-URI: [https://www.cdisc.org/cosmos/1-0/datasetSpecializationId](https://www.cdisc.org/cosmos/1-0/datasetSpecializationId)
+URI: [cosmos:datasetSpecializationId](https://www.cdisc.org/cosmos/1-0datasetSpecializationId)
 
 
 ## Domain and Range

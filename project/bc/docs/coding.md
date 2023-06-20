@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/Coding](https://www.cdisc.org/cosmos/1-0/Coding)
+URI: [cosmos:Coding](https://www.cdisc.org/cosmos/1-0Coding)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20coding%200..*>[Coding&#124;code:string;system:string;systemName:string%20%3F],[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20coding%200..*>[Coding&#124;code:string;system:string;systemName:string%20%3F],[BiomedicalConcept])

@@ -16,11 +16,11 @@ variables:
       submissionValue: MBTESTCD
     assignedTerm:
       conceptId: C171532
-      value: SARSCOV2
+      value: "SARSCOV2"
     role: Topic
     relationship:
       subject: MBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: MBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: MBTEST
     assignedTerm:
       conceptId: C171532
-      value: Severe Acute Resp Syndrome Coronavirus 2
+      value: "Severe Acute Resp Syndrome Coronavirus 2"
     role: Qualifier
     relationship:
       subject: MBTEST
@@ -52,7 +52,7 @@ variables:
       submissionValue: MBFTSDTL
     assignedTerm:
       conceptId: C174330
-      value: DETECTION
+      value: "DETECTION"
     role: Qualifier
     relationship:
       subject: MBTSTDTL
@@ -143,7 +143,7 @@ variables:
       submissionValue: METHOD
     assignedTerm:
       conceptId: C28408
-      value: QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION
+      value: "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION"
     role: Qualifier
     relationship:
       subject: MBMETHOD

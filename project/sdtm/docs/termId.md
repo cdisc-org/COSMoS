@@ -4,7 +4,7 @@
 
 C-code term in subset codelist
 
-URI: [https://www.cdisc.org/cosmos/1-0/termId](https://www.cdisc.org/cosmos/1-0/termId)
+URI: [cosmos:termId](https://www.cdisc.org/cosmos/1-0termId)
 
 
 ## Domain and Range

@@ -4,7 +4,7 @@
 
 C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
 
-URI: [https://www.cdisc.org/cosmos/1-0/assignedTerm__conceptId](https://www.cdisc.org/cosmos/1-0/assignedTerm__conceptId)
+URI: [cosmos:assignedTerm__conceptId](https://www.cdisc.org/cosmos/1-0assignedTerm__conceptId)
 
 
 ## Domain and Range

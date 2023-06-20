@@ -16,11 +16,11 @@ variables:
       submissionValue: EGTESTCD
     assignedTerm:
       conceptId: C111131
-      value: AVCOND
+      value: "AVCOND"
     role: Topic
     relationship:
       subject: EGTESTCD
-      linkingPhrase: is the code for the name in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: EGTEST
     mandatoryVariable: true 
@@ -34,11 +34,11 @@ variables:
       submissionValue: EGTEST
     assignedTerm:
       conceptId: C111131
-      value: Atrioventricular Conduction
+      value: "Atrioventricular Conduction"
     role: Qualifier
     relationship:
       subject: EGTEST
-      linkingPhrase: decodes
+      linkingPhrase: decodes the value in
       predicateTerm: DECODES
       object: EGTESTCD
     mandatoryVariable: true 
@@ -68,6 +68,20 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71150
       submissionValue: EGSTRESC
     subsetCodelist: EGSTRESC_AVCOND
+    valueList:
+      - "1ST DEGREE AV BLOCK"
+      - "2:1 AV BLOCK"
+      - "2ND DEGREE AV BLOCK"
+      - "3RD DEGREE AV BLOCK"
+      - "ADVANCED/HIGH GRADE AV BLOCK"
+      - "ATRIOVENTRICULAR DISSOCIATION"
+      - "AV MOBITZ I"
+      - "AV MOBITZ II"
+      - "ISORHYTHMIC DISSOCIATION"
+      - "NONCONDUCTED P WAVE PHYSIOLOGY NOT DEFINED"
+      - "PAROXYSMAL AV BLOCK"
+      - "PR SEGMENT DEPRESSION"
+      - "SHORT PR INTERVAL"
     role: Qualifier
     dataType: text
     length: 8
@@ -86,7 +100,7 @@ variables:
     dataElementConceptId: C83254
     isNonStandard: false
     assignedTerm:
-      value: FINDING
+      value: "FINDING"
     role: Qualifier
     relationship:
       subject: EGCAT

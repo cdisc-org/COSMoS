@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/SubsetCodeList](https://www.cdisc.org/cosmos/1-0/SubsetCodeList)
+URI: [cosmos:SubsetCodeList](https://www.cdisc.org/cosmos/1-0SubsetCodeList)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[CodeListTerm]<codelistTerm%201..*-++[SubsetCodeList&#124;parentCodelist:string;subsetShortName:string;subsetLabel:string],[CodeListTerm])](https://yuml.me/diagram/nofunky;dir:TB/class/[CodeListTerm]<codelistTerm%201..*-++[SubsetCodeList&#124;parentCodelist:string;subsetShortName:string;subsetLabel:string],[CodeListTerm])

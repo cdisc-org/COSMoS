@@ -16,11 +16,11 @@ variables:
       submissionValue: TUTESTCD
     assignedTerm:
       conceptId: C96642
-      value: TUSPLIT
+      value: "TUSPLIT"
     role: Topic
     relationship:
       subject: TUTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TUTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: TUTEST
     assignedTerm:
       conceptId: C96642
-      value: Tumor Split
+      value: "Tumor Split"
     role: Qualifier
     relationship:
       subject: TUTEST
@@ -56,7 +56,7 @@ variables:
       submissionValue: TUIDRS
     assignedTerm:
       conceptId: C94520
-      value: TARGET
+      value: "TARGET"
     role: Qualifier
     dataType: text
     length: 24
@@ -79,7 +79,7 @@ variables:
       submissionValue: TUIDRS
     assignedTerm:
       conceptId: C94520
-      value: TARGET
+      value: "TARGET"
     role: Qualifier
     dataType: text
     length: 24
@@ -209,7 +209,7 @@ variables:
       submissionValue: EPOCH
     assignedTerm:
       conceptId: C101526
-      value: TREATMENT
+      value: "TREATMENT"
     role: Timing
     relationship:
       subject: EPOCH

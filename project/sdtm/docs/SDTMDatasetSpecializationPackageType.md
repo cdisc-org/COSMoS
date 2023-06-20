@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/SDTMDatasetSpecializationPackageType](https://www.cdisc.org/cosmos/1-0/SDTMDatasetSpecializationPackageType)
+URI: [cosmos:SDTMDatasetSpecializationPackageType](https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageType)
 
 
 ## Other properties

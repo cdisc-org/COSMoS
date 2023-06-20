@@ -1,18 +1,20 @@
 packageDate: "2023-07-06"
 packageType: bc
-conceptId: NEW_7
+conceptId: C200145
+ncitCode: C200145
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200145
 categories:
   - Reported Events
   - Medical History Events
   - Medical Conditions
   - Presenting Conditions
-shortName: Medical History Taking
+shortName: Solicited Medical History
 synonyms:
   - Medical History
   - Medical History Collection
 resultScales:
   - Nominal
-definition: A medical history event that is reported by a healthcare professional, consumer, or patient through an organized data collection system.
+definition: Information about an individual's personal medical history that is reported by a healthcare professional, consumer, or patient through an organized data collection system.
 dataElementConcepts:
   - conceptId: C83118
     ncitCode: C83118

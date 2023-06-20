@@ -4,7 +4,7 @@
 
 The earliest SDTMIG version applicable to the BC dataset specialization
 
-URI: [https://www.cdisc.org/cosmos/1-0/sdtmigStartVersion](https://www.cdisc.org/cosmos/1-0/sdtmigStartVersion)
+URI: [cosmos:sdtmigStartVersion](https://www.cdisc.org/cosmos/1-0sdtmigStartVersion)
 
 
 ## Domain and Range

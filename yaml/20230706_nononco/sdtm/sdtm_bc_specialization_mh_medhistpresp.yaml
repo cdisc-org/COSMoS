@@ -6,7 +6,7 @@ shortName: Medical History Prespecified
 source: MH.MHTERM
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
-biomedicalConceptId: NEW_7
+biomedicalConceptId: C200145
 variables:
   - name: MHTERM
     dataElementConceptId: C83118

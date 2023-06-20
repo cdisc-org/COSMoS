@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/DataElementConcept](https://www.cdisc.org/cosmos/1-0/DataElementConcept)
+URI: [cosmos:DataElementConcept](https://www.cdisc.org/cosmos/1-0DataElementConcept)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataType;exampleSet:string%20*],[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataType;exampleSet:string%20*],[BiomedicalConcept])

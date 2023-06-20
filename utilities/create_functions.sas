@@ -1,35 +1,35 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 
 %include "&root/utilities/config.sas";
-  
+
 proc datasets library=macros nolist;
    delete funcs;
 run;
 
 proc fcmp outlib=macros.funcs.python;
-  
-  function get_term_code(codelist_conceptId $, codedValue $) $;    
-    attrib codedValue_conceptId length=$20;
-    declare hash hh(dataset: "data.codelist_package_sdtm");    
-    rc=hh.definedata("codedValue_conceptId");    
-    rc=hh.definekey("codelist_conceptId", "codedValue");    
-    rc=hh.definedone();    
-    rc=hh.find();    
-    if rc eq 0 then return(codedValue_conceptId);    
-    else return ("");    
-  endsub; 
-  
-  function get_codelist_submissionvalue(codelist_conceptId $) $;    
-    attrib codedValue_conceptId length=$20;
-    declare hash hh(dataset: "data.codelist_package_sdtm");    
-    rc=hh.definedata("codelist_SubmissionValue");    
-    rc=hh.definekey("codelist_conceptId");    
-    rc=hh.definedone();    
-    rc=hh.find();    
-    if rc eq 0 then return(codelist_SubmissionValue);    
-    else return ("");    
-  endsub; 
-  
+
+  function get_term_code(codelist_conceptId $, codedValue $) $;
+    length codedValue_conceptId $20;
+    declare hash hh(dataset: "data.codelist_package_sdtm");
+    rc=hh.definedata("codedValue_conceptId");
+    rc=hh.definekey("codelist_conceptId", "codedValue");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(codedValue_conceptId);
+    else return ("");
+  endsub;
+
+  function get_codelist_submissionvalue(codelist_conceptId $) $;
+    length codedValue_conceptId $20;
+    declare hash hh(dataset: "data.codelist_package_sdtm");
+    rc=hh.definedata("codelist_SubmissionValue");
+    rc=hh.definekey("codelist_conceptId");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(codelist_SubmissionValue);
+    else return ("");
+  endsub;
+
   subroutine get_definitions(code $, definition $, definition_cdisc $);
     length definition cdisc_definition $400;
     outargs definition, definition_cdisc;
@@ -50,8 +50,8 @@ proc fcmp outlib=macros.funcs.python;
           if d['source'] == 'CDISC' :
             conceptDefinitionCDISC = d['definition']
       else:
-        conceptDefinition = '' 
-        conceptDefinitionCDISC = '' 
+        conceptDefinition = ''
+        conceptDefinitionCDISC = ''
       return conceptDefinition, conceptDefinitionCDISC
     endsubmit;
     rc = py1.publish();
@@ -74,7 +74,7 @@ proc fcmp outlib=macros.funcs.python;
       try:
         shortName = concept_info['name']
       except:
-        shortName = ''  
+        shortName = ''
       return shortName
     endsubmit;
     rc = py2.publish();
@@ -93,11 +93,19 @@ proc fcmp outlib=macros.funcs.python;
       url = 'https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/'+ccode+'/parents'
       r = requests.get(url)
       concept_info = r.json()
+      parentCode = ''
+      parentShortName = ''
       try:
-          parentCode = concept_info[0]['code']
-          parentShortName = concept_info[0]['name']
+#          parentCode = concept_info[0]['code']
+            
+            parentCode = ";".join([v['code'] for v in concept_info])
+            parentShortName = ";".join([v['name'] for v in concept_info])
+ #          for ele in concept_info:
+ #           parentCode = parentCode + str(ele['code']) + " "
+ #           parentShortName = parentShortName + str(ele['name']) + ";"
+#          parentShortName = concept_info[0]['name']
       except:
-          parentCode = ''  
+          parentCode = ''
           parentShortName = ''
       return parentCode, parentShortName
     endsubmit;
@@ -109,12 +117,12 @@ proc fcmp outlib=macros.funcs.python;
 run;
 
 data test;
-  length ccodes $200 ccode ccode_parent $10 shortname shortname_parent $100 definition definition_cdisc $1000;
-  
+  length ccodes $200 ccode ccode_parent $100 shortname shortname_parent $100 definition definition_cdisc $1000;
+
   * ccodes = "C103420, C117404, C117426, C117446, C124415, C124448, C49164, C94523, C94525, C94534, C94535, C96613, C96642, C96643, C96684, C96685";
   * ccodes = "C124415, C117426";
-  ccodes = "C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
-  
+  ccodes = "C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
+
   do i=1 to countw(ccodes);
     call missing(ccode_parent, shortname, shortname_parent, definition, definition_cdisc);
     ccode=scan(ccodes, i);
@@ -127,21 +135,21 @@ data test;
 run;
 
 ods listing close;
-ods html5 file="create_functions.html";
+ods html5 file="&root/utilities/create_functions.html";
 
   proc print data=test;
     title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
     var ccode ccode_parent shortname shortname_parent definition definition_cdisc;
-  run;  
+  run;
 
 ods html5 close;
 ods listing;
 
-data new;   
+data new;
   exp_codelist_SubmissionValue="PKUDUG";
   exp_term="C119365";
   codedValue_conceptId = get_term_code("C128686", "g/mL/ug");
   codelist_SubmissionValue = get_codelist_submissionvalue("C128686");
   put (_all_) (=/) ;
-run; 
+run;
 

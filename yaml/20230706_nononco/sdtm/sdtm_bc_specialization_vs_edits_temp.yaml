@@ -16,11 +16,11 @@ variables:
       submissionValue: VSTESTCD
     assignedTerm:
       conceptId: C174446
-      value: TEMP
+      value: "TEMP"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: VSTEST
     assignedTerm:
       conceptId: C174446
-      value: Temperature
+      value: "Temperature"
     role: Qualifier
     relationship:
       subject: VSTEST

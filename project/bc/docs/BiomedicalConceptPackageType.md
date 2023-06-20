@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/BiomedicalConceptPackageType](https://www.cdisc.org/cosmos/1-0/BiomedicalConceptPackageType)
+URI: [cosmos:BiomedicalConceptPackageType](https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType)
 
 
 ## Other properties

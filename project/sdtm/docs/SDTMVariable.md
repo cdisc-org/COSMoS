@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/SDTMVariable](https://www.cdisc.org/cosmos/1-0/SDTMVariable)
+URI: [cosmos:SDTMVariable](https://www.cdisc.org/cosmos/1-0SDTMVariable)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:string%20%3F;dataType:SDTMVariableDataType%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginType%20%3F;originSource:OriginSource%20%3F;comparator:Comparator%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:string%20%3F;dataType:SDTMVariableDataType%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginType%20%3F;originSource:OriginSource%20%3F;comparator:Comparator%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])

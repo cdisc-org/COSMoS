@@ -4,7 +4,7 @@
 
 Target variable for VLM
 
-URI: [https://www.cdisc.org/cosmos/1-0/vlmTarget](https://www.cdisc.org/cosmos/1-0/vlmTarget)
+URI: [cosmos:vlmTarget](https://www.cdisc.org/cosmos/1-0vlmTarget)
 
 
 ## Domain and Range

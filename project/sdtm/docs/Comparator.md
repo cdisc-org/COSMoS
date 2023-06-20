@@ -4,7 +4,7 @@
 
 Comparison operator for SDTM group variables included in VLM
 
-URI: [https://www.cdisc.org/cosmos/1-0/comparator](https://www.cdisc.org/cosmos/1-0/comparator)
+URI: [cosmos:comparator](https://www.cdisc.org/cosmos/1-0comparator)
 
 
 ## Domain and Range

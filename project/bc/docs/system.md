@@ -4,7 +4,7 @@
 
 Identifies the code system for the synonym concept The URL of the code system should be used if it exists
 
-URI: [https://www.cdisc.org/cosmos/1-0/system](https://www.cdisc.org/cosmos/1-0/system)
+URI: [cosmos:system](https://www.cdisc.org/cosmos/1-0system)
 
 
 ## Domain and Range

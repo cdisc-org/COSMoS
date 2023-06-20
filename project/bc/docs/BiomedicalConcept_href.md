@@ -4,7 +4,7 @@
 
 URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_href](https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_href)
+URI: [cosmos:BiomedicalConcept_href](https://www.cdisc.org/cosmos/1-0BiomedicalConcept_href)
 
 
 ## Domain and Range

@@ -16,11 +16,11 @@ variables:
       submissionValue: MBTESTCD
     assignedTerm:
       conceptId: C171531
-      value: SAR2RNA
+      value: "SAR2RNA"
     role: Topic
     relationship:
       subject: MBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: MBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: MBTEST
     assignedTerm:
       conceptId: C171531
-      value: SARS-CoV-2 RNA
+      value: "SARS-CoV-2 RNA"
     role: Qualifier
     relationship:
       subject: MBTEST
@@ -52,7 +52,7 @@ variables:
       submissionValue: MBFTSDTL
     assignedTerm:
       conceptId: C161328
-      value: QUANTIFICATION CYCLE NUMBER
+      value: "QUANTIFICATION CYCLE NUMBER"
     role: Qualifier
     relationship:
       subject: MBTSTDTL
@@ -159,7 +159,7 @@ variables:
       submissionValue: METHOD
     assignedTerm:
       conceptId: C28408
-      value: QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION
+      value: "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION"
     role: Qualifier
     relationship:
       subject: MBMETHOD

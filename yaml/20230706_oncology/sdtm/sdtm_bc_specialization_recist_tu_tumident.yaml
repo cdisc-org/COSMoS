@@ -16,11 +16,11 @@ variables:
       submissionValue: TUTESTCD
     assignedTerm:
       conceptId: C94523
-      value: TUMIDENT
+      value: "TUMIDENT"
     role: Topic
     relationship:
       subject: TUTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TUTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: TUTEST
     assignedTerm:
       conceptId: C94523
-      value: Tumor Identification
+      value: "Tumor Identification"
     role: Qualifier
     relationship:
       subject: TUTEST

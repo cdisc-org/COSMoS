@@ -4,7 +4,7 @@
 
 NCI C-code for the BC Data Element Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/DataElementConcept_conceptId](https://www.cdisc.org/cosmos/1-0/DataElementConcept_conceptId)
+URI: [cosmos:DataElementConcept_conceptId](https://www.cdisc.org/cosmos/1-0DataElementConcept_conceptId)
 
 
 ## Domain and Range

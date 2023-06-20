@@ -16,11 +16,11 @@ variables:
       submissionValue: MBTESTCD
     assignedTerm:
       conceptId: C171439
-      value: SAR2AB
+      value: "SAR2AB"
     role: Topic
     relationship:
       subject: MBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: MBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: MBTEST
     assignedTerm:
       conceptId: C171439
-      value: SARS-CoV-2 Antibody
+      value: "SARS-CoV-2 Antibody"
     role: Qualifier
     relationship:
       subject: MBTEST
@@ -52,7 +52,7 @@ variables:
       submissionValue: MBFTSDTL
     assignedTerm:
       conceptId: C174330
-      value: DETECTION
+      value: "DETECTION"
     role: Qualifier
     relationship:
       subject: MBTSTDTL
@@ -93,7 +93,7 @@ variables:
   - name: MBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 94762-2
+      value: "94762-2"
     role: Qualifier
     relationship:
       subject: MBLOINC
@@ -111,7 +111,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C105706
-      value: SERUM OR PLASMA
+      value: "SERUM OR PLASMA"
     role: Qualifier
     relationship:
       subject: MBSPEC
@@ -130,7 +130,7 @@ variables:
       submissionValue: METHOD
     assignedTerm:
       conceptId: C16714
-      value: IMMUNOASSAY
+      value: "IMMUNOASSAY"
     role: Qualifier
     relationship:
       subject: MBMETHOD

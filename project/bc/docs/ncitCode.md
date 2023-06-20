@@ -4,7 +4,7 @@
 
 NCIt code
 
-URI: [https://www.cdisc.org/cosmos/1-0/ncitCode](https://www.cdisc.org/cosmos/1-0/ncitCode)
+URI: [cosmos:ncitCode](https://www.cdisc.org/cosmos/1-0ncitCode)
 
 
 ## Domain and Range

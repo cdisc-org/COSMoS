@@ -4,7 +4,7 @@
 
 Short variable relatio ship linking phrase for programming purposes
 
-URI: [https://www.cdisc.org/cosmos/1-0/predicateTerm](https://www.cdisc.org/cosmos/1-0/predicateTerm)
+URI: [cosmos:predicateTerm](https://www.cdisc.org/cosmos/1-0predicateTerm)
 
 
 ## Domain and Range

@@ -4,7 +4,7 @@
 
 Flag that indicates if the variable is a non-standard variable
 
-URI: [https://www.cdisc.org/cosmos/1-0/isNonStandard](https://www.cdisc.org/cosmos/1-0/isNonStandard)
+URI: [cosmos:isNonStandard](https://www.cdisc.org/cosmos/1-0isNonStandard)
 
 
 ## Domain and Range

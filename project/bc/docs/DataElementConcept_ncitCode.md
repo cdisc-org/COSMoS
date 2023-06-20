@@ -4,7 +4,7 @@
 
 An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/DataElementConcept_ncitCode](https://www.cdisc.org/cosmos/1-0/DataElementConcept_ncitCode)
+URI: [cosmos:DataElementConcept_ncitCode](https://www.cdisc.org/cosmos/1-0DataElementConcept_ncitCode)
 
 
 ## Domain and Range

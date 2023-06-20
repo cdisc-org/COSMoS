@@ -4,7 +4,7 @@
 
 Data Type for the Data Element Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/dataType](https://www.cdisc.org/cosmos/1-0/dataType)
+URI: [cosmos:dataType](https://www.cdisc.org/cosmos/1-0dataType)
 
 
 ## Domain and Range

@@ -4,7 +4,7 @@
 
 Indicator that variable must be present within the SDTM group
 
-URI: [https://www.cdisc.org/cosmos/1-0/mandatoryVariable](https://www.cdisc.org/cosmos/1-0/mandatoryVariable)
+URI: [cosmos:mandatoryVariable](https://www.cdisc.org/cosmos/1-0mandatoryVariable)
 
 
 ## Domain and Range

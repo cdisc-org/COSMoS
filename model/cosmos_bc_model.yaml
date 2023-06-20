@@ -6,6 +6,10 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
+  cosmos: https://www.cdisc.org/cosmos/1-0
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+
+default_prefix: cosmos
 
 default_range: string
 

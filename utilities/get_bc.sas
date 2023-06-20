@@ -46,24 +46,23 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=eg, package=&package, out_folder=&TargetFolder, range=%str(BC_EG));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=ds, package=&package, out_folder=&TargetFolder, range=%str(BC_DS));
 
+*/
 
 
 %let package=20230706;
 %let folder=20230706_oncology;
 %let ExcelFile=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
-%let TargetFolder=&temp/yaml/&folder/bc;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=recist, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC TU_TR_RS));
 
-*/
 
 
 
 
 %let package=20230706;
 %let folder=20230706_nononco;
-%let ExcelFile=&root/curation/draft/BC_Package_R4_draft.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R4_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=ae, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC_AE));

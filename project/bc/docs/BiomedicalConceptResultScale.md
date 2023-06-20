@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/BiomedicalConceptResultScale](https://www.cdisc.org/cosmos/1-0/BiomedicalConceptResultScale)
+URI: [cosmos:BiomedicalConceptResultScale](https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale)
 
 
 ## Other properties

@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C64470
-      value: BASO
+      value: "BASO"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C64470
-      value: Basophils
+      value: "Basophils"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: HEMATOLOGY
+      value: "HEMATOLOGY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -136,8 +136,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
       submissionValue: UNIT
     assignedTerm:
-      conceptId: C42576
-      value: 10^9/L
+      conceptId: C67255
+      value: "10^9/L"
     role: Qualifier
     relationship:
       subject: LBSTRESU
@@ -150,7 +150,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 26444-0
+      value: "26444-0"
     role: Qualifier
     relationship:
       subject: LBLOINC
@@ -168,7 +168,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C12434
-      value: BLOOD
+      value: "BLOOD"
     role: Qualifier
     relationship:
       subject: LBSPEC

@@ -57,7 +57,7 @@ run;
 
 %let package=20230706;
 %let folder=20230706_nononco;
-%let ExcelFile=&root/curation/draft/BC_Package_R4_draft.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R4_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
@@ -68,6 +68,7 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=eg, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_EG), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_LB), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb_edits, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_LB_EDITS), subsetsDS=subsets);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb_edits2, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_LB_EDITS_2), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mb, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_MB), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mh, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_MH), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(SDTM_PR), subsetsDS=subsets);

@@ -4,7 +4,7 @@
 
 SDTM VLM Source which categorizes VLM groups by topic variable
 
-URI: [https://www.cdisc.org/cosmos/1-0/source](https://www.cdisc.org/cosmos/1-0/source)
+URI: [cosmos:source](https://www.cdisc.org/cosmos/1-0source)
 
 
 ## Domain and Range

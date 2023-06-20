@@ -4,7 +4,7 @@
 
 NCIt C-code for the Biomedical Concept
 
-URI: [https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_ncitCode](https://www.cdisc.org/cosmos/1-0/BiomedicalConcept_ncitCode)
+URI: [cosmos:BiomedicalConcept_ncitCode](https://www.cdisc.org/cosmos/1-0BiomedicalConcept_ncitCode)
 
 
 ## Domain and Range

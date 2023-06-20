@@ -4,7 +4,7 @@
 
 Scale of measurement for the Biomedical Concept result
 
-URI: [https://www.cdisc.org/cosmos/1-0/resultScales](https://www.cdisc.org/cosmos/1-0/resultScales)
+URI: [cosmos:resultScales](https://www.cdisc.org/cosmos/1-0resultScales)
 
 
 ## Domain and Range

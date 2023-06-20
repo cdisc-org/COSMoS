@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-15T17:04:30
+# Generation date: 2023-06-20T08:43:16
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -32,8 +32,10 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
+NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
+COSMOS = CurieNamespace('cosmos', 'https://www.cdisc.org/cosmos/1-0')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
+DEFAULT_ = COSMOS
 
 
 # Types
@@ -55,10 +57,10 @@ class CodeListConceptId(extended_str):
 class SDTMGroup(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMGroup")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.SDTMGroup
+    class_class_curie: ClassVar[str] = "cosmos:SDTMGroup"
     class_name: ClassVar[str] = "SDTMGroup"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMGroup")
+    class_model_uri: ClassVar[URIRef] = COSMOS.SDTMGroup
 
     datasetSpecializationId: Union[str, SDTMGroupDatasetSpecializationId] = None
     packageDate: Union[str, XSDDate] = None
@@ -122,10 +124,10 @@ class SDTMGroup(YAMLRoot):
 class SDTMVariable(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.SDTMVariable
+    class_class_curie: ClassVar[str] = "cosmos:SDTMVariable"
     class_name: ClassVar[str] = "SDTMVariable"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SDTMVariable")
+    class_model_uri: ClassVar[URIRef] = COSMOS.SDTMVariable
 
     name: Union[str, SDTMVariableName] = None
     dataElementConceptId: Optional[str] = None
@@ -215,10 +217,10 @@ class SDTMVariable(YAMLRoot):
 class RelationShip(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/RelationShip")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.RelationShip
+    class_class_curie: ClassVar[str] = "cosmos:RelationShip"
     class_name: ClassVar[str] = "RelationShip"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/RelationShip")
+    class_model_uri: ClassVar[URIRef] = COSMOS.RelationShip
 
     subject: str = None
     linkingPhrase: Union[str, "LinkingPhrase"] = None
@@ -253,10 +255,10 @@ class RelationShip(YAMLRoot):
 class CodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeList")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.CodeList
+    class_class_curie: ClassVar[str] = "cosmos:CodeList"
     class_name: ClassVar[str] = "CodeList"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeList")
+    class_model_uri: ClassVar[URIRef] = COSMOS.CodeList
 
     conceptId: Union[str, CodeListConceptId] = None
     submissionValue: str = None
@@ -283,10 +285,10 @@ class CodeList(YAMLRoot):
 class CodeListTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeListTerm")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.CodeListTerm
+    class_class_curie: ClassVar[str] = "cosmos:CodeListTerm"
     class_name: ClassVar[str] = "CodeListTerm"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/CodeListTerm")
+    class_model_uri: ClassVar[URIRef] = COSMOS.CodeListTerm
 
     termId: str = None
     termValue: str = None
@@ -309,10 +311,10 @@ class CodeListTerm(YAMLRoot):
 class SubsetCodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SubsetCodeList")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.SubsetCodeList
+    class_class_curie: ClassVar[str] = "cosmos:SubsetCodeList"
     class_name: ClassVar[str] = "SubsetCodeList"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/SubsetCodeList")
+    class_model_uri: ClassVar[URIRef] = COSMOS.SubsetCodeList
 
     parentCodelist: str = None
     subsetShortName: str = None
@@ -348,10 +350,10 @@ class SubsetCodeList(YAMLRoot):
 class AssignedTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/AssignedTerm")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.AssignedTerm
+    class_class_curie: ClassVar[str] = "cosmos:AssignedTerm"
     class_name: ClassVar[str] = "AssignedTerm"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/AssignedTerm")
+    class_model_uri: ClassVar[URIRef] = COSMOS.AssignedTerm
 
     value: str = None
     conceptId: Optional[str] = None
@@ -395,104 +397,166 @@ class LinkingPhrase(EnumDefinitionImpl):
 
     @classmethod
     def _addvals(cls):
+        setattr(cls, "associates the tumor identified in",
+                PermissibleValue(text="associates the tumor identified in") )
         setattr(cls, "decodes the value in",
                 PermissibleValue(text="decodes the value in") )
-        setattr(cls, "is decoded by the value in",
-                PermissibleValue(text="is decoded by the value in") )
-        setattr(cls, "groups values in",
-                PermissibleValue(text="groups values in") )
-        setattr(cls, "is the subject position during performance of the test in",
-                PermissibleValue(text="is the subject position during performance of the test in") )
-        setattr(cls, "is the result of the test in",
-                PermissibleValue(text="is the result of the test in") )
-        setattr(cls, "is the unit for the value in",
-                PermissibleValue(text="is the unit for the value in") )
-        setattr(cls, "is the specimen tested in",
-                PermissibleValue(text="is the specimen tested in") )
-        setattr(cls, "specifies the anatomical location of the performance of the test in",
-                PermissibleValue(text="specifies the anatomical location of the performance of the test in") )
+        setattr(cls, "describes actions taken",
+                PermissibleValue(text="describes actions taken") )
+        setattr(cls, "describes relationship of",
+                PermissibleValue(text="describes relationship of") )
+        setattr(cls, "describes the outcome of",
+                PermissibleValue(text="describes the outcome of") )
+        setattr(cls, "further describes the test in",
+                PermissibleValue(text="further describes the test in") )
         setattr(cls, "further specifies the anatomical location in",
                 PermissibleValue(text="further specifies the anatomical location in") )
-        setattr(cls, "is the method for the test in",
-                PermissibleValue(text="is the method for the test in") )
-        setattr(cls, "is the subject's fasting status during the performance of the test in",
-                PermissibleValue(text="is the subject's fasting status during the performance of the test in") )
+        setattr(cls, "groups tumor assessments used in overall response identified by",
+                PermissibleValue(text="groups tumor assessments used in overall response identified by") )
+        setattr(cls, "groups values in",
+                PermissibleValue(text="groups values in") )
+        setattr(cls, "identifies a pattern of",
+                PermissibleValue(text="identifies a pattern of") )
         setattr(cls, "identifies an observation described by",
                 PermissibleValue(text="identifies an observation described by") )
-        setattr(cls, "is the dictionary code for the test in",
-                PermissibleValue(text="is the dictionary code for the test in") )
-        setattr(cls, "is the role of the assessor who performed the test in",
-                PermissibleValue(text="is the role of the assessor who performed the test in") )
-        setattr(cls, "is the epoch of the performance of the test in",
-                PermissibleValue(text="is the epoch of the performance of the test in") )
         setattr(cls, "identifies overall response supported by tumor assessments identified by",
                 PermissibleValue(text="identifies overall response supported by tumor assessments identified by") )
         setattr(cls, "identifies the image from the procedure in",
                 PermissibleValue(text="identifies the image from the procedure in") )
         setattr(cls, "identifies the tumor found by the test in",
                 PermissibleValue(text="identifies the tumor found by the test in") )
-        setattr(cls, "groups tumor assessments used in overall response identified by",
-                PermissibleValue(text="groups tumor assessments used in overall response identified by") )
-        setattr(cls, "is the identifier for the source data used in the performance of the test in",
-                PermissibleValue(text="is the identifier for the source data used in the performance of the test in") )
-        setattr(cls, "associates the tumor identified in",
-                PermissibleValue(text="associates the tumor identified in") )
+        setattr(cls, "indicates occurrence of the value in",
+                PermissibleValue(text="indicates occurrence of the value in") )
+        setattr(cls, "indicates pre-specification of the value in",
+                PermissibleValue(text="indicates pre-specification of the value in") )
+        setattr(cls, "indicates severity of",
+                PermissibleValue(text="indicates severity of") )
         setattr(cls, "indicates the previous irradiation status of the tumor identified by",
                 PermissibleValue(text="indicates the previous irradiation status of the tumor identified by") )
         setattr(cls, "indicates the progression status of the previous irradiated tumor identified by",
                 PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by") )
-        setattr(cls, "further describes the test in",
-                PermissibleValue(text="further describes the test in") )
         setattr(cls, "is a dictionary-derived term for the value in",
                 PermissibleValue(text="is a dictionary-derived term for the value in") )
+        setattr(cls, "is decoded by the value in",
+                PermissibleValue(text="is decoded by the value in") )
         setattr(cls, "is original text for",
                 PermissibleValue(text="is original text for") )
+        setattr(cls, "is the administration anatomical location for the treatment in",
+                PermissibleValue(text="is the administration anatomical location for the treatment in") )
+        setattr(cls, "is the clinical significance interpretation for",
+                PermissibleValue(text="is the clinical significance interpretation for") )
+        setattr(cls, "is the code for the value in",
+                PermissibleValue(text="is the code for the value in") )
+        setattr(cls, "is the dictionary code for the test in",
+                PermissibleValue(text="is the dictionary code for the test in") )
+        setattr(cls, "is the epoch of the performance of the test in",
+                PermissibleValue(text="is the epoch of the performance of the test in") )
+        setattr(cls, "is the identifier for the source data used in the performance of the test in",
+                PermissibleValue(text="is the identifier for the source data used in the performance of the test in") )
+        setattr(cls, "is the material type of the subject of the activity in",
+                PermissibleValue(text="is the material type of the subject of the activity in") )
+        setattr(cls, "is the method for the test in",
+                PermissibleValue(text="is the method for the test in") )
+        setattr(cls, "is the result of the test in",
+                PermissibleValue(text="is the result of the test in") )
+        setattr(cls, "is the role of the assessor who performed the test in",
+                PermissibleValue(text="is the role of the assessor who performed the test in") )
+        setattr(cls, "is the specimen tested in",
+                PermissibleValue(text="is the specimen tested in") )
+        setattr(cls, "is the subject position during performance of the test in",
+                PermissibleValue(text="is the subject position during performance of the test in") )
+        setattr(cls, "is the subject's fasting status during the performance of the test in",
+                PermissibleValue(text="is the subject's fasting status during the performance of the test in") )
+        setattr(cls, "is the unit for the value in",
+                PermissibleValue(text="is the unit for the value in") )
+        setattr(cls, "specifies the anatomical location of",
+                PermissibleValue(text="specifies the anatomical location of") )
+        setattr(cls, "specifies the anatomical location of the performance of the test in",
+                PermissibleValue(text="specifies the anatomical location of the performance of the test in") )
+        setattr(cls, "specifies the severity of",
+                PermissibleValue(text="specifies the severity of") )
+        setattr(cls, "values are grouped by",
+                PermissibleValue(text="values are grouped by") )
+        setattr(cls, "was the subject position during performance of the test in",
+                PermissibleValue(text="was the subject position during performance of the test in") )
 
 class PredicateTerm(EnumDefinitionImpl):
 
     DECODES = PermissibleValue(text="DECODES")
-    IS_DECODED_BY = PermissibleValue(text="IS_DECODED_BY")
+    DESCRIBES = PermissibleValue(text="DESCRIBES")
     GROUPS = PermissibleValue(text="GROUPS")
-    IS_SUBJECT_STATE_FOR = PermissibleValue(text="IS_SUBJECT_STATE_FOR")
-    IS_RESULT_OF = PermissibleValue(text="IS_RESULT_OF")
-    IS_UNIT_FOR = PermissibleValue(text="IS_UNIT_FOR")
-    IDENTIFIES_OBSERVATION = PermissibleValue(text="IDENTIFIES_OBSERVATION")
-    IS_SPECIMEN_TESTED_IN = PermissibleValue(text="IS_SPECIMEN_TESTED_IN")
-    SPECIFIES = PermissibleValue(text="SPECIFIES")
-    CODES = PermissibleValue(text="CODES")
-    PERFORMED = PermissibleValue(text="PERFORMED")
-    IS_EPOCH_OF = PermissibleValue(text="IS_EPOCH_OF")
     GROUPS_BY = PermissibleValue(text="GROUPS_BY")
+    IDENTIFIES = PermissibleValue(text="IDENTIFIES")
+    IDENTIFIES_OBSERVATION = PermissibleValue(text="IDENTIFIES_OBSERVATION")
     IDENTIFIES_PRODUCT_IN = PermissibleValue(text="IDENTIFIES_PRODUCT_IN")
     IDENTIFIES_TUMOR_IN = PermissibleValue(text="IDENTIFIES_TUMOR_IN")
-    IS_ORIGINAL_TEXT_FOR = PermissibleValue(text="IS_ORIGINAL_TEXT_FOR")
+    INDICATES = PermissibleValue(text="INDICATES")
+    IS_ATTRIBUTE_FOR = PermissibleValue(text="IS_ATTRIBUTE_FOR")
+    IS_DECODED_BY = PermissibleValue(text="IS_DECODED_BY")
     IS_DERIVED_FROM = PermissibleValue(text="IS_DERIVED_FROM")
+    IS_EPOCH_OF = PermissibleValue(text="IS_EPOCH_OF")
+    IS_GROUPED_BY = PermissibleValue(text="IS_GROUPED_BY")
+    IS_INDICATOR_FOR = PermissibleValue(text="IS_INDICATOR_FOR")
+    IS_ORIGINAL_TEXT_FOR = PermissibleValue(text="IS_ORIGINAL_TEXT_FOR")
+    IS_RESULT_OF = PermissibleValue(text="IS_RESULT_OF")
+    IS_SPECIMEN_TESTED_IN = PermissibleValue(text="IS_SPECIMEN_TESTED_IN")
+    IS_SUBJECT_STATE_FOR = PermissibleValue(text="IS_SUBJECT_STATE_FOR")
+    IS_UNIT_FOR = PermissibleValue(text="IS_UNIT_FOR")
+    PERFORMED = PermissibleValue(text="PERFORMED")
+    PERFORMS = PermissibleValue(text="PERFORMS")
+    SPECIFIES = PermissibleValue(text="SPECIFIES")
 
     _defn = EnumDefinition(
         name="PredicateTerm",
     )
 
 class OriginType(EnumDefinitionImpl):
-
-    Assigned = PermissibleValue(text="Assigned")
-    Collected = PermissibleValue(text="Collected")
-    Derived = PermissibleValue(text="Derived")
-    Predecessor = PermissibleValue(text="Predecessor")
-    Protocol = PermissibleValue(text="Protocol")
+    """
+    Terminology relevant to the origin type for datasets in the Define-XML document.
+    """
+    Assigned = PermissibleValue(text="Assigned",
+                                       description="A value that is derived through designation, such as values from a look up table or a label on a CRF.",
+                                       meaning=NCIT.C170547)
+    Collected = PermissibleValue(text="Collected",
+                                         description="A value that is actually observed and recorded by a person or obtained by an instrument.",
+                                         meaning=NCIT.C170548)
+    Derived = PermissibleValue(text="Derived",
+                                     description="A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.",
+                                     meaning=NCIT.C170549)
+    Predecessor = PermissibleValue(text="Predecessor",
+                                             description="A value that is copied from a variable in another dataset.",
+                                             meaning=NCIT.C170550)
+    Protocol = PermissibleValue(text="Protocol",
+                                       description="A value that is included as part of the study protocol.",
+                                       meaning=NCIT.C170551)
 
     _defn = EnumDefinition(
         name="OriginType",
+        description="Terminology relevant to the origin type for datasets in the Define-XML document.",
+        code_set=NCIT.C170449,
     )
 
 class OriginSource(EnumDefinitionImpl):
-
-    Investigator = PermissibleValue(text="Investigator")
-    Sponsor = PermissibleValue(text="Sponsor")
-    Subject = PermissibleValue(text="Subject")
-    Vendor = PermissibleValue(text="Vendor")
+    """
+    Terminology relevant to the origin source for datasets in the Define-XML document.
+    """
+    Investigator = PermissibleValue(text="Investigator",
+                                               description="A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.",
+                                               meaning=NCIT.C25936)
+    Sponsor = PermissibleValue(text="Sponsor",
+                                     description="An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]",
+                                     meaning=NCIT.C70793)
+    Subject = PermissibleValue(text="Subject",
+                                     description="An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.",
+                                     meaning=NCIT.C41189)
+    Vendor = PermissibleValue(text="Vendor",
+                                   description="A person or agency that promotes or exchanges goods or services for money. (NCI)",
+                                   meaning=NCIT.C68608)
 
     _defn = EnumDefinition(
         name="OriginSource",
+        description="Terminology relevant to the origin source for datasets in the Define-XML document.",
+        code_set=NCIT.C170450,
     )
 
 class Role(EnumDefinitionImpl):
@@ -517,134 +581,134 @@ class Comparator(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.packageDate = Slot(uri=DEFAULT_.packageDate, name="packageDate", curie=DEFAULT_.curie('packageDate'),
-                   model_uri=DEFAULT_.packageDate, domain=None, range=Union[str, XSDDate])
+slots.packageDate = Slot(uri=COSMOS.packageDate, name="packageDate", curie=COSMOS.curie('packageDate'),
+                   model_uri=COSMOS.packageDate, domain=None, range=Union[str, XSDDate])
 
-slots.packageType = Slot(uri=DEFAULT_.packageType, name="packageType", curie=DEFAULT_.curie('packageType'),
-                   model_uri=DEFAULT_.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageType"])
+slots.packageType = Slot(uri=COSMOS.packageType, name="packageType", curie=COSMOS.curie('packageType'),
+                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageType"])
 
-slots.domain = Slot(uri=DEFAULT_.domain, name="domain", curie=DEFAULT_.curie('domain'),
-                   model_uri=DEFAULT_.domain, domain=None, range=str)
+slots.domain = Slot(uri=COSMOS.domain, name="domain", curie=COSMOS.curie('domain'),
+                   model_uri=COSMOS.domain, domain=None, range=str)
 
-slots.datasetSpecializationId = Slot(uri=DEFAULT_.datasetSpecializationId, name="datasetSpecializationId", curie=DEFAULT_.curie('datasetSpecializationId'),
-                   model_uri=DEFAULT_.datasetSpecializationId, domain=None, range=URIRef)
+slots.datasetSpecializationId = Slot(uri=COSMOS.datasetSpecializationId, name="datasetSpecializationId", curie=COSMOS.curie('datasetSpecializationId'),
+                   model_uri=COSMOS.datasetSpecializationId, domain=None, range=URIRef)
 
-slots.source = Slot(uri=DEFAULT_.source, name="source", curie=DEFAULT_.curie('source'),
-                   model_uri=DEFAULT_.source, domain=None, range=str)
+slots.source = Slot(uri=COSMOS.source, name="source", curie=COSMOS.curie('source'),
+                   model_uri=COSMOS.source, domain=None, range=str)
 
-slots.shortName = Slot(uri=DEFAULT_.shortName, name="shortName", curie=DEFAULT_.curie('shortName'),
-                   model_uri=DEFAULT_.shortName, domain=None, range=str)
+slots.shortName = Slot(uri=COSMOS.shortName, name="shortName", curie=COSMOS.curie('shortName'),
+                   model_uri=COSMOS.shortName, domain=None, range=str)
 
-slots.sdtmigStartVersion = Slot(uri=DEFAULT_.sdtmigStartVersion, name="sdtmigStartVersion", curie=DEFAULT_.curie('sdtmigStartVersion'),
-                   model_uri=DEFAULT_.sdtmigStartVersion, domain=None, range=str)
+slots.sdtmigStartVersion = Slot(uri=COSMOS.sdtmigStartVersion, name="sdtmigStartVersion", curie=COSMOS.curie('sdtmigStartVersion'),
+                   model_uri=COSMOS.sdtmigStartVersion, domain=None, range=str)
 
-slots.sdtmigEndVersion = Slot(uri=DEFAULT_.sdtmigEndVersion, name="sdtmigEndVersion", curie=DEFAULT_.curie('sdtmigEndVersion'),
-                   model_uri=DEFAULT_.sdtmigEndVersion, domain=None, range=Optional[str])
+slots.sdtmigEndVersion = Slot(uri=COSMOS.sdtmigEndVersion, name="sdtmigEndVersion", curie=COSMOS.curie('sdtmigEndVersion'),
+                   model_uri=COSMOS.sdtmigEndVersion, domain=None, range=Optional[str])
 
-slots.biomedicalConceptId = Slot(uri=DEFAULT_.biomedicalConceptId, name="biomedicalConceptId", curie=DEFAULT_.curie('biomedicalConceptId'),
-                   model_uri=DEFAULT_.biomedicalConceptId, domain=None, range=Optional[str])
+slots.biomedicalConceptId = Slot(uri=COSMOS.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS.curie('biomedicalConceptId'),
+                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str])
 
-slots.variables = Slot(uri=DEFAULT_.variables, name="variables", curie=DEFAULT_.curie('variables'),
-                   model_uri=DEFAULT_.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
+slots.variables = Slot(uri=COSMOS.variables, name="variables", curie=COSMOS.curie('variables'),
+                   model_uri=COSMOS.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
 
-slots.name = Slot(uri=DEFAULT_.name, name="name", curie=DEFAULT_.curie('name'),
-                   model_uri=DEFAULT_.name, domain=None, range=URIRef)
+slots.name = Slot(uri=COSMOS.name, name="name", curie=COSMOS.curie('name'),
+                   model_uri=COSMOS.name, domain=None, range=URIRef)
 
-slots.dataElementConceptId = Slot(uri=DEFAULT_.dataElementConceptId, name="dataElementConceptId", curie=DEFAULT_.curie('dataElementConceptId'),
-                   model_uri=DEFAULT_.dataElementConceptId, domain=None, range=Optional[str])
+slots.dataElementConceptId = Slot(uri=COSMOS.dataElementConceptId, name="dataElementConceptId", curie=COSMOS.curie('dataElementConceptId'),
+                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str])
 
-slots.isNonStandard = Slot(uri=DEFAULT_.isNonStandard, name="isNonStandard", curie=DEFAULT_.curie('isNonStandard'),
-                   model_uri=DEFAULT_.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
+slots.isNonStandard = Slot(uri=COSMOS.isNonStandard, name="isNonStandard", curie=COSMOS.curie('isNonStandard'),
+                   model_uri=COSMOS.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.codelist = Slot(uri=DEFAULT_.codelist, name="codelist", curie=DEFAULT_.curie('codelist'),
-                   model_uri=DEFAULT_.codelist, domain=None, range=Optional[Union[dict, CodeList]])
+slots.codelist = Slot(uri=COSMOS.codelist, name="codelist", curie=COSMOS.curie('codelist'),
+                   model_uri=COSMOS.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
-slots.subsetCodelist = Slot(uri=DEFAULT_.subsetCodelist, name="subsetCodelist", curie=DEFAULT_.curie('subsetCodelist'),
-                   model_uri=DEFAULT_.subsetCodelist, domain=None, range=Optional[str])
+slots.subsetCodelist = Slot(uri=COSMOS.subsetCodelist, name="subsetCodelist", curie=COSMOS.curie('subsetCodelist'),
+                   model_uri=COSMOS.subsetCodelist, domain=None, range=Optional[str])
 
-slots.conceptId = Slot(uri=DEFAULT_.conceptId, name="conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.conceptId, domain=None, range=URIRef)
+slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
+                   model_uri=COSMOS.conceptId, domain=None, range=URIRef)
 
-slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
-                   model_uri=DEFAULT_.href, domain=None, range=Optional[Union[str, URI]])
+slots.href = Slot(uri=COSMOS.href, name="href", curie=COSMOS.curie('href'),
+                   model_uri=COSMOS.href, domain=None, range=Optional[Union[str, URI]])
 
-slots.submissionValue = Slot(uri=DEFAULT_.submissionValue, name="submissionValue", curie=DEFAULT_.curie('submissionValue'),
-                   model_uri=DEFAULT_.submissionValue, domain=None, range=str)
+slots.submissionValue = Slot(uri=COSMOS.submissionValue, name="submissionValue", curie=COSMOS.curie('submissionValue'),
+                   model_uri=COSMOS.submissionValue, domain=None, range=str)
 
-slots.parentCodelist = Slot(uri=DEFAULT_.parentCodelist, name="parentCodelist", curie=DEFAULT_.curie('parentCodelist'),
-                   model_uri=DEFAULT_.parentCodelist, domain=None, range=str)
+slots.parentCodelist = Slot(uri=COSMOS.parentCodelist, name="parentCodelist", curie=COSMOS.curie('parentCodelist'),
+                   model_uri=COSMOS.parentCodelist, domain=None, range=str)
 
-slots.subsetShortName = Slot(uri=DEFAULT_.subsetShortName, name="subsetShortName", curie=DEFAULT_.curie('subsetShortName'),
-                   model_uri=DEFAULT_.subsetShortName, domain=None, range=str)
+slots.subsetShortName = Slot(uri=COSMOS.subsetShortName, name="subsetShortName", curie=COSMOS.curie('subsetShortName'),
+                   model_uri=COSMOS.subsetShortName, domain=None, range=str)
 
-slots.subsetLabel = Slot(uri=DEFAULT_.subsetLabel, name="subsetLabel", curie=DEFAULT_.curie('subsetLabel'),
-                   model_uri=DEFAULT_.subsetLabel, domain=None, range=str)
+slots.subsetLabel = Slot(uri=COSMOS.subsetLabel, name="subsetLabel", curie=COSMOS.curie('subsetLabel'),
+                   model_uri=COSMOS.subsetLabel, domain=None, range=str)
 
-slots.codelistTerm = Slot(uri=DEFAULT_.codelistTerm, name="codelistTerm", curie=DEFAULT_.curie('codelistTerm'),
-                   model_uri=DEFAULT_.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]])
+slots.codelistTerm = Slot(uri=COSMOS.codelistTerm, name="codelistTerm", curie=COSMOS.curie('codelistTerm'),
+                   model_uri=COSMOS.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]])
 
-slots.termId = Slot(uri=DEFAULT_.termId, name="termId", curie=DEFAULT_.curie('termId'),
-                   model_uri=DEFAULT_.termId, domain=None, range=str)
+slots.termId = Slot(uri=COSMOS.termId, name="termId", curie=COSMOS.curie('termId'),
+                   model_uri=COSMOS.termId, domain=None, range=str)
 
-slots.termValue = Slot(uri=DEFAULT_.termValue, name="termValue", curie=DEFAULT_.curie('termValue'),
-                   model_uri=DEFAULT_.termValue, domain=None, range=str)
+slots.termValue = Slot(uri=COSMOS.termValue, name="termValue", curie=COSMOS.curie('termValue'),
+                   model_uri=COSMOS.termValue, domain=None, range=str)
 
-slots.valueList = Slot(uri=DEFAULT_.valueList, name="valueList", curie=DEFAULT_.curie('valueList'),
-                   model_uri=DEFAULT_.valueList, domain=None, range=Optional[Union[str, List[str]]])
+slots.valueList = Slot(uri=COSMOS.valueList, name="valueList", curie=COSMOS.curie('valueList'),
+                   model_uri=COSMOS.valueList, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.assignedTerm = Slot(uri=DEFAULT_.assignedTerm, name="assignedTerm", curie=DEFAULT_.curie('assignedTerm'),
-                   model_uri=DEFAULT_.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
+slots.assignedTerm = Slot(uri=COSMOS.assignedTerm, name="assignedTerm", curie=COSMOS.curie('assignedTerm'),
+                   model_uri=COSMOS.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
 
-slots.role = Slot(uri=DEFAULT_.role, name="role", curie=DEFAULT_.curie('role'),
-                   model_uri=DEFAULT_.role, domain=None, range=Optional[str])
+slots.role = Slot(uri=COSMOS.role, name="role", curie=COSMOS.curie('role'),
+                   model_uri=COSMOS.role, domain=None, range=Optional[str])
 
-slots.relationship = Slot(uri=DEFAULT_.relationship, name="relationship", curie=DEFAULT_.curie('relationship'),
-                   model_uri=DEFAULT_.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
+slots.relationship = Slot(uri=COSMOS.relationship, name="relationship", curie=COSMOS.curie('relationship'),
+                   model_uri=COSMOS.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
 
-slots.subject = Slot(uri=DEFAULT_.subject, name="subject", curie=DEFAULT_.curie('subject'),
-                   model_uri=DEFAULT_.subject, domain=None, range=str)
+slots.subject = Slot(uri=COSMOS.subject, name="subject", curie=COSMOS.curie('subject'),
+                   model_uri=COSMOS.subject, domain=None, range=str)
 
-slots.linkingPhrase = Slot(uri=DEFAULT_.linkingPhrase, name="linkingPhrase", curie=DEFAULT_.curie('linkingPhrase'),
-                   model_uri=DEFAULT_.linkingPhrase, domain=None, range=Union[str, "LinkingPhrase"])
+slots.linkingPhrase = Slot(uri=COSMOS.linkingPhrase, name="linkingPhrase", curie=COSMOS.curie('linkingPhrase'),
+                   model_uri=COSMOS.linkingPhrase, domain=None, range=Union[str, "LinkingPhrase"])
 
-slots.predicateTerm = Slot(uri=DEFAULT_.predicateTerm, name="predicateTerm", curie=DEFAULT_.curie('predicateTerm'),
-                   model_uri=DEFAULT_.predicateTerm, domain=None, range=Union[str, "PredicateTerm"])
+slots.predicateTerm = Slot(uri=COSMOS.predicateTerm, name="predicateTerm", curie=COSMOS.curie('predicateTerm'),
+                   model_uri=COSMOS.predicateTerm, domain=None, range=Union[str, "PredicateTerm"])
 
-slots.object = Slot(uri=DEFAULT_.object, name="object", curie=DEFAULT_.curie('object'),
-                   model_uri=DEFAULT_.object, domain=None, range=str)
+slots.object = Slot(uri=COSMOS.object, name="object", curie=COSMOS.curie('object'),
+                   model_uri=COSMOS.object, domain=None, range=str)
 
-slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
-                   model_uri=DEFAULT_.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataType"]])
+slots.dataType = Slot(uri=COSMOS.dataType, name="dataType", curie=COSMOS.curie('dataType'),
+                   model_uri=COSMOS.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataType"]])
 
-slots.length = Slot(uri=DEFAULT_.length, name="length", curie=DEFAULT_.curie('length'),
-                   model_uri=DEFAULT_.length, domain=None, range=Optional[int])
+slots.length = Slot(uri=COSMOS.length, name="length", curie=COSMOS.curie('length'),
+                   model_uri=COSMOS.length, domain=None, range=Optional[int])
 
-slots.format = Slot(uri=DEFAULT_.format, name="format", curie=DEFAULT_.curie('format'),
-                   model_uri=DEFAULT_.format, domain=None, range=Optional[str])
+slots.format = Slot(uri=COSMOS.format, name="format", curie=COSMOS.curie('format'),
+                   model_uri=COSMOS.format, domain=None, range=Optional[str])
 
-slots.significantDigits = Slot(uri=DEFAULT_.significantDigits, name="significantDigits", curie=DEFAULT_.curie('significantDigits'),
-                   model_uri=DEFAULT_.significantDigits, domain=None, range=Optional[int])
+slots.significantDigits = Slot(uri=COSMOS.significantDigits, name="significantDigits", curie=COSMOS.curie('significantDigits'),
+                   model_uri=COSMOS.significantDigits, domain=None, range=Optional[int])
 
-slots.mandatoryVariable = Slot(uri=DEFAULT_.mandatoryVariable, name="mandatoryVariable", curie=DEFAULT_.curie('mandatoryVariable'),
-                   model_uri=DEFAULT_.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
+slots.mandatoryVariable = Slot(uri=COSMOS.mandatoryVariable, name="mandatoryVariable", curie=COSMOS.curie('mandatoryVariable'),
+                   model_uri=COSMOS.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.mandatoryValue = Slot(uri=DEFAULT_.mandatoryValue, name="mandatoryValue", curie=DEFAULT_.curie('mandatoryValue'),
-                   model_uri=DEFAULT_.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
+slots.mandatoryValue = Slot(uri=COSMOS.mandatoryValue, name="mandatoryValue", curie=COSMOS.curie('mandatoryValue'),
+                   model_uri=COSMOS.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.originType = Slot(uri=DEFAULT_.originType, name="originType", curie=DEFAULT_.curie('originType'),
-                   model_uri=DEFAULT_.originType, domain=None, range=Optional[Union[str, "OriginType"]])
+slots.originType = Slot(uri=COSMOS.originType, name="originType", curie=COSMOS.curie('originType'),
+                   model_uri=COSMOS.originType, domain=None, range=Optional[Union[str, "OriginType"]])
 
-slots.originSource = Slot(uri=DEFAULT_.originSource, name="originSource", curie=DEFAULT_.curie('originSource'),
-                   model_uri=DEFAULT_.originSource, domain=None, range=Optional[Union[str, "OriginSource"]])
+slots.originSource = Slot(uri=COSMOS.originSource, name="originSource", curie=COSMOS.curie('originSource'),
+                   model_uri=COSMOS.originSource, domain=None, range=Optional[Union[str, "OriginSource"]])
 
-slots.comparator = Slot(uri=DEFAULT_.comparator, name="comparator", curie=DEFAULT_.curie('comparator'),
-                   model_uri=DEFAULT_.comparator, domain=None, range=Optional[Union[str, "Comparator"]])
+slots.comparator = Slot(uri=COSMOS.comparator, name="comparator", curie=COSMOS.curie('comparator'),
+                   model_uri=COSMOS.comparator, domain=None, range=Optional[Union[str, "Comparator"]])
 
-slots.vlmTarget = Slot(uri=DEFAULT_.vlmTarget, name="vlmTarget", curie=DEFAULT_.curie('vlmTarget'),
-                   model_uri=DEFAULT_.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
+slots.vlmTarget = Slot(uri=COSMOS.vlmTarget, name="vlmTarget", curie=COSMOS.curie('vlmTarget'),
+                   model_uri=COSMOS.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.assignedTerm__conceptId = Slot(uri=DEFAULT_.conceptId, name="assignedTerm__conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.assignedTerm__conceptId, domain=None, range=Optional[str])
+slots.assignedTerm__conceptId = Slot(uri=COSMOS.conceptId, name="assignedTerm__conceptId", curie=COSMOS.curie('conceptId'),
+                   model_uri=COSMOS.assignedTerm__conceptId, domain=None, range=Optional[str])
 
-slots.assignedTerm__value = Slot(uri=DEFAULT_.value, name="assignedTerm__value", curie=DEFAULT_.curie('value'),
-                   model_uri=DEFAULT_.assignedTerm__value, domain=None, range=str)
+slots.assignedTerm__value = Slot(uri=COSMOS.value, name="assignedTerm__value", curie=COSMOS.curie('value'),
+                   model_uri=COSMOS.assignedTerm__value, domain=None, range=str)

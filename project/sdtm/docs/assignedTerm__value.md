@@ -4,7 +4,7 @@
 
 Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
 
-URI: [https://www.cdisc.org/cosmos/1-0/assignedTerm__value](https://www.cdisc.org/cosmos/1-0/assignedTerm__value)
+URI: [cosmos:assignedTerm__value](https://www.cdisc.org/cosmos/1-0assignedTerm__value)
 
 
 ## Domain and Range

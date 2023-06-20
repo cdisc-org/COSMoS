@@ -4,7 +4,7 @@
 
 Variable display format
 
-URI: [https://www.cdisc.org/cosmos/1-0/format](https://www.cdisc.org/cosmos/1-0/format)
+URI: [cosmos:format](https://www.cdisc.org/cosmos/1-0format)
 
 
 ## Domain and Range

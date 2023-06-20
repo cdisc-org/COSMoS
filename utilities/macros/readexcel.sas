@@ -27,7 +27,7 @@ data &dsout(&drop &keep &rename);
   _excel_file_ = scan("&file", -1, "\/");
 run;
 
-%if &_Debug %then %do;
+%if &_Debug eq 1 %then %do;
   proc contents data=&dsout varnum;
   title01 "ReadExcel - %sysfunc(datetime(), is8601dt.)";
   run;

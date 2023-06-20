@@ -4,7 +4,7 @@
 
 CDISC submission value for the codelist
 
-URI: [https://www.cdisc.org/cosmos/1-0/submissionValue](https://www.cdisc.org/cosmos/1-0/submissionValue)
+URI: [cosmos:submissionValue](https://www.cdisc.org/cosmos/1-0submissionValue)
 
 
 ## Domain and Range

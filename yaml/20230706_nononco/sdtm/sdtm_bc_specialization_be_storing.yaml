@@ -12,7 +12,7 @@ variables:
     dataElementConceptId: C25372
     isNonStandard: false
     assignedTerm:
-      value: STORING
+      value: "STORING"
     role: Qualifier
     dataType: text
     length: 200
@@ -31,8 +31,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124297
       submissionValue: BEDECOD
     assignedTerm:
-      conceptId: C48165
-      value: STORING
+      conceptId: C60824
+      value: "STORING"
     role: Qualifier
     dataType: text
     length: 200
@@ -49,7 +49,7 @@ variables:
     dataElementConceptId: C82571
     isNonStandard: false
     assignedTerm:
-      value: Storing
+      value: "Storing"
     role: Topic
     dataType: text
     length: 200
@@ -70,11 +70,6 @@ variables:
     role: Topic
     dataType: text
     length: 200
-    relationship:
-      subject: BEPARTY
-      linkingPhrase:  
-      predicateTerm:  
-      object: BETERM
     mandatoryVariable: false
     mandatoryValue: false
   - name: BESPEC
@@ -89,8 +84,8 @@ variables:
     length: 200
     relationship:
       subject: BESPEC
-      linkingPhrase:  
-      predicateTerm:  
+      linkingPhrase: is the material type of the subject of the activity in
+      predicateTerm: IS_ATTRIBUTE_FOR
       object: BETERM
     mandatoryVariable: false
     mandatoryValue: false

@@ -3,10 +3,12 @@ packageType: bc
 conceptId: C170610
 ncitCode: C170610
 href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170610
-parentConceptId: C150824
 categories:
   - Subject Disposition
-  - Non-Protocol Disposition Events
+  - Disposition Events
+  - Other Events
+  - Consent
+  - Withdrawal
 shortName: Withdrawal of Consent From Protocol-Specified Activity
 resultScales:
   - Nominal

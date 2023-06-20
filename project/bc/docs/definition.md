@@ -4,7 +4,7 @@
 
 NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/definition](https://www.cdisc.org/cosmos/1-0/definition)
+URI: [cosmos:definition](https://www.cdisc.org/cosmos/1-0definition)
 
 
 ## Domain and Range

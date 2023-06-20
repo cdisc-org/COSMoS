@@ -4,7 +4,7 @@
 
 Domain for the SDTM specialization group
 
-URI: [https://www.cdisc.org/cosmos/1-0/domain](https://www.cdisc.org/cosmos/1-0/domain)
+URI: [cosmos:domain](https://www.cdisc.org/cosmos/1-0domain)
 
 
 ## Domain and Range

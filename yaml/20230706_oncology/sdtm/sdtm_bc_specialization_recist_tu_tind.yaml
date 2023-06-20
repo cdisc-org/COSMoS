@@ -16,11 +16,11 @@ variables:
       submissionValue: TUTESTCD
     assignedTerm:
       conceptId: C178053
-      value: TIND
+      value: "TIND"
     role: Topic
     relationship:
       subject: TUTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TUTEST
     mandatoryVariable: true 
@@ -36,7 +36,7 @@ variables:
       submissionValue: TUTEST
     assignedTerm:
       conceptId: C178053
-      value: Target Indicator
+      value: "Target Indicator"
     role: Qualifier
     relationship:
       subject: TUTEST
@@ -104,7 +104,7 @@ variables:
       submissionValue: EVAL
     assignedTerm:
       conceptId: C25936
-      value: INVESTIGATOR
+      value: "INVESTIGATOR"
     role: Qualifier
     relationship:
       subject: TUEVAL
@@ -125,7 +125,7 @@ variables:
       submissionValue: EPOCH
     assignedTerm:
       conceptId: C48262
-      value: SCREENING
+      value: "SCREENING"
     role: Timing
     relationship:
       subject: EPOCH

@@ -4,7 +4,7 @@
 
 C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
 
-URI: [https://www.cdisc.org/cosmos/1-0/parentConceptId](https://www.cdisc.org/cosmos/1-0/parentConceptId)
+URI: [cosmos:parentConceptId](https://www.cdisc.org/cosmos/1-0parentConceptId)
 
 
 ## Domain and Range

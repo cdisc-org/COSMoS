@@ -4,7 +4,7 @@
 
 Variable origin type (define-XML v21)
 
-URI: [https://www.cdisc.org/cosmos/1-0/originType](https://www.cdisc.org/cosmos/1-0/originType)
+URI: [cosmos:originType](https://www.cdisc.org/cosmos/1-0originType)
 
 
 ## Domain and Range

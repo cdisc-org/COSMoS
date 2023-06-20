@@ -4,7 +4,7 @@
 
 The last SDTMIG version that is applicable to the BC dataset specialization
 
-URI: [https://www.cdisc.org/cosmos/1-0/sdtmigEndVersion](https://www.cdisc.org/cosmos/1-0/sdtmigEndVersion)
+URI: [cosmos:sdtmigEndVersion](https://www.cdisc.org/cosmos/1-0sdtmigEndVersion)
 
 
 ## Domain and Range

@@ -16,11 +16,11 @@ variables:
       submissionValue: LBTESTCD
     assignedTerm:
       conceptId: C64851
-      value: HCG
+      value: "HCG"
     role: Topic
     relationship:
       subject: LBTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: LBTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: LBTEST
     assignedTerm:
       conceptId: C64851
-      value: Choriogonadotropin Beta
+      value: "Choriogonadotropin Beta"
     role: Qualifier
     relationship:
       subject: LBTEST
@@ -46,7 +46,7 @@ variables:
   - name: LBCAT
     isNonStandard: false
     assignedTerm:
-      value: CHEMISTRY
+      value: "CHEMISTRY"
     role: Qualifier
     relationship:
       subject: LBCAT
@@ -94,7 +94,7 @@ variables:
   - name: LBLOINC
     isNonStandard: false
     assignedTerm:
-      value: 2110-5
+      value: "2110-5"
     role: Qualifier
     relationship:
       subject: LBLOINC
@@ -112,7 +112,7 @@ variables:
       submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C105706
-      value: SERUM OR PLASMA
+      value: "SERUM OR PLASMA"
     role: Qualifier
     relationship:
       subject: LBSPEC

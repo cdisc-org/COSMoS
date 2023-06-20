@@ -124,7 +124,8 @@
         if not missing(assigned_value) then do;
           put +4 "assignedTerm:";
           if not missing(assigned_term) then put +6 "conceptId:" +1 assigned_term;
-          put +6 "value:" +1 assigned_value;
+          qvalue=quote(strip(assigned_value));
+          put +6 "value:" +1 qvalue;
           %add2issues_sdtm((not missing(value_list)) and (not missing(assigned_value)), 
                 %str(ASSIGNED_VALUE_AND_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
@@ -148,6 +149,10 @@
         if not missing(format) then put +4 "format:" +1 qformat;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
 
+          %add2issues_sdtm((missing(subject) or missing(linking_phrase) or missing(predicate_term) or missing(object)) and not (missing(subject) and missing(linking_phrase) and missing(predicate_term) and missing(object)),
+                %str(RELATIONSHIP_ISSUE), 
+                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                );
         if not missing(subject) then do;
           linking_phrase_low = lowcase(linking_phrase);
           put +4 "relationship:";

@@ -4,7 +4,7 @@
 
 Subset codelist short name
 
-URI: [https://www.cdisc.org/cosmos/1-0/subsetShortName](https://www.cdisc.org/cosmos/1-0/subsetShortName)
+URI: [cosmos:subsetShortName](https://www.cdisc.org/cosmos/1-0subsetShortName)
 
 
 ## Domain and Range

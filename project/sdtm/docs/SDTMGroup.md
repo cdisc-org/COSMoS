@@ -4,7 +4,7 @@
 
 
 
-URI: [https://www.cdisc.org/cosmos/1-0/SDTMGroup](https://www.cdisc.org/cosmos/1-0/SDTMGroup)
+URI: [cosmos:SDTMGroup](https://www.cdisc.org/cosmos/1-0SDTMGroup)
 
 
 [![img](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageType;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageType;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])

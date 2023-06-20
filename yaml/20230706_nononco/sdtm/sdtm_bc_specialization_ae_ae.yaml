@@ -40,9 +40,6 @@ variables:
     originSource: Sponsor
   - name: AELLT
     isNonStandard: false
-    codelist:
-      conceptId: MedDRA
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=MedDRA
     role: Qualifier
     dataType: text
     length: 200
@@ -57,9 +54,6 @@ variables:
     originSource: Sponsor
   - name: AELLTCD
     isNonStandard: false
-    codelist:
-      conceptId: MedDRA
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=MedDRA
     role: Qualifier
     dataType: text
     length: 8
@@ -225,7 +219,7 @@ variables:
     codelist:
       conceptId: C66769
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66769
-      submissionValue: SEV
+      submissionValue: AESEV
     role: Qualifier
     dataType: text
     length: 200
@@ -377,8 +371,8 @@ variables:
     dataElementConceptId: C83211
     isNonStandard: false
     codelist:
-      conceptId: 1
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=1
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -400,8 +394,8 @@ variables:
     dataElementConceptId: C83117
     isNonStandard: false
     codelist:
-      conceptId: C66743
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66743
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -423,8 +417,8 @@ variables:
     dataElementConceptId: C113380
     isNonStandard: false
     codelist:
-      conceptId: C66744
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66744
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -446,8 +440,8 @@ variables:
     dataElementConceptId: C48275
     isNonStandard: false
     codelist:
-      conceptId: C66745
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66745
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -469,8 +463,8 @@ variables:
     dataElementConceptId: C83052
     isNonStandard: false
     codelist:
-      conceptId: C66746
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66746
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -492,8 +486,8 @@ variables:
     dataElementConceptId: C84266
     isNonStandard: false
     codelist:
-      conceptId: C66747
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66747
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -515,8 +509,8 @@ variables:
     dataElementConceptId: C83214
     isNonStandard: false
     codelist:
-      conceptId: C66748
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66748
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -538,8 +532,8 @@ variables:
     dataElementConceptId: C83053
     isNonStandard: false
     codelist:
-      conceptId: C66749
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66749
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:
@@ -561,8 +555,8 @@ variables:
     dataElementConceptId: C83199
     isNonStandard: false
     codelist:
-      conceptId: C66750
-      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66750
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
       submissionValue: NY
     subsetCodelist: NY_NY
     valueList:

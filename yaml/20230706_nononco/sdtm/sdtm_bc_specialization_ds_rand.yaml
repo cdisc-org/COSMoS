@@ -17,7 +17,7 @@ variables:
       submissionValue: DSCAT
     assignedTerm:
       conceptId: C74588
-      value: PROTOCOL MILESTONE
+      value: "PROTOCOL MILESTONE"
     role: Qualifier
     relationship:
       subject: DSCAT
@@ -26,7 +26,6 @@ variables:
       object: DSTERM
     mandatoryVariable: true 
     mandatoryValue: false
-    comparator: EQ
   - name: DSDECOD
     dataElementConceptId: C83122
     isNonStandard: false
@@ -36,7 +35,7 @@ variables:
       submissionValue: PROTMLST
     assignedTerm:
       conceptId: C114209
-      value: RANDOMIZED
+      value: "RANDOMIZED"
     role: Qualifier
     dataType: text
     length: 200
@@ -49,8 +48,6 @@ variables:
     mandatoryValue: true 
     originType: Assigned
     originSource: Sponsor
-    comparator: EQ
-    vlmTarget: true 
   - name: DSTERM
     dataElementConceptId: C82571
     isNonStandard: false

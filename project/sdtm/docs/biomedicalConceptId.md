@@ -4,7 +4,7 @@
 
 Biomedical Concept identifier
 
-URI: [https://www.cdisc.org/cosmos/1-0/biomedicalConceptId](https://www.cdisc.org/cosmos/1-0/biomedicalConceptId)
+URI: [cosmos:biomedicalConceptId](https://www.cdisc.org/cosmos/1-0biomedicalConceptId)
 
 
 ## Domain and Range

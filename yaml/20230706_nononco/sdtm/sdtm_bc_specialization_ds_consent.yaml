@@ -16,8 +16,8 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74558
       submissionValue: DSCAT
     assignedTerm:
-      conceptId: C150824
-      value: PROTOCOL MILESTONE
+      conceptId: C74588
+      value: "PROTOCOL MILESTONE"
     role: Qualifier
     relationship:
       subject: DSCAT
@@ -26,7 +26,6 @@ variables:
       object: DSTERM
     mandatoryVariable: true 
     mandatoryValue: false
-    comparator: EQ
   - name: DSDECOD
     dataElementConceptId: C83122
     isNonStandard: false
@@ -36,7 +35,7 @@ variables:
       submissionValue: PROTMLST
     assignedTerm:
       conceptId: C16735
-      value: INFORMED CONSENT OBTAINED
+      value: "INFORMED CONSENT OBTAINED"
     role: Qualifier
     dataType: text
     length: 200
@@ -49,8 +48,6 @@ variables:
     mandatoryValue: true 
     originType: Assigned
     originSource: Sponsor
-    comparator: EQ
-    vlmTarget: true 
   - name: DSTERM
     dataElementConceptId: C82571
     isNonStandard: false

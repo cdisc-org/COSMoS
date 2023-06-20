@@ -6,9 +6,9 @@ href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=
 parentConceptId: C82547
 categories:
   - Response Evaluation Criteria in Solid Tumors
-  -  Response Evaluation Criteria in Solid Tumors Version 1.1
+  - Response Evaluation Criteria in Solid Tumors Version 1.1
   - Tumor Identifier Test
-  -  Tumor Identification
+  - Tumor Identification
   - RECIST 1.1
   - Split
 shortName: Tumor Fragmentation

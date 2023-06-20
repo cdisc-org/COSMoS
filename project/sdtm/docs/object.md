@@ -4,7 +4,7 @@
 
 Object in a variable relationship
 
-URI: [https://www.cdisc.org/cosmos/1-0/object](https://www.cdisc.org/cosmos/1-0/object)
+URI: [cosmos:object](https://www.cdisc.org/cosmos/1-0object)
 
 
 ## Domain and Range

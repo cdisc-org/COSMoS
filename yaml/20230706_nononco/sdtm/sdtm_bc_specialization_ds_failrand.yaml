@@ -17,7 +17,7 @@ variables:
       submissionValue: DSCAT
     assignedTerm:
       conceptId: C74590
-      value: DISPOSITION EVENT
+      value: "DISPOSITION EVENT"
     role: Qualifier
     relationship:
       subject: DSCAT
@@ -26,7 +26,6 @@ variables:
       object: DSTERM
     mandatoryVariable: true 
     mandatoryValue: false
-    comparator: EQ
   - name: DSSCAT
     dataElementConceptId: C83248
     isNonStandard: false
@@ -45,7 +44,6 @@ variables:
       object: DSTERM
     mandatoryVariable: false
     mandatoryValue: false
-    comparator: EQ
   - name: DSDECOD
     dataElementConceptId: C83122
     isNonStandard: false
@@ -55,7 +53,7 @@ variables:
       submissionValue: NCOMPLT
     assignedTerm:
       conceptId: C105448
-      value: FAILURE TO MEET RANDOMIZATION CRITERIA
+      value: "FAILURE TO MEET RANDOMIZATION CRITERIA"
     role: Qualifier
     dataType: text
     length: 200
@@ -68,8 +66,6 @@ variables:
     mandatoryValue: true 
     originType: Collected
     originSource: Investigator
-    comparator: EQ
-    vlmTarget: true 
   - name: DSTERM
     dataElementConceptId: C82571
     isNonStandard: false

@@ -16,11 +16,11 @@ variables:
       submissionValue: VSTESTCD
     assignedTerm:
       conceptId: C25298
-      value: SYSBP
+      value: "SYSBP"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: VSTEST
     assignedTerm:
       conceptId: C25298
-      value: Systolic Blood Pressure
+      value: "Systolic Blood Pressure"
     role: Qualifier
     relationship:
       subject: VSTEST
@@ -68,7 +68,7 @@ variables:
       submissionValue: VSRESU
     assignedTerm:
       conceptId: C49670
-      value: mmHg
+      value: "mmHg"
     role: Qualifier
     relationship:
       subject: VSORRESU
@@ -115,7 +115,7 @@ variables:
       submissionValue: VSRESU
     assignedTerm:
       conceptId: C49670
-      value: mmHg
+      value: "mmHg"
     role: Qualifier
     relationship:
       subject: VSSTRESU

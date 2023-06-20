@@ -16,11 +16,11 @@ variables:
       submissionValue: VSTESTCD
     assignedTerm:
       conceptId: C16358
-      value: BMI
+      value: "BMI"
     role: Topic
     relationship:
       subject: VSTESTCD
-      linkingPhrase: is decoded by the value in
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: VSTEST
     mandatoryVariable: true 
@@ -34,7 +34,7 @@ variables:
       submissionValue: VSTEST
     assignedTerm:
       conceptId: C16358
-      value: Body Mass Index
+      value: "Body Mass Index"
     role: Qualifier
     relationship:
       subject: VSTEST

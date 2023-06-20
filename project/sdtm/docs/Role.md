@@ -4,7 +4,7 @@
 
 SDTM variable role
 
-URI: [https://www.cdisc.org/cosmos/1-0/role](https://www.cdisc.org/cosmos/1-0/role)
+URI: [cosmos:role](https://www.cdisc.org/cosmos/1-0role)
 
 
 ## Domain and Range

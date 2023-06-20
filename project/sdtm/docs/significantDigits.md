@@ -4,7 +4,7 @@
 
 Variable significant_digits
 
-URI: [https://www.cdisc.org/cosmos/1-0/significantDigits](https://www.cdisc.org/cosmos/1-0/significantDigits)
+URI: [cosmos:significantDigits](https://www.cdisc.org/cosmos/1-0significantDigits)
 
 
 ## Domain and Range
