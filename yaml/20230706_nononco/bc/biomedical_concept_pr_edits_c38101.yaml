@@ -1,0 +1,81 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C38101
+ncitCode: C38101
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C38101
+parentConceptId: C16502
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+shortName: X-Ray Imaging
+synonyms:
+  - Conventional X-Ray
+  - Medical Imaging
+  - X-Ray
+  - Static X-Ray
+resultScales:
+  - Nominal
+definition: "A radiographic procedure using the emission of x-rays to form an image of the structure penetrated by the radiation."
+dataElementConcepts:
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C117513
+    ncitCode: C117513
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117513
+    shortName: Procedure Category
+    dataType: string
+  - conceptId: C117514
+    ncitCode: C117514
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117514
+    shortName: Procedure Subcategory
+    dataType: string
+  - conceptId: C117515
+    ncitCode: C117515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117515
+    shortName: Procedure Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117516
+    ncitCode: C117516
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117516
+    shortName: Procedure Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117525
+    ncitCode: C117525
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117525
+    shortName: Procedure Location
+    dataType: string
+    exampleSet:
+      - "Chest"
+  - conceptId: C117526
+    ncitCode: C117526
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117526
+    shortName: Procedure Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+      - "Bilateral"
+  - conceptId: C117527
+    ncitCode: C117527
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117527
+    shortName: Procedure Directionality
+    dataType: string
+    exampleSet:
+      - "Inner"
+      - "Outer"
+      - "Anterior"
+      - "Dorsal"

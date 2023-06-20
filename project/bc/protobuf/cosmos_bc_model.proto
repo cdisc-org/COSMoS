@@ -1,0 +1,31 @@
+message BiomedicalConcept
+ {
+  string conceptId = 0
+  string ncitCode = 0
+  uri href = 0
+  date packageDate = 0
+  biomedicalConceptPackageType packageType = 0
+ repeated  string categories = 0
+  string parentConceptId = 0
+  string shortName = 0
+ repeated  string synonyms = 0
+ repeated  biomedicalConceptResultScale resultScales = 0
+  string definition = 0
+ repeated  coding coding = 0
+ repeated  dataElementConcept dataElementConcepts = 0
+ }
+message Coding
+ {
+  string code = 0
+  string system = 0
+  string systemName = 0
+ }
+message DataElementConcept
+ {
+  string conceptId = 0
+  string ncitCode = 0
+  uri href = 0
+  string shortName = 0
+  dataElementConceptDataType dataType = 0
+ repeated  string exampleSet = 0
+ }

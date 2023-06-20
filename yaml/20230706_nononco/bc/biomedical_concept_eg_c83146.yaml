@@ -1,0 +1,11 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C83146
+ncitCode: C83146
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83146
+categories:
+  - Test Names
+shortName: Electrocardiogram Test
+synonyms:
+  - EGTEST
+definition: A character or string that represents the full name of the ECG assessment.

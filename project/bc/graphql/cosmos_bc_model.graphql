@@ -1,0 +1,34 @@
+type BiomedicalConcept
+  {
+    conceptId: String!
+    ncitCode: String
+    href: Uri
+    packageDate: Date!
+    packageType: BiomedicalConceptPackageType!
+    categories: [String]!
+    parentConceptId: String
+    shortName: String!
+    synonyms: [String]
+    resultScales: [BiomedicalConceptResultScale]
+    definition: String!
+    coding: [Coding]
+    dataElementConcepts: [DataElementConcept]
+  }
+
+type Coding
+  {
+    code: String!
+    system: String!
+    systemName: String
+  }
+
+type DataElementConcept
+  {
+    conceptId: String!
+    ncitCode: String
+    href: Uri
+    shortName: String!
+    dataType: DataElementConceptDataType!
+    exampleSet: [String]
+  }
+

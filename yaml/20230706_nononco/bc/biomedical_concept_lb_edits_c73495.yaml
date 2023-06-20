@@ -1,0 +1,45 @@
+packageDate: "2023-07-06"
+packageType: bc
+conceptId: C73495
+ncitCode: C73495
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73495
+parentConceptId: C147128
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hormone Measurements
+  - Choriogonadotropin Measurements
+  - HCG Measurements
+shortName: Serum HCG Measurement
+synonyms:
+  - Serum Pregnancy Test
+  - Serum Human Chorionic Gonadotropin
+  - Serum HCG
+resultScales:
+  - Quantitative
+definition: A quantitative measurement of the amount of human chorionic gonadotropin present in a sample of serum.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: NEW_5
+    shortName: Unit of Arbitrary or Substance Concentration
+    dataType: string
+    exampleSet:
+      - "pmol/L"
+      - "mmol/L"
+      - "Arbitrary U/mL"
+      - "IU/L"
+      - "mIU/mL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
+      - "Body fluid"

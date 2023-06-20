@@ -1,0 +1,91 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: FLASHFREEZING
+domain: BE
+shortName: Biospecimen Flash Freezing
+source: BE.BETERM
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C63521
+variables:
+  - name: BECAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "PREPARATION"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: BECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: BETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: BEDECOD
+    dataElementConceptId: C82977
+    isNonStandard: false
+    codelist:
+      conceptId: C124297
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124297
+      submissionValue: BEDECOD
+    assignedTerm:
+      conceptId: C63521
+      value: "FLASH FREEZING"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: BEDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: BETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: BETERM
+    dataElementConceptId: C82571
+    isNonStandard: false
+    assignedTerm:
+      value: "Flash Freezing"
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: BETERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: BEDECOD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: BEPARTY
+    dataElementConceptId: C117052
+    isNonStandard: false
+    codelist:
+      conceptId: C189265
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189265
+      submissionValue: ACCPARTY
+    role: Topic
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: BESPEC
+    dataElementConceptId: C70713
+    isNonStandard: true 
+    codelist:
+      conceptId: C78734
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submissionValue: SPECTYPE
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: BESPEC
+      linkingPhrase: is the material type of the subject of the activity in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: BETERM
+    mandatoryVariable: false
+    mandatoryValue: false

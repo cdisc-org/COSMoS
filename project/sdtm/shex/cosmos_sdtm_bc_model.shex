@@ -1,0 +1,129 @@
+BASE <https://www.cdisc.org/cosmos/1-0/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<https://www.cdisc.org/cosmos/1-0AssignedTerm> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0AssignedTerm_tes> (  <https://www.cdisc.org/cosmos/1-0conceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0value> @linkml:String
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0AssignedTerm> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0CodeList> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0CodeList_tes> (  <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
+          <https://www.cdisc.org/cosmos/1-0submissionValue> @linkml:String
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0CodeList> ]
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0CodeListTerm> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0CodeListTerm_tes> (  <https://www.cdisc.org/cosmos/1-0termId> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0termValue> @linkml:String
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0CodeListTerm> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0RelationShip> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0RelationShip_tes> (  <https://www.cdisc.org/cosmos/1-0subject> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0linkingPhrase> @<https://www.cdisc.org/cosmos/1-0LinkingPhrase> ;
+          <https://www.cdisc.org/cosmos/1-0predicateTerm> @<https://www.cdisc.org/cosmos/1-0PredicateTerm> ;
+          <https://www.cdisc.org/cosmos/1-0object> @linkml:String
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0RelationShip> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0SDTMGroup> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0SDTMGroup_tes> (  <https://www.cdisc.org/cosmos/1-0packageDate> @linkml:Date ;
+          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageType> ;
+          <https://www.cdisc.org/cosmos/1-0domain> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0source> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0sdtmigStartVersion> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0sdtmigEndVersion> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0biomedicalConceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0variables> @<https://www.cdisc.org/cosmos/1-0SDTMVariable> *
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMGroup> ]
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0SDTMVariable> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0SDTMVariable_tes> (  <https://www.cdisc.org/cosmos/1-0dataElementConceptId> @linkml:String
+          ? ;
+          <https://www.cdisc.org/cosmos/1-0isNonStandard> @linkml:Boolean ? ;
+          <https://www.cdisc.org/cosmos/1-0codelist> @<https://www.cdisc.org/cosmos/1-0CodeList> ? ;
+          <https://www.cdisc.org/cosmos/1-0subsetCodelist> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0valueList> @linkml:String * ;
+          <https://www.cdisc.org/cosmos/1-0assignedTerm> @<https://www.cdisc.org/cosmos/1-0AssignedTerm> ? ;
+          <https://www.cdisc.org/cosmos/1-0role> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0relationship> @<https://www.cdisc.org/cosmos/1-0RelationShip> ? ;
+          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0SDTMVariableDataType> ? ;
+          <https://www.cdisc.org/cosmos/1-0length> @linkml:Integer ? ;
+          <https://www.cdisc.org/cosmos/1-0format> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0significantDigits> @linkml:Integer ? ;
+          <https://www.cdisc.org/cosmos/1-0mandatoryVariable> @linkml:Boolean ? ;
+          <https://www.cdisc.org/cosmos/1-0mandatoryValue> @linkml:Boolean ? ;
+          <https://www.cdisc.org/cosmos/1-0originType> @<https://www.cdisc.org/cosmos/1-0OriginType> ? ;
+          <https://www.cdisc.org/cosmos/1-0originSource> @<https://www.cdisc.org/cosmos/1-0OriginSource> ? ;
+          <https://www.cdisc.org/cosmos/1-0comparator> @<https://www.cdisc.org/cosmos/1-0Comparator> ? ;
+          <https://www.cdisc.org/cosmos/1-0vlmTarget> @linkml:Boolean ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMVariable> ]
+    )
+}
+
+<https://www.cdisc.org/cosmos/1-0SubsetCodeList> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/1-0SubsetCodeList_tes> (  <https://www.cdisc.org/cosmos/1-0parentCodelist> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0subsetShortName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0subsetLabel> @linkml:String ;
+          <https://www.cdisc.org/cosmos/1-0codelistTerm> @<https://www.cdisc.org/cosmos/1-0CodeListTerm> +
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/1-0SubsetCodeList> ] ?
+    )
+}
+
+

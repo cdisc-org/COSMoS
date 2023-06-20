@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-13T15:16:48
+# Generation date: 2023-06-20T08:55:52
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -32,8 +32,10 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
+NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
+COSMOS = CurieNamespace('cosmos', 'https://www.cdisc.org/cosmos/1-0')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-DEFAULT_ = CurieNamespace('', 'https://www.cdisc.org/cosmos/1-0/')
+DEFAULT_ = COSMOS
 
 
 # Types
@@ -51,10 +53,10 @@ class DataElementConceptConceptId(extended_str):
 class BiomedicalConcept(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/BiomedicalConcept")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.BiomedicalConcept
+    class_class_curie: ClassVar[str] = "cosmos:BiomedicalConcept"
     class_name: ClassVar[str] = "BiomedicalConcept"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/BiomedicalConcept")
+    class_model_uri: ClassVar[URIRef] = COSMOS.BiomedicalConcept
 
     conceptId: Union[str, BiomedicalConceptConceptId] = None
     packageDate: Union[str, XSDDate] = None
@@ -132,10 +134,10 @@ class BiomedicalConcept(YAMLRoot):
 class Coding(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/Coding")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.Coding
+    class_class_curie: ClassVar[str] = "cosmos:Coding"
     class_name: ClassVar[str] = "Coding"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/Coding")
+    class_model_uri: ClassVar[URIRef] = COSMOS.Coding
 
     code: str = None
     system: str = None
@@ -162,10 +164,10 @@ class Coding(YAMLRoot):
 class DataElementConcept(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/DataElementConcept")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = COSMOS.DataElementConcept
+    class_class_curie: ClassVar[str] = "cosmos:DataElementConcept"
     class_name: ClassVar[str] = "DataElementConcept"
-    class_model_uri: ClassVar[URIRef] = URIRef("https://www.cdisc.org/cosmos/1-0/DataElementConcept")
+    class_model_uri: ClassVar[URIRef] = COSMOS.DataElementConcept
 
     conceptId: Union[str, DataElementConceptConceptId] = None
     shortName: str = None
@@ -239,80 +241,80 @@ class DataElementConceptDataType(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.conceptId = Slot(uri=DEFAULT_.conceptId, name="conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.conceptId, domain=None, range=URIRef,
+slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
+                   model_uri=COSMOS.conceptId, domain=None, range=URIRef,
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
-slots.ncitCode = Slot(uri=DEFAULT_.ncitCode, name="ncitCode", curie=DEFAULT_.curie('ncitCode'),
-                   model_uri=DEFAULT_.ncitCode, domain=None, range=Optional[str],
+slots.ncitCode = Slot(uri=COSMOS.ncitCode, name="ncitCode", curie=COSMOS.curie('ncitCode'),
+                   model_uri=COSMOS.ncitCode, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.href = Slot(uri=DEFAULT_.href, name="href", curie=DEFAULT_.curie('href'),
-                   model_uri=DEFAULT_.href, domain=None, range=Optional[Union[str, URI]])
+slots.href = Slot(uri=COSMOS.href, name="href", curie=COSMOS.curie('href'),
+                   model_uri=COSMOS.href, domain=None, range=Optional[Union[str, URI]])
 
-slots.packageDate = Slot(uri=DEFAULT_.packageDate, name="packageDate", curie=DEFAULT_.curie('packageDate'),
-                   model_uri=DEFAULT_.packageDate, domain=None, range=Union[str, XSDDate])
+slots.packageDate = Slot(uri=COSMOS.packageDate, name="packageDate", curie=COSMOS.curie('packageDate'),
+                   model_uri=COSMOS.packageDate, domain=None, range=Union[str, XSDDate])
 
-slots.packageType = Slot(uri=DEFAULT_.packageType, name="packageType", curie=DEFAULT_.curie('packageType'),
-                   model_uri=DEFAULT_.packageType, domain=None, range=Union[str, "BiomedicalConceptPackageType"])
+slots.packageType = Slot(uri=COSMOS.packageType, name="packageType", curie=COSMOS.curie('packageType'),
+                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "BiomedicalConceptPackageType"])
 
-slots.categories = Slot(uri=DEFAULT_.categories, name="categories", curie=DEFAULT_.curie('categories'),
-                   model_uri=DEFAULT_.categories, domain=None, range=Union[str, List[str]])
+slots.categories = Slot(uri=COSMOS.categories, name="categories", curie=COSMOS.curie('categories'),
+                   model_uri=COSMOS.categories, domain=None, range=Union[str, List[str]])
 
-slots.parentConceptId = Slot(uri=DEFAULT_.parentConceptId, name="parentConceptId", curie=DEFAULT_.curie('parentConceptId'),
-                   model_uri=DEFAULT_.parentConceptId, domain=None, range=Optional[str])
+slots.parentConceptId = Slot(uri=COSMOS.parentConceptId, name="parentConceptId", curie=COSMOS.curie('parentConceptId'),
+                   model_uri=COSMOS.parentConceptId, domain=None, range=Optional[str])
 
-slots.shortName = Slot(uri=DEFAULT_.shortName, name="shortName", curie=DEFAULT_.curie('shortName'),
-                   model_uri=DEFAULT_.shortName, domain=None, range=str)
+slots.shortName = Slot(uri=COSMOS.shortName, name="shortName", curie=COSMOS.curie('shortName'),
+                   model_uri=COSMOS.shortName, domain=None, range=str)
 
-slots.synonyms = Slot(uri=DEFAULT_.synonyms, name="synonyms", curie=DEFAULT_.curie('synonyms'),
-                   model_uri=DEFAULT_.synonyms, domain=None, range=Optional[Union[str, List[str]]])
+slots.synonyms = Slot(uri=COSMOS.synonyms, name="synonyms", curie=COSMOS.curie('synonyms'),
+                   model_uri=COSMOS.synonyms, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.resultScales = Slot(uri=DEFAULT_.resultScales, name="resultScales", curie=DEFAULT_.curie('resultScales'),
-                   model_uri=DEFAULT_.resultScales, domain=None, range=Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]])
+slots.resultScales = Slot(uri=COSMOS.resultScales, name="resultScales", curie=COSMOS.curie('resultScales'),
+                   model_uri=COSMOS.resultScales, domain=None, range=Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]])
 
-slots.definition = Slot(uri=DEFAULT_.definition, name="definition", curie=DEFAULT_.curie('definition'),
-                   model_uri=DEFAULT_.definition, domain=None, range=str)
+slots.definition = Slot(uri=COSMOS.definition, name="definition", curie=COSMOS.curie('definition'),
+                   model_uri=COSMOS.definition, domain=None, range=str)
 
-slots.coding = Slot(uri=DEFAULT_.coding, name="coding", curie=DEFAULT_.curie('coding'),
-                   model_uri=DEFAULT_.coding, domain=None, range=Optional[Union[Union[dict, Coding], List[Union[dict, Coding]]]])
+slots.coding = Slot(uri=COSMOS.coding, name="coding", curie=COSMOS.curie('coding'),
+                   model_uri=COSMOS.coding, domain=None, range=Optional[Union[Union[dict, Coding], List[Union[dict, Coding]]]])
 
-slots.system = Slot(uri=DEFAULT_.system, name="system", curie=DEFAULT_.curie('system'),
-                   model_uri=DEFAULT_.system, domain=None, range=str)
+slots.system = Slot(uri=COSMOS.system, name="system", curie=COSMOS.curie('system'),
+                   model_uri=COSMOS.system, domain=None, range=str)
 
-slots.systemName = Slot(uri=DEFAULT_.systemName, name="systemName", curie=DEFAULT_.curie('systemName'),
-                   model_uri=DEFAULT_.systemName, domain=None, range=Optional[str])
+slots.systemName = Slot(uri=COSMOS.systemName, name="systemName", curie=COSMOS.curie('systemName'),
+                   model_uri=COSMOS.systemName, domain=None, range=Optional[str])
 
-slots.code = Slot(uri=DEFAULT_.code, name="code", curie=DEFAULT_.curie('code'),
-                   model_uri=DEFAULT_.code, domain=None, range=str)
+slots.code = Slot(uri=COSMOS.code, name="code", curie=COSMOS.curie('code'),
+                   model_uri=COSMOS.code, domain=None, range=str)
 
-slots.dataElementConcepts = Slot(uri=DEFAULT_.dataElementConcepts, name="dataElementConcepts", curie=DEFAULT_.curie('dataElementConcepts'),
-                   model_uri=DEFAULT_.dataElementConcepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
+slots.dataElementConcepts = Slot(uri=COSMOS.dataElementConcepts, name="dataElementConcepts", curie=COSMOS.curie('dataElementConcepts'),
+                   model_uri=COSMOS.dataElementConcepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
 
-slots.dataType = Slot(uri=DEFAULT_.dataType, name="dataType", curie=DEFAULT_.curie('dataType'),
-                   model_uri=DEFAULT_.dataType, domain=None, range=Union[str, "DataElementConceptDataType"])
+slots.dataType = Slot(uri=COSMOS.dataType, name="dataType", curie=COSMOS.curie('dataType'),
+                   model_uri=COSMOS.dataType, domain=None, range=Union[str, "DataElementConceptDataType"])
 
-slots.exampleSet = Slot(uri=DEFAULT_.exampleSet, name="exampleSet", curie=DEFAULT_.curie('exampleSet'),
-                   model_uri=DEFAULT_.exampleSet, domain=None, range=Optional[Union[str, List[str]]])
+slots.exampleSet = Slot(uri=COSMOS.exampleSet, name="exampleSet", curie=COSMOS.curie('exampleSet'),
+                   model_uri=COSMOS.exampleSet, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.BiomedicalConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="BiomedicalConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
+slots.BiomedicalConcept_conceptId = Slot(uri=COSMOS.conceptId, name="BiomedicalConcept_conceptId", curie=COSMOS.curie('conceptId'),
+                   model_uri=COSMOS.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
-slots.BiomedicalConcept_ncitCode = Slot(uri=DEFAULT_.ncitCode, name="BiomedicalConcept_ncitCode", curie=DEFAULT_.curie('ncitCode'),
-                   model_uri=DEFAULT_.BiomedicalConcept_ncitCode, domain=BiomedicalConcept, range=Optional[str],
+slots.BiomedicalConcept_ncitCode = Slot(uri=COSMOS.ncitCode, name="BiomedicalConcept_ncitCode", curie=COSMOS.curie('ncitCode'),
+                   model_uri=COSMOS.BiomedicalConcept_ncitCode, domain=BiomedicalConcept, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.BiomedicalConcept_href = Slot(uri=DEFAULT_.href, name="BiomedicalConcept_href", curie=DEFAULT_.curie('href'),
-                   model_uri=DEFAULT_.BiomedicalConcept_href, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
+slots.BiomedicalConcept_href = Slot(uri=COSMOS.href, name="BiomedicalConcept_href", curie=COSMOS.curie('href'),
+                   model_uri=COSMOS.BiomedicalConcept_href, domain=BiomedicalConcept, range=Optional[Union[str, URI]])
 
-slots.DataElementConcept_conceptId = Slot(uri=DEFAULT_.conceptId, name="DataElementConcept_conceptId", curie=DEFAULT_.curie('conceptId'),
-                   model_uri=DEFAULT_.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
+slots.DataElementConcept_conceptId = Slot(uri=COSMOS.conceptId, name="DataElementConcept_conceptId", curie=COSMOS.curie('conceptId'),
+                   model_uri=COSMOS.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[0123456789]+)$'))
 
-slots.DataElementConcept_ncitCode = Slot(uri=DEFAULT_.ncitCode, name="DataElementConcept_ncitCode", curie=DEFAULT_.curie('ncitCode'),
-                   model_uri=DEFAULT_.DataElementConcept_ncitCode, domain=DataElementConcept, range=Optional[str],
+slots.DataElementConcept_ncitCode = Slot(uri=COSMOS.ncitCode, name="DataElementConcept_ncitCode", curie=COSMOS.curie('ncitCode'),
+                   model_uri=COSMOS.DataElementConcept_ncitCode, domain=DataElementConcept, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.DataElementConcept_href = Slot(uri=DEFAULT_.href, name="DataElementConcept_href", curie=DEFAULT_.curie('href'),
-                   model_uri=DEFAULT_.DataElementConcept_href, domain=DataElementConcept, range=Optional[Union[str, URI]])
+slots.DataElementConcept_href = Slot(uri=COSMOS.href, name="DataElementConcept_href", curie=COSMOS.curie('href'),
+                   model_uri=COSMOS.DataElementConcept_href, domain=DataElementConcept, range=Optional[Union[str, URI]])

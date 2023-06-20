@@ -22,7 +22,7 @@
          dec_ncitCode char(64),
          dec_shortName char(256),
          dec_dataType char(16),
-         dec_exampleSet char(2048)
+         dec_exampleSet char(32000)
         );
     quit;
   %end;

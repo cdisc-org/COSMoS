@@ -1,0 +1,83 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: PROTDEV
+domain: DS
+shortName: Protocol Deviation
+source: DS.DECODE
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C50996
+variables:
+  - name: DSCAT
+    dataElementConceptId: C83245
+    isNonStandard: false
+    codelist:
+      conceptId: C74558
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74558
+      submissionValue: DSCAT
+    assignedTerm:
+      conceptId: C74590
+      value: "DISPOSITION EVENT"
+    role: Qualifier
+    relationship:
+      subject: DSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: DSSCAT
+    dataElementConceptId: C83248
+    isNonStandard: false
+    codelist:
+      conceptId: C170443
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170443
+      submissionValue: DSSCAT
+    valueList:
+      - "STUDY PARTICIPATION"
+      - "STUDY TREATMENT"
+    role: Qualifer
+    relationship:
+      subject: DSSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: DSTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: DSDECOD
+    dataElementConceptId: C83122
+    isNonStandard: false
+    codelist:
+      conceptId: C66727
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66727
+      submissionValue: NCOMPLT
+    assignedTerm:
+      conceptId: C50996
+      value: "PROTOCOL DEVIATION"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: DSTERM
+    dataElementConceptId: C82571
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: DSDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator

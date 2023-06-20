@@ -1,0 +1,53 @@
+{
+   "_comments": "Auto generated from cosmos_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2023-06-20T08:55:59\n    Schema: COSMoS-Biomedical-Concepts-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/1-0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "NCIT": {
+         "@id": "http://purl.obolibrary.org/obo/NCIT_",
+         "@prefix": true
+      },
+      "cosmos": {
+         "@id": "https://www.cdisc.org/cosmos/1-0",
+         "@prefix": true
+      },
+      "linkml": "https://w3id.org/linkml/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://www.cdisc.org/cosmos/1-0",
+      "conceptId": "@id",
+      "coding": {
+         "@type": "@id"
+      },
+      "dataElementConcepts": {
+         "@type": "@id"
+      },
+      "dataType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "href": {
+         "@type": "@id"
+      },
+      "packageDate": {
+         "@type": "xsd:date"
+      },
+      "packageType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "resultScales": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      }
+   }
+}

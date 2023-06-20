@@ -8,7 +8,7 @@
   run;
 
   proc sql;
-    create table bc_sdtm_&type._&package._merged
+    create table bc_sdtm_&type._&package._mrgd
     as select
       bcsdtm.*,
       ss.subset_value_list
@@ -26,7 +26,7 @@
 
     proc contents data=bc_sdtm_&type._&package varnum;
     run;
-    proc print data=bc_sdtm_&type._&package._merged;
+    proc print data=bc_sdtm_&type._&package._mrgd;
     run;
 
     ods html5 close;
@@ -35,11 +35,11 @@
   %end;
 
   data issues(keep=_excel_file_ _tab_ vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
-    length prev_vlm_group_id $32 outname $100 qpackage_date qsdtmig_start_version qsdtmig_end_version qformat $20  
+    length prev_vlm_group_id $32 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
            codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low $512 value qvalue $100 value_list $4096
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
-    set work.bc_sdtm_&type._&package._merged;
+    set work.bc_sdtm_&type._&package._mrgd;
 
     call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc);
     
@@ -48,6 +48,7 @@
     
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
     
+    prev_vlm_group_id = strip(prev_vlm_group_id);
     prev_vlm_group_id = lag(vlm_group_id);
     if not(missing(vlm_group_id)) and (prev_vlm_group_id ne vlm_group_id) then do;
       count=0;
@@ -74,6 +75,11 @@
         if not missing(codelist) then do;
           
            codelist_submission_value_cdisc = get_codelist_submissionvalue(codelist);
+
+           %add2issues_sdtm(missing(codelist_submission_value), 
+                            %str(CODELIST_SUBMISSION_VALUE_MISSING), 
+                            codelist_submission_value_cdisc, "", %str(cats("codelist=", codelist)));
+
            %add2issues_sdtm(codelist_submission_value ne codelist_submission_value_cdisc, 
                             %str(CODELIST_SUBMISSION_VALUE_MISMATCH), 
                             codelist_submission_value_cdisc, codelist_submission_value, %str(cats("codelist=", codelist)));
@@ -118,7 +124,8 @@
         if not missing(assigned_value) then do;
           put +4 "assignedTerm:";
           if not missing(assigned_term) then put +6 "conceptId:" +1 assigned_term;
-          put +6 "value:" +1 assigned_value;
+          qvalue=quote(strip(assigned_value));
+          put +6 "value:" +1 qvalue;
           %add2issues_sdtm((not missing(value_list)) and (not missing(assigned_value)), 
                 %str(ASSIGNED_VALUE_AND_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
@@ -142,6 +149,10 @@
         if not missing(format) then put +4 "format:" +1 qformat;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
 
+          %add2issues_sdtm((missing(subject) or missing(linking_phrase) or missing(predicate_term) or missing(object)) and not (missing(subject) and missing(linking_phrase) and missing(predicate_term) and missing(object)),
+                %str(RELATIONSHIP_ISSUE), 
+                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                );
         if not missing(subject) then do;
           linking_phrase_low = lowcase(linking_phrase);
           put +4 "relationship:";

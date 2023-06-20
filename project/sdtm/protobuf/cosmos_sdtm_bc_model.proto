@@ -1,0 +1,65 @@
+message AssignedTerm
+ {
+  string conceptId = 0
+  string value = 0
+ }
+message CodeList
+ {
+  string conceptId = 0
+  uri href = 0
+  string submissionValue = 0
+ }
+message CodeListTerm
+ {
+  string termId = 0
+  string termValue = 0
+ }
+message RelationShip
+ {
+  string subject = 0
+  linkingPhrase linkingPhrase = 0
+  predicateTerm predicateTerm = 0
+  string object = 0
+ }
+message SDTMGroup
+ {
+  date packageDate = 0
+  sDTMDatasetSpecializationPackageType packageType = 0
+  string domain = 0
+  string shortName = 0
+  string datasetSpecializationId = 0
+  string source = 0
+  string sdtmigStartVersion = 0
+  string sdtmigEndVersion = 0
+  string biomedicalConceptId = 0
+ repeated  sDTMVariable variables = 0
+ }
+message SDTMVariable
+ {
+  string name = 0
+  string dataElementConceptId = 0
+  boolean isNonStandard = 0
+  codeList codelist = 0
+  string subsetCodelist = 0
+ repeated  string valueList = 0
+  assignedTerm assignedTerm = 0
+  string role = 0
+  relationShip relationship = 0
+  sDTMVariableDataType dataType = 0
+  integer length = 0
+  string format = 0
+  integer significantDigits = 0
+  boolean mandatoryVariable = 0
+  boolean mandatoryValue = 0
+  originType originType = 0
+  originSource originSource = 0
+  comparator comparator = 0
+  boolean vlmTarget = 0
+ }
+message SubsetCodeList
+ {
+  string parentCodelist = 0
+  string subsetShortName = 0
+  string subsetLabel = 0
+ repeated  codeListTerm codelistTerm = 0
+ }

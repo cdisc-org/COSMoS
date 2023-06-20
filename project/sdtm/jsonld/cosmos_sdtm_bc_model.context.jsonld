@@ -1,0 +1,114 @@
+{
+   "_comments": "Auto generated from cosmos_sdtm_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2023-06-20T08:43:23\n    Schema: COSMoS-Biomedical-Concepts-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/1-0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "NCIT": {
+         "@id": "http://purl.obolibrary.org/obo/NCIT_",
+         "@prefix": true
+      },
+      "cosmos": {
+         "@id": "https://www.cdisc.org/cosmos/1-0",
+         "@prefix": true
+      },
+      "linkml": "https://w3id.org/linkml/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://www.cdisc.org/cosmos/1-0",
+      "assignedTerm": {
+         "@type": "@id"
+      },
+      "codelist": {
+         "@type": "@id"
+      },
+      "codelistTerm": {
+         "@type": "@id"
+      },
+      "comparator": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "conceptId": "@id",
+      "datasetSpecializationId": "@id",
+      "dataType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "href": {
+         "@type": "@id"
+      },
+      "isNonStandard": {
+         "@type": "xsd:boolean"
+      },
+      "length": {
+         "@type": "xsd:integer"
+      },
+      "linkingPhrase": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "mandatoryValue": {
+         "@type": "xsd:boolean"
+      },
+      "mandatoryVariable": {
+         "@type": "xsd:boolean"
+      },
+      "name": "@id",
+      "originSource": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "originType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "packageDate": {
+         "@type": "xsd:date"
+      },
+      "packageType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "predicateTerm": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "relationship": {
+         "@type": "@id"
+      },
+      "significantDigits": {
+         "@type": "xsd:integer"
+      },
+      "variables": {
+         "@type": "@id"
+      },
+      "vlmTarget": {
+         "@type": "xsd:boolean"
+      }
+   }
+}

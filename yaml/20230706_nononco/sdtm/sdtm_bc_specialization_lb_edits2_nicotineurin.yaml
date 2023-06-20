@@ -1,0 +1,176 @@
+packageDate: "2023-07-06"
+packageType: sdtm
+datasetSpecializationId: NICOTINEURIN
+domain: LB
+shortName: Nicotine Concentration in Urine
+source: LB.LBTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C147403
+variables:
+  - name: LBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: LBTESTCD
+    assignedTerm:
+      conceptId: C147403
+      value: "NICOTINE"
+    role: Topic
+    relationship:
+      subject: LBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: LBTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: LBTEST
+    assignedTerm:
+      conceptId: C147403
+      value: "Nicotine"
+    role: Qualifier
+    relationship:
+      subject: LBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBCAT
+    isNonStandard: false
+    assignedTerm:
+      value: "CHEMISTRY"
+    role: Qualifier
+    relationship:
+      subject: LBCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBORRES
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: LBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: LBORRESU
+    dataElementConceptId: NEW_2
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    valueList:
+      - "mg/L"
+      - "ug/L"
+      - "nmol/L"
+      - "umol/L"
+    role: Qualifier
+    relationship:
+      subject: LBORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: LBORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: LBSTRESC
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    relationship:
+      subject: LBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: LBSTRESN
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: LBSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: LBSTRESU
+    dataElementConceptId: NEW_2
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C48508
+      value: "umol/L"
+    role: Qualifier
+    relationship:
+      subject: LBSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: LBSTRESN
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: LBLOINC
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: LBLOINC
+      linkingPhrase: identifies an observation described by
+      predicateTerm: IDENTIFIES_OBSERVATION
+      object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: LBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C13283
+      value: "URINE"
+    role: Qualifier
+    relationship:
+      subject: LBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
