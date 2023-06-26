@@ -9,7 +9,7 @@
          parentConceptId char(64),
          ncitCode char(64),
          href char(1024),
-         categories char(1024),
+         categories char(4096),
          shortName char(256),
          synonyms char(1024),
          resultScales char(256),

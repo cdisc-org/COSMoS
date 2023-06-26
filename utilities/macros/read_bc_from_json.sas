@@ -33,7 +33,7 @@
   %if %sysfunc(exist(&jsonlib..dataelementconcepts_exampleset)) %then %do;    
     data work.dataelementconcepts_exampleset(drop=exampleSet:);
       set &jsonlib..dataelementconcepts_exampleset;
-      length _exampleSets $ 1024; 
+      length _exampleSets $ 32000; 
       array exampleSets_{*} $ 32 exampleSet:;
       _exampleSets = catx(";", OF exampleSets_{*});
     run;
@@ -42,7 +42,7 @@
   %if %sysfunc(exist(&jsonlib..categories)) %then %do;    
     data work.categories;
       set &jsonlib..categories;
-      length _categories $ 1024; 
+      length _categories $ 4096; 
       array categories_{*} $ 32 categories:;
       _categories = catx(";", OF categories_{*});
     run;
