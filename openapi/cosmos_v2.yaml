@@ -127,7 +127,7 @@ paths:
         '504':
           $ref: '#/components/responses/statusGatewayTimeout'
 
-  /mdr/bc/biomedicalconcepts/categories:
+  /mdr/bc/categories:
     get:
       operationId: api.products.bc.get_biomedicalconcept_categories
       description: Get Biomedical Concept Categories List
