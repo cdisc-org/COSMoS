@@ -649,12 +649,12 @@ components:
     bcPackagesLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/bcPackagesRef'
         packages:
           type: array
           items:
             $ref: '#/components/schemas/bcPackageRef'
+        self:
+          $ref: '#/components/schemas/bcPackagesRef'
 
     bcPackagesRef:
       type: object
@@ -876,15 +876,50 @@ components:
     bcBiomedicalConceptsCategories:
       type: object
       properties:
+        name:
+          type: string
+          example: Biomedical Concept Categories
+        label:
+          type: string
+          example: Biomedical Concept Categories List
+        _links:
+          $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesLinks'
+
+    bcBiomedicalConceptsCategoriesLinks:
+      type: object
+      properties:
         categories:
           type: array
           items:
-            type: string
-          example:
-            - Vital Signs
-            - Laboratory Tests
-            - Chemistry Tests
-            - Gas Measurements
+            $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRef'
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesRef'
+
+    bcBiomedicalConceptsCategoryRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/biomedicalconcepts?category=Vital Signs
+        title:
+          type: string
+          example: Biomedical Concepts Category (Vital Signs)
+        type:
+          type: string
+          example: Biomedical Concepts Category
+
+    bcBiomedicalConceptsCategoriesRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/bc/categories
+        title:
+          type: string
+          example: Biomedical Concept Categories
+        type:
+          type: string
+          example: Biomedical Concept Category List
 
 # Biomedical Concepts (latest)
     bcBiomedicalConceptsLatest:
@@ -892,11 +927,11 @@ components:
       properties:
         name:
           type: string
-          example: Biomedical Concepts
+          example: Biomedical Concepts (latest version)
         label:
           type: string
-          example: Biomedical Concepts
-        categories:
+          example: Biomedical Concepts List
+        category:
           type: string
           example: "Vital Signs"
         _links:
@@ -1005,12 +1040,12 @@ components:
     bcBiomedicalConceptLatestLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/bcBiomedicalConceptLatestRef'
         parentBiomedicalConcept:
           $ref: '#/components/schemas/bcBiomedicalConceptParentLatestRef'
         parentPackage:
           $ref: '#/components/schemas/bcPackageLatestRef'
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptLatestRef'
 
     bcBiomedicalConceptParentLatestRef:
       type: object
@@ -1051,12 +1086,12 @@ components:
     sdtmPackagesLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/sdtmPackagesRef'
         packages:
           type: array
           items:
             $ref: '#/components/schemas/sdtmPackageRef'
+        self:
+          $ref: '#/components/schemas/sdtmPackagesRef'
 
     sdtmPackagesRef:
       type: object
@@ -1106,12 +1141,12 @@ components:
     sdtmDatasetSpecializationsLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
         DatasetSpecializations:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsRef'
 
     sdtmDatasetSpecializationsRef:
       type: object
@@ -1179,12 +1214,12 @@ components:
     sdtmDatasetSpecializationLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
         parentBiomedicalConcept:
           $ref: '#/components/schemas/sdtmBiomedicalConceptRef'
         parentPackage:
           $ref: '#/components/schemas/sdtmPackageRef'
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
 
     sdtmBiomedicalConceptRef:
       type: object
@@ -1316,13 +1351,50 @@ components:
     sdtmDatasetSpecializationDomains:
       type: object
       properties:
+        name:
+          type: string
+          example: SDTM Dataset Specialization Domains
+        label:
+          type: string
+          example: SDTM Dataset Specialization Domains List
+        _links:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsLinks'
+
+    sdtmDatasetSpecializationDomainsLinks:
+      type: object
+      properties:
         domains:
           type: array
           items:
-            type: string
-          example:
-            - LB
-            - VS
+            $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRef'
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsRef'
+
+    sdtmDatasetSpecializationDomainRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/datasetspecializations?domain=VS
+        title:
+          type: string
+          example: Biomedical Concept Domain (VS)
+        type:
+          type: string
+          example: SDTM Dataset Specialization Domain
+
+    sdtmDatasetSpecializationDomainsRef:
+      type: object
+      properties:
+        href:
+          type: string
+          example: /mdr/specializations/sdtm/domains
+        title:
+          type: string
+          example: SDTM Dataset Specialization Domains
+        type:
+          type: string
+          example: SDTM Dataset Specialization Domain List
 
 # SDTM Dataset Specializations (latest)
     sdtmDatasetSpecializationsLatest:
@@ -1330,10 +1402,10 @@ components:
       properties:
         name:
           type: string
-          example: SDTM Dataset Specializations
+          example: SDTM Dataset Specializations (latest version))
         label:
           type: string
-          example: SDTM Dataset Specializations
+          example: SDTM Dataset Specializations List
         domain:
           type: string
           example: 'VS'
@@ -1343,12 +1415,12 @@ components:
     sdtmDatasetSpecializationsLatestLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationsLatestRef'
         DatasetSpecializations:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationsLatestRef'
 
     sdtmDatasetSpecializationsLatestRef:
       type: object
@@ -1416,12 +1488,12 @@ components:
     sdtmDatasetSpecializationLatestLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
         parentBiomedicalConcept:
           $ref: '#/components/schemas/sdtmBiomedicalConceptLatestRef'
         parentPackage:
           $ref: '#/components/schemas/sdtmPackageLatestRef'
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
 
     sdtmBiomedicalConceptLatestRef:
       type: object
@@ -1466,16 +1538,16 @@ components:
     datasetSpecializationsLatestLinks:
       type: object
       properties:
-        self:
-          $ref: '#/components/schemas/datasetSpecializationsLatestRef'
-        parentBiomedicalConcept:
-          $ref: '#/components/schemas/biomedicalConceptLatestRef'
         DatasetSpecializations:
           type: object
           description: Dataset Specializations
           properties:
             sdtm:
               $ref: '#/components/schemas/datasetSpecilatizationTypesRef'
+        parentBiomedicalConcept:
+          $ref: '#/components/schemas/biomedicalConceptLatestRef'
+        self:
+          $ref: '#/components/schemas/datasetSpecializationsLatestRef'
 
     biomedicalConceptLatestRef:
       type: object
