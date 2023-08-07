@@ -1528,10 +1528,10 @@ components:
       properties:
         name:
           type: string
-          example: Dataset Specializations
+          example: Dataset Specializations (latest version))
         label:
           type: string
-          example: Dataset Specializations
+          example: Dataset Specializations List
         _links:
           $ref: '#/components/schemas/datasetSpecializationsLatestLinks'
 
