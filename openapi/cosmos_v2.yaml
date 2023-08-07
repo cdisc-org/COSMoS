@@ -1528,7 +1528,7 @@ components:
       properties:
         name:
           type: string
-          example: Dataset Specializations (latest version))
+          example: Dataset Specializations (latest version)
         label:
           type: string
           example: Dataset Specializations List
