@@ -777,7 +777,7 @@ components:
               - Ordinal
               - Nominal
               - Narrative
-          example: 
+          example:
             - Quantitative
         definition:
           type: string
@@ -891,9 +891,18 @@ components:
         categories:
           type: array
           items:
-            $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRef'
+            $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRefs'
         self:
           $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesRef'
+
+    bcBiomedicalConceptsCategoryRefs:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Vital Signs
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRef'
 
     bcBiomedicalConceptsCategoryRef:
       type: object
@@ -903,10 +912,10 @@ components:
           example: /mdr/bc/biomedicalconcepts?category=Vital Signs
         title:
           type: string
-          example: Biomedical Concepts Category (Vital Signs)
+          example: Biomedical Concept Category (Vital Signs)
         type:
           type: string
-          example: Biomedical Concepts Category
+          example: Biomedical Concept Category
 
     bcBiomedicalConceptsCategoriesRef:
       type: object
@@ -1013,7 +1022,7 @@ components:
               - Ordinal
               - Nominal
               - Narrative
-          example: 
+          example:
             - Quantitative
         definition:
           type: string
@@ -1366,9 +1375,18 @@ components:
         domains:
           type: array
           items:
-            $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRef'
+            $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRefs'
         self:
           $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsRef'
+
+    sdtmDatasetSpecializationDomainRefs:
+      type: object
+      properties:
+        name:
+          type: string
+          example: VS
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRef'
 
     sdtmDatasetSpecializationDomainRef:
       type: object
@@ -1378,7 +1396,7 @@ components:
           example: /mdr/specializations/sdtm/datasetspecializations?domain=VS
         title:
           type: string
-          example: Biomedical Concept Domain (VS)
+          example: SDTM Dataset Specialization Domain (VS)
         type:
           type: string
           example: SDTM Dataset Specialization Domain
