@@ -882,27 +882,30 @@ components:
         label:
           type: string
           example: Biomedical Concept Categories List
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: Vital Signs
+              _links:
+                $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesCategoriesLinks'
         _links:
           $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesLinks'
+
+    bcBiomedicalConceptsCategoriesCategoriesLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRef'
 
     bcBiomedicalConceptsCategoriesLinks:
       type: object
       properties:
-        categories:
-          type: array
-          items:
-            $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRefs'
         self:
-          $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesRef'
-
-    bcBiomedicalConceptsCategoryRefs:
-      type: object
-      properties:
-        name:
-          type: string
-          example: Vital Signs
-        self:
-          $ref: '#/components/schemas/bcBiomedicalConceptsCategoryRef'
+          $ref: '#/components/schemas/bcBiomedicalConceptsCategoriesLinksRef'
 
     bcBiomedicalConceptsCategoryRef:
       type: object
@@ -917,7 +920,7 @@ components:
           type: string
           example: Biomedical Concept Category
 
-    bcBiomedicalConceptsCategoriesRef:
+    bcBiomedicalConceptsCategoriesLinksRef:
       type: object
       properties:
         href:
@@ -1366,27 +1369,30 @@ components:
         label:
           type: string
           example: SDTM Dataset Specialization Domains List
+        domains:
+          type: array
+          items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: VS
+                _links:
+                  $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsDomainsLinks'
         _links:
           $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsLinks'
+
+    sdtmDatasetSpecializationDomainsDomainsLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRef'
 
     sdtmDatasetSpecializationDomainsLinks:
       type: object
       properties:
-        domains:
-          type: array
-          items:
-            $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRefs'
         self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsRef'
-
-    sdtmDatasetSpecializationDomainRefs:
-      type: object
-      properties:
-        name:
-          type: string
-          example: VS
-        self:
-          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainRef'
+          $ref: '#/components/schemas/sdtmDatasetSpecializationDomainsLinksRef'
 
     sdtmDatasetSpecializationDomainRef:
       type: object
@@ -1401,7 +1407,7 @@ components:
           type: string
           example: SDTM Dataset Specialization Domain
 
-    sdtmDatasetSpecializationDomainsRef:
+    sdtmDatasetSpecializationDomainsLinksRef:
       type: object
       properties:
         href:
