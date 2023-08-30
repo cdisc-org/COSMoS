@@ -26,6 +26,9 @@
       "name": "string",
       "definition_uri": "https://w3id.org/linkml/String",
       "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -39,6 +42,9 @@
       "name": "integer",
       "definition_uri": "https://w3id.org/linkml/Integer",
       "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -52,6 +58,9 @@
       "name": "boolean",
       "definition_uri": "https://w3id.org/linkml/Boolean",
       "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -66,6 +75,9 @@
       "name": "float",
       "definition_uri": "https://w3id.org/linkml/Float",
       "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -79,6 +91,9 @@
       "name": "double",
       "definition_uri": "https://w3id.org/linkml/Double",
       "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "close_mappings": [
@@ -92,6 +107,9 @@
       "name": "decimal",
       "definition_uri": "https://w3id.org/linkml/Decimal",
       "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "broad_mappings": [
@@ -106,7 +124,8 @@
       "definition_uri": "https://w3id.org/linkml/Time",
       "description": "A time object represents a (local) time of day, independent of any particular day",
       "notes": [
-        "URI is dateTime because OWL reasoners do not work with straight date or time"
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -123,7 +142,8 @@
       "definition_uri": "https://w3id.org/linkml/Date",
       "description": "a date (year, month and day) in an idealized calendar",
       "notes": [
-        "URI is dateTime because OWL reasoners don't work with straight date or time"
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -139,6 +159,9 @@
       "name": "datetime",
       "definition_uri": "https://w3id.org/linkml/Datetime",
       "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -153,6 +176,9 @@
       "name": "date_or_datetime",
       "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
       "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -164,6 +190,9 @@
       "name": "uriorcurie",
       "definition_uri": "https://w3id.org/linkml/Uriorcurie",
       "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "URIorCURIE",
@@ -176,6 +205,9 @@
       "definition_uri": "https://w3id.org/linkml/Curie",
       "conforms_to": "https://www.w3.org/TR/curie/",
       "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
       "comments": [
         "in RDF serializations this MUST be expanded to a URI",
         "in non-RDF serializations MAY be serialized as the compact representation"
@@ -192,6 +224,9 @@
       "definition_uri": "https://w3id.org/linkml/Uri",
       "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
       "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
       "comments": [
         "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
       ],
@@ -209,6 +244,9 @@
       "name": "ncname",
       "definition_uri": "https://w3id.org/linkml/Ncname",
       "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NCName",
@@ -220,6 +258,9 @@
       "name": "objectidentifier",
       "definition_uri": "https://w3id.org/linkml/Objectidentifier",
       "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
       "comments": [
         "Used for inheritance and type checking"
       ],
@@ -234,6 +275,9 @@
       "name": "nodeidentifier",
       "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
       "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NodeIdentifier",
@@ -246,6 +290,9 @@
       "definition_uri": "https://w3id.org/linkml/Jsonpointer",
       "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
       "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -258,6 +305,9 @@
       "definition_uri": "https://w3id.org/linkml/Jsonpath",
       "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
       "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -270,6 +320,9 @@
       "definition_uri": "https://w3id.org/linkml/Sparqlpath",
       "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
       "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -280,8 +333,8 @@
   ],
   "enums": [
     {
-      "name": "BiomedicalConceptPackageType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType",
+      "name": "BiomedicalConceptPackageTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
@@ -290,8 +343,8 @@
       ]
     },
     {
-      "name": "BiomedicalConceptResultScale",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale",
+      "name": "BiomedicalConceptResultScaleEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
@@ -309,8 +362,8 @@
       ]
     },
     {
-      "name": "DataElementConceptDataType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0DataElementConceptDataType",
+      "name": "DataElementConceptDataTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
@@ -401,7 +454,7 @@
       "domain_of": [
         "BiomedicalConcept"
       ],
-      "range": "BiomedicalConceptPackageType",
+      "range": "BiomedicalConceptPackageTypeEnum",
       "required": true,
       "@type": "SlotDefinition"
     },
@@ -475,7 +528,7 @@
       "domain_of": [
         "BiomedicalConcept"
       ],
-      "range": "BiomedicalConceptResultScale",
+      "range": "BiomedicalConceptResultScaleEnum",
       "@type": "SlotDefinition"
     },
     {
@@ -574,7 +627,7 @@
       "domain_of": [
         "DataElementConcept"
       ],
-      "range": "DataElementConceptDataType",
+      "range": "DataElementConceptDataTypeEnum",
       "required": true,
       "@type": "SlotDefinition"
     },
@@ -767,9 +820,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2023-06-20T08:23:54",
-  "source_file_size": 4469,
-  "generation_date": "2023-06-20T08:55:59",
+  "source_file_date": "2023-08-30T15:40:11",
+  "source_file_size": 4493,
+  "generation_date": "2023-08-30T15:40:27",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",

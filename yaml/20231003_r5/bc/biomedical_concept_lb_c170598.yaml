@@ -1,0 +1,43 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C170598
+ncitCode: C170598
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170598
+parentConceptId: C74786
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Endocrine Tests
+  - Hormone Measurements
+shortName: Free Thyroxine Index
+synonyms:
+  - T4FRIDX
+resultScales:
+  - Quantitative
+definition: A measurement of the thyroid status (function, disease diagnosis, or therapy effectiveness) in a biological specimen. This is calculated by a mathematical formula that takes into account the total thyroxine and unbound thyroxine binding globulins.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C64571
+    ncitCode: C64571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64571
+    shortName: Unit of Mass Concentration
+    dataType: string
+    exampleSet:
+      - "ug/dL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"

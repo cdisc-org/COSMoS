@@ -4,12 +4,12 @@ type BiomedicalConcept
     ncitCode: String
     href: Uri
     packageDate: Date!
-    packageType: BiomedicalConceptPackageType!
+    packageType: BiomedicalConceptPackageTypeEnum!
     categories: [String]!
     parentConceptId: String
     shortName: String!
     synonyms: [String]
-    resultScales: [BiomedicalConceptResultScale]
+    resultScales: [BiomedicalConceptResultScaleEnum]
     definition: String!
     coding: [Coding]
     dataElementConcepts: [DataElementConcept]
@@ -28,7 +28,7 @@ type DataElementConcept
     ncitCode: String
     href: Uri
     shortName: String!
-    dataType: DataElementConceptDataType!
+    dataType: DataElementConceptDataTypeEnum!
     exampleSet: [String]
   }
 

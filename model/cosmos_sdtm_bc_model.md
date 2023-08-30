@@ -2,7 +2,7 @@
 erDiagram
 SDTMGroup {
     date packageDate  
-    SDTMDatasetSpecializationPackageType packageType  
+    SDTMDatasetSpecializationPackageTypeEnum packageType  
     string domain  
     string shortName  
     string datasetSpecializationId  
@@ -17,22 +17,22 @@ SDTMVariable {
     boolean isNonStandard  
     string subsetCodelist  
     stringList valueList  
-    string role  
-    SDTMVariableDataType dataType  
+    RoleEnum role  
+    SDTMVariableDataTypeEnum dataType  
     integer length  
     string format  
     integer significantDigits  
     boolean mandatoryVariable  
     boolean mandatoryValue  
-    OriginType originType  
-    OriginSource originSource  
-    Comparator comparator  
+    OriginTypeEnum originType  
+    OriginSourceEnum originSource  
+    ComparatorEnum comparator  
     boolean vlmTarget  
 }
 RelationShip {
     string subject  
-    LinkingPhrase linkingPhrase  
-    PredicateTerm predicateTerm  
+    LinkingPhraseEnum linkingPhrase  
+    PredicateTermEnum predicateTerm  
     string object  
 }
 CodeList {

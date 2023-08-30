@@ -23,57 +23,26 @@ cosmos: a owl:Ontology ;
         cosmos:Coding,
         cosmos:DataElementConcept ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2023-06-20T08:56:01" ;
+    linkml:generation_date "2023-08-30T15:40:28" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "cosmos_bc_model.yaml" ;
-    linkml:source_file_date "2023-06-20T08:23:54" ;
-    linkml:source_file_size 4469 .
+    linkml:source_file_date "2023-08-30T15:40:11" ;
+    linkml:source_file_size 4493 .
 
 cosmos:BiomedicalConcept a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "BiomedicalConcept" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:shortName ;
+            owl:onClass linkml:Date ;
+            owl:onProperty cosmos:packageDate ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos:DataElementConcept ;
-            owl:onProperty cosmos:dataElementConcepts ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Uri ;
             owl:onProperty cosmos:href ],
         [ a owl:Restriction ;
-            owl:allValuesFrom cosmos:BiomedicalConceptResultScale ;
-            owl:onProperty cosmos:resultScales ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:parentConceptId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos:Coding ;
-            owl:onProperty cosmos:coding ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom linkml:String ;
-                        owl:onProperty cosmos:categories ] [ a owl:Restriction ;
-                        owl:onProperty cosmos:categories ;
-                        owl:someValuesFrom linkml:String ] ) ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:ncitCode ],
-        [ a owl:Restriction ;
-            owl:onClass cosmos:BiomedicalConceptPackageType ;
+            owl:onClass cosmos:BiomedicalConceptPackageTypeEnum ;
             owl:onProperty cosmos:packageType ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:Date ;
-            owl:onProperty cosmos:packageDate ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:definition ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
@@ -81,7 +50,38 @@ cosmos:BiomedicalConcept a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos:synonyms ] .
+            owl:onProperty cosmos:synonyms ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:shortName ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:definition ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:parentConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos:DataElementConcept ;
+            owl:onProperty cosmos:dataElementConcepts ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos:BiomedicalConceptResultScaleEnum ;
+            owl:onProperty cosmos:resultScales ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos:Coding ;
+            owl:onProperty cosmos:coding ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:ncitCode ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom linkml:String ;
+                        owl:onProperty cosmos:categories ] [ a owl:Restriction ;
+                        owl:onProperty cosmos:categories ;
+                        owl:someValuesFrom linkml:String ] ) ] .
 
 cosmos:code a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -103,7 +103,7 @@ cosmos:dataElementConcepts a owl:ObjectProperty,
 cosmos:dataType a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "dataType" ;
-    rdfs:range cosmos:DataElementConceptDataType ;
+    rdfs:range cosmos:DataElementConceptDataTypeEnum ;
     skos:definition "Data Type for the Data Element Concept" .
 
 cosmos:definition a owl:ObjectProperty,
@@ -127,7 +127,7 @@ cosmos:packageDate a owl:ObjectProperty,
 cosmos:packageType a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "packageType" ;
-    rdfs:range cosmos:BiomedicalConceptPackageType ;
+    rdfs:range cosmos:BiomedicalConceptPackageTypeEnum ;
     skos:definition "Package type (bc for Biomedical Concepts)" .
 
 cosmos:parentConceptId a owl:ObjectProperty,
@@ -139,7 +139,7 @@ cosmos:parentConceptId a owl:ObjectProperty,
 cosmos:resultScales a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "resultScales" ;
-    rdfs:range cosmos:BiomedicalConceptResultScale ;
+    rdfs:range cosmos:BiomedicalConceptResultScaleEnum ;
     skos:definition "Scale of measurement for the Biomedical Concept result" .
 
 cosmos:synonyms a owl:ObjectProperty,
@@ -160,44 +160,44 @@ cosmos:systemName a owl:ObjectProperty,
     rdfs:range linkml:String ;
     skos:definition "Human-readable name for the code system" .
 
-<https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType#bc> a owl:Class,
-        cosmos:BiomedicalConceptPackageType ;
+<https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum#bc> a owl:Class,
+        cosmos:BiomedicalConceptPackageTypeEnum ;
     rdfs:label "bc" .
 
-<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Narrative> a owl:Class,
-        cosmos:BiomedicalConceptResultScale ;
+<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Narrative> a owl:Class,
+        cosmos:BiomedicalConceptResultScaleEnum ;
     rdfs:label "Narrative" .
 
-<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Nominal> a owl:Class,
-        cosmos:BiomedicalConceptResultScale ;
+<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Nominal> a owl:Class,
+        cosmos:BiomedicalConceptResultScaleEnum ;
     rdfs:label "Nominal" .
 
-<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Ordinal> a owl:Class,
-        cosmos:BiomedicalConceptResultScale ;
+<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Ordinal> a owl:Class,
+        cosmos:BiomedicalConceptResultScaleEnum ;
     rdfs:label "Ordinal" .
 
-<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Quantitative> a owl:Class,
-        cosmos:BiomedicalConceptResultScale ;
+<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Quantitative> a owl:Class,
+        cosmos:BiomedicalConceptResultScaleEnum ;
     rdfs:label "Quantitative" .
 
-<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#boolean> a owl:Class,
-        cosmos:DataElementConceptDataType ;
+<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#boolean> a owl:Class,
+        cosmos:DataElementConceptDataTypeEnum ;
     rdfs:label "boolean" .
 
-<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#decimal> a owl:Class,
-        cosmos:DataElementConceptDataType ;
+<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#decimal> a owl:Class,
+        cosmos:DataElementConceptDataTypeEnum ;
     rdfs:label "decimal" .
 
-<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#integer> a owl:Class,
-        cosmos:DataElementConceptDataType ;
+<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#integer> a owl:Class,
+        cosmos:DataElementConceptDataTypeEnum ;
     rdfs:label "integer" .
 
-<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#string> a owl:Class,
-        cosmos:DataElementConceptDataType ;
+<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#string> a owl:Class,
+        cosmos:DataElementConceptDataTypeEnum ;
     rdfs:label "string" .
 
-<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#uri> a owl:Class,
-        cosmos:DataElementConceptDataType ;
+<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#uri> a owl:Class,
+        cosmos:DataElementConceptDataTypeEnum ;
     rdfs:label "uri" .
 
 cosmos:categories a owl:ObjectProperty,
@@ -232,32 +232,44 @@ cosmos:shortName a owl:ObjectProperty,
 linkml:ClassDefinition a owl:Class ;
     rdfs:label "class_definition" .
 
-cosmos:BiomedicalConceptPackageType a owl:Class,
+cosmos:BiomedicalConceptPackageTypeEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "BiomedicalConceptPackageType" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType#bc> ) ;
-    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType#bc> .
+    rdfs:label "BiomedicalConceptPackageTypeEnum" ;
+    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum#bc> ) ;
+    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum#bc> .
 
 cosmos:Coding a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Coding" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onClass linkml:String ;
+            owl:onProperty cosmos:system ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
             owl:onProperty cosmos:code ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty cosmos:systemName ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:system ;
-            owl:qualifiedCardinality 1 ] .
+            owl:onProperty cosmos:systemName ] .
 
 cosmos:DataElementConcept a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "DataElementConcept" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:conceptId ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass cosmos:DataElementConceptDataTypeEnum ;
+            owl:onProperty cosmos:dataType ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:ncitCode ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos:exampleSet ],
         [ a owl:Restriction ;
@@ -265,40 +277,28 @@ cosmos:DataElementConcept a owl:Class,
             owl:onProperty cosmos:shortName ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:conceptId ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:ncitCode ],
-        [ a owl:Restriction ;
-            owl:onClass cosmos:DataElementConceptDataType ;
-            owl:onProperty cosmos:dataType ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Uri ;
             owl:onProperty cosmos:href ] .
 
-cosmos:BiomedicalConceptResultScale a owl:Class,
+cosmos:BiomedicalConceptResultScaleEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "BiomedicalConceptResultScale" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Quantitative> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Ordinal> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Nominal> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Narrative> ) ;
-    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Narrative>,
-        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Nominal>,
-        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Ordinal>,
-        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale#Quantitative> .
+    rdfs:label "BiomedicalConceptResultScaleEnum" ;
+    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Quantitative> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Ordinal> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Nominal> <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Narrative> ) ;
+    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Narrative>,
+        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Nominal>,
+        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Ordinal>,
+        <https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum#Quantitative> .
 
-cosmos:DataElementConceptDataType a owl:Class,
+cosmos:DataElementConceptDataTypeEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "DataElementConceptDataType" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#boolean> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#decimal> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#integer> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#string> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#uri> ) ;
-    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#boolean>,
-        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#decimal>,
-        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#integer>,
-        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#string>,
-        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataType#uri> .
+    rdfs:label "DataElementConceptDataTypeEnum" ;
+    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#boolean> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#decimal> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#integer> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#string> <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#uri> ) ;
+    linkml:permissible_values <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#boolean>,
+        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#decimal>,
+        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#integer>,
+        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#string>,
+        <https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum#uri> .
 
 linkml:SlotDefinition a owl:Class ;
     rdfs:label "slot_definition" .

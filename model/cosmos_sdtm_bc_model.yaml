@@ -93,7 +93,7 @@ slots:
     range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
   packageType:
-    range: SDTMDatasetSpecializationPackageType
+    range: SDTMDatasetSpecializationPackageTypeEnum
     description: Package type (sdtm for SDTM Dataset Specializations)
     required: true
   domain:
@@ -187,7 +187,7 @@ slots:
     range: AssignedTerm
 
   role:
-    range: string
+    range: RoleEnum
     description: SDTM variable role
 
   relationship:
@@ -197,18 +197,18 @@ slots:
     description: Subject in a variable relationship
   linkingPhrase:
     required: true
-    range: LinkingPhrase
+    range: LinkingPhraseEnum
     description: Variable relationship descriptive linking phrase
   predicateTerm:
     required: true
-    range: PredicateTerm
+    range: PredicateTermEnum
     description: Short variable relatio ship linking phrase for programming purposes
   object:
     required: true
     description: Object in a variable relationship
 
   dataType:
-    range: SDTMVariableDataType
+    range: SDTMVariableDataTypeEnum
     description: Variable data type
   length:
     range: integer
@@ -226,13 +226,13 @@ slots:
     range: boolean
     description: Indicator that variable must be populated within the SDTM group
   originType:
-    range: OriginType
+    range: OriginTypeEnum
     description: Variable origin type (define-XML v21)
   originSource:
-    range: OriginSource
+    range: OriginSourceEnum
     description: Variable origin source (define-XML v21)
   comparator:
-    range: Comparator
+    range: ComparatorEnum
     description: Comparison operator for SDTM group variables included in VLM
   vlmTarget:
     range: boolean
@@ -240,11 +240,11 @@ slots:
 
 enums:
 
-  SDTMDatasetSpecializationPackageType:
+  SDTMDatasetSpecializationPackageTypeEnum:
     permissible_values:
       sdtm:
 
-  SDTMVariableDataType:
+  SDTMVariableDataTypeEnum:
     permissible_values:
       float:
         text: float
@@ -253,7 +253,7 @@ enums:
       text:
         text:  text
 
-  LinkingPhrase:
+  LinkingPhraseEnum:
     permissible_values:
       associates the tumor identified in:
       decodes the value in:
@@ -296,8 +296,17 @@ enums:
       specifies the severity of:
       values are grouped by:
       was the subject position during performance of the test in:
+      is the end date for:
+      is the start date for:
+      is the administered amount of the treatment in:
+      is the dictionary-derived class code for the value in:
+      is the dictionary-derived class name for the value in:
+      is the dictionary-derived term for the value in:
+      is the unit for:
+      is the physical form of the product in:
 
-  PredicateTerm:
+
+  PredicateTermEnum:
     permissible_values:
       DECODES:
       DESCRIBES:
@@ -318,12 +327,13 @@ enums:
       IS_RESULT_OF:
       IS_SPECIMEN_TESTED_IN:
       IS_SUBJECT_STATE_FOR:
+      IS_TIMING_FOR:
       IS_UNIT_FOR:
       PERFORMED:
       PERFORMS:
       SPECIFIES:
 
-  OriginType:
+  OriginTypeEnum:
     description: Terminology relevant to the origin type for datasets in the Define-XML document.
     code_set: NCIT:C170449
     permissible_values:
@@ -343,7 +353,7 @@ enums:
         description: A value that is included as part of the study protocol.
         meaning: NCIT:C170551
 
-  OriginSource:
+  OriginSourceEnum:
     description: Terminology relevant to the origin source for datasets in the Define-XML document.
     code_set: NCIT:C170450
     permissible_values:
@@ -360,12 +370,13 @@ enums:
         description: A person or agency that promotes or exchanges goods or services for money. (NCI)
         meaning: NCIT:C68608
 
-  Role:
+  RoleEnum:
     permissible_values:
-      Topic:
       Qualifier:
+      Timing:
+      Topic:
 
-  Comparator:
+  ComparatorEnum:
     permissible_values:
       EQ:
       IN:

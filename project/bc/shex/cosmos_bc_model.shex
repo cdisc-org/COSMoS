@@ -46,12 +46,12 @@ linkml:Sparqlpath xsd:string
     (  $<https://www.cdisc.org/cosmos/1-0BiomedicalConcept_tes> (  <https://www.cdisc.org/cosmos/1-0ncitCode> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
           <https://www.cdisc.org/cosmos/1-0packageDate> @linkml:Date ;
-          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageType> ;
+          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum> ;
           <https://www.cdisc.org/cosmos/1-0categories> @linkml:String + ;
           <https://www.cdisc.org/cosmos/1-0parentConceptId> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
           <https://www.cdisc.org/cosmos/1-0synonyms> @linkml:String * ;
-          <https://www.cdisc.org/cosmos/1-0resultScales> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScale> * ;
+          <https://www.cdisc.org/cosmos/1-0resultScales> @<https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum> * ;
           <https://www.cdisc.org/cosmos/1-0definition> @linkml:String ;
           <https://www.cdisc.org/cosmos/1-0coding> @<https://www.cdisc.org/cosmos/1-0Coding> * ;
           <https://www.cdisc.org/cosmos/1-0dataElementConcepts> @<https://www.cdisc.org/cosmos/1-0DataElementConcept> *
@@ -73,7 +73,7 @@ linkml:Sparqlpath xsd:string
     (  $<https://www.cdisc.org/cosmos/1-0DataElementConcept_tes> (  <https://www.cdisc.org/cosmos/1-0ncitCode> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
           <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0DataElementConceptDataType> ;
+          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum> ;
           <https://www.cdisc.org/cosmos/1-0exampleSet> @linkml:String *
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/1-0DataElementConcept> ]

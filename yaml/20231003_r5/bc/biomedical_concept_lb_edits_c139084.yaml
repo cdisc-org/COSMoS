@@ -1,0 +1,43 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C139084
+ncitCode: C139084
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C139084
+parentConceptId: C82624
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Gas Measurements
+shortName: Carbon Monoxide Measurement
+synonyms:
+  - Carbon Monoxide
+  - CO
+resultScales:
+  - Quantitative
+definition: The determination of the amount of carbon monoxide present in a sample.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "nmol/L"
+      - "ug/L"
+      - "ppm"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Arterial Blood"
+      - "Venous Blood"
+      - "Capillary Blood"
+      - "Expired Air"

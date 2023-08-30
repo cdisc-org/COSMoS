@@ -1,0 +1,37 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C200249
+ncitCode: C200249
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200249
+parentConceptId: C64430
+categories:
+  - Laboratory Tests
+  - Protein or Enzyme Measurements
+  - Chemistry Tests
+shortName: Soluble Interleukin-6 Receptor Subunit Alpha Measurement
+synonyms:
+  - sIL-6R
+  - siL-6RA
+  - Soluble IL-6R
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of soluble interleukin 6 receptor subunit alpha present in a sample.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C64571
+    ncitCode: C64571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64571
+    shortName: Unit of Mass Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"

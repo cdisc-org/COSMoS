@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-20T08:43:16
+# Generation date: 2023-08-30T16:18:17
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -64,7 +64,7 @@ class SDTMGroup(YAMLRoot):
 
     datasetSpecializationId: Union[str, SDTMGroupDatasetSpecializationId] = None
     packageDate: Union[str, XSDDate] = None
-    packageType: Union[str, "SDTMDatasetSpecializationPackageType"] = None
+    packageType: Union[str, "SDTMDatasetSpecializationPackageTypeEnum"] = None
     domain: str = None
     shortName: str = None
     source: str = None
@@ -86,8 +86,8 @@ class SDTMGroup(YAMLRoot):
 
         if self._is_empty(self.packageType):
             self.MissingRequiredField("packageType")
-        if not isinstance(self.packageType, SDTMDatasetSpecializationPackageType):
-            self.packageType = SDTMDatasetSpecializationPackageType(self.packageType)
+        if not isinstance(self.packageType, SDTMDatasetSpecializationPackageTypeEnum):
+            self.packageType = SDTMDatasetSpecializationPackageTypeEnum(self.packageType)
 
         if self._is_empty(self.domain):
             self.MissingRequiredField("domain")
@@ -136,17 +136,17 @@ class SDTMVariable(YAMLRoot):
     subsetCodelist: Optional[str] = None
     valueList: Optional[Union[str, List[str]]] = empty_list()
     assignedTerm: Optional[Union[dict, "AssignedTerm"]] = None
-    role: Optional[str] = None
+    role: Optional[Union[str, "RoleEnum"]] = None
     relationship: Optional[Union[dict, "RelationShip"]] = None
-    dataType: Optional[Union[str, "SDTMVariableDataType"]] = None
+    dataType: Optional[Union[str, "SDTMVariableDataTypeEnum"]] = None
     length: Optional[int] = None
     format: Optional[str] = None
     significantDigits: Optional[int] = None
     mandatoryVariable: Optional[Union[bool, Bool]] = None
     mandatoryValue: Optional[Union[bool, Bool]] = None
-    originType: Optional[Union[str, "OriginType"]] = None
-    originSource: Optional[Union[str, "OriginSource"]] = None
-    comparator: Optional[Union[str, "Comparator"]] = None
+    originType: Optional[Union[str, "OriginTypeEnum"]] = None
+    originSource: Optional[Union[str, "OriginSourceEnum"]] = None
+    comparator: Optional[Union[str, "ComparatorEnum"]] = None
     vlmTarget: Optional[Union[bool, Bool]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -174,14 +174,14 @@ class SDTMVariable(YAMLRoot):
         if self.assignedTerm is not None and not isinstance(self.assignedTerm, AssignedTerm):
             self.assignedTerm = AssignedTerm(**as_dict(self.assignedTerm))
 
-        if self.role is not None and not isinstance(self.role, str):
-            self.role = str(self.role)
+        if self.role is not None and not isinstance(self.role, RoleEnum):
+            self.role = RoleEnum(self.role)
 
         if self.relationship is not None and not isinstance(self.relationship, RelationShip):
             self.relationship = RelationShip(**as_dict(self.relationship))
 
-        if self.dataType is not None and not isinstance(self.dataType, SDTMVariableDataType):
-            self.dataType = SDTMVariableDataType(self.dataType)
+        if self.dataType is not None and not isinstance(self.dataType, SDTMVariableDataTypeEnum):
+            self.dataType = SDTMVariableDataTypeEnum(self.dataType)
 
         if self.length is not None and not isinstance(self.length, int):
             self.length = int(self.length)
@@ -198,14 +198,14 @@ class SDTMVariable(YAMLRoot):
         if self.mandatoryValue is not None and not isinstance(self.mandatoryValue, Bool):
             self.mandatoryValue = Bool(self.mandatoryValue)
 
-        if self.originType is not None and not isinstance(self.originType, OriginType):
-            self.originType = OriginType(self.originType)
+        if self.originType is not None and not isinstance(self.originType, OriginTypeEnum):
+            self.originType = OriginTypeEnum(self.originType)
 
-        if self.originSource is not None and not isinstance(self.originSource, OriginSource):
-            self.originSource = OriginSource(self.originSource)
+        if self.originSource is not None and not isinstance(self.originSource, OriginSourceEnum):
+            self.originSource = OriginSourceEnum(self.originSource)
 
-        if self.comparator is not None and not isinstance(self.comparator, Comparator):
-            self.comparator = Comparator(self.comparator)
+        if self.comparator is not None and not isinstance(self.comparator, ComparatorEnum):
+            self.comparator = ComparatorEnum(self.comparator)
 
         if self.vlmTarget is not None and not isinstance(self.vlmTarget, Bool):
             self.vlmTarget = Bool(self.vlmTarget)
@@ -223,8 +223,8 @@ class RelationShip(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = COSMOS.RelationShip
 
     subject: str = None
-    linkingPhrase: Union[str, "LinkingPhrase"] = None
-    predicateTerm: Union[str, "PredicateTerm"] = None
+    linkingPhrase: Union[str, "LinkingPhraseEnum"] = None
+    predicateTerm: Union[str, "PredicateTermEnum"] = None
     object: str = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -235,13 +235,13 @@ class RelationShip(YAMLRoot):
 
         if self._is_empty(self.linkingPhrase):
             self.MissingRequiredField("linkingPhrase")
-        if not isinstance(self.linkingPhrase, LinkingPhrase):
-            self.linkingPhrase = LinkingPhrase(self.linkingPhrase)
+        if not isinstance(self.linkingPhrase, LinkingPhraseEnum):
+            self.linkingPhrase = LinkingPhraseEnum(self.linkingPhrase)
 
         if self._is_empty(self.predicateTerm):
             self.MissingRequiredField("predicateTerm")
-        if not isinstance(self.predicateTerm, PredicateTerm):
-            self.predicateTerm = PredicateTerm(self.predicateTerm)
+        if not isinstance(self.predicateTerm, PredicateTermEnum):
+            self.predicateTerm = PredicateTermEnum(self.predicateTerm)
 
         if self._is_empty(self.object):
             self.MissingRequiredField("object")
@@ -371,28 +371,28 @@ class AssignedTerm(YAMLRoot):
 
 
 # Enumerations
-class SDTMDatasetSpecializationPackageType(EnumDefinitionImpl):
+class SDTMDatasetSpecializationPackageTypeEnum(EnumDefinitionImpl):
 
     sdtm = PermissibleValue(text="sdtm")
 
     _defn = EnumDefinition(
-        name="SDTMDatasetSpecializationPackageType",
+        name="SDTMDatasetSpecializationPackageTypeEnum",
     )
 
-class SDTMVariableDataType(EnumDefinitionImpl):
+class SDTMVariableDataTypeEnum(EnumDefinitionImpl):
 
     float = PermissibleValue(text="float")
     integer = PermissibleValue(text="integer")
     text = PermissibleValue(text="text")
 
     _defn = EnumDefinition(
-        name="SDTMVariableDataType",
+        name="SDTMVariableDataTypeEnum",
     )
 
-class LinkingPhrase(EnumDefinitionImpl):
+class LinkingPhraseEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
-        name="LinkingPhrase",
+        name="LinkingPhraseEnum",
     )
 
     @classmethod
@@ -479,8 +479,24 @@ class LinkingPhrase(EnumDefinitionImpl):
                 PermissibleValue(text="values are grouped by") )
         setattr(cls, "was the subject position during performance of the test in",
                 PermissibleValue(text="was the subject position during performance of the test in") )
+        setattr(cls, "is the end date for",
+                PermissibleValue(text="is the end date for") )
+        setattr(cls, "is the start date for",
+                PermissibleValue(text="is the start date for") )
+        setattr(cls, "is the administered amount of the treatment in",
+                PermissibleValue(text="is the administered amount of the treatment in") )
+        setattr(cls, "is the dictionary-derived class code for the value in",
+                PermissibleValue(text="is the dictionary-derived class code for the value in") )
+        setattr(cls, "is the dictionary-derived class name for the value in",
+                PermissibleValue(text="is the dictionary-derived class name for the value in") )
+        setattr(cls, "is the dictionary-derived term for the value in",
+                PermissibleValue(text="is the dictionary-derived term for the value in") )
+        setattr(cls, "is the unit for",
+                PermissibleValue(text="is the unit for") )
+        setattr(cls, "is the physical form of the product in",
+                PermissibleValue(text="is the physical form of the product in") )
 
-class PredicateTerm(EnumDefinitionImpl):
+class PredicateTermEnum(EnumDefinitionImpl):
 
     DECODES = PermissibleValue(text="DECODES")
     DESCRIBES = PermissibleValue(text="DESCRIBES")
@@ -501,16 +517,17 @@ class PredicateTerm(EnumDefinitionImpl):
     IS_RESULT_OF = PermissibleValue(text="IS_RESULT_OF")
     IS_SPECIMEN_TESTED_IN = PermissibleValue(text="IS_SPECIMEN_TESTED_IN")
     IS_SUBJECT_STATE_FOR = PermissibleValue(text="IS_SUBJECT_STATE_FOR")
+    IS_TIMING_FOR = PermissibleValue(text="IS_TIMING_FOR")
     IS_UNIT_FOR = PermissibleValue(text="IS_UNIT_FOR")
     PERFORMED = PermissibleValue(text="PERFORMED")
     PERFORMS = PermissibleValue(text="PERFORMS")
     SPECIFIES = PermissibleValue(text="SPECIFIES")
 
     _defn = EnumDefinition(
-        name="PredicateTerm",
+        name="PredicateTermEnum",
     )
 
-class OriginType(EnumDefinitionImpl):
+class OriginTypeEnum(EnumDefinitionImpl):
     """
     Terminology relevant to the origin type for datasets in the Define-XML document.
     """
@@ -531,12 +548,12 @@ class OriginType(EnumDefinitionImpl):
                                        meaning=NCIT.C170551)
 
     _defn = EnumDefinition(
-        name="OriginType",
+        name="OriginTypeEnum",
         description="Terminology relevant to the origin type for datasets in the Define-XML document.",
         code_set=NCIT.C170449,
     )
 
-class OriginSource(EnumDefinitionImpl):
+class OriginSourceEnum(EnumDefinitionImpl):
     """
     Terminology relevant to the origin source for datasets in the Define-XML document.
     """
@@ -554,27 +571,28 @@ class OriginSource(EnumDefinitionImpl):
                                    meaning=NCIT.C68608)
 
     _defn = EnumDefinition(
-        name="OriginSource",
+        name="OriginSourceEnum",
         description="Terminology relevant to the origin source for datasets in the Define-XML document.",
         code_set=NCIT.C170450,
     )
 
-class Role(EnumDefinitionImpl):
+class RoleEnum(EnumDefinitionImpl):
 
-    Topic = PermissibleValue(text="Topic")
     Qualifier = PermissibleValue(text="Qualifier")
+    Timing = PermissibleValue(text="Timing")
+    Topic = PermissibleValue(text="Topic")
 
     _defn = EnumDefinition(
-        name="Role",
+        name="RoleEnum",
     )
 
-class Comparator(EnumDefinitionImpl):
+class ComparatorEnum(EnumDefinitionImpl):
 
     EQ = PermissibleValue(text="EQ")
     IN = PermissibleValue(text="IN")
 
     _defn = EnumDefinition(
-        name="Comparator",
+        name="ComparatorEnum",
     )
 
 # Slots
@@ -585,7 +603,7 @@ slots.packageDate = Slot(uri=COSMOS.packageDate, name="packageDate", curie=COSMO
                    model_uri=COSMOS.packageDate, domain=None, range=Union[str, XSDDate])
 
 slots.packageType = Slot(uri=COSMOS.packageType, name="packageType", curie=COSMOS.curie('packageType'),
-                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageType"])
+                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageTypeEnum"])
 
 slots.domain = Slot(uri=COSMOS.domain, name="domain", curie=COSMOS.curie('domain'),
                    model_uri=COSMOS.domain, domain=None, range=str)
@@ -660,7 +678,7 @@ slots.assignedTerm = Slot(uri=COSMOS.assignedTerm, name="assignedTerm", curie=CO
                    model_uri=COSMOS.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
 
 slots.role = Slot(uri=COSMOS.role, name="role", curie=COSMOS.curie('role'),
-                   model_uri=COSMOS.role, domain=None, range=Optional[str])
+                   model_uri=COSMOS.role, domain=None, range=Optional[Union[str, "RoleEnum"]])
 
 slots.relationship = Slot(uri=COSMOS.relationship, name="relationship", curie=COSMOS.curie('relationship'),
                    model_uri=COSMOS.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
@@ -669,16 +687,16 @@ slots.subject = Slot(uri=COSMOS.subject, name="subject", curie=COSMOS.curie('sub
                    model_uri=COSMOS.subject, domain=None, range=str)
 
 slots.linkingPhrase = Slot(uri=COSMOS.linkingPhrase, name="linkingPhrase", curie=COSMOS.curie('linkingPhrase'),
-                   model_uri=COSMOS.linkingPhrase, domain=None, range=Union[str, "LinkingPhrase"])
+                   model_uri=COSMOS.linkingPhrase, domain=None, range=Union[str, "LinkingPhraseEnum"])
 
 slots.predicateTerm = Slot(uri=COSMOS.predicateTerm, name="predicateTerm", curie=COSMOS.curie('predicateTerm'),
-                   model_uri=COSMOS.predicateTerm, domain=None, range=Union[str, "PredicateTerm"])
+                   model_uri=COSMOS.predicateTerm, domain=None, range=Union[str, "PredicateTermEnum"])
 
 slots.object = Slot(uri=COSMOS.object, name="object", curie=COSMOS.curie('object'),
                    model_uri=COSMOS.object, domain=None, range=str)
 
 slots.dataType = Slot(uri=COSMOS.dataType, name="dataType", curie=COSMOS.curie('dataType'),
-                   model_uri=COSMOS.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataType"]])
+                   model_uri=COSMOS.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataTypeEnum"]])
 
 slots.length = Slot(uri=COSMOS.length, name="length", curie=COSMOS.curie('length'),
                    model_uri=COSMOS.length, domain=None, range=Optional[int])
@@ -696,13 +714,13 @@ slots.mandatoryValue = Slot(uri=COSMOS.mandatoryValue, name="mandatoryValue", cu
                    model_uri=COSMOS.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
 
 slots.originType = Slot(uri=COSMOS.originType, name="originType", curie=COSMOS.curie('originType'),
-                   model_uri=COSMOS.originType, domain=None, range=Optional[Union[str, "OriginType"]])
+                   model_uri=COSMOS.originType, domain=None, range=Optional[Union[str, "OriginTypeEnum"]])
 
 slots.originSource = Slot(uri=COSMOS.originSource, name="originSource", curie=COSMOS.curie('originSource'),
-                   model_uri=COSMOS.originSource, domain=None, range=Optional[Union[str, "OriginSource"]])
+                   model_uri=COSMOS.originSource, domain=None, range=Optional[Union[str, "OriginSourceEnum"]])
 
 slots.comparator = Slot(uri=COSMOS.comparator, name="comparator", curie=COSMOS.curie('comparator'),
-                   model_uri=COSMOS.comparator, domain=None, range=Optional[Union[str, "Comparator"]])
+                   model_uri=COSMOS.comparator, domain=None, range=Optional[Union[str, "ComparatorEnum"]])
 
 slots.vlmTarget = Slot(uri=COSMOS.vlmTarget, name="vlmTarget", curie=COSMOS.curie('vlmTarget'),
                    model_uri=COSMOS.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])

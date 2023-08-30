@@ -49,16 +49,13 @@
 */
 
 
+/*
 %let package=20230706;
 %let folder=20230706_oncology;
 %let ExcelFile=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=recist, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC TU_TR_RS));
-
-
-
-
 
 %let package=20230706;
 %let folder=20230706_nononco;
@@ -76,7 +73,18 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mh, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC_MH));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=pr_edits, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC_PR_EDITS));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
+*/
 
+%let package=20231003;
+%let folder=20231003_r5;
+%let ExcelFile=&root/curation/draft/BC_Package_R5_LZZT.xlsx;
+%let TargetFolder=&root/yaml/&folder/bc;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=cm_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_CM_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ds_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_DS_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_LB));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_LB_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=mb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_MB));
 
 
 ods listing close;
