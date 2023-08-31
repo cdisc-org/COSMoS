@@ -54,6 +54,11 @@ variables:
     role: Qualifier
     dataType: text
     length: 200
+    relationship:
+      subject: MHEVDTYP
+      linkingPhrase: is the aspect of the event used to define the date in
+      predicateTerm: SPECIFIES
+      object: MHSTDTC
     mandatoryVariable: false
     mandatoryValue: false
     originType: Assigned

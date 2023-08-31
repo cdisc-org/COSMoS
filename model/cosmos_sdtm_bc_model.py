@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-08-30T16:18:17
+# Generation date: 2023-08-31T09:55:02
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -479,18 +479,18 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="values are grouped by") )
         setattr(cls, "was the subject position during performance of the test in",
                 PermissibleValue(text="was the subject position during performance of the test in") )
+        setattr(cls, "is the dictionary-derived term for the value in",
+                PermissibleValue(text="is the dictionary-derived term for the value in") )
+        setattr(cls, "is the dictionary-derived class code for the value in",
+                PermissibleValue(text="is the dictionary-derived class code for the value in") )
+        setattr(cls, "is the dictionary-derived class name for the value in",
+                PermissibleValue(text="is the dictionary-derived class name for the value in") )
         setattr(cls, "is the end date for",
                 PermissibleValue(text="is the end date for") )
         setattr(cls, "is the start date for",
                 PermissibleValue(text="is the start date for") )
         setattr(cls, "is the administered amount of the treatment in",
                 PermissibleValue(text="is the administered amount of the treatment in") )
-        setattr(cls, "is the dictionary-derived class code for the value in",
-                PermissibleValue(text="is the dictionary-derived class code for the value in") )
-        setattr(cls, "is the dictionary-derived class name for the value in",
-                PermissibleValue(text="is the dictionary-derived class name for the value in") )
-        setattr(cls, "is the dictionary-derived term for the value in",
-                PermissibleValue(text="is the dictionary-derived term for the value in") )
         setattr(cls, "is the unit for",
                 PermissibleValue(text="is the unit for") )
         setattr(cls, "is the physical form of the product in",

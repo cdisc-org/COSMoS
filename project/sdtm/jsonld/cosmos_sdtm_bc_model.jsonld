@@ -487,13 +487,7 @@
           "text": "was the subject position during performance of the test in"
         },
         {
-          "text": "is the end date for"
-        },
-        {
-          "text": "is the start date for"
-        },
-        {
-          "text": "is the administered amount of the treatment in"
+          "text": "is the dictionary-derived term for the value in"
         },
         {
           "text": "is the dictionary-derived class code for the value in"
@@ -502,7 +496,13 @@
           "text": "is the dictionary-derived class name for the value in"
         },
         {
-          "text": "is the dictionary-derived term for the value in"
+          "text": "is the end date for"
+        },
+        {
+          "text": "is the start date for"
+        },
+        {
+          "text": "is the administered amount of the treatment in"
         },
         {
           "text": "is the unit for"
@@ -1425,9 +1425,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-08-30T15:51:54",
+  "source_file_date": "2023-08-31T09:54:42",
   "source_file_size": 11819,
-  "generation_date": "2023-08-30T16:18:25",
+  "generation_date": "2023-08-31T09:55:12",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

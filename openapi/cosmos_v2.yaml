@@ -1153,7 +1153,7 @@ components:
     sdtmDatasetSpecializationsLinks:
       type: object
       properties:
-        DatasetSpecializations:
+        datasetSpecializations:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationRef'
@@ -1439,7 +1439,7 @@ components:
     sdtmDatasetSpecializationsLatestLinks:
       type: object
       properties:
-        DatasetSpecializations:
+        datasetSpecializations:
           type: array
           items:
             $ref: '#/components/schemas/sdtmDatasetSpecializationLatestRef'
@@ -1562,7 +1562,7 @@ components:
     datasetSpecializationsLatestLinks:
       type: object
       properties:
-        DatasetSpecializations:
+        datasetSpecializations:
           type: object
           description: Dataset Specializations
           properties:
