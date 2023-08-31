@@ -822,7 +822,7 @@
   "source_file": "cosmos_bc_model.yaml",
   "source_file_date": "2023-08-30T15:40:11",
   "source_file_size": 4493,
-  "generation_date": "2023-08-30T15:40:27",
+  "generation_date": "2023-08-31T10:49:21",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",
