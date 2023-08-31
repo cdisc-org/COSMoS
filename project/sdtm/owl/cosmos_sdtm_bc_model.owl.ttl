@@ -28,46 +28,22 @@ cosmos: a owl:Ontology ;
         cosmos:SDTMVariable,
         cosmos:SubsetCodeList ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2023-08-31T09:55:13" ;
+    linkml:generation_date "2023-08-31T14:44:30" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "cosmos_sdtm_bc_model.yaml" ;
-    linkml:source_file_date "2023-08-31T09:54:42" ;
-    linkml:source_file_size 11819 .
+    linkml:source_file_date "2023-08-31T14:43:59" ;
+    linkml:source_file_size 12093 .
 
 cosmos:SDTMGroup a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "SDTMGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:source ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:sdtmigEndVersion ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:shortName ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:biomedicalConceptId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos:SDTMVariable ;
-            owl:onProperty cosmos:variables ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:domain ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass linkml:Date ;
             owl:onProperty cosmos:packageDate ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onClass cosmos:SDTMDatasetSpecializationPackageTypeEnum ;
-            owl:onProperty cosmos:packageType ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom cosmos:SDTMVariable ;
+            owl:onProperty cosmos:variables ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:sdtmigStartVersion ;
@@ -75,20 +51,36 @@ cosmos:SDTMGroup a owl:Class,
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:datasetSpecializationId ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:shortName ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass cosmos:SDTMDatasetSpecializationPackageTypeEnum ;
+            owl:onProperty cosmos:packageType ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:sdtmigEndVersion ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:domain ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:biomedicalConceptId ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:source ;
             owl:qualifiedCardinality 1 ] .
 
 cosmos:SubsetCodeList a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "SubsetCodeList" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:parentCodelist ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:subsetShortName ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:subsetLabel ;
             owl:qualifiedCardinality 1 ],
@@ -97,7 +89,15 @@ cosmos:SubsetCodeList a owl:Class,
                         owl:allValuesFrom cosmos:CodeListTerm ;
                         owl:onProperty cosmos:codelistTerm ] [ a owl:Restriction ;
                         owl:onProperty cosmos:codelistTerm ;
-                        owl:someValuesFrom cosmos:CodeListTerm ] ) ] .
+                        owl:someValuesFrom cosmos:CodeListTerm ] ) ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:parentCodelist ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:subsetShortName ;
+            owl:qualifiedCardinality 1 ] .
 
 cosmos:assignedTerm a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -483,6 +483,10 @@ NCIT:C70793 a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the administration anatomical location for the treatment in" .
 
+<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in> a owl:Class,
+        cosmos:LinkingPhraseEnum ;
+    rdfs:label "is the aspect of the event used to define the date in" .
+
 <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the clinical significance interpretation for" .
@@ -515,6 +519,10 @@ NCIT:C70793 a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the epoch of the performance of the test in" .
 
+<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in> a owl:Class,
+        cosmos:LinkingPhraseEnum ;
+    rdfs:label "is the frequency of administration of the amount in" .
+
 <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the identifier for the source data used in the performance of the test in" .
@@ -523,9 +531,17 @@ NCIT:C70793 a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the material type of the subject of the activity in" .
 
+<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in> a owl:Class,
+        cosmos:LinkingPhraseEnum ;
+    rdfs:label "is the medical condition that is the reason for the treatment in" .
+
 <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+method+for+the+test+in> a owl:Class,
         cosmos:LinkingPhraseEnum ;
     rdfs:label "is the method for the test in" .
+
+<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in> a owl:Class,
+        cosmos:LinkingPhraseEnum ;
+    rdfs:label "is the part of the body through which is administered the treatment in" .
 
 <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+physical+form+of+the+product+in> a owl:Class,
         cosmos:LinkingPhraseEnum ;
@@ -731,13 +747,13 @@ cosmos:CodeList a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CodeList" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Uri ;
-            owl:onProperty cosmos:href ],
-        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:submissionValue ;
             owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Uri ;
+            owl:onProperty cosmos:href ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:conceptId ;
@@ -747,20 +763,20 @@ cosmos:RelationShip a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "RelationShip" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:subject ;
+            owl:onClass cosmos:PredicateTermEnum ;
+            owl:onProperty cosmos:predicateTerm ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:object ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onClass cosmos:PredicateTermEnum ;
-            owl:onProperty cosmos:predicateTerm ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass cosmos:LinkingPhraseEnum ;
             owl:onProperty cosmos:linkingPhrase ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:subject ;
             owl:qualifiedCardinality 1 ] .
 
 cosmos:SDTMDatasetSpecializationPackageTypeEnum a owl:Class,
@@ -778,65 +794,6 @@ cosmos:SDTMVariable a owl:Class,
             owl:onProperty cosmos:subsetCodelist ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:mandatoryVariable ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:vlmTarget ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:OriginTypeEnum ;
-            owl:onProperty cosmos:originType ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty cosmos:length ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:OriginSourceEnum ;
-            owl:onProperty cosmos:originSource ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:isNonStandard ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:CodeList ;
-            owl:onProperty cosmos:codelist ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:format ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:dataElementConceptId ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:mandatoryValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty cosmos:significantDigits ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:RelationShip ;
-            owl:onProperty cosmos:relationship ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos:valueList ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:name ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:ComparatorEnum ;
-            owl:onProperty cosmos:comparator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass cosmos:SDTMVariableDataTypeEnum ;
             owl:onProperty cosmos:dataType ],
         [ a owl:Restriction ;
@@ -844,9 +801,68 @@ cosmos:SDTMVariable a owl:Class,
             owl:onClass cosmos:RoleEnum ;
             owl:onProperty cosmos:role ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos:valueList ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty cosmos:mandatoryValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:OriginSourceEnum ;
+            owl:onProperty cosmos:originSource ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:RelationShip ;
+            owl:onProperty cosmos:relationship ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:CodeList ;
+            owl:onProperty cosmos:codelist ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:ComparatorEnum ;
+            owl:onProperty cosmos:comparator ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty cosmos:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:dataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty cosmos:significantDigits ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty cosmos:vlmTarget ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass cosmos:AssignedTerm ;
-            owl:onProperty cosmos:assignedTerm ] .
+            owl:onProperty cosmos:assignedTerm ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:format ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty cosmos:isNonStandard ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty cosmos:length ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:OriginTypeEnum ;
+            owl:onProperty cosmos:originType ] .
 
 cosmos:CodeListTerm a owl:Class,
         linkml:ClassDefinition ;
@@ -940,7 +956,7 @@ linkml:SlotDefinition a owl:Class ;
 cosmos:LinkingPhraseEnum a owl:Class,
         linkml:EnumDefinition ;
     rdfs:label "LinkingPhraseEnum" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#associates+the+tumor+identified+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#decodes+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+actions+taken> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+relationship+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+the+outcome+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#further+describes+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#further+specifies+the+anatomical+location+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#groups+tumor+assessments+used+in+overall+response+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#groups+values+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+a+pattern+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+an+observation+described+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+overall+response+supported+by+tumor+assessments+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+the+image+from+the+procedure+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+the+tumor+found+by+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+occurrence+of+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+pre-specification+of+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+severity+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+the+previous+irradiation+status+of+the+tumor+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+the+progression+status+of+the+previous+irradiated+tumor+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+a+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+decoded+by+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+original+text+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+code+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+method+for+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+result+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+specimen+tested+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+subject's+fasting+status+during+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+unit+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+anatomical+location+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+anatomical+location+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+severity+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#values+are+grouped+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+class+code+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+class+name+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+end+date+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+start+date+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+unit+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+physical+form+of+the+product+in> ) ;
+    owl:unionOf ( <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#associates+the+tumor+identified+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#decodes+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+actions+taken> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+relationship+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+the+outcome+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#further+describes+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#further+specifies+the+anatomical+location+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#groups+tumor+assessments+used+in+overall+response+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#groups+values+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+a+pattern+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+an+observation+described+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+overall+response+supported+by+tumor+assessments+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+the+image+from+the+procedure+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#identifies+the+tumor+found+by+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+occurrence+of+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+pre-specification+of+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+severity+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+the+previous+irradiation+status+of+the+tumor+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#indicates+the+progression+status+of+the+previous+irradiated+tumor+identified+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+a+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+decoded+by+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+original+text+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+code+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+method+for+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+result+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+specimen+tested+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+subject's+fasting+status+during+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+unit+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+anatomical+location+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+anatomical+location+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#specifies+the+severity+of> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#values+are+grouped+by> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+class+code+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+class+name+for+the+value+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+end+date+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+start+date+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+unit+for> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+physical+form+of+the+product+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in> <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in> ) ;
     linkml:permissible_values <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#associates+the+tumor+identified+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#decodes+the+value+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#describes+actions+taken>,
@@ -965,6 +981,7 @@ cosmos:LinkingPhraseEnum a owl:Class,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+original+text+for>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in>,
+        <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+clinical+significance+interpretation+for>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+code+for+the+value+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in>,
@@ -973,9 +990,12 @@ cosmos:LinkingPhraseEnum a owl:Class,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+end+date+for>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in>,
+        <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in>,
+        <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+method+for+the+test+in>,
+        <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+physical+form+of+the+product+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+result+of+the+test+in>,
         <https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in>,

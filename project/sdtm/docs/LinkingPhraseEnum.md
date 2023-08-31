@@ -65,4 +65,8 @@ URI: [cosmos:LinkingPhraseEnum](https://www.cdisc.org/cosmos/1-0LinkingPhraseEnu
 | is the administered amount of the treatment in |  |  |  |
 | is the unit for |  |  |  |
 | is the physical form of the product in |  |  |  |
+| is the medical condition that is the reason for the treatment in |  |  |  |
+| is the frequency of administration of the amount in |  |  |  |
+| is the part of the body through which is administered the treatment in |  |  |  |
+| is the aspect of the event used to define the date in |  |  |  |
 

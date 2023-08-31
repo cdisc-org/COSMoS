@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-08-31T09:55:02
+# Generation date: 2023-08-31T14:44:19
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -495,6 +495,14 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the unit for") )
         setattr(cls, "is the physical form of the product in",
                 PermissibleValue(text="is the physical form of the product in") )
+        setattr(cls, "is the medical condition that is the reason for the treatment in",
+                PermissibleValue(text="is the medical condition that is the reason for the treatment in") )
+        setattr(cls, "is the frequency of administration of the amount in",
+                PermissibleValue(text="is the frequency of administration of the amount in") )
+        setattr(cls, "is the part of the body through which is administered the treatment in",
+                PermissibleValue(text="is the part of the body through which is administered the treatment in") )
+        setattr(cls, "is the aspect of the event used to define the date in",
+                PermissibleValue(text="is the aspect of the event used to define the date in") )
 
 class PredicateTermEnum(EnumDefinitionImpl):
 

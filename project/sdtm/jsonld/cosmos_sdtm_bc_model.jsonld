@@ -509,6 +509,18 @@
         },
         {
           "text": "is the physical form of the product in"
+        },
+        {
+          "text": "is the medical condition that is the reason for the treatment in"
+        },
+        {
+          "text": "is the frequency of administration of the amount in"
+        },
+        {
+          "text": "is the part of the body through which is administered the treatment in"
+        },
+        {
+          "text": "is the aspect of the event used to define the date in"
         }
       ]
     },
@@ -1425,9 +1437,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-08-31T09:54:42",
-  "source_file_size": 11819,
-  "generation_date": "2023-08-31T09:55:12",
+  "source_file_date": "2023-08-31T14:43:59",
+  "source_file_size": 12093,
+  "generation_date": "2023-08-31T14:44:28",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",
