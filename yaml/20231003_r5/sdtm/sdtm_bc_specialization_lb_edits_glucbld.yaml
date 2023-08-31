@@ -1,0 +1,208 @@
+packageDate: "2023-10-03"
+packageType: sdtm
+datasetSpecializationId: GLUCBLD
+domain: LB
+shortName: Glucose Concentration in Blood
+source: LB.LBTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C105585
+variables:
+  - name: LBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: LBTESTCD
+    assignedTerm:
+      conceptId: C105585
+      value: "GLUC"
+    role: Topic
+    relationship:
+      subject: LBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: LBTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: LBTEST
+    assignedTerm:
+      conceptId: C105585
+      value: "Glucose"
+    role: Qualifier
+    relationship:
+      subject: LBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBCAT
+    isNonStandard: false
+    assignedTerm:
+      value: "CHEMISTRY"
+    role: Qualifier
+    relationship:
+      subject: LBCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBORRES
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: LBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: LBORRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    valueList:
+      - "mg/dL"
+      - "mmol/L"
+    role: Qualifier
+    relationship:
+      subject: LBORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: LBORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: LBSTRESC
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: LBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: LBSTRESN
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: LBSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: LBSTRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C64387
+      value: "mmol/L"
+    role: Qualifier
+    relationship:
+      subject: LBSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: LBSTRESN
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: LBLOINC
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: LBLOINC
+      linkingPhrase: identifies an observation described by
+      predicateTerm: IDENTIFIES_OBSERVATION
+      object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: LBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C12434
+      value: "BLOOD"
+    role: Qualifier
+    relationship:
+      subject: LBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBMETHOD
+    dataElementConceptId: C83312
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C178142
+      value: "DIPSTICK MEASUREMENT METHOD"
+    role: Qualifier
+    relationship:
+      subject: LBMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBFAST
+    dataElementConceptId: C83309
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    relationship:
+      subject: LBFAST
+      linkingPhrase: is the subject's fasting status during the performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

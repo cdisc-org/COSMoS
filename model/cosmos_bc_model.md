@@ -5,12 +5,12 @@ BiomedicalConcept {
     string ncitCode  
     uri href  
     date packageDate  
-    BiomedicalConceptPackageType packageType  
+    BiomedicalConceptPackageTypeEnum packageType  
     stringList categories  
     string parentConceptId  
     string shortName  
     stringList synonyms  
-    BiomedicalConceptResultScaleList resultScales  
+    BiomedicalConceptResultScaleEnumList resultScales  
     string definition  
 }
 Coding {
@@ -23,7 +23,7 @@ DataElementConcept {
     string ncitCode  
     uri href  
     string shortName  
-    DataElementConceptDataType dataType  
+    DataElementConceptDataTypeEnum dataType  
     stringList exampleSet  
 }
 

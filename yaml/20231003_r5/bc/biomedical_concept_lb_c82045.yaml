@@ -1,0 +1,45 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C82045
+ncitCode: C82045
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82045
+parentConceptId: C67208
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Blood Cell Count Ratio Measurements
+shortName: Segmented Neutrophil to Leukocyte Ratio Measurement
+synonyms:
+  - Segmented Neutrophils/Leukocytes
+  - NEUTSGLE
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of segmented neutrophils compared to leukocytes present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Body fluid"
+      - "Bone Marrow"

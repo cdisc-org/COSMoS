@@ -1,0 +1,54 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C132388
+ncitCode: C132388
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C132388
+parentConceptId: C16723
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Immunology Tests
+shortName: Treponema pallidum Antibody Measurement
+synonyms:
+  - TPLAB
+  - Treponema pallidum Antibody
+  - Syphilis Antibody
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of Treponema pallidum antibody in a biological sample.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Detection"
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+  - conceptId: C83312
+    ncitCode: C83312
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83312
+    shortName: Laboratory Test Method
+    dataType: string
+    exampleSet:
+      - "Immunofluorescence"
+      - "Hemagglutination"
+      - "Enzyme Immunoassay"
+      - "Chemiluminescence Immunoassay"
+      - "Immunoblots"
+      - "Rapid Treponemal Assay"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Blood"
+      - "Cerebrospinal Fluid"
+      - "Body Fluid"

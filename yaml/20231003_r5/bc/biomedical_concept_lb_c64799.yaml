@@ -1,0 +1,41 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C64799
+ncitCode: C64799
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64799
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+shortName: Erythrocyte Mean Corpuscular Volume
+synonyms:
+  - RBC Mean Corpuscular Volume
+  - MCV
+resultScales:
+  - Quantitative
+definition: The mean cell volume is the average volume of a red blood cell. This is a calculated value derived from the hematocrit and the red cell count.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "fL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Red Blood Cells"

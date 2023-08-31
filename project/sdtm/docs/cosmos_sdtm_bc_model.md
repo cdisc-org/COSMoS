@@ -72,14 +72,14 @@
 
 ### Enums
 
- * [Comparator](Comparator.md)
- * [LinkingPhrase](LinkingPhrase.md)
- * [OriginSource](OriginSource.md) - Terminology relevant to the origin source for datasets in the Define-XML document.
- * [OriginType](OriginType.md) - Terminology relevant to the origin type for datasets in the Define-XML document.
- * [PredicateTerm](PredicateTerm.md)
- * [Role](Role.md)
- * [SDTMDatasetSpecializationPackageType](SDTMDatasetSpecializationPackageType.md)
- * [SDTMVariableDataType](SDTMVariableDataType.md)
+ * [ComparatorEnum](ComparatorEnum.md)
+ * [LinkingPhraseEnum](LinkingPhraseEnum.md)
+ * [OriginSourceEnum](OriginSourceEnum.md) - Terminology relevant to the origin source for datasets in the Define-XML document.
+ * [OriginTypeEnum](OriginTypeEnum.md) - Terminology relevant to the origin type for datasets in the Define-XML document.
+ * [PredicateTermEnum](PredicateTermEnum.md)
+ * [RoleEnum](RoleEnum.md)
+ * [SDTMDatasetSpecializationPackageTypeEnum](SDTMDatasetSpecializationPackageTypeEnum.md)
+ * [SDTMVariableDataTypeEnum](SDTMVariableDataTypeEnum.md)
 
 ### Subsets
 

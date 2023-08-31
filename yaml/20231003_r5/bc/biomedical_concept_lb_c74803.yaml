@@ -1,0 +1,11 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C74803
+ncitCode: C74803
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74803
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Vitamin Measurement
+definition: The determination of the type and amount of vitamins in a sample.

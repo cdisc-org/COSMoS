@@ -7,7 +7,7 @@
 URI: [cosmos:SDTMVariable](https://www.cdisc.org/cosmos/1-0SDTMVariable)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:string%20%3F;dataType:SDTMVariableDataType%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginType%20%3F;originSource:OriginSource%20%3F;comparator:Comparator%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:string%20%3F;dataType:SDTMVariableDataType%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginType%20%3F;originSource:OriginSource%20%3F;comparator:Comparator%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:RoleEnum%20%3F;dataType:SDTMVariableDataTypeEnum%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginTypeEnum%20%3F;originSource:OriginSourceEnum%20%3F;comparator:ComparatorEnum%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])](https://yuml.me/diagram/nofunky;dir:TB/class/[RelationShip]<relationship%200..1-++[SDTMVariable&#124;name:string;dataElementConceptId:string%20%3F;isNonStandard:boolean%20%3F;subsetCodelist:string%20%3F;valueList:string%20*;role:RoleEnum%20%3F;dataType:SDTMVariableDataTypeEnum%20%3F;length:integer%20%3F;format:string%20%3F;significantDigits:integer%20%3F;mandatoryVariable:boolean%20%3F;mandatoryValue:boolean%20%3F;originType:OriginTypeEnum%20%3F;originSource:OriginSourceEnum%20%3F;comparator:ComparatorEnum%20%3F;vlmTarget:boolean%20%3F],[AssignedTerm]<assignedTerm%200..1-++[SDTMVariable],[CodeList]<codelist%200..1-++[SDTMVariable],[SDTMGroup]++-%20variables%200..*>[SDTMVariable],[SDTMGroup],[RelationShip],[CodeList],[AssignedTerm])
 
 ## Referenced by Class
 
@@ -40,12 +40,12 @@ URI: [cosmos:SDTMVariable](https://www.cdisc.org/cosmos/1-0SDTMVariable)
      * Range: [AssignedTerm](AssignedTerm.md)
  * [role](role.md)  <sub>0..1</sub>
      * Description: SDTM variable role
-     * Range: [String](types/String.md)
+     * Range: [RoleEnum](RoleEnum.md)
  * [relationship](relationship.md)  <sub>0..1</sub>
      * Range: [RelationShip](RelationShip.md)
  * [dataType](dataType.md)  <sub>0..1</sub>
      * Description: Variable data type
-     * Range: [SDTMVariableDataType](SDTMVariableDataType.md)
+     * Range: [SDTMVariableDataTypeEnum](SDTMVariableDataTypeEnum.md)
  * [length](length.md)  <sub>0..1</sub>
      * Description: Variable length
      * Range: [Integer](types/Integer.md)
@@ -63,13 +63,13 @@ URI: [cosmos:SDTMVariable](https://www.cdisc.org/cosmos/1-0SDTMVariable)
      * Range: [Boolean](types/Boolean.md)
  * [originType](originType.md)  <sub>0..1</sub>
      * Description: Variable origin type (define-XML v21)
-     * Range: [OriginType](OriginType.md)
+     * Range: [OriginTypeEnum](OriginTypeEnum.md)
  * [originSource](originSource.md)  <sub>0..1</sub>
      * Description: Variable origin source (define-XML v21)
-     * Range: [OriginSource](OriginSource.md)
+     * Range: [OriginSourceEnum](OriginSourceEnum.md)
  * [comparator](comparator.md)  <sub>0..1</sub>
      * Description: Comparison operator for SDTM group variables included in VLM
-     * Range: [Comparator](Comparator.md)
+     * Range: [ComparatorEnum](ComparatorEnum.md)
  * [vlmTarget](vlmTarget.md)  <sub>0..1</sub>
      * Description: Target variable for VLM
      * Range: [Boolean](types/Boolean.md)

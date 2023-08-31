@@ -9,7 +9,7 @@ URI: [cosmos:resultScales](https://www.cdisc.org/cosmos/1-0resultScales)
 
 ## Domain and Range
 
-None &#8594;  <sub>0..\*</sub> [BiomedicalConceptResultScale](BiomedicalConceptResultScale.md)
+None &#8594;  <sub>0..\*</sub> [BiomedicalConceptResultScaleEnum](BiomedicalConceptResultScaleEnum.md)
 
 ## Parents
 

@@ -7,7 +7,7 @@
 URI: [cosmos:BiomedicalConcept](https://www.cdisc.org/cosmos/1-0BiomedicalConcept)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataElementConcept],[Coding],[DataElementConcept]<dataElementConcepts%200..*-++[BiomedicalConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;packageDate:date;packageType:BiomedicalConceptPackageType;categories:string%20%2B;parentConceptId:string%20%3F;shortName:string;synonyms:string%20*;resultScales:BiomedicalConceptResultScale%20*;definition:string],[Coding]<coding%200..*-++[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataElementConcept],[Coding],[DataElementConcept]<dataElementConcepts%200..*-++[BiomedicalConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;packageDate:date;packageType:BiomedicalConceptPackageType;categories:string%20%2B;parentConceptId:string%20%3F;shortName:string;synonyms:string%20*;resultScales:BiomedicalConceptResultScale%20*;definition:string],[Coding]<coding%200..*-++[BiomedicalConcept])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[DataElementConcept],[Coding],[DataElementConcept]<dataElementConcepts%200..*-++[BiomedicalConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;packageDate:date;packageType:BiomedicalConceptPackageTypeEnum;categories:string%20%2B;parentConceptId:string%20%3F;shortName:string;synonyms:string%20*;resultScales:BiomedicalConceptResultScaleEnum%20*;definition:string],[Coding]<coding%200..*-++[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[DataElementConcept],[Coding],[DataElementConcept]<dataElementConcepts%200..*-++[BiomedicalConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;packageDate:date;packageType:BiomedicalConceptPackageTypeEnum;categories:string%20%2B;parentConceptId:string%20%3F;shortName:string;synonyms:string%20*;resultScales:BiomedicalConceptResultScaleEnum%20*;definition:string],[Coding]<coding%200..*-++[BiomedicalConcept])
 
 ## Referenced by Class
 
@@ -31,7 +31,7 @@ URI: [cosmos:BiomedicalConcept](https://www.cdisc.org/cosmos/1-0BiomedicalConcep
      * Range: [Date](types/Date.md)
  * [packageType](packageType.md)  <sub>1..1</sub>
      * Description: Package type (bc for Biomedical Concepts)
-     * Range: [BiomedicalConceptPackageType](BiomedicalConceptPackageType.md)
+     * Range: [BiomedicalConceptPackageTypeEnum](BiomedicalConceptPackageTypeEnum.md)
  * [categories](categories.md)  <sub>1..\*</sub>
      * Description: Biomedical Concept category for the faciliation of API search and extract
      * Range: [String](types/String.md)
@@ -46,7 +46,7 @@ URI: [cosmos:BiomedicalConcept](https://www.cdisc.org/cosmos/1-0BiomedicalConcep
      * Range: [String](types/String.md)
  * [resultScales](resultScales.md)  <sub>0..\*</sub>
      * Description: Scale of measurement for the Biomedical Concept result
-     * Range: [BiomedicalConceptResultScale](BiomedicalConceptResultScale.md)
+     * Range: [BiomedicalConceptResultScaleEnum](BiomedicalConceptResultScaleEnum.md)
  * [definition](definition.md)  <sub>1..1</sub>
      * Description: NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
      * Range: [String](types/String.md)

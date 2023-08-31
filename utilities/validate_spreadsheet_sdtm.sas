@@ -76,22 +76,41 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm4_11, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm4_12, drop=%str(drop=length significant_digits format));
 
+
+/* Package 5 - */
+%let excel_file=&root/curation/draft/BC_Package_R5_LZZT.xlsx;
+
+%ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc5_1); 
+%ReadExcel(file=&excel_file, range=%str(BC_DS_EDITS)$, dsout=bc5_2); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc5_3); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc5_4); 
+%ReadExcel(file=&excel_file, range=%str(BC_MB)$, dsout=bc5_5); 
+
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm5_1, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_EDITS)$, dsout=sdtm5_2, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm5_3, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm5_4, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm5_5, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm5_6, drop=%str(drop=length significant_digits format)); 
+
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
 /************************************************************************************************************************/
 
-data bc(drop=change_history F1: F2:);
+data bc(drop=change_history F1: F2: i vname vvalue);
   retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
   length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $32 bc_categories synonyms result_scales definition 
-         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set value $32000 name $32;
+         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set vvalue $32000 vname $32;
   set 
       bc:(where=(not missing(bc_id)));
   
   array carray{*} _character_;
   do i=1 to dim(carray);
-    name = vname(carray[i]);
-    value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
-    if value ne carray[i] then do;
-     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= name= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 value ;
+    vname = vname(carray[i]);
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    if vvalue ne carray[i] then do;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
 
@@ -115,8 +134,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc.html";
-  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._sdtm_bc.xlsx";
+  ods html5 file="&root/utilities/validate_spreadsheet_&today._bc.html";
+  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._bc.xlsx";
 
     proc print data=bc;
     run;
@@ -126,14 +145,14 @@ run;
   ods listing;
 %end;
 
-data sdtm(drop=change_history F3: F4:);
+data sdtm(drop=change_history F3: F4:  i vname vvalue);
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
          codelist subset_codelist value_list assigned_value linking_phrase predicate_term 
-         short_name role format data_type origin_source vlm_target change_history value $1024 name $32;
+         short_name role format data_type origin_source vlm_target change_history vvalue $32000 vname $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
 /*
@@ -142,10 +161,10 @@ data sdtm(drop=change_history F3: F4:);
 */
   array carray{*} _character_;
   do i=1 to dim(carray);
-    name = vname(carray[i]);
-    value = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
-    if value ne carray[i] then do;
-     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= name= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 value ;
+    vname = vname(carray[i]);
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    if vvalue ne carray[i] then do;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
 

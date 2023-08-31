@@ -7,7 +7,7 @@
 URI: [cosmos:DataElementConcept](https://www.cdisc.org/cosmos/1-0DataElementConcept)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataType;exampleSet:string%20*],[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataType;exampleSet:string%20*],[BiomedicalConcept])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataTypeEnum;exampleSet:string%20*],[BiomedicalConcept])](https://yuml.me/diagram/nofunky;dir:TB/class/[BiomedicalConcept]++-%20dataElementConcepts%200..*>[DataElementConcept&#124;conceptId:string;ncitCode:string%20%3F;href:uri%20%3F;shortName:string;dataType:DataElementConceptDataTypeEnum;exampleSet:string%20*],[BiomedicalConcept])
 
 ## Referenced by Class
 
@@ -32,7 +32,7 @@ URI: [cosmos:DataElementConcept](https://www.cdisc.org/cosmos/1-0DataElementConc
      * Range: [String](types/String.md)
  * [dataType](dataType.md)  <sub>1..1</sub>
      * Description: Data Type for the Data Element Concept
-     * Range: [DataElementConceptDataType](DataElementConceptDataType.md)
+     * Range: [DataElementConceptDataTypeEnum](DataElementConceptDataTypeEnum.md)
  * [exampleSet](exampleSet.md)  <sub>0..\*</sub>
      * Description: Example values for the Data Element Concept
      * Range: [String](types/String.md)

@@ -1,0 +1,11 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C75385
+ncitCode: C75385
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C75385
+parentConceptId: C74742
+categories:
+  - Laboratory Tests
+  - Gene Products
+shortName: Peptide Hormone Measurement
+definition: The determination of the amount of any peptide hormone present in a sample.

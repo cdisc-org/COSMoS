@@ -20,15 +20,15 @@ type CodeListTerm
 type RelationShip
   {
     subject: String!
-    linkingPhrase: LinkingPhrase!
-    predicateTerm: PredicateTerm!
+    linkingPhrase: LinkingPhraseEnum!
+    predicateTerm: PredicateTermEnum!
     object: String!
   }
 
 type SDTMGroup
   {
     packageDate: Date!
-    packageType: SDTMDatasetSpecializationPackageType!
+    packageType: SDTMDatasetSpecializationPackageTypeEnum!
     domain: String!
     shortName: String!
     datasetSpecializationId: String!
@@ -48,17 +48,17 @@ type SDTMVariable
     subsetCodelist: String
     valueList: [String]
     assignedTerm: AssignedTerm
-    role: String
+    role: RoleEnum
     relationship: RelationShip
-    dataType: SDTMVariableDataType
+    dataType: SDTMVariableDataTypeEnum
     length: Integer
     format: String
     significantDigits: Integer
     mandatoryVariable: Boolean
     mandatoryValue: Boolean
-    originType: OriginType
-    originSource: OriginSource
-    comparator: Comparator
+    originType: OriginTypeEnum
+    originSource: OriginSourceEnum
+    comparator: ComparatorEnum
     vlmTarget: Boolean
   }
 

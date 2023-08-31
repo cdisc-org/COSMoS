@@ -48,7 +48,7 @@
                "type": "string"
             },
             "packageType": {
-               "$ref": "#/$defs/BiomedicalConceptPackageType",
+               "$ref": "#/$defs/BiomedicalConceptPackageTypeEnum",
                "description": "Package type (bc for Biomedical Concepts)"
             },
             "parentConceptId": {
@@ -58,7 +58,7 @@
             "resultScales": {
                "description": "Scale of measurement for the Biomedical Concept result",
                "items": {
-                  "$ref": "#/$defs/BiomedicalConceptResultScale"
+                  "$ref": "#/$defs/BiomedicalConceptResultScaleEnum"
                },
                "type": "array"
             },
@@ -85,15 +85,15 @@
          "title": "BiomedicalConcept",
          "type": "object"
       },
-      "BiomedicalConceptPackageType": {
+      "BiomedicalConceptPackageTypeEnum": {
          "description": "",
          "enum": [
             "bc"
          ],
-         "title": "BiomedicalConceptPackageType",
+         "title": "BiomedicalConceptPackageTypeEnum",
          "type": "string"
       },
-      "BiomedicalConceptResultScale": {
+      "BiomedicalConceptResultScaleEnum": {
          "description": "",
          "enum": [
             "Quantitative",
@@ -101,7 +101,7 @@
             "Nominal",
             "Narrative"
          ],
-         "title": "BiomedicalConceptResultScale",
+         "title": "BiomedicalConceptResultScaleEnum",
          "type": "string"
       },
       "Coding": {
@@ -138,7 +138,7 @@
                "type": "string"
             },
             "dataType": {
-               "$ref": "#/$defs/DataElementConceptDataType",
+               "$ref": "#/$defs/DataElementConceptDataTypeEnum",
                "description": "Data Type for the Data Element Concept"
             },
             "exampleSet": {
@@ -170,7 +170,7 @@
          "title": "DataElementConcept",
          "type": "object"
       },
-      "DataElementConceptDataType": {
+      "DataElementConceptDataTypeEnum": {
          "description": "",
          "enum": [
             "boolean",
@@ -179,7 +179,7 @@
             "string",
             "uri"
          ],
-         "title": "DataElementConceptDataType",
+         "title": "DataElementConceptDataTypeEnum",
          "type": "string"
       }
    },
@@ -232,7 +232,7 @@
          "type": "string"
       },
       "packageType": {
-         "$ref": "#/$defs/BiomedicalConceptPackageType",
+         "$ref": "#/$defs/BiomedicalConceptPackageTypeEnum",
          "description": "Package type (bc for Biomedical Concepts)"
       },
       "parentConceptId": {
@@ -242,7 +242,7 @@
       "resultScales": {
          "description": "Scale of measurement for the Biomedical Concept result",
          "items": {
-            "$ref": "#/$defs/BiomedicalConceptResultScale"
+            "$ref": "#/$defs/BiomedicalConceptResultScaleEnum"
          },
          "type": "array"
       },

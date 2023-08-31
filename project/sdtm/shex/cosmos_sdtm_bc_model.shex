@@ -68,8 +68,8 @@ linkml:Sparqlpath xsd:string
 
 <https://www.cdisc.org/cosmos/1-0RelationShip> CLOSED {
     (  $<https://www.cdisc.org/cosmos/1-0RelationShip_tes> (  <https://www.cdisc.org/cosmos/1-0subject> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0linkingPhrase> @<https://www.cdisc.org/cosmos/1-0LinkingPhrase> ;
-          <https://www.cdisc.org/cosmos/1-0predicateTerm> @<https://www.cdisc.org/cosmos/1-0PredicateTerm> ;
+          <https://www.cdisc.org/cosmos/1-0linkingPhrase> @<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum> ;
+          <https://www.cdisc.org/cosmos/1-0predicateTerm> @<https://www.cdisc.org/cosmos/1-0PredicateTermEnum> ;
           <https://www.cdisc.org/cosmos/1-0object> @linkml:String
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/1-0RelationShip> ] ?
@@ -78,7 +78,8 @@ linkml:Sparqlpath xsd:string
 
 <https://www.cdisc.org/cosmos/1-0SDTMGroup> CLOSED {
     (  $<https://www.cdisc.org/cosmos/1-0SDTMGroup_tes> (  <https://www.cdisc.org/cosmos/1-0packageDate> @linkml:Date ;
-          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageType> ;
+          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageTypeEnum>
+          ;
           <https://www.cdisc.org/cosmos/1-0domain> @linkml:String ;
           <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
           <https://www.cdisc.org/cosmos/1-0source> @linkml:String ;
@@ -99,17 +100,17 @@ linkml:Sparqlpath xsd:string
           <https://www.cdisc.org/cosmos/1-0subsetCodelist> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0valueList> @linkml:String * ;
           <https://www.cdisc.org/cosmos/1-0assignedTerm> @<https://www.cdisc.org/cosmos/1-0AssignedTerm> ? ;
-          <https://www.cdisc.org/cosmos/1-0role> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/1-0role> @<https://www.cdisc.org/cosmos/1-0RoleEnum> ? ;
           <https://www.cdisc.org/cosmos/1-0relationship> @<https://www.cdisc.org/cosmos/1-0RelationShip> ? ;
-          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0SDTMVariableDataType> ? ;
+          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0SDTMVariableDataTypeEnum> ? ;
           <https://www.cdisc.org/cosmos/1-0length> @linkml:Integer ? ;
           <https://www.cdisc.org/cosmos/1-0format> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0significantDigits> @linkml:Integer ? ;
           <https://www.cdisc.org/cosmos/1-0mandatoryVariable> @linkml:Boolean ? ;
           <https://www.cdisc.org/cosmos/1-0mandatoryValue> @linkml:Boolean ? ;
-          <https://www.cdisc.org/cosmos/1-0originType> @<https://www.cdisc.org/cosmos/1-0OriginType> ? ;
-          <https://www.cdisc.org/cosmos/1-0originSource> @<https://www.cdisc.org/cosmos/1-0OriginSource> ? ;
-          <https://www.cdisc.org/cosmos/1-0comparator> @<https://www.cdisc.org/cosmos/1-0Comparator> ? ;
+          <https://www.cdisc.org/cosmos/1-0originType> @<https://www.cdisc.org/cosmos/1-0OriginTypeEnum> ? ;
+          <https://www.cdisc.org/cosmos/1-0originSource> @<https://www.cdisc.org/cosmos/1-0OriginSourceEnum> ? ;
+          <https://www.cdisc.org/cosmos/1-0comparator> @<https://www.cdisc.org/cosmos/1-0ComparatorEnum> ? ;
           <https://www.cdisc.org/cosmos/1-0vlmTarget> @linkml:Boolean ?
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMVariable> ]

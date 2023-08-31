@@ -1,0 +1,11 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C154812
+ncitCode: C154812
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C154812
+parentConceptId: C49188
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+shortName: Gram Negative Bacteria Measurement
+definition: "The determination of the gram-negative bacteria present in a sample."

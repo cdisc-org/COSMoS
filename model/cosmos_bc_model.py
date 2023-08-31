@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-20T08:55:52
+# Generation date: 2023-08-31T10:49:12
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -60,7 +60,7 @@ class BiomedicalConcept(YAMLRoot):
 
     conceptId: Union[str, BiomedicalConceptConceptId] = None
     packageDate: Union[str, XSDDate] = None
-    packageType: Union[str, "BiomedicalConceptPackageType"] = None
+    packageType: Union[str, "BiomedicalConceptPackageTypeEnum"] = None
     categories: Union[str, List[str]] = None
     shortName: str = None
     definition: str = None
@@ -68,7 +68,7 @@ class BiomedicalConcept(YAMLRoot):
     href: Optional[Union[str, URI]] = None
     parentConceptId: Optional[str] = None
     synonyms: Optional[Union[str, List[str]]] = empty_list()
-    resultScales: Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]] = empty_list()
+    resultScales: Optional[Union[Union[str, "BiomedicalConceptResultScaleEnum"], List[Union[str, "BiomedicalConceptResultScaleEnum"]]]] = empty_list()
     coding: Optional[Union[Union[dict, "Coding"], List[Union[dict, "Coding"]]]] = empty_list()
     dataElementConcepts: Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, "DataElementConcept"]], List[Union[dict, "DataElementConcept"]]]] = empty_dict()
 
@@ -85,8 +85,8 @@ class BiomedicalConcept(YAMLRoot):
 
         if self._is_empty(self.packageType):
             self.MissingRequiredField("packageType")
-        if not isinstance(self.packageType, BiomedicalConceptPackageType):
-            self.packageType = BiomedicalConceptPackageType(self.packageType)
+        if not isinstance(self.packageType, BiomedicalConceptPackageTypeEnum):
+            self.packageType = BiomedicalConceptPackageTypeEnum(self.packageType)
 
         if self._is_empty(self.categories):
             self.MissingRequiredField("categories")
@@ -119,7 +119,7 @@ class BiomedicalConcept(YAMLRoot):
 
         if not isinstance(self.resultScales, list):
             self.resultScales = [self.resultScales] if self.resultScales is not None else []
-        self.resultScales = [v if isinstance(v, BiomedicalConceptResultScale) else BiomedicalConceptResultScale(v) for v in self.resultScales]
+        self.resultScales = [v if isinstance(v, BiomedicalConceptResultScaleEnum) else BiomedicalConceptResultScaleEnum(v) for v in self.resultScales]
 
         if not isinstance(self.coding, list):
             self.coding = [self.coding] if self.coding is not None else []
@@ -171,7 +171,7 @@ class DataElementConcept(YAMLRoot):
 
     conceptId: Union[str, DataElementConceptConceptId] = None
     shortName: str = None
-    dataType: Union[str, "DataElementConceptDataType"] = None
+    dataType: Union[str, "DataElementConceptDataTypeEnum"] = None
     ncitCode: Optional[str] = None
     href: Optional[Union[str, URI]] = None
     exampleSet: Optional[Union[str, List[str]]] = empty_list()
@@ -189,8 +189,8 @@ class DataElementConcept(YAMLRoot):
 
         if self._is_empty(self.dataType):
             self.MissingRequiredField("dataType")
-        if not isinstance(self.dataType, DataElementConceptDataType):
-            self.dataType = DataElementConceptDataType(self.dataType)
+        if not isinstance(self.dataType, DataElementConceptDataTypeEnum):
+            self.dataType = DataElementConceptDataTypeEnum(self.dataType)
 
         if self.ncitCode is not None and not isinstance(self.ncitCode, str):
             self.ncitCode = str(self.ncitCode)
@@ -206,15 +206,15 @@ class DataElementConcept(YAMLRoot):
 
 
 # Enumerations
-class BiomedicalConceptPackageType(EnumDefinitionImpl):
+class BiomedicalConceptPackageTypeEnum(EnumDefinitionImpl):
 
     bc = PermissibleValue(text="bc")
 
     _defn = EnumDefinition(
-        name="BiomedicalConceptPackageType",
+        name="BiomedicalConceptPackageTypeEnum",
     )
 
-class BiomedicalConceptResultScale(EnumDefinitionImpl):
+class BiomedicalConceptResultScaleEnum(EnumDefinitionImpl):
 
     Quantitative = PermissibleValue(text="Quantitative")
     Ordinal = PermissibleValue(text="Ordinal")
@@ -222,10 +222,10 @@ class BiomedicalConceptResultScale(EnumDefinitionImpl):
     Narrative = PermissibleValue(text="Narrative")
 
     _defn = EnumDefinition(
-        name="BiomedicalConceptResultScale",
+        name="BiomedicalConceptResultScaleEnum",
     )
 
-class DataElementConceptDataType(EnumDefinitionImpl):
+class DataElementConceptDataTypeEnum(EnumDefinitionImpl):
 
     boolean = PermissibleValue(text="boolean")
     decimal = PermissibleValue(text="decimal")
@@ -234,7 +234,7 @@ class DataElementConceptDataType(EnumDefinitionImpl):
     uri = PermissibleValue(text="uri")
 
     _defn = EnumDefinition(
-        name="DataElementConceptDataType",
+        name="DataElementConceptDataTypeEnum",
     )
 
 # Slots
@@ -256,7 +256,7 @@ slots.packageDate = Slot(uri=COSMOS.packageDate, name="packageDate", curie=COSMO
                    model_uri=COSMOS.packageDate, domain=None, range=Union[str, XSDDate])
 
 slots.packageType = Slot(uri=COSMOS.packageType, name="packageType", curie=COSMOS.curie('packageType'),
-                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "BiomedicalConceptPackageType"])
+                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "BiomedicalConceptPackageTypeEnum"])
 
 slots.categories = Slot(uri=COSMOS.categories, name="categories", curie=COSMOS.curie('categories'),
                    model_uri=COSMOS.categories, domain=None, range=Union[str, List[str]])
@@ -271,7 +271,7 @@ slots.synonyms = Slot(uri=COSMOS.synonyms, name="synonyms", curie=COSMOS.curie('
                    model_uri=COSMOS.synonyms, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.resultScales = Slot(uri=COSMOS.resultScales, name="resultScales", curie=COSMOS.curie('resultScales'),
-                   model_uri=COSMOS.resultScales, domain=None, range=Optional[Union[Union[str, "BiomedicalConceptResultScale"], List[Union[str, "BiomedicalConceptResultScale"]]]])
+                   model_uri=COSMOS.resultScales, domain=None, range=Optional[Union[Union[str, "BiomedicalConceptResultScaleEnum"], List[Union[str, "BiomedicalConceptResultScaleEnum"]]]])
 
 slots.definition = Slot(uri=COSMOS.definition, name="definition", curie=COSMOS.curie('definition'),
                    model_uri=COSMOS.definition, domain=None, range=str)
@@ -292,7 +292,7 @@ slots.dataElementConcepts = Slot(uri=COSMOS.dataElementConcepts, name="dataEleme
                    model_uri=COSMOS.dataElementConcepts, domain=None, range=Optional[Union[Dict[Union[str, DataElementConceptConceptId], Union[dict, DataElementConcept]], List[Union[dict, DataElementConcept]]]])
 
 slots.dataType = Slot(uri=COSMOS.dataType, name="dataType", curie=COSMOS.curie('dataType'),
-                   model_uri=COSMOS.dataType, domain=None, range=Union[str, "DataElementConceptDataType"])
+                   model_uri=COSMOS.dataType, domain=None, range=Union[str, "DataElementConceptDataTypeEnum"])
 
 slots.exampleSet = Slot(uri=COSMOS.exampleSet, name="exampleSet", curie=COSMOS.curie('exampleSet'),
                    model_uri=COSMOS.exampleSet, domain=None, range=Optional[Union[str, List[str]]])

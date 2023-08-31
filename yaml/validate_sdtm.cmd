@@ -21,7 +21,7 @@ echo.>%logfile%
 set counter=0
 for /F "eol=; tokens=1 delims=" %%i IN ('dir /b /s %~dp0%folder%\sdtm\*.yaml') do @call :ValidateFile %%i
 
-findstr /i /s "error" %logfile%
+findstr /i /n /s "error" %logfile%
 goto:EOF
 
 :ValidateFile

@@ -7,7 +7,7 @@
 URI: [cosmos:SDTMGroup](https://www.cdisc.org/cosmos/1-0SDTMGroup)
 
 
-[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageType;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageType;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])
+[![img](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageTypeEnum;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])](https://yuml.me/diagram/nofunky;dir:TB/class/[SDTMVariable],[SDTMVariable]<variables%200..*-++[SDTMGroup&#124;packageDate:date;packageType:SDTMDatasetSpecializationPackageTypeEnum;domain:string;shortName:string;datasetSpecializationId:string;source:string;sdtmigStartVersion:string;sdtmigEndVersion:string%20%3F;biomedicalConceptId:string%20%3F])
 
 ## Attributes
 
@@ -19,7 +19,7 @@ URI: [cosmos:SDTMGroup](https://www.cdisc.org/cosmos/1-0SDTMGroup)
      * Range: [Date](types/Date.md)
  * [packageType](packageType.md)  <sub>1..1</sub>
      * Description: Package type (sdtm for SDTM Dataset Specializations)
-     * Range: [SDTMDatasetSpecializationPackageType](SDTMDatasetSpecializationPackageType.md)
+     * Range: [SDTMDatasetSpecializationPackageTypeEnum](SDTMDatasetSpecializationPackageTypeEnum.md)
  * [domain](domain.md)  <sub>1..1</sub>
      * Description: Domain for the SDTM specialization group
      * Range: [String](types/String.md)

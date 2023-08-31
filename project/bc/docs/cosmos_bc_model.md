@@ -48,9 +48,9 @@
 
 ### Enums
 
- * [BiomedicalConceptPackageType](BiomedicalConceptPackageType.md)
- * [BiomedicalConceptResultScale](BiomedicalConceptResultScale.md)
- * [DataElementConceptDataType](DataElementConceptDataType.md)
+ * [BiomedicalConceptPackageTypeEnum](BiomedicalConceptPackageTypeEnum.md)
+ * [BiomedicalConceptResultScaleEnum](BiomedicalConceptResultScaleEnum.md)
+ * [DataElementConceptDataTypeEnum](DataElementConceptDataTypeEnum.md)
 
 ### Subsets
 

@@ -9,7 +9,7 @@ URI: [cosmos:packageType](https://www.cdisc.org/cosmos/1-0packageType)
 
 ## Domain and Range
 
-None &#8594;  <sub>1..1</sub> [BiomedicalConceptPackageType](BiomedicalConceptPackageType.md)
+None &#8594;  <sub>1..1</sub> [BiomedicalConceptPackageTypeEnum](BiomedicalConceptPackageTypeEnum.md)
 
 ## Parents
 

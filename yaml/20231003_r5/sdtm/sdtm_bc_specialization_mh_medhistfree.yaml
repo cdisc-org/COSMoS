@@ -1,0 +1,98 @@
+packageDate: "2023-10-03"
+packageType: sdtm
+datasetSpecializationId: MEDHISTFREE
+domain: MH
+shortName: Medical History Free Text Format
+source: MH.MHTERM
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C200145
+variables:
+  - name: MHTERM
+    dataElementConceptId: C83118
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: MHDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: MHDECOD
+    dataElementConceptId: C83346
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHCAT
+    dataElementConceptId: C83018
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MHTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHSCAT
+    dataElementConceptId: C83143
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MHCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHSTDTC
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 40
+    relationship:
+      subject: MHSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: MHTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MHENDTC
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 40
+    relationship:
+      subject: MHENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: MHTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

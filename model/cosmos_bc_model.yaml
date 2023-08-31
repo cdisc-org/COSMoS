@@ -79,7 +79,7 @@ slots:
     description: Biomedical Concept package release date indicating when the BC package was published to production
     required: true
   packageType:
-    range: BiomedicalConceptPackageType
+    range: BiomedicalConceptPackageTypeEnum
     description: Package type (bc for Biomedical Concepts)
     required: true
   categories:
@@ -100,7 +100,7 @@ slots:
     description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
   resultScales:
     multivalued: true
-    range: BiomedicalConceptResultScale
+    range: BiomedicalConceptResultScaleEnum
     description: Scale of measurement for the Biomedical Concept result
   definition:
     required: true
@@ -123,7 +123,7 @@ slots:
     range: DataElementConcept
     description: Data Element Concept
   dataType:
-    range: DataElementConceptDataType
+    range: DataElementConceptDataTypeEnum
     required: true
     description: Data Type for the Data Element Concept
   exampleSet:
@@ -133,18 +133,18 @@ slots:
 
 enums:
 
-  BiomedicalConceptPackageType:
+  BiomedicalConceptPackageTypeEnum:
     permissible_values:
       bc:
 
-  BiomedicalConceptResultScale:
+  BiomedicalConceptResultScaleEnum:
     permissible_values:
       Quantitative:
       Ordinal:
       Nominal:
       Narrative:
 
-  DataElementConceptDataType:
+  DataElementConceptDataTypeEnum:
     permissible_values:
       boolean:
       decimal:

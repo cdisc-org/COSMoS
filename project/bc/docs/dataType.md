@@ -9,7 +9,7 @@ URI: [cosmos:dataType](https://www.cdisc.org/cosmos/1-0dataType)
 
 ## Domain and Range
 
-None &#8594;  <sub>1..1</sub> [DataElementConceptDataType](DataElementConceptDataType.md)
+None &#8594;  <sub>1..1</sub> [DataElementConceptDataTypeEnum](DataElementConceptDataTypeEnum.md)
 
 ## Parents
 

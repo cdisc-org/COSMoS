@@ -35,7 +35,9 @@
 
   
   %if %sysfunc(fileexist(&jsonout)) %then %do;
-    %put NOTE: [&sysmacroname] The file &jsonout already exist. ;
+    %put;
+    %put WAR%str(NING): [&sysmacroname] The file &jsonout already exist. ;
+    %put;
   %end;    
   %else %do;
  
