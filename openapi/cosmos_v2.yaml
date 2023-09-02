@@ -1598,13 +1598,13 @@ components:
       properties:
         href:
           type: string
-          example: /mdr/specializations/datasetspecializations
+          example: /mdr/specializations/datasetspecializations?biomedicalconcept=C25298
         title:
           type: string
           example: Dataset Specializations that specialize a Biomedical Concept
         type:
           type: string
-          example: Dataset Specialization List
+          example: Dataset Specializations List
 
     datasetSpecializationLatestRef:
       type: object
