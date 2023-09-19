@@ -1,0 +1,139 @@
+packageDate: "2023-10-03"
+packageType: sdtm
+datasetSpecializationId: MICROCYURNSED
+domain: LB
+shortName: Microcytes in Urine Sediment
+source: LB.LBTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C64822
+variables:
+  - name: LBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C65047
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C65047
+      submissionValue: LBTESTCD
+    assignedTerm:
+      conceptId: C64822
+      value: "MICROCY"
+    role: Topic
+    relationship:
+      subject: LBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: LBTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67154
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C67154
+      submissionValue: LBTEST
+    assignedTerm:
+      conceptId: C64822
+      value: "Microcytes"
+    role: Qualifier
+    relationship:
+      subject: LBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBCAT
+    isNonStandard: false
+    assignedTerm:
+      value: "URINALYSIS"
+    role: Qualifier
+    relationship:
+      subject: LBCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: LBORRES
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: LBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: LBSTRESC
+    dataElementConceptId: C36292
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: LBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: LBLOINC
+    isNonStandard: false
+    assignedTerm:
+      value: "53969-2"
+    role: Qualifier
+    relationship:
+      subject: LBLOINC
+      linkingPhrase: identifies an observation described by
+      predicateTerm: IDENTIFIES_OBSERVATION
+      object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: LBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C158282
+      value: "URINE SEDIMENT"
+    role: Qualifier
+    relationship:
+      subject: LBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: LBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: LBFAST
+    dataElementConceptId: C83309
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    relationship:
+      subject: LBFAST
+      linkingPhrase: is the subject's fasting status during the performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: LBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

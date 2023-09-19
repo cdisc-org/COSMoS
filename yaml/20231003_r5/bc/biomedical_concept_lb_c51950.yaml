@@ -22,7 +22,7 @@ dataElementConcepts:
     ncitCode: C36292
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
     shortName: Laboratory Test Result
-    dataType: decimal
+    dataType: string
   - conceptId: C83309
     ncitCode: C83309
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309

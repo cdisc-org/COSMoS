@@ -69,8 +69,7 @@ variables:
     dataElementConceptId: C93579
     isNonStandard: false
     role: Timing
-    dataType: text
-    length: 40
+    dataType: datetime
     relationship:
       subject: DSSTDTC
       linkingPhrase: is the start date for

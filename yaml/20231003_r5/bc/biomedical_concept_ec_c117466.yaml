@@ -1,0 +1,122 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C117466
+ncitCode: C117466
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117466
+categories:
+  - Exposure as Collected
+shortName: Exposure as Collected Domain
+synonyms:
+  - EC
+  - Exposure as Collected
+resultScales:
+  - Nominal
+definition: "This interventions domain model reflects protocol-specified study treatment administrations, as collected."
+dataElementConcepts:
+  - conceptId: C117473
+    ncitCode: C117473
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117473
+    shortName: Exposure as Collected Name of Treatment
+    dataType: string
+  - conceptId: C117469
+    ncitCode: C117469
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117469
+    shortName: Exposure as Collected Reference Identifier
+    dataType: string
+    exampleSet:
+      - "Kit number"
+      - "Bottle label"
+      - "Vial identifier"
+  - conceptId: C117479
+    ncitCode: C117479
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117479
+    shortName: Exposure as Collected Dose
+    dataType: decimal
+  - conceptId: C117480
+    ncitCode: C117480
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117480
+    shortName: Exposure as Collected Dose Description
+    dataType: string
+  - conceptId: C117481
+    ncitCode: C117481
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117481
+    shortName: Exposure as Collected Dose Units
+    dataType: string
+    exampleSet:
+      - "Milligram"
+      - "Tablet"
+      - "Capsule"
+  - conceptId: C117482
+    ncitCode: C117482
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117482
+    shortName: Exposure as Collected Dose Form
+    dataType: string
+    exampleSet:
+      - "Tablet"
+      - "Capsule"
+      - "Film"
+      - "Emulsion"
+      - "Elixer"
+      - "Extract"
+  - conceptId: C117483
+    ncitCode: C117483
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117483
+    shortName: Exposure as Collected Dosing Frequency per Interval
+    dataType: string
+    exampleSet:
+      - "QD"
+      - "BID"
+      - "QID"
+      - "Q2H"
+      - "Continuous"
+      - "PRN"
+  - conceptId: C117485
+    ncitCode: C117485
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117485
+    shortName: Exposure as Collected Intended Dose Regimen
+    dataType: string
+  - conceptId: C117486
+    ncitCode: C117486
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117486
+    shortName: Exposure as Collected Route of Administration
+    dataType: string
+    exampleSet:
+      - "Oral"
+      - "Intravenous"
+      - "Intramuscular"
+      - "Intraocular"
+      - "Nasal"
+  - conceptId: C117488
+    ncitCode: C117488
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117488
+    shortName: Exposure as Collected Location
+    dataType: string
+    exampleSet:
+      - "Arm"
+      - "Buttock"
+  - conceptId: C117489
+    ncitCode: C117489
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117489
+    shortName: Exposure as Collected Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C117490
+    ncitCode: C117490
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117490
+    shortName: Exposure as Collected Directionality
+    dataType: string
+    exampleSet:
+      - "Upper"
+      - "Lower"
+  - conceptId: C117496
+    ncitCode: C117496
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117496
+    shortName: Exposure as Collected Start Date and Time of Treatment
+    dataType: datetime
+  - conceptId: C117497
+    ncitCode: C117497
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117497
+    shortName: Exposure as Collected End Date and Time of Treatment
+    dataType: datetime

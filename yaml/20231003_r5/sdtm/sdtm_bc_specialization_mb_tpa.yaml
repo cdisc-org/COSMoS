@@ -3,7 +3,7 @@ packageType: sdtm
 datasetSpecializationId: TPA
 domain: MB
 shortName: Treponema pallidum Detection by Immunofluorescence
-source: MB-MBTESTCD
+source: MB.MBTESTCD
 sdtmigStartVersion: "3-3"
 sdtmigEndVersion: ""
 biomedicalConceptId: C184647

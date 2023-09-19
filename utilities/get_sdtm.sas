@@ -2,6 +2,7 @@
 %let temp=C:/temp/COSMoS;
 
 %include "&root/utilities/config.sas";
+options mprint;
 
 %let _debug=0;
 
@@ -84,12 +85,15 @@ run;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ae_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_AE_EDITS), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=cm, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_CM), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ds_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_DS_EDITS), subsetsDS=subsets);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ec, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_EC), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_LB), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_LB_EDITS), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_MB), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mh, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_MH), subsetsDS=subsets);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_PR_EDITS), subsetsDS=subsets);
 
 
 ods listing close;
@@ -97,6 +101,7 @@ ods html5 file="&root/utilities/get_sdtm_issues_%sysfunc(date(), b8601da8.).html
 ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/get_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_sdtm;
+  title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";
   var _excel_file_ _tab_ vlm_group_id sdtm_variable issue_type expected_value actual_value comment;
 run;
 

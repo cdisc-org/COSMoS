@@ -246,6 +246,8 @@ enums:
 
   SDTMVariableDataTypeEnum:
     permissible_values:
+      datetime:
+        text: datetime
       float:
         text: float
       integer:

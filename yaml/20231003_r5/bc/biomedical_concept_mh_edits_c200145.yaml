@@ -1,0 +1,64 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C200145
+ncitCode: C200145
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C200145
+categories:
+  - Reported Events
+  - Medical History Events
+  - Medical Conditions
+  - Presenting Conditions
+shortName: Solicited Medical History
+synonyms:
+  - Medical History
+  - Medical History Collection
+resultScales:
+  - Nominal
+definition: Information about an individual's personal medical history that is reported by a healthcare professional, consumer, or patient through an organized data collection system.
+dataElementConcepts:
+  - conceptId: C83118
+    ncitCode: C83118
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83118
+    shortName: Medical History Reported Term
+    dataType: string
+  - conceptId: C83346
+    ncitCode: C83346
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83346
+    shortName: Medical History Dictionary Derived Term
+    dataType: string
+  - conceptId: C83018
+    ncitCode: C83018
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83018
+    shortName: Medical History Category
+    dataType: string
+  - conceptId: C83143
+    ncitCode: C83143
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83143
+    shortName: Medical History Subcategory
+    dataType: string
+  - conceptId: C87897
+    ncitCode: C87897
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C87897
+    shortName: Medical History Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83067
+    ncitCode: C83067
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83067
+    shortName: Medical History Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83338
+    ncitCode: C83338
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83338
+    shortName: Medical History Event Start Date Time
+    dataType: datetime
+  - conceptId: C83330
+    ncitCode: C83330
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83330
+    shortName: Medical History Event End Date Time
+    dataType: datetime

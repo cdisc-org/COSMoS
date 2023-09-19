@@ -3,7 +3,7 @@ packageType: sdtm
 datasetSpecializationId: TPADNA
 domain: MB
 shortName: Treponema pallidum DNA by Nucleic Acid Amplification
-source: MB-MBTESTCD
+source: MB.MBTESTCD
 sdtmigStartVersion: "3-3"
 sdtmigEndVersion: ""
 biomedicalConceptId: C198341

@@ -80,11 +80,15 @@
 %let ExcelFile=&root/curation/draft/BC_Package_R5_LZZT.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ae_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_AE_EDITS));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=cm_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_CM_EDITS));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=ds_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_DS_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ec, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_EC));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=lb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_LB));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=lb_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_LB_EDITS));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_MB));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=mh_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_MH_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=pr_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_PR_EDITS));
 
 
 ods listing close;
@@ -92,6 +96,7 @@ ods html5 file="&root/utilities/get_bc_issues_%sysfunc(date(), b8601da8.).html";
 ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/get_bc_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_bc;
+  title "BC Issues - %sysfunc(date(), b8601da8.)";
   var _excel_file_ _tab_ BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment;
 run;
 

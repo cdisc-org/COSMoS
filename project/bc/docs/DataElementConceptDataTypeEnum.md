@@ -17,6 +17,8 @@ URI: [cosmos:DataElementConceptDataTypeEnum](https://www.cdisc.org/cosmos/1-0Dat
 | Text | Description | Meaning | Other Information |
 | :--- | :---: | :---: | ---: |
 | boolean |  |  |  |
+| date |  |  |  |
+| datetime |  |  |  |
 | decimal |  |  |  |
 | integer |  |  |  |
 | string |  |  |  |

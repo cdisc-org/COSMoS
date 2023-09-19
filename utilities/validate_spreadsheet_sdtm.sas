@@ -80,18 +80,25 @@ title01 "&now";
 /* Package 5 - */
 %let excel_file=&root/curation/draft/BC_Package_R5_LZZT.xlsx;
 
-%ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc5_1); 
-%ReadExcel(file=&excel_file, range=%str(BC_DS_EDITS)$, dsout=bc5_2); 
-%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc5_3); 
-%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc5_4); 
-%ReadExcel(file=&excel_file, range=%str(BC_MB)$, dsout=bc5_5); 
+%ReadExcel(file=&excel_file, range=%str(BC_AE_EDITS)$, dsout=bc5_1); 
+%ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc5_2); 
+%ReadExcel(file=&excel_file, range=%str(BC_DS_EDITS)$, dsout=bc5_3); 
+%ReadExcel(file=&excel_file, range=%str(BC_EC)$, dsout=bc5_4); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc5_5); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc5_6); 
+%ReadExcel(file=&excel_file, range=%str(BC_MB)$, dsout=bc5_7); 
+%ReadExcel(file=&excel_file, range=%str(BC_MH_EDITS)$, dsout=bc5_8); 
+%ReadExcel(file=&excel_file, range=%str(BC_PR_EDITS)$, dsout=bc5_9); 
 
-%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm5_1, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_DS_EDITS)$, dsout=sdtm5_2, drop=%str(drop=length significant_digits format)); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm5_3, drop=%str(drop=length significant_digits format)); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm5_4, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm5_5, drop=%str(drop=length significant_digits format)); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm5_6, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_AE_EDITS)$, dsout=sdtm5_1, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm5_2, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_EDITS)$, dsout=sdtm5_3, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_EC)$, dsout=sdtm5_4, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm5_5, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm5_6, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MB)$, dsout=sdtm5_7, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm5_8, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR_EDITS)$, dsout=sdtm5_9, drop=%str(drop=length significant_digits format));
 
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
@@ -101,9 +108,8 @@ data bc(drop=change_history F1: F2: i vname vvalue);
   retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
   length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $32 bc_categories synonyms result_scales definition 
-         system	system_name	code change_history $5124 dec_id $32 short_name dec_label $512 example_set vvalue $32000 vname $32;
-  set 
-      bc:(where=(not missing(bc_id)));
+         system	system_name	code change_history $5124 dec_id $32 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
+  set bc:(where=(not missing(bc_id)));
   
   array carray{*} _character_;
   do i=1 to dim(carray);
@@ -150,8 +156,8 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $64
-         codelist subset_codelist value_list assigned_value linking_phrase predicate_term 
+  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $128
+         codelist subset_codelist value_list assigned_value subject linking_phrase predicate_term object 
          short_name role format data_type origin_source vlm_target change_history vvalue $32000 vname $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
