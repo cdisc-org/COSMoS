@@ -1,0 +1,264 @@
+packageDate: "2023-10-03"
+packageType: sdtm
+datasetSpecializationId: EXPOSCOLL
+domain: EC
+shortName: Exposure as Collected Name of Treatment
+source: EC.ECTRT
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C117466
+variables:
+  - name: ECTRT
+    dataElementConceptId: C117473
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: EXTRT
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: ECREFID
+    dataElementConceptId: C117469
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSE
+    dataElementConceptId: C117479
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 20
+    relationship:
+      subject: ECDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSTXT
+    dataElementConceptId: C117480
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 100
+    relationship:
+      subject: ECDOSTXT
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSU
+    dataElementConceptId: C117481
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: ECDOSE; ECDOSTXT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSFRM
+    dataElementConceptId: C117482
+    isNonStandard: false
+    codelist:
+      conceptId: C66726
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66726
+      submissionValue: FRM
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECDOSFRM
+      linkingPhrase: is the physical form of the product in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSFRQ
+    dataElementConceptId: C117483
+    isNonStandard: false
+    codelist:
+      conceptId: C71113
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71113
+      submissionValue: FREQ
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECDOSFRQ
+      linkingPhrase: is the frequency of administration of the amount in
+      predicateTerm: SPECIFIES
+      object: ECDOSE; ECDOSTXT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDOSRGM
+    dataElementConceptId: C117485
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECROUTE
+    dataElementConceptId: C117486
+    isNonStandard: false
+    codelist:
+      conceptId: C66729
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66729
+      submissionValue: ROUTE
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECROUTE
+      linkingPhrase: is the part of the body through which is administered the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECLOT
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECLOC
+    dataElementConceptId: C117488
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
+      submissionValue: LOC
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECLOC
+      linkingPhrase: is the administration anatomical location for the treatment in
+      predicateTerm: SPECIFIES
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECLAT
+    dataElementConceptId: C117489
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
+      submissionValue: LAT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ECLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: ECLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECDIR
+    dataElementConceptId: C117490
+    isNonStandard: false
+    codelist:
+      conceptId: C99074
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99074
+      submissionValue: DIR
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECFAST
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECPSTRG
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECPSTRGU
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECADJ
+    isNonStandard: false
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: ECSTDTC
+    dataElementConceptId: C117496
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: ECSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ECENDTC
+    dataElementConceptId: C117497
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: ECENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: ECTRT
+    mandatoryVariable: false
+    mandatoryValue: false

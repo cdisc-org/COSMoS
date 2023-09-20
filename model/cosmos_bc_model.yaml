@@ -147,6 +147,8 @@ enums:
   DataElementConceptDataTypeEnum:
     permissible_values:
       boolean:
+      date:
+      datetime:
       decimal:
       integer:
       string:

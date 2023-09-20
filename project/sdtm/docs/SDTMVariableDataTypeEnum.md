@@ -16,6 +16,7 @@ URI: [cosmos:SDTMVariableDataTypeEnum](https://www.cdisc.org/cosmos/1-0SDTMVaria
 
 | Text | Description | Meaning | Other Information |
 | :--- | :---: | :---: | ---: |
+| datetime |  |  |  |
 | float |  |  |  |
 | integer |  |  |  |
 | text |  |  |  |

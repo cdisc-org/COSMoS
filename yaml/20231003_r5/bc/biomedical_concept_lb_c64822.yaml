@@ -1,0 +1,41 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C64822
+ncitCode: C64822
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64822
+parentConceptId: C51946
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Erythrocyte Counts
+shortName: Microcyte Count
+synonyms:
+  - Microcytes
+  - MICROCY
+resultScales:
+  - Ordinal
+definition: The determination of the number of microcytes in a blood sample.
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+    exampleSet:
+      - "Absent"
+      - "Present"
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Urine"
+      - "Urine Sediment"

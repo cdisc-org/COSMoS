@@ -1,0 +1,92 @@
+packageDate: "2023-10-03"
+packageType: bc
+conceptId: C17204
+ncitCode: C17204
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17204
+parentConceptId: C16502
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+shortName: Computed Tomography
+synonyms:
+  - CAT Scan
+  - Computed Axial Tomography
+  - Computed Tomography
+  - Computerized Tomography
+  - CT
+resultScales:
+  - Nominal
+definition: "A method of examining structures within the body by scanning them with X rays and using a computer to construct a series of cross-sectional scans along a single axis."
+dataElementConcepts:
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C117513
+    ncitCode: C117513
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117513
+    shortName: Procedure Category
+    dataType: string
+  - conceptId: C117514
+    ncitCode: C117514
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117514
+    shortName: Procedure Subcategory
+    dataType: string
+  - conceptId: C117515
+    ncitCode: C117515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117515
+    shortName: Procedure Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117516
+    ncitCode: C117516
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117516
+    shortName: Procedure Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117525
+    ncitCode: C117525
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117525
+    shortName: Procedure Location
+    dataType: string
+    exampleSet:
+      - "Chest"
+  - conceptId: C117526
+    ncitCode: C117526
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117526
+    shortName: Procedure Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+      - "Bilateral"
+  - conceptId: C117527
+    ncitCode: C117527
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117527
+    shortName: Procedure Directionality
+    dataType: string
+    exampleSet:
+      - "Inner"
+      - "Outer"
+      - "Anterior"
+      - "Dorsal"
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime

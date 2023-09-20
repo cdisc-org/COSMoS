@@ -16,3 +16,4 @@ create_*.xlsx
 validate_*.html
 validate_*.xlsx
 *.code-workspace
+run_batch.*

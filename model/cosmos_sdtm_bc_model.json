@@ -387,6 +387,7 @@
       "SDTMVariableDataTypeEnum": {
          "description": "",
          "enum": [
+            "datetime",
             "float",
             "integer",
             "text"

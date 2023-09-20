@@ -35,7 +35,7 @@
   %end;
 
   data issues(keep=_excel_file_ _tab_ vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
-    length prev_vlm_group_id $32 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
+    length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
            codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low $512 value qvalue $100 value_list $4096
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;

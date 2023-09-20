@@ -3,7 +3,7 @@ packageType: sdtm
 datasetSpecializationId: TPLAB
 domain: MB
 shortName: Treponema pallidum Antibody Detection in Serum
-source: MB-MBTESTCD
+source: MB.MBTESTCD
 sdtmigStartVersion: "3-3"
 sdtmigEndVersion: ""
 biomedicalConceptId: C132388

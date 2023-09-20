@@ -205,11 +205,10 @@ variables:
     originType: Collected
     originSource: Investigator
   - name: CMSTDTC
-    dataElementConceptId: C83124
+    dataElementConceptId: C83235
     isNonStandard: false
     role: Timing
-    dataType: text
-    length: 40
+    dataType: datetime
     relationship:
       subject: CMSTDTC
       linkingPhrase: is the start date for
@@ -220,11 +219,10 @@ variables:
     originType: Collected
     originSource: Investigator
   - name: CMENDTC
-    dataElementConceptId: C83136
+    dataElementConceptId: C83225
     isNonStandard: false
     role: Timing
-    dataType: text
-    length: 40
+    dataType: datetime
     relationship:
       subject: CMENDTC
       linkingPhrase: is the end date for

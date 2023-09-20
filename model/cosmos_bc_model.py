@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-08-31T10:49:12
+# Generation date: 2023-09-19T12:22:45
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -228,6 +228,8 @@ class BiomedicalConceptResultScaleEnum(EnumDefinitionImpl):
 class DataElementConceptDataTypeEnum(EnumDefinitionImpl):
 
     boolean = PermissibleValue(text="boolean")
+    date = PermissibleValue(text="date")
+    datetime = PermissibleValue(text="datetime")
     decimal = PermissibleValue(text="decimal")
     integer = PermissibleValue(text="integer")
     string = PermissibleValue(text="string")

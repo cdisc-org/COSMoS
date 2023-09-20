@@ -69,10 +69,10 @@ variables:
     originType: Assigned
     originSource: Sponsor
   - name: MHSTDTC
+    dataElementConceptId: C83338
     isNonStandard: false
     role: Timing
-    dataType: text
-    length: 40
+    dataType: datetime
     relationship:
       subject: MHSTDTC
       linkingPhrase: is the start date for
@@ -83,10 +83,10 @@ variables:
     originType: Collected
     originSource: Investigator
   - name: MHENDTC
+    dataElementConceptId: C83330
     isNonStandard: false
     role: Timing
-    dataType: text
-    length: 40
+    dataType: datetime
     relationship:
       subject: MHENDTC
       linkingPhrase: is the end date for

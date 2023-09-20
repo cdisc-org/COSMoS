@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-08-31T14:44:19
+# Generation date: 2023-09-19T12:24:20
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -381,6 +381,7 @@ class SDTMDatasetSpecializationPackageTypeEnum(EnumDefinitionImpl):
 
 class SDTMVariableDataTypeEnum(EnumDefinitionImpl):
 
+    datetime = PermissibleValue(text="datetime")
     float = PermissibleValue(text="float")
     integer = PermissibleValue(text="integer")
     text = PermissibleValue(text="text")

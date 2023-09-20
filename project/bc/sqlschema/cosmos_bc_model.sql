@@ -26,7 +26,7 @@ CREATE TABLE "DataElementConcept" (
 	"ncitCode" TEXT, 
 	href TEXT, 
 	"shortName" TEXT NOT NULL, 
-	"dataType" VARCHAR(7) NOT NULL, 
+	"dataType" VARCHAR(8) NOT NULL, 
 	"BiomedicalConcept_conceptId" TEXT, 
 	PRIMARY KEY ("conceptId"), 
 	FOREIGN KEY("BiomedicalConcept_conceptId") REFERENCES "BiomedicalConcept" ("conceptId")

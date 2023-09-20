@@ -92,7 +92,7 @@
       (
        _excel_file_  char(128),
        _tab_  char(128),
-       vlm_group_id char(64),
+       vlm_group_id char(128),
        sdtm_variable char(64),
        issue_type char(64),
        expected_value char(2048),

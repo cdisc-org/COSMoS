@@ -42,4 +42,4 @@ dataElementConcepts:
     ncitCode: C93579
     href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93579
     shortName: Informed Consent Date
-    dataType: string
+    dataType: date

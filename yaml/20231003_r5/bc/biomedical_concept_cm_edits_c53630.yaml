@@ -109,13 +109,13 @@ dataElementConcepts:
       - "Nasogastric"
       - "Subcutaneous"
       - "Topical"
-  - conceptId: C83124
-    ncitCode: C83124
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83124
-    shortName: Concomitant Medication Start Date
-    dataType: string
-  - conceptId: C83136
-    ncitCode: C83136
-    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83136
-    shortName: Concomitant Medication End Date
-    dataType: string
+  - conceptId: C83235
+    ncitCode: C83235
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83235
+    shortName: Concomitant Medication Use Start Date Time
+    dataType: datetime
+  - conceptId: C83225
+    ncitCode: C83225
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83225
+    shortName: Concomitant Medication Use End Date Time
+    dataType: datetime

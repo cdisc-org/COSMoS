@@ -348,6 +348,9 @@
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
+          "text": "datetime"
+        },
+        {
           "text": "float"
         },
         {
@@ -1437,9 +1440,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-08-31T14:43:59",
-  "source_file_size": 12093,
-  "generation_date": "2023-08-31T14:44:28",
+  "source_file_date": "2023-09-19T10:24:53",
+  "source_file_size": 12134,
+  "generation_date": "2023-09-19T12:24:29",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",
