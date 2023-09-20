@@ -78,7 +78,7 @@ title01 "&now";
 
 
 /* Package 5 - */
-%let excel_file=&root/curation/draft/BC_Package_R5_LZZT.xlsx;
+%let excel_file=&root/curation/BC_Package_R5_LZZT.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_AE_EDITS)$, dsout=bc5_1); 
 %ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc5_2); 
