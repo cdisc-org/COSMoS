@@ -32,12 +32,13 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc3_3);
 %ReadExcel(file=&excel_file, range=%str(BC_MB)$, dsout=bc3_4);
 %ReadExcel(file=&excel_file, range=%str(BC_AE)$, dsout=bc3_5);
-%ReadExcel(file=&excel_file, range=%str(BC_CM)$, dsout=bc3_6);
-%ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc3_7);
-%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc3_8);
-%ReadExcel(file=&excel_file, range=%str(BC_BE)$, dsout=bc3_9);
-%ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_10);
-%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_12);
+%ReadExcel(file=&excel_file, range=%str(BC_MH)$, dsout=bc3_7);
+%ReadExcel(file=&excel_file, range=%str(BC_CM)$, dsout=bc3_8);
+%ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc3_9);
+%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc3_10);
+%ReadExcel(file=&excel_file, range=%str(BC_BE)$, dsout=bc3_11);
+%ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_12);
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_13);
 
 /* Package 4 - Oncology */
 %let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
@@ -297,109 +298,6 @@ ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc_issues.html
       having count(*) > 1
       ;
   run;
-
-
-
-/************************************************************************************************************************/
-
-  /*  codelists */   
-  
-  /*
-  %let rest_debug=%str(OUTPUT_TEXT REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-  %let base_url=https://library.cdisc.org/api;
-
-  %get_latest_codelist_package(package=sdtmct, jsonout=&root/utilities/data/latest_codelist_package_sdtm.json, dsout=data.codelist_package_sdtm);
-
-
-  title01;
-
-  proc sort data=data.codelist_package_sdtm 
-    out=work.codelist_package_sdtm_cl(keep=codelist_conceptId codelist_submissionValue extensible) nodupkey;
-    by codelist_conceptId ;
-  run;  
-  
-  proc sql;
-    create table work.codelists_sdtm as
-    select 
-        sdtm.*,
-        sdtm_ct.codelist_submissionValue as nci_codelist_submissionValue
-    from 
-      sdtm_merged sdtm
-    left join 
-      codelist_package_sdtm_cl sdtm_ct
-    on (sdtm.codelist = sdtm_ct.codelist_conceptId)
-    where (not missing(sdtm.codelist))
-    order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
-    ;
-  quit;
-
-  proc print data=codelists_sdtm;
-    title02 "Mismatch in codelist submission values";
-    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_submissionValue;
-    where codelist_submission_value ne nci_codelist_submissionValue;
-  run;  
-
-    data work.sdtm_merged_terms(drop=i countwords);
-    length term $200;
-    set work.sdtm_merged(
-      where=(not missing(codelist))
-      );
-    if not missing(value_list) then do;
-      countwords=countw(value_list, ";");
-      do i=1 to countwords;
-        term=strip(scan(value_list, i, ";"));
-        if not missing(term) then output;
-      end;
-    end;
-    else do;
-      term  = assigned_value;
-      output;
-    end;  
-  run;  
-
-  proc sql;
-    create table work.codelists_sdtm_values as
-    select 
-        sdtm.*,
-        sdtm_ctcl.codelist_submissionValue as nci_codelist_submissionValue,
-        sdtm_ctcl.codelist_conceptId as nci_codelist_conceptId,
-        sdtm_ctcl.extensible as nci_extensible,
-        sdtm_ctcli.codedValue as nci_codedValue,
-        sdtm_ctcli.codedValue_conceptId as nci_codedValue_conceptId
-    from 
-      sdtm_merged_terms sdtm
-    left join 
-      codelist_package_sdtm_cl sdtm_ctcl
-    on (sdtm.codelist = sdtm_ctcl.codelist_conceptId)
-    left join 
-      data.codelist_package_sdtm sdtm_ctcli
-    on (sdtm.codelist = sdtm_ctcli.codelist_conceptId) and (sdtm.term = sdtm_ctcli.codedValue)
-    where (not missing(sdtm.codelist)) and (not missing(sdtm.term))
-    order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
-    ;
-  quit;
-
-  proc print data=codelists_sdtm_values;
-    title02 "Terms not found in NCIt - assigned_value";
-    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
-         nci_extensible assigned_value assigned_term term;
-    where missing(nci_codedValue) and (not missing(assigned_value));
-  run;  
-
-  proc print data=codelists_sdtm_values;
-    title02 "Terms not found in NCIt - value_list";
-    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
-         nci_extensible value_list term;
-    where missing(nci_codedValue) and (not missing(value_list));
-  run;  
-
-  proc print data=codelists_sdtm_values;
-    title02 "Terms NCIt conceptId mismatch";
-    var _excel_file_ _tab_ package_date vlm_group_id sdtm_variable codelist codelist_submission_value nci_codelist_conceptId nci_codelist_submissionValue 
-        nci_extensible value_list assigned_value assigned_term term nci_codedValue nci_codedValue_conceptId;
-    where (not missing(assigned_term)) and (not missing(nci_codedValue_conceptId)) and (assigned_term ne nci_codedValue_conceptId);
-  run;  
-*/
 
 ods html5 close;
 ods listing;

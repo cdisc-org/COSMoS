@@ -38,8 +38,8 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=lb, package=&package, out_folder=&TargetFolder, range=%str(BC_LB));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mb, package=&package, out_folder=&TargetFolder, range=%str(BC_MB));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=ae, package=&package, out_folder=&TargetFolder, range=%str(BC_AE));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=cm, package=&package, out_folder=&TargetFolder, range=%str(BC_CM));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mh, package=&package, out_folder=&TargetFolder, range=%str(BC_MH));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=cm, package=&package, out_folder=&TargetFolder, range=%str(BC_CM));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=re, package=&package, out_folder=&TargetFolder, range=%str(BC_RE));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=pr, package=&package, out_folder=&TargetFolder, range=%str(BC_PR));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=be, package=&package, out_folder=&TargetFolder, range=%str(BC_BE));
