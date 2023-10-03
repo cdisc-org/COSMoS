@@ -66,7 +66,7 @@
         %if &include_package_dates %then %do; 
           , scan(pbc.href, -3, "\/") as biomedicalConceptId_PackageDate length=10 
         %end;
-        , var.dateElementConceptId as dataElementConceptId length=64 label=""
+        , var.dataElementConceptId as dataElementConceptId length=64 label=""
       %end;
       %if not %sysfunc(exist(&jsonlib.._links_parentbiomedicalconcept)) %then %do;    
         , root.biomedicalConceptId length=64
