@@ -2,9 +2,9 @@
 
 Use cases:
 
-- [Users who want to create CDISC BCs and Dataset Specializations](#usecase1)
-- [Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library](#usecase2)
-- [Users who want to provide feedback on BCs and Dataset Specializations](#usecase2)
+- [Users who want to create CDISC BCs and Dataset Specializations](README.md#usecase1)
+- [Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library](README.md#usecase2)
+- [Users who want to provide feedback on BCs and Dataset Specializations](README.md#usecase2)
 
 ## Use Case: Users who want to create CDISC BCs and Dataset Specializations {#usecase1}
 
