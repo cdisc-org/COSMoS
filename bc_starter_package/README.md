@@ -4,21 +4,21 @@ Use cases:
 
 - [Users who want to create CDISC BCs and Dataset Specializations](README.md#usecase1)
 - [Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library](README.md#usecase2)
-- [Users who want to provide feedback on BCs and Dataset Specializations](README.md#usecase2)
+- [Users who want to provide feedback on BCs and Dataset Specializations](README.md#usecase3)
 
 ## Use Case: Users who want to create CDISC BCs and Dataset Specializations<a id='usecase1'></a>
 
-- [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
+- [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
 - [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs%2010252023.xlsx)
-- [BC Examples (Excel spreadsheet)](doc/BC_Package_Examples.xlsx)
+- [BC Examples (Excel spreadsheet)](doc/BC_Examples.xlsx)
 - [BC\_Oncology\_RECIST11\_2023\_07\_06 (Excel spreadsheet)](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
-- [Charter for COSMOS\_V1](doc/Charter%20for%20COSMO_V1.pdf)
+- [Charter for COSMOS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
 
 ## Use Case: Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library<a id='usecase2'></a>
 
-- [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
+- [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 
 All technical documentation for CDISC Biomedical Concepts and Dataset Specialization, can be found in GitHub.  [GitHub - cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS)
 
@@ -43,7 +43,7 @@ This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.p
 
 ## Use Case: Users who want to provide feedback on BCs and Dataset Specializations<a id='usecase3'></a>
 
-- [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
+- [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 
 Give feedback or gain clarification on BC and Dataset Specialization content, data models, APIs
