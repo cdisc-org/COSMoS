@@ -6,7 +6,7 @@ Use cases:
 - [Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library](README.md#usecase2)
 - [Users who want to provide feedback on BCs and Dataset Specializations](README.md#usecase2)
 
-## Use Case: Users who want to create CDISC BCs and Dataset Specializations {#usecase1}
+## Use Case: Users who want to create CDISC BCs and Dataset Specializations<a id='usecase1'></a>
 
 - [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
@@ -16,7 +16,7 @@ Use cases:
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 - [Charter for COSMOS\_V1](doc/Charter%20for%20COSMO_V1.pdf)
 
-## Use Case: Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library {#usecase2}
+## Use Case: Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library<a id='usecase2'></a>
 
 - [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
 
@@ -41,7 +41,7 @@ The SDTM Dataset Specializations can be considered pre-configured building block
 
 This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.pdf) will show how SDTM Dataset Specializations can be used by the Open Source release of SAS Clinical Standards Toolkit (openCST) for the creation of Value Level Metadata in Define-XML v2.1 (slides and code at [GitHub](https://github.com/lexjansen/sas-papers/tree/master/pharmasug-2023)).
 
-## Use Case: Users who want to provide feedback on BCs and Dataset Specializations {#usecase3}
+## Use Case: Users who want to provide feedback on BCs and Dataset Specializations<a id='usecase3'></a>
 
 - [Biomedical Concepts Overview Training](doc/Biomedical%20Concepts%20Overview%20Training.pdf)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
