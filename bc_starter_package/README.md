@@ -11,7 +11,7 @@ Use cases:
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
 - [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs%2010252023.xlsx)
-- [BC Examples (Excel spreadsheet)](doc/BC_Examples.xlsx)
+- [BC Examples (Excel spreadsheet)](doc/BC%20Examples.xlsx)
 - [BC\_Oncology\_RECIST11\_2023\_07\_06 (Excel spreadsheet)](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 - [Charter for COSMOS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
@@ -39,7 +39,7 @@ All API requests need to include the version as noted in the example below
 
 The SDTM Dataset Specializations can be considered pre-configured building blocks, from which end-users can select and configure to build Value Level Metadata, which is an important part of the metadata for their Define-XML.
 
-This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.pdf) will show how SDTM Dataset Specializations can be used by the Open Source release of SAS Clinical Standards Toolkit (openCST) for the creation of Value Level Metadata in Define-XML v2.1 (slides and code at [GitHub](https://github.com/lexjansen/sas-papers/tree/master/pharmasug-2023)).
+This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.pdf) will show how SDTM Dataset Specializations can be used by the Open Source release of SAS Clinical Standards Toolkit (openCST) for the creation of Value Level Metadata in Define-XML v2.1 (slides and code at [GitHub](https://github.com/lexjansen/sas-papers/tree/master/pharmasug-2023) (PharmaSUG 2023) and [GitHub](https://github.com/lexjansen/CDISC_Interchange_US_2023) (CDISC US Interchange 2023).
 
 ## Use Case: Users who want to provide feedback on BCs and Dataset Specializations<a id='usecase3'></a>
 
