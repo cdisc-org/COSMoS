@@ -14,7 +14,7 @@ Use cases:
 - [BC Examples](doc/BC%20Examples.xlsx) (Excel spreadsheet)
 - [BC\_Oncology\_RECIST11\_2023\_07\_06](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx) (Excel spreadsheet)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
-- [Charter for COSMOS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
+- [Charter for COSMoS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
 
 ## Use Case: Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library<a id='usecase2'></a>
 
