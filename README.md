@@ -2,6 +2,12 @@
 
 This repository contains working files to implement Biomedical Concepts and Dataset Specializations in the CDISC Library:
 
+- **bc_starter_package**
+  Contains a [CDISC Biomedical Concepts Starter Package](bc_starter_package/README.md) for:
+  - users who want to create CDISC BCs and Dataset Specializations
+  - Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library
+  - Users who want to provide feedback on BCs and Dataset Specializations
+
 - **curation**
   Spreadsheets that were used for loading of BCs and SDTM Specializations.
 
