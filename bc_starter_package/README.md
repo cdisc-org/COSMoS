@@ -10,8 +10,9 @@ Use cases:
 
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
-- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs%2010252023.xlsx)
+- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs.xlsx)
 - [BC Examples](doc/BC%20Examples.xlsx) (Excel spreadsheet)
+- [BC DEC Starter Template](doc/BC%20DEC%20Starter%20Template.xlsx) (Excel spreadsheet)
 - [BC\_Oncology\_RECIST11\_2023\_07\_06](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx) (Excel spreadsheet)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 - [Charter for COSMoS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
@@ -20,7 +21,7 @@ Use cases:
 
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 
-All technical documentation for CDISC Biomedical Concepts and Dataset Specialization, can be found in GitHub.  [GitHub - cdisc-org/COSMoS](https://github.com/cdisc-org/COSMoS)
+All technical documentation for CDISC Biomedical Concepts and Dataset Specialization, can be found in this GitHub repository.
 
 - Curation Excel files used for loading BCs and Dataset Specializations
 - Data Models according to linkml specification and associated files
