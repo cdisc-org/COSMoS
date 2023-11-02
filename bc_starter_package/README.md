@@ -10,7 +10,7 @@ Use cases:
 
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
-- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs.xlsx)
+- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs.xlsx) (Excel spreadsheet)
 - [BC Examples](doc/BC%20Examples.xlsx) (Excel spreadsheet)
 - [BC DEC Starter Template](doc/BC%20DEC%20Starter%20Template.xlsx) (Excel spreadsheet)
 - [BC\_Oncology\_RECIST11\_2023\_07\_06](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx) (Excel spreadsheet)
