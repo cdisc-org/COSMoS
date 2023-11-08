@@ -21,7 +21,7 @@ Use cases:
 
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 
-All technical documentation for CDISC Biomedical Concepts and Dataset Specialization, can be found in this GitHub repository.
+All technical documentation for CDISC Biomedical Concepts and Dataset Specialization, can be found in the CDISC [COSMoS GitHub repository](https://github.com/cdisc-org/COSMoS).
 
 - Curation Excel files used for loading BCs and Dataset Specializations
 - Data Models according to linkml specification and associated files
@@ -30,7 +30,7 @@ All technical documentation for CDISC Biomedical Concepts and Dataset Specializa
 - YAML files generated from spreadsheet content
 - Scripts to validate YAML files
 
-Documentation for CDISC APIs can be found at [https://api.developer.library.cdisc.org/](https://api.developer.library.cdisc.org/).  Users should use their existing CDISC login credentials.  
+Documentation for CDISC APIs can be found at [https://api.developer.library.cdisc.org/](https://api.developer.library.cdisc.org/).  Users should use their existing CDISC login credentials.   The latest release notes for the CDISC Biomedical Concepts and Dataset Specialization are at the [CDISC Wiki](https://wiki.cdisc.org/pages/viewpage.action?pageId=169412277).
 
 The most current API endpoints for CDISC BCs and SDTM Dataset Specializations are available in API version 2. Version 1 has been superseded, and users should use version 2 when retrieving content.  
 

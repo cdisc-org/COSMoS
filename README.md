@@ -1,6 +1,6 @@
 # CDISC Conceptual and Operational Standards Metadata (COSMoS)
 
-This repository contains working files to implement Biomedical Concepts and Dataset Specializations in the CDISC Library:
+This [repository](https://github.com/cdisc-org/COSMoS) contains working files to implement Biomedical Concepts and Dataset Specializations in the CDISC Library:
 
 - **bc_starter_package**
   Contains a [CDISC Biomedical Concepts Starter Package](bc_starter_package/README.md) for:
