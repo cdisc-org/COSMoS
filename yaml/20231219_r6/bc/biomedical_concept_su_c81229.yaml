@@ -1,0 +1,93 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C81229
+ncitCode: C81229
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C81229
+categories:
+  - Substance Use
+  - Personal Medical History
+  - Medical History
+shortName: Alcohol Use History
+synonyms:
+  - Alcohol History
+  - Alcohol Use
+resultScales:
+  - Nominal
+definition: A description of an individual's current and past experience with alcoholic beverage consumption.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Alcohol"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83092
+    ncitCode: C83092
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83092
+    shortName: Substance Use Reported Name
+    dataType: string
+    exampleSet:
+      - "Beer"
+      - "Wine"
+      - "Spirits"
+  - conceptId: C83416
+    ncitCode: C83416
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83416
+    shortName: Substance Use Dose
+    dataType: integer
+  - conceptId: C83041
+    ncitCode: C83041
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83041
+    shortName: Substance Use Dose Description
+    dataType: string
+  - conceptId: C83038
+    ncitCode: C83038
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83038
+    shortName: Substance Use Dose Unit
+    dataType: string
+    exampleSet:
+      - "Drink"
+      - "Glass"
+      - "Fluid Ounce"
+      - "Milliliter"
+      - "Liter"
+  - conceptId: C83044
+    ncitCode: C83044
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83044
+    shortName: Substance Use Dose Frequency
+    dataType: string
+    exampleSet:
+      - "Daily"
+      - "Weekly"
+  - conceptId: C83431
+    ncitCode: C83431
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83431
+    shortName: Substance Use Start Date Time
+    dataType: datetime
+  - conceptId: C83419
+    ncitCode: C83419
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83419
+    shortName: Substance Use End Date Time
+    dataType: datetime

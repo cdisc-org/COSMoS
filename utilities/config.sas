@@ -9,8 +9,9 @@ libname data "&root/utilities/data";
 %let today=%sysfunc(date(), is8601da.);
 %let now=%sysfunc(datetime(), is8601dt.);
 
-%macro add2issues_bc(condition, type, expected, actual, comment, extracode=);
+%macro add2issues_bc(condition, type, expected, actual, comment, extracode=, severity=WARNING);
   if &condition then do;
+    severity="&severity";
     issue_type = "&type";
     expected_value=&expected;
     actual_value=&actual;
@@ -26,8 +27,9 @@ libname data "&root/utilities/data";
   end;
 %mend add2issues_bc;
 
-%macro add2issues_sdtm(condition, type, expected, actual, comment, extracode=);
+%macro add2issues_sdtm(condition, type, expected, actual, comment, extracode=, severity=WARNING);
   if &condition then do;
+    severity="&severity";
     issue_type = "&type";
     expected_value=&expected;
     actual_value=&actual;

@@ -1,0 +1,43 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C64546
+ncitCode: C64546
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C64546
+parentConceptId: C74957
+categories:
+  - Laboratory Tests
+  - Urinalysis
+shortName: Color Assessment
+synonyms:
+  - COLOR
+  - Color
+resultScales:
+  - Nominal
+definition: A qualitative assessment of the color of a biological specimen.
+coding:
+  - code: 5778-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+      - "Sputum"
+      - "Stool"
+      - "Body Fluid"
+      - "Eyes"
+      - "Skin"

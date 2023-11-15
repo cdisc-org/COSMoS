@@ -1,0 +1,83 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: UNBLIND
+domain: DS
+shortName: Treatment Unblinded
+source: DS.DECODE
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C142742
+variables:
+  - name: DSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C74558
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74558
+      submissionValue: DSCAT
+    assignedTerm:
+      conceptId: C150824
+      value: "OTHER EVENT"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: DSDECOD
+    dataElementConceptId: C82977
+    isNonStandard: false
+    codelist:
+      conceptId: C150811
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C150811
+      submissionValue: OTHEVENT
+    assignedTerm:
+      conceptId: C142742
+      value: "TREATMENT UNBLINDED"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: DSTERM
+    dataElementConceptId: C82571
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: DSDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: DSSTDTC
+    dataElementConceptId: C82517
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: DSSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

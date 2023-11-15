@@ -1,0 +1,281 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: EXPOSUREUNBLIND
+domain: EX
+shortName: Exposure Unblinded
+source: EX.EXTRT
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C177924
+variables:
+  - name: EXTRT
+    dataElementConceptId: C83091
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: EXTRT
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: EXREFID
+    dataElementConceptId: C113358
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: EXDOSE
+    dataElementConceptId: C83039
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 20
+    relationship:
+      subject: EXDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDOSTXT
+    dataElementConceptId: C83279
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 100
+    relationship:
+      subject: EXDOSTXT
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDOSU
+    dataElementConceptId: C83035
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: EXDOSE
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDOSFRM
+    dataElementConceptId: C83111
+    isNonStandard: false
+    codelist:
+      conceptId: C66726
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66726
+      submissionValue: FRM
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXDOSFRM
+      linkingPhrase: is the physical form of the product in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDOSFRQ
+    dataElementConceptId: C83043
+    isNonStandard: false
+    codelist:
+      conceptId: C71113
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71113
+      submissionValue: FREQ
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXDOSFRQ
+      linkingPhrase: is the frequency of administration of the amount in
+      predicateTerm: SPECIFIES
+      object: EXDOSE
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDOSRGM
+    dataElementConceptId: C83277
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXROUTE
+    dataElementConceptId: C83121
+    isNonStandard: false
+    codelist:
+      conceptId: C66729
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66729
+      submissionValue: ROUTE
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXROUTE
+      linkingPhrase: is the part of the body through which is administered the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXLOT
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: EXLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74456
+      submissionValue: LOC
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXLOC
+      linkingPhrase: is the administration anatomical location for the treatment in
+      predicateTerm: SPECIFIES
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99073
+      submissionValue: LAT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: EXLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: EXLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXDIR
+    dataElementConceptId: C54215
+    isNonStandard: false
+    codelist:
+      conceptId: C99074
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99074
+      submissionValue: DIR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: EXDIR
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: EXLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXFAST
+    dataElementConceptId: C93566
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: EXFAST
+      linkingPhrase: is the subject's fasting status during the performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EPOCH
+    isNonStandard: false
+    codelist:
+      conceptId: C99079
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99079
+      submissionValue: EPOCH
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXSTDTC
+    dataElementConceptId: C83288
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: EXSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: EXENDTC
+    dataElementConceptId: C83282
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: EXENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: EXTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

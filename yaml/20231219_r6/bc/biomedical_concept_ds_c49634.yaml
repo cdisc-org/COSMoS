@@ -1,0 +1,46 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C49634
+ncitCode: C49634
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49634
+categories:
+  - Subject Disposition
+  - Protocol Disposition Events
+shortName: Withdrawal by Subject
+synonyms:
+  - Subject Withdrawal
+  - Dropout
+  - Subject Dropped Out
+resultScales:
+  - Nominal
+definition: An indication that a study participant has removed themself from the study or from one or more segments of the study.
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C82977
+    ncitCode: C82977
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82977
+    shortName: Dictionary-derived Term
+    dataType: string
+    exampleSet:
+      - "Withdrawal By Subject"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Disposition Event"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C82517
+    ncitCode: C82517
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82517
+    shortName: Observation Start Date Time
+    dataType: datetime

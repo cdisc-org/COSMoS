@@ -1,0 +1,30 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C122393
+ncitCode: C122393
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C122393
+parentConceptId: C17468
+categories:
+  - Subject Characteristics
+  - Socioeconomic Factors
+  - Socioeconomic Status
+shortName: Number of Years of Education
+synonyms:
+  - EDUYRNUM
+  - Education
+resultScales:
+  - Quantitative
+definition: The number of education years that a subject has competed.
+dataElementConcepts:
+  - conceptId: C127787
+    ncitCode: C127787
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127787
+    shortName: Total Number
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Years"

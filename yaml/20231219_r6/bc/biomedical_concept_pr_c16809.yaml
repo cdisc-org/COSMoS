@@ -1,0 +1,95 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C16809
+ncitCode: C16809
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16809
+parentConceptId: C16502
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+shortName: Magnetic Resonance Imaging
+synonyms:
+  - Magnetic Resonance
+  - MRI
+  - MRI Scan
+  - NMR
+  - NMR Imaging
+resultScales:
+  - Nominal
+definition: "Imaging that uses radiofrequency waves and a strong magnetic field rather than x-rays to provide detailed pictures of internal organs and tissues. The technique is valuable for the diagnosis of many pathologic conditions, including cancer, heart and vascular disease, stroke, and joint and musculoskeletal disorders."
+dataElementConcepts:
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Brain"
+      - "Spine"
+      - "Bone"
+      - "Soft Tissue of Joints"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+      - "Bilateral"
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54215
+    shortName: Directionality
+    dataType: string
+    exampleSet:
+      - "Inner"
+      - "Outer"
+      - "Anterior"
+      - "Dorsal"
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime

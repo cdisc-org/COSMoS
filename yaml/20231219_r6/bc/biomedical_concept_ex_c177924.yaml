@@ -1,0 +1,119 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C177924
+ncitCode: C177924
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C177924
+categories:
+  - Exposure Reported Name of Treatment
+shortName: Study Product Administration
+synonyms:
+  - Exposure
+  - Study Treatment Administration
+resultScales:
+  - Nominal
+definition: The act of the dispensing, applying, or tendering a study product to the participant.
+dataElementConcepts:
+  - conceptId: C83091
+    ncitCode: C83091
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83091
+    shortName: Exposure Reported Name of Treatment
+    dataType: string
+  - conceptId: C113358
+    ncitCode: C113358
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C113358
+    shortName: Exposure Reference Identifier
+    dataType: string
+    exampleSet:
+      - "Kit number"
+      - "Bottle label"
+      - "Vial identifier"
+  - conceptId: C83039
+    ncitCode: C83039
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83039
+    shortName: Exposure Dose
+    dataType: decimal
+  - conceptId: C83279
+    ncitCode: C83279
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83279
+    shortName: Exposure Dose Description
+    dataType: string
+  - conceptId: C83035
+    ncitCode: C83035
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83035
+    shortName: Exposure Dose Unit
+    dataType: string
+  - conceptId: C83111
+    ncitCode: C83111
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83111
+    shortName: Exposure Dose Form
+    dataType: string
+    exampleSet:
+      - "Tablet"
+      - "Capsure"
+      - "Lotion"
+  - conceptId: C83043
+    ncitCode: C83043
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83043
+    shortName: Exposure Dose Frequency
+    dataType: string
+    exampleSet:
+      - "QD"
+      - "BID"
+  - conceptId: C83277
+    ncitCode: C83277
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83277
+    shortName: Exposure Intended Dose Regimen
+    dataType: string
+    exampleSet:
+      - "Two weeks on"
+      - "Two weeks off"
+  - conceptId: C83121
+    ncitCode: C83121
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83121
+    shortName: Exposure Route of Administration
+    dataType: string
+    exampleSet:
+      - "Oral"
+      - "Intravenous"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Forearm"
+      - "Abdomen"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C54215
+    shortName: Directionality
+    dataType: string
+    exampleSet:
+      - "Upper"
+      - "Lower"
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83288
+    ncitCode: C83288
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83288
+    shortName: Exposure Start Date Time
+    dataType: datetime
+  - conceptId: C83282
+    ncitCode: C83282
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83282
+    shortName: Exposure End Date Time
+    dataType: datetime

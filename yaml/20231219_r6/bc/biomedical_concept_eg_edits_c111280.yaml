@@ -1,0 +1,111 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C111280
+ncitCode: C111280
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111280
+parentConceptId: C83146
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Abnormalities
+  - ECG Findings
+  - ECG Abnormalities
+shortName: Myocardial Infarction ECG Assessment
+synonyms:
+  - MI
+  - Myocardial Infarction
+resultScales:
+  - Nominal
+definition: An electrocardiographic assessment of findings that suggest the occurrence of a myocardial infarction.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Finding"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Acute Anterior Wall Myocardial Infarction"
+      - "Acute Anterolateral Wall Myocardial Infarction"
+      - "Acute Anteroseptal Wall Myocardial Infarction"
+      - "Acute Extensive Anterior Wall Myocardial Infarction"
+      - "Acute High Lateral Wall Myocardial Infarction"
+      - "Acute Inferior Wall Myocardial Infarction"
+      - "Acute Lateral Wall Myocardial Infarction"
+      - "Acute Myocardial Infarction"
+      - "Acute Posterior Wall Myocardial Infarction"
+      - "Acute Right Ventricular Wall Myocardial Infarction"
+      - "Acute Septal Wall Myocardial Infarction"
+      - "Anterior Wall Myocardial Infarction"
+      - "Anterolateral Wall Myocardial Infarction"
+      - "Anteroseptal Wall Myocardial Infarction"
+      - "Extensive Anterior Wall Myocardial Infarction"
+      - "High Lateral Wall Myocardial Infarction"
+      - "Inferior Wall Myocardial Infarction"
+      - "Lateral Wall Myocardial Infarction"
+      - "Myocardial Infarction"
+      - "New Anterior Wall Myocardial Infarction"
+      - "New Anterolateral Wall Myocardial Infarction"
+      - "New Anteroseptal Wall Myocardial Infarction"
+      - "New Extensive Anterior Wall Myocardial Infarction"
+      - "New High Lateral Wall Myocardial Infarction"
+      - "New Inferior Wall Myocardial Infarction"
+      - "New lateral Wall Myocardial Infarction"
+      - "New Myocardial Infarction"
+      - "New Posterior Wall Myocardial Infarction"
+      - "New Septal Wall Myocardial Infarction"
+      - "Non Q Wave Myocardial Infarction"
+      - "Non-Diagnostic Q Waves"
+      - "Old or Age Indeterminate Anterior Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Anterolateral Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Anteroseptal Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Extensive Anterior Wall Myocardial Infarction"
+      - "Old or Age Indeterminate High Lateral Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Inferior Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Lateral Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Posterior Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Septal Wall Myocardial Infarction"
+      - "Old or Age Indeterminate Wall Myocardial Infarction"
+      - "Old or Age Undetermined Right Ventricular Myocardial Infarction"
+      - "Posterior Wall Myocardial Infarction"
+      - "Septal Myocardial Infarction"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C50282
+    ncitCode: C50282
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C50282
+    shortName: Lead Device
+    dataType: string
+    exampleSet:
+      - "Lead 1"
+      - "Lead 2"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

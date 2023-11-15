@@ -57,7 +57,7 @@ CREATE TABLE "SDTMVariable" (
 	"assignedTerm" TEXT, 
 	role VARCHAR(9), 
 	relationship TEXT, 
-	"dataType" VARCHAR(8), 
+	"dataType" VARCHAR(16), 
 	length INTEGER, 
 	format TEXT, 
 	"significantDigits" INTEGER, 

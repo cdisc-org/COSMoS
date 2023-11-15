@@ -1,0 +1,114 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: EXCL01
+domain: IE
+shortName: Exclusion Criteria 01
+source: IE.IETESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C25370
+variables:
+  - name: IETESTCD
+    isNonStandard: false
+    assignedTerm:
+      value: "EXCL01"
+    role: Topic
+    relationship:
+      subject: IETESTCD
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
+      object: IETEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: IETEST
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: IETEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: IEVER
+    dataElementConceptId: C83444
+    isNonStandard: true 
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: IECAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C66797
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66797
+      submissionValue: IECAT
+    assignedTerm:
+      conceptId: C25370
+      value: "EXCLUSION"
+    role: Qualifier
+    relationship:
+      subject: IECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: IEORRES
+    dataElementConceptId: C181043
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_N
+    valueList:
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: IEORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: IESTRESC
+    dataElementConceptId: C181043
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_N
+    valueList:
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: IESTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: IEDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: IEDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: IETESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

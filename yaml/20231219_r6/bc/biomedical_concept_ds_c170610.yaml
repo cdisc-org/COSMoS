@@ -1,0 +1,45 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C170610
+ncitCode: C170610
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C170610
+categories:
+  - Subject Disposition
+  - Disposition Events
+  - Other Events
+  - Consent
+  - Withdrawal
+shortName: "Withdrawal of Consent From Protocol-Specified Activity"
+resultScales:
+  - Nominal
+definition: "The subject or parent/guardian withdraws their consent for the subject to participate in certain protocol-specified study activities, but does not withdraw consent from participation in the study as a whole."
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C82977
+    ncitCode: C82977
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82977
+    shortName: Dictionary-derived Term
+    dataType: string
+    exampleSet:
+      - "Withdrawal of Consent from Protocol-Specified Activity"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Other Event"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C82517
+    ncitCode: C82517
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82517
+    shortName: Observation Start Date Time
+    dataType: datetime

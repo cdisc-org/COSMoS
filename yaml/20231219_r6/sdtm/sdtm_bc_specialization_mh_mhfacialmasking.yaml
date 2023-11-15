@@ -1,0 +1,121 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: MHFACIALMASKING
+domain: MH
+shortName: "Medical History Prespecified: Facial Masking"
+source: MH.MHTERM
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C200145
+variables:
+  - name: MHTERM
+    dataElementConceptId: C83118
+    isNonStandard: false
+    assignedTerm:
+      value: "FACIAL MASKING"
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: MHDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHDECOD
+    dataElementConceptId: C83346
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "ALZHEIMER'S DISEASE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MHTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    assignedTerm:
+      value: "EXTRAPYRAMIDAL FINDINGS"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MHCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_Y
+    valueList:
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MHPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHOCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MHOCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

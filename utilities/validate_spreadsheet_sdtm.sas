@@ -7,16 +7,20 @@
 
 title01 "&now";
 
+
 /* Package 1*/
 %let excel_file=&root/curation/BC_Package_2022_10_26.xlsx;
+
 %ReadExcel(file=&excel_file, range=Conceptual VS BC$, dsout=bc1_1);
 %ReadExcel(file=&excel_file, range=%str(Conceptual LB (Common) BC)$, dsout=bc1_2);
 
 %ReadExcel(file=&excel_file, range=SDTM VS BC$, dsout=sdtm1_1);
 %ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm1_2);
 
+
 /* Package 2 */
 %let excel_file=&root/curation/BC_Package_2023_02_13.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc2_1);
 %ReadExcel(file=&excel_file, range=%str(BC LB (TIG Biomarkers))$, dsout=bc2_2);
 
@@ -25,8 +29,10 @@ title01 "&now";
 
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelists$, dsout=subsets);
 
+
 /* Package 3 */
 %let excel_file=&root/curation/BC_Package_2023_03_31.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc3_1);
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc3_2);
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc3_3);
@@ -40,8 +46,10 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_12);
 %ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_13);
 
+
 /* Package 4 - Oncology */
 %let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc4_onco_1);
 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm4_onco_1, drop=%str(drop=significant_digits));
@@ -103,6 +111,41 @@ title01 "&now";
 
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
+
+/* Package 6 - */
+%let excel_file=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
+
+%ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc6_01); 
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc6_02); 
+%ReadExcel(file=&excel_file, range=%str(BC_EG_EDITS)$, dsout=bc6_03); 
+%ReadExcel(file=&excel_file, range=%str(BC_EX)$, dsout=bc6_04); 
+%ReadExcel(file=&excel_file, range=%str(BC_IE)$, dsout=bc6_05); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc6_06); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc6_07); 
+%ReadExcel(file=&excel_file, range=%str(BC_MH_EDITS)$, dsout=bc6_08); 
+%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc6_09); 
+%ReadExcel(file=&excel_file, range=%str(BC_QS)$, dsout=bc6_10); 
+%ReadExcel(file=&excel_file, range=%str(BC_SC)$, dsout=bc6_11); 
+%ReadExcel(file=&excel_file, range=%str(BC_SU)$, dsout=bc6_12); 
+%ReadExcel(file=&excel_file, range=%str(BC_VS_EDITS)$, dsout=bc6_13); 
+
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM_EDITS)$, dsout=sdtm6_01, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS)$, dsout=sdtm6_02, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG_EDITS)$, dsout=sdtm6_03, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EX)$, dsout=sdtm6_04, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_IE)$, dsout=sdtm6_05, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm6_06, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm6_07, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm6_08, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm6_09, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_QS)$, dsout=sdtm6_10, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_SC)$, dsout=sdtm6_11, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_SU)$, dsout=sdtm6_12, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm6_13, drop=%str(drop=length significant_digits format));
+
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
@@ -158,8 +201,8 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $128
-         codelist subset_codelist value_list assigned_value subject linking_phrase predicate_term object 
-         short_name role format data_type origin_source vlm_target change_history vvalue $32000 vname $32;
+         codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object 
+         short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
 /*

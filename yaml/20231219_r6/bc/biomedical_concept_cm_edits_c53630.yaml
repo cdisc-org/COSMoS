@@ -1,0 +1,121 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C53630
+ncitCode: C53630
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C53630
+parentConceptId: C49236
+categories:
+  - Interventions
+  - Substance Administration
+  - Medication Administration
+shortName: Concomitant Therapy
+synonyms:
+  - Concomitant Medication
+resultScales:
+  - Nominal
+definition: Any pharmaceutical agent, other than the primary therapy, that is administered to or used by the subject prior to or during a specified time period.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C70902
+    ncitCode: C70902
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70902
+    shortName: Concomitant Agent
+    dataType: string
+  - conceptId: C83345
+    ncitCode: C83345
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83345
+    shortName: Concomitant Medication Dictionary Derived Term
+    dataType: string
+  - conceptId: C83085
+    ncitCode: C83085
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83085
+    shortName: Concomitant Medication Use Indication
+    dataType: string
+  - conceptId: C83221
+    ncitCode: C83221
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83221
+    shortName: Concomitant Medication Dose
+    dataType: string
+  - conceptId: C83034
+    ncitCode: C83034
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83034
+    shortName: Concomitant Medication Dose Unit
+    dataType: string
+    exampleSet:
+      - "ng"
+      - "mg"
+      - "mg/kg"
+  - conceptId: C83042
+    ncitCode: C83042
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83042
+    shortName: Concomitant Medication Dose Frequency
+    dataType: string
+    exampleSet:
+      - "BID"
+      - "PRN"
+      - "QD"
+      - "QID"
+      - "TID"
+  - conceptId: C83025
+    ncitCode: C83025
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83025
+    shortName: Concomitant Medication Daily Dose
+    dataType: string
+  - conceptId: C83110
+    ncitCode: C83110
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83110
+    shortName: Concomitant Medication Dose Form
+    dataType: string
+    exampleSet:
+      - "Capsule"
+      - "Injection"
+      - "Patch"
+      - "Solution"
+      - "Suppository"
+      - "Tablet"
+  - conceptId: C83120
+    ncitCode: C83120
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83120
+    shortName: Concomitant Medication Route of Administration
+    dataType: string
+    exampleSet:
+      - "Intravenous"
+      - "Oral"
+      - "Nasogastric"
+      - "Subcutaneous"
+      - "Topical"
+  - conceptId: C83235
+    ncitCode: C83235
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83235
+    shortName: Concomitant Medication Use Start Date Time
+    dataType: datetime
+  - conceptId: C83225
+    ncitCode: C83225
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83225
+    shortName: Concomitant Medication Use End Date Time
+    dataType: datetime

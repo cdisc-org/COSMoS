@@ -3,6 +3,7 @@
 __pycache__/
 test/
 tools/
+text/
 venv/
 work/
 ~$*.*

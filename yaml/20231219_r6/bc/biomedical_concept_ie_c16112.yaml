@@ -1,0 +1,13 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C16112
+ncitCode: C16112
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16112
+categories:
+  - Eligibility Criteria
+  - Clinical Trial Design
+shortName: Clinical Trial Eligibility Criteria
+synonyms:
+  - Eligibility Criteria
+  - Study Eligibility Criteria
+definition: Characteristics which are necessary to allow a subject to participate in a clinical study, as outlined in the study protocol. The concept covers inclusion and exclusion criteria.

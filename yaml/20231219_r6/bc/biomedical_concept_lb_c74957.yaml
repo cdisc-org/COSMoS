@@ -1,0 +1,10 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C74957
+ncitCode: C74957
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74957
+categories:
+  - Laboratory Tests
+  - Mixed Category Laboratory Procedure
+shortName: Mixed Category Laboratory Procedure
+definition: "A laboratory procedure that is performed in more than one of these laboratory specializations: anatomic pathology, clinical pathology, or molecular pathology."
