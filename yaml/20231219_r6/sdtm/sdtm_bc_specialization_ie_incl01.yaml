@@ -31,7 +31,7 @@ variables:
       object: IETESTCD
     mandatoryVariable: true 
     mandatoryValue: false
-  - name: IEVER
+  - name: TIVERS
     dataElementConceptId: C83444
     isNonStandard: true 
     role: Qualifier
