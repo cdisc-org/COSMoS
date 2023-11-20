@@ -2,7 +2,7 @@
 
 %include "&root/utilities/config.sas";
 
-%let _debug=2;
+%let _debug=0;
 %let print_html=1;
 
 title01 "&now";
@@ -149,13 +149,14 @@ title01 "&now";
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
+  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
+         system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $32 bc_categories synonyms result_scales definition 
-         system	system_name	code change_history $5124 dec_id $32 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   set bc:(where=(not missing(bc_id)));
   
   array carray{*} _character_;
+  * if missing(bc_id) then delete;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
     vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
@@ -163,20 +164,11 @@ data bc(drop=change_history F1: F2: i vname vvalue);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-
   order=_n_;
-  
-/*
-  bc_id=kcompress(bc_id, 'C2A0'x);
-  ncit_code=kcompress(ncit_code, 'C2A0'x);
-  parent_bc_id=kcompress(parent_bc_id, 'C2A0'x);
-  dec_id=kcompress(dec_id, 'C2A0'x);
-  ncit_dec_code=kcompress(ncit_dec_code, 'C2A0'x);
-*/
 run;  
 
 
-%if &_debug gt 2 %then %do;
+%if &_debug gt 1 %then %do;
   proc freq data=bc;
     tables bc_id * package_date / nopercent norow nocol;
   run;  
@@ -196,19 +188,15 @@ run;
 %end;
 
 data sdtm(drop=change_history F3: F4:  i vname vvalue);
+  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
+         codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object 
+         short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $128
-         codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object 
-         short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
-/*
-  bc_id=kcompress(bc_id, 'C2A0'x);
-  dec_id=kcompress(dec_id, 'C2A0'x);
-*/
   array carray{*} _character_;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
@@ -217,7 +205,6 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-
 run;  
 
 %if &_debug gt 1 %then %do;

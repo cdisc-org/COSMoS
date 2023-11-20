@@ -2,9 +2,11 @@
 
 %include "&root/utilities/config.sas";
 
-proc datasets library=macros nolist;
-   delete funcs;
-run;
+%if %sysfunc(exist(macros.funcs)) %then %do;
+  proc datasets library=macros nolist;
+     delete funcs;
+  run;
+%end;
 
 proc fcmp outlib=macros.funcs.python;
 
@@ -138,14 +140,8 @@ proc fcmp outlib=macros.funcs.python;
       parentCode = ''
       parentShortName = ''
       try:
-#          parentCode = concept_info[0]['code']
-            
-            parentCode = ";".join([v['code'] for v in concept_info])
-            parentShortName = ";".join([v['name'] for v in concept_info])
- #          for ele in concept_info:
- #          parentCode = parentCode + str(ele['code']) + " "
- #          parentShortName = parentShortName + str(ele['name']) + ";"
- #          parentShortName = concept_info[0]['name']
+          parentCode = ";".join([v['code'] for v in concept_info])
+          parentShortName = ";".join([v['name'] for v in concept_info])
       except:
           parentCode = ''
           parentShortName = ''
@@ -157,6 +153,8 @@ proc fcmp outlib=macros.funcs.python;
     parentshortname = py3.results['parentShortName'];
   endsub;
 run;
+
+/* Test the functions */
 
 data test;
   length ccodes $200 ccode ccode_parent $100 shortname shortname_parent $100 definition definition_cdisc $1000;
