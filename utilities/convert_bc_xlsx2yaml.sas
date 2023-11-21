@@ -1,6 +1,4 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-%let temp=C:/temp/COSMoS;
-
 %include "&root/utilities/config.sas";
 
 %let _debug=0;
@@ -112,8 +110,8 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
 
 ods listing close;
-ods html5 file="&root/utilities/get_bc_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/get_bc_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/get_bc_issues_%sysfunc(date(), b8601da8.).html";
+ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/get_bc_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_bc;
   title "BC Issues - %sysfunc(date(), b8601da8.)";

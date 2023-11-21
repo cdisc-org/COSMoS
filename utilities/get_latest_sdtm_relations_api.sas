@@ -50,10 +50,10 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
-options nomprint;
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%* The CDISC Library API key has been set as an environment variable;
 %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
 
 
@@ -64,6 +64,7 @@ run;
 
 %get_api_response(
     baseurl=&base_url_cosmos,
+    apikey=&api_key,
     endpoint=/mdr/specializations/sdtm/datasetspecializations,
     response_file=%sysfunc(pathname(work))/sdtm_specializations_latest.json
   );

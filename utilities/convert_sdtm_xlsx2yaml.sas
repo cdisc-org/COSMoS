@@ -1,8 +1,5 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-%let temp=C:/temp/COSMoS;
-
 %include "&root/utilities/config.sas";
-options mprint;
 
 %let _debug=0;
 
@@ -118,8 +115,8 @@ run;
 
 
 ods listing close;
-ods html5 file="&root/utilities/get_sdtm_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/get_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/get_sdtm_issues_%sysfunc(date(), b8601da8.).html";
+ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/get_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";

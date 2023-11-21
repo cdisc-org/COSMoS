@@ -1,5 +1,4 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-
 %include "&root/utilities/config.sas";
 
 %let _debug=0;
@@ -176,8 +175,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_&today._bc.html";
-  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._bc.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._bc.html";
+  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&today._bc.xlsx";
 
     proc print data=bc;
     run;
@@ -230,8 +229,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm.html";
-  ods excel options(sheet_name="SDTM" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._sdtm.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._sdtm.html";
+  ods excel options(sheet_name="SDTM" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&today._sdtm.xlsx";
 
     proc print data=sdtm_merged;
     run;
@@ -242,7 +241,7 @@ quit;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc_issues.html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._sdtm_bc_issues.html";
 
   /* Unresolved BC Parent BCs */
   proc sql;

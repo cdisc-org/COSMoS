@@ -1,16 +1,13 @@
 %macro get_latest_codelist_package(package=, jsonout=, dsout=);
-
-  %local api_key;
     
-  %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
-
   filename response temp;
   filename map temp;
 
   %get_api_response(
       baseurl=&base_url,
       endpoint=/mdr/products,
-      response_fileref=response
+      response_fileref=response,
+      apikey=&api_key
     );
 
   libname response json map=map automap=create fileref=response;
