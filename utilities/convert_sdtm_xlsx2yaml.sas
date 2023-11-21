@@ -120,7 +120,7 @@ ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') f
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";
-  var _excel_file_ _tab_ severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment;
+  var _excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment;
 run;
 
 ods listing;

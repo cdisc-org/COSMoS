@@ -24,7 +24,7 @@
   %end;
 
 
-  data issues(keep=_excel_file_ _tab_ severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
+  data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
     length prev_BC_ID parent_bc_id_nci $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value  actual_value comment $2048;
@@ -101,7 +101,7 @@
       call get_shortname(ncit_code, short_name_nci);
       %add2issues_bc(((short_name ne short_name_nci) and not missing(short_name_nci)) or (missing(short_name)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "");
-      %add2issues_bc(((short_name ne short_name_nci)) or (missing(short_name)), 
+      %add2issues_bc(((short_name ne short_name_nci)) and (missing(short_name_nci)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "", severity=NOTE);
       if not missing(synonyms) then do;
         %add2issues_bc(index(synonyms, ",") > 0, 
@@ -132,7 +132,7 @@
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
       %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
-      %add2issues_bc((definition ne definition_nci) or (missing(definition)), 
+      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
       if not missing(definition) then do;

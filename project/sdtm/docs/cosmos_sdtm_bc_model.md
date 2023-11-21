@@ -51,7 +51,7 @@
  * [packageDate](packageDate.md) - Biomedical Concept package release date indicating when the BC package was published to production
  * [packageType](packageType.md) - Package type (sdtm for SDTM Dataset Specializations)
  * [parentCodelist](parentCodelist.md) - Subset codelist parent codelist
- * [predicateTerm](predicateTerm.md) - Short variable relatio ship linking phrase for programming purposes
+ * [predicateTerm](predicateTerm.md) - Short variable relationship linking phrase for programming purposes
  * [relationship](relationship.md)
  * [role](role.md) - SDTM variable role
  * [sdtmigEndVersion](sdtmigEndVersion.md) - The last SDTMIG version that is applicable to the BC dataset specialization

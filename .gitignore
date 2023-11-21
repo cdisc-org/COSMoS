@@ -6,6 +6,7 @@ tools/
 text/
 venv/
 work/
+yaml/latest
 ~$*.*
 *.log
 *.lst

@@ -43,7 +43,7 @@
   %end;
 
   proc sql;
-    create table &out(drop=ordinal_variables)
+    create table &out /* (drop=ordinal_variables) */
     as select 
       %if %sysfunc(exist(&jsonlib.._links_parentpackage)) %then %do;    
         scan(pp.title, -1, " ") as packageDate length=10

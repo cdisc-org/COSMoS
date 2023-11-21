@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-11-15T09:22:44
+# Generation date: 2023-11-21T11:17:51
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0

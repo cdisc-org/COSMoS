@@ -2,7 +2,7 @@
 # Slot: predicateTerm
 
 
-Short variable relatio ship linking phrase for programming purposes
+Short variable relationship linking phrase for programming purposes
 
 URI: [cosmos:predicateTerm](https://www.cdisc.org/cosmos/1-0predicateTerm)
 

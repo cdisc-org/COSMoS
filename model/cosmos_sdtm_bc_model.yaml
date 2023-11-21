@@ -202,7 +202,7 @@ slots:
   predicateTerm:
     required: true
     range: PredicateTermEnum
-    description: Short variable relatio ship linking phrase for programming purposes
+    description: Short variable relationship linking phrase for programming purposes
   object:
     required: true
     description: Object in a variable relationship

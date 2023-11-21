@@ -25,7 +25,7 @@ URI: [cosmos:RelationShip](https://www.cdisc.org/cosmos/1-0RelationShip)
      * Description: Variable relationship descriptive linking phrase
      * Range: [LinkingPhraseEnum](LinkingPhraseEnum.md)
  * [predicateTerm](predicateTerm.md)  <sub>1..1</sub>
-     * Description: Short variable relatio ship linking phrase for programming purposes
+     * Description: Short variable relationship linking phrase for programming purposes
      * Range: [PredicateTermEnum](PredicateTermEnum.md)
  * [object](object.md)  <sub>1..1</sub>
      * Description: Object in a variable relationship

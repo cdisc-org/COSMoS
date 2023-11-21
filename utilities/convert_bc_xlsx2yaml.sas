@@ -95,19 +95,19 @@
 %let ExcelFile=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=cm_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_CM_EDITS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=ds,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_DS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=eg_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_EG_EDITS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=ex,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_EX));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=ie,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_IE));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_LB));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_LB_EDITS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=mh_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_MH_EDITS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=pr,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_PR));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=qs,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_QS));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=sc,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_SC));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=su,       package=&package,       override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_SU));
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-12-19),       out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=cm_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_CM_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ds,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_DS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=eg_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_EG_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ex,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_EX));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=ie,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_IE));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_LB));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=lb_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_LB_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=mh_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_MH_EDITS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=pr,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_PR));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=qs,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_QS));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=sc,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_SC));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=su,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_SU));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
 
 ods listing close;
 ods html5 file="&root/utilities/reports/get_bc_issues_%sysfunc(date(), b8601da8.).html";
@@ -115,7 +115,7 @@ ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') fil
 
 proc print data=all_issues_bc;
   title "BC Issues - %sysfunc(date(), b8601da8.)";
-  var _excel_file_ _tab_ severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment;
+  var _excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment;
 run;
 
 ods listing;

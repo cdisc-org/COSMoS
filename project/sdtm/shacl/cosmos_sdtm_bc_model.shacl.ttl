@@ -7,27 +7,16 @@
 cosmos:SDTMGroup a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 3 ;
-            sh:path cosmos:shortName ],
-        [ sh:description "Identifier for SDTM Value Level Metadata group" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 4 ;
-            sh:path cosmos:datasetSpecializationId ],
-        [ sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
+    sh:property [ sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 0 ;
             sh:path cosmos:packageDate ],
-        [ sh:description "Package type (sdtm for SDTM Dataset Specializations)" ;
-            sh:in ( "sdtm" ) ;
+        [ sh:description "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos:packageType ],
+            sh:order 3 ;
+            sh:path cosmos:shortName ],
         [ sh:description "SDTM VLM Source which categorizes VLM groups by topic variable" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -38,10 +27,26 @@ cosmos:SDTMGroup a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 9 ;
             sh:path cosmos:variables ],
+        [ sh:description "Identifier for SDTM Value Level Metadata group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 4 ;
+            sh:path cosmos:datasetSpecializationId ],
         [ sh:description "The last SDTMIG version that is applicable to the BC dataset specialization" ;
             sh:maxCount 1 ;
             sh:order 7 ;
             sh:path cosmos:sdtmigEndVersion ],
+        [ sh:description "Package type (sdtm for SDTM Dataset Specializations)" ;
+            sh:in ( "sdtm" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos:packageType ],
+        [ sh:description "Domain for the SDTM specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path cosmos:domain ],
         [ sh:description "Biomedical Concept identifier" ;
             sh:maxCount 1 ;
             sh:order 8 ;
@@ -50,27 +55,22 @@ cosmos:SDTMGroup a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 6 ;
-            sh:path cosmos:sdtmigStartVersion ],
-        [ sh:description "Domain for the SDTM specialization group" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path cosmos:domain ] ;
+            sh:path cosmos:sdtmigStartVersion ] ;
     sh:targetClass cosmos:SDTMGroup .
 
 cosmos:SubsetCodeList a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Subset codelist parent codelist" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos:parentCodelist ],
-        [ sh:description "Subset codelist short name" ;
+    sh:property [ sh:description "Subset codelist short name" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 1 ;
             sh:path cosmos:subsetShortName ],
+        [ sh:description "Subset codelist parent codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path cosmos:parentCodelist ],
         [ sh:class cosmos:CodeListTerm ;
             sh:minCount 1 ;
             sh:nodeKind sh:BlankNode ;
@@ -86,26 +86,22 @@ cosmos:SubsetCodeList a sh:NodeShape ;
 cosmos:AssignedTerm a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos:conceptId ],
-        [ sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
+    sh:property [ sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 1 ;
-            sh:path cosmos:value ] ;
+            sh:path cosmos:value ],
+        [ sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path cosmos:conceptId ] ;
     sh:targetClass cosmos:AssignedTerm .
 
 cosmos:CodeList a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Link to NCIt for the codelist" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos:href ],
-        [ sh:description "CDISC submission value for the codelist" ;
+    sh:property [ sh:description "CDISC submission value for the codelist" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 2 ;
@@ -114,22 +110,26 @@ cosmos:CodeList a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 0 ;
-            sh:path cosmos:conceptId ] ;
+            sh:path cosmos:conceptId ],
+        [ sh:description "Link to NCIt for the codelist" ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos:href ] ;
     sh:targetClass cosmos:CodeList .
 
 cosmos:CodeListTerm a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Submision value of term in subset codelist" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos:termValue ],
-        [ sh:description "C-code term in subset codelist" ;
+    sh:property [ sh:description "C-code term in subset codelist" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 0 ;
-            sh:path cosmos:termId ] ;
+            sh:path cosmos:termId ],
+        [ sh:description "Submision value of term in subset codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos:termValue ] ;
     sh:targetClass cosmos:CodeListTerm .
 
 cosmos:RelationShip a sh:NodeShape ;
@@ -140,12 +140,6 @@ cosmos:RelationShip a sh:NodeShape ;
             sh:minCount 1 ;
             sh:order 3 ;
             sh:path cosmos:object ],
-        [ sh:description "Short variable relatio ship linking phrase for programming purposes" ;
-            sh:in ( "DECODES" "DESCRIBES" "GROUPS" "GROUPS_BY" "IDENTIFIES" "IDENTIFIES_OBSERVATION" "IDENTIFIES_PRODUCT_IN" "IDENTIFIES_TUMOR_IN" "INDICATES" "IS_ATTRIBUTE_FOR" "IS_DECODED_BY" "IS_DERIVED_FROM" "IS_EPOCH_OF" "IS_GROUPED_BY" "IS_INDICATOR_FOR" "IS_ORIGINAL_TEXT_FOR" "IS_RESULT_OF" "IS_SPECIMEN_TESTED_IN" "IS_SUBJECT_STATE_FOR" "IS_TIMING_FOR" "IS_UNIT_FOR" "PERFORMED" "PERFORMS" "SPECIFIES" ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path cosmos:predicateTerm ],
         [ sh:description "Subject in a variable relationship" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -156,64 +150,78 @@ cosmos:RelationShip a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 1 ;
-            sh:path cosmos:linkingPhrase ] ;
+            sh:path cosmos:linkingPhrase ],
+        [ sh:description "Short variable relationship linking phrase for programming purposes" ;
+            sh:in ( "DECODES" "DESCRIBES" "GROUPS" "GROUPS_BY" "IDENTIFIES" "IDENTIFIES_OBSERVATION" "IDENTIFIES_PRODUCT_IN" "IDENTIFIES_TUMOR_IN" "INDICATES" "IS_ATTRIBUTE_FOR" "IS_DECODED_BY" "IS_DERIVED_FROM" "IS_EPOCH_OF" "IS_GROUPED_BY" "IS_INDICATOR_FOR" "IS_ORIGINAL_TEXT_FOR" "IS_RESULT_OF" "IS_SPECIMEN_TESTED_IN" "IS_SUBJECT_STATE_FOR" "IS_TIMING_FOR" "IS_UNIT_FOR" "PERFORMED" "PERFORMS" "SPECIFIES" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path cosmos:predicateTerm ] ;
     sh:targetClass cosmos:RelationShip .
 
 cosmos:SDTMVariable a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Indicator that variable must be present within the SDTM group" ;
-            sh:maxCount 1 ;
-            sh:order 13 ;
-            sh:path cosmos:mandatoryVariable ],
-        [ sh:description "Comparison operator for SDTM group variables included in VLM" ;
-            sh:in ( "EQ" "IN" ) ;
-            sh:maxCount 1 ;
-            sh:order 17 ;
-            sh:path cosmos:comparator ],
-        [ sh:class cosmos:CodeList ;
-            sh:description "Codelist" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path cosmos:codelist ],
-        [ sh:description "List of SDTM submission values used if subset codelist is not applicable" ;
-            sh:order 5 ;
-            sh:path cosmos:valueList ],
-        [ sh:description "Variable included in the SDTM dataset specialization" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos:name ],
-        [ sh:description "Variable origin type (define-XML v21)" ;
-            sh:in ( NCIT:C170547 NCIT:C170548 NCIT:C170549 NCIT:C170550 NCIT:C170551 ) ;
-            sh:maxCount 1 ;
-            sh:order 15 ;
-            sh:path cosmos:originType ],
-        [ sh:description "Subset codelist short name" ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path cosmos:subsetCodelist ],
-        [ sh:class cosmos:AssignedTerm ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 6 ;
-            sh:path cosmos:assignedTerm ],
-        [ sh:description "Variable length" ;
+    sh:property [ sh:description "Variable length" ;
             sh:maxCount 1 ;
             sh:minInclusive 1 ;
             sh:order 10 ;
             sh:path cosmos:length ],
+        [ sh:description "Variable display format" ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path cosmos:format ],
+        [ sh:description "Subset codelist short name" ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path cosmos:subsetCodelist ],
+        [ sh:description "Variable data type" ;
+            sh:in ( "datetime" "durationDatetime" "float" "integer" "text" ) ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path cosmos:dataType ],
         [ sh:description "SDTM variable role" ;
             sh:in ( "Qualifier" "Timing" "Topic" ) ;
             sh:maxCount 1 ;
             sh:order 7 ;
             sh:path cosmos:role ],
+        [ sh:description "Variable origin type (define-XML v21)" ;
+            sh:in ( NCIT:C170547 NCIT:C170548 NCIT:C170549 NCIT:C170550 NCIT:C170551 ) ;
+            sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path cosmos:originType ],
+        [ sh:description "Comparison operator for SDTM group variables included in VLM" ;
+            sh:in ( "EQ" "IN" ) ;
+            sh:maxCount 1 ;
+            sh:order 17 ;
+            sh:path cosmos:comparator ],
+        [ sh:description "Flag that indicates if the variable is a non-standard variable" ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path cosmos:isNonStandard ],
+        [ sh:description "Indicator that variable must be present within the SDTM group" ;
+            sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path cosmos:mandatoryVariable ],
         [ sh:class cosmos:RelationShip ;
             sh:maxCount 1 ;
             sh:nodeKind sh:BlankNode ;
             sh:order 8 ;
             sh:path cosmos:relationship ],
+        [ sh:description "Variable included in the SDTM dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 0 ;
+            sh:path cosmos:name ],
+        [ sh:description "Indicator that variable must be populated within the SDTM group" ;
+            sh:maxCount 1 ;
+            sh:order 14 ;
+            sh:path cosmos:mandatoryValue ],
+        [ sh:class cosmos:AssignedTerm ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 6 ;
+            sh:path cosmos:assignedTerm ],
         [ sh:description "Variable significant_digits" ;
             sh:maxCount 1 ;
             sh:order 12 ;
@@ -222,31 +230,23 @@ cosmos:SDTMVariable a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 18 ;
             sh:path cosmos:vlmTarget ],
-        [ sh:description "Flag that indicates if the variable is a non-standard variable" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path cosmos:isNonStandard ],
-        [ sh:description "Indicator that variable must be populated within the SDTM group" ;
-            sh:maxCount 1 ;
-            sh:order 14 ;
-            sh:path cosmos:mandatoryValue ],
-        [ sh:description "Biomedical Concept Data Element Concept idenfifier foreign key" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos:dataElementConceptId ],
+        [ sh:description "List of SDTM submission values used if subset codelist is not applicable" ;
+            sh:order 5 ;
+            sh:path cosmos:valueList ],
         [ sh:description "Variable origin source (define-XML v21)" ;
             sh:in ( NCIT:C25936 NCIT:C70793 NCIT:C41189 NCIT:C68608 ) ;
             sh:maxCount 1 ;
             sh:order 16 ;
             sh:path cosmos:originSource ],
-        [ sh:description "Variable data type" ;
-            sh:in ( "datetime" "durationDatetime" "float" "integer" "text" ) ;
+        [ sh:class cosmos:CodeList ;
+            sh:description "Codelist" ;
             sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path cosmos:dataType ],
-        [ sh:description "Variable display format" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path cosmos:codelist ],
+        [ sh:description "Biomedical Concept Data Element Concept idenfifier foreign key" ;
             sh:maxCount 1 ;
-            sh:order 11 ;
-            sh:path cosmos:format ] ;
+            sh:order 1 ;
+            sh:path cosmos:dataElementConceptId ] ;
     sh:targetClass cosmos:SDTMVariable .
 

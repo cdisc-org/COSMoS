@@ -34,7 +34,7 @@
 
   %end;
 
-  data issues(keep=_excel_file_ _tab_ severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
+  data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
            codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low lookup_predicate $512 
            codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list $4096
@@ -98,7 +98,7 @@
         end;
         if not missing(subset_codelist) then do;
           put +4 "subsetCodelist:" +1 subset_codelist;
-          %add2issues_sdtm(not missing(value_list), 
+          %add2issues_sdtm((not missing(value_list) and (value_list ne subset_value_list)), 
                 %str(SUBSETCODELIST_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 

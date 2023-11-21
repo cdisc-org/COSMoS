@@ -1129,7 +1129,7 @@
     {
       "name": "predicateTerm",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
-      "description": "Short variable relatio ship linking phrase for programming purposes",
+      "description": "Short variable relationship linking phrase for programming purposes",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
       "owner": "RelationShip",
@@ -1446,9 +1446,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-11-15T09:21:56",
+  "source_file_date": "2023-11-21T11:15:35",
   "source_file_size": 12217,
-  "generation_date": "2023-11-15T09:22:39",
+  "generation_date": "2023-11-21T11:17:46",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",
