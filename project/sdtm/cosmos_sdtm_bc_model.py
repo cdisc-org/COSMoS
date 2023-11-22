@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-11-21T11:17:51
+# Generation date: 2023-11-22T14:31:56
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -590,6 +590,7 @@ class OriginSourceEnum(EnumDefinitionImpl):
 
 class RoleEnum(EnumDefinitionImpl):
 
+    Identifier = PermissibleValue(text="Identifier")
     Qualifier = PermissibleValue(text="Qualifier")
     Timing = PermissibleValue(text="Timing")
     Topic = PermissibleValue(text="Topic")
@@ -636,7 +637,8 @@ slots.sdtmigEndVersion = Slot(uri=COSMOS.sdtmigEndVersion, name="sdtmigEndVersio
                    model_uri=COSMOS.sdtmigEndVersion, domain=None, range=Optional[str])
 
 slots.biomedicalConceptId = Slot(uri=COSMOS.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS.curie('biomedicalConceptId'),
-                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str])
+                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.variables = Slot(uri=COSMOS.variables, name="variables", curie=COSMOS.curie('variables'),
                    model_uri=COSMOS.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
@@ -645,7 +647,8 @@ slots.name = Slot(uri=COSMOS.name, name="name", curie=COSMOS.curie('name'),
                    model_uri=COSMOS.name, domain=None, range=URIRef)
 
 slots.dataElementConceptId = Slot(uri=COSMOS.dataElementConceptId, name="dataElementConceptId", curie=COSMOS.curie('dataElementConceptId'),
-                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str])
+                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.isNonStandard = Slot(uri=COSMOS.isNonStandard, name="isNonStandard", curie=COSMOS.curie('isNonStandard'),
                    model_uri=COSMOS.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
@@ -657,7 +660,8 @@ slots.subsetCodelist = Slot(uri=COSMOS.subsetCodelist, name="subsetCodelist", cu
                    model_uri=COSMOS.subsetCodelist, domain=None, range=Optional[str])
 
 slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
-                   model_uri=COSMOS.conceptId, domain=None, range=URIRef)
+                   model_uri=COSMOS.conceptId, domain=None, range=URIRef,
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
 
 slots.href = Slot(uri=COSMOS.href, name="href", curie=COSMOS.curie('href'),
                    model_uri=COSMOS.href, domain=None, range=Optional[Union[str, URI]])

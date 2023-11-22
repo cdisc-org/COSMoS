@@ -19,7 +19,7 @@
             },
             "conceptId": {
                "description": "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
-               "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
             "dataElementConcepts": {
@@ -134,7 +134,7 @@
          "properties": {
             "conceptId": {
                "description": "NCI C-code for the BC Data Element Concept",
-               "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
             "dataType": {
@@ -205,7 +205,7 @@
       },
       "conceptId": {
          "description": "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
-         "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+         "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
          "type": "string"
       },
       "dataElementConcepts": {

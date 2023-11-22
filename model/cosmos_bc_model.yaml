@@ -67,11 +67,11 @@ slots:
     identifier: true
     required: true
     range: string
-    "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$"
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
   ncitCode:
     description: NCIt code
     range: string
-    "pattern": "^(C[0123456789]+)$"
+    pattern: "^(C[0123456789]+)$"
   href:
     range: uri
   packageDate:

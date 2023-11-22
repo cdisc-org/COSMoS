@@ -55,7 +55,7 @@ CREATE TABLE "SDTMVariable" (
 	codelist TEXT, 
 	"subsetCodelist" TEXT, 
 	"assignedTerm" TEXT, 
-	role VARCHAR(9), 
+	role VARCHAR(10), 
 	relationship TEXT, 
 	"dataType" VARCHAR(16), 
 	length INTEGER, 

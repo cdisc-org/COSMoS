@@ -115,11 +115,11 @@ run;
 
 
 ods listing close;
-ods html5 file="&root/utilities/reports/get_sdtm_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/get_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..html";
+ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..xlsx";
 
 proc print data=all_issues_sdtm;
-  title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";
+  title "SDTM Specialization Issues - &todays";
   var _excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment;
 run;
 

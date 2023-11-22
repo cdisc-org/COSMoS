@@ -7,6 +7,7 @@ options ls=max ps=max;
 libname data "&root/utilities/data";
 
 %let today=%sysfunc(date(), is8601da.);
+%let todays=%sysfunc(date(), b8601da.);
 %let now=%sysfunc(datetime(), is8601dt.);
 
 %macro add2issues_bc(condition, type, expected, actual, comment, extracode=, severity=WARNING);

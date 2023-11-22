@@ -405,7 +405,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -670,7 +670,7 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -728,7 +728,7 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -826,9 +826,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2023-11-13T20:49:13",
-  "source_file_size": 4529,
-  "generation_date": "2023-11-13T20:49:27",
+  "source_file_date": "2023-11-22T12:13:26",
+  "source_file_size": 4525,
+  "generation_date": "2023-11-22T14:32:18",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",

@@ -110,11 +110,11 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
 
 ods listing close;
-ods html5 file="&root/utilities/reports/get_bc_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/get_bc_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_&todays..html";
+ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_&todays..xlsx";
 
 proc print data=all_issues_bc;
-  title "BC Issues - %sysfunc(date(), b8601da8.)";
+  title "BC Issues - &todays";
   var _excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment;
 run;
 

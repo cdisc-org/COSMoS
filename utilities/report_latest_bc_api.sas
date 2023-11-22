@@ -19,12 +19,17 @@
 
   %mend get_bc;  
 
+  %if %sysfunc(exist(&dsout)) %then %do;
+    %put WAR%str(NING): dataset &dsout already exists.;
+    %goto exit_macro;
+  %end;
+  
   %get_api_response(
       baseurl=&base_url_cosmos,
       endpoint=/mdr/bc/biomedicalconcepts,
       response_file=%sysfunc(pathname(work))/biomedicalconcept_latest.json
     );
-
+  
   %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
   libname jsontmp "%sysfunc(pathname(work))/jsontmp";
 
@@ -67,6 +72,8 @@
     set work.bc__:;
   run;
 
+  %exit_macro:;
+
 %mend get_latest_bc_api;
 
 %let root=C:/_github/cdisc-org/COSMoS;
@@ -81,8 +88,7 @@
 
 %get_latest_bc_api(dsout=data.bc_latest);
 
-
-data work.categories(drop=countwords i);
+data work.categories(keep=category);
   length category $1024;
   set data.bc_latest(keep=bc_categories);
   countwords=countw(bc_categories, ";");
@@ -99,45 +105,56 @@ data work.categories(drop=countwords i);
 proc sql;
   create table work.readme
     (
+     group char(32) label="Group",
+     order num label="Order",
+     class char(32) label="Class",
      column char(32) label="Column",
      description char(256) label="Description"
     )
     ;
   insert into work.readme
-    values("package_date", "Biomedical Concept package release date indicating when the BC package was published to production")
-    values("bc_categories", "Biomedical Concept category for the faciliation of API search and extract")
-    values("bc_id", "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
-    values("ncit_code", "NCIt C-code for the Biomedical Concept")
-    values("parent_bc_id", "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt")
-    values("short_name", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
-    values("synonyms", "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction")
-    values("result_scales", "Scale of measurement for the Biomedical Concept result")
-    values("definition", "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt")
-    values("system", "Identifies the code system for the synonym concept The URL of the code system should be used if it exists")
-    values("system_name", "Human-readable name for the code system")
-    values("code", "Synonym concept for the Biomedical Concept as defined in a code system")
-    values("dec_id", "NCI C-code for the BC Data Element Concep")
-    values("ncit_dec_code", "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
-    values("dec_label", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
-    values("data_type", "Data Type for the Data Element Concept")
-    values("example_set", "Example values for the Data Element Concept")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "package_date", "Biomedical Concept package release date indicating when the BC package was published to production")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "bc_categories", "Biomedical Concept category for the faciliation of API search and extract")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "bc_id", "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "ncit_code", "NCIt C-code for the Biomedical Concept")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "parent_bc_id", "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "short_name", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "synonyms", "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "result_scales", "Scale of measurement for the Biomedical Concept result")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "definition", "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt")
+    values("Biomedical Concept", 1, "Coding", "system", "Identifies the code system for the synonym concept The URL of the code system should be used if it exists")
+    values("Biomedical Concept", 1, "Coding", "system_name", "Human-readable name for the code system")
+    values("Biomedical Concept", 1, "Coding", "code", "Synonym concept for the Biomedical Concept as defined in a code system")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "dec_id", "NCI C-code for the BC Data Element Concep")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "ncit_dec_code", "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "dec_label", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "data_type", "Data Type for the Data Element Concept")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "example_set", "Example values for the Data Element Concept")
     ;
 quit;    
      
 %let headerstyle1 = {background=lightgreen color=black};
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/biomedical_concepts_&today..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/biomedical_concepts_&todays..xlsx";
 
-  ods text = "This spreadsheet contains the latest versions of CDISC Biomedical Concepts as of &today.";
-
-  proc report data=work.readme;
-    columns column description;
+  proc report data=work.readme spanrows missing;
+    columns group order column description class;
+    define group / order style(column)={vjust=t};
+    define order / order noprint;
+    define column / style(column)={vjust=t};
+    define description / style(column)={vjust=t};
+    define class / order "" style(column)={vjust=t};
+    
+    compute before _page_ /
+      style =[font_weight=bold just=l color=black];
+      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts as of &today.";
+    endcomp;  
   run;  
 
 ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'all');
 
-  title "Latest Biomedical Concepts generated on %sysfunc(datetime(), is8601dt.))";
+  title "Latest Biomedical Concepts generated on &today";
   proc report data=data.bc_latest;
     columns package_date bc_categories href bc_id ncit_code parent_bc_id short_name synonyms result_scales definition system system_name code
              dec_href dec_id ncit_dec_code dec_label data_type example_set;
@@ -191,7 +208,7 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 ods excel options(sheet_name="Categories" flow="tables" autofilter = 'all');
 
   proc report data=work.categories;
-    columns category bc_categories;
+    columns category;
   run;  
   
 ods excel close;

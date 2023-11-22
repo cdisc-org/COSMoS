@@ -25,6 +25,7 @@
          "properties": {
             "conceptId": {
                "description": "C-code for a codelist in NCIt",
+               "pattern": "^(C[0123456789]+)$",
                "type": "string"
             },
             "href": {
@@ -220,6 +221,7 @@
       "RoleEnum": {
          "description": "",
          "enum": [
+            "Identifier",
             "Qualifier",
             "Timing",
             "Topic"
@@ -241,6 +243,7 @@
          "properties": {
             "biomedicalConceptId": {
                "description": "Biomedical Concept identifier",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
             "datasetSpecializationId": {
@@ -313,6 +316,7 @@
             },
             "dataElementConceptId": {
                "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
             "dataType": {
@@ -437,6 +441,7 @@
    "properties": {
       "biomedicalConceptId": {
          "description": "Biomedical Concept identifier",
+         "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
          "type": "string"
       },
       "datasetSpecializationId": {

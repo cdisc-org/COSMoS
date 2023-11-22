@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-11-13T20:49:31
+# Generation date: 2023-11-22T14:32:22
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -245,7 +245,7 @@ class slots:
 
 slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
                    model_uri=COSMOS.conceptId, domain=None, range=URIRef,
-                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$'))
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.ncitCode = Slot(uri=COSMOS.ncitCode, name="ncitCode", curie=COSMOS.curie('ncitCode'),
                    model_uri=COSMOS.ncitCode, domain=None, range=Optional[str],
@@ -301,7 +301,7 @@ slots.exampleSet = Slot(uri=COSMOS.exampleSet, name="exampleSet", curie=COSMOS.c
 
 slots.BiomedicalConcept_conceptId = Slot(uri=COSMOS.conceptId, name="BiomedicalConcept_conceptId", curie=COSMOS.curie('conceptId'),
                    model_uri=COSMOS.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
-                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$'))
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.BiomedicalConcept_ncitCode = Slot(uri=COSMOS.ncitCode, name="BiomedicalConcept_ncitCode", curie=COSMOS.curie('ncitCode'),
                    model_uri=COSMOS.BiomedicalConcept_ncitCode, domain=BiomedicalConcept, range=Optional[str],
@@ -312,7 +312,7 @@ slots.BiomedicalConcept_href = Slot(uri=COSMOS.href, name="BiomedicalConcept_hre
 
 slots.DataElementConcept_conceptId = Slot(uri=COSMOS.conceptId, name="DataElementConcept_conceptId", curie=COSMOS.curie('conceptId'),
                    model_uri=COSMOS.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
-                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]+[0123456789]*)$'))
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.DataElementConcept_ncitCode = Slot(uri=COSMOS.ncitCode, name="DataElementConcept_ncitCode", curie=COSMOS.curie('ncitCode'),
                    model_uri=COSMOS.DataElementConcept_ncitCode, domain=DataElementConcept, range=Optional[str],

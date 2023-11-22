@@ -175,8 +175,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._bc.html";
-  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&today._bc.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._bc.html";
+  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._bc.xlsx";
 
     proc print data=bc;
     run;
@@ -229,8 +229,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._sdtm.html";
-  ods excel options(sheet_name="SDTM" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&today._sdtm.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.html";
+  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.xlsx";
 
     proc print data=sdtm_merged;
     run;
@@ -241,7 +241,7 @@ quit;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/reports/validate_spreadsheet_&today._sdtm_bc_issues.html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm_bc_issues.html";
 
   /* Unresolved BC Parent BCs */
   proc sql;

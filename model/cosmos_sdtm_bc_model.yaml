@@ -121,6 +121,7 @@ slots:
     recommended: true
     range: string
     description: Biomedical Concept identifier
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
 
   variables:
     multivalued: true
@@ -135,6 +136,7 @@ slots:
   dataElementConceptId:
     range: string
     description: Biomedical Concept Data Element Concept idenfifier foreign key
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
   isNonStandard:
     range: boolean
     description: Flag that indicates if the variable is a non-standard variable
@@ -150,6 +152,7 @@ slots:
     required: true
     range: string
     description: C-code for a codelist in NCIt
+    pattern: "^(C[0123456789]+)$"
   href:
     required: false
     range: uri
@@ -380,6 +383,7 @@ enums:
 
   RoleEnum:
     permissible_values:
+      Identifier:
       Qualifier:
       Timing:
       Topic:

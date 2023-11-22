@@ -100,6 +100,30 @@ variables:
     originType: Collected
     originSource: Investigator
     vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
   - name: QSEVAL
     dataElementConceptId: C51824
     isNonStandard: false

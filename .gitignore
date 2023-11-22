@@ -1,6 +1,8 @@
 .vscode/
 .hypothesis/
 __pycache__/
+*.code-workspace
+*.xpr
 test/
 tools/
 text/
@@ -17,5 +19,4 @@ create_*.html
 create_*.xlsx
 validate_*.html
 validate_*.xlsx
-*.code-workspace
 run_batch.*

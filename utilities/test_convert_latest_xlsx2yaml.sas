@@ -46,7 +46,7 @@ ods excel close;
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_latest_sdtm_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest__sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";
