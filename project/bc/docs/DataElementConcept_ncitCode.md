@@ -2,7 +2,7 @@
 # Slot: ncitCode
 
 
-An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
+NCI C-code for the BC Data Element Concept
 
 URI: [cosmos:DataElementConcept_ncitCode](https://www.cdisc.org/cosmos/1-0DataElementConcept_ncitCode)
 

@@ -19,10 +19,10 @@ URI: [cosmos:DataElementConcept](https://www.cdisc.org/cosmos/1-0DataElementConc
 ### Own
 
  * [DataElementConcept➞conceptId](DataElementConcept_conceptId.md)  <sub>1..1</sub>
-     * Description: NCI C-code for the BC Data Element Concept
+     * Description: An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
      * Range: [String](types/String.md)
  * [DataElementConcept➞ncitCode](DataElementConcept_ncitCode.md)  <sub>0..1</sub>
-     * Description: An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
+     * Description: NCI C-code for the BC Data Element Concept
      * Range: [String](types/String.md)
  * [DataElementConcept➞href](DataElementConcept_href.md)  <sub>0..1</sub>
      * Description: Link to NCIt for the Data Element Concept

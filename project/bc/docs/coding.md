@@ -22,7 +22,7 @@ URI: [cosmos:Coding](https://www.cdisc.org/cosmos/1-0Coding)
      * Description: Synonym concept for the Biomedical Concept as defined in a code system
      * Range: [String](types/String.md)
  * [system](system.md)  <sub>1..1</sub>
-     * Description: Identifies the code system for the synonym concept The URL of the code system should be used if it exists
+     * Description: Identifies the code system for the synonym concept. The URL of the code system should be used if it exists
      * Range: [String](types/String.md)
  * [systemName](systemName.md)  <sub>0..1</sub>
      * Description: Human-readable name for the code system

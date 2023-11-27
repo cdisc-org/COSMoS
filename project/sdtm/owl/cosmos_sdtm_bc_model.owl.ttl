@@ -28,11 +28,11 @@ cosmos: a owl:Ontology ;
         cosmos:SDTMVariable,
         cosmos:SubsetCodeList ;
     dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2023-11-22T14:31:53" ;
+    linkml:generation_date "2023-11-27T12:04:22" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "cosmos_sdtm_bc_model.yaml" ;
-    linkml:source_file_date "2023-11-22T12:23:55" ;
-    linkml:source_file_size 12389 .
+    linkml:source_file_date "2023-11-27T11:09:33" ;
+    linkml:source_file_size 12401 .
 
 cosmos:SDTMGroup a owl:Class,
         linkml:ClassDefinition ;
@@ -44,14 +44,14 @@ cosmos:SDTMGroup a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty cosmos:sdtmigEndVersion ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:source ;
-            owl:qualifiedCardinality 1 ],
+            owl:onProperty cosmos:biomedicalConceptId ],
         [ a owl:Restriction ;
             owl:onClass linkml:Date ;
             owl:onProperty cosmos:packageDate ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:source ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:allValuesFrom cosmos:SDTMVariable ;
@@ -62,19 +62,19 @@ cosmos:SDTMGroup a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
-            owl:onProperty cosmos:shortName ;
+            owl:onProperty cosmos:domain ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:biomedicalConceptId ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:datasetSpecializationId ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty cosmos:domain ;
+            owl:onProperty cosmos:sdtmigEndVersion ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:shortName ;
             owl:qualifiedCardinality 1 ] .
 
 cosmos:SubsetCodeList a owl:Class,
@@ -84,12 +84,6 @@ cosmos:SubsetCodeList a owl:Class,
             owl:onClass linkml:String ;
             owl:onProperty cosmos:subsetLabel ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom cosmos:CodeListTerm ;
-                        owl:onProperty cosmos:codelistTerm ] [ a owl:Restriction ;
-                        owl:onProperty cosmos:codelistTerm ;
-                        owl:someValuesFrom cosmos:CodeListTerm ] ) ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:parentCodelist ;
@@ -97,7 +91,13 @@ cosmos:SubsetCodeList a owl:Class,
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:subsetShortName ;
-            owl:qualifiedCardinality 1 ] .
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom cosmos:CodeListTerm ;
+                        owl:onProperty cosmos:codelistTerm ] [ a owl:Restriction ;
+                        owl:onProperty cosmos:codelistTerm ;
+                        owl:someValuesFrom cosmos:CodeListTerm ] ) ] .
 
 cosmos:assignedTerm a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -108,7 +108,7 @@ cosmos:biomedicalConceptId a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "biomedicalConceptId" ;
     rdfs:range linkml:String ;
-    skos:definition "Biomedical Concept identifier" .
+    skos:definition "Biomedical Concept identifier foreign key" .
 
 cosmos:codelist a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -126,7 +126,7 @@ cosmos:dataElementConceptId a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "dataElementConceptId" ;
     rdfs:range linkml:String ;
-    skos:definition "Biomedical Concept Data Element Concept idenfifier foreign key" .
+    skos:definition "Biomedical Concept Data Element Concept identifier foreign key" .
 
 cosmos:dataType a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -767,22 +767,18 @@ cosmos:CodeList a owl:Class,
             owl:onProperty cosmos:submissionValue ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:conceptId ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Uri ;
-            owl:onProperty cosmos:href ] .
+            owl:onProperty cosmos:href ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:conceptId ;
+            owl:qualifiedCardinality 1 ] .
 
 cosmos:RelationShip a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "RelationShip" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass cosmos:LinkingPhraseEnum ;
-            owl:onProperty cosmos:linkingPhrase ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:subject ;
             owl:qualifiedCardinality 1 ],
@@ -793,6 +789,10 @@ cosmos:RelationShip a owl:Class,
         [ a owl:Restriction ;
             owl:onClass cosmos:PredicateTermEnum ;
             owl:onProperty cosmos:predicateTerm ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass cosmos:LinkingPhraseEnum ;
+            owl:onProperty cosmos:linkingPhrase ;
             owl:qualifiedCardinality 1 ] .
 
 cosmos:SDTMDatasetSpecializationPackageTypeEnum a owl:Class,
@@ -806,40 +806,12 @@ cosmos:SDTMVariable a owl:Class,
     rdfs:label "SDTMVariable" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:mandatoryVariable ],
+            owl:onClass linkml:String ;
+            owl:onProperty cosmos:subsetCodelist ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:dataElementConceptId ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:OriginTypeEnum ;
-            owl:onProperty cosmos:originType ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:OriginSourceEnum ;
-            owl:onProperty cosmos:originSource ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:CodeList ;
-            owl:onProperty cosmos:codelist ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:RoleEnum ;
-            owl:onProperty cosmos:role ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty cosmos:length ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:RelationShip ;
-            owl:onProperty cosmos:relationship ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty cosmos:significantDigits ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Boolean ;
@@ -850,35 +822,63 @@ cosmos:SDTMVariable a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:SDTMVariableDataTypeEnum ;
+            owl:onProperty cosmos:dataType ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty cosmos:significantDigits ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:isNonStandard ],
+            owl:onProperty cosmos:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:RelationShip ;
+            owl:onProperty cosmos:relationship ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Integer ;
+            owl:onProperty cosmos:length ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:OriginSourceEnum ;
+            owl:onProperty cosmos:originSource ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos:valueList ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:SDTMVariableDataTypeEnum ;
-            owl:onProperty cosmos:dataType ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos:subsetCodelist ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:ComparatorEnum ;
-            owl:onProperty cosmos:comparator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos:AssignedTerm ;
-            owl:onProperty cosmos:assignedTerm ],
+            owl:onClass cosmos:CodeList ;
+            owl:onProperty cosmos:codelist ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty cosmos:format ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:ComparatorEnum ;
+            owl:onProperty cosmos:comparator ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos:mandatoryValue ] .
+            owl:onProperty cosmos:mandatoryValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:OriginTypeEnum ;
+            owl:onProperty cosmos:originType ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:RoleEnum ;
+            owl:onProperty cosmos:role ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:Boolean ;
+            owl:onProperty cosmos:isNonStandard ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass cosmos:AssignedTerm ;
+            owl:onProperty cosmos:assignedTerm ] .
 
 cosmos:CodeListTerm a owl:Class,
         linkml:ClassDefinition ;

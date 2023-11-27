@@ -242,7 +242,7 @@
          "description": "",
          "properties": {
             "biomedicalConceptId": {
-               "description": "Biomedical Concept identifier",
+               "description": "Biomedical Concept identifier foreign key",
                "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
@@ -315,7 +315,7 @@
                "description": "Comparison operator for SDTM group variables included in VLM"
             },
             "dataElementConceptId": {
-               "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+               "description": "Biomedical Concept Data Element Concept identifier foreign key",
                "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
@@ -440,7 +440,7 @@
    "metamodel_version": "1.7.0",
    "properties": {
       "biomedicalConceptId": {
-         "description": "Biomedical Concept identifier",
+         "description": "Biomedical Concept identifier foreign key",
          "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
          "type": "string"
       },

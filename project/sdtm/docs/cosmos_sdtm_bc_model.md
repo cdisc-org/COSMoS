@@ -28,12 +28,12 @@
  * [assignedTerm](assignedTerm.md)
  * [➞conceptId](assignedTerm__conceptId.md) - C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
  * [➞value](assignedTerm__value.md) - Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
- * [biomedicalConceptId](biomedicalConceptId.md) - Biomedical Concept identifier
+ * [biomedicalConceptId](biomedicalConceptId.md) - Biomedical Concept identifier foreign key
  * [codelist](codelist.md) - Codelist
  * [codelistTerm](codelistTerm.md)
  * [comparator](comparator.md) - Comparison operator for SDTM group variables included in VLM
  * [conceptId](conceptId.md) - C-code for a codelist in NCIt
- * [dataElementConceptId](dataElementConceptId.md) - Biomedical Concept Data Element Concept idenfifier foreign key
+ * [dataElementConceptId](dataElementConceptId.md) - Biomedical Concept Data Element Concept identifier foreign key
  * [dataType](dataType.md) - Variable data type
  * [datasetSpecializationId](datasetSpecializationId.md) - Identifier for SDTM Value Level Metadata group
  * [domain](domain.md) - Domain for the SDTM specialization group

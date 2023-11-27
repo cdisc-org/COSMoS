@@ -2,7 +2,7 @@
 # Slot: system
 
 
-Identifies the code system for the synonym concept The URL of the code system should be used if it exists
+Identifies the code system for the synonym concept. The URL of the code system should be used if it exists
 
 URI: [cosmos:system](https://www.cdisc.org/cosmos/1-0system)
 

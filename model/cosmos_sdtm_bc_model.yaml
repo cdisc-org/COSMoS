@@ -120,7 +120,7 @@ slots:
   biomedicalConceptId:
     recommended: true
     range: string
-    description: Biomedical Concept identifier
+    description: Biomedical Concept identifier foreign key
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
 
   variables:
@@ -135,7 +135,7 @@ slots:
     identifier: true
   dataElementConceptId:
     range: string
-    description: Biomedical Concept Data Element Concept idenfifier foreign key
+    description: Biomedical Concept Data Element Concept identifier foreign key
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
   isNonStandard:
     range: boolean

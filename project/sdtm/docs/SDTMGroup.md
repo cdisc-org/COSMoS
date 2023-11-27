@@ -39,7 +39,7 @@ URI: [cosmos:SDTMGroup](https://www.cdisc.org/cosmos/1-0SDTMGroup)
      * Description: The last SDTMIG version that is applicable to the BC dataset specialization
      * Range: [String](types/String.md)
  * [biomedicalConceptId](biomedicalConceptId.md)  <sub>0..1</sub>
-     * Description: Biomedical Concept identifier
+     * Description: Biomedical Concept identifier foreign key
      * Range: [String](types/String.md)
  * [variables](variables.md)  <sub>0..\*</sub>
      * Description: Variable included in the SDTM dataset specialization

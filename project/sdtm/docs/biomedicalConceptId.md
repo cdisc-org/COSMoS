@@ -2,7 +2,7 @@
 # Slot: biomedicalConceptId
 
 
-Biomedical Concept identifier
+Biomedical Concept identifier foreign key
 
 URI: [cosmos:biomedicalConceptId](https://www.cdisc.org/cosmos/1-0biomedicalConceptId)
 

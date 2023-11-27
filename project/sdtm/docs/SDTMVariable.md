@@ -22,7 +22,7 @@ URI: [cosmos:SDTMVariable](https://www.cdisc.org/cosmos/1-0SDTMVariable)
      * Description: Variable included in the SDTM dataset specialization
      * Range: [String](types/String.md)
  * [dataElementConceptId](dataElementConceptId.md)  <sub>0..1</sub>
-     * Description: Biomedical Concept Data Element Concept idenfifier foreign key
+     * Description: Biomedical Concept Data Element Concept identifier foreign key
      * Range: [String](types/String.md)
  * [isNonStandard](isNonStandard.md)  <sub>0..1</sub>
      * Description: Flag that indicates if the variable is a non-standard variable

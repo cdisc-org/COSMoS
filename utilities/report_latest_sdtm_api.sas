@@ -109,7 +109,12 @@
 
 %create_template(type=sdtm, out=work.sdtm__template);
     
-%*get_latest_sdtm_api(dsout=data.sdtm_latest);
+%get_latest_sdtm_api(dsout=data.sdtm_latest);
+
+proc sort data=data.sdtm_latest out=work.domains(keep=domain) nodupkey;
+ by domain;
+run; 
+
 
 proc sql;
   create table work.readme
@@ -122,38 +127,38 @@ proc sql;
     )
     ;
   insert into work.readme
-    values("SDTM Group", 1, "", "package_date", "Biomedical Concept package release date indicating when the BC package was published to production")
-    values("SDTM Group", 1, "", "bc_id", "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
-    values("SDTM Group", 1, "", "sdtmig_start_version", "The earliest SDTMIG version applicable to the BC dataset specialization")
-    values("SDTM Group", 1, "", "sdtmig_end_version", "The last SDTMIG version that is applicable to the BC dataset specialization")
-    values("SDTM Group", 1, "", "domain", "Domain for the SDTM specialization group")
-    values("SDTM Group", 1, "", "vlm_source", "SDTM VLM Source which categorizes VLM groups by topic variable")
-    values("SDTM Group", 1, "", "vlm_group_id", "Identifier for SDTM Value Level Metadata group")
-    values("SDTM Group", 1, "", "short_name", "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id")
-    values("SDTM Variable", 1, "", "sdtm_variable", "Variable included in the SDTM dataset specialization")
-    values("SDTM Variable", 1, "", "dec_id", "NCI C-code for the BC Data Element Concep")
-    values("SDTM Variable", 1, "", "nsv_flag", "Flag that indicates if the variable is a non-standard variable")
-    values("SDTM Variable", 2, "CodeList", "codelist", "CodeList")
+    values("SDTM Group", 1, "SDTMGroup", "package_date", "Biomedical Concept package release date indicating when the BC package was published to production")
+    values("SDTM Group", 1, "SDTMGroup", "bc_id", "Biomedical Concept identifier foreign key")
+    values("SDTM Group", 1, "SDTMGroup", "sdtmig_start_version", "The earliest SDTMIG version applicable to the BC dataset specialization")
+    values("SDTM Group", 1, "SDTMGroup", "sdtmig_end_version", "The last SDTMIG version that is applicable to the BC dataset specialization")
+    values("SDTM Group", 1, "SDTMGroup", "domain", "Domain for the SDTM specialization group")
+    values("SDTM Group", 1, "SDTMGroup", "vlm_source", "SDTM VLM Source which categorizes VLM groups by topic variable")
+    values("SDTM Group", 1, "SDTMGroup", "vlm_group_id", "Identifier for SDTM Value Level Metadata group")
+    values("SDTM Group", 1, "SDTMGroup", "short_name", "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id")
+    values("SDTM Variable", 1, "SDTMVariable", "sdtm_variable", "Variable included in the SDTM dataset specialization")
+    values("SDTM Variable", 1, "SDTMVariable", "dec_id", "Biomedical Concept Data Element Concept idenfifier foreign key")
+    values("SDTM Variable", 1, "SDTMVariable", "nsv_flag", "Flag that indicates if the variable is a non-standard variable")
+    values("SDTM Variable", 2, "CodeList", "codelist", "C-code for a codelist in NCIt")
     values("SDTM Variable", 2, "CodeList", "codelist_submission_value", "CDISC submission value for the codelist")
-    values("SDTM Variable", 3, "", "subset_codelist", "Subset codelist short name")
-    values("SDTM Variable", 3, "", "value_list", "List of SDTM submission values used if subset codelist is not applicable")
+    values("SDTM Variable", 3, "SDTMVariable", "subset_codelist", "Subset codelist short name")
+    values("SDTM Variable", 3, "SDTMVariable", "value_list", "List of SDTM submission values used if subset codelist is not applicable")
     values("SDTM Variable", 4, "AssignedTerm", "assigned_term", "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply")
     values("SDTM Variable", 4, "AssignedTerm", "assigned_value", "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value")
-    values("SDTM Variable", 5, "", "role", "SDTM variable role")
-    values("SDTM Variable", 6, "RelationShip", "subject", "Subject in a variable relationship")
-    values("SDTM Variable", 6, "RelationShip", "linking_phrase", "Variable relationship descriptive linking phrase")
-    values("SDTM Variable", 6, "RelationShip", "predicate_term", "Short variable relationship linking phrase for programming purposes")
-    values("SDTM Variable", 6, "RelationShip", "object", "Object in a variable relationship")
-    values("SDTM Variable", 7, "", "data_type", "Variable data type")
-    values("SDTM Variable", 7, "", "length", "Variable length")
-    values("SDTM Variable", 7, "", "format", "Variable display format")
-    values("SDTM Variable", 7, "", "significant_digits", "Variable significant_digits")
-    values("SDTM Variable", 7, "", "mandatory_variable", "Indicator that variable must be present within the SDTM group")
-    values("SDTM Variable", 7, "", "mandatory_value", "Indicator that variable must be populated within the SDTM group")
-    values("SDTM Variable", 7, "", "origin_type", "Variable origin type (define-XML v21)")
-    values("SDTM Variable", 7, "", "origin_source", "Variable origin source (define-XML v21)")
-    values("SDTM Variable", 7, "", "comparator", " Comparison operator for SDTM group variables included in VLM")
-    values("SDTM Variable", 7, "", "vlm_target", "Target variable for VLM")
+    values("SDTM Variable", 5, "SDTMVariable", "role", "SDTM variable role")
+    values("SDTM Variable", 6, "Relationship", "subject", "Subject in a variable relationship")
+    values("SDTM Variable", 6, "Relationship", "linking_phrase", "Variable relationship descriptive linking phrase")
+    values("SDTM Variable", 6, "Relationship", "predicate_term", "Short variable relationship linking phrase for programming purposes")
+    values("SDTM Variable", 6, "Relationship", "object", "Object in a variable relationship")
+    values("SDTM Variable", 7, "SDTMVariable", "data_type", "Variable data type")
+    values("SDTM Variable", 7, "SDTMVariable", "length", "Variable length")
+    values("SDTM Variable", 7, "SDTMVariable", "format", "Variable display format")
+    values("SDTM Variable", 7, "SDTMVariable", "significant_digits", "Variable significant_digits")
+    values("SDTM Variable", 7, "SDTMVariable", "mandatory_variable", "Indicator that variable must be present within the SDTM group")
+    values("SDTM Variable", 7, "SDTMVariable", "mandatory_value", "Indicator that variable must be populated within the SDTM group")
+    values("SDTM Variable", 7, "SDTMVariable", "origin_type", "Variable origin type (define-XML v21)")
+    values("SDTM Variable", 7, "SDTMVariable", "origin_source", "Variable origin source (define-XML v21)")
+    values("SDTM Variable", 7, "SDTMVariable", "comparator", " Comparison operator for SDTM group variables included in VLM")
+    values("SDTM Variable", 7, "SDTMVariable", "vlm_target", "Target variable for VLM")
     ;
 quit;    
 
@@ -161,7 +166,7 @@ quit;
 options  missing= " ";
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/sdtm_dataset_specializations_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_sdtm_dataset_specializations_&todays..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -169,11 +174,11 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     define order / order noprint;
     define column / style(column)={vjust=t};
     define description / style(column)={vjust=t};
-    define class / order "" style(column)={vjust=t};
+    define class / order style(column)={vjust=t};
     
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains  the latest versions of CDISC SDTM Dataset Specializations as of &today.";
+      line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &today.";
     endcomp;  
   run;  
 
@@ -222,6 +227,12 @@ ods excel options(sheet_name="SDTM Dataset Specializations" flow="tables" autofi
         end;  
       endcomp;
 
+  run;  
+  
+ods excel options(sheet_name="Domains" flow="tables" autofilter = 'none');
+
+  proc report data=work.domains;
+    columns domain;
   run;  
   
 ods excel close;

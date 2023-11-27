@@ -824,7 +824,7 @@
     {
       "name": "biomedicalConceptId",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
-      "description": "Biomedical Concept identifier",
+      "description": "Biomedical Concept identifier foreign key",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
       "owner": "SDTMGroup",
@@ -870,7 +870,7 @@
     {
       "name": "dataElementConceptId",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
-      "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+      "description": "Biomedical Concept Data Element Concept identifier foreign key",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
       "owner": "SDTMVariable",
@@ -1452,9 +1452,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-11-22T12:23:55",
-  "source_file_size": 12389,
-  "generation_date": "2023-11-22T14:31:52",
+  "source_file_date": "2023-11-27T11:09:33",
+  "source_file_size": 12401,
+  "generation_date": "2023-11-27T12:04:21",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

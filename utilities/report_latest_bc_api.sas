@@ -114,19 +114,19 @@ proc sql;
     ;
   insert into work.readme
     values("Biomedical Concept", 1, "BiomedicalConcept", "package_date", "Biomedical Concept package release date indicating when the BC package was published to production")
-    values("Biomedical Concept", 1, "BiomedicalConcept", "bc_categories", "Biomedical Concept category for the faciliation of API search and extract")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "short_name", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
     values("Biomedical Concept", 1, "BiomedicalConcept", "bc_id", "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
     values("Biomedical Concept", 1, "BiomedicalConcept", "ncit_code", "NCIt C-code for the Biomedical Concept")
     values("Biomedical Concept", 1, "BiomedicalConcept", "parent_bc_id", "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt")
-    values("Biomedical Concept", 1, "BiomedicalConcept", "short_name", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
+    values("Biomedical Concept", 1, "BiomedicalConcept", "bc_categories", "Biomedical Concept category for the faciliation of API search and extract")
     values("Biomedical Concept", 1, "BiomedicalConcept", "synonyms", "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction")
     values("Biomedical Concept", 1, "BiomedicalConcept", "result_scales", "Scale of measurement for the Biomedical Concept result")
     values("Biomedical Concept", 1, "BiomedicalConcept", "definition", "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt")
-    values("Biomedical Concept", 1, "Coding", "system", "Identifies the code system for the synonym concept The URL of the code system should be used if it exists")
+    values("Biomedical Concept", 1, "Coding", "system", "Identifies the code system for the synonym concept. The URL of the code system should be used if it exists")
     values("Biomedical Concept", 1, "Coding", "system_name", "Human-readable name for the code system")
     values("Biomedical Concept", 1, "Coding", "code", "Synonym concept for the Biomedical Concept as defined in a code system")
-    values("Data Element Concept (DEC)", 2, "DataElementConcept", "dec_id", "NCI C-code for the BC Data Element Concep")
-    values("Data Element Concept (DEC)", 2, "DataElementConcept", "ncit_dec_code", "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "dec_id", "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt")
+    values("Data Element Concept (DEC)", 2, "DataElementConcept", "ncit_dec_code", "NCI C-code for the BC Data Element Concept")
     values("Data Element Concept (DEC)", 2, "DataElementConcept", "dec_label", "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt")
     values("Data Element Concept (DEC)", 2, "DataElementConcept", "data_type", "Data Type for the Data Element Concept")
     values("Data Element Concept (DEC)", 2, "DataElementConcept", "example_set", "Example values for the Data Element Concept")
@@ -136,7 +136,7 @@ quit;
 %let headerstyle1 = {background=lightgreen color=black};
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/biomedical_concepts_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_biomedical_concepts_&todays..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -144,11 +144,11 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     define order / order noprint;
     define column / style(column)={vjust=t};
     define description / style(column)={vjust=t};
-    define class / order "" style(column)={vjust=t};
+    define class / order style(column)={vjust=t};
     
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts as of &today.";
+      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &today.";
     endcomp;  
   run;  
 
@@ -156,7 +156,7 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 
   title "Latest Biomedical Concepts generated on &today";
   proc report data=data.bc_latest;
-    columns package_date bc_categories href bc_id ncit_code parent_bc_id short_name synonyms result_scales definition system system_name code
+    columns package_date short_name href bc_id ncit_code parent_bc_id bc_categories synonyms result_scales definition system system_name code
              dec_href dec_id ncit_dec_code dec_label data_type example_set;
     
     define package_date /  style(header) = &headerstyle1;
@@ -205,7 +205,7 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 
   run;  
 
-ods excel options(sheet_name="Categories" flow="tables" autofilter = 'all');
+ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');
 
   proc report data=work.categories;
     columns category;

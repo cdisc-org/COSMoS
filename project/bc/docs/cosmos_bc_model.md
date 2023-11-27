@@ -26,7 +26,7 @@
  * [coding](coding.md)
  * [conceptId](conceptId.md) - An identifier that uniquely represents an entity
      * [BiomedicalConcept➞conceptId](BiomedicalConcept_conceptId.md) - A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
-     * [DataElementConcept➞conceptId](DataElementConcept_conceptId.md) - NCI C-code for the BC Data Element Concept
+     * [DataElementConcept➞conceptId](DataElementConcept_conceptId.md) - An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
  * [dataElementConcepts](dataElementConcepts.md) - Data Element Concept
  * [dataType](dataType.md) - Data Type for the Data Element Concept
  * [definition](definition.md) - NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
@@ -36,14 +36,14 @@
      * [DataElementConcept➞href](DataElementConcept_href.md) - Link to NCIt for the Data Element Concept
  * [ncitCode](ncitCode.md) - NCIt code
      * [BiomedicalConcept➞ncitCode](BiomedicalConcept_ncitCode.md) - NCIt C-code for the Biomedical Concept
-     * [DataElementConcept➞ncitCode](DataElementConcept_ncitCode.md) - An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
+     * [DataElementConcept➞ncitCode](DataElementConcept_ncitCode.md) - NCI C-code for the BC Data Element Concept
  * [packageDate](packageDate.md) - Biomedical Concept package release date indicating when the BC package was published to production
  * [packageType](packageType.md) - Package type (bc for Biomedical Concepts)
  * [parentConceptId](parentConceptId.md) - C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
  * [resultScales](resultScales.md) - Scale of measurement for the Biomedical Concept result
  * [shortName](shortName.md) - NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
  * [synonyms](synonyms.md) - Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
- * [system](system.md) - Identifies the code system for the synonym concept The URL of the code system should be used if it exists
+ * [system](system.md) - Identifies the code system for the synonym concept. The URL of the code system should be used if it exists
  * [systemName](systemName.md) - Human-readable name for the code system
 
 ### Enums

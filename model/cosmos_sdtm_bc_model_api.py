@@ -54,7 +54,7 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         Queries for instances of `SDTMVariable`
 
         :param name: Variable included in the SDTM dataset specialization
-        :param dataElementConceptId: Biomedical Concept Data Element Concept idenfifier foreign key
+        :param dataElementConceptId: Biomedical Concept Data Element Concept identifier foreign key
         :param isNonStandard: Flag that indicates if the variable is a non-standard variable
         :param codelist: Codelist
         :param subsetCodelist: Subset codelist short name
