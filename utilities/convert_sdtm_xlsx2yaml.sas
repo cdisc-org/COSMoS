@@ -94,7 +94,7 @@ run;
 
 %let package=20231212;
 %let folder=20231212_r6;
-%let ExcelFile=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
