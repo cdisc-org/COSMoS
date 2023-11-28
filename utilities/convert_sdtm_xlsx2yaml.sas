@@ -92,26 +92,26 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_PR_EDITS), subsetsDS=subsets);
 */
 
-%let package=20231219;
-%let folder=20231219_r6;
+%let package=20231212;
+%let folder=20231212_r6;
 %let ExcelFile=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=cm_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CM_EDITS));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ds,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DS));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=eg_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EG_EDITS));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ex,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EX));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ie,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IE));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB_EDITS));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mh,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MH));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PR));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=qs,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_QS));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sc,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=su,       package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SU));
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=vs_edits, package=&package, override_package_date=%str(2023-12-19), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS_EDITS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=cm_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CM_EDITS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ds,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=eg_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EG_EDITS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ex,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EX));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ie,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IE));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB_EDITS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mh,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MH));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PR));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=qs,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_QS));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sc,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=su,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SU));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=vs_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS_EDITS));
 
 
 ods listing close;
