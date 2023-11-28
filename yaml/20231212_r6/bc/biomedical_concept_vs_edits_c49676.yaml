@@ -1,0 +1,79 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C49676
+ncitCode: C49676
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676
+parentConceptId: C49672
+categories:
+  - Vital Signs
+shortName: Pulse Rate
+synonyms:
+  - Pulse
+resultScales:
+  - Quantitative
+definition: The rate of the pulse as observed in an artery, expressed as beats per minute. It can be measured at several anatomic sites, including the wrist, neck, temple, groin, behind the knees, or on top of the foot.
+dataElementConcepts:
+  - conceptId: C77140
+    ncitCode: C77140
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C77140
+    shortName: Clinical Test Result
+    dataType: integer
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C73688
+    shortName: Count per Minute
+    dataType: string
+    exampleSet:
+      - "Beats per Minute"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Wrist"
+      - "Neck"
+      - "Temple"
+      - "Groin"
+      - "Behind the knees"
+      - "On top of the foot"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Acoustic Monitoring"
+      - "Auscaltation Manual"
+      - "Palpation"
+      - "Oscillometry"
+      - "Pulse Oximetry"
+      - "EKG/ECG"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Decupitus"
+      - "Fowlers"
+      - "Lateral Decupitus"
+      - "Prone"
+      - "Reverse Trendelenburg"
+      - "Semi-Fowlers"
+      - "Semi-Recumbent"
+      - "Sitting"
+      - "Sitting Legs Dependent"
+      - "Sling"
+      - "Standing"
+      - "Supine"
+      - "Trendelenburg"
+      - "Unconstrained"

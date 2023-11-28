@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-09-19T12:24:20
+# Generation date: 2023-11-27T12:04:12
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -382,6 +382,7 @@ class SDTMDatasetSpecializationPackageTypeEnum(EnumDefinitionImpl):
 class SDTMVariableDataTypeEnum(EnumDefinitionImpl):
 
     datetime = PermissibleValue(text="datetime")
+    durationDatetime = PermissibleValue(text="durationDatetime")
     float = PermissibleValue(text="float")
     integer = PermissibleValue(text="integer")
     text = PermissibleValue(text="text")
@@ -442,34 +443,60 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is decoded by the value in") )
         setattr(cls, "is original text for",
                 PermissibleValue(text="is original text for") )
+        setattr(cls, "is the administered amount of the treatment in",
+                PermissibleValue(text="is the administered amount of the treatment in") )
         setattr(cls, "is the administration anatomical location for the treatment in",
                 PermissibleValue(text="is the administration anatomical location for the treatment in") )
+        setattr(cls, "is the aspect of the event used to define the date in",
+                PermissibleValue(text="is the aspect of the event used to define the date in") )
         setattr(cls, "is the clinical significance interpretation for",
                 PermissibleValue(text="is the clinical significance interpretation for") )
         setattr(cls, "is the code for the value in",
                 PermissibleValue(text="is the code for the value in") )
         setattr(cls, "is the dictionary code for the test in",
                 PermissibleValue(text="is the dictionary code for the test in") )
+        setattr(cls, "is the dictionary-derived term for the value in",
+                PermissibleValue(text="is the dictionary-derived term for the value in") )
+        setattr(cls, "is the dictionary-derived class code for the value in",
+                PermissibleValue(text="is the dictionary-derived class code for the value in") )
+        setattr(cls, "is the dictionary-derived class name for the value in",
+                PermissibleValue(text="is the dictionary-derived class name for the value in") )
+        setattr(cls, "is the duration for",
+                PermissibleValue(text="is the duration for") )
+        setattr(cls, "is the end date for",
+                PermissibleValue(text="is the end date for") )
         setattr(cls, "is the epoch of the performance of the test in",
                 PermissibleValue(text="is the epoch of the performance of the test in") )
+        setattr(cls, "is the frequency of administration of the amount in",
+                PermissibleValue(text="is the frequency of administration of the amount in") )
         setattr(cls, "is the identifier for the source data used in the performance of the test in",
                 PermissibleValue(text="is the identifier for the source data used in the performance of the test in") )
         setattr(cls, "is the material type of the subject of the activity in",
                 PermissibleValue(text="is the material type of the subject of the activity in") )
+        setattr(cls, "is the medical condition that is the reason for the treatment in",
+                PermissibleValue(text="is the medical condition that is the reason for the treatment in") )
         setattr(cls, "is the method for the test in",
                 PermissibleValue(text="is the method for the test in") )
+        setattr(cls, "is the part of the body through which is administered the treatment in",
+                PermissibleValue(text="is the part of the body through which is administered the treatment in") )
+        setattr(cls, "is the physical form of the product in",
+                PermissibleValue(text="is the physical form of the product in") )
         setattr(cls, "is the result of the test in",
                 PermissibleValue(text="is the result of the test in") )
         setattr(cls, "is the role of the assessor who performed the test in",
                 PermissibleValue(text="is the role of the assessor who performed the test in") )
         setattr(cls, "is the specimen tested in",
                 PermissibleValue(text="is the specimen tested in") )
+        setattr(cls, "is the start date for",
+                PermissibleValue(text="is the start date for") )
         setattr(cls, "is the subject position during performance of the test in",
                 PermissibleValue(text="is the subject position during performance of the test in") )
         setattr(cls, "is the subject's fasting status during the performance of the test in",
                 PermissibleValue(text="is the subject's fasting status during the performance of the test in") )
         setattr(cls, "is the unit for the value in",
                 PermissibleValue(text="is the unit for the value in") )
+        setattr(cls, "is the unit for",
+                PermissibleValue(text="is the unit for") )
         setattr(cls, "specifies the anatomical location of",
                 PermissibleValue(text="specifies the anatomical location of") )
         setattr(cls, "specifies the anatomical location of the performance of the test in",
@@ -480,30 +507,6 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="values are grouped by") )
         setattr(cls, "was the subject position during performance of the test in",
                 PermissibleValue(text="was the subject position during performance of the test in") )
-        setattr(cls, "is the dictionary-derived term for the value in",
-                PermissibleValue(text="is the dictionary-derived term for the value in") )
-        setattr(cls, "is the dictionary-derived class code for the value in",
-                PermissibleValue(text="is the dictionary-derived class code for the value in") )
-        setattr(cls, "is the dictionary-derived class name for the value in",
-                PermissibleValue(text="is the dictionary-derived class name for the value in") )
-        setattr(cls, "is the end date for",
-                PermissibleValue(text="is the end date for") )
-        setattr(cls, "is the start date for",
-                PermissibleValue(text="is the start date for") )
-        setattr(cls, "is the administered amount of the treatment in",
-                PermissibleValue(text="is the administered amount of the treatment in") )
-        setattr(cls, "is the unit for",
-                PermissibleValue(text="is the unit for") )
-        setattr(cls, "is the physical form of the product in",
-                PermissibleValue(text="is the physical form of the product in") )
-        setattr(cls, "is the medical condition that is the reason for the treatment in",
-                PermissibleValue(text="is the medical condition that is the reason for the treatment in") )
-        setattr(cls, "is the frequency of administration of the amount in",
-                PermissibleValue(text="is the frequency of administration of the amount in") )
-        setattr(cls, "is the part of the body through which is administered the treatment in",
-                PermissibleValue(text="is the part of the body through which is administered the treatment in") )
-        setattr(cls, "is the aspect of the event used to define the date in",
-                PermissibleValue(text="is the aspect of the event used to define the date in") )
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
@@ -587,6 +590,7 @@ class OriginSourceEnum(EnumDefinitionImpl):
 
 class RoleEnum(EnumDefinitionImpl):
 
+    Identifier = PermissibleValue(text="Identifier")
     Qualifier = PermissibleValue(text="Qualifier")
     Timing = PermissibleValue(text="Timing")
     Topic = PermissibleValue(text="Topic")
@@ -633,7 +637,8 @@ slots.sdtmigEndVersion = Slot(uri=COSMOS.sdtmigEndVersion, name="sdtmigEndVersio
                    model_uri=COSMOS.sdtmigEndVersion, domain=None, range=Optional[str])
 
 slots.biomedicalConceptId = Slot(uri=COSMOS.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS.curie('biomedicalConceptId'),
-                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str])
+                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.variables = Slot(uri=COSMOS.variables, name="variables", curie=COSMOS.curie('variables'),
                    model_uri=COSMOS.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
@@ -642,7 +647,8 @@ slots.name = Slot(uri=COSMOS.name, name="name", curie=COSMOS.curie('name'),
                    model_uri=COSMOS.name, domain=None, range=URIRef)
 
 slots.dataElementConceptId = Slot(uri=COSMOS.dataElementConceptId, name="dataElementConceptId", curie=COSMOS.curie('dataElementConceptId'),
-                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str])
+                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.isNonStandard = Slot(uri=COSMOS.isNonStandard, name="isNonStandard", curie=COSMOS.curie('isNonStandard'),
                    model_uri=COSMOS.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
@@ -654,7 +660,8 @@ slots.subsetCodelist = Slot(uri=COSMOS.subsetCodelist, name="subsetCodelist", cu
                    model_uri=COSMOS.subsetCodelist, domain=None, range=Optional[str])
 
 slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
-                   model_uri=COSMOS.conceptId, domain=None, range=URIRef)
+                   model_uri=COSMOS.conceptId, domain=None, range=URIRef,
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
 
 slots.href = Slot(uri=COSMOS.href, name="href", curie=COSMOS.curie('href'),
                    model_uri=COSMOS.href, domain=None, range=Optional[Union[str, URI]])

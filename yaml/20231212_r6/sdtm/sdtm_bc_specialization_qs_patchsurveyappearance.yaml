@@ -1,0 +1,151 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: PATCHSURVEYAPPEARANCE
+domain: QS
+shortName: "TTS Acceptability Survey - Patch Appearance"
+source: QS.QSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: NEW_LZZT1
+variables:
+  - name: QSTESTCD
+    isNonStandard: false
+    assignedTerm:
+      value: "TTSACC01"
+    role: Topic
+    relationship:
+      subject: QSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: QTEST
+    isNonStandard: false
+    assignedTerm:
+      value: "TTSACC01 - Patch Appearance"
+    role: Qualifier
+    relationship:
+      subject: QTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSCAT
+    isNonStandard: false
+    codelist:
+      conceptId: C100129
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C100129
+      submissionValue: QSCAT
+    assignedTerm:
+      value: "TTS ACCEPTABILITY SURVEY - LZZT"
+    role: Qualifier
+    relationship:
+      subject: QSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: QSORRES
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "1 Strongly Disagree"
+      - "2"
+      - "3"
+      - "4 Neutral"
+      - "5"
+      - "6"
+      - "7 Strongly Agree"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: QSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESC
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C78735
+      submissionValue: EVAL
+    assignedTerm:
+      conceptId: C17445
+      value: "CAREGIVER"
+    role: Topic
+    relationship:
+      subject: QSEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ

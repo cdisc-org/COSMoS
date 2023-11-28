@@ -1,0 +1,45 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C139236
+ncitCode: C139236
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C139236
+parentConceptId: C74590
+categories:
+  - Subject Disposition
+  - Protocol Disposition Events
+shortName: Failure To Meet Continuation Criteria
+resultScales:
+  - Nominal
+definition: "An indication that the subject has not been able to meet protocol-defined continuation criteria and will not continue to participate in the clinical trial."
+dataElementConcepts:
+  - conceptId: C82571
+    ncitCode: C82571
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82571
+    shortName: Reported Event Term
+    dataType: string
+  - conceptId: C82977
+    ncitCode: C82977
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82977
+    shortName: Dictionary-derived Term
+    dataType: string
+    exampleSet:
+      - "Failure to Meet Continuation Criteria"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Disposition Event"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Study Participation"
+  - conceptId: C82517
+    ncitCode: C82517
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82517
+    shortName: Observation Start Date Time
+    dataType: datetime

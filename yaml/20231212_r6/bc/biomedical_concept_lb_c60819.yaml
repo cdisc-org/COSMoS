@@ -1,0 +1,11 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C60819
+ncitCode: C60819
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C60819
+categories:
+  - Laboratory Tests
+  - Mixed Category Laboratory Procedure
+  - Assay
+shortName: Assay
+definition: A qualitative or quantitative analysis performed to determine the amount of a particular constituent in a sample or the biological or pharmacological properties of a drug.

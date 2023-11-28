@@ -1,0 +1,69 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C117773
+ncitCode: C117773
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117773
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+shortName: Aggregate PR Interval
+synonyms:
+  - PR Interval Aggregate
+  - PQ Interval Aggregate
+  - PRAG
+  - PQAG
+resultScales:
+  - Quantitative
+definition: An aggregate PR value based on the measurement of PR intervals from multiple beats within a single ECG. The method of aggregation, which can vary, is typically a measure of central tendency such as the mean. (CDISC)
+coding:
+  - code: 8625-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Interval"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C93499
+    ncitCode: C93499
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93499
+    shortName: Actual Duration
+    dataType: integer
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Milliseconds"
+      - "Seconds"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

@@ -1,0 +1,106 @@
+packageDate: "2023-12-19"
+packageType: sdtm
+datasetSpecializationId: EDULEVEL
+domain: SC
+shortName: Education Level
+source: SC.SCTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C17953
+variables:
+  - name: SCTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C74559
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74559
+      submissionValue: SCTESTCD
+    assignedTerm:
+      conceptId: C17953
+      value: "EDULEVEL"
+    role: Topic
+    relationship:
+      subject: SCTESTCD
+      linkingPhrase: is decoded by the value in
+      predicateTerm: IS_DECODED_BY
+      object: SCTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: SCTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C103330
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103330
+      submissionValue: SCTEST
+    role: Qualifier
+    relationship:
+      subject: SCTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: SCCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: SCCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SCORRES
+    dataElementConceptId: C25554
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SCSTRESC
+    dataElementConceptId: C25554
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: SCSTRESN
+    dataElementConceptId: C25554
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 

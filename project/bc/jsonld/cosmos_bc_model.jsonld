@@ -405,7 +405,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -569,7 +569,7 @@
     {
       "name": "system",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0system",
-      "description": "Identifies the code system for the synonym concept The URL of the code system should be used if it exists",
+      "description": "Identifies the code system for the synonym concept. The URL of the code system should be used if it exists",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0system",
       "owner": "Coding",
@@ -670,7 +670,7 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -713,7 +713,7 @@
     {
       "name": "DataElementConcept_conceptId",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
-      "description": "NCI C-code for the BC Data Element Concept",
+      "description": "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "is_a": "conceptId",
       "domain": "DataElementConcept",
@@ -728,13 +728,13 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[0123456789]+)$",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
       "name": "DataElementConcept_ncitCode",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
-      "description": "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
+      "description": "NCI C-code for the BC Data Element Concept",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "is_a": "ncitCode",
       "domain": "DataElementConcept",
@@ -826,9 +826,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2023-09-19T12:22:23",
-  "source_file_size": 4523,
-  "generation_date": "2023-09-19T12:22:56",
+  "source_file_date": "2023-11-27T12:03:59",
+  "source_file_size": 4526,
+  "generation_date": "2023-11-27T12:04:41",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",

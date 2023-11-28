@@ -8,7 +8,7 @@
   run;
 
   proc sql;
-    create table bc_sdtm_&type._&package._mrgd
+    create table &type._&package._mrgd
     as select
       bcsdtm.*,
       ss.subset_value_list
@@ -26,7 +26,7 @@
 
     proc contents data=bc_sdtm_&type._&package varnum;
     run;
-    proc print data=bc_sdtm_&type._&package._mrgd;
+    proc print data=&type._&package._mrgd;
     run;
 
     ods html5 close;
@@ -34,12 +34,13 @@
 
   %end;
 
-  data issues(keep=_excel_file_ _tab_ vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
+  data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
-           codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low $512 value qvalue $100 value_list $4096
+           codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low lookup_predicate $512 
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list $4096
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
-    set work.bc_sdtm_&type._&package._mrgd;
+    set work.&type._&package._mrgd;
 
     call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc);
     
@@ -57,7 +58,11 @@
       put "packageType:" +1 "sdtm";
       put "datasetSpecializationId:" +1 vlm_group_id;
       put "domain:" +1 domain;
-      put "shortName:" +1 short_name;
+      if not missing(short_name) then do;
+        if index(short_name, '"') or index(short_name, ":") or index(short_name, "-") 
+          then put "shortName:" +1 '"' short_name +(-1) '"';
+          else put "shortName:" +1 short_name;
+      end;
       put "source:" +1 vlm_source;
       qsdtmig_start_version = quote(strip(sdtmig_start_version));
       put "sdtmigStartVersion:" +1 qsdtmig_start_version;
@@ -72,15 +77,17 @@
         if not missing(dec_id) then put +4 "dataElementConceptId:" +1 dec_id;
         if missing(nsv_flag) then nsv_flag="N";
         put +4 "isNonStandard:" +1 nsv_flag $YN.;
+        
         if not missing(codelist) then do;
           
            codelist_submission_value_cdisc = get_codelist_submissionvalue(codelist);
+           codelist_extensible = get_codelist_extensible(codelist);
 
            %add2issues_sdtm(missing(codelist_submission_value), 
                             %str(CODELIST_SUBMISSION_VALUE_MISSING), 
                             codelist_submission_value_cdisc, "", %str(cats("codelist=", codelist)));
 
-           %add2issues_sdtm(codelist_submission_value ne codelist_submission_value_cdisc, 
+           %add2issues_sdtm((codelist_submission_value ne codelist_submission_value_cdisc), 
                             %str(CODELIST_SUBMISSION_VALUE_MISMATCH), 
                             codelist_submission_value_cdisc, codelist_submission_value, %str(cats("codelist=", codelist)));
 
@@ -91,7 +98,7 @@
         end;
         if not missing(subset_codelist) then do;
           put +4 "subsetCodelist:" +1 subset_codelist;
-          %add2issues_sdtm(not missing(value_list), 
+          %add2issues_sdtm((not missing(value_list) and (value_list ne subset_value_list)), 
                 %str(SUBSETCODELIST_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
@@ -113,10 +120,14 @@
               qvalue=quote(strip(value));
               put +6 "-" +1 qvalue;
               
-              value_code_cdisc = get_term_code(codelist, value);
-              %add2issues_sdtm(missing(value_code_cdisc), 
-                    %str(CODELIST_VALUE_LIST_TERM_CDISC_MISSING), 
-                    value_code_cdisc, "", %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, ", value_list=", value_list, ", value=", value)));
+              if not missing(codelist) then do
+                value_code_cdisc = get_term_code(codelist, value);
+                codelist_extensible = get_codelist_extensible(codelist);
+                %add2issues_sdtm(missing(value_code_cdisc) and (codelist_extensible = "No"), 
+                      %str(CODELIST_VALUE_LIST_TERM_CDISC_MISSING), 
+                      value_code_cdisc, "", %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                      codelist_submission_value, ", value_list=", value_list, ", value=", value)));
+              end;        
             end;
           end;
         end;
@@ -126,19 +137,38 @@
           if not missing(assigned_term) then put +6 "conceptId:" +1 assigned_term;
           qvalue=quote(strip(assigned_value));
           put +6 "value:" +1 qvalue;
+          
           %add2issues_sdtm((not missing(value_list)) and (not missing(assigned_value)), 
                 %str(ASSIGNED_VALUE_AND_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", value_list=", value_list, ", assigned_value=", assigned_value)));
-          assigned_term_cdisc = get_term_code(codelist, assigned_value);
-          %add2issues_sdtm((assigned_term_cdisc ne assigned_term) and (missing(assigned_term_cdisc)), 
-                %str(CODELIST_TERM_CCODE_MISSING), 
-                assigned_term_cdisc, assigned_term, %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, ", assigned_value=", assigned_value)));
-          %add2issues_sdtm((assigned_term_cdisc ne assigned_term) and (not missing(assigned_term_cdisc)), 
-                %str(CODELIST_TERM_CCODE_MISMATCH), 
-                assigned_term_cdisc, assigned_term, %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, ", assigned_value=", assigned_value)));
+          
+          if not missing(codelist) then do                          
+            assigned_term_cdisc = get_term_code(codelist, assigned_value);
+            codelist_extensible = get_codelist_extensible(codelist);
+            
+            %add2issues_sdtm(missing(assigned_term_cdisc) and (not missing(assigned_term)), 
+                  %str(CODELIST_TERM_CDISC_CCODE_MISSING), 
+                  assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_value=", assigned_value)));
+            
+            %add2issues_sdtm((not missing(assigned_term_cdisc)) and (missing(assigned_term)), 
+                  %str(CODELIST_TERM_CCODE_MISSING), 
+                  assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_value=", assigned_value)));
+            
+            %add2issues_sdtm((assigned_term_cdisc ne assigned_term) and (not missing(assigned_term_cdisc)) and (not missing(assigned_term)), 
+                  %str(CODELIST_TERM_CCODE_MISMATCH), 
+                  assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_value=", assigned_value)));
 
+            %add2issues_sdtm(missing(assigned_term_cdisc) and (codelist_extensible = "No"), 
+                  %str(CODELIST_TERM_CCODE_MISSING_NOTEXTENSIBLE), 
+                  assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_value=", assigned_value)));
+            
+          end;
 
         end;
         if not missing(role) then put +4 "role:" +1 role;
@@ -149,10 +179,36 @@
         if not missing(format) then put +4 "format:" +1 qformat;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
 
-          %add2issues_sdtm((missing(subject) or missing(linking_phrase) or missing(predicate_term) or missing(object)) and not (missing(subject) and missing(linking_phrase) and missing(predicate_term) and missing(object)),
-                %str(RELATIONSHIP_ISSUE), 
+        %add2issues_sdtm((missing(subject) or missing(linking_phrase) or missing(predicate_term) or missing(object)) and not (missing(subject) and missing(linking_phrase) and missing(predicate_term) and missing(object)),
+              %str(RELATIONSHIP_ISSUE), 
+              "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+              );
+        
+        
+        if not(missing(linking_phrase)) then do;
+          lookup_predicate = get_predicateterm(linking_phrase);
+          %add2issues_sdtm(missing(lookup_predicate),
+                %str(RELATIONSHIP_ISSUE_PHRASE_NOTFOUND), 
                 "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
                 );
+        end;
+        
+        if not(missing(predicate_term)) then do;
+          lookup_term_exist = exist_predicateterm(predicate_term);
+          %add2issues_sdtm(missing(lookup_term_exist),
+                %str(RELATIONSHIP_ISSUE_TERM_NOTFOUND), 
+                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                );
+        end;
+        
+        if not(missing(predicate_term)) and not(missing(linking_phrase)) then do;
+          lookup_term_exist = get_predicateterm_linkingphrase(linking_phrase, predicate_term);
+          %add2issues_sdtm(missing(lookup_term_exist),
+                %str(RELATIONSHIP_ISSUE_COMBINATION_NOT_FOUND), 
+                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                );
+        end;
+          
         if not missing(subject) then do;
           linking_phrase_low = lowcase(linking_phrase);
           put +4 "relationship:";

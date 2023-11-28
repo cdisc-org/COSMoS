@@ -1,0 +1,35 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C127127
+ncitCode: C127127
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C127127
+parentConceptId: C45398
+categories:
+  - Laboratory Tests
+  - Nitroso Carcinogens
+  - Carcinogenic Nitrosamines
+shortName: "4-(Methylnitrosamino)-1-(3-Pyridyl)-1-Butanol"
+synonyms:
+  - NNAL
+  - "Nicotine-Derived Nitrosamine Alcohol"
+resultScales:
+  - Quantitative
+definition: "The major metabolite of the potentially carcinogenic nitrosamine 4-methylnitrosamino-1,3-pyridyl-1-butanone (nicotine-derived nitrosamine ketone; NNK) that is detected in the urine of subjects exposed to tobacco products. 4-(methylnitrosamino)-1-(3-pyridyl)-1-butanol (nicotine-derived nitrosamine alcohol; NNAL) is produced by carbonyl reduction of NNK and may also be a carcinogen."
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: decimal
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48207
+    shortName: Unit of Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"

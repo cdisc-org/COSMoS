@@ -76,6 +76,7 @@
       (
        _excel_file_  char(128),
        _tab_  char(128),
+       severity char(10),
        BC_ID char(64),
        dec_id char(64),
        issue_type char(64),
@@ -92,6 +93,7 @@
       (
        _excel_file_  char(128),
        _tab_  char(128),
+       severity char(10),
        vlm_group_id char(128),
        sdtm_variable char(64),
        issue_type char(64),

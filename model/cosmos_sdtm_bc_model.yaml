@@ -120,7 +120,8 @@ slots:
   biomedicalConceptId:
     recommended: true
     range: string
-    description: Biomedical Concept identifier
+    description: Biomedical Concept identifier foreign key
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
 
   variables:
     multivalued: true
@@ -134,7 +135,8 @@ slots:
     identifier: true
   dataElementConceptId:
     range: string
-    description: Biomedical Concept Data Element Concept idenfifier foreign key
+    description: Biomedical Concept Data Element Concept identifier foreign key
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
   isNonStandard:
     range: boolean
     description: Flag that indicates if the variable is a non-standard variable
@@ -150,6 +152,7 @@ slots:
     required: true
     range: string
     description: C-code for a codelist in NCIt
+    pattern: "^(C[0123456789]+)$"
   href:
     required: false
     range: uri
@@ -202,7 +205,7 @@ slots:
   predicateTerm:
     required: true
     range: PredicateTermEnum
-    description: Short variable relatio ship linking phrase for programming purposes
+    description: Short variable relationship linking phrase for programming purposes
   object:
     required: true
     description: Object in a variable relationship
@@ -248,6 +251,8 @@ enums:
     permissible_values:
       datetime:
         text: datetime
+      durationDatetime:
+        text: durationDatetime
       float:
         text: float
       integer:
@@ -279,38 +284,38 @@ enums:
       is a dictionary-derived term for the value in:
       is decoded by the value in:
       is original text for:
+      is the administered amount of the treatment in:
       is the administration anatomical location for the treatment in:
+      is the aspect of the event used to define the date in:
       is the clinical significance interpretation for:
       is the code for the value in:
       is the dictionary code for the test in:
+      is the dictionary-derived term for the value in:
+      is the dictionary-derived class code for the value in:
+      is the dictionary-derived class name for the value in:
+      is the duration for:
+      is the end date for:
       is the epoch of the performance of the test in:
+      is the frequency of administration of the amount in:
       is the identifier for the source data used in the performance of the test in:
       is the material type of the subject of the activity in:
+      is the medical condition that is the reason for the treatment in:
       is the method for the test in:
+      is the part of the body through which is administered the treatment in:
+      is the physical form of the product in:
       is the result of the test in:
       is the role of the assessor who performed the test in:
       is the specimen tested in:
+      is the start date for:
       is the subject position during performance of the test in:
       is the subject's fasting status during the performance of the test in:
       is the unit for the value in:
+      is the unit for:
       specifies the anatomical location of:
       specifies the anatomical location of the performance of the test in:
       specifies the severity of:
       values are grouped by:
       was the subject position during performance of the test in:
-      is the dictionary-derived term for the value in:
-      is the dictionary-derived class code for the value in:
-      is the dictionary-derived class name for the value in:
-      is the end date for:
-      is the start date for:
-      is the administered amount of the treatment in:
-      is the unit for:
-      is the physical form of the product in:
-      is the medical condition that is the reason for the treatment in:
-      is the frequency of administration of the amount in:
-      is the part of the body through which is administered the treatment in:
-      is the aspect of the event used to define the date in:
-
 
   PredicateTermEnum:
     permissible_values:
@@ -378,6 +383,7 @@ enums:
 
   RoleEnum:
     permissible_values:
+      Identifier:
       Qualifier:
       Timing:
       Topic:

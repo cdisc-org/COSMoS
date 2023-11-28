@@ -1,16 +1,13 @@
 %macro get_latest_codelist_package(package=, jsonout=, dsout=);
-
-  %local api_key;
     
-  %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
-
   filename response temp;
   filename map temp;
 
   %get_api_response(
       baseurl=&base_url,
       endpoint=/mdr/products,
-      response_fileref=response
+      response_fileref=response,
+      apikey=&api_key
     );
 
   libname response json map=map automap=create fileref=response;
@@ -51,28 +48,28 @@
 
   libname response json map=map automap=create fileref=response;
 
-
-  %if not %sysfunc(exist(&dsout)) %then %do;
-    proc sql;
-      create table &dsout
-      as select
-        root.name as name,
-        root.version as codelist_version,
-        cl.conceptId  as codelist_conceptId,
-        cl.name as codelist_Name,
-        cl.extensible,
-        cl.submissionValue as codelist_submissionValue,
-        cli.conceptId,
-        cli.submissionValue as codedValue,
-        cli.conceptId as codedValue_conceptId
-      from response.root root 
-      inner join response.codelists cl 
-        on root.ordinal_root = cl.ordinal_root
-      inner join response.codelists_terms cli
-        on cl.ordinal_codelists = cli.ordinal_codelists
-      order by codelist_version, codelist_submissionValue, codedvalue;
-    quit;
-  %end;
+  proc sql;
+    create table &dsout
+    as select
+      root.name as name,
+      root.version as codelist_version,
+      cl.conceptId  as codelist_conceptId,
+      cl.name as codelist_name,
+      cl.submissionValue as codelist_submissionValue,
+      case 
+        when cl.extensible = "true" then "Yes"
+        when cl.extensible = "false" then "No"
+        else ""
+      end as codelist_extensible,
+      cli.submissionValue as codedValue,
+      cli.conceptId as codedValue_conceptId
+    from response.root root 
+    inner join response.codelists cl 
+      on root.ordinal_root = cl.ordinal_root
+    inner join response.codelists_terms cli
+      on cl.ordinal_codelists = cli.ordinal_codelists
+    order by codelist_version, codelist_submissionValue, codedvalue;
+  quit;
 
   libname response clear;
   filename response clear;

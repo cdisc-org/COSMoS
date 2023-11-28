@@ -1,0 +1,71 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C111285
+ncitCode: C111285
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111285
+parentConceptId: C83146
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Abnormalities
+  - ECG Findings
+  - ECG Abnormalities
+shortName: Pacemaker ECG Assessment
+synonyms:
+  - PACEMAKR
+  - Pacemaker
+resultScales:
+  - Nominal
+definition: An electrocardiographic assessment of the rate of firing of a an artificial, mechanical pacemaker.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Finding"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Paced Atrial and Ventricular Rhythm"
+      - "Paced Atrial Rhythm"
+      - "Paced Rhythm"
+      - "Paced Ventricular Rhythm"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C50282
+    ncitCode: C50282
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C50282
+    shortName: Lead Device
+    dataType: string
+    exampleSet:
+      - "Lead 1"
+      - "Lead 2"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

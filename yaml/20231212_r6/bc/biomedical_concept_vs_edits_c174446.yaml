@@ -1,0 +1,43 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C174446
+ncitCode: C174446
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C174446
+categories:
+  - Vital Signs
+shortName: Body Temperature
+synonyms:
+  - Temperature
+resultScales:
+  - Quantitative
+definition: A measurement of the temperature of the body.
+coding:
+  - code: 8310-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C77140
+    ncitCode: C77140
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C77140
+    shortName: Clinical Test Result
+    dataType: decimal
+  - conceptId: C44276
+    ncitCode: C44276
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C44276
+    shortName: Unit of Temperature
+    dataType: string
+    exampleSet:
+      - "Fahrenheit"
+      - "Celsius"
+      - "Kelvin"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Axilla"
+      - "Ear"
+      - "Forehead"
+      - "Oral Cavity"
+      - "Rectum"

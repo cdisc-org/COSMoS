@@ -1,0 +1,12 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C17468
+ncitCode: C17468
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17468
+categories:
+  - Subject Characteristics
+  - Social Circumstances
+shortName: Socioeconomic Factors
+synonyms:
+  - Socioeconomic Status
+definition: Characteristics of a person such as education and occupation, used to describe the person's position in stratification systems, access to services, etc.

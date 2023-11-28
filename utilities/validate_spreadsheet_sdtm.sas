@@ -1,22 +1,25 @@
 %let root=C:/_github/cdisc-org/COSMoS;
-
 %include "&root/utilities/config.sas";
 
-%let _debug=2;
+%let _debug=0;
 %let print_html=1;
 
 title01 "&now";
 
+
 /* Package 1*/
 %let excel_file=&root/curation/BC_Package_2022_10_26.xlsx;
+
 %ReadExcel(file=&excel_file, range=Conceptual VS BC$, dsout=bc1_1);
 %ReadExcel(file=&excel_file, range=%str(Conceptual LB (Common) BC)$, dsout=bc1_2);
 
 %ReadExcel(file=&excel_file, range=SDTM VS BC$, dsout=sdtm1_1);
 %ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm1_2);
 
+
 /* Package 2 */
 %let excel_file=&root/curation/BC_Package_2023_02_13.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc2_1);
 %ReadExcel(file=&excel_file, range=%str(BC LB (TIG Biomarkers))$, dsout=bc2_2);
 
@@ -25,8 +28,10 @@ title01 "&now";
 
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelists$, dsout=subsets);
 
+
 /* Package 3 */
 %let excel_file=&root/curation/BC_Package_2023_03_31.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc3_1);
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc3_2);
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc3_3);
@@ -40,8 +45,10 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc3_12);
 %ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_13);
 
+
 /* Package 4 - Oncology */
 %let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+
 %ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc4_onco_1);
 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm4_onco_1, drop=%str(drop=significant_digits));
@@ -103,16 +110,52 @@ title01 "&now";
 
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
+
+/* Package 6 - */
+%let excel_file=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
+
+%ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc6_01); 
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc6_02); 
+%ReadExcel(file=&excel_file, range=%str(BC_EG_EDITS)$, dsout=bc6_03); 
+%ReadExcel(file=&excel_file, range=%str(BC_EX)$, dsout=bc6_04); 
+%ReadExcel(file=&excel_file, range=%str(BC_IE)$, dsout=bc6_05); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc6_06); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc6_07); 
+%ReadExcel(file=&excel_file, range=%str(BC_MH_EDITS)$, dsout=bc6_08); 
+%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc6_09); 
+%ReadExcel(file=&excel_file, range=%str(BC_QS)$, dsout=bc6_10); 
+%ReadExcel(file=&excel_file, range=%str(BC_SC)$, dsout=bc6_11); 
+%ReadExcel(file=&excel_file, range=%str(BC_SU)$, dsout=bc6_12); 
+%ReadExcel(file=&excel_file, range=%str(BC_VS_EDITS)$, dsout=bc6_13); 
+
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM_EDITS)$, dsout=sdtm6_01, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS)$, dsout=sdtm6_02, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG_EDITS)$, dsout=sdtm6_03, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EX)$, dsout=sdtm6_04, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_IE)$, dsout=sdtm6_05, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm6_06, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm6_07, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MH)$, dsout=sdtm6_08, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm6_09, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_QS)$, dsout=sdtm6_10, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_SC)$, dsout=sdtm6_11, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_SU)$, dsout=sdtm6_12, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm6_13, drop=%str(drop=length significant_digits format));
+
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
+  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
+         system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $32 bc_categories synonyms result_scales definition 
-         system	system_name	code change_history $5124 dec_id $32 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   set bc:(where=(not missing(bc_id)));
   
   array carray{*} _character_;
+  * if missing(bc_id) then delete;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
     vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
@@ -120,20 +163,11 @@ data bc(drop=change_history F1: F2: i vname vvalue);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-
   order=_n_;
-  
-/*
-  bc_id=kcompress(bc_id, 'C2A0'x);
-  ncit_code=kcompress(ncit_code, 'C2A0'x);
-  parent_bc_id=kcompress(parent_bc_id, 'C2A0'x);
-  dec_id=kcompress(dec_id, 'C2A0'x);
-  ncit_dec_code=kcompress(ncit_dec_code, 'C2A0'x);
-*/
 run;  
 
 
-%if &_debug gt 2 %then %do;
+%if &_debug gt 1 %then %do;
   proc freq data=bc;
     tables bc_id * package_date / nopercent norow nocol;
   run;  
@@ -141,8 +175,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_&today._bc.html";
-  ods excel options(sheet_name="BC" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._bc.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._bc.html";
+  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._bc.xlsx";
 
     proc print data=bc;
     run;
@@ -153,19 +187,15 @@ run;
 %end;
 
 data sdtm(drop=change_history F3: F4:  i vname vvalue);
+  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
+         codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object 
+         short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source  
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value 
          subject linking_phrase predicate_term object format 
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $32 domain vlm_group_id vlm_source sdtm_variable $128
-         codelist subset_codelist value_list assigned_value subject linking_phrase predicate_term object 
-         short_name role format data_type origin_source vlm_target change_history vvalue $32000 vname $32;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
-/*
-  bc_id=kcompress(bc_id, 'C2A0'x);
-  dec_id=kcompress(dec_id, 'C2A0'x);
-*/
   array carray{*} _character_;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
@@ -174,7 +204,6 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-
 run;  
 
 %if &_debug gt 1 %then %do;
@@ -200,8 +229,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm.html";
-  ods excel options(sheet_name="SDTM" flow="tables" autofilter = 'all') file="&root/utilities/validate_spreadsheet_&today._sdtm.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.html";
+  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.xlsx";
 
     proc print data=sdtm_merged;
     run;
@@ -212,7 +241,7 @@ quit;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/validate_spreadsheet_&today._sdtm_bc_issues.html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm_bc_issues.html";
 
   /* Unresolved BC Parent BCs */
   proc sql;

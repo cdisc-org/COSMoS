@@ -1,0 +1,94 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C111363
+ncitCode: C111363
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C111363
+parentConceptId: C83146
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Abnormalities
+  - ECG Findings
+  - ECG Abnormalities
+shortName: ST Segment, T wave, and U wave ECG Assessment
+synonyms:
+  - STSTWUW
+  - ST Segment, T wave, and U wave
+resultScales:
+  - Nominal
+definition: An electrocardiographic assessment of the characteristics of the ST segment, T wave, and U wave.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Finding"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "CV Endpoints Ischemic ECG Changes"
+      - "Borderline QTcB"
+      - "Borderline QTcF"
+      - "Early Repolarization"
+      - "J Point Elevation"
+      - "Non-Specific ST-T Changes"
+      - "Notched T Waves"
+      - "Prolonged QT"
+      - "Prolonged ST Segment"
+      - "QTc Prolongation"
+      - "QTcB Prolongation"
+      - "QTcF Prolongation"
+      - "Repolarization Abnormality"
+      - "Repolarization Abnormality Secondary To Ventricular Hypertrophy"
+      - "Short QTc Interval"
+      - "Short QTcB"
+      - "Short QTcF"
+      - "Short ST Segment"
+      - "ST Depression"
+      - "ST Elevation"
+      - "ST Elevation Pericarditis"
+      - "T Wave Alternans"
+      - "T Wave inversion"
+      - "T Wave Peaked"
+      - "T Waves Biphasic"
+      - "T Waves Flat"
+      - "U Wave Abnormality"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C50282
+    ncitCode: C50282
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C50282
+    shortName: Lead Device
+    dataType: string
+    exampleSet:
+      - "Lead 1"
+      - "Lead 2"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

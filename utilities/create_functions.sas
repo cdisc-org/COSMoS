@@ -2,15 +2,48 @@
 
 %include "&root/utilities/config.sas";
 
-proc datasets library=macros nolist;
-   delete funcs;
-run;
+%if %sysfunc(exist(macros.funcs)) %then %do;
+  proc datasets library=macros nolist;
+     delete funcs;
+  run;
+%end;
 
 proc fcmp outlib=macros.funcs.python;
 
+  function get_predicateterm(linkingPhrase $) $;
+    length predicateTerm $128;
+    declare hash hh(dataset: "data.sdtm_linkingphrases");
+    rc=hh.definedata("predicateTerm");
+    rc=hh.definekey("linkingPhrase");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(predicateTerm);
+    else return ("");
+  endsub;
+
+  function get_predicateterm_linkingphrase(linkingPhrase $, predicateTerm $);
+    declare hash hh(dataset: "data.sdtm_linkingphrases");
+    rc=hh.definedata("predicateTerm");
+    rc=hh.definekey("linkingPhrase", "predicateTerm");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(1);
+    else return (0);
+  endsub;
+
+  function exist_predicateterm(predicateTerm $);
+    declare hash hh(dataset: "data.sdtm_predicateterms");
+    rc=hh.definedata("predicateTerm");
+    rc=hh.definekey("predicateTerm");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(1);
+    else return (0);
+  endsub;
+
   function get_term_code(codelist_conceptId $, codedValue $) $;
     length codedValue_conceptId $20;
-    declare hash hh(dataset: "data.codelist_package_sdtm");
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codedValue_conceptId");
     rc=hh.definekey("codelist_conceptId", "codedValue");
     rc=hh.definedone();
@@ -21,12 +54,23 @@ proc fcmp outlib=macros.funcs.python;
 
   function get_codelist_submissionvalue(codelist_conceptId $) $;
     length codedValue_conceptId $20;
-    declare hash hh(dataset: "data.codelist_package_sdtm");
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codelist_SubmissionValue");
     rc=hh.definekey("codelist_conceptId");
     rc=hh.definedone();
     rc=hh.find();
     if rc eq 0 then return(codelist_SubmissionValue);
+    else return ("");
+  endsub;
+
+  function get_codelist_extensible(codelist_conceptId $) $;
+    length codedValue_conceptId $20;
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
+    rc=hh.definedata("codelist_extensible");
+    rc=hh.definekey("codelist_conceptId");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(codelist_extensible);
     else return ("");
   endsub;
 
@@ -96,14 +140,8 @@ proc fcmp outlib=macros.funcs.python;
       parentCode = ''
       parentShortName = ''
       try:
-#          parentCode = concept_info[0]['code']
-            
-            parentCode = ";".join([v['code'] for v in concept_info])
-            parentShortName = ";".join([v['name'] for v in concept_info])
- #          for ele in concept_info:
- #           parentCode = parentCode + str(ele['code']) + " "
- #           parentShortName = parentShortName + str(ele['name']) + ";"
-#          parentShortName = concept_info[0]['name']
+          parentCode = ";".join([v['code'] for v in concept_info])
+          parentShortName = ";".join([v['name'] for v in concept_info])
       except:
           parentCode = ''
           parentShortName = ''
@@ -115,6 +153,8 @@ proc fcmp outlib=macros.funcs.python;
     parentshortname = py3.results['parentShortName'];
   endsub;
 run;
+
+/* Test the functions */
 
 data test;
   length ccodes $200 ccode ccode_parent $100 shortname shortname_parent $100 definition definition_cdisc $1000;
@@ -145,11 +185,32 @@ ods html5 file="&root/utilities/create_functions.html";
 ods html5 close;
 ods listing;
 
-data new;
+data codelists;
   exp_codelist_SubmissionValue="PKUDUG";
   exp_term="C119365";
   codedValue_conceptId = get_term_code("C128686", "g/mL/ug");
-  codelist_SubmissionValue = get_codelist_submissionvalue("C128686");
+  codelist_SubmValue = get_codelist_submissionvalue("C128686");
+  codelist_Extensible = get_codelist_extensible("C128686");
+
+  codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
+  codelist_Extensible_yes = get_codelist_extensible("C100129");
+
+  codelist_SubmValue_TENMW1TC = get_codelist_submissionvalue("C141657");
+  codelist_Extensible_no = get_codelist_extensible("C141657");
+
   put (_all_) (=/) ;
 run;
 
+data relationships;
+  linkingPhrase = "is a dictionary-derived term for the value in";
+  predicateTerm = get_predicateterm(linkingPhrase);
+  exist = exist_predicateterm(predicateTerm);
+  exist2 = get_predicateterm_linkingphrase(linkingPhrase, predicateTerm);
+  
+  predicateTerm0 = get_predicateterm("is bad luck");
+  existnot = exist_predicateterm("NOPE");
+  existnot2 = get_predicateterm_linkingphrase("bad luck", "NOPE");
+  existnot3 = get_predicateterm_linkingphrase("", "");
+
+  put (_all_) (=/) ;
+run;

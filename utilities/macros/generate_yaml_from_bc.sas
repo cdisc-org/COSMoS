@@ -24,12 +24,12 @@
   %end;
 
 
-  data issues(keep=_excel_file_ _tab_ BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
+  data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
     length prev_BC_ID parent_bc_id_nci $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value  actual_value comment $2048;
     set work.bc_&type._&package;
-    retain prev_BC_ID "" count 0;
+    retain prev_BC_ID "" count decs 0;
 
     call missing(short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
     
@@ -38,14 +38,15 @@
 
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
 
-    short_Name=translate(short_Name, " ", "00A0"x);
-    short_Name = compress(short_Name, , 'kw');
     ncit_code = kcompress(ncit_code, , 's');
     dec_id = kcompress(dec_id, , 's');
     parent_bc_id=kcompress(parent_bc_id, , 's');
     bc_id=kcompress(bc_id, , 's');
     ncit_dec_code=kcompress(ncit_dec_code, , 's');
-    definition=tranwrd(definition, '"', '\"');
+    
+    short_Name=translate(short_Name, " ", "00A0"x);
+    short_Name = compress(short_Name, , 'kw');
+    
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
     if definition ne definition2 then putlog / "WARNING: &type " bc_id @30 definition= / @29 definition2=;
@@ -54,6 +55,7 @@
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;
       count=0;
+      decs = 0;
       qpackage_date = quote(strip(package_date));
       put "packageDate:" +1 qpackage_date;
       put "packageType:" +1 "bc";
@@ -80,24 +82,36 @@
         countwords=countw(bc_categories, ";");
         do i=1 to countwords;
           value=strip(scan(bc_categories, i, ";"));
-          if not missing(value) then put +2 "-" +1 value;
+          value=tranwrd(value, '"', '\"');
+          if index(value, '"') or index(value, ":") or index(value, "-") then value=cats('"', value, '"');
+          if not missing(value) then do;
+            put +2 "-" +1 value;
+          end;  
         end;
       end;
       %add2issues_bc(missing(bc_categories), 
                      %str(CATEGORIES_MISSING), "", "", "");
 
-
-      put "shortName:" +1 short_name;
+      if not missing(short_name) then do;
+        if index(short_name, '"') or index(short_name, ":") or index(short_name, "-") 
+          then put "shortName:" +1 '"' short_name +(-1) '"';
+          else put "shortName:" +1 short_name;
+      end;
+      
       call get_shortname(ncit_code, short_name_nci);
-      %add2issues_bc((short_name ne short_name_nci) or (missing(short_name)), 
+      %add2issues_bc(((short_name ne short_name_nci) and not missing(short_name_nci)) or (missing(short_name)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "");
+      %add2issues_bc(((short_name ne short_name_nci)) and (missing(short_name_nci)), 
+                     %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "", severity=NOTE);
       if not missing(synonyms) then do;
         %add2issues_bc(index(synonyms, ",") > 0, 
-                       %str(SYNONYM_ISSUE_COMMA), "", synonyms, "");
+                       %str(SYNONYM_ISSUE_COMMA), "", synonyms, "", severity=NOTE);
         put "synonyms:";
         countwords=countw(synonyms, ";");
         do i=1 to countwords;
           value=strip(scan(synonyms, i, ";"));
+          value=tranwrd(value, '"', '\"');
+          if index(value, '"') or index(value, ":") or index(value, "-") then value=cats('"', value, '"');
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
@@ -112,15 +126,20 @@
       end;
       %add2issues_bc(missing(result_scales), 
                      %str(RESULTSCALE_MISSING), "", "", "");
+      
       call get_definitions(ncit_code, definition_nci, definition_cdisc);
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
-      %add2issues_bc((definition ne definition_nci) or (missing(definition)), 
+      %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
+      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
+                     %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
+
       if not missing(definition) then do;
+        definition=tranwrd(definition, '"', '\"');
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
-          then put "definition:" +1 '"' Definition +(-1) '"';
-          else put "definition:" +1 Definition;
+          then definition=cats('"', definition, '"');;
+        put "definition:" +1 definition;
       end;
 
       if not missing(system) then do;
@@ -138,7 +157,10 @@
     end;
 
     count+1;
-    if count=2 and not missing(dec_id) then put "dataElementConcepts:";
+    if (count=2 and not missing(dec_id) and decs=0) or (count=1 and not missing(dec_id)) then do; 
+      decs + 1;
+      put "dataElementConcepts:";
+    end;  
 
     if not missing(dec_id) then do;
       dec_id=strip(dec_id);
@@ -164,7 +186,7 @@
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 
-                       %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "");
+                       %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "", severity=NOTE);
         put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;

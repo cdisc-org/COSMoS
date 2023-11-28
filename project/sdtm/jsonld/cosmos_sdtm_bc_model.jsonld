@@ -351,6 +351,9 @@
           "text": "datetime"
         },
         {
+          "text": "durationDatetime"
+        },
+        {
           "text": "float"
         },
         {
@@ -433,7 +436,13 @@
           "text": "is original text for"
         },
         {
+          "text": "is the administered amount of the treatment in"
+        },
+        {
           "text": "is the administration anatomical location for the treatment in"
+        },
+        {
+          "text": "is the aspect of the event used to define the date in"
         },
         {
           "text": "is the clinical significance interpretation for"
@@ -445,7 +454,25 @@
           "text": "is the dictionary code for the test in"
         },
         {
+          "text": "is the dictionary-derived term for the value in"
+        },
+        {
+          "text": "is the dictionary-derived class code for the value in"
+        },
+        {
+          "text": "is the dictionary-derived class name for the value in"
+        },
+        {
+          "text": "is the duration for"
+        },
+        {
+          "text": "is the end date for"
+        },
+        {
           "text": "is the epoch of the performance of the test in"
+        },
+        {
+          "text": "is the frequency of administration of the amount in"
         },
         {
           "text": "is the identifier for the source data used in the performance of the test in"
@@ -454,7 +481,16 @@
           "text": "is the material type of the subject of the activity in"
         },
         {
+          "text": "is the medical condition that is the reason for the treatment in"
+        },
+        {
           "text": "is the method for the test in"
+        },
+        {
+          "text": "is the part of the body through which is administered the treatment in"
+        },
+        {
+          "text": "is the physical form of the product in"
         },
         {
           "text": "is the result of the test in"
@@ -466,6 +502,9 @@
           "text": "is the specimen tested in"
         },
         {
+          "text": "is the start date for"
+        },
+        {
           "text": "is the subject position during performance of the test in"
         },
         {
@@ -473,6 +512,9 @@
         },
         {
           "text": "is the unit for the value in"
+        },
+        {
+          "text": "is the unit for"
         },
         {
           "text": "specifies the anatomical location of"
@@ -488,42 +530,6 @@
         },
         {
           "text": "was the subject position during performance of the test in"
-        },
-        {
-          "text": "is the dictionary-derived term for the value in"
-        },
-        {
-          "text": "is the dictionary-derived class code for the value in"
-        },
-        {
-          "text": "is the dictionary-derived class name for the value in"
-        },
-        {
-          "text": "is the end date for"
-        },
-        {
-          "text": "is the start date for"
-        },
-        {
-          "text": "is the administered amount of the treatment in"
-        },
-        {
-          "text": "is the unit for"
-        },
-        {
-          "text": "is the physical form of the product in"
-        },
-        {
-          "text": "is the medical condition that is the reason for the treatment in"
-        },
-        {
-          "text": "is the frequency of administration of the amount in"
-        },
-        {
-          "text": "is the part of the body through which is administered the treatment in"
-        },
-        {
-          "text": "is the aspect of the event used to define the date in"
         }
       ]
     },
@@ -675,6 +681,9 @@
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
+          "text": "Identifier"
+        },
+        {
           "text": "Qualifier"
         },
         {
@@ -815,7 +824,7 @@
     {
       "name": "biomedicalConceptId",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
-      "description": "Biomedical Concept identifier",
+      "description": "Biomedical Concept identifier foreign key",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
       "owner": "SDTMGroup",
@@ -824,6 +833,7 @@
       ],
       "range": "string",
       "recommended": true,
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -860,7 +870,7 @@
     {
       "name": "dataElementConceptId",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
-      "description": "Biomedical Concept Data Element Concept idenfifier foreign key",
+      "description": "Biomedical Concept Data Element Concept identifier foreign key",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
       "owner": "SDTMVariable",
@@ -868,6 +878,7 @@
         "SDTMVariable"
       ],
       "range": "string",
+      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -923,6 +934,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^(C[0123456789]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1123,7 +1135,7 @@
     {
       "name": "predicateTerm",
       "definition_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
-      "description": "Short variable relatio ship linking phrase for programming purposes",
+      "description": "Short variable relationship linking phrase for programming purposes",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "slot_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
       "owner": "RelationShip",
@@ -1440,9 +1452,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-09-19T10:24:53",
-  "source_file_size": 12134,
-  "generation_date": "2023-09-19T12:24:29",
+  "source_file_date": "2023-11-27T11:09:33",
+  "source_file_size": 12401,
+  "generation_date": "2023-11-27T12:04:21",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

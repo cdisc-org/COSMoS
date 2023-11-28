@@ -38,7 +38,7 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         Queries for instances of `Coding`
 
         :param code: Synonym concept for the Biomedical Concept as defined in a code system
-        :param system: Identifies the code system for the synonym concept The URL of the code system should be used if it exists
+        :param system: Identifies the code system for the synonym concept. The URL of the code system should be used if it exists
         :param systemName: Human-readable name for the code system
         
         :return: Person list matching constraints
@@ -80,8 +80,8 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         """
         Queries for instances of `DataElementConcept`
 
-        :param conceptId: NCI C-code for the BC Data Element Concept
-        :param ncitCode: An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
+        :param conceptId: An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt
+        :param ncitCode: NCI C-code for the BC Data Element Concept
         :param href: Link to NCIt for the Data Element Concept
         :param shortName: NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
         :param dataType: Data Type for the Data Element Concept

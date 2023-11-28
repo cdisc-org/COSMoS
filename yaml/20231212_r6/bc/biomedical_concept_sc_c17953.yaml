@@ -1,0 +1,30 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C17953
+ncitCode: C17953
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17953
+parentConceptId: C17468
+categories:
+  - Subject Characteristics
+  - Socioeconomic Factors
+  - Socioeconomic Status
+shortName: Education Level
+synonyms:
+  - EDULEVEL
+  - Education Level Completed
+  - Education
+resultScales:
+  - Nominal
+definition: An indication of the years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.
+dataElementConcepts:
+  - conceptId: C25554
+    ncitCode: C25554
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25554
+    shortName: Level
+    dataType: string
+    exampleSet:
+      - "8th Grade Completion"
+      - "High School Completion"
+      - "College Completion"
+      - "Bachelor's Degree Completion"
+      - "Master's Degree Completion"

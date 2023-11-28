@@ -1,0 +1,52 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C25532
+ncitCode: C25532
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25532
+parentConceptId: C16112
+categories:
+  - Eligibility Criteria
+  - Inclusion Exclusion Criteria
+shortName: Inclusion Criteria
+synonyms:
+  - Inclusion
+resultScales:
+  - Ordinal
+definition: Medical and/or social characteristics which are necessary for a subject to be allowed to participate in a clinical study, as outlined in the study protocol. Meeting inclusion criteria is not a sufficient condition for entry or recruitment of a subject into the study. Characteristics limiting the eligibility of a subject for the clinical study must be considered.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Inclusion"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Major"
+      - "Minor"
+  - conceptId: C83444
+    ncitCode: C83444
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83444
+    shortName: Trial Inclusion Exclusion Criteria Version
+    dataType: string
+    exampleSet:
+      - "1"
+      - "2.2"
+  - conceptId: C181043
+    ncitCode: C181043
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181043
+    shortName: Clinical Findings Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

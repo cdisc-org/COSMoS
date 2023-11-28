@@ -1,0 +1,45 @@
+packageDate: "2023-12-19"
+packageType: bc
+conceptId: C147390
+ncitCode: C147390
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C147390
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Macroscopic Blood Measurement
+synonyms:
+  - Visible Blood
+  - Macroscopic Blood
+  - MACROBLD
+resultScales:
+  - Ordinal
+definition: The determination of the amount or presence of macroscopic blood present in a sample.
+coding:
+  - code: 53963-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C36292
+    ncitCode: C36292
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C36292
+    shortName: Laboratory Test Result
+    dataType: string
+  - conceptId: C83309
+    ncitCode: C83309
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83309
+    shortName: Laboratory Test Fasting Status
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C48207
+    shortName: Unit of Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+      - "Stool"
