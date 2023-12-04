@@ -152,8 +152,8 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
       line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &packageDate..";
-      line "The picture on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
-      line "Only a limited number of attributes are shown.";
+      line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
+      line "Only a few attributes are shown in the image.";
     endcomp;  
   run;  
 
@@ -219,6 +219,7 @@ ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');
 ods excel close;
 ods listing;
 
+/* Add image to ReadMe */
 data _null_;
   call insert_image(
     "%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx",
@@ -229,4 +230,3 @@ data _null_;
     439,
     480
   );
-run;
