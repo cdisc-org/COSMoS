@@ -152,6 +152,32 @@ proc fcmp outlib=macros.funcs.python;
     parentcode = py3.results['parentCode'];
     parentshortname = py3.results['parentShortName'];
   endsub;
+  
+  subroutine insert_image(excel_file $, excel_file_new $, image_file $, sheet_name $, anchor $, width, height);
+    declare object py4(python);
+    /* Create an embedded Python block to write your Python function */
+    submit into py4;
+    def insert_image(excel_file, excel_file_new, image_file, sheet_name, anchor, width, height):
+        """Output: MyKey"""
+        import os
+        import openpyxl
+        from openpyxl import Workbook
+        from openpyxl.drawing.image import Image
+        wb = openpyxl.load_workbook(excel_file)
+        ws = wb[sheet_name]
+        img = openpyxl.drawing.image.Image(image_file)
+        img.width = width
+        img.height = height
+        img.anchor = anchor
+        ws.add_image(img)
+        wb.save(excel_file_new)
+    endsubmit;
+    /* Publish the code to the Python interpreter */
+    rc=py4.publish();
+    /* Call the Python function from SAS */
+    rc = py4.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
+  endsub;
+  
 run;
 
 /* Test the functions */

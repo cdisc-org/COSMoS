@@ -94,6 +94,8 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
+%let packageDate=2023-12-12;
+%let packageDateShort=20231212;
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
@@ -166,7 +168,7 @@ quit;
 options  missing= " ";
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_sdtm_dataset_specializations_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -178,7 +180,9 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &today.";
+      line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &packageDate..";
+      line "The picture on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
+      line "Only a limited number of attributes are shown.";
     endcomp;  
   run;  
 
@@ -237,3 +241,15 @@ ods excel options(sheet_name="Domains" flow="tables" autofilter = 'none');
   
 ods excel close;
 ods listing;
+
+data _null_;
+  call insert_image(
+    "%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx",
+    "&root/utilities/reports/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx",
+    "&root/utilities/images/bc-sdtm-erd-light.png",
+    "ReadMe",
+    "F2",
+    439,
+    480
+  );
+run;

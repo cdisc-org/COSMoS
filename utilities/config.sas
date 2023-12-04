@@ -1,5 +1,9 @@
 options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getoption(sasautos)),%str(%(%)))));
 
+options set=MAS_PYPATH="&root/venv/Scripts/python.exe";
+options set=MAS_M2PATH="%sysget(SASROOT)/tkmas/sasmisc/mas2py.py";
+
+
 libname macros "&root/utilities/macros";
 options cmplib=macros.funcs;
 options ls=max ps=max;

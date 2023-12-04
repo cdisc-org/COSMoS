@@ -78,6 +78,9 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
+%let packageDate=2023-12-12;
+%let packageDateShort=20231212;
+
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
@@ -136,7 +139,7 @@ quit;
 %let headerstyle1 = {background=lightgreen color=black};
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_biomedical_concepts_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -148,13 +151,15 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &today.";
+      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &packageDate..";
+      line "The picture on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
+      line "Only a limited number of attributes are shown.";
     endcomp;  
   run;  
 
 ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'all');
 
-  title "Latest Biomedical Concepts generated on &today";
+  title "Latest Biomedical Concepts as of &packageDate";
   proc report data=data.bc_latest;
     columns package_date short_name href bc_id ncit_code parent_bc_id bc_categories synonyms result_scales definition system system_name code
              dec_href dec_id ncit_dec_code dec_label data_type example_set;
@@ -213,3 +218,15 @@ ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');
   
 ods excel close;
 ods listing;
+
+data _null_;
+  call insert_image(
+    "%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&root/utilities/images/bc-sdtm-erd-light.png",
+    "ReadMe",
+    "F2",
+    439,
+    480
+  );
+run;
