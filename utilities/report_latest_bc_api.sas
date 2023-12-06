@@ -80,6 +80,8 @@
 %include "&root/utilities/config.sas";
 %let packageDate=2023-10-03;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
+%let temp_location=%sysfunc(pathname(work));
+%let temp_location=&root/utilities/test;
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
@@ -146,7 +148,7 @@ quit;
 %let headerstyle1 = {background=lightgreen color=black};
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="&temp_location/cdisc_biomedical_concepts_&packageDateShort..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -228,10 +230,10 @@ ods excel close;
 ods listing;
 
 /* Add image to ReadMe */
-/*
+
 data _null_;
   call insert_image(
-    "%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&temp_location/cdisc_biomedical_concepts_&packageDateShort..xlsx",
     "&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx",
     "&root/utilities/images/bc-sdtm-erd-light.png",
     "ReadMe",
@@ -239,13 +241,3 @@ data _null_;
     439,
     480
   );
-*/
-  
-%excel_enhance(
-  open_workbook=%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx,
-  autofit=Biomedical Concepts,
-  file_format=xlsx,
-  insert_image=%str(&root/utilities/images/bc-sdtm-erd-light-small.png#ReadMe!F2),
-  create_workbook=&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx
-  );
-  
