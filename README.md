@@ -1,5 +1,7 @@
 # CDISC Conceptual and Operational Standards Metadata (COSMoS)
 
+<img src="utilities/images/2023_Standards-Badges_v5.2-BCs.png" alt="Biomedical Concepts" width="150"/>
+
 The [COSMoS GitHub repository](https://github.com/cdisc-org/COSMoS) contains working files to implement Biomedical Concepts (BCs) and Dataset Specializations in the CDISC Library:
 
 - **bc_starter_package**
