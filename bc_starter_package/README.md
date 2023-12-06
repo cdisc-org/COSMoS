@@ -1,6 +1,8 @@
 # CDISC Biomedical Concepts Starter Package
 
-Use cases:
+<img src="../utilities/images/2023_Standards-Badges_v5.2-BCs.png" alt="Biomedical Concepts" width="150"/>
+
+## Use cases
 
 - [Users who want to create CDISC BCs and Dataset Specializations](README.md#usecase1)
 - [Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library](README.md#usecase2)
