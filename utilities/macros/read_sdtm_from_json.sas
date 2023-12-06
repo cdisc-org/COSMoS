@@ -33,6 +33,12 @@
     set &template %if %sysfunc(exist(&jsonlib..variables)) %then &jsonlib..variables;;
   run;  
   
+  %if %sysfunc(exist(&jsonlib..variables_assignedterm)) %then %do;    
+    data work.variables_assignedterm;
+      set &jsonlib..variables_assignedterm;
+  %end;
+
+  
   %if %sysfunc(exist(&jsonlib..variables_valuelist)) %then %do;    
     data work.variables_valuelist(drop=valueList:);
       set &jsonlib..variables_valuelist;
@@ -113,8 +119,10 @@
       , varvl._valueList as value_list
       %end;
           
-      %if %sysfunc(exist(&jsonlib..variables_assignedterm)) %then %do;    
+      %if %sysfunc(exist(&jsonlib..variables_assignedterm)) %then %do;  
+        %if %varexist(work.variables_assignedterm, conceptId) %then %do;  
         , varat.conceptId as assigned_term
+        %end;
         , varat.value as assigned_value
       %end;
             
@@ -147,7 +155,7 @@
     on (varcl.ordinal_variables=var.ordinal_variables)
   %end;  
   %if %sysfunc(exist(&jsonlib..variables_assignedterm)) %then %do;    
-      left join &jsonlib..variables_assignedterm varat 
+      left join work.variables_assignedterm varat 
     on (varat.ordinal_variables=var.ordinal_variables)
   %end;  
   %if %sysfunc(exist(&jsonlib..variables_valuelist)) %then %do;    

@@ -98,16 +98,18 @@
 %let packageDateShort=20231212;
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-%let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%*let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
 %* The CDISC Library API key has been set as an environment variable;
-%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+%*let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+%let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
-  proc format;
-    value yesno
-    0 = 'N'
-    1 = 'Y'
-    . = " ";
-  run;  
+proc format;
+  value yesno
+  0 = 'N'
+  1 = 'Y'
+  . = " ";
+run;  
 
 %create_template(type=sdtm, out=work.sdtm__template);
     
