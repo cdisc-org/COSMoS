@@ -52,8 +52,6 @@
   filename mpfile clear;
   libname jsfile clear;
 
-  %let _bc_nobs  = %cstutilnobs(_cstDataSetName=bc_latest);
-
   data &dsout(
     rename=(
         packageDate = package_date
@@ -92,12 +90,17 @@
 
 %create_template(type=bc, out=work.bc__template);
 
-%global _bc_nobs;
-%get_latest_bc_api(dsout=data.bc_latest);
+%get_latest_bc_api(dsout=data.bc_latest_&packageDateShort);
+
+proc sql noprint;
+ select count(distinct bc_id) into :_bc_n trimmed
+ from data.bc_latest_&packageDateShort
+ ;
+quit;
 
 data work.categories(keep=category);
   length category $1024;
-  set data.bc_latest(keep=bc_categories);
+  set data.bc_latest_&packageDateShort(keep=bc_categories);
   countwords=countw(bc_categories, ";");
   do i=1 to countwords;
     category=strip(scan(bc_categories, i, ";"));
@@ -156,7 +159,7 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
       line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &packageDate..";
-      line "There are currently &_bc_nobs unique CDISC Biomedical Concepts in the CDISC Library.";
+      line "There are currently &_bc_n unique CDISC Biomedical Concepts in the CDISC Library.";
       line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
       line "Only a few attributes are shown in the image.";
     endcomp;
@@ -165,7 +168,7 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
 ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'all');
 
   title "Latest Biomedical Concepts as of &packageDate";
-  proc report data=data.bc_latest;
+  proc report data=data.bc_latest_&packageDateShort;
     columns package_date short_name href bc_id ncit_code parent_bc_id bc_categories synonyms result_scales definition system system_name code
              dec_href dec_id ncit_dec_code dec_label data_type example_set;
 
@@ -225,6 +228,7 @@ ods excel close;
 ods listing;
 
 /* Add image to ReadMe */
+/*
 data _null_;
   call insert_image(
     "%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx",
@@ -235,3 +239,13 @@ data _null_;
     439,
     480
   );
+*/
+  
+%excel_enhance(
+  open_workbook=%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx,
+  autofit=Biomedical Concepts,
+  file_format=xlsx,
+  insert_image=%str(&root/utilities/images/bc-sdtm-erd-light-small.png#ReadMe!F2),
+  create_workbook=&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx
+  );
+  

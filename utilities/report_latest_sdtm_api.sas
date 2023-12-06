@@ -53,8 +53,6 @@
       
     run;
 
-  %let _sdtm_nobs  = %cstutilnobs(_cstDataSetName=sdtm_latest);
-  
   filename jsfile clear;
   filename mpfile clear;
   libname jsfile clear;
@@ -116,9 +114,15 @@ run;
 %create_template(type=sdtm, out=work.sdtm__template);
 
 %global _sdtm_nobs;    
-%get_latest_sdtm_api(dsout=data.sdtm_latest);
+%get_latest_sdtm_api(dsout=data.sdtm_latest_&packageDateShort);
 
-proc sort data=data.sdtm_latest out=work.domains(keep=domain) nodupkey;
+proc sql noprint;
+  select count(distinct vlm_group_id) into :_sdtm_n trimmed
+  from data.sdtm_latest_&packageDateShort
+  ;
+run;
+
+proc sort data=data.sdtm_latest_&packageDateShort out=work.domains(keep=domain) nodupkey;
  by domain;
 run; 
 
@@ -186,7 +190,7 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
       line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &packageDate..";
-      line "There are currently &_sdtm_nobs unique CDISC SDTM Dataset Specializations in the CDISC Library.";
+      line "There are currently &_sdtm_n unique CDISC SDTM Dataset Specializations in the CDISC Library.";
       line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
       line "Only a few attributes are shown in the image.";
     endcomp;  
@@ -195,7 +199,7 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
 ods excel options(sheet_name="SDTM Dataset Specializations" flow="tables" autofilter = 'all');
 
   title "Latest SDTM Dataset Specializations generated on &today";
-    proc report data=data.sdtm_latest;
+    proc report data=data.sdtm_latest_&packageDateShort;
       columns package_date bc_id sdtmig_start_version sdtmig_end_version domain vlm_source vlm_group_id short_name
               sdtm_variable dec_id nsv_flag codelist_href codelist codelist_submission_value subset_codelist
               value_list assigned_term assigned_value role subject linking_phrase predicate_term object 
@@ -249,6 +253,7 @@ ods excel close;
 ods listing;
 
 /* Add image to ReadMe */
+/*
 data _null_;
   call insert_image(
     "%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx",
@@ -258,4 +263,13 @@ data _null_;
     "F2",
     439,
     480
+  );
+*/
+
+%excel_enhance(
+  open_workbook=%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx,
+  autofit=SDTM Dataset Specializations,
+  file_format=xlsx,
+  insert_image=%str(&root/utilities/images/bc-sdtm-erd-light-small.png#ReadMe!F2),
+  create_workbook=&root/utilities/reports/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx
   );
