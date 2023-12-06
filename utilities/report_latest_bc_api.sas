@@ -9,27 +9,27 @@
     );
 
     %read_bc_from_json(
-      json_path=%sysfunc(pathname(work))/biomedicalconcept_&code..json, 
-      jsonlib=jsontmp, 
-      maplib=work, 
-      template=work.bc__template, 
-      out=work.bc__&code, 
+      json_path=%sysfunc(pathname(work))/biomedicalconcept_&code..json,
+      jsonlib=jsontmp,
+      maplib=work,
+      template=work.bc__template,
+      out=work.bc__&code,
       include_package_dates=0
       );
 
-  %mend get_bc;  
+  %mend get_bc;
 
   %if %sysfunc(exist(&dsout)) %then %do;
     %put WAR%str(NING): dataset &dsout already exists.;
     %goto exit_macro;
   %end;
-  
+
   %get_api_response(
       baseurl=&base_url_cosmos,
       endpoint=/mdr/bc/biomedicalconcepts,
       response_file=%sysfunc(pathname(work))/biomedicalconcept_latest.json
     );
-  
+
   %put %sysfunc(dcreate(jsontmp, %sysfunc(pathname(work))));
   libname jsontmp "%sysfunc(pathname(work))/jsontmp";
 
@@ -45,7 +45,7 @@
                               'code=', biomedicalConceptId,
                             ');)');
           call execute(code);
-      
+
     run;
 
   filename jsfile clear;
@@ -78,29 +78,39 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
+%let packageDate=2023-10-03;
+%let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%*let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
 %* The CDISC Library API key has been set as an environment variable;
 %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+%*let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
 %create_template(type=bc, out=work.bc__template);
 
-%get_latest_bc_api(dsout=data.bc_latest);
+%get_latest_bc_api(dsout=data.bc_latest_&packageDateShort);
+
+proc sql noprint;
+ select count(distinct bc_id) into :_bc_n trimmed
+ from data.bc_latest_&packageDateShort
+ ;
+quit;
 
 data work.categories(keep=category);
   length category $1024;
-  set data.bc_latest(keep=bc_categories);
+  set data.bc_latest_&packageDateShort(keep=bc_categories);
   countwords=countw(bc_categories, ";");
   do i=1 to countwords;
     category=strip(scan(bc_categories, i, ";"));
     output;
   end;
  run;
- 
+
  proc sort data=work.categories nodupkey;
    by category;
- run; 
+ run;
 
 proc sql;
   create table work.readme
@@ -131,12 +141,12 @@ proc sql;
     values("Data Element Concept (DEC)", 2, "DataElementConcept", "data_type", "Data Type for the Data Element Concept")
     values("Data Element Concept (DEC)", 2, "DataElementConcept", "example_set", "Example values for the Data Element Concept")
     ;
-quit;    
-     
+quit;
+
 %let headerstyle1 = {background=lightgreen color=black};
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_biomedical_concepts_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -145,20 +155,23 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     define column / style(column)={vjust=t};
     define description / style(column)={vjust=t};
     define class / order style(column)={vjust=t};
-    
+
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &today.";
-    endcomp;  
-  run;  
+      line "This spreadsheet contains the latest versions of CDISC Biomedical Concepts in the CDISC Library as of &packageDate..";
+      line "There are currently &_bc_n unique CDISC Biomedical Concepts in the CDISC Library.";
+      line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
+      line "Only a few attributes are shown in the image.";
+    endcomp;
+  run;
 
 ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'all');
 
-  title "Latest Biomedical Concepts generated on &today";
-  proc report data=data.bc_latest;
+  title "Latest Biomedical Concepts as of &packageDate";
+  proc report data=data.bc_latest_&packageDateShort;
     columns package_date short_name href bc_id ncit_code parent_bc_id bc_categories synonyms result_scales definition system system_name code
              dec_href dec_id ncit_dec_code dec_label data_type example_set;
-    
+
     define package_date /  style(header) = &headerstyle1;
     define bc_categories /  style(header) = &headerstyle1;
     define bc_id /  style(header) = &headerstyle1;
@@ -171,45 +184,68 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
     define system /  style(header) = &headerstyle1;
     define system_name /  style(header) = &headerstyle1;
     define code/  style(header) = &headerstyle1;
-    
-    define href / noprint; 
+
+    define href / noprint;
     define dec_href / noprint;
-               
+
     compute bc_id;
       if not missing(bc_id) and index(bc_id, "NEW")=0 then do;
         call define (_col_, 'url', href);
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
-      end;  
+      end;
     endcomp;
 
     compute ncit_code;
       if not missing(ncit_code) then do;
         call define (_col_, 'url', href);
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
-      end;  
+      end;
     endcomp;
 
     compute parent_bc_id;
       if not missing(parent_bc_id) then do;
         call define (_col_, 'url', cats('https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=', parent_bc_id));
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
-      end;  
+      end;
     endcomp;
 
     compute ncit_dec_code;
       if not missing(ncit_dec_code) then do;
         call define (_col_, 'url', dec_href);
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
-      end;  
+      end;
     endcomp;
 
-  run;  
+  run;
 
 ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');
 
   proc report data=work.categories;
     columns category;
-  run;  
-  
+  run;
+
 ods excel close;
 ods listing;
+
+/* Add image to ReadMe */
+/*
+data _null_;
+  call insert_image(
+    "%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&root/utilities/images/bc-sdtm-erd-light.png",
+    "ReadMe",
+    "F2",
+    439,
+    480
+  );
+*/
+  
+%excel_enhance(
+  open_workbook=%sysfunc(pathname(work))/cdisc_biomedical_concepts_&packageDateShort..xlsx,
+  autofit=Biomedical Concepts,
+  file_format=xlsx,
+  insert_image=%str(&root/utilities/images/bc-sdtm-erd-light-small.png#ReadMe!F2),
+  create_workbook=&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx
+  );
+  

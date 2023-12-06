@@ -94,24 +94,35 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
+%let packageDate=2023-10-03;
+%let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
 %let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%*let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
 %* The CDISC Library API key has been set as an environment variable;
 %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+%*let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
-  proc format;
-    value yesno
-    0 = 'N'
-    1 = 'Y'
-    . = " ";
-  run;  
+proc format;
+  value yesno
+  0 = 'N'
+  1 = 'Y'
+  . = " ";
+run;  
 
 %create_template(type=sdtm, out=work.sdtm__template);
-    
-%get_latest_sdtm_api(dsout=data.sdtm_latest);
 
-proc sort data=data.sdtm_latest out=work.domains(keep=domain) nodupkey;
+%global _sdtm_nobs;    
+%get_latest_sdtm_api(dsout=data.sdtm_latest_&packageDateShort);
+
+proc sql noprint;
+  select count(distinct vlm_group_id) into :_sdtm_n trimmed
+  from data.sdtm_latest_&packageDateShort
+  ;
+run;
+
+proc sort data=data.sdtm_latest_&packageDateShort out=work.domains(keep=domain) nodupkey;
  by domain;
 run; 
 
@@ -166,7 +177,7 @@ quit;
 options  missing= " ";
 
 ods listing close;
-ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/reports/cdisc_sdtm_dataset_specializations_&todays..xlsx";
+ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx";
 
   proc report data=work.readme spanrows missing;
     columns group order column description class;
@@ -178,14 +189,17 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="&root/utilities/repor
     
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
-      line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &today.";
+      line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &packageDate..";
+      line "There are currently &_sdtm_n unique CDISC SDTM Dataset Specializations in the CDISC Library.";
+      line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
+      line "Only a few attributes are shown in the image.";
     endcomp;  
   run;  
 
 ods excel options(sheet_name="SDTM Dataset Specializations" flow="tables" autofilter = 'all');
 
   title "Latest SDTM Dataset Specializations generated on &today";
-    proc report data=data.sdtm_latest;
+    proc report data=data.sdtm_latest_&packageDateShort;
       columns package_date bc_id sdtmig_start_version sdtmig_end_version domain vlm_source vlm_group_id short_name
               sdtm_variable dec_id nsv_flag codelist_href codelist codelist_submission_value subset_codelist
               value_list assigned_term assigned_value role subject linking_phrase predicate_term object 
@@ -237,3 +251,25 @@ ods excel options(sheet_name="Domains" flow="tables" autofilter = 'none');
   
 ods excel close;
 ods listing;
+
+/* Add image to ReadMe */
+/*
+data _null_;
+  call insert_image(
+    "%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx",
+    "&root/utilities/reports/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx",
+    "&root/utilities/images/bc-sdtm-erd-light.png",
+    "ReadMe",
+    "F2",
+    439,
+    480
+  );
+*/
+
+%excel_enhance(
+  open_workbook=%sysfunc(pathname(work))/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx,
+  autofit=SDTM Dataset Specializations,
+  file_format=xlsx,
+  insert_image=%str(&root/utilities/images/bc-sdtm-erd-light-small.png#ReadMe!F2),
+  create_workbook=&root/utilities/reports/cdisc_sdtm_dataset_specializations_&packageDateShort..xlsx
+  );

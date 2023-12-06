@@ -1,6 +1,6 @@
 # CDISC Conceptual and Operational Standards Metadata (COSMoS)
 
-This [repository](https://github.com/cdisc-org/COSMoS) contains working files to implement Biomedical Concepts and Dataset Specializations in the CDISC Library:
+The [COSMoS GitHub repository](https://github.com/cdisc-org/COSMoS) contains working files to implement Biomedical Concepts (BCs) and Dataset Specializations in the CDISC Library:
 
 - **bc_starter_package**
   Contains a [CDISC Biomedical Concepts Starter Package](bc_starter_package/README.md) for:
@@ -15,6 +15,11 @@ This [repository](https://github.com/cdisc-org/COSMoS) contains working files to
   This folder contains draft curation spreadsheets that are still work in progress.
   The content in these draft spreadsheets is neither validated nor loaded in the CDISC Library.
 
+- **export**
+  Spreadsheets with the latest versions of all BCs and SDTM Dataset Specializations in the CDISC Library:
+  - [Latest CDISC Biomedical Concepts](export/cdisc_biomedical_concepts_latest.xlsx) (Excel spreadsheet)
+  - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.xlsx) (Excel spreadsheet)
+
 - **model**
   Model files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [linkml](https://linkml.io/linkml/) specification.
     It also contains several other files auto generated from the model:
@@ -28,8 +33,14 @@ This [repository](https://github.com/cdisc-org/COSMoS) contains working files to
 - **openapi**
   - OpenAPI definition of the API (cosmos.yaml)
 
+  More information about using the CDISC Library API can be found on the [CDISC Library API Portal](https://api.developer.library.cdisc.org/) and the [Biomedical Concepts and Dataset Specializations Release Notes](https://wiki.cdisc.org/pages/viewpage.action?pageId=169412277) on the CDISC Wiki.
+  Use your cdiscID credentials to login to the [CDISC Library API Portal](https://api.developer.library.cdisc.org/).
+
 - **utilities**
-  - Utilities to generate YAML files from the curation spreadsheets
+  - Utilities to:
+    - Validate the curation spreadsheets
+    - Generate YAML files from the curation spreadsheets
+    - Create Excel spreadsheets from JSON files requested through the API
 
 - **yaml**
   - YAML files generated from the curation spreadsheets
