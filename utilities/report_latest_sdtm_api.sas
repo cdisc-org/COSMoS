@@ -53,6 +53,8 @@
       
     run;
 
+  %let _sdtm_nobs  = %cstutilnobs(_cstDataSetName=sdtm_latest);
+  
   filename jsfile clear;
   filename mpfile clear;
   libname jsfile clear;
@@ -94,15 +96,15 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
-%let packageDate=2023-12-12;
-%let packageDateShort=20231212;
+%let packageDate=2023-10-03;
+%let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 
 %let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-%*let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
-%let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
+%let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
+%*let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
 %* The CDISC Library API key has been set as an environment variable;
-%*let api_key=%sysget(CDISC_LIBRARY_API_KEY);
-%let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
+%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
+%*let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
 proc format;
   value yesno
@@ -112,7 +114,8 @@ proc format;
 run;  
 
 %create_template(type=sdtm, out=work.sdtm__template);
-    
+
+%global _sdtm_nobs;    
 %get_latest_sdtm_api(dsout=data.sdtm_latest);
 
 proc sort data=data.sdtm_latest out=work.domains(keep=domain) nodupkey;
@@ -183,6 +186,7 @@ ods excel options(sheet_name="ReadMe" flow="tables") file="%sysfunc(pathname(wor
     compute before _page_ /
       style =[font_weight=bold just=l color=black];
       line "This spreadsheet contains the latest versions of CDISC SDTM Dataset Specializations in the CDISC Library as of &packageDate..";
+      line "There are currently &_sdtm_nobs unique CDISC SDTM Dataset Specializations in the CDISC Library.";
       line "The image on the right shows the relation between Biomedical Concepts and SDTM Dataset Specializations.";
       line "Only a few attributes are shown in the image.";
     endcomp;  
