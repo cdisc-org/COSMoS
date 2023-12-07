@@ -47,7 +47,7 @@ Below is an overview of the contents of this repository.
 
 - **projects**
 
-  The [projects](https://github.com/cdisc-org/COSMoS/tree/main/projects) folder contains various artefacts generated from the [LinkML](https://linkml.io/linkml/) schema, such as JSON-Schema, or the Python object model.
+  The [project](https://github.com/cdisc-org/COSMoS/tree/main/project) folder contains various artefacts generated from the [LinkML](https://linkml.io/linkml/) schema, such as JSON-Schema, or the Python object model.
 
 - **utilities**
 
