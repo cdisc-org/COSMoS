@@ -2,7 +2,7 @@
 
 <img src="utilities/images/2023_Standards-Badges_v5.2-BCs.png" alt="Biomedical Concepts" width="150"/>
 
-The [COSMoS GitHub repository](https://github.com/cdisc-org/COSMoS) contains working files and other artifacts to support the implementation of Biomedical Concepts (BCs) and Dataset Specializations in the CDISC Library.
+The [COSMoS GitHub repository](https://github.com/cdisc-org/COSMoS) contains working files and other artefacts to support the implementation of Biomedical Concepts (BCs) and Dataset Specializations in the CDISC Library.
 Below is an overview of the contents of this repository.
 
 - **bc_starter_package**
@@ -24,7 +24,7 @@ Below is an overview of the contents of this repository.
   - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.xlsx) (Excel spreadsheet)
 
 - **model**
-  The [model](model) folder contains files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [linkml](https://linkml.io/linkml/) specification.
+  The [model](model) folder contains files (cosmos_bc_model.yaml and cosmos_sdtm_bc_model.yaml) according to the [LinkML](https://linkml.io/linkml/) specification.
     It also contains several other files auto generated from the model:
   - cosmos_bc_model.json amd cosmos_sdtm_bc_model.json:
     JSON schema files describing the machine-readable YAML files
@@ -34,10 +34,13 @@ Below is an overview of the contents of this repository.
     Python models
 
 - **openapi**
-  - The [openapi](openapi) folder contains the OpenAPI definition of the COSMoS API (cosmos.yaml)
+  The [openapi](openapi) folder contains the OpenAPI definition of the COSMoS API (cosmos.yaml)
 
   More information about using the CDISC Library API can be found on the [CDISC Library API Portal](https://api.developer.library.cdisc.org/) and the [Biomedical Concepts and Dataset Specializations Release Notes](https://wiki.cdisc.org/pages/viewpage.action?pageId=169412277) on the CDISC Wiki.
   Use your cdiscID credentials to login to the [CDISC Library API Portal](https://api.developer.library.cdisc.org/).
+
+- **projects**
+  The [projects](projects) folder contains various artefacts generated from the [LinkML](https://linkml.io/linkml/) schema, such as JSON-Schema, or the Python object model.
 
 - **utilities**
   The [utilities](utilities) folder contains utilities to:
