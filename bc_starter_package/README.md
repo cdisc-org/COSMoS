@@ -55,4 +55,4 @@ Give feedback or gain clarification on BC and Dataset Specialization content, da
 
 Refer to BC and Dataset Specialization Curation Principles and Guidelines to understand how  metadata is defined.
 
-- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs%2010252023.xlsx)
+- [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs.xlsx)
