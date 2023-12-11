@@ -78,7 +78,7 @@
 
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
-%let packageDate=2023-10-03;
+%let packageDate=2023-12-12;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 %let temp_location=%sysfunc(pathname(work));
 %let temp_location=&root/utilities/test;
