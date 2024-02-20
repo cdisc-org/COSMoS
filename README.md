@@ -15,6 +15,7 @@ Below is an overview of the contents of this repository.
 - **curation**
 
   The [curation](https://github.com/cdisc-org/COSMoS/tree/main/curation) folder contains spreadsheets that were used for loading of BCs and SDTM Specializations.
+  These spreadsheets should not be used to download BCs or SDTM Specializations. Instead, use the spreadsheets in the [export](https://github.com/cdisc-org/COSMoS/tree/main/export) folder.
 
 - **curation/draft**
 
