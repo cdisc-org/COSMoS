@@ -21,7 +21,7 @@ CREATE TABLE "CodeListTerm" (
 
 CREATE TABLE "RelationShip" (
 	subject TEXT NOT NULL, 
-	"linkingPhrase" VARCHAR(79) NOT NULL, 
+	"linkingPhrase" VARCHAR(101) NOT NULL, 
 	"predicateTerm" VARCHAR(22) NOT NULL, 
 	object TEXT NOT NULL, 
 	PRIMARY KEY (subject, "linkingPhrase", "predicateTerm", object)

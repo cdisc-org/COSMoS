@@ -129,7 +129,19 @@
             "specifies the anatomical location of the performance of the test in",
             "specifies the severity of",
             "values are grouped by",
-            "was the subject position during performance of the test in"
+            "was the subject position during performance of the test in",
+            "identifies the reference used in the genomic test in",
+            "indicates heritability of the genetic variant in",
+            "is an identifier for a published reference for the genetic variant in",
+            "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in",
+            "is an identifier for the genetic sequence of the genetic entity represented by",
+            "is the chromosome that is the position of the result in",
+            "is the date of occurrence",
+            "is the method of secondary analysis of results in",
+            "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
+            "is the symbol for the genomic entity that is the position of the result in",
+            "is the type of genomic entity that is the position of the result in",
+            "is the genetic sub-location of the result in"
          ],
          "title": "LinkingPhraseEnum",
          "type": "string"
@@ -176,6 +188,7 @@
             "IS_GROUPED_BY",
             "IS_INDICATOR_FOR",
             "IS_ORIGINAL_TEXT_FOR",
+            "IS_POSITION_FOR",
             "IS_RESULT_OF",
             "IS_SPECIMEN_TESTED_IN",
             "IS_SUBJECT_STATE_FOR",

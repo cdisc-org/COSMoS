@@ -234,7 +234,7 @@ ods listing;
 data _null_;
   call insert_image(
     "&temp_location/cdisc_biomedical_concepts_&packageDateShort..xlsx",
-    "&root/utilities/reports/cdisc_biomedical_concepts_&packageDateShort..xlsx",
+    "&root/utilities/downloads/cdisc_biomedical_concepts_&packageDateShort..xlsx",
     "&root/utilities/images/bc-sdtm-erd-light.png",
     "ReadMe",
     "F2",

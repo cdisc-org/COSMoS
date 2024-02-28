@@ -1,0 +1,11 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C21049
+ncitCode: C21049
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C21049
+categories:
+  - Biochemical Process
+shortName: Gene Expression Process
+synonyms:
+  - Gene Expression
+definition: Any subcellular or molecular event or process specifically, primarily, and directly designed for and involved in the production of mature functional biomolecular products encoded by a gene.

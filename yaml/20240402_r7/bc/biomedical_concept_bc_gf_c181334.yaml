@@ -1,0 +1,107 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C181334
+ncitCode: C181334
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181334
+parentConceptId: C18302
+categories:
+  - Genetic Variation Analysis
+shortName: Short Variation Assessment
+synonyms:
+  - SHRTVAR
+  - Short Variation
+resultScales:
+  - Quantitative
+  - Nominal
+definition: An assessment of the variability in a short sequence of nucleotides (generally defined as 50 base pairs or less), when compared to a reference sequence.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Genotype"
+      - "Predicted Amino Acid Change"
+      - "Predicted Coding Sequence Change"
+      - "Read Depth"
+      - "Variant Impact Classification"
+      - "Variant Read Depth"
+      - "Variant Read Depth/Read Depth"
+  - conceptId: C103223
+    ncitCode: C103223
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103223
+    shortName: Genetic Finding
+    dataType: string
+  - conceptId: C93423
+    ncitCode: C93423
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C93423
+    shortName: Reference Result
+    dataType: string
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "%"
+      - "Ratio"
+  - conceptId: C164815
+    ncitCode: C164815
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164815
+    shortName: Reference Genome Assembly Version
+    dataType: string
+  - conceptId: C164716
+    ncitCode: C164716
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164716
+    shortName: Chromosome Name
+    dataType: string
+  - conceptId: C43568
+    ncitCode: C43568
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C43568
+    shortName: Gene Symbol
+    dataType: string
+    exampleSet:
+      - "BAP1"
+      - "CYP2D6"
+  - conceptId: C204092
+    ncitCode: C204092
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C204092
+    shortName: Genomic Symbol Entity Type
+    dataType: string
+    exampleSet:
+      - "Gene With Protein Product"
+  - conceptId: C164528
+    ncitCode: C164528
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164528
+    shortName: Genetic Location
+    dataType: string
+  - conceptId: C164533
+    ncitCode: C164533
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164533
+    shortName: Genetic Subregion
+    dataType: string
+  - conceptId: C164813
+    ncitCode: C164813
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C164813
+    shortName: Genetic Variation Identifier
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "DNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Targeted Genome Sequencing"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

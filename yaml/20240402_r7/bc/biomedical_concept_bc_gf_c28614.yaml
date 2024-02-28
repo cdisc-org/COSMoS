@@ -1,0 +1,11 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C28614
+ncitCode: C28614
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28614
+parentConceptId: C21049
+categories:
+  - Gene Expression Process
+  - Transcription Process
+shortName: Transcription Process
+definition: A Transcription Process is any cellular event or activity directly involved in the synthesis a nascent RNA transcript.

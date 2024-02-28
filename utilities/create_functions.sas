@@ -21,7 +21,7 @@ proc fcmp outlib=macros.funcs.python;
     else return ("");
   endsub;
 
-  function get_predicateterm_linkingphrase(linkingPhrase $, predicateTerm $);
+  function exists_predicaterm_linkingphrase(linkingPhrase $, predicateTerm $);
     declare hash hh(dataset: "data.sdtm_linkingphrases");
     rc=hh.definedata("predicateTerm");
     rc=hh.definekey("linkingPhrase", "predicateTerm");
@@ -31,7 +31,7 @@ proc fcmp outlib=macros.funcs.python;
     else return (0);
   endsub;
 
-  function exist_predicateterm(predicateTerm $);
+  function exists_predicateterm(predicateTerm $);
     declare hash hh(dataset: "data.sdtm_predicateterms");
     rc=hh.definedata("predicateTerm");
     rc=hh.definekey("predicateTerm");
@@ -230,13 +230,13 @@ run;
 data relationships;
   linkingPhrase = "is a dictionary-derived term for the value in";
   predicateTerm = get_predicateterm(linkingPhrase);
-  exist = exist_predicateterm(predicateTerm);
-  exist2 = get_predicateterm_linkingphrase(linkingPhrase, predicateTerm);
+  exist = exists_predicateterm(predicateTerm);
+  exist2 = exists_predicaterm_linkingphrase(linkingPhrase, predicateTerm);
   
   predicateTerm0 = get_predicateterm("is bad luck");
-  existnot = exist_predicateterm("NOPE");
-  existnot2 = get_predicateterm_linkingphrase("bad luck", "NOPE");
-  existnot3 = get_predicateterm_linkingphrase("", "");
+  existnot = exists_predicateterm("NOPE");
+  existnot2 = exists_predicaterm_linkingphrase("bad luck", "NOPE");
+  existnot3 = exists_predicaterm_linkingphrase("", "");
 
   put (_all_) (=/) ;
 run;
