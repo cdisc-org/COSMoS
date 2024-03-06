@@ -328,6 +328,7 @@ enums:
       is the symbol for the genomic entity that is the position of the result in:
       is the type of genomic entity that is the position of the result in:
       is the genetic sub-location of the result in:
+      is the object of the observation in:
 
   PredicateTermEnum:
     permissible_values:

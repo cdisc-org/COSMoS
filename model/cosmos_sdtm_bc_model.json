@@ -141,7 +141,8 @@
             "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
             "is the symbol for the genomic entity that is the position of the result in",
             "is the type of genomic entity that is the position of the result in",
-            "is the genetic sub-location of the result in"
+            "is the genetic sub-location of the result in",
+            "is the object of the observation in"
          ],
          "title": "LinkingPhraseEnum",
          "type": "string"

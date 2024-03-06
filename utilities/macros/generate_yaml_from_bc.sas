@@ -184,6 +184,10 @@
       put +4 "shortName:" +1 dec_label;
       
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
+      %add2issues_bc(missing(data_type), 
+                     %str(BC_DEC_DATATYPE_MISSING), 
+                     "", "", %str(cats("dec_label=", dec_label)));
+      
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 
                        %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "", severity=NOTE);

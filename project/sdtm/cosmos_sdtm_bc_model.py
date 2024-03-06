@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-02-22T13:44:41
+# Generation date: 2024-03-06T15:00:53
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -531,6 +531,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the type of genomic entity that is the position of the result in") )
         setattr(cls, "is the genetic sub-location of the result in",
                 PermissibleValue(text="is the genetic sub-location of the result in") )
+        setattr(cls, "is the object of the observation in",
+                PermissibleValue(text="is the object of the observation in") )
 
 class PredicateTermEnum(EnumDefinitionImpl):
 

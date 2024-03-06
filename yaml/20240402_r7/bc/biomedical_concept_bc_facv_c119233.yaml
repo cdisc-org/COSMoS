@@ -1,0 +1,53 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C119233
+ncitCode: C119233
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C119233
+parentConceptId: C83119
+categories:
+  - Physical Examination Finding
+shortName: Physical Examination Findings of New or Worsening Heart Failure
+synonyms:
+  - HFPEFNW
+  - Heart Failure New/Worsening PE Findings
+resultScales:
+  - Ordinal
+definition: A description of the physical examination evidence of heart failure that can be classified as new or worsening.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Clinically Significant or Rapid Weight Gain"
+      - "Increased Jugular Venous Pressure or Hepato Jugular Reflux"
+      - "Increasing Abdominal Distention or Ascites"
+      - "Peripheral Edema"
+      - "Pulmonary Rales/Crackles/Crepitations"
+      - "S3 Gallop"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117050
+    shortName: Record Link Identifier
+    dataType: string

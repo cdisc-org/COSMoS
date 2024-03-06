@@ -113,10 +113,15 @@
 
 %let package=20240402;
 %let folder=20240402_r7;
-%let ExcelFile=&root/curation/BC_Package_R7.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
+%let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
+
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_gf, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_GF));
+
+%let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_facv, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_FACV));
 
 %let ExcelFile=&root/curation/BC_Package_R7_BC_updates.xlsx;
 
