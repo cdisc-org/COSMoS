@@ -87,9 +87,10 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C119016
       submissionValue: CVFARS
     valueList:
-      - "HEMORRHAGIC STROKE"
-      - "ISCHEMIC STROKE"
-      - "UNDETERMINED STROKE"
+      - "STENT THROMBOSIS ARC ACUTE"
+      - "STENT THROMBOSIS ARC LATE"
+      - "STENT THROMBOSIS ARC SUBACUTE"
+      - "STENT THROMBOSIS ARC VERY LATE"
     role: Qualifier
     dataType: text
     length: 200
@@ -111,9 +112,10 @@ variables:
       href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C119016
       submissionValue: CVFARS
     valueList:
-      - "HEMORRHAGIC STROKE"
-      - "ISCHEMIC STROKE"
-      - "UNDETERMINED STROKE"
+      - "STENT THROMBOSIS ARC ACUTE"
+      - "STENT THROMBOSIS ARC LATE"
+      - "STENT THROMBOSIS ARC SUBACUTE"
+      - "STENT THROMBOSIS ARC VERY LATE"
     role: Qualifier
     dataType: text
     length: 200
