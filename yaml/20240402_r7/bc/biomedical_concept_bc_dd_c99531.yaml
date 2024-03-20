@@ -1,0 +1,29 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C99531
+ncitCode: C99531
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99531
+parentConceptId: C81239
+categories:
+  - Cause of Death
+shortName: Primary Cause of Death
+synonyms:
+  - PRCDTH
+  - Primary
+resultScales:
+  - Nominal
+definition: The first significant event which ultimately led to death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Sudden Cardiac Death"
+      - "Cardiac Arrhythmia"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

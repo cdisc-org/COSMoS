@@ -123,6 +123,10 @@
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_facv, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_FACV));
 
+%let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_dd, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_DD));
+
 %let ExcelFile=&root/curation/BC_Package_R7_BC_updates.xlsx;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_updates, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(Biomedical Concepts));
