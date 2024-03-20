@@ -1,0 +1,11 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C18302
+ncitCode: C18302
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C18302
+categories:
+  - Genetic Variation Analysis
+shortName: Genetic Variation Analysis
+synonyms:
+  - Mutation Analysis
+definition: The identification of genetic variation in a biological sample.

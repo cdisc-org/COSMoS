@@ -1,0 +1,9 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C25150
+ncitCode: C25150
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25150
+categories:
+  - Age
+shortName: Age
+definition: How long something has existed; elapsed time since birth.

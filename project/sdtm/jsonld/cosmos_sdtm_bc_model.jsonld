@@ -530,6 +530,45 @@
         },
         {
           "text": "was the subject position during performance of the test in"
+        },
+        {
+          "text": "identifies the reference used in the genomic test in"
+        },
+        {
+          "text": "indicates heritability of the genetic variant in"
+        },
+        {
+          "text": "is an identifier for a published reference for the genetic variant in"
+        },
+        {
+          "text": "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in"
+        },
+        {
+          "text": "is an identifier for the genetic sequence of the genetic entity represented by"
+        },
+        {
+          "text": "is the chromosome that is the position of the result in"
+        },
+        {
+          "text": "is the date of occurrence"
+        },
+        {
+          "text": "is the method of secondary analysis of results in"
+        },
+        {
+          "text": "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in"
+        },
+        {
+          "text": "is the symbol for the genomic entity that is the position of the result in"
+        },
+        {
+          "text": "is the type of genomic entity that is the position of the result in"
+        },
+        {
+          "text": "is the genetic sub-location of the result in"
+        },
+        {
+          "text": "is the object of the observation in"
         }
       ]
     },
@@ -585,6 +624,9 @@
         },
         {
           "text": "IS_ORIGINAL_TEXT_FOR"
+        },
+        {
+          "text": "IS_POSITION_FOR"
         },
         {
           "text": "IS_RESULT_OF"
@@ -1452,9 +1494,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2023-11-27T11:09:33",
-  "source_file_size": 12401,
-  "generation_date": "2023-11-27T12:04:21",
+  "source_file_date": "2024-03-06T15:00:34",
+  "source_file_size": 13333,
+  "generation_date": "2024-03-06T15:00:48",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

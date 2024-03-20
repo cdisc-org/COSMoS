@@ -1,0 +1,27 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C116142
+ncitCode: C116142
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116142
+parentConceptId: C81239
+categories:
+  - Cause of Death
+shortName: Secondary Cause of Death
+synonyms:
+  - SECDTH
+resultScales:
+  - Nominal
+definition: The second significant event which ultimately led to death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Congestive Heart Failure"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

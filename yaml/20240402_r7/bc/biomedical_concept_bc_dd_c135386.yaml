@@ -1,0 +1,32 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C135386
+ncitCode: C135386
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C135386
+parentConceptId: C25180
+categories:
+  - Indicator
+shortName: Hospital Medical Record Indicator
+synonyms:
+  - HMROIND
+  - Hospital Medical Record Obtained Ind
+  - Hospital Medical Record Obtained Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether medical records were obtained from the hospital.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+      - "NA"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

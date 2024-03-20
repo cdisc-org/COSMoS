@@ -1,0 +1,10 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C63331
+ncitCode: C63331
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C63331
+categories:
+  - Molecular Analysis
+  - Microsatellite Instability Analysis
+shortName: Microsatellite Instability Analysis
+definition: A laboratory procedure to detect microsatellite instability.

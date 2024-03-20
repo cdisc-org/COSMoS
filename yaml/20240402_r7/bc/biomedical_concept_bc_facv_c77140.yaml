@@ -1,0 +1,9 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C77140
+ncitCode: C77140
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C77140
+categories:
+  - Clinical Test Result
+shortName: Clinical Test Result
+definition: The result of a laboratory, radiologic, or other clinical test performed to determine the presence, absence, or degree of a condition.

@@ -178,12 +178,16 @@
       if not missing(ncit_dec_code) then do;
 
         call get_shortname(ncit_dec_code, short_name_dec_nci);
-        %add2issues_bc((dec_label ne short_name_dec_nci) or (missing(dec_label)), 
+        %add2issues_bc(((dec_label ne short_name_dec_nci) and not missing(short_name_dec_nci)) or (missing(dec_label)), 
                        %str(DEC_SHORTNAME MISMATCH_OR_MISSING), short_name_dec_nci, dec_label, "");
       end;
       put +4 "shortName:" +1 dec_label;
       
       if not missing(data_type) then put +4 "dataType:" +1 data_type;
+      %add2issues_bc(missing(data_type), 
+                     %str(BC_DEC_DATATYPE_MISSING), 
+                     "", "", %str(cats("dec_label=", dec_label)));
+      
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 
                        %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "", severity=NOTE);

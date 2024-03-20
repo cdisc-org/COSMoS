@@ -43,7 +43,7 @@ run;
 /*
 %let package=20230706;
 %let folder=20230706_oncology;
-%let Excelfile=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+%let Excelfile=&root/curation/BC_Package_R4_Oncology_RECIST11_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
@@ -90,7 +90,6 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mb, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_MB), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mh, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_MH), subsetsDS=subsets);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(SDTM_PR_EDITS), subsetsDS=subsets);
-*/
 
 %let package=20231212;
 %let folder=20231212_r6;
@@ -112,7 +111,31 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sc,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC));
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=su,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SU));
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=vs_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS_EDITS));
+*/
+options mprint;
 
+%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
+
+%let package=20240402;
+%let folder=20240402_r7;
+%let TargetFolder=&root/yaml/&folder/sdtm;
+
+%let checkrelationships=0;
+%let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_gf, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
+
+%let checkrelationships=0;
+%let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_facv, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_FACV), debug=0, check_relationships=&checkrelationships);
+
+%let checkrelationships=1;
+%let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_dd, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DD), debug=0, check_relationships=&checkrelationships);
+
+%let checkrelationships=0;
+%let ExcelFile=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_updates, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM Dataset Specializations), debug=0, check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..html";

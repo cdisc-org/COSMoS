@@ -1,0 +1,31 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C199843
+ncitCode: C199843
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C199843
+parentConceptId: C25180
+categories:
+  - Indicator
+shortName: Disease Indication Under Study Contributed to Death Indicator
+synonyms:
+  - CUSCDIND
+  - Cond Under Study Contrib to Death Ind
+  - Condition Under Study Contributed to Death Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether the disease or condition under study contributed to the cause of death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

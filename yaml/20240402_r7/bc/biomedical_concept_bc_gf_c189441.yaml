@@ -1,0 +1,92 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C189441
+ncitCode: C189441
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189441
+parentConceptId: C18302
+categories:
+  - Genetic Variation Analysis
+shortName: Variant Profile Assessment
+synonyms:
+  - VARPROF
+  - Variant Profile
+resultScales:
+  - Nominal
+definition: An assessment of the unique pattern of sequence variation of one or more loci associated with a normal or abnormal biological process.
+dataElementConcepts:
+  - conceptId: C117060
+    ncitCode: C117060
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117060
+    shortName: Sponsor Device Identifier
+    dataType: string
+    exampleSet:
+      - "DMET Plus"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Predicted Diplotype"
+      - "Predicted Phenotype"
+      - "Alelle Type"
+  - conceptId: C103223
+    ncitCode: C103223
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103223
+    shortName: Genetic Finding
+    dataType: string
+  - conceptId: C43568
+    ncitCode: C43568
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C43568
+    shortName: Gene Symbol
+    dataType: string
+    exampleSet:
+      - "CYP2C19"
+      - "HLA-A"
+      - "HLA-B"
+      - "HLA-C"
+      - "HLA-DRB1"
+      - "HLA-DRB1"
+      - "HLA-DRB3"
+  - conceptId: C204092
+    ncitCode: C204092
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C204092
+    shortName: Genomic Symbol Entity Type
+    dataType: string
+    exampleSet:
+      - "Gene With Protein Product"
+  - conceptId: C204090
+    ncitCode: C204090
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C204090
+    shortName: Copy Identifier
+    dataType: string
+    exampleSet:
+      - "1"
+      - "2"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "DNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Microarray"
+      - "Sanger Sequencing"
+  - conceptId: C117039
+    ncitCode: C117039
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117039
+    shortName: Analysis Method
+    dataType: string
+    exampleSet:
+      - "ADME Variant Profile"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

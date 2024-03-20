@@ -1,4 +1,8 @@
-%macro generate_yaml_from_bc_sdtm(excel_file=, range=, type=, package=, override_package_date=, out_folder=, subsetsDS=, debug=0);
+%macro generate_yaml_from_bc_sdtm(
+  excel_file=, range=, type=, package=, override_package_date=, 
+  out_folder=, subsetsDS=, 
+  debug=0, check_relationships=1
+  );
 
 %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_sdtm_&type._&package);
 
@@ -42,7 +46,7 @@
     retain prev_vlm_group_id "" count 0;
     set work.&type._&package._mrgd;
 
-    call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc);
+    call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc, lookup_term_exist, linking_phrase_low, lookup_predicate);
     
     outname=catt("&out_folder\sdtm_bc_specialization_&type._", lowcase(strip(vlm_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
@@ -184,30 +188,32 @@
               "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
               );
         
-        
-        if not(missing(linking_phrase)) then do;
-          lookup_predicate = get_predicateterm(linking_phrase);
-          %add2issues_sdtm(missing(lookup_predicate),
-                %str(RELATIONSHIP_ISSUE_PHRASE_NOTFOUND), 
-                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
-                );
-        end;
-        
-        if not(missing(predicate_term)) then do;
-          lookup_term_exist = exist_predicateterm(predicate_term);
-          %add2issues_sdtm(missing(lookup_term_exist),
-                %str(RELATIONSHIP_ISSUE_TERM_NOTFOUND), 
-                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
-                );
-        end;
-        
-        if not(missing(predicate_term)) and not(missing(linking_phrase)) then do;
-          lookup_term_exist = get_predicateterm_linkingphrase(linking_phrase, predicate_term);
-          %add2issues_sdtm(missing(lookup_term_exist),
-                %str(RELATIONSHIP_ISSUE_COMBINATION_NOT_FOUND), 
-                "", "", %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
-                );
-        end;
+        %if &check_relationships %then %do;
+          if not(missing(linking_phrase)) then do;
+            lookup_predicate = get_predicateterm(linking_phrase);
+            %add2issues_sdtm(missing(lookup_predicate),
+                  %str(RELATIONSHIP_ISSUE_PHRASE_NOTFOUND), 
+                  "", linking_phrase, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                  );
+          end;
+          
+          if not(missing(predicate_term)) then do;
+            lookup_term_exist = exists_predicateterm(predicate_term);
+            %add2issues_sdtm(%str(lookup_term_exist = 0),
+                  %str(RELATIONSHIP_ISSUE_TERM_NOTFOUND), 
+                  "", predicate_term, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                  );
+          end;
+          
+          if not(missing(predicate_term)) and not(missing(linking_phrase)) then do;
+            lookup_term_exist = exists_predicaterm_linkingphrase(linking_phrase, predicate_term);
+            value = catx(",", linking_phrase, predicate_term);
+            %add2issues_sdtm(%str(lookup_term_exist = 0),
+                  %str(RELATIONSHIP_ISSUE_COMBINATION_NOT_FOUND), 
+                  "", value, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
+                  );
+          end;
+        %end;
           
         if not missing(subject) then do;
           linking_phrase_low = lowcase(linking_phrase);

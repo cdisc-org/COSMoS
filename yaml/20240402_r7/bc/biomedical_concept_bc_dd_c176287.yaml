@@ -1,0 +1,26 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C176287
+ncitCode: C176287
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C176287
+parentConceptId: C25683
+categories:
+  - Source
+shortName: Information Source for Cause of Death
+synonyms:
+  - INFOSCOD
+  - cause of death source
+resultScales:
+  - Nominal
+definition: The authoritative source that provided the cause of death information.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

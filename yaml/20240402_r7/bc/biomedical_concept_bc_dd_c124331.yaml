@@ -1,0 +1,30 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C124331
+ncitCode: C124331
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124331
+parentConceptId: C25341
+categories:
+  - Location
+shortName: Location of Death
+synonyms:
+  - LOCDTH
+  - Location of Death
+resultScales:
+  - Ordinal
+definition: The physical place at which the subject ceased to live.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Clinic"
+      - "Home"
+      - "Hospital"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

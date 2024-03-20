@@ -1,0 +1,9 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C4876
+ncitCode: C4876
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C4876
+categories:
+  - Symptom
+shortName: Symptom
+definition: Subjective evidence of disease perceived by the patient.

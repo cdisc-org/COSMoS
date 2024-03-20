@@ -47,7 +47,7 @@ title01 "&now";
 
 
 /* Package 4 - Oncology */
-%let excel_file=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+%let excel_file=&root/curation/BC_Package_R4_Oncology_RECIST11_2023_07_06.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc4_onco_1);
 
@@ -145,6 +145,29 @@ title01 "&now";
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
 
+/* Package 7 - */
+options mprint;
+
+%let excel_file=&root/curation/BC_Package_R7_GF.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm7_01, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/BC_Package_R7_FACV.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_FACV)$, dsout=bc7_02, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_FACV)$, dsout=sdtm7_02, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/BC_Package_R7_DD.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DD)$, dsout=bc7_03, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_DD)$, dsout=sdtm7_03, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/BC_Package_R7_BC_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc7_04, drop=%str(drop=change_history)); 
+
+%let excel_file=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format)); 
+
+%let _debug=2;
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
@@ -164,6 +187,7 @@ data bc(drop=change_history F1: F2: i vname vvalue);
     end; 
   end;
   order=_n_;
+  package_date = upcase(package_date);
 run;  
 
 
@@ -175,8 +199,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._bc.html";
-  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._bc.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_bc_&todays..html";
+  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_bc_&todays..xlsx";
 
     proc print data=bc;
     run;
@@ -196,6 +220,7 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
   set sdtm:(where=(not missing(vlm_group_id)));
   order=_n_;
+  package_date = upcase(package_date);
   array carray{*} _character_;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
@@ -229,8 +254,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.html";
-  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm.xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_&todays..html";
+  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_sdtm_&todays..xlsx";
 
     proc print data=sdtm_merged;
     run;
@@ -241,7 +266,7 @@ quit;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/reports/validate_spreadsheet_&todays._sdtm_bc_issues.html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_&todays..html";
 
   /* Unresolved BC Parent BCs */
   proc sql;

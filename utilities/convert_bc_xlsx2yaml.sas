@@ -50,7 +50,7 @@
 /*
 %let package=20230706;
 %let folder=20230706_oncology;
-%let ExcelFile=&root/curation/BC_Oncology_RECIST11_2023_07_06.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R4_Oncology_RECIST11_2023_07_06.xlsx;
 %let TargetFolder=&root/yaml/&folder/bc;
 
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=recist, package=&package, override_package_date=%str(2023-07-06), out_folder=&TargetFolder, range=%str(BC TU_TR_RS));
@@ -90,6 +90,7 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=pr_edits, package=&package, override_package_date=%str(2023-10-03), out_folder=&TargetFolder, range=%str(BC_PR_EDITS));
 */
 
+/*
 %let package=20231212;
 %let folder=20231212_r6;
 %let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
@@ -108,6 +109,27 @@
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=sc,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, range=%str(BC_SC));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=su,       package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, range=%str(BC_SU));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=vs_edits, package=&package, override_package_date=%str(2023-12-12), out_folder=&TargetFolder, range=%str(BC_VS_EDITS));
+*/
+
+%let package=20240402;
+%let folder=20240402_r7;
+%let TargetFolder=&root/yaml/&folder/bc;
+
+%let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_gf, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_GF));
+
+%let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_facv, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_FACV));
+
+%let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_dd, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_DD));
+
+%let ExcelFile=&root/curation/BC_Package_R7_BC_updates.xlsx;
+
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_updates, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(Biomedical Concepts));
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_&todays..html";
