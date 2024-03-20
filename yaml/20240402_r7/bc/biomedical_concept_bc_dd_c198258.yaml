@@ -1,0 +1,29 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C198258
+ncitCode: C198258
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C198258
+parentConceptId: C25180
+categories:
+  - Indicator
+shortName: Hospitalized at Time of Death Indicator
+synonyms:
+  - HSDTHIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the subject was hospitalized at the time of death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

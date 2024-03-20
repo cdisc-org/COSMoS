@@ -125,9 +125,13 @@ options mprint;
 %let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_gf, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
 
-%let checkrelationships=1;
+%let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_facv, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_FACV), debug=0, check_relationships=&checkrelationships);
+
+%let checkrelationships=1;
+%let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_dd, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DD), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R7_SDTM_updates.xlsx;

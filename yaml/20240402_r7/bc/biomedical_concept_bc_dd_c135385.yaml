@@ -1,0 +1,30 @@
+packageDate: "2023-04-02"
+packageType: bc
+conceptId: C135385
+ncitCode: C135385
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C135385
+parentConceptId: C25180
+categories:
+  - Indicator
+shortName: Death Certification Indicator
+synonyms:
+  - DTHCOIND
+  - Death Certificate Obtained Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether a death certificate was obtained.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -156,11 +156,15 @@ options mprint;
 %ReadExcel(file=&excel_file, range=%str(BC_FACV)$, dsout=bc7_02, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_FACV)$, dsout=sdtm7_02, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/BC_Package_R7_DD.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DD)$, dsout=bc7_03, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_DD)$, dsout=sdtm7_03, drop=%str(drop=length significant_digits format));
+
 %let excel_file=&root/curation/BC_Package_R7_BC_updates.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc7_03, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc7_04, drop=%str(drop=change_history)); 
 
 %let excel_file=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
-%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_03, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format)); 
 
 %let _debug=2;
 
