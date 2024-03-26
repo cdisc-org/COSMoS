@@ -120,22 +120,23 @@ options mprint;
 %let package=20240402;
 %let folder=20240402_r7;
 %let TargetFolder=&root/yaml/&folder/sdtm;
+%let OverrideDate=%str(2024-04-02);
 
 %let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_gf, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_facv, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_FACV), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_facv, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_FACV), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=1;
 %let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_dd, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DD), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_dd, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DD), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_updates, package=&package, override_package_date=%str(2024-04-02), out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM Dataset Specializations), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM Dataset Specializations), debug=0, check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..html";

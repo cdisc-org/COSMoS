@@ -114,22 +114,23 @@
 %let package=20240402;
 %let folder=20240402_r7;
 %let TargetFolder=&root/yaml/&folder/bc;
+%let OverrideDate=%str(2024-04-02);
 
 %let ExcelFile=&root/curation/BC_Package_R7_GF.xlsx;
 
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_gf, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_GF));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_GF));
 
 %let ExcelFile=&root/curation/BC_Package_R7_FACV.xlsx;
 
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_facv, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_FACV));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_facv, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_FACV));
 
 %let ExcelFile=&root/curation/BC_Package_R7_DD.xlsx;
 
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_dd, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(BC_DD));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_dd, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DD));
 
 %let ExcelFile=&root/curation/BC_Package_R7_BC_updates.xlsx;
 
-%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_updates, package=&package, override_package_date=%str(2023-04-02), out_folder=&TargetFolder, range=%str(Biomedical Concepts));
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=bc_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Biomedical Concepts));
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_&todays..html";
