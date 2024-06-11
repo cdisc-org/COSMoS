@@ -146,6 +146,9 @@ data data.sdtm_linkingphrases(keep=linkingPhrase predicateTerm);
   /* Temporary hard update */
   if first.linkingPhrase then do;
     put linkingPhrase;
+    * output;
+  end;  
+  if first.predicateTerm then do;
     output;
   end;  
 run;  

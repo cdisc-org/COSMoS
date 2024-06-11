@@ -553,6 +553,9 @@
           "text": "is the date of occurrence"
         },
         {
+          "text": "is the date of occurrence for"
+        },
+        {
           "text": "is the method of secondary analysis of results in"
         },
         {
@@ -569,6 +572,9 @@
         },
         {
           "text": "is the object of the observation in"
+        },
+        {
+          "text": "is an identifier for the evaluator with the role in"
         }
       ]
     },
@@ -1494,9 +1500,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2024-03-06T15:00:34",
-  "source_file_size": 13333,
-  "generation_date": "2024-03-06T15:00:48",
+  "source_file_date": "2024-06-10T11:02:10",
+  "source_file_size": 13431,
+  "generation_date": "2024-06-10T11:02:57",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

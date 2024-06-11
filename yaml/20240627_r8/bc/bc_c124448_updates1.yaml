@@ -1,0 +1,92 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C124448
+ncitCode: C124448
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C124448
+parentConceptId: C135508
+categories:
+  - Oncology Standards
+  - Tumor/Lesion Results
+  - TR
+shortName: Lymph Node State
+synonyms:
+  - LNSTATE
+resultScales:
+  - Nominal
+definition: A condition or state of a lymph node at a particular time.
+dataElementConcepts:
+  - conceptId: C117411
+    ncitCode: C117411
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117411
+    shortName: Tumor Results Group Identifier
+    dataType: string
+    exampleSet:
+      - "Target"
+      - "Non-target"
+      - "New"
+  - conceptId: C117419
+    ncitCode: C117419
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117419
+    shortName: Tumor Results Reference Identifier
+    dataType: string
+    exampleSet:
+      - "IMG-00001"
+      - "IMG-00002"
+  - conceptId: C117412
+    ncitCode: C117412
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117412
+    shortName: Tumor Results Link Group
+    dataType: string
+    exampleSet:
+      - "A1"
+      - "A2"
+      - "A3"
+  - conceptId: C117413
+    ncitCode: C117413
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117413
+    shortName: Tumor Results Link Identifier
+    dataType: string
+    exampleSet:
+      - "T01"
+      - "NT01"
+      - "NEW01"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Pathological"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "MRI"
+      - "CT Scan"
+      - "Ultrasound"
+      - "Photography"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+      - "Pathologist 1"
+      - "Pathologist 2"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

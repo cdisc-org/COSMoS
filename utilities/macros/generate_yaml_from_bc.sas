@@ -33,7 +33,7 @@
 
     call missing(short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
     
-    outname=catt("&out_folder\biomedical_concept_&type._", lowcase(strip(BC_ID)), ".yaml");
+    outname=catt("&out_folder\bc_", lowcase(strip(BC_ID)), "_&type..yaml");
     file dummy filevar=outname dlm=",";
 
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;

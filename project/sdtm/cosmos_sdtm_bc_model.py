@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-03-06T15:00:53
+# Generation date: 2024-06-10T11:03:04
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -521,6 +521,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the chromosome that is the position of the result in") )
         setattr(cls, "is the date of occurrence",
                 PermissibleValue(text="is the date of occurrence") )
+        setattr(cls, "is the date of occurrence for",
+                PermissibleValue(text="is the date of occurrence for") )
         setattr(cls, "is the method of secondary analysis of results in",
                 PermissibleValue(text="is the method of secondary analysis of results in") )
         setattr(cls, "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
@@ -533,6 +535,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the genetic sub-location of the result in") )
         setattr(cls, "is the object of the observation in",
                 PermissibleValue(text="is the object of the observation in") )
+        setattr(cls, "is an identifier for the evaluator with the role in",
+                PermissibleValue(text="is an identifier for the evaluator with the role in") )
 
 class PredicateTermEnum(EnumDefinitionImpl):
 

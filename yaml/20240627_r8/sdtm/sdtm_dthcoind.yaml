@@ -1,0 +1,104 @@
+packageDate: "2024-06-27"
+packageType: sdtm
+datasetSpecializationId: DTHCOIND
+domain: DD
+shortName: Death Certificate Obtained Indicator
+source: DD.DDTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C135385
+variables:
+  - name: DDTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C116108
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116108
+      submissionValue: DTHDXCD
+    assignedTerm:
+      conceptId: C135385
+      value: "DTHCOIND"
+    role: Topic
+    relationship:
+      subject: DDTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: DDTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: DDTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C116107
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116107
+      submissionValue: DTHDX
+    assignedTerm:
+      conceptId: C135385
+      value: "Death Certificate Obtained Indicator"
+    role: Qualifier
+    relationship:
+      subject: DDTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: DDORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: DDORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: DDSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: DDSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: DDDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: DDDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

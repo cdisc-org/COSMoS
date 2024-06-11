@@ -1,0 +1,142 @@
+packageDate: "2024-06-27"
+packageType: sdtm
+datasetSpecializationId: EDUYRNUM
+domain: SC
+shortName: Number of Years of Education
+source: SC.SCTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C122393
+variables:
+  - name: SCTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C74559
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C74559
+      submissionValue: SCTESTCD
+    assignedTerm:
+      conceptId: C122393
+      value: "EDUYRNUM"
+    role: Topic
+    relationship:
+      subject: SCTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: SCTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: SCTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C103330
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C103330
+      submissionValue: SCTEST
+    role: Qualifier
+    relationship:
+      subject: SCTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: SCCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: SCCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SCORRES
+    dataElementConceptId: C127787
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SCORRESU
+    dataElementConceptId: C42574
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    valueList:
+      - "C29848"
+    role: Qualifier
+    relationship:
+      subject: SCORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: SCORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: SCSTRESC
+    dataElementConceptId: C127787
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: SCSTRESN
+    dataElementConceptId: C127787
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "3.1"
+    significantDigits: 1
+    relationship:
+      subject: SCSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: SCSTRESU
+    dataElementConceptId: C42574
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71620
+      submissionValue: UNIT
+    valueList:
+      - "C29848"
+    role: Qualifier
+    relationship:
+      subject: SCSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: SCSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 

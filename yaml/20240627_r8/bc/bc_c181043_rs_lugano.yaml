@@ -1,0 +1,13 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C181043
+ncitCode: C181043
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C181043
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+shortName: Clinical Findings Indicator
+definition: Specifies whether a clinical finding was observed.

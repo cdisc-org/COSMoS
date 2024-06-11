@@ -1,0 +1,150 @@
+packageDate: "2024-06-27"
+packageType: sdtm
+datasetSpecializationId: AGEDTH
+domain: DD
+shortName: Age at Death
+source: DD.DDTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C135383
+variables:
+  - name: DDTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C116108
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116108
+      submissionValue: DTHDXCD
+    assignedTerm:
+      conceptId: C135383
+      value: "AGEDTH"
+    role: Topic
+    relationship:
+      subject: DDTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: DDTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: DDTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C116107
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C116107
+      submissionValue: DTHDX
+    assignedTerm:
+      conceptId: C135383
+      value: "Age at Death"
+    role: Qualifier
+    relationship:
+      subject: DDTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: DDORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: DDORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: DDORRESU
+    dataElementConceptId: C50400
+    isNonStandard: false
+    codelist:
+      conceptId: C66781
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66781
+      submissionValue: AGEU
+    valueList:
+      - "DAYS"
+      - "HOURS"
+      - "MONTHS"
+      - "WEEKS"
+      - "YEARS"
+    role: Qualifier
+    relationship:
+      subject: DDORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: DDORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: DDSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: DDSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: DDSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: DDSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: DDTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: DDSTRESU
+    dataElementConceptId: C50400
+    isNonStandard: false
+    codelist:
+      conceptId: C66781
+      href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66781
+      submissionValue: AGEU
+    valueList:
+      - "DAYS"
+      - "HOURS"
+      - "MONTHS"
+      - "WEEKS"
+      - "YEARS"
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: DDSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: DDORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: DDDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: DDDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: DDTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
