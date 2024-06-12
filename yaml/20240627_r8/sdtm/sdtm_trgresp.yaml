@@ -67,6 +67,7 @@ variables:
     mandatoryValue: false
     originType: Assigned
     originSource: Sponsor
+    comparator: EQ
   - name: RSORRES
     dataElementConceptId: C70856
     isNonStandard: false
