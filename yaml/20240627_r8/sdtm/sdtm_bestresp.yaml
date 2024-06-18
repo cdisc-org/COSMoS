@@ -2,7 +2,7 @@ packageDate: "2024-06-27"
 packageType: sdtm
 datasetSpecializationId: BESTRESP
 domain: RS
-shortName: Overall Response (RECIST 1.1)
+shortName: Best Overall Response (RECIST 1.1)
 source: RS.RSTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
