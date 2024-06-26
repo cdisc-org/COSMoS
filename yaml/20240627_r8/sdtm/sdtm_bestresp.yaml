@@ -144,7 +144,7 @@ variables:
       submissionValue: EVAL
     assignedTerm:
       conceptId: C25936
-      value: "INVESTIGATOR"
+      value: "INDEPENDENT ASSESSOR"
     role: Qualifier
     relationship:
       subject: RSEVAL

@@ -148,15 +148,15 @@ run;
 %let OverrideDate=%str(2024-06-27);
 
 %let checkrelationships=1;
-%let ExcelFile=&root/curation/draft/BC_Package_R8_LUGANO_RS.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=rs_lugano, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RS), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=1;
-%let ExcelFile=&root/curation/draft/BC_Package_R8_RANO_RS.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_RANO_RS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=rs_rano, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RS), debug=0, check_relationships=&checkrelationships);
 
 %let checkrelationships=1;
-%let ExcelFile=&root/curation/draft/BC_Package_R8_SDTM_updates.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_SDTM_updates.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates1, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates2, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections_1), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates3, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections_2), debug=0, check_relationships=&checkrelationships);

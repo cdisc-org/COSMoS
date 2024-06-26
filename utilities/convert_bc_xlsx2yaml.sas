@@ -133,13 +133,13 @@
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2024-06-27);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R8_LUGANO_RS.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=rs_lugano, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RS));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R8_RANO_RS.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_RANO_RS.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=rs_rano, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RS));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R8_BC_updates.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R8_BC_updates.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=updates1, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Onco_Corrections));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=updates2, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_New));
 

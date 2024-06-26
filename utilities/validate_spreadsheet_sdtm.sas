@@ -170,19 +170,19 @@ options mprint;
 
 
 /* Package 8 - */
-%let excel_file=&root/curation/draft/BC_Package_R8_LUGANO_RS.xlsx;
+%let excel_file=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RS)$, dsout=bc8_01, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm8_01, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/BC_Package_R8_RANO_RS.xlsx;
+%let excel_file=&root/curation/BC_Package_R8_RANO_RS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RS)$, dsout=bc8_02, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm8_02, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/BC_Package_R8_BC_updates.xlsx;
+%let excel_file=&root/curation/BC_Package_R8_BC_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Onco_Corrections)$, dsout=bc8_03, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(BC_New)$, dsout=bc8_04, drop=%str(drop=change_history));
 
-%let excel_file=&root/curation/draft/BC_Package_R8_SDTM_updates.xlsx;
+%let excel_file=&root/curation/BC_Package_R8_SDTM_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections)$, dsout=sdtm8_03, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections_1)$, dsout=sdtm8_04, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections_2)$, dsout=sdtm8_05, drop=%str(drop=length significant_digits format));
