@@ -1,0 +1,91 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C94536
+ncitCode: C94536
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94536
+parentConceptId: C50995
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+  - RECIST 1.1
+  - iRECIST
+shortName: Best Overall Response
+synonyms:
+  - BESTRESP
+resultScales:
+  - Nominal
+definition: The most clinically favorable response recorded from the start of the study treatment until the end of treatment.
+dataElementConcepts:
+  - conceptId: C117394
+    ncitCode: C117394
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117394
+    shortName: Disease Response Link Group
+    dataType: string
+    exampleSet:
+      - "A1"
+      - "A2"
+      - "A3"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "RECIST 1.1"
+      - "iRECIST"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "CR"
+      - "PR"
+      - "SD"
+      - "NON-CR/NON-PD"
+      - "PD"
+      - "NE"
+      - "NED"
+      - "iCR"
+      - "iPR"
+      - "iSD"
+      - "iUPD"
+      - "iCPD"
+      - "NON-iCR/NON-iUPD"
+      - "NE"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Independent Assessor"
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+      - "Hematologist 1"
+      - "Hematologist 2"
+      - "Oncologist 1"
+      - "Oncologist 2"
+  - conceptId: C71738
+    ncitCode: C71738
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C71738
+    shortName: Clinical Trial Epoch
+    dataType: string
+    exampleSet:
+      - "Treatment"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

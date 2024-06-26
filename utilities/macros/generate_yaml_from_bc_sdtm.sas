@@ -48,7 +48,7 @@
 
     call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc, lookup_term_exist, linking_phrase_low, lookup_predicate);
     
-    outname=catt("&out_folder\sdtm_bc_specialization_&type._", lowcase(strip(vlm_group_id)), ".yaml");
+    outname=catt("&out_folder\sdtm_", lowcase(strip(vlm_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
     
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;

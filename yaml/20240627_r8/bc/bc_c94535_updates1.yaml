@@ -1,0 +1,68 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C94535
+ncitCode: C94535
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C94535
+parentConceptId: C50995
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+  - RECIST 1.1
+  - iRECIST
+  - LUGANO CLASSIFICATION
+shortName: "Response in Non-Target Lesion"
+synonyms:
+  - NTRGRESP
+  - "Non-Target Response"
+resultScales:
+  - Nominal
+definition: "A qualitative or quantitative measurement of the response of a non-target lesion(s) to the therapy."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "RECIST 1.1"
+      - "iRECIST"
+      - "LUGANO CLASSIFICATION"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "NON-CR/NON-PD"
+      - "PD"
+      - "CR"
+      - "iCR"
+      - "iUPD"
+      - "iCPD"
+      - "NON-iCR/NON-iUPD"
+      - "NE"
+      - "SD"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C82515
+    shortName: Collection Date Time
+    dataType: datetime

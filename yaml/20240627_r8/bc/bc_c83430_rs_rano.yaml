@@ -1,0 +1,13 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C83430
+ncitCode: C83430
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C83430
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+shortName: Substance Use Status
+definition: A term used to describe the state or condition of substance use data.

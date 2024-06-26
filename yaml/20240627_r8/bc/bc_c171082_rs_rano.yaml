@@ -1,0 +1,13 @@
+packageDate: "2024-06-27"
+packageType: bc
+conceptId: C171082
+ncitCode: C171082
+href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C171082
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+shortName: Medical Status
+definition: The status of a patient or subject with regard to their health or a medical procedure.

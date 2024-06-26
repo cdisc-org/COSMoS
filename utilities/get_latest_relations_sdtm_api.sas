@@ -51,12 +51,6 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-%let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
-%* The CDISC Library API key has been set as an environment variable;
-%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
-
-
 data _sdtm_api;
   if 0=1;
 run;  
@@ -146,6 +140,9 @@ data data.sdtm_linkingphrases(keep=linkingPhrase predicateTerm);
   /* Temporary hard update */
   if first.linkingPhrase then do;
     put linkingPhrase;
+    * output;
+  end;  
+  if first.predicateTerm then do;
     output;
   end;  
 run;  

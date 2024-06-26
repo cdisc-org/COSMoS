@@ -95,17 +95,10 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-04-02;
+%let packageDate=2024-06-27;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 %let temp_location=%sysfunc(pathname(work));
 %let temp_location=&root/utilities/test;
-
-%let rest_debug=%str(OUTPUT_TEXT NO_REQUEST_HEADERS NO_REQUEST_BODY RESPONSE_HEADERS NO_RESPONSE_BODY);
-%let base_url_cosmos=https://library.cdisc.org/api/cosmos/v2;
-%*let base_url_cosmos=https://dev.cdisclibrary.org/api/cosmos/v2;
-%* The CDISC Library API key has been set as an environment variable;
-%let api_key=%sysget(CDISC_LIBRARY_API_KEY);
-%*let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
 proc format;
   value yesno

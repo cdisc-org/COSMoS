@@ -137,12 +137,14 @@
             "is an identifier for the genetic sequence of the genetic entity represented by",
             "is the chromosome that is the position of the result in",
             "is the date of occurrence",
+            "is the date of occurrence for",
             "is the method of secondary analysis of results in",
             "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
             "is the symbol for the genomic entity that is the position of the result in",
             "is the type of genomic entity that is the position of the result in",
             "is the genetic sub-location of the result in",
-            "is the object of the observation in"
+            "is the object of the observation in",
+            "is an identifier for the evaluator with the role in"
          ],
          "title": "LinkingPhraseEnum",
          "type": "string"
