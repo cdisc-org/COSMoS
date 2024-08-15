@@ -51,6 +51,9 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
+%let packageDate=2024-06-27;
+%let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
+
 data _sdtm_api;
   if 0=1;
 run;  
@@ -133,7 +136,7 @@ data _null_;
   end;  
 run; 
 
-data data.sdtm_linkingphrases(keep=linkingPhrase predicateTerm);
+data data.sdtm_linkingphrases_predterms(keep=linkingPhrase predicateTerm);
   set _sdtm_api;
   by linkingPhrase predicateTerm;
   file "&root/utilities/text/sdtm_specializations_phrases.txt";
@@ -146,6 +149,16 @@ data data.sdtm_linkingphrases(keep=linkingPhrase predicateTerm);
     output;
   end;  
 run;  
+
+data data.sdtm_linkingphrases(keep=linkingPhrase);
+  set _sdtm_api;
+  by linkingPhrase predicateTerm;
+  /* Temporary hard update */
+  if first.linkingPhrase then do;
+    output;
+  end;  
+run;  
+
 
 proc sort data=_sdtm_api;
   by predicateTerm linkingPhrase;
@@ -172,3 +185,26 @@ data data.sdtm_predicateTerms(keep=predicateTerm);
     output;
   end;  
 run; 
+
+options ls=256;
+ods excel file="&root/utilities/reports/sdtm_specializations_relationships_&packageDateShort..xlsx";
+
+ods excel options(sheet_name="Linking Phrases" flow="tables" autofilter = 'all');
+proc report data=data.sdtm_linkingphrases;
+  column linkingPhrase;
+  define linkingPhrase / width = 256;
+run;  
+
+ods excel options(sheet_name="Predicate Terms" flow="tables" autofilter = 'all');
+proc report data=data.sdtm_predicateTerms;
+  column predicateTerm;
+run;  
+
+ods excel options(sheet_name="Link. Phrases - Pred. Terms" flow="tables" autofilter = 'all');
+proc report data=data.sdtm_linkingphrases_predterms;
+  column linkingPhrase predicateTerm;
+  define linkingPhrase / width = 256;
+run;  
+
+ods excel close;
+
