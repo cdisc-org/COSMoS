@@ -27,8 +27,34 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq BC_EXCEL %then %do;
+    proc sql;
+      create table &out
+        (
+         package_date char(10),
+         bc_id char(64),
+         parent_bc_id char(64),
+         ncit_code char(64),
+         href char(1024),
+         bc_categories char(4096),
+         short_name char(256),
+         synonyms char(1024),
+         result_scales char(256),
+         definition char(2048),
+         system char(1024),
+         system_name char(1024),
+         code char (1024),
+         dec_id char(64),
+         dec_href char(1024),
+         ncit_dec_code char(64),
+         dec_href char(1024),
+         dec_label char(256),
+         data_type char(16),
+         example_set char(32000)
+        );
+    quit;
+  %end;
 
-  
   %if %upcase(&type) eq SDTM %then %do;
     proc sql;
       create table &out
@@ -66,6 +92,47 @@
          originSource char(32),
          comparator char(8),
          vlmTarget num
+        );
+    quit;
+  %end;
+
+  %if %upcase(&type) eq SDTM_EXCEL %then %do;
+    proc sql;
+      create table &out
+        (
+         package_date char(10),
+         bc_id char(64),
+         dec_id char(64),
+         sdtmig_start_version char(32),
+         sdtmig_end_version char(32),
+         domain char(32),
+         vlm_source char(32),
+         vlm_group_id char(64),
+         short_name char(256),
+         sdtm_variable char(32),
+         nsv_flag num,
+         codelist char(64),
+         codelist_href char(1024),
+         codelist_submission_value char(32),
+         subset_codelist char(32),
+         value_list char(2048),
+         assigned_term char(64),
+         assigned_value char(1024),
+         role char(32),
+         subject char(32),
+         linking_phrase char(1024),
+         predicate_term char(128),
+         object char(32),
+         data_type char(16),
+         length num,
+         format char(32),
+         significant_digits num,
+         mandatory_variable num,
+         mandatory_value num,
+         origin_type char(32),
+         origin_source char(32),
+         comparator char(8),
+         vlm_target num
         );
     quit;
   %end;
