@@ -12,7 +12,7 @@ proc fcmp outlib=macros.funcs.python;
 
   function get_predicateterm(linkingPhrase $) $;
     length predicateTerm $128;
-    declare hash hh(dataset: "data.sdtm_linkingphrases");
+    declare hash hh(dataset: "data.sdtm_linkingphrases_predterms");
     rc=hh.definedata("predicateTerm");
     rc=hh.definekey("linkingPhrase");
     rc=hh.definedone();
@@ -22,7 +22,7 @@ proc fcmp outlib=macros.funcs.python;
   endsub;
 
   function exists_predicaterm_linkingphrase(linkingPhrase $, predicateTerm $);
-    declare hash hh(dataset: "data.sdtm_linkingphrases");
+    declare hash hh(dataset: "data.sdtm_linkingphrases_predterms");
     rc=hh.definedata("predicateTerm");
     rc=hh.definekey("linkingPhrase", "predicateTerm");
     rc=hh.definedone();
@@ -153,10 +153,34 @@ proc fcmp outlib=macros.funcs.python;
     parentshortname = py3.results['parentShortName'];
   endsub;
   
-  subroutine insert_image(excel_file $, excel_file_new $, image_file $, sheet_name $, anchor $, width, height);
+  subroutine get_synonyms(code $, synonyms $);
+    length synonyms $4000;
+    outargs synonyms;
     declare object py4(python);
-    /* Create an embedded Python block to write your Python function */
     submit into py4;
+    def getSynonyms(ccode):
+      """Output: synonyms"""
+      import requests
+      url = 'https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/'+ccode+'?include=synonyms'
+      r = requests.get(url)
+      concept_info = r.json()
+      synonyms = ''
+      try:
+          synonyms = [v['name'] for v in concept_info['synonyms']]
+          synonyms = ";".join(list(dict.fromkeys(synonyms)))
+      except:
+        synonyms = ''
+      return synonyms
+    endsubmit;
+    rc = py4.publish();
+    rc = py4.call('getSynonyms', code);
+    synonyms = py4.results['synonyms'];
+  endsub;
+  
+  subroutine insert_image(excel_file $, excel_file_new $, image_file $, sheet_name $, anchor $, width, height);
+    declare object py5(python);
+    /* Create an embedded Python block to write your Python function */
+    submit into py5;
     def insert_image(excel_file, excel_file_new, image_file, sheet_name, anchor, width, height):
         """Output: MyKey"""
         import os
@@ -173,9 +197,9 @@ proc fcmp outlib=macros.funcs.python;
         wb.save(excel_file_new)
     endsubmit;
     /* Publish the code to the Python interpreter */
-    rc=py4.publish();
+    rc=py5.publish();
     /* Call the Python function from SAS */
-    rc = py4.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
+    rc = py5.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
   endsub;
   
 run;
@@ -183,19 +207,19 @@ run;
 /* Test the functions */
 
 data test;
-  length ccodes $200 ccode ccode_parent $100 shortname shortname_parent $100 definition definition_cdisc $1000;
+  length ccodes $200 ccode ccode_parent $100 shortname shortname_parent $100 definition definition_cdisc $1000 synonyms $4000;
 
   * ccodes = "C103420, C117404, C117426, C117446, C124415, C124448, C49164, C94523, C94525, C94534, C94535, C96613, C96642, C96643, C96684, C96685";
   * ccodes = "C124415, C117426";
-  ccodes = "C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
+  ccodes = "C147856, C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
 
   do i=1 to countw(ccodes);
-    call missing(ccode_parent, shortname, shortname_parent, definition, definition_cdisc);
+    call missing(ccode_parent, shortname, shortname_parent, definition, definition_cdisc, synonyms);
     ccode=scan(ccodes, i);
     call get_shortname(ccode, shortname);
     call get_definitions(ccode, definition, definition_cdisc);
-    * call get_definition_cdisc(ccode, definition_cdisc);
     call get_parent_code_shortname(ccode, ccode_parent, shortname_parent);
+    call get_synonyms(ccode, synonyms);
     output;
   end;
 run;
@@ -205,11 +229,12 @@ ods html5 file="&root/utilities/create_functions.html";
 
   proc print data=test;
     title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
-    var ccode ccode_parent shortname shortname_parent definition definition_cdisc;
+    var ccode ccode_parent shortname shortname_parent definition definition_cdisc synonyms;
   run;
 
 ods html5 close;
 ods listing;
+
 
 data codelists;
   exp_codelist_SubmissionValue="PKUDUG";
