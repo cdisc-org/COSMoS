@@ -1,0 +1,30 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C176361
+ncitCode: C176361
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176361
+parentConceptId: C92720
+categories:
+  - Reproductive Findings
+shortName: Term Pregnancy Category
+synonyms:
+  - TRMPGCAT
+resultScales:
+  - Nominal
+definition: A classification of the gestation duration of the pregnancy at the time of infant birth.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Early Term"
+      - "Full Term"
+      - "Late Term"
+      - "Postterm"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,28 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C81257
+ncitCode: C81257
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81257
+parentConceptId: C117720
+categories:
+  - Reproductive Findings
+  - Start Date
+shortName: Last Menstrual Period
+synonyms:
+  - LMPSTDTC
+  - LMP
+  - Last Menstrual Period Start Date
+resultScales:
+  - Temporal
+definition: The date of the first day of the most recent menstrual cycle.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,33 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C171521
+ncitCode: C171521
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171521
+parentConceptId: C181043
+categories:
+  - Clinical Findings Indicators
+  - Respiratory Findings
+shortName: Pneumonia Indicator
+synonyms:
+  - PNEUMIND
+resultScales:
+  - Nominal
+definition: An indication as to whether pneumonia has occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Y"
+      - "N"
+      - "Unknown"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "X-Ray"
+      - "CT Scan"

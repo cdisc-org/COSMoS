@@ -1,0 +1,45 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C154889
+ncitCode: C154889
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C154889
+parentConceptId: C181043
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Abnormal Bleeding Indicator
+synonyms:
+  - BLEEDIND
+  - Abnormal Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether there is the presence of abnormal bleeding.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

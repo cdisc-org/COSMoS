@@ -1,0 +1,146 @@
+packageDate: "2024-12-16"
+packageType: sdtm
+datasetSpecializationId: TPLAB
+domain: MB
+shortName: Treponema pallidum Antibody Detection in Serum
+source: MB.MBTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C132388
+variables:
+  - name: MBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120527
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120527
+      submissionValue: MBTESTCD
+    assignedTerm:
+      conceptId: C132388
+      value: "TPLAB"
+    role: Topic
+    relationship:
+      subject: MBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MBTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120528
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120528
+      submissionValue: MBTEST
+    assignedTerm:
+      conceptId: C132388
+      value: "Treponema pallidum Antibody"
+    role: Qualifier
+    relationship:
+      subject: MBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: MBTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C174225
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174225
+      submissionValue: MBFTSDTL
+    assignedTerm:
+      conceptId: C174330
+      value: "DETECTION"
+    role: Qualifier
+    relationship:
+      subject: MBTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: MBSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: MBLOINC
+    isNonStandard: false
+    assignedTerm:
+      value: "22587-0"
+    role: Qualifier
+    relationship:
+      subject: MBLOINC
+      linkingPhrase: identifies an observation described by
+      predicateTerm: IDENTIFIES_OBSERVATION
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C13325
+      value: "SERUM"
+    role: Qualifier
+    relationship:
+      subject: MBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "FLUORESCENT IMMUNOASSAY"
+      - "HEMAGGLUTINATION ASSAY"
+      - "CHEMILUMINESCENT MICROPARTICLE IMMUNOASSAY"
+      - "POLYMERASE CHAIN REACTION"
+      - "IMMUNOBLOT"
+      - "RAPID IMMUNOASSAY"
+    role: Qualifier
+    relationship:
+      subject: MBMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN

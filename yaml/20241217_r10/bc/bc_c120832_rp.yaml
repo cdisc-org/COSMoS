@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C120832
+ncitCode: C120832
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120832
+parentConceptId: C106551
+categories:
+  - Reproductive Findings
+shortName: Number of Ectopic Pregnancies
+synonyms:
+  - ECTPREGN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of ectopic pregnancies experienced by a female subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,51 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C119239
+ncitCode: C119239
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119239
+parentConceptId: C25284
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+shortName: Acute Myocardial Infarction From PCI Complication Type
+synonyms:
+  - PCIAAC
+  - PCI Acute Angiographic Complication
+resultScales:
+  - Nominal
+definition: A description of the complications from a percutaneous coronary intervention procedure that lead to an acute myocardial ischemic event.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Loss of a Side Branch"
+      - "Loss of Major Coronary"
+      - "Slow-Flow/No-Flow/Embolization"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

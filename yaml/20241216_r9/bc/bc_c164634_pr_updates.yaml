@@ -1,0 +1,39 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C164634
+ncitCode: C164634
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164634
+parentConceptId: C25347
+categories:
+  - Vital Signs
+shortName: Body Height
+synonyms:
+  - HEIGHT
+resultScales:
+  - Quantitative
+definition: The vertical measurement or distance from the base to the top of a subject or participant.
+coding:
+  - code: 8302-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C168688
+    ncitCode: C168688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168688
+    shortName: Unit of Height
+    dataType: string
+    exampleSet:
+      - "Centimeter"
+      - "Inch"
+      - "Millimeter"
+      - "Meter"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

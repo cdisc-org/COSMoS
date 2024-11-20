@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-06-10T11:03:04
+# Generation date: 2024-11-20T17:16:01
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -399,6 +399,10 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
 
     @classmethod
     def _addvals(cls):
+        setattr(cls, "assesses seriousness of",
+                PermissibleValue(text="assesses seriousness of") )
+        setattr(cls, "assesses the severity of",
+                PermissibleValue(text="assesses the severity of") )
         setattr(cls, "associates the tumor identified in",
                 PermissibleValue(text="associates the tumor identified in") )
         setattr(cls, "decodes the value in",
@@ -417,6 +421,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="groups tumor assessments used in overall response identified by") )
         setattr(cls, "groups values in",
                 PermissibleValue(text="groups values in") )
+        setattr(cls, "groups, within an individual subject, values in",
+                PermissibleValue(text="groups, within an individual subject, values in") )
         setattr(cls, "identifies a pattern of",
                 PermissibleValue(text="identifies a pattern of") )
         setattr(cls, "identifies an observation described by",
@@ -439,6 +445,10 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by") )
         setattr(cls, "is a dictionary-derived term for the value in",
                 PermissibleValue(text="is a dictionary-derived term for the value in") )
+        setattr(cls, "is a dictionary-derived class code for the value in",
+                PermissibleValue(text="is a dictionary-derived class code for the value in") )
+        setattr(cls, "is a dictionary-derived class name for the value in",
+                PermissibleValue(text="is a dictionary-derived class name for the value in") )
         setattr(cls, "is decoded by the value in",
                 PermissibleValue(text="is decoded by the value in") )
         setattr(cls, "is original text for",
@@ -497,6 +507,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the unit for the value in") )
         setattr(cls, "is the unit for",
                 PermissibleValue(text="is the unit for") )
+        setattr(cls, "specifies the anatomical location in",
+                PermissibleValue(text="specifies the anatomical location in") )
         setattr(cls, "specifies the anatomical location of",
                 PermissibleValue(text="specifies the anatomical location of") )
         setattr(cls, "specifies the anatomical location of the performance of the test in",
@@ -519,10 +531,14 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is an identifier for the genetic sequence of the genetic entity represented by") )
         setattr(cls, "is the chromosome that is the position of the result in",
                 PermissibleValue(text="is the chromosome that is the position of the result in") )
+        setattr(cls, "is the clinical trial or treatment setting for",
+                PermissibleValue(text="is the clinical trial or treatment setting for") )
         setattr(cls, "is the date of occurrence",
                 PermissibleValue(text="is the date of occurrence") )
         setattr(cls, "is the date of occurrence for",
                 PermissibleValue(text="is the date of occurrence for") )
+        setattr(cls, "is the intended disease outcome for",
+                PermissibleValue(text="is the intended disease outcome for") )
         setattr(cls, "is the method of secondary analysis of results in",
                 PermissibleValue(text="is the method of secondary analysis of results in") )
         setattr(cls, "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
@@ -537,9 +553,19 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
                 PermissibleValue(text="is the object of the observation in") )
         setattr(cls, "is an identifier for the evaluator with the role in",
                 PermissibleValue(text="is an identifier for the evaluator with the role in") )
+        setattr(cls, "is the severity of the toxicity in",
+                PermissibleValue(text="is the severity of the toxicity in") )
+        setattr(cls, "is a grouping of values in",
+                PermissibleValue(text="is a grouping of values in") )
+        setattr(cls, "is the textual description of the intended dose regimen for",
+                PermissibleValue(text="is the textual description of the intended dose regimen for") )
+        setattr(cls, "is the reason for stopping administration of",
+                PermissibleValue(text="is the reason for stopping administration of") )
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
+    ASSESSES = PermissibleValue(text="ASSESSES")
+    CLASSIFIES = PermissibleValue(text="CLASSIFIES")
     DECODES = PermissibleValue(text="DECODES")
     DESCRIBES = PermissibleValue(text="DESCRIBES")
     GROUPS = PermissibleValue(text="GROUPS")
@@ -557,6 +583,7 @@ class PredicateTermEnum(EnumDefinitionImpl):
     IS_INDICATOR_FOR = PermissibleValue(text="IS_INDICATOR_FOR")
     IS_ORIGINAL_TEXT_FOR = PermissibleValue(text="IS_ORIGINAL_TEXT_FOR")
     IS_POSITION_FOR = PermissibleValue(text="IS_POSITION_FOR")
+    IS_REASON_FOR = PermissibleValue(text="IS_REASON_FOR")
     IS_RESULT_OF = PermissibleValue(text="IS_RESULT_OF")
     IS_SPECIMEN_TESTED_IN = PermissibleValue(text="IS_SPECIMEN_TESTED_IN")
     IS_SUBJECT_STATE_FOR = PermissibleValue(text="IS_SUBJECT_STATE_FOR")
@@ -564,6 +591,7 @@ class PredicateTermEnum(EnumDefinitionImpl):
     IS_UNIT_FOR = PermissibleValue(text="IS_UNIT_FOR")
     PERFORMED = PermissibleValue(text="PERFORMED")
     PERFORMS = PermissibleValue(text="PERFORMS")
+    QUALIFIES = PermissibleValue(text="QUALIFIES")
     SPECIFIES = PermissibleValue(text="SPECIFIES")
 
     _defn = EnumDefinition(

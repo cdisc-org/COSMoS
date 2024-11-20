@@ -1,0 +1,9 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C119241
+ncitCode: C119241
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119241
+categories:
+  - Indicator
+shortName: Symptom Indicator
+definition: An indication as to whether the subject had symptoms related to the clinical event of interest.

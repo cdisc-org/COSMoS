@@ -1,0 +1,194 @@
+packageDate: "2024-12-17"
+packageType: sdtm
+datasetSpecializationId: PROGESTRATOTSCORE
+domain: MI
+shortName: Progesterone Receptor Allred Total Score
+source: MI.MITESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C117846
+variables:
+  - name: MITESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C132263
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132263
+      submissionValue: MITSCD
+    assignedTerm:
+      conceptId: C117846
+      value: "PROGESTR"
+    role: Topic
+    relationship:
+      subject: MITESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MITEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MITEST
+    isNonStandard: false
+    codelist:
+      conceptId: C132262
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132262
+      submissionValue: MITS
+    assignedTerm:
+      conceptId: C117846
+      value: "Progesterone Receptor"
+    role: Qualifier
+    relationship:
+      subject: MITEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MITSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C125922
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C125922
+      submissionValue: MIFTSDTL
+    assignedTerm:
+      conceptId: C125987
+      value: "ALLRED TOTAL SCORE"
+    role: Qualifier
+    relationship:
+      subject: MITSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MIORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MIORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MISTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MISTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: MISTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MISTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: MISPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C12801
+      value: "TISSUE"
+    role: Qualifier
+    relationship:
+      subject: MISPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MILOC
+    dataElementConceptId: C170500
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    assignedTerm:
+      conceptId: C12971
+      value: "BREAST"
+    role: Qualifier
+    relationship:
+      subject: MILOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    comparator: EQ
+  - name: MIMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C23020
+      value: "IHC"
+    role: Qualifier
+    relationship:
+      subject: MIMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MIDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MIDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Sponsor

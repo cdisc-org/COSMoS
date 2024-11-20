@@ -1,0 +1,38 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C135383
+ncitCode: C135383
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135383
+parentConceptId: C25150
+categories:
+  - Death Diagnosis and Details
+  - Age
+shortName: Age at Death
+synonyms:
+  - AGEDTH
+  - Age At Date of Death
+resultScales:
+  - Quantitative
+definition: The age at which death occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: string
+    exampleSet:
+      - "Days"
+      - "Hours"
+      - "Months"
+      - "Weeks"
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

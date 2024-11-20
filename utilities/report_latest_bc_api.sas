@@ -200,7 +200,7 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 
     compute parent_bc_id;
       if not missing(parent_bc_id) then do;
-        call define (_col_, 'url', cats('https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=', parent_bc_id));
+        call define (_col_, 'url', cats("&ncit_explore", parent_bc_id));
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
       end;
     endcomp;

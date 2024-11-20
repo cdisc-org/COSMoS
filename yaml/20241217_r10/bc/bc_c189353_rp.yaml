@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189353
+ncitCode: C189353
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189353
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Irregular Menstrual Periods Indicator
+synonyms:
+  - IRRMPIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the individual has experienced irregular menstrual periods.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

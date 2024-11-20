@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C198357
+ncitCode: C198357
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198357
+parentConceptId: C68616
+categories:
+  - Reproductive Findings
+  - Start Date
+shortName: First Menstrual Period Start Date
+synonyms:
+  - FMPSTDTC
+resultScales:
+  - Temporal
+definition: The date of the first day of the first menstrual cycle.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

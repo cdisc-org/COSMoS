@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189356
+ncitCode: C189356
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189356
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Infertility Indicator
+synonyms:
+  - INFRTIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the individual has experienced infertility.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C163558
+ncitCode: C163558
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163558
+categories:
+  - Reproductive Findings
+  - End Date
+shortName: Pregnancy End Date
+synonyms:
+  - PRGENDTC
+  - Date Pregnancy Ended
+resultScales:
+  - Temporal
+definition: The date on which the pregnancy ended.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

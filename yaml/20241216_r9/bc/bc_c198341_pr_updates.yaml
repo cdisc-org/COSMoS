@@ -1,0 +1,49 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C198341
+ncitCode: C198341
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198341
+parentConceptId: C184647
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Immunology Tests
+shortName: Treponema pallidum DNA Measurement
+synonyms:
+  - TPADNA
+  - Syphilis DNA
+resultScales:
+  - Ordinal
+definition: The determination of the amount of Treponema pallidum DNA present in a sample.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Detection"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Line Probe Assay"
+      - "Nucleic Acid Amplification (NAA)"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Urine"
+      - "Cerebrospinal Fluid"
+      - "Body Fluid"
+      - "Swabbed Material"

@@ -370,6 +370,12 @@
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
+          "text": "assesses seriousness of"
+        },
+        {
+          "text": "assesses the severity of"
+        },
+        {
           "text": "associates the tumor identified in"
         },
         {
@@ -395,6 +401,9 @@
         },
         {
           "text": "groups values in"
+        },
+        {
+          "text": "groups, within an individual subject, values in"
         },
         {
           "text": "identifies a pattern of"
@@ -428,6 +437,12 @@
         },
         {
           "text": "is a dictionary-derived term for the value in"
+        },
+        {
+          "text": "is a dictionary-derived class code for the value in"
+        },
+        {
+          "text": "is a dictionary-derived class name for the value in"
         },
         {
           "text": "is decoded by the value in"
@@ -517,6 +532,9 @@
           "text": "is the unit for"
         },
         {
+          "text": "specifies the anatomical location in"
+        },
+        {
           "text": "specifies the anatomical location of"
         },
         {
@@ -550,10 +568,16 @@
           "text": "is the chromosome that is the position of the result in"
         },
         {
+          "text": "is the clinical trial or treatment setting for"
+        },
+        {
           "text": "is the date of occurrence"
         },
         {
           "text": "is the date of occurrence for"
+        },
+        {
+          "text": "is the intended disease outcome for"
         },
         {
           "text": "is the method of secondary analysis of results in"
@@ -575,6 +599,18 @@
         },
         {
           "text": "is an identifier for the evaluator with the role in"
+        },
+        {
+          "text": "is the severity of the toxicity in"
+        },
+        {
+          "text": "is a grouping of values in"
+        },
+        {
+          "text": "is the textual description of the intended dose regimen for"
+        },
+        {
+          "text": "is the reason for stopping administration of"
         }
       ]
     },
@@ -583,6 +619,12 @@
       "definition_uri": "https://www.cdisc.org/cosmos/1-0PredicateTermEnum",
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
+        {
+          "text": "ASSESSES"
+        },
+        {
+          "text": "CLASSIFIES"
+        },
         {
           "text": "DECODES"
         },
@@ -635,6 +677,9 @@
           "text": "IS_POSITION_FOR"
         },
         {
+          "text": "IS_REASON_FOR"
+        },
+        {
           "text": "IS_RESULT_OF"
         },
         {
@@ -654,6 +699,9 @@
         },
         {
           "text": "PERFORMS"
+        },
+        {
+          "text": "QUALIFIES"
         },
         {
           "text": "SPECIFIES"
@@ -1500,9 +1548,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2024-06-10T11:02:10",
-  "source_file_size": 13431,
-  "generation_date": "2024-06-10T11:02:57",
+  "source_file_date": "2024-11-20T17:15:38",
+  "source_file_size": 14093,
+  "generation_date": "2024-11-20T17:15:57",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

@@ -97,7 +97,7 @@
 
            put +4 "codelist:";
            put +6 "conceptId:" +1 codelist;
-           put +6 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
+           put +6 "href: &ncit_explore" codelist;
            if not missing(codelist_submission_value) then put +6 "submissionValue:" +1 codelist_submission_value;
         end;
         if not missing(subset_codelist) then do;

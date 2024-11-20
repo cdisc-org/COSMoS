@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189357
+ncitCode: C189357
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189357
+parentConceptId: C25330
+categories:
+  - Reproductive Findings
+shortName: Duration of Sexual Abstinence
+synonyms:
+  - SEXABDUR
+resultScales:
+  - Quantitative
+definition: The length of time during which the individual abstained from sexual activity.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: integer
+    exampleSet:
+      - "Days"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

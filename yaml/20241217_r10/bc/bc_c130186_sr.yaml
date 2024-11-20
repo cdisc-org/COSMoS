@@ -1,0 +1,46 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C130186
+ncitCode: C130186
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C130186
+parentConceptId: C125009
+categories:
+  - Clinical Interpretation
+  - Skin Response
+shortName: Wheal Diameter Interpretation
+synonyms:
+  - WHLINT
+resultScales:
+  - Nominal
+definition: A further, qualitative assessment based on the diameter of a wheal on the skin.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

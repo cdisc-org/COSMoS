@@ -139,6 +139,7 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sdtm_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM Dataset Specializations), debug=0, check_relationships=&checkrelationships);
 */
 
+/*
 %let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
@@ -161,11 +162,46 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates2, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections_1), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates3, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections_2), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=updates4, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_New), debug=0, check_relationships=&checkrelationships);
+*/
+
+/*
+%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
+
+%let release=9;
+%let package=20241216;
+%let folder=20241216_r9;
+%let TargetFolder=&root/yaml/&folder/sdtm;
+%let OverrideDate=%str(2024-12-16);
+
+%let checkrelationships=0;
+%let ExcelFile=&root/curation/draft/BC_Package_R9_public_review_updates.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections), debug=0, check_relationships=&checkrelationships);
+*/
+
+%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
+
+%let release=10;
+%let package=20241217;
+%let folder=20241217_r10;
+%let TargetFolder=&root/yaml/&folder/sdtm;
+%let OverrideDate=%str(2024-12-17);
+
+%let checkrelationships=1;
+%let ExcelFile=&root/curation/BC_Package_R10.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=rp, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RP), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SR), debug=0, check_relationships=&checkrelationships);
+
+%let ExcelFile=&root/curation/BC_Package_R10_Breast_Cancer.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mi, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MI), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PR), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=cm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CM), debug=0, check_relationships=&checkrelationships);
 
 
 ods listing close;
-ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..html";
-ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_&todays..xlsx";
+ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_R&release._&todays..html";
+ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_R&release._&todays..xlsx";
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - &todays";

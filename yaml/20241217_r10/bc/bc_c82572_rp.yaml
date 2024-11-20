@@ -1,0 +1,9 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C82572
+ncitCode: C82572
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82572
+categories:
+  - Time
+shortName: Elapsed Time
+definition: The interval between two reference points in time.

@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C122190
+ncitCode: C122190
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122190
+parentConceptId: C19332
+categories:
+  - Reproductive Findings
+shortName: Number of Full Term Births
+synonyms:
+  - FULLTRMN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of birth events at which the gestational age of the neonate is 39 weeks and 0 days through 40 weeks and 6 days.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

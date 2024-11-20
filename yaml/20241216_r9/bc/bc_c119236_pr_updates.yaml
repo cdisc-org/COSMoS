@@ -1,0 +1,51 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C119236
+ncitCode: C119236
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119236
+parentConceptId: C25284
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+shortName: Ischemic Evidence Type
+synonyms:
+  - ISCETYP
+resultScales:
+  - Nominal
+definition: A classification or description of the evidence of ischemia in the subject.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Coronary Lesion on Angiography"
+      - "Coronary Revascularization"
+      - "Inducible Myocardial Ischemia"
+      - "Resting ECG Changes"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C201474
+ncitCode: C201474
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201474
+parentConceptId: C181525
+categories:
+  - Reproductive Findings
+shortName: Number of New Male Sexual Partners
+synonyms:
+  - SXPRTNMN
+resultScales:
+  - Quantitative
+definition: The number of new male sexual partners within a specified time interval.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

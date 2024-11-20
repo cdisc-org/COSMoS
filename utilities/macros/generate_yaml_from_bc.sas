@@ -63,7 +63,7 @@
       if not missing(ncit_code) then do;
         ncit_code=strip(ncit_code);
         put "ncitCode:" +1 ncit_code;
-        put 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_code;
+        put "href: &ncit_explore" ncit_code;
         %add2issues_bc(bc_id ne ncit_code, 
                        %str(BC_ID_NCIT_CODEMISMATCH), 
                        bc_id, ncit_code, "");
@@ -128,8 +128,10 @@
                      %str(RESULTSCALE_MISSING), "", "", "");
       
       call get_definitions(ncit_code, definition_nci, definition_cdisc);
+      /*
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
+      */
       %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
       %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
@@ -168,7 +170,7 @@
       
       if not missing(ncit_dec_code) then do;
         put +4 "ncitCode:" +1 ncit_dec_code;
-        put +4 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' ncit_dec_code;
+        put +4 "href: &ncit_explore" ncit_dec_code;
       end;
       
       %add2issues_bc(dec_id ne ncit_dec_code, 

@@ -1,0 +1,63 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C112274
+ncitCode: C112274
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112274
+parentConceptId: C64430
+categories:
+  - Oncology Standards
+  - Breast Cancer
+  - Chemistry Test
+  - Protein or Enzyme Type Measurement
+shortName: Estrogen Receptor Measurement
+synonyms:
+  - ESTRCPT
+  - ESR
+  - ER
+  - Estrogen Receptor
+  - Oestrogen Receptor
+resultScales:
+  - Nominal
+  - Quantitative
+definition: The determination of the amount of estrogen receptor present in a sample.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Allred Proportion Positive Score"
+      - "Allred  Staining Intensity Score"
+      - "Allred Total Score"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+    exampleSet:
+      - "Breast"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunohistochemistry"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

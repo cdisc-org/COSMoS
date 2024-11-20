@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C73435
+ncitCode: C73435
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73435
+parentConceptId: C19332
+categories:
+  - Reproductive Findings
+shortName: Gravida
+synonyms:
+  - GRAVIND
+  - PREGNANT
+  - Gravida Indicator
+resultScales:
+  - Ordinal
+definition: A woman who currently is pregnant or has been in the past, irrespective of the pregnancy outcome.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

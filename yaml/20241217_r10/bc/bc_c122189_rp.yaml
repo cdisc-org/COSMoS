@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C122189
+ncitCode: C122189
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122189
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Early Term Births
+synonyms:
+  - ERLYTRMN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of birth events at which the gestational age of the neonate is 37 weeks and 0 days through 38 weeks and 6 days.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

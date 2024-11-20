@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C181526
+ncitCode: C181526
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181526
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Condom Use for Most Recent Sexual Intercourse Indicator
+synonyms:
+  - CNDMIND
+  - Condom Use Most Recent Sex Interc Ind
+resultScales:
+  - Ordinal
+definition: An indication as to whether a condom was used during the most recent occurrence of sexual intercourse.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,34 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C122188
+ncitCode: C122188
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122188
+parentConceptId: C25150
+categories:
+  - Reproductive Findings
+  - Age
+shortName: Estimated Gestational Age
+synonyms:
+  - EGESTAGE
+resultScales:
+  - Quantitative
+definition: An approximate calculation of the gestational age of the fetus.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: integer
+    exampleSet:
+      - "Weeks"
+      - "Days"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

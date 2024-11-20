@@ -1,0 +1,33 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189354
+ncitCode: C189354
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189354
+parentConceptId: C119549
+categories:
+  - Reproductive Findings
+shortName: Average Menstrual Cycle Duration
+synonyms:
+  - MENSDURA
+  - Average Menstrual Cycle Length
+resultScales:
+  - Quantitative
+definition: The average length of time of the menses cycle.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: integer
+    exampleSet:
+      - "Days"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,30 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C170571
+ncitCode: C170571
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170571
+parentConceptId: C25180
+categories:
+  - Death Diagnosis and Details
+  - Indicator
+shortName: Death Witnessed Indicator
+synonyms:
+  - DTHWIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the death event was witnessed by another individual.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

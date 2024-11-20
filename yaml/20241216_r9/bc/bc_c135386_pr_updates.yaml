@@ -1,0 +1,33 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C135386
+ncitCode: C135386
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135386
+parentConceptId: C25180
+categories:
+  - Death Diagnosis and Details
+  - Indicator
+shortName: Hospital Medical Record Indicator
+synonyms:
+  - HMROIND
+  - Hospital Medical Record Obtained Ind
+  - Hospital Medical Record Obtained Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether medical records were obtained from the hospital.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+      - "NA"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

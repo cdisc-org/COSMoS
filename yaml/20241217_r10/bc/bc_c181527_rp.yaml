@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C181527
+ncitCode: C181527
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181527
+categories:
+  - Reproductive Findings
+shortName: Condom Use Frequency
+synonyms:
+  - CNDUFRQD
+  - Condom Use Frequency Desc
+  - Condom Use Frequency Description
+resultScales:
+  - Informative
+definition: The reported frequency of condom use.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

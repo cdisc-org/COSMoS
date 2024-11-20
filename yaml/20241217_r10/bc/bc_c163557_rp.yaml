@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C163557
+ncitCode: C163557
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163557
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Products of Conception Examined Indicator
+synonyms:
+  - PRDCEIND
+  - Products of Conception Examined Ind
+resultScales:
+  - Ordinal
+definition: An indication as to whether the products of conception have been examined.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

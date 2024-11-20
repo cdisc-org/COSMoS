@@ -1,0 +1,36 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C191351
+ncitCode: C191351
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191351
+parentConceptId: C82572
+categories:
+  - Reproductive Findings
+shortName: Elapsed Time Since Last Menstrual Period
+synonyms:
+  - LMPELTM
+  - Elapsed Time Since LMP
+resultScales:
+  - Temporal
+definition: The interval of time since the individual's last menstrual period.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: duration
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Days"
+      - "Weeks"
+      - "Months"
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

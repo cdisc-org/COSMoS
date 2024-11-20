@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C201476
+ncitCode: C201476
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201476
+parentConceptId: C181525
+categories:
+  - Reproductive Findings
+shortName: Number of New Oral Sexual Partners
+synonyms:
+  - SXPRTNON
+resultScales:
+  - Quantitative
+definition: The number of new individuals with whom one has engaged in oral sex within a specified time interval.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

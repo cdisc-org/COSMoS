@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-11-27T12:04:33
+# Generation date: 2024-11-19T18:44:30
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -216,10 +216,12 @@ class BiomedicalConceptPackageTypeEnum(EnumDefinitionImpl):
 
 class BiomedicalConceptResultScaleEnum(EnumDefinitionImpl):
 
-    Quantitative = PermissibleValue(text="Quantitative")
+    Informative = PermissibleValue(text="Informative")
     Ordinal = PermissibleValue(text="Ordinal")
-    Nominal = PermissibleValue(text="Nominal")
     Narrative = PermissibleValue(text="Narrative")
+    Nominal = PermissibleValue(text="Nominal")
+    Quantitative = PermissibleValue(text="Quantitative")
+    Temporal = PermissibleValue(text="Temporal")
 
     _defn = EnumDefinition(
         name="BiomedicalConceptResultScaleEnum",
@@ -231,6 +233,7 @@ class DataElementConceptDataTypeEnum(EnumDefinitionImpl):
     date = PermissibleValue(text="date")
     datetime = PermissibleValue(text="datetime")
     decimal = PermissibleValue(text="decimal")
+    duration = PermissibleValue(text="duration")
     integer = PermissibleValue(text="integer")
     string = PermissibleValue(text="string")
     uri = PermissibleValue(text="uri")

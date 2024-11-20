@@ -1,0 +1,13 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C68616
+ncitCode: C68616
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68616
+categories:
+  - Date
+shortName: Start Date
+synonyms:
+  - Starting Date
+resultScales:
+  - Temporal
+definition: The calendar date on which something is to start or did start.

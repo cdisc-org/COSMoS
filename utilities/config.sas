@@ -22,6 +22,7 @@ libname data "&root/utilities/data";
 %let api_key=%sysget(CDISC_LIBRARY_API_KEY);
 %*let api_key=%sysget(CDISC_LIBRARY_API_KEY_DEV);
 
+%let ncit_explore=%nrstr(https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/);
 
 %macro add2issues_bc(condition, type, expected, actual, comment, extracode=, severity=WARNING);
   if &condition then do;

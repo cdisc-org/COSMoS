@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C184708
+ncitCode: C184708
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C184708
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Has Menstrual Periods Indicator
+synonyms:
+  - HMPIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the subject experiences menstrual cycles.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

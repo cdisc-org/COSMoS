@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C201477
+ncitCode: C201477
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201477
+parentConceptId: C181525
+categories:
+  - Reproductive Findings
+shortName: Number of Male Sexual Partners
+synonyms:
+  - SXPRTMN
+  - Total Number of Male Sexual Partners
+resultScales:
+  - Quantitative
+definition: The number of males with whom one has engaged in sexual activity within a specified time interval.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

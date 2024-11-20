@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C154879
+ncitCode: C154879
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C154879
+parentConceptId: C93491
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Skene's Gland Abnormality Indicator
+synonyms:
+  - SKGLAIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the Skene's gland is abnormal.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

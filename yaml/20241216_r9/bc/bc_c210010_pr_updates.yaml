@@ -1,0 +1,10 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C210010
+ncitCode: C210010
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C210010
+categories:
+  - Laboratory Tests
+  - Immunology Tests
+shortName: Antibody Measurement
+definition: The determination of the amount of antibodies in a sample.

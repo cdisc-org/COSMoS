@@ -1,0 +1,35 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C154876
+ncitCode: C154876
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C154876
+parentConceptId: C25347
+categories:
+  - Reproductive Findings
+  - Height
+shortName: Fundal Height
+synonyms:
+  - FUNDHT
+resultScales:
+  - Quantitative
+definition: A measurement of the distance between the pubic symphysis and the top of the palpable uterus.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: decimal
+    exampleSet:
+      - "Centimeter"
+      - "Inch"
+      - "Millimeter"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -96,10 +96,12 @@
       "BiomedicalConceptResultScaleEnum": {
          "description": "",
          "enum": [
-            "Quantitative",
+            "Informative",
             "Ordinal",
+            "Narrative",
             "Nominal",
-            "Narrative"
+            "Quantitative",
+            "Temporal"
          ],
          "title": "BiomedicalConceptResultScaleEnum",
          "type": "string"
@@ -177,6 +179,7 @@
             "date",
             "datetime",
             "decimal",
+            "duration",
             "integer",
             "string",
             "uri"

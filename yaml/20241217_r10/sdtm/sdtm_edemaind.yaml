@@ -1,0 +1,138 @@
+packageDate: "2024-12-17"
+packageType: sdtm
+datasetSpecializationId: EDEMAIND
+domain: RP
+shortName: Edema Indicator
+source: RP.RPTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C154885
+variables:
+  - name: RPTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C106479
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106479
+      submissionValue: RPTESTCD
+    assignedTerm:
+      conceptId: C154885
+      value: "EDEMAIND"
+    role: Topic
+    relationship:
+      subject: RPTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RPTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RPTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C106478
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106478
+      submissionValue: RPTEST
+    assignedTerm:
+      conceptId: C154885
+      value: "Edema Indicator"
+    role: Qualifier
+    relationship:
+      subject: RPTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RPCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: RPCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RPORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: RPORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RPSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: RPSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RPLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: RPLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: RPTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: RPLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    role: Qualifier
+    relationship:
+      subject: RPLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: RPLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: RPDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RPDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: RPTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

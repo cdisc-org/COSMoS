@@ -1,0 +1,13 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C69217
+ncitCode: C69217
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C69217
+categories:
+  - Age
+shortName: Age Started
+synonyms:
+  - Age at Onset
+resultScales:
+  - Quantitative
+definition: The age of a person at the start of a specific event.

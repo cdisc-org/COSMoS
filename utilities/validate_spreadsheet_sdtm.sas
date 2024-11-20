@@ -146,7 +146,6 @@ title01 "&now";
 
 
 /* Package 7 - */
-options mprint;
 
 %let excel_file=&root/curation/BC_Package_R7_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history)); 
@@ -165,9 +164,6 @@ options mprint;
 
 %let excel_file=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format)); 
-
-%let _debug=2;
-
 
 /* Package 8 - */
 %let excel_file=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
@@ -188,6 +184,29 @@ options mprint;
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections_2)$, dsout=sdtm8_05, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_New)$, dsout=sdtm8_06, drop=%str(drop=length significant_digits format));
 
+
+/* Package 9 - */
+%let release=9;
+%let excel_file=&root/curation/BC_Package_R9_public_review_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Corrections)$, dsout=bc9_01, drop=%str(drop=History_of_Change)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_Corrections)$, dsout=sdtm9_01, drop=%str(drop=length significant_digits format));
+
+%let _debug=2;
+
+/* Package 10 - */
+%let release=10;
+%let excel_file=&root/curation/BC_Package_R10.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_RP)$, dsout=bc10_01, drop=%str(drop=History_of_Change)); 
+%ReadExcel(file=&excel_file, range=%str(BC_SR)$, dsout=bc10_02, drop=%str(drop=change_history));
+%ReadExcel(file=&excel_file, range=%str(SDTM_RP)$, dsout=sdtm10_01, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_SR)$, dsout=sdtm10_02, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/BC_Package_R10_Breast_Cancer.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MI)$, dsout=bc10_03, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(BC_PR)$, dsout=bc10_04, drop=%str(drop=change_history));
+%ReadExcel(file=&excel_file, range=%str(SDTM_MI)$, dsout=sdtm10_03, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm10_04, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm10_05, drop=%str(drop=length significant_digits format));
 
 /************************************************************************************************************************/
 
@@ -220,8 +239,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_bc_&todays..html";
-  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_bc_&todays..xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_bc_R&release._&todays..html";
+  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_bc_R&release._&todays..xlsx";
 
     proc print data=bc;
     run;
@@ -275,8 +294,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_&todays..html";
-  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_sdtm_&todays..xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_R&release._&todays..html";
+  ods excel options(sheet_name="SDTM &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_sdtm_R&release._&todays..xlsx";
 
     proc print data=sdtm_merged;
     run;
@@ -287,7 +306,7 @@ quit;
 %end;
 
 ods listing close;
-ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_&todays..html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&release._&todays..html";
 
   /* Unresolved BC Parent BCs */
   proc sql;

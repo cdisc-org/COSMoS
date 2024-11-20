@@ -1,0 +1,27 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C158276
+ncitCode: C158276
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C158276
+parentConceptId: C68616
+categories:
+  - Reproductive Findings
+  - Start Date
+shortName: Estimated Next Menstrual Period Start Date
+synonyms:
+  - ENMPSDTC
+  - Est Next Menstrual Period Start Date
+resultScales:
+  - Temporal
+definition: The approximate date of the first day of the next menstrual cycle.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

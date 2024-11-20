@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C176359
+ncitCode: C176359
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176359
+categories:
+  - Reproductive Findings
+shortName: Vaginal Bleeding and/or Spotting Frequency Description
+synonyms:
+  - VBSFRQD
+  - Vaginal Bleeding/Spotting Freq Desc
+  - Vaginal Bleeding/Spotting Frequency Description
+resultScales:
+  - Informative
+definition: A description of the frequency at which vaginal bleeding and/or spotting has occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

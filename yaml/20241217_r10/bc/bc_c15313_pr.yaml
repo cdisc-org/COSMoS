@@ -1,0 +1,130 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C15313
+ncitCode: C15313
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15313
+parentConceptId: C49236
+categories:
+  - Oncology Standards
+  - Therapeutic Procedure
+  - Radiation Therapy
+shortName: Radiation Therapy
+synonyms:
+  - Cancer Radiotherapy
+  - Radiotherapeutics
+  - RT
+resultScales:
+  - Nominal
+definition: Treatment of a disease by means of exposure of the target or the whole body to radiation. Radiation therapy is often used as part of curative therapy and occasionally as a component of palliative treatment for cancer. Other uses include total body irradiation prior to transplantation.
+dataElementConcepts:
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+    exampleSet:
+      - "3D Conformal Radiation Theraphy"
+      - "Intensity Modulated Radiation Theraphy"
+      - "Radiosurgery"
+      - "Stereotactic Body Radiation Thereaphy"
+      - "Total Body Irritattion"
+      - "Intracavity Brachytheraphy"
+      - "Interstitial Brachytheraphy"
+      - "Radioembolization"
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+    exampleSet:
+      - "3D Conformal Radiation Theraphy"
+      - "Intensity Modulated Radiation Theraphy"
+      - "Intracavity Brachytheraphy"
+      - "Interstitial Brachytheraphy"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Radiation Therapy"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "External Beam Radiation Theraphy"
+      - "Internal Radiation Theraphy"
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C41184
+    ncitCode: C41184
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41184
+    shortName: Indication
+    dataType: string
+    exampleSet:
+      - "Breast Cancer"
+  - conceptId: C25488
+    ncitCode: C25488
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25488
+    shortName: Dose
+    dataType: integer
+  - conceptId: C18068
+    ncitCode: C18068
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18068
+    shortName: Radiation Dose Unit
+    dataType: string
+    exampleSet:
+      - "Gy"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Supraclavicular Lymph Node"
+      - "Breast"
+      - "Lumbar Vertebra"
+      - "Axillary Lymph Node"
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C124444
+    ncitCode: C124444
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124444
+    shortName: Treatment Environmental Setting
+    dataType: string
+    exampleSet:
+      - "Adjuvant"
+      - "Neo-adjuvant"
+      - "Metastatic"
+  - conceptId: C210652
+    ncitCode: C210652
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C210652
+    shortName: Treatment Intent
+    dataType: string
+    exampleSet:
+      - "Palliative"
+      - "Curative"

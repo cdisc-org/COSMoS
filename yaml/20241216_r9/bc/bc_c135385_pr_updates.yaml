@@ -1,0 +1,31 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C135385
+ncitCode: C135385
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135385
+parentConceptId: C25180
+categories:
+  - Death Diagnosis and Details
+  - Indicator
+shortName: Death Certification Indicator
+synonyms:
+  - DTHCOIND
+  - Death Certificate Obtained Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether a death certificate was obtained.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

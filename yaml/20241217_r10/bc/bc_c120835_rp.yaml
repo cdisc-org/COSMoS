@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C120835
+ncitCode: C120835
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120835
+parentConceptId: C106550
+categories:
+  - Reproductive Findings
+shortName: Number of Induced Abortions
+synonyms:
+  - INABORTN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of induced abortions experienced by a female subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
