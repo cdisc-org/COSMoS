@@ -208,6 +208,12 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm10_04, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm10_05, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/BC_Package_R10_ECG.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_EG)$, dsout=bc10_05); 
+
+%let excel_file=&root/curation/BC_Package_R10_ECG_SDTM.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm10_06, drop=%str(drop=length significant_digits format)); 
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);

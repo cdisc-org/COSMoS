@@ -1,0 +1,12 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C62085
+ncitCode: C62085
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62085
+categories:
+  - Electrocardiogram Findings
+shortName: ECG Measurement
+synonyms:
+  - Electrocardiogram Measurement
+  - EKG Measurement
+definition: Measurements or calculations on measurements obtained from electrocardiographic tracings.

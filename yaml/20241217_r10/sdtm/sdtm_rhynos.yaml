@@ -1,0 +1,169 @@
+packageDate: "2024-12-17"
+packageType: sdtm
+datasetSpecializationId: RHYNOS
+domain: EG
+shortName: Rhythm Not Otherwise Specified ECG Assessment
+source: EG.EGTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C111307
+variables:
+  - name: EGTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C71153
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71153
+      submissionValue: EGTESTCD
+    assignedTerm:
+      conceptId: C111307
+      value: "RHYNOS"
+    role: Topic
+    relationship:
+      subject: EGTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: EGTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: EGTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C71152
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71152
+      submissionValue: EGTEST
+    assignedTerm:
+      conceptId: C111307
+      value: "Rhythm Not Otherwise Specified"
+    role: Qualifier
+    relationship:
+      subject: EGTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: EGORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: EGORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: EGSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C71150
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71150
+      submissionValue: EGSTRESC
+    subsetCodelist: EGSTRESC_RHYNOS
+    valueList:
+      - "ASYSTOLE"
+      - "BRADYCARDIA"
+      - "PAUSE"
+      - "PAUSE GREATER THAN 3.0 SECONDS"
+      - "TACHYCARDIA"
+      - "UNDETERMINED RHYTHM"
+      - "UNDETERMINED SUPRAVENTRICULAR RHYTHM"
+    role: Qualifier
+    dataType: text
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: EGSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    vlmTarget: true 
+  - name: EGCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "FINDING"
+    role: Qualifier
+    relationship:
+      subject: EGCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: EGPOS
+    dataElementConceptId: C62164
+    isNonStandard: false
+    codelist:
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+      submissionValue: POSITION
+    role: Qualifier
+    relationship:
+      subject: EGPOS
+      linkingPhrase: was the subject position during performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: EGMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C71151
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
+      submissionValue: EGMETHOD
+    role: Qualifier
+    relationship:
+      subject: EGMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: EGEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    subsetCodelist: EVAL_EG
+    valueList:
+      - "ADJUDICATION COMMITTEE"
+      - "INDEPENDENT ASSESSOR"
+      - "INVESTIGATOR"
+      - "VENDOR"
+    role: Qualifier
+    relationship:
+      subject: EGEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: EGTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: EGDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: EGDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: EGTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

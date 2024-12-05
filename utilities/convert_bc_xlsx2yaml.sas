@@ -154,7 +154,7 @@
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2024-12-16);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R9_public_review_updates.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R9_public_review_updates.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=pr_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Corrections));
 */
 
@@ -171,6 +171,9 @@
 %let ExcelFile=&root/curation/BC_Package_R10_Breast_Cancer.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mi, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MI));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=pr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_PR));
+
+%let ExcelFile=&root/curation/BC_Package_R10_ECG.xlsx;
+%generate_yaml_from_bc(excel_file=&ExcelFile, type=eg, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EG));
 
 
 ods listing close;

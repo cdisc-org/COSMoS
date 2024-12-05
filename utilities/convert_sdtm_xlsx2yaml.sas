@@ -175,9 +175,11 @@ run;
 %let OverrideDate=%str(2024-12-16);
 
 %let checkrelationships=0;
-%let ExcelFile=&root/curation/draft/BC_Package_R9_public_review_updates.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R9_public_review_updates.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr_updates, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Corrections), debug=0, check_relationships=&checkrelationships);
 */
+
+options mprint;
 
 %let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
@@ -188,7 +190,7 @@ run;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 %let OverrideDate=%str(2024-12-17);
 
-%let checkrelationships=1;
+%let checkrelationships=0;
 %let ExcelFile=&root/curation/BC_Package_R10.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=rp, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RP), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=sr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SR), debug=0, check_relationships=&checkrelationships);
@@ -198,6 +200,8 @@ run;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=pr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PR), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=cm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CM), debug=0, check_relationships=&checkrelationships);
 
+%let ExcelFile=&root/curation/BC_Package_R10_ECG_SDTM.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=eg, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EG), debug=1, check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_R&release._&todays..html";

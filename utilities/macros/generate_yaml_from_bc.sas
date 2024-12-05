@@ -144,7 +144,15 @@
         put "definition:" +1 definition;
       end;
 
+      if not missing(system_name) then do;
+        %add2issues_bc(missing(system) or missing(code), 
+                       %str(BC_SYSTEM_CODE_MISSING), 
+                       "", "", %str(cats("system_name=", system_name, "system=", system, "code=", code)));
+      end;                 
       if not missing(system) then do;
+        %add2issues_bc(missing(code), 
+                       %str(BC_SYSTEM_CODE_MISSING), 
+                       "", "", %str(cats("system=", system)));
         put "coding:";
         countwords=countw(system, ";");
         do i=1 to countwords;

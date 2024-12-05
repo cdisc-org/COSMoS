@@ -41,7 +41,7 @@
   data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
            codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low lookup_predicate $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list $4096
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 subset_value_list value_list $8192
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
     set work.&type._&package._mrgd;
