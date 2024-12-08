@@ -1,5 +1,3 @@
-%macro get_latest_bc_api(dsout=);
-
   %macro get_bc(code);
 
     %get_api_response(
@@ -18,6 +16,8 @@
       );
 
   %mend get_bc;
+
+%macro get_latest_bc_api(dsout=);
 
   %if %sysfunc(exist(&dsout)) %then %do;
     %put WAR%str(NING): dataset &dsout already exists.;
@@ -76,6 +76,9 @@
 
 %mend get_latest_bc_api;
 
+/******************************************************************************/
+
+
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
@@ -93,6 +96,22 @@ proc sql noprint;
  from data.bc_latest_&packageDateShort
  ;
 quit;
+
+data work.unique_bc;
+  set data.bc_latest_&packageDateShort(keep=bc_id parent_bc_id short_name synonyms definition bc_categories);
+run;
+
+proc sort data=work.unique_bc nodupkey;
+  by bc_id parent_bc_id;
+run;
+
+%create_hierarchy(dsin=work.unique_bc, child=bc_id, parent=parent_bc_id, label=short_name, dsout=work.bc_hierarchy);  
+
+data work.bc_hierarchy;
+  length bc_shortname_id $512;
+  set bc_hierarchy(rename=(_hierarchy_level_ = bc_hierarchy_level _hierarchy_full_ = bc_hierarchy_full));
+  bc_shortname_id = catx(' ', short_name, cats("(", bc_id, ")"));
+run;
 
 data work.categories(keep=category);
   length category $1024;
@@ -184,22 +203,15 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
     define href / noprint;
     define dec_href / noprint;
 
-    compute bc_id;
-      if not missing(bc_id) and index(bc_id, "NEW")=0 then do;
-        call define (_col_, 'url', href);
-        call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
-      end;
-    endcomp;
-
     compute ncit_code;
       if not missing(ncit_code) then do;
-        call define (_col_, 'url', href);
+        call define (_col_, 'url', cats("&ncit_explore", ncit_code));
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
       end;
     endcomp;
 
     compute parent_bc_id;
-      if not missing(parent_bc_id) then do;
+      if not missing(parent_bc_id) and index(parent_bc_id, "NEW")=0 then do;
         call define (_col_, 'url', cats("&ncit_explore", parent_bc_id));
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
       end;
@@ -207,11 +219,17 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 
     compute ncit_dec_code;
       if not missing(ncit_dec_code) then do;
-        call define (_col_, 'url', dec_href);
+        call define (_col_, 'url', cats("&ncit_explore", ncit_dec_code));
         call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
       end;
     endcomp;
 
+  run;
+
+ods excel options(sheet_name="BC Hierarchy" flow="tables" autofilter = 'all');
+
+  proc report data=work.bc_hierarchy;
+    columns short_name bc_id bc_shortname_id parent_bc_id bc_categories synonyms definition bc_hierarchy_level bc_hierarchy_full;
   run;
 
 ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');

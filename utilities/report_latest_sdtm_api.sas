@@ -95,7 +95,7 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-06-27;
+%let packageDate=2024-12-16;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 %let temp_location=%sysfunc(pathname(work));
 %let temp_location=&root/utilities/test;
@@ -232,7 +232,7 @@ ods excel options(sheet_name="SDTM Dataset Specializations" flow="tables" autofi
 
       compute codelist;
         if not missing(codelist) then do;
-          call define (_col_, 'url', codelist_href);
+          call define (_col_, 'url', cats("&ncit_explore", codelist));
           call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
         end;  
       endcomp;
