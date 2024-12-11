@@ -10,7 +10,7 @@ shortName: Pregnancy Outcome
 synonyms:
   - PRGOUT
 resultScales:
-  - Informative
+  - Narrative
 definition: Findings observed at the end of a pregnancy.
 dataElementConcepts:
   - conceptId: C70856

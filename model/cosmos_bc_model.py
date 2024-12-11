@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-11-19T18:44:30
+# Generation date: 2024-12-11T10:38:43
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -216,7 +216,6 @@ class BiomedicalConceptPackageTypeEnum(EnumDefinitionImpl):
 
 class BiomedicalConceptResultScaleEnum(EnumDefinitionImpl):
 
-    Informative = PermissibleValue(text="Informative")
     Ordinal = PermissibleValue(text="Ordinal")
     Narrative = PermissibleValue(text="Narrative")
     Nominal = PermissibleValue(text="Nominal")

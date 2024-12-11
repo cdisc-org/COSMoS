@@ -11,7 +11,7 @@ synonyms:
   - Vaginal Bleeding/Spotting Freq Desc
   - Vaginal Bleeding/Spotting Frequency Description
 resultScales:
-  - Informative
+  - Narrative
 definition: A description of the frequency at which vaginal bleeding and/or spotting has occurred.
 dataElementConcepts:
   - conceptId: C70856

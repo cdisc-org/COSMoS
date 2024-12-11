@@ -82,10 +82,10 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-06-27;
+%let packageDate=2024-12-17;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 %let temp_location=%sysfunc(pathname(work));
-%let temp_location=&root/utilities/test;
+%*let temp_location=&root/utilities/test;
 
 %create_template(type=bc, out=work.bc__template);
 
@@ -98,11 +98,20 @@ proc sql noprint;
 quit;
 
 data work.unique_bc;
-  set data.bc_latest_&packageDateShort(keep=bc_id parent_bc_id short_name synonyms definition bc_categories);
+  set data.bc_latest_&packageDateShort(keep=bc_id parent_bc_id short_name synonyms result_scales definition bc_categories dec_id);
+run;
+proc sort data=work.unique_bc;
+  by bc_id parent_bc_id;
 run;
 
-proc sort data=work.unique_bc nodupkey;
+data work.unique_bc(drop=dec_id);
+  length dec_n 8;
+  retain dec_n;
+  set work.unique_bc;
   by bc_id parent_bc_id;
+  if first.bc_id then dec_n = 0;
+  if not missing(dec_id) then dec_n + 1;
+  if last.bc_id;
 run;
 
 %create_hierarchy(dsin=work.unique_bc, child=bc_id, parent=parent_bc_id, label=short_name, dsout=work.bc_hierarchy);  
@@ -123,9 +132,9 @@ data work.categories(keep=category);
   end;
  run;
 
- proc sort data=work.categories nodupkey;
-   by category;
- run;
+proc sort data=work.categories nodupkey;
+  by category;
+run;
 
 proc sql;
   create table work.readme
@@ -226,16 +235,16 @@ ods excel options(sheet_name="Biomedical Concepts" flow="tables" autofilter = 'a
 
   run;
 
-ods excel options(sheet_name="BC Hierarchy" flow="tables" autofilter = 'all');
-
-  proc report data=work.bc_hierarchy;
-    columns short_name bc_id bc_shortname_id parent_bc_id bc_categories synonyms definition bc_hierarchy_level bc_hierarchy_full;
-  run;
-
 ods excel options(sheet_name="Categories" flow="tables" autofilter = 'none');
 
   proc report data=work.categories;
     columns category;
+  run;
+
+ods excel options(sheet_name="BC Hierarchy" flow="tables" autofilter = 'all');
+
+  proc report data=work.bc_hierarchy;
+    columns short_name bc_id bc_shortname_id parent_bc_id bc_categories synonyms result_scales definition bc_hierarchy_level bc_hierarchy_full dec_n;
   run;
 
 ods excel close;

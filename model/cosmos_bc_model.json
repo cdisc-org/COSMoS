@@ -96,7 +96,6 @@
       "BiomedicalConceptResultScaleEnum": {
          "description": "",
          "enum": [
-            "Informative",
             "Ordinal",
             "Narrative",
             "Nominal",

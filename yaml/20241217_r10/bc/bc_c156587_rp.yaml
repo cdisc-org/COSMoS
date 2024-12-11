@@ -10,7 +10,7 @@ shortName: Menstrual Cycle Regularity
 synonyms:
   - MENREG
 resultScales:
-  - Informative
+  - Narrative
 definition: A description of how an individual's menstrual cycle conforms to a consistent temporal pattern.
 dataElementConcepts:
   - conceptId: C70856

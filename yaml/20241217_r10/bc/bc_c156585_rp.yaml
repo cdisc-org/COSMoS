@@ -10,7 +10,7 @@ shortName: Menses Flow Rate Description
 synonyms:
   - MENFRD
 resultScales:
-  - Informative
+  - Narrative
 definition: A subjective description of the menstrual flow rate during a menstrual cycle.
 dataElementConcepts:
   - conceptId: C70856

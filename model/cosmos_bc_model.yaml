@@ -139,7 +139,6 @@ enums:
 
   BiomedicalConceptResultScaleEnum:
     permissible_values:
-      Informative:
       Ordinal:
       Narrative:
       Nominal:

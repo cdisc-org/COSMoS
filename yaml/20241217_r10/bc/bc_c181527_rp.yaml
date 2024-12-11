@@ -11,7 +11,7 @@ synonyms:
   - Condom Use Frequency Desc
   - Condom Use Frequency Description
 resultScales:
-  - Informative
+  - Narrative
 definition: The reported frequency of condom use.
 dataElementConcepts:
   - conceptId: C70856

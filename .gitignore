@@ -10,6 +10,7 @@ venv/
 .env
 work/
 yaml/latest
+yaml/*/*_test
 ~$*.*
 *.log
 *.lst
