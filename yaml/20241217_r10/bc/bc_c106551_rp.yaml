@@ -1,0 +1,28 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C106551
+ncitCode: C106551
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106551
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Pregnancies
+synonyms:
+  - PREGNN
+  - Maternal Gravity
+  - Pregnancy Count
+  - Total Number of Pregnancies
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of pregnancy events experienced by the female subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

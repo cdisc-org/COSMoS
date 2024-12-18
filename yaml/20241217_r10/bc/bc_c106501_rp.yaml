@@ -1,0 +1,34 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C106501
+ncitCode: C106501
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106501
+parentConceptId: C71460
+categories:
+  - Reproductive Findings
+shortName: Birth Control Method
+synonyms:
+  - BCMETHOD
+resultScales:
+  - Nominal
+definition: The method by which conception or impregnation is prevented. This may be achieved through the use of devices, drugs or surgery.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Condom"
+      - "Spermicide"
+      - "Vaginal Ring"
+      - "IUD"
+      - "Oral Contraception"
+      - "Contraceptive Injection"
+      - "Contraceptive Patch"
+      - "Tubal Ligation"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,51 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C25370
+ncitCode: C25370
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25370
+parentConceptId: C16112
+categories:
+  - Eligibility Criteria
+  - Inclusion Exclusion Criteria
+shortName: Exclusion Criteria
+synonyms:
+  - Exclusion
+resultScales:
+  - Ordinal
+definition: Medical and/or social characteristics that prevent a subject from being allowed to participate in a clinical study, as outlined in the study protocol.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Exclusion"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Major"
+      - "Minor"
+  - conceptId: C83444
+    ncitCode: C83444
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83444
+    shortName: Trial Inclusion Exclusion Criteria Version
+    dataType: string
+    exampleSet:
+      - "1"
+      - "2.2"
+  - conceptId: C181043
+    ncitCode: C181043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181043
+    shortName: Clinical Findings Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

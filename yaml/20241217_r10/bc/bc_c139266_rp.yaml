@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C139266
+ncitCode: C139266
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139266
+parentConceptId: C178141
+categories:
+  - Reproductive Findings
+shortName: Number of Premature Live Births
+synonyms:
+  - BRTHPRN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of live birth events at which the gestational age of the neonate is less than 37 weeks and 0 days.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

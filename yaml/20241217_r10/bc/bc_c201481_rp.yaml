@@ -1,0 +1,33 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C201481
+ncitCode: C201481
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201481
+parentConceptId: C25150
+categories:
+  - Reproductive Findings
+  - Age
+shortName: Age at First Oral Sex
+synonyms:
+  - FSXOAGE
+resultScales:
+  - Quantitative
+definition: The age at which first oral sex occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: integer
+    exampleSet:
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

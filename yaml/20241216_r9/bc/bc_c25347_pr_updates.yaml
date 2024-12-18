@@ -1,0 +1,11 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C25347
+ncitCode: C25347
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25347
+categories:
+  - Characteristics
+shortName: Height
+resultScales:
+  - Quantitative
+definition: The vertical measurement or distance from the base to the top of an object; the vertical dimension of extension.

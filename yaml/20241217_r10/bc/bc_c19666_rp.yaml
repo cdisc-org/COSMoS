@@ -1,0 +1,34 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C19666
+ncitCode: C19666
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19666
+parentConceptId: C25150
+categories:
+  - Reproductive Findings
+  - Age
+shortName: Age at Menarche
+synonyms:
+  - MENARAGE
+  - Menarche Age
+resultScales:
+  - Quantitative
+definition: Age of first menstruation.  A risk factor for breast cancer
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: integer
+    exampleSet:
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

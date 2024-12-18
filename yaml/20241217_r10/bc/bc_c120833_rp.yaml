@@ -1,0 +1,24 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C120833
+ncitCode: C120833
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120833
+categories:
+  - Reproductive Findings
+shortName: Estimated Date of Conception
+synonyms:
+  - EDCDTC
+resultScales:
+  - Temporal
+definition: An approximate calculated date at which the conception event took place.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

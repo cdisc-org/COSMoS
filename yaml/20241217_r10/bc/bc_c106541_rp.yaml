@@ -1,0 +1,29 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C106541
+ncitCode: C106541
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106541
+parentConceptId: C117720
+categories:
+  - Reproductive Findings
+shortName: Menopause Status
+synonyms:
+  - MENOSTAT
+resultScales:
+  - Nominal
+definition: An indicator as to whether the female subject is in menopause.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Perimenopausal"
+      - "Premenopausal"
+      - "Postmenopausal"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

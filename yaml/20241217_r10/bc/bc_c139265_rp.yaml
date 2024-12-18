@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C139265
+ncitCode: C139265
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139265
+parentConceptId: C178141
+categories:
+  - Reproductive Findings
+shortName: Number of Full Term Live Births
+synonyms:
+  - BRTHFTN
+  - Number Full Term Live Births
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of live birth events at which the gestational age of the neonate is 39 weeks and 0 days through 40 weeks and 6 days.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

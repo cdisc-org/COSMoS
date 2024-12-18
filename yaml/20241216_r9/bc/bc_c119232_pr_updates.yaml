@@ -1,0 +1,56 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C119232
+ncitCode: C119232
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119232
+parentConceptId: C36292
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+  - Laboratory Test Result
+shortName: Lab Findings of New or Worsening Heart Failure
+synonyms:
+  - HFLBFNW
+  - Heart Failure New/Worsening Lab Findings
+resultScales:
+  - Nominal
+  - Ordinal
+definition: A description of the clinical, laboratory or molecular evidence of heart failure that can be classified as new or worsening.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Increase in Heart Failure Biomarker"
+      - "Invasive Diagnostic Evidence of Heart Failure"
+      - "Non-Invasive Diagnostic Evidence of Heart Failure"
+      - "Radiological Evidence of Pulmonary"
+      - "Yes"
+      - "No"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

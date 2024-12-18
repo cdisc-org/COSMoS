@@ -1,0 +1,29 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C81247
+ncitCode: C81247
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81247
+categories:
+  - Reproductive Findings
+shortName: Expected Date of Confinement
+synonyms:
+  - EDLVRDTC
+  - EDD
+  - EDC
+  - Estimated Date of Delivery
+  - Estimated Date of Confinement
+  - Estimated Due Date
+resultScales:
+  - Temporal
+definition: "The best estimated due date is determined by: last menstrual period (LMP) if confirmed by early ultrasound or no ultrasound performed, or early ultrasound if no known LMP or the ultrasound is not consistent with LMP, or known date of fertilization (e.g. Assisted Reproductive Technology (ART), Intrauterine Insemination (IUI)). Notes: 1. Ultrasound margin of error and \"early\" to be defined by SMFM/ACOG/NICHD workshop. 2. Pregnancy should not be re-dated by a later ultrasound after a best obstetrical estimate of EDD has been established. (adapted from reVITALize)"
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

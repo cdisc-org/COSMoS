@@ -1,0 +1,34 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C156586
+ncitCode: C156586
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156586
+parentConceptId: C117720
+categories:
+  - Reproductive Findings
+shortName: Menses Duration
+synonyms:
+  - MENFDUR
+  - Menses Flow Duration
+resultScales:
+  - Quantitative
+definition: The number of days during which menses is expelled from the uterus.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: integer
+    exampleSet:
+      - "Days"
+      - "Hours"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

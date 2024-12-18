@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C106550
+ncitCode: C106550
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106550
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Abortions
+synonyms:
+  - ABORTN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of instances in which there has been a termination of pregnancy happening before the fetus is able to sustain independent life.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

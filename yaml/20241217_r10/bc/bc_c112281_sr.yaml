@@ -1,0 +1,59 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C112281
+ncitCode: C112281
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112281
+parentConceptId: C15260
+categories:
+  - Immunology Tests
+  - Immunodiagnostic Procedure
+  - Skin Response
+shortName: Antigenic Skin Flare Longest Diameter
+synonyms:
+  - Flare Longest Diameter
+  - FLRLDIAM
+resultScales:
+  - Quantitative
+definition: The longest diameter of the area of redness that forms around the site of an antigenic challenge to the skin.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "mm"
+      - "cm"
+      - "in"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Ruler"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

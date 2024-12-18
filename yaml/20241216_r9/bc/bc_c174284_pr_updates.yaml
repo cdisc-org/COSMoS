@@ -1,0 +1,30 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C174284
+ncitCode: C174284
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174284
+parentConceptId: C93546
+categories:
+  - Death Diagnosis and Details
+  - Death Indicator
+shortName: Sudden Death Indicator
+synonyms:
+  - SDTHIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether death was unexpected or occurred without warning.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

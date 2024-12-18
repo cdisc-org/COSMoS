@@ -348,16 +348,19 @@
       "from_schema": "https://www.cdisc.org/cosmos/1-0",
       "permissible_values": [
         {
-          "text": "Quantitative"
+          "text": "Ordinal"
         },
         {
-          "text": "Ordinal"
+          "text": "Narrative"
         },
         {
           "text": "Nominal"
         },
         {
-          "text": "Narrative"
+          "text": "Quantitative"
+        },
+        {
+          "text": "Temporal"
         }
       ]
     },
@@ -377,6 +380,9 @@
         },
         {
           "text": "decimal"
+        },
+        {
+          "text": "duration"
         },
         {
           "text": "integer"
@@ -826,9 +832,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2023-11-27T12:03:59",
-  "source_file_size": 4526,
-  "generation_date": "2023-11-27T12:04:41",
+  "source_file_date": "2024-12-11T10:37:58",
+  "source_file_size": 4560,
+  "generation_date": "2024-12-11T10:38:57",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",

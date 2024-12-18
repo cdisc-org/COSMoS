@@ -76,6 +76,8 @@
       "LinkingPhraseEnum": {
          "description": "",
          "enum": [
+            "assesses seriousness of",
+            "assesses the severity of",
             "associates the tumor identified in",
             "decodes the value in",
             "describes actions taken",
@@ -85,6 +87,7 @@
             "further specifies the anatomical location in",
             "groups tumor assessments used in overall response identified by",
             "groups values in",
+            "groups, within an individual subject, values in",
             "identifies a pattern of",
             "identifies an observation described by",
             "identifies overall response supported by tumor assessments identified by",
@@ -96,6 +99,8 @@
             "indicates the previous irradiation status of the tumor identified by",
             "indicates the progression status of the previous irradiated tumor identified by",
             "is a dictionary-derived term for the value in",
+            "is a dictionary-derived class code for the value in",
+            "is a dictionary-derived class name for the value in",
             "is decoded by the value in",
             "is original text for",
             "is the administered amount of the treatment in",
@@ -125,6 +130,7 @@
             "is the subject's fasting status during the performance of the test in",
             "is the unit for the value in",
             "is the unit for",
+            "specifies the anatomical location in",
             "specifies the anatomical location of",
             "specifies the anatomical location of the performance of the test in",
             "specifies the severity of",
@@ -136,15 +142,21 @@
             "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in",
             "is an identifier for the genetic sequence of the genetic entity represented by",
             "is the chromosome that is the position of the result in",
+            "is the clinical trial or treatment setting for",
             "is the date of occurrence",
             "is the date of occurrence for",
+            "is the intended disease outcome for",
             "is the method of secondary analysis of results in",
             "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
             "is the symbol for the genomic entity that is the position of the result in",
             "is the type of genomic entity that is the position of the result in",
             "is the genetic sub-location of the result in",
             "is the object of the observation in",
-            "is an identifier for the evaluator with the role in"
+            "is an identifier for the evaluator with the role in",
+            "is the severity of the toxicity in",
+            "is a grouping of values in",
+            "is the textual description of the intended dose regimen for",
+            "is the reason for stopping administration of"
          ],
          "title": "LinkingPhraseEnum",
          "type": "string"
@@ -175,6 +187,8 @@
       "PredicateTermEnum": {
          "description": "",
          "enum": [
+            "ASSESSES",
+            "CLASSIFIES",
             "DECODES",
             "DESCRIBES",
             "GROUPS",
@@ -192,6 +206,7 @@
             "IS_INDICATOR_FOR",
             "IS_ORIGINAL_TEXT_FOR",
             "IS_POSITION_FOR",
+            "IS_REASON_FOR",
             "IS_RESULT_OF",
             "IS_SPECIMEN_TESTED_IN",
             "IS_SUBJECT_STATE_FOR",
@@ -199,6 +214,7 @@
             "IS_UNIT_FOR",
             "PERFORMED",
             "PERFORMS",
+            "QUALIFIES",
             "SPECIFIES"
          ],
          "title": "PredicateTermEnum",

@@ -41,7 +41,7 @@
   data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
            codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low lookup_predicate $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list $4096
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 subset_value_list value_list $8192
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
     set work.&type._&package._mrgd;
@@ -97,7 +97,7 @@
 
            put +4 "codelist:";
            put +6 "conceptId:" +1 codelist;
-           put +6 'href: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=' codelist;
+           put +6 "href: &ncit_explore" codelist;
            if not missing(codelist_submission_value) then put +6 "submissionValue:" +1 codelist_submission_value;
         end;
         if not missing(subset_codelist) then do;

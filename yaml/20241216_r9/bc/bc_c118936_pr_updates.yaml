@@ -1,0 +1,72 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C118936
+ncitCode: C118936
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118936
+parentConceptId: C35552
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+shortName: Acute Myocardial Infarction Type
+synonyms:
+  - ACMITYPE
+resultScales:
+  - Ordinal
+definition: A classification or description of the acute myocardial infarction.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+    exampleSet:
+      - "Acute Myocardial Infarction"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Type 1 Myocardial Infraction"
+      - "Type 2 Myocardial Infraction"
+      - "Type 3 Myocardial Infraction"
+      - "Type 4A Myocardial Infraction"
+      - "Type 4B Myocardial Infraction"
+      - "Type 4C Myocardial Infraction"
+      - "Type 5 Myocardial Infraction"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Coronary Angiography"
+      - "Autopsy"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "CEC Adjudicator"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

@@ -1,0 +1,48 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C112222
+ncitCode: C112222
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112222
+parentConceptId: C15260
+categories:
+  - Immunology Tests
+  - Immunodiagnostic Procedure
+  - Skin Response
+shortName: Allergen Skin Response Intensity
+synonyms:
+  - ASRINT
+resultScales:
+  - Quantitative
+  - Nominal
+definition: "The semiquantitative assessment of the wheal-and-flare index that measures the intensity of the reaction."
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

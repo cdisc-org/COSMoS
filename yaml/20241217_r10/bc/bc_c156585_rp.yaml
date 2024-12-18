@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C156585
+ncitCode: C156585
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156585
+parentConceptId: C117720
+categories:
+  - Reproductive Findings
+shortName: Menses Flow Rate Description
+synonyms:
+  - MENFRD
+resultScales:
+  - Narrative
+definition: A subjective description of the menstrual flow rate during a menstrual cycle.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

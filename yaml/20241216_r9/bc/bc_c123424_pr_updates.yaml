@@ -1,0 +1,54 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C123424
+ncitCode: C123424
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123424
+parentConceptId: C35552
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+shortName: Academic Research Council Coronary Stent Thrombosis Timing
+synonyms:
+  - STCTIMNG
+  - Stent Thrombosis, Coronary, ARC Timing
+resultScales:
+  - Nominal
+definition: Categorization of the timing of coronary stent thrombosis occurrence per the classification schema described by the Academic Research Consortium (ARC).
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+    exampleSet:
+      - "Coronary Stent Thrombosis"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "STENT Thrombosis ARC Acute"
+      - "STENT Thrombosis ARC Late"
+      - "STENT Thrombosis ARC Subacute"
+      - "STENT Thrombosis ARC Very Late"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

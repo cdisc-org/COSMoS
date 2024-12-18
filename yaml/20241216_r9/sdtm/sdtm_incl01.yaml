@@ -1,0 +1,127 @@
+packageDate: "2024-12-16"
+packageType: sdtm
+datasetSpecializationId: INCL01
+domain: IE
+shortName: Inclusion Criteria 01
+source: IE.IETESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C25532
+variables:
+  - name: IETESTCD
+    isNonStandard: false
+    assignedTerm:
+      value: "INCL01"
+    role: Topic
+    relationship:
+      subject: IETESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: IETEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: IETEST
+    isNonStandard: false
+    assignedTerm:
+      value: "Inclusion Criteria 01"
+    role: Qualifier
+    relationship:
+      subject: IETEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: TIVERS
+    dataElementConceptId: C83444
+    isNonStandard: true 
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: IECAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C66797
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66797
+      submissionValue: IECAT
+    assignedTerm:
+      conceptId: C25532
+      value: "INCLUSION"
+    role: Qualifier
+    relationship:
+      subject: IECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: IEORRES
+    dataElementConceptId: C181043
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_N
+    valueList:
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: IEORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: IESTRESC
+    dataElementConceptId: C181043
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_N
+    valueList:
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: IESTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: IETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: IEDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: IEDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: IETESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

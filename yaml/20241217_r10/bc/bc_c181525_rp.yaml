@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C181525
+ncitCode: C181525
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181525
+parentConceptId: C127787
+categories:
+  - Reproductive Findings
+shortName: Total Number of Sexual Partners
+synonyms:
+  - TSXPARTN
+resultScales:
+  - Quantitative
+definition: The total count of all sexual partners.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

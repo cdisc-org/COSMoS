@@ -1,0 +1,30 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C184505
+ncitCode: C184505
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C184505
+parentConceptId: C93565
+categories:
+  - Death Diagnosis and Details
+  - Expected Indicator
+shortName: Death Expected Indicator
+synonyms:
+  - DTHEXIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the death was expected.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

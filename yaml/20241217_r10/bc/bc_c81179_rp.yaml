@@ -1,0 +1,34 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C81179
+ncitCode: C81179
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81179
+parentConceptId: C89340
+categories:
+  - Reproductive Findings
+shortName: Delivery Procedure
+synonyms:
+  - DLVRMODE
+  - Mode of Delivery
+  - Birth Method of Delivery
+resultScales:
+  - Nominal
+definition: Description of the method by which a fetus is delivered.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Breech Extraction"
+      - "Delivery by Destructive Operation"
+      - "Cesarean Section"
+      - "Vaginal Assisted Delivery"
+      - "Vaginal Birth After Cesarean Delivery"
+      - "Vaginal Delivery"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

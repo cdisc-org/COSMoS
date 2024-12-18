@@ -1,0 +1,31 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C122192
+ncitCode: C122192
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122192
+parentConceptId: C139264
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Pregnancy Confirmed Indicator
+synonyms:
+  - PCONFIND
+resultScales:
+  - Ordinal
+definition: Specifies whether the subject's pregnancy has been confirmed.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

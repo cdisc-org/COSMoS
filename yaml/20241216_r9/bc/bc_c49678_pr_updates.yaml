@@ -1,0 +1,37 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C49678
+ncitCode: C49678
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49678
+parentConceptId: C49672
+categories:
+  - Vital Signs
+shortName: Respiratory Rate
+synonyms:
+  - RESP
+  - RESPRATE
+resultScales:
+  - Quantitative
+definition: The rate of breathing (inhalation and exhalation) measured within in a unit time, usually expressed as breaths per minute.
+coding:
+  - code: 9279-1
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73688
+    shortName: Count per Minute
+    dataType: string
+    exampleSet:
+      - "Breaths per Minute"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

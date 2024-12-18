@@ -95,10 +95,10 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-06-27;
+%let packageDate=2024-12-17;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 %let temp_location=%sysfunc(pathname(work));
-%let temp_location=&root/utilities/test;
+%*let temp_location=&root/utilities/test;
 
 proc format;
   value yesno
@@ -218,21 +218,21 @@ ods excel options(sheet_name="SDTM Dataset Specializations" flow="tables" autofi
                  
       compute bc_id;
         if not missing(bc_id) and index(bc_id, "NEW")=0 then do;
-          call define (_col_, 'url', cats('https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=', bc_id));
+          call define (_col_, 'url', cats("&ncit_explore", bc_id));
           call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
         end;  
       endcomp;
 
       compute dec_id;
         if not missing(dec_id) and index(dec_id, "NEW")=0 then do;
-          call define (_col_, 'url', cats('https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=', dec_id));
+          call define (_col_, 'url', cats("&ncit_explore", dec_id));
           call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
         end;  
       endcomp;
 
       compute codelist;
         if not missing(codelist) then do;
-          call define (_col_, 'url', codelist_href);
+          call define (_col_, 'url', cats("&ncit_explore", codelist));
           call define (_col_, "style","style={textdecoration=underline color=#0000FF}");
         end;  
       endcomp;

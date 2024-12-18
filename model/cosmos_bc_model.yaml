@@ -139,10 +139,11 @@ enums:
 
   BiomedicalConceptResultScaleEnum:
     permissible_values:
-      Quantitative:
       Ordinal:
-      Nominal:
       Narrative:
+      Nominal:
+      Quantitative:
+      Temporal:
 
   DataElementConceptDataTypeEnum:
     permissible_values:
@@ -150,6 +151,7 @@ enums:
       date:
       datetime:
       decimal:
+      duration:
       integer:
       string:
       uri:

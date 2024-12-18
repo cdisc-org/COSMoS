@@ -1,0 +1,28 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C116142
+ncitCode: C116142
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C116142
+parentConceptId: C81239
+categories:
+  - Death Diagnosis and Details
+  - Cause of Death
+shortName: Secondary Cause of Death
+synonyms:
+  - SECDTH
+resultScales:
+  - Nominal
+definition: The second significant event which ultimately led to death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Congestive Heart Failure"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

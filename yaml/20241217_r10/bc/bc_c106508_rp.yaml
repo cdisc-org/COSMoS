@@ -1,0 +1,29 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C106508
+ncitCode: C106508
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106508
+parentConceptId: C19332
+categories:
+  - Reproductive Findings
+shortName: Childbearing Potential
+synonyms:
+  - CHILDPOT
+resultScales:
+  - Ordinal
+definition: An indicator as to whether the female subject has the potential to become pregnant.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

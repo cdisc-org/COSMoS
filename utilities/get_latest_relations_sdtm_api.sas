@@ -24,7 +24,7 @@
       scan(t2.href, -2, "\/") as latest_package_date length=10,
       t3.href length=512,
       t4.subject length=32,
-      t4.linkingPhrase length=1024,
+      t4.linkingPhrase length=256,
       t4.predicateTerm length=128,
       t4.object length=32
       
@@ -187,6 +187,7 @@ data data.sdtm_predicateTerms(keep=predicateTerm);
 run; 
 
 options ls=256;
+ods listing close;
 ods excel file="&root/utilities/reports/sdtm_specializations_relationships_&packageDateShort..xlsx";
 
 ods excel options(sheet_name="Linking Phrases" flow="tables" autofilter = 'all');
@@ -207,4 +208,4 @@ proc report data=data.sdtm_linkingphrases_predterms;
 run;  
 
 ods excel close;
-
+ods listing;

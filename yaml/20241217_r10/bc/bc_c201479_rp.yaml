@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C201479
+ncitCode: C201479
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201479
+parentConceptId: C181525
+categories:
+  - Reproductive Findings
+shortName: Number of Oral Sexual Partners
+synonyms:
+  - SXPRTON
+  - Total Number of Oral Sexual Partners
+resultScales:
+  - Quantitative
+definition: The number of individuals with whom one has engaged in oral sexual activity within a specified time interval.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

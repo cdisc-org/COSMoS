@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189352
+ncitCode: C189352
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189352
+parentConceptId: C154889
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Bleeding or Spotting Between Menstrual Periods Indicator
+synonyms:
+  - BSBMPIND
+  - Bleed/Spot Between Menstrual Periods Ind
+resultScales:
+  - Ordinal
+definition: An indication as to whether the individual has experienced bleeding or spotting between menstrual periods.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

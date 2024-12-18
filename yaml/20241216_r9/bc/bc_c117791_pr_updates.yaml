@@ -1,0 +1,58 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C117791
+ncitCode: C117791
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117791
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+shortName: Aggregate RR Interval
+synonyms:
+  - RR Interval Aggregate
+  - RRAG
+resultScales:
+  - Quantitative
+definition: An aggregate RR value based on the measurement of RR intervals from multiple beats within a single ECG. The method of aggregation, which can vary, is typically a measure of central tendency such as the mean. (CDISC)
+coding:
+  - code: 8637-1
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Interval"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C93499
+    ncitCode: C93499
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93499
+    shortName: Actual Duration
+    dataType: integer
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Seconds"
+      - "Milliseconds"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"

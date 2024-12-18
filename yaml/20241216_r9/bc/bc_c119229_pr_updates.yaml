@@ -1,0 +1,51 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C119229
+ncitCode: C119229
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119229
+parentConceptId: C111095
+categories:
+  - Findings About Cardiovascular Events
+  - Cardiovascular System Finding
+  - Clot Detection
+shortName: Coronary Artery Thrombosis Method of Identification
+synonyms:
+  - CATMTHID
+  - Coronary Artery Thrombosis Method Ident
+resultScales:
+  - Nominal
+definition: The method used to detect a coronary artery thrombus.
+dataElementConcepts:
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Angiography"
+      - "Autopsy"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string

@@ -1,0 +1,11 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C25208
+ncitCode: C25208
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25208
+categories:
+  - Vital Signs
+shortName: Weight
+resultScales:
+  - Quantitative
+definition: The vertical force exerted by a mass as a result of gravity.

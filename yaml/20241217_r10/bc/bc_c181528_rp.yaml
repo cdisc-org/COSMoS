@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C181528
+ncitCode: C181528
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181528
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Continuous Days of Menstrual Bleeding and/or Spotting
+synonyms:
+  - BLDSPNUM
+  - Number of Continuous Days of Bleed/Spot
+resultScales:
+  - Quantitative
+definition: The number of days one has experienced continuous menstrual bleeding and/or spotting.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

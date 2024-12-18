@@ -1,0 +1,19 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C49680
+ncitCode: C49680
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49680
+categories:
+  - Vital Signs
+shortName: Body Frame Size
+synonyms:
+  - Frame Size
+resultScales:
+  - Ordinal
+definition: The categorization of a person's body frame into small, medium and large based on the measurement of wrist circumference or the breadth of the elbow.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

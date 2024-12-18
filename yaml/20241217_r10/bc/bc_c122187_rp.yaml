@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C122187
+ncitCode: C122187
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122187
+parentConceptId: C93491
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Congenital Abnormality Indicator
+synonyms:
+  - CABNIND
+  - Abnormal Indicator
+resultScales:
+  - Ordinal
+definition: Specifies whether any abnormality was present at birth or during the neonatal period.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

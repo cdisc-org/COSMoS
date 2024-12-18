@@ -1,0 +1,26 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189364
+ncitCode: C189364
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189364
+parentConceptId: C68617
+categories:
+  - Reproductive Findings
+  - End Date
+shortName: Breastfeeding End Date
+synonyms:
+  - BRFENDTC
+resultScales:
+  - Temporal
+definition: The date on which breastfeeding ended.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

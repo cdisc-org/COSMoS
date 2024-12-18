@@ -1,0 +1,48 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C174446
+ncitCode: C174446
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174446
+categories:
+  - Vital Signs
+shortName: Body Temperature
+synonyms:
+  - Temperature
+resultScales:
+  - Quantitative
+definition: A measurement of the temperature of the body.
+coding:
+  - code: 8310-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44276
+    ncitCode: C44276
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44276
+    shortName: Unit of Temperature
+    dataType: string
+    exampleSet:
+      - "Fahrenheit"
+      - "Celsius"
+      - "Kelvin"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Axilla"
+      - "Ear"
+      - "Forehead"
+      - "Oral Cavity"
+      - "Rectum"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

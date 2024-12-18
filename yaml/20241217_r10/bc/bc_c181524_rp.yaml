@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C181524
+ncitCode: C181524
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181524
+categories:
+  - Reproductive Findings
+shortName: Date of Last Sexual Intercourse
+synonyms:
+  - MRSXIDTC
+  - Date of Most Recent Sexual Intercourse
+resultScales:
+  - Temporal
+definition: The date on which the most recent sexual intercourse occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

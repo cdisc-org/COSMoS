@@ -1,0 +1,9 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C120716
+ncitCode: C120716
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120716
+categories:
+  - Mean Diameter
+shortName: Mean Diameter
+definition: The arithmetic mean of a range of values that describe the diameter of an entity.

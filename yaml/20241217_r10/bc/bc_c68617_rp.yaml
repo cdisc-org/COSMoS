@@ -1,0 +1,13 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C68617
+ncitCode: C68617
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68617
+categories:
+  - Date
+shortName: End Date
+synonyms:
+  - Stopping Date
+resultScales:
+  - Temporal
+definition: The calendar date on which something is to terminate or did terminate.

@@ -1,0 +1,16 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C54706
+ncitCode: C54706
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54706
+parentConceptId: C49672
+categories:
+  - Vital Signs
+shortName: Blood Pressure
+synonyms:
+  - BP
+definition: The pressure of the circulating blood against the walls of the blood vessels.
+coding:
+  - code: 55284-4
+    system: http://loinc.org/
+    systemName: LOINC

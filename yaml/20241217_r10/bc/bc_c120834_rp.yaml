@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C120834
+ncitCode: C120834
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120834
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Late Fetal Deaths
+synonyms:
+  - FETLDTHN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of fetal deaths (in which the fetus is greater than or equal to 20 weeks gestational age) experienced by a female subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,25 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C158275
+ncitCode: C158275
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C158275
+parentConceptId: C25337
+categories:
+  - Reproductive Findings
+shortName: Number of Births
+synonyms:
+  - BRTHN
+resultScales:
+  - Quantitative
+definition: A measurement of the total number of birth events experienced by a female.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

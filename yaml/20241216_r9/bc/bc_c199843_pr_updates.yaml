@@ -1,0 +1,32 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C199843
+ncitCode: C199843
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199843
+parentConceptId: C25180
+categories:
+  - Death Diagnosis and Details
+  - Indicator
+shortName: Disease Indication Under Study Contributed to Death Indicator
+synonyms:
+  - CUSCDIND
+  - Cond Under Study Contrib to Death Ind
+  - Condition Under Study Contributed to Death Indicator
+resultScales:
+  - Ordinal
+definition: An indication as to whether the disease or condition under study contributed to the cause of death.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

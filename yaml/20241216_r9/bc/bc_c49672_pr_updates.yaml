@@ -1,0 +1,12 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C49672
+ncitCode: C49672
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49672
+categories:
+  - Vital Signs
+shortName: Vital Signs Measurement
+synonyms:
+  - Vital Signs
+  - VS
+definition: The act of assessing an individual's current temperature, heart rate, respiratory rate, pulse oxygenation, and blood pressure.

@@ -1,0 +1,37 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C16358
+ncitCode: C16358
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16358
+categories:
+  - Vital Signs
+shortName: Body Mass Index
+synonyms:
+  - BMI
+  - Quetelet Index
+resultScales:
+  - Quantitative
+definition: An individual's weight in kilograms divided by the square of the height in meters.
+coding:
+  - code: 39156-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42575
+    ncitCode: C42575
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42575
+    shortName: Unit of Mass Density
+    dataType: string
+    exampleSet:
+      - "Kilogram per Square Meter"
+      - "Pounds per Square Inch"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,32 @@
+packageDate: "2024-12-17"
+packageType: bc
+conceptId: C189360
+ncitCode: C189360
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189360
+parentConceptId: C25180
+categories:
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Indicator
+shortName: Subject Currently Breastfeeding a Child Indicator
+synonyms:
+  - SCBFCIND
+  - Subj Currently Breastfeeding a Child Ind
+resultScales:
+  - Ordinal
+definition: An indication as to whether the individual is currently breastfeeding a child.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,27 @@
+packageDate: "2024-12-16"
+packageType: bc
+conceptId: C176287
+ncitCode: C176287
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176287
+parentConceptId: C25683
+categories:
+  - Death Diagnosis and Details
+  - Source
+shortName: Information Source for Cause of Death
+synonyms:
+  - INFOSCOD
+  - cause of death source
+resultScales:
+  - Nominal
+definition: The authoritative source that provided the cause of death information.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
