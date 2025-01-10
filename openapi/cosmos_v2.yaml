@@ -777,6 +777,7 @@ components:
               - Ordinal
               - Nominal
               - Narrative
+              - Temporal
           example:
             - Quantitative
         definition:
@@ -1025,6 +1026,7 @@ components:
               - Ordinal
               - Nominal
               - Narrative
+              - Temporal
           example:
             - Quantitative
         definition:

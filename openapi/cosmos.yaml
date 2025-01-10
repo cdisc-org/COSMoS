@@ -521,6 +521,7 @@ components:
             - Ordinal
             - Nominal
             - Narrative
+            - Temporal
           example: Quantitative
         definition:
           type: string
