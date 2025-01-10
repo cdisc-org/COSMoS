@@ -1,1 +1,1553 @@
-{"openapi":"3.1.0","info":{"title":"COSMoS API","version":"2"},"servers":[{"url":"/api/cosmos/v2"}],"paths":{"/mdr/bc/packages":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get Biomedical Concept Package List","operationId":"get_biomedicalconcept_packages_mdr_bc_packages_get","responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PackageList"}}}}}}},"/mdr/bc/packages/{package}/biomedicalconcepts":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get Biomedical Concept List for Package","operationId":"get_biomedicalconcepts_mdr_bc_packages__package__biomedicalconcepts_get","parameters":[{"required":true,"schema":{"type":"string","title":"Package"},"name":"package","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/BiomedicalConceptPackage"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get Biomedical Concept for Package","operationId":"get_package_biomedicalconcept_mdr_bc_packages__package__biomedicalconcepts__biomedicalconcept__get","parameters":[{"required":true,"schema":{"type":"string","title":"Package"},"name":"package","in":"path"},{"required":true,"schema":{"type":"string","title":"Biomedicalconcept"},"name":"biomedicalconcept","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/BiomedicalConcept"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/specializations/sdtm/packages":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get SDTM Dataset Specialization Package List","operationId":"get_sdtm_specialization_packages_mdr_specializations_sdtm_packages_get","responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/PackageList"}}}}}}},"/mdr/specializations/sdtm/packages/{package}/datasetspecializations":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get SDTM Dataset Specializations List for Package","operationId":"get_sdtm_specializations_mdr_specializations_sdtm_packages__package__datasetspecializations_get","parameters":[{"required":true,"schema":{"type":"string","title":"Package"},"name":"package","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SDTMDatasetSpecializationPackage"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get SDTM Dataset Specialization for Package","operationId":"get_sdtm_specialization_mdr_specializations_sdtm_packages__package__datasetspecializations__datasetspecialization__get","parameters":[{"required":true,"schema":{"type":"string","title":"Package"},"name":"package","in":"path"},{"required":true,"schema":{"type":"string","title":"Datasetspecialization"},"name":"datasetspecialization","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SDTMSpecialization"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/bc/biomedicalconcepts":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get Biomedical Concepts List","operationId":"get_latest_biomedical_concepts_mdr_bc_biomedicalconcepts_get","parameters":[{"required":false,"schema":{"type":"string","title":"Category"},"name":"category","in":"query"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/BiomedicalConceptList"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/bc/biomedicalconcepts/{biomedicalconcept}":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get latest Biomedical Concept","operationId":"get_latest_biomedicalconcept_mdr_bc_biomedicalconcepts__biomedicalconcept__get","parameters":[{"required":true,"schema":{"type":"string","title":"Biomedicalconcept"},"name":"biomedicalconcept","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/BiomedicalConcept"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/bc/categories":{"get":{"tags":["Biomedical Concept Endpoints"],"summary":"Get Latest Biomedical Concept Categories","operationId":"get_latest_biomedicalconcept_categories_mdr_bc_categories_get","responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{}}}}}}},"/mdr/specializations/sdtm/datasetspecializations":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get Latest SDTM Dataset Specializations List","operationId":"get_latest_sdtm_specializations_mdr_specializations_sdtm_datasetspecializations_get","parameters":[{"required":false,"schema":{"type":"string","title":"Domain"},"name":"domain","in":"query"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SDTMDatasetSpecializationsList"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/specializations/sdtm/datasetspecializations/{dataset_specialization_id}":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get Latest SDTM Specialization","operationId":"get_latest_sdtm_specialization_mdr_specializations_sdtm_datasetspecializations__dataset_specialization_id__get","parameters":[{"required":true,"schema":{"type":"string","title":"Dataset Specialization Id"},"name":"dataset_specialization_id","in":"path"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SDTMSpecialization"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}},"/mdr/specializations/sdtm/domains":{"get":{"tags":["SDTM Dataset Specialization Endpoints"],"summary":"Get SDTM Dataset Specialization Domain List","operationId":"get_sdtm_dataset_specialization_domain_list_mdr_specializations_sdtm_domains_get","responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SDTMDatasetSpecializationDomainsList"}}}}}}},"/mdr/specializations/datasetspecializations":{"get":{"tags":["Dataset Specialization Endpoints"],"summary":"Get latest Biomedical Concept Dataset Specializations List","operationId":"get_latest_bc_datasetspecializations_mdr_specializations_datasetspecializations_get","parameters":[{"required":false,"schema":{"type":"string","title":"Biomedicalconcept","default":""},"name":"biomedicalconcept","in":"query"}],"responses":{"200":{"description":"Successful Response","content":{"application/json":{"schema":{"$ref":"#/components/schemas/SpecializationsList"}}}},"422":{"description":"Validation Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}}}}},"components":{"schemas":{"BiomedicalConcept":{"properties":{"_links":{"$ref":"#/components/schemas/BiomedicalConceptLinks"},"conceptId":{"type":"string","title":"Conceptid"},"href":{"type":"string","title":"Href"},"categories":{"items":{"type":"string"},"type":"array","title":"Categories"},"shortName":{"type":"string","title":"Shortname"},"synonyms":{"items":{"type":"string"},"type":"array","title":"Synonyms"},"resultScales":{"items":{"$ref":"#/components/schemas/ResultScale"},"type":"array"},"definition":{"type":"string","title":"Definition"},"coding":{"items":{"$ref":"#/components/schemas/ConceptCoding"},"type":"array","title":"Coding","default":[]},"dataElementConcepts":{"items":{"$ref":"#/components/schemas/DataElementConcept"},"type":"array","title":"Dataelementconcepts","default":[]},"ncitCode":{"type":"string","title":"Ncitcode"}},"type":"object","required":["conceptId","categories","shortName","definition"],"title":"BiomedicalConcept","example":{"_links":{"parentBiomedicalConcept":{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49672","title":"Vital Signs Measurement","type":"Biomedical Concept"},"parentPackage":{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts","title":"Biomedical Concept Package Effective 2022-10-26","type":"Biomedical Concept Package"},"self":{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676","title":"Pulse Rate","type":"Biomedical Concept"}},"conceptId":"C49676","ncitCode":"C49676","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676","categories":["Vital Signs"],"shortName":"Pulse Rate","synonyms":["Pulse"],"resultScales":["Quantitative"],"definition":"The rate of the pulse as observed in an artery, expressed as beats per minute. It can be measured at several anatomic sites, including the wrist, neck, temple, groin, behind the knees, or on top of the foot.","coding":[{"code":"39156-5","system":"http://loinc.org/","systemName":"LOINC"}],"dataElementConcepts":[{"conceptId":"C123975","ncitCode":"C123975","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975","shortName":"Vital Signs Laterality","dataType":"string","exampleSet":["Left","Right"]}]}},"BiomedicalConceptLinks":{"properties":{"parentBiomedicalConcept":{"$ref":"#/components/schemas/Link"},"parentPackage":{"$ref":"#/components/schemas/Link"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","title":"BiomedicalConceptLinks"},"BiomedicalConceptList":{"properties":{"_links":{"$ref":"#/components/schemas/BiomedicalConceptListLinks"},"name":{"type":"string","title":"Name"},"category":{"type":"string","title":"Category"},"label":{"type":"string","title":"Label"}},"type":"object","required":["name","label"],"title":"BiomedicalConceptList","example":{"_links":{"biomedicalConcepts":[{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676","title":"Pulse rate","type":"Biomedical Concept"}],"self":{"href":"/mdr/bc/biomedicalconcepts","title":"Biomedical Concepts","type":"Biomedical Concept List"}},"name":"Biomedical Concepts (latest version)","label":"Biomedical Concept List","category":"Measurement"}},"BiomedicalConceptListLinks":{"properties":{"biomedicalConcepts":{"items":{"$ref":"#/components/schemas/Link"},"type":"array","title":"Biomedicalconcepts"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"BiomedicalConceptListLinks"},"BiomedicalConceptPackage":{"properties":{"_links":{"$ref":"#/components/schemas/BiomedicalConceptPackageLinks"},"name":{"type":"string","title":"Name"},"label":{"type":"string","title":"Label"},"effectiveDate":{"type":"string","title":"Effectivedate"},"version":{"type":"string","title":"Version"}},"type":"object","required":["name","label","effectiveDate","version"],"title":"BiomedicalConceptPackage","example":{"_links":{"biomedicalConcepts":[{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676","title":"Pulse rate","type":"Biomedical Concept"}],"self":{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts","title":"Biomedical Concepts","type":"Biomedical Concept List"}},"name":"Biomedical Concepts 2022-10-26","label":"Biomedical Concept Package Effective 2022-10-26","effectiveDate":"2022-10-26","version":"2022-10-26"}},"BiomedicalConceptPackageLinks":{"properties":{"biomedicalConcepts":{"items":{"$ref":"#/components/schemas/Link"},"type":"array","title":"Biomedicalconcepts"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"BiomedicalConceptPackageLinks"},"ConceptCoding":{"properties":{"code":{"type":"string","title":"Code"},"system":{"type":"string","title":"System"},"systemName":{"type":"string","title":"Systemname"}},"type":"object","required":["code","system"],"title":"ConceptCoding","example":{"code":"39156-5","system":"http://loinc.org/","systemName":"LOINC"}},"DataElementConcept":{"properties":{"conceptId":{"type":"string","title":"Conceptid"},"href":{"type":"string","title":"Href"},"shortName":{"type":"string","title":"Shortname"},"dataType":{"type":"string","title":"Datatype"},"exampleSet":{"items":{"type":"string"},"type":"array","title":"Exampleset"},"ncitCode":{"type":"string","title":"Ncitcode"}},"type":"object","required":["conceptId","shortName"],"title":"DataElementConcept","example":{"conceptId":"C123975","ncitCode":"C123975","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975","shortName":"Vital Signs Laterality","dataType":"string","exampleSet":["Left","Right"]}},"HTTPValidationError":{"properties":{"detail":{"items":{"$ref":"#/components/schemas/ValidationError"},"type":"array","title":"Detail"}},"type":"object","title":"HTTPValidationError"},"Link":{"properties":{"href":{"type":"string","title":"Href"},"title":{"type":"string","title":"Title"},"type":{"type":"string","title":"Type"}},"type":"object","title":"Link"},"PackageList":{"properties":{"_links":{"$ref":"#/components/schemas/PackageListLinks"}},"type":"object","title":"PackageList"},"PackageListLinks":{"properties":{"packages":{"items":{"$ref":"#/components/schemas/Link"},"type":"array","title":"Packages"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"PackageListLinks"},"Relationship":{"properties":{"subject":{"type":"string","title":"Subject"},"linkingPhrase":{"type":"string","title":"Linkingphrase"},"predicateTerm":{"type":"string","title":"Predicateterm"},"object":{"type":"string","title":"Object"}},"type":"object","required":["subject","linkingPhrase","predicateTerm","object"],"title":"Relationship","example":{"subject":"VSSTRESU","linkingPhrase":"is the unit for the value in","predicateTerm":"IS_UNIT_FOR","object":"VSSTRESN"}},"ResultScale":{"enum":["Quantitative","Ordinal","Nominal","Narrative"],"title":"ResultScale","description":"An enumeration."},"SDTMAssignedTerm":{"properties":{"conceptId":{"type":"string","title":"Conceptid"},"value":{"type":"string","title":"Value"}},"type":"object","title":"SDTMAssignedTerm","example":{"conceptId":"C49670","value":"mmHG"}},"SDTMCodelist":{"properties":{"conceptId":{"type":"string","title":"Conceptid"},"submissionValue":{"type":"string","title":"Submissionvalue"},"href":{"type":"string","title":"Href"}},"type":"object","title":"SDTMCodelist","example":{"conceptId":"C66770","submissionValue":"VSRESU","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"}},"SDTMDatasetSpecializationDomain":{"properties":{"_links":{"$ref":"#/components/schemas/SDTMDatasetSpecializationDomainLink"},"name":{"type":"string","title":"Name"}},"type":"object","required":["name"],"title":"SDTMDatasetSpecializationDomain"},"SDTMDatasetSpecializationDomainLink":{"properties":{"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"SDTMDatasetSpecializationDomainLink"},"SDTMDatasetSpecializationDomainsList":{"properties":{"_links":{"$ref":"#/components/schemas/SDTMDatasetSpecializationDomainsListLinks"},"name":{"type":"string","title":"Name"},"label":{"type":"string","title":"Label"},"domains":{"items":{"$ref":"#/components/schemas/SDTMDatasetSpecializationDomain"},"type":"array","title":"Domains","default":[]}},"type":"object","required":["name","label"],"title":"SDTMDatasetSpecializationDomainsList","example":{"_links":{"self":{"href":"/mdr/specializations/sdtm/domains","title":"SDTM Dataset Specializations Domains","type":"SDTM Dataset Specializations Domains List"}},"name":"SDTM Dataset Specializations Domains","label":"SDTM Dataset Specializations Domains List","domains":[{"_links":{"self":{"href":"/mdr/specializations/sdtm/datasetspecializations?domain=LB","title":"SDTM Dataset Specialization Domain (LB)","type":"SDTM Dataset Specialization Domain"}},"name":"LB"}]}},"SDTMDatasetSpecializationDomainsListLinks":{"properties":{"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"SDTMDatasetSpecializationDomainsListLinks"},"SDTMDatasetSpecializationListLinks":{"properties":{"datasetSpecializations":{"items":{"$ref":"#/components/schemas/Link"},"type":"array","title":"Datasetspecializations"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"SDTMDatasetSpecializationListLinks"},"SDTMDatasetSpecializationPackage":{"properties":{"_links":{"$ref":"#/components/schemas/SDTMDatasetSpecializationPackageLinks"},"name":{"type":"string","title":"Name"},"label":{"type":"string","title":"Label"},"effectiveDate":{"type":"string","title":"Effectivedate"},"version":{"type":"string","title":"Version"}},"type":"object","required":["name","label","effectiveDate","version"],"title":"SDTMDatasetSpecializationPackage","example":{"_links":{"datasetSpecializations":[{"href":"/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP","title":"Systolic Blood Pressure","type":"SDTM Dataset Specialization"}],"self":{"href":"/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations","title":"SDTM Dataset Specializations","type":"SDTM Dataset Specialization list"}},"name":"SDTM Dataset Specializations 2022-10-26","label":"SDTM Dataset Specialization Package Effective 2022-10-26","effectiveDate":"2022-10-26","version":"2022-10-26"}},"SDTMDatasetSpecializationPackageLinks":{"properties":{"self":{"$ref":"#/components/schemas/Link"},"datasetSpecializations":{"items":{"$ref":"#/components/schemas/Link"},"type":"array","title":"Datasetspecializations"}},"type":"object","title":"SDTMDatasetSpecializationPackageLinks"},"SDTMDatasetSpecializationsList":{"properties":{"_links":{"$ref":"#/components/schemas/SDTMDatasetSpecializationListLinks"},"name":{"type":"string","title":"Name"},"label":{"type":"string","title":"Label"},"domain":{"type":"string","title":"Domain"}},"type":"object","required":["name","label"],"title":"SDTMDatasetSpecializationsList","example":{"_links":{"datasetSpecializations":[{"href":"/mdr/specializations/sdtm/datasetspecializations/SYSBP","title":"Systolic Blood Pressure","type":"SDTM Dataset Specialization"}],"self":{"href":"/mdr/specializations/sdtm/datasetspecializations","title":"SDTM Dataset Specializations (Latest version)","type":"SDTM Dataset Specialization List"}},"name":"SDTM Dataset Specialization (Latest version)","label":"SDTM Dataset Specialization List"}},"SDTMSpecialization":{"properties":{"_links":{"$ref":"#/components/schemas/SDTMSpecializationLinks"},"datasetSpecializationId":{"type":"string","title":"Datasetspecializationid"},"domain":{"type":"string","title":"Domain"},"shortName":{"type":"string","title":"Shortname"},"source":{"type":"string","title":"Source"},"sdtmigStartVersion":{"type":"string","title":"Sdtmigstartversion"},"sdtmigEndVersion":{"type":"string","title":"Sdtmigendversion"},"variables":{"items":{"$ref":"#/components/schemas/SDTMVariable"},"type":"array","title":"Variables","default":[]}},"type":"object","title":"SDTMSpecialization","example":{"_links":{"parentBiomedicalConcept":{"href":"/mdr/bc/packages/2022-10-26/biomedicalconcepts/C25298","title":"Systolic Blood Pressure","type":"Biomedical Concept"},"parentPackage":{"href":"/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations","title":"SDTM Dataset Specialization Package Effective 2022-10-26","type":"SDTM Dataset Specialization Package"},"self":{"href":"/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP","title":"Systolic Blood Pressure","type":"SDTM Dataset Specialization"}},"datasetSpecializationId":"SYSBP","shortName":"Systolic Blood Pressure","domain":"VS","source":"VS.VSTESTCD","sdtmigStartVersion":"3-2","sdtmigEndVersion":"3-4","variables":[{"name":"VSSTRESU","dataElementConceptId":"C49669","isNonStandard":false,"codelist":{"conceptId":"C66770","submissionValue":"VSRESU","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"},"subsetCodelist":"XYZ","valueList":["ABC","DEF"],"assignedTerm":{"conceptId":"C49670","value":"mmHG"},"role":"Qualifier","dataType":"string","length":20,"format":"","significantDigits":0,"relationship":{"subject":"VSSTRESU","linkingPhrase":"is the unit for the value in","predicateTerm":"IS_UNIT_FOR","object":"VSSTRESN"},"mandatoryVariable":false,"mandatoryValue":false,"originType":"Assigned","originSource":"Sponsor","comparator":"","vlmTarget":true}]}},"SDTMSpecializationLinks":{"properties":{"parentBiomedicalConcept":{"$ref":"#/components/schemas/Link"},"parentPackage":{"$ref":"#/components/schemas/Link"},"self":{"$ref":"#/components/schemas/Link"}},"type":"object","title":"SDTMSpecializationLinks"},"SDTMVariable":{"properties":{"name":{"type":"string","title":"Name"},"dataElementConceptId":{"type":"string","title":"Dataelementconceptid"},"isNonStandard":{"type":"boolean","title":"Isnonstandard"},"codelist":{"$ref":"#/components/schemas/SDTMCodelist"},"subsetCodelist":{"type":"string","title":"Subsetcodelist"},"valueList":{"items":{"type":"string"},"type":"array","title":"Valuelist","default":[]},"assignedTerm":{"$ref":"#/components/schemas/SDTMAssignedTerm"},"role":{"type":"string","title":"Role"},"dataType":{"type":"string","title":"Datatype"},"length":{"type":"integer","title":"Length"},"format":{"type":"string","title":"Format"},"significantDigits":{"type":"integer","title":"Significantdigits"},"relationship":{"$ref":"#/components/schemas/Relationship"},"mandatoryVariable":{"type":"boolean","title":"Mandatoryvariable"},"mandatoryValue":{"type":"boolean","title":"Mandatoryvalue"},"originType":{"type":"string","title":"Origintype"},"originSource":{"type":"string","title":"Originsource"},"comparator":{"type":"string","title":"Comparator"},"vlmTarget":{"type":"boolean","title":"Vlmtarget"}},"type":"object","required":["name"],"title":"SDTMVariable","example":{"name":"VSSTRESU","dataElementConceptId":"C49669","isNonStandard":false,"codelist":{"conceptId":"C66770","submissionValue":"VSRESU","href":"https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"},"subsetCodelist":"XYZ","valueList":["ABC","DEF"],"assignedTerm":{"conceptId":"C49670","value":"mmHG"},"role":"Qualifier","dataType":"string","length":20,"format":"","significantDigits":0,"relationship":{"subject":"VSSTRESU","linkingPhrase":"is the unit for the value in","predicateTerm":"IS_UNIT_FOR","object":"VSSTRESN"},"mandatoryVariable":false,"mandatoryValue":false,"originType":"Assigned","originSource":"Sponsor","comparator":"","vlmTarget":true}},"SpecializationListLinks":{"properties":{"datasetSpecializations":{"type":"object","title":"Datasetspecializations"},"self":{"$ref":"#/components/schemas/Link"},"parentBiomedicalConcept":{"$ref":"#/components/schemas/Link"}},"type":"object","required":["self"],"title":"SpecializationListLinks"},"SpecializationsList":{"properties":{"_links":{"$ref":"#/components/schemas/SpecializationListLinks"},"name":{"type":"string","title":"Name"},"label":{"type":"string","title":"Label"}},"type":"object","required":["name","label"],"title":"SpecializationsList","example":{"_links":{"datasetSpecializations":[{"href":"/mdr/specializations/sdtm/datasetspecializations/AE","title":"Adverse Event Free Text Format","type":"SDTM Dataset Specialization"},{"href":"/mdr/specializations/sdtm/datasetspecializations/AEPRESP","title":"Adverse Event Prespecified","type":"SDTM Dataset Specialization"}],"self":{"href":"/mdr/bc/biomedicalconcepts/C179175/datasetspecializations","title":"Dataset Specializations (latest version)","type":"Dataset Specializations List"}},"name":"Dataset Specializations (latest version)","label":"Dataset Specializations List"}},"ValidationError":{"properties":{"loc":{"items":{"anyOf":[{"type":"string"},{"type":"integer"}]},"type":"array","title":"Location"},"msg":{"type":"string","title":"Message"},"type":{"type":"string","title":"Error Type"}},"type":"object","required":["loc","msg","type"],"title":"ValidationError"}}}}
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "COSMoS API",
+    "version": "2"
+  },
+  "servers": [
+    {
+      "url": "/api/cosmos/v2"
+    }
+  ],
+  "paths": {
+    "/mdr/bc/packages": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get Biomedical Concept Package List",
+        "operationId": "get_biomedicalconcept_packages_mdr_bc_packages_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/bc/packages/{package}/biomedicalconcepts": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get Biomedical Concept List for Package",
+        "operationId": "get_biomedicalconcepts_mdr_bc_packages__package__biomedicalconcepts_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Package"
+            },
+            "name": "package",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BiomedicalConceptPackage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get Biomedical Concept for Package",
+        "operationId": "get_package_biomedicalconcept_mdr_bc_packages__package__biomedicalconcepts__biomedicalconcept__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Package"
+            },
+            "name": "package",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Biomedicalconcept"
+            },
+            "name": "biomedicalconcept",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BiomedicalConcept"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/packages": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get SDTM Dataset Specialization Package List",
+        "operationId": "get_sdtm_specialization_packages_mdr_specializations_sdtm_packages_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PackageList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/packages/{package}/datasetspecializations": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get SDTM Dataset Specializations List for Package",
+        "operationId": "get_sdtm_specializations_mdr_specializations_sdtm_packages__package__datasetspecializations_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Package"
+            },
+            "name": "package",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SDTMDatasetSpecializationPackage"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get SDTM Dataset Specialization for Package",
+        "operationId": "get_sdtm_specialization_mdr_specializations_sdtm_packages__package__datasetspecializations__datasetspecialization__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Package"
+            },
+            "name": "package",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Datasetspecialization"
+            },
+            "name": "datasetspecialization",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SDTMSpecialization"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/bc/biomedicalconcepts": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get Biomedical Concepts List",
+        "operationId": "get_latest_biomedical_concepts_mdr_bc_biomedicalconcepts_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "Category"
+            },
+            "name": "category",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BiomedicalConceptList"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/bc/biomedicalconcepts/{biomedicalconcept}": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get latest Biomedical Concept",
+        "operationId": "get_latest_biomedicalconcept_mdr_bc_biomedicalconcepts__biomedicalconcept__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Biomedicalconcept"
+            },
+            "name": "biomedicalconcept",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BiomedicalConcept"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/bc/categories": {
+      "get": {
+        "tags": [
+          "Biomedical Concept Endpoints"
+        ],
+        "summary": "Get Latest Biomedical Concept Categories",
+        "operationId": "get_latest_biomedicalconcept_categories_mdr_bc_categories_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/datasetspecializations": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get Latest SDTM Dataset Specializations List",
+        "operationId": "get_latest_sdtm_specializations_mdr_specializations_sdtm_datasetspecializations_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "Domain"
+            },
+            "name": "domain",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SDTMDatasetSpecializationsList"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/datasetspecializations/{dataset_specialization_id}": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get Latest SDTM Specialization",
+        "operationId": "get_latest_sdtm_specialization_mdr_specializations_sdtm_datasetspecializations__dataset_specialization_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Dataset Specialization Id"
+            },
+            "name": "dataset_specialization_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SDTMSpecialization"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/sdtm/domains": {
+      "get": {
+        "tags": [
+          "SDTM Dataset Specialization Endpoints"
+        ],
+        "summary": "Get SDTM Dataset Specialization Domain List",
+        "operationId": "get_sdtm_dataset_specialization_domain_list_mdr_specializations_sdtm_domains_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SDTMDatasetSpecializationDomainsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/mdr/specializations/datasetspecializations": {
+      "get": {
+        "tags": [
+          "Dataset Specialization Endpoints"
+        ],
+        "summary": "Get latest Biomedical Concept Dataset Specializations List",
+        "operationId": "get_latest_bc_datasetspecializations_mdr_specializations_datasetspecializations_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "title": "Biomedicalconcept",
+              "default": ""
+            },
+            "name": "biomedicalconcept",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpecializationsList"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BiomedicalConcept": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/BiomedicalConceptLinks"
+          },
+          "conceptId": {
+            "type": "string",
+            "title": "Conceptid"
+          },
+          "href": {
+            "type": "string",
+            "title": "Href"
+          },
+          "categories": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Categories"
+          },
+          "shortName": {
+            "type": "string",
+            "title": "Shortname"
+          },
+          "synonyms": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Synonyms"
+          },
+          "resultScales": {
+            "items": {
+              "$ref": "#/components/schemas/ResultScale"
+            },
+            "type": "array"
+          },
+          "definition": {
+            "type": "string",
+            "title": "Definition"
+          },
+          "coding": {
+            "items": {
+              "$ref": "#/components/schemas/ConceptCoding"
+            },
+            "type": "array",
+            "title": "Coding",
+            "default": [
+            ]
+          },
+          "dataElementConcepts": {
+            "items": {
+              "$ref": "#/components/schemas/DataElementConcept"
+            },
+            "type": "array",
+            "title": "Dataelementconcepts",
+            "default": [
+            ]
+          },
+          "ncitCode": {
+            "type": "string",
+            "title": "Ncitcode"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conceptId",
+          "categories",
+          "shortName",
+          "definition"
+        ],
+        "title": "BiomedicalConcept",
+        "example": {
+          "_links": {
+            "parentBiomedicalConcept": {
+              "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49672",
+              "title": "Vital Signs Measurement",
+              "type": "Biomedical Concept"
+            },
+            "parentPackage": {
+              "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts",
+              "title": "Biomedical Concept Package Effective 2022-10-26",
+              "type": "Biomedical Concept Package"
+            },
+            "self": {
+              "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676",
+              "title": "Pulse Rate",
+              "type": "Biomedical Concept"
+            }
+          },
+          "conceptId": "C49676",
+          "ncitCode": "C49676",
+          "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C49676",
+          "categories": [
+            "Vital Signs"
+          ],
+          "shortName": "Pulse Rate",
+          "synonyms": [
+            "Pulse"
+          ],
+          "resultScales": [
+            "Quantitative"
+          ],
+          "definition": "The rate of the pulse as observed in an artery, expressed as beats per minute. It can be measured at several anatomic sites, including the wrist, neck, temple, groin, behind the knees, or on top of the foot.",
+          "coding": [
+            {
+              "code": "39156-5",
+              "system": "http://loinc.org/",
+              "systemName": "LOINC"
+            }
+          ],
+          "dataElementConcepts": [
+            {
+              "conceptId": "C123975",
+              "ncitCode": "C123975",
+              "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975",
+              "shortName": "Vital Signs Laterality",
+              "dataType": "string",
+              "exampleSet": [
+                "Left",
+                "Right"
+              ]
+            }
+          ]
+        }
+      },
+      "BiomedicalConceptLinks": {
+        "properties": {
+          "parentBiomedicalConcept": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "parentPackage": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "title": "BiomedicalConceptLinks"
+      },
+      "BiomedicalConceptList": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/BiomedicalConceptListLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label"
+        ],
+        "title": "BiomedicalConceptList",
+        "example": {
+          "_links": {
+            "biomedicalConcepts": [
+              {
+                "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676",
+                "title": "Pulse rate",
+                "type": "Biomedical Concept"
+              }
+            ],
+            "self": {
+              "href": "/mdr/bc/biomedicalconcepts",
+              "title": "Biomedical Concepts",
+              "type": "Biomedical Concept List"
+            }
+          },
+          "name": "Biomedical Concepts (latest version)",
+          "label": "Biomedical Concept List",
+          "category": "Measurement"
+        }
+      },
+      "BiomedicalConceptListLinks": {
+        "properties": {
+          "biomedicalConcepts": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "type": "array",
+            "title": "Biomedicalconcepts"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "BiomedicalConceptListLinks"
+      },
+      "BiomedicalConceptPackage": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/BiomedicalConceptPackageLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "title": "Effectivedate"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label",
+          "effectiveDate",
+          "version"
+        ],
+        "title": "BiomedicalConceptPackage",
+        "example": {
+          "_links": {
+            "biomedicalConcepts": [
+              {
+                "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts/C49676",
+                "title": "Pulse rate",
+                "type": "Biomedical Concept"
+              }
+            ],
+            "self": {
+              "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts",
+              "title": "Biomedical Concepts",
+              "type": "Biomedical Concept List"
+            }
+          },
+          "name": "Biomedical Concepts 2022-10-26",
+          "label": "Biomedical Concept Package Effective 2022-10-26",
+          "effectiveDate": "2022-10-26",
+          "version": "2022-10-26"
+        }
+      },
+      "BiomedicalConceptPackageLinks": {
+        "properties": {
+          "biomedicalConcepts": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "type": "array",
+            "title": "Biomedicalconcepts"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "BiomedicalConceptPackageLinks"
+      },
+      "ConceptCoding": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "system": {
+            "type": "string",
+            "title": "System"
+          },
+          "systemName": {
+            "type": "string",
+            "title": "Systemname"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "system"
+        ],
+        "title": "ConceptCoding",
+        "example": {
+          "code": "39156-5",
+          "system": "http://loinc.org/",
+          "systemName": "LOINC"
+        }
+      },
+      "DataElementConcept": {
+        "properties": {
+          "conceptId": {
+            "type": "string",
+            "title": "Conceptid"
+          },
+          "href": {
+            "type": "string",
+            "title": "Href"
+          },
+          "shortName": {
+            "type": "string",
+            "title": "Shortname"
+          },
+          "dataType": {
+            "type": "string",
+            "title": "Datatype"
+          },
+          "exampleSet": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Exampleset"
+          },
+          "ncitCode": {
+            "type": "string",
+            "title": "Ncitcode"
+          }
+        },
+        "type": "object",
+        "required": [
+          "conceptId",
+          "shortName"
+        ],
+        "title": "DataElementConcept",
+        "example": {
+          "conceptId": "C123975",
+          "ncitCode": "C123975",
+          "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C123975",
+          "shortName": "Vital Signs Laterality",
+          "dataType": "string",
+          "exampleSet": [
+            "Left",
+            "Right"
+          ]
+        }
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Link": {
+        "properties": {
+          "href": {
+            "type": "string",
+            "title": "Href"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          }
+        },
+        "type": "object",
+        "title": "Link"
+      },
+      "PackageList": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/PackageListLinks"
+          }
+        },
+        "type": "object",
+        "title": "PackageList"
+      },
+      "PackageListLinks": {
+        "properties": {
+          "packages": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "type": "array",
+            "title": "Packages"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "PackageListLinks"
+      },
+      "Relationship": {
+        "properties": {
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "linkingPhrase": {
+            "type": "string",
+            "title": "Linkingphrase"
+          },
+          "predicateTerm": {
+            "type": "string",
+            "title": "Predicateterm"
+          },
+          "object": {
+            "type": "string",
+            "title": "Object"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subject",
+          "linkingPhrase",
+          "predicateTerm",
+          "object"
+        ],
+        "title": "Relationship",
+        "example": {
+          "subject": "VSSTRESU",
+          "linkingPhrase": "is the unit for the value in",
+          "predicateTerm": "IS_UNIT_FOR",
+          "object": "VSSTRESN"
+        }
+      },
+      "ResultScale": {
+        "enum": [
+          "Quantitative",
+          "Ordinal",
+          "Nominal",
+          "Narrative",
+          "Temporal"
+        ],
+        "title": "ResultScale",
+        "description": "An enumeration."
+      },
+      "SDTMAssignedTerm": {
+        "properties": {
+          "conceptId": {
+            "type": "string",
+            "title": "Conceptid"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value"
+          }
+        },
+        "type": "object",
+        "title": "SDTMAssignedTerm",
+        "example": {
+          "conceptId": "C49670",
+          "value": "mmHG"
+        }
+      },
+      "SDTMCodelist": {
+        "properties": {
+          "conceptId": {
+            "type": "string",
+            "title": "Conceptid"
+          },
+          "submissionValue": {
+            "type": "string",
+            "title": "Submissionvalue"
+          },
+          "href": {
+            "type": "string",
+            "title": "Href"
+          }
+        },
+        "type": "object",
+        "title": "SDTMCodelist",
+        "example": {
+          "conceptId": "C66770",
+          "submissionValue": "VSRESU",
+          "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"
+        }
+      },
+      "SDTMDatasetSpecializationDomain": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SDTMDatasetSpecializationDomainLink"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "SDTMDatasetSpecializationDomain"
+      },
+      "SDTMDatasetSpecializationDomainLink": {
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "SDTMDatasetSpecializationDomainLink"
+      },
+      "SDTMDatasetSpecializationDomainsList": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SDTMDatasetSpecializationDomainsListLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "domains": {
+            "items": {
+              "$ref": "#/components/schemas/SDTMDatasetSpecializationDomain"
+            },
+            "type": "array",
+            "title": "Domains",
+            "default": [
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label"
+        ],
+        "title": "SDTMDatasetSpecializationDomainsList",
+        "example": {
+          "_links": {
+            "self": {
+              "href": "/mdr/specializations/sdtm/domains",
+              "title": "SDTM Dataset Specializations Domains",
+              "type": "SDTM Dataset Specializations Domains List"
+            }
+          },
+          "name": "SDTM Dataset Specializations Domains",
+          "label": "SDTM Dataset Specializations Domains List",
+          "domains": [
+            {
+              "_links": {
+                "self": {
+                  "href": "/mdr/specializations/sdtm/datasetspecializations?domain=LB",
+                  "title": "SDTM Dataset Specialization Domain (LB)",
+                  "type": "SDTM Dataset Specialization Domain"
+                }
+              },
+              "name": "LB"
+            }
+          ]
+        }
+      },
+      "SDTMDatasetSpecializationDomainsListLinks": {
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "SDTMDatasetSpecializationDomainsListLinks"
+      },
+      "SDTMDatasetSpecializationListLinks": {
+        "properties": {
+          "datasetSpecializations": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "type": "array",
+            "title": "Datasetspecializations"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "SDTMDatasetSpecializationListLinks"
+      },
+      "SDTMDatasetSpecializationPackage": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SDTMDatasetSpecializationPackageLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "effectiveDate": {
+            "type": "string",
+            "title": "Effectivedate"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label",
+          "effectiveDate",
+          "version"
+        ],
+        "title": "SDTMDatasetSpecializationPackage",
+        "example": {
+          "_links": {
+            "datasetSpecializations": [
+              {
+                "href": "/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP",
+                "title": "Systolic Blood Pressure",
+                "type": "SDTM Dataset Specialization"
+              }
+            ],
+            "self": {
+              "href": "/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations",
+              "title": "SDTM Dataset Specializations",
+              "type": "SDTM Dataset Specialization list"
+            }
+          },
+          "name": "SDTM Dataset Specializations 2022-10-26",
+          "label": "SDTM Dataset Specialization Package Effective 2022-10-26",
+          "effectiveDate": "2022-10-26",
+          "version": "2022-10-26"
+        }
+      },
+      "SDTMDatasetSpecializationPackageLinks": {
+        "properties": {
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "datasetSpecializations": {
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "type": "array",
+            "title": "Datasetspecializations"
+          }
+        },
+        "type": "object",
+        "title": "SDTMDatasetSpecializationPackageLinks"
+      },
+      "SDTMDatasetSpecializationsList": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SDTMDatasetSpecializationListLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "domain": {
+            "type": "string",
+            "title": "Domain"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label"
+        ],
+        "title": "SDTMDatasetSpecializationsList",
+        "example": {
+          "_links": {
+            "datasetSpecializations": [
+              {
+                "href": "/mdr/specializations/sdtm/datasetspecializations/SYSBP",
+                "title": "Systolic Blood Pressure",
+                "type": "SDTM Dataset Specialization"
+              }
+            ],
+            "self": {
+              "href": "/mdr/specializations/sdtm/datasetspecializations",
+              "title": "SDTM Dataset Specializations (Latest version)",
+              "type": "SDTM Dataset Specialization List"
+            }
+          },
+          "name": "SDTM Dataset Specialization (Latest version)",
+          "label": "SDTM Dataset Specialization List"
+        }
+      },
+      "SDTMSpecialization": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SDTMSpecializationLinks"
+          },
+          "datasetSpecializationId": {
+            "type": "string",
+            "title": "Datasetspecializationid"
+          },
+          "domain": {
+            "type": "string",
+            "title": "Domain"
+          },
+          "shortName": {
+            "type": "string",
+            "title": "Shortname"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "sdtmigStartVersion": {
+            "type": "string",
+            "title": "Sdtmigstartversion"
+          },
+          "sdtmigEndVersion": {
+            "type": "string",
+            "title": "Sdtmigendversion"
+          },
+          "variables": {
+            "items": {
+              "$ref": "#/components/schemas/SDTMVariable"
+            },
+            "type": "array",
+            "title": "Variables",
+            "default": [
+            ]
+          }
+        },
+        "type": "object",
+        "title": "SDTMSpecialization",
+        "example": {
+          "_links": {
+            "parentBiomedicalConcept": {
+              "href": "/mdr/bc/packages/2022-10-26/biomedicalconcepts/C25298",
+              "title": "Systolic Blood Pressure",
+              "type": "Biomedical Concept"
+            },
+            "parentPackage": {
+              "href": "/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations",
+              "title": "SDTM Dataset Specialization Package Effective 2022-10-26",
+              "type": "SDTM Dataset Specialization Package"
+            },
+            "self": {
+              "href": "/mdr/specializations/sdtm/packages/2022-10-26/datasetspecializations/SYSBP",
+              "title": "Systolic Blood Pressure",
+              "type": "SDTM Dataset Specialization"
+            }
+          },
+          "datasetSpecializationId": "SYSBP",
+          "shortName": "Systolic Blood Pressure",
+          "domain": "VS",
+          "source": "VS.VSTESTCD",
+          "sdtmigStartVersion": "3-2",
+          "sdtmigEndVersion": "3-4",
+          "variables": [
+            {
+              "name": "VSSTRESU",
+              "dataElementConceptId": "C49669",
+              "isNonStandard": false,
+              "codelist": {
+                "conceptId": "C66770",
+                "submissionValue": "VSRESU",
+                "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"
+              },
+              "subsetCodelist": "XYZ",
+              "valueList": [
+                "ABC",
+                "DEF"
+              ],
+              "assignedTerm": {
+                "conceptId": "C49670",
+                "value": "mmHG"
+              },
+              "role": "Qualifier",
+              "dataType": "string",
+              "length": 20,
+              "format": "",
+              "significantDigits": 0,
+              "relationship": {
+                "subject": "VSSTRESU",
+                "linkingPhrase": "is the unit for the value in",
+                "predicateTerm": "IS_UNIT_FOR",
+                "object": "VSSTRESN"
+              },
+              "mandatoryVariable": false,
+              "mandatoryValue": false,
+              "originType": "Assigned",
+              "originSource": "Sponsor",
+              "comparator": "",
+              "vlmTarget": true
+            }
+          ]
+        }
+      },
+      "SDTMSpecializationLinks": {
+        "properties": {
+          "parentBiomedicalConcept": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "parentPackage": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "title": "SDTMSpecializationLinks"
+      },
+      "SDTMVariable": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "dataElementConceptId": {
+            "type": "string",
+            "title": "Dataelementconceptid"
+          },
+          "isNonStandard": {
+            "type": "boolean",
+            "title": "Isnonstandard"
+          },
+          "codelist": {
+            "$ref": "#/components/schemas/SDTMCodelist"
+          },
+          "subsetCodelist": {
+            "type": "string",
+            "title": "Subsetcodelist"
+          },
+          "valueList": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Valuelist",
+            "default": [
+            ]
+          },
+          "assignedTerm": {
+            "$ref": "#/components/schemas/SDTMAssignedTerm"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "dataType": {
+            "type": "string",
+            "title": "Datatype"
+          },
+          "length": {
+            "type": "integer",
+            "title": "Length"
+          },
+          "format": {
+            "type": "string",
+            "title": "Format"
+          },
+          "significantDigits": {
+            "type": "integer",
+            "title": "Significantdigits"
+          },
+          "relationship": {
+            "$ref": "#/components/schemas/Relationship"
+          },
+          "mandatoryVariable": {
+            "type": "boolean",
+            "title": "Mandatoryvariable"
+          },
+          "mandatoryValue": {
+            "type": "boolean",
+            "title": "Mandatoryvalue"
+          },
+          "originType": {
+            "type": "string",
+            "title": "Origintype"
+          },
+          "originSource": {
+            "type": "string",
+            "title": "Originsource"
+          },
+          "comparator": {
+            "type": "string",
+            "title": "Comparator"
+          },
+          "vlmTarget": {
+            "type": "boolean",
+            "title": "Vlmtarget"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "SDTMVariable",
+        "example": {
+          "name": "VSSTRESU",
+          "dataElementConceptId": "C49669",
+          "isNonStandard": false,
+          "codelist": {
+            "conceptId": "C66770",
+            "submissionValue": "VSRESU",
+            "href": "https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C66770"
+          },
+          "subsetCodelist": "XYZ",
+          "valueList": [
+            "ABC",
+            "DEF"
+          ],
+          "assignedTerm": {
+            "conceptId": "C49670",
+            "value": "mmHG"
+          },
+          "role": "Qualifier",
+          "dataType": "string",
+          "length": 20,
+          "format": "",
+          "significantDigits": 0,
+          "relationship": {
+            "subject": "VSSTRESU",
+            "linkingPhrase": "is the unit for the value in",
+            "predicateTerm": "IS_UNIT_FOR",
+            "object": "VSSTRESN"
+          },
+          "mandatoryVariable": false,
+          "mandatoryValue": false,
+          "originType": "Assigned",
+          "originSource": "Sponsor",
+          "comparator": "",
+          "vlmTarget": true
+        }
+      },
+      "SpecializationListLinks": {
+        "properties": {
+          "datasetSpecializations": {
+            "type": "object",
+            "title": "Datasetspecializations"
+          },
+          "self": {
+            "$ref": "#/components/schemas/Link"
+          },
+          "parentBiomedicalConcept": {
+            "$ref": "#/components/schemas/Link"
+          }
+        },
+        "type": "object",
+        "required": [
+          "self"
+        ],
+        "title": "SpecializationListLinks"
+      },
+      "SpecializationsList": {
+        "properties": {
+          "_links": {
+            "$ref": "#/components/schemas/SpecializationListLinks"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "label"
+        ],
+        "title": "SpecializationsList",
+        "example": {
+          "_links": {
+            "datasetSpecializations": [
+              {
+                "href": "/mdr/specializations/sdtm/datasetspecializations/AE",
+                "title": "Adverse Event Free Text Format",
+                "type": "SDTM Dataset Specialization"
+              },
+              {
+                "href": "/mdr/specializations/sdtm/datasetspecializations/AEPRESP",
+                "title": "Adverse Event Prespecified",
+                "type": "SDTM Dataset Specialization"
+              }
+            ],
+            "self": {
+              "href": "/mdr/bc/biomedicalconcepts/C179175/datasetspecializations",
+              "title": "Dataset Specializations (latest version)",
+              "type": "Dataset Specializations List"
+            }
+          },
+          "name": "Dataset Specializations (latest version)",
+          "label": "Dataset Specializations List"
+        }
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}
