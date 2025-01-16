@@ -944,6 +944,7 @@
         "SDTMGroup"
       ],
       "range": "SDTMVariable",
+      "required": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1548,9 +1549,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2024-11-20T17:15:38",
-  "source_file_size": 14093,
-  "generation_date": "2024-11-20T17:15:57",
+  "source_file_date": "2025-01-16T10:27:56",
+  "source_file_size": 14113,
+  "generation_date": "2025-01-16T10:37:27",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

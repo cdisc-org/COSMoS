@@ -126,6 +126,7 @@ slots:
   variables:
     multivalued: true
     inlined_as_list: true
+    required: true
     range: SDTMVariable
     description: Variable included in the SDTM dataset specialization
   name:

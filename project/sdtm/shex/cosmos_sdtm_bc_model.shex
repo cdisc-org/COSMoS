@@ -86,7 +86,7 @@ linkml:Sparqlpath xsd:string
           <https://www.cdisc.org/cosmos/1-0sdtmigStartVersion> @linkml:String ;
           <https://www.cdisc.org/cosmos/1-0sdtmigEndVersion> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/1-0biomedicalConceptId> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0variables> @<https://www.cdisc.org/cosmos/1-0SDTMVariable> *
+          <https://www.cdisc.org/cosmos/1-0variables> @<https://www.cdisc.org/cosmos/1-0SDTMVariable> +
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMGroup> ]
     )

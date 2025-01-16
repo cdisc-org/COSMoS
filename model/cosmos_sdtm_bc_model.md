@@ -54,7 +54,7 @@ AssignedTerm {
     string value  
 }
 
-SDTMGroup ||--}o SDTMVariable : "variables"
+SDTMGroup ||--}| SDTMVariable : "variables"
 SDTMVariable ||--|o CodeList : "codelist"
 SDTMVariable ||--|o AssignedTerm : "assignedTerm"
 SDTMVariable ||--|o RelationShip : "relationship"

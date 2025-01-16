@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2024-11-20T17:15:47
+# Generation date: 2025-01-16T10:37:12
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/1-0
@@ -69,9 +69,9 @@ class SDTMGroup(YAMLRoot):
     shortName: str = None
     source: str = None
     sdtmigStartVersion: str = None
+    variables: Union[Dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]] = empty_dict()
     sdtmigEndVersion: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
-    variables: Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]]] = empty_dict()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.datasetSpecializationId):
@@ -109,13 +109,15 @@ class SDTMGroup(YAMLRoot):
         if not isinstance(self.sdtmigStartVersion, str):
             self.sdtmigStartVersion = str(self.sdtmigStartVersion)
 
+        if self._is_empty(self.variables):
+            self.MissingRequiredField("variables")
+        self._normalize_inlined_as_list(slot_name="variables", slot_type=SDTMVariable, key_name="name", keyed=True)
+
         if self.sdtmigEndVersion is not None and not isinstance(self.sdtmigEndVersion, str):
             self.sdtmigEndVersion = str(self.sdtmigEndVersion)
 
         if self.biomedicalConceptId is not None and not isinstance(self.biomedicalConceptId, str):
             self.biomedicalConceptId = str(self.biomedicalConceptId)
-
-        self._normalize_inlined_as_list(slot_name="variables", slot_type=SDTMVariable, key_name="name", keyed=True)
 
         super().__post_init__(**kwargs)
 
@@ -700,7 +702,7 @@ slots.biomedicalConceptId = Slot(uri=COSMOS.biomedicalConceptId, name="biomedica
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.variables = Slot(uri=COSMOS.variables, name="variables", curie=COSMOS.curie('variables'),
-                   model_uri=COSMOS.variables, domain=None, range=Optional[Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]]])
+                   model_uri=COSMOS.variables, domain=None, range=Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]])
 
 slots.name = Slot(uri=COSMOS.name, name="name", curie=COSMOS.curie('name'),
                    model_uri=COSMOS.name, domain=None, range=URIRef)

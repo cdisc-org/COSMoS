@@ -326,7 +326,8 @@
             "shortName",
             "datasetSpecializationId",
             "source",
-            "sdtmigStartVersion"
+            "sdtmigStartVersion",
+            "variables"
          ],
          "title": "SDTMGroup",
          "type": "object"
@@ -524,7 +525,8 @@
       "shortName",
       "datasetSpecializationId",
       "source",
-      "sdtmigStartVersion"
+      "sdtmigStartVersion",
+      "variables"
    ],
    "title": "COSMoS-Biomedical-Concepts-Schema",
    "type": "object",

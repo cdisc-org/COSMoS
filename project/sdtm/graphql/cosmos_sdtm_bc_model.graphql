@@ -36,7 +36,7 @@ type SDTMGroup
     sdtmigStartVersion: String!
     sdtmigEndVersion: String
     biomedicalConceptId: String
-    variables: [SDTMVariable]
+    variables: [SDTMVariable]!
   }
 
 type SDTMVariable

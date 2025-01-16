@@ -138,6 +138,6 @@
 <path d='M495.063,-545.677C470.894,-519.81 444.3,-491.348 418.437,-463.669' fill='none' stroke='black'/>
 <polygon fill='black' points='495.313,-545.943 502.332,-547.597 503.505,-554.712 496.486,-553.058 495.313,-545.943' stroke='black'/>
 <polygon fill='black' points='411.524,-456.27 421.639,-460.504 414.937,-459.923 418.351,-463.576 418.351,-463.576 418.351,-463.576 414.937,-459.923 415.063,-466.649 411.524,-456.27 411.524,-456.27' stroke='black'/>
-<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='419.357' y='-470.972'> variables 0..*</text>
+<text style='font-size:8px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='419.357' y='-470.972'> variables 1..*</text>
 </g></g>
 <text style='fill: lightslategray; font-size: 6pt; font-family: Verdana' x='672' y='762'>CREATED WITH YUML</text></svg>
