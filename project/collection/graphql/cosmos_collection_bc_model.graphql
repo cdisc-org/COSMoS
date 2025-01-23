@@ -1,0 +1,63 @@
+type CodeList
+  {
+    conceptId: String!
+    href: Uri
+    submissionValue: String!
+  }
+
+type DataCollectionGroup
+  {
+    packageDate: Date!
+    packageType: PackageTypeEnum!
+    datasetSpecializationId: String!
+    standard: String!
+    domain: String!
+    shortName: String!
+    collectionigStartVersion: String!
+    collectionigEndVersion: String
+    biomedicalConceptId: String
+    sdtmDatasetSpecializationId: String
+    items: [DataCollectionItem]!
+  }
+
+type DataCollectionItem
+  {
+    name: String!
+    dataElementConceptId: String
+    isNonStandard: Boolean
+    eCRFItem: String!
+    questionText: String
+    prompt: String
+    orderNumber: Integer!
+    codelist: CodeList
+    valueList: [ListValue]
+    listStyle: ListTypeEnum
+    prepopulatedValue: PrepopulatedValue
+    displayHidden: Boolean
+    dataType: CollectionItemDataTypeEnum!
+    length: Integer
+    significantDigits: Integer
+    mandatoryVariable: Boolean
+    cdashigCore: CDASHIGCore
+    sdtmTarget: [SDTMTarget]
+  }
+
+type ListValue
+  {
+    value: String!
+    displayValue: String
+  }
+
+type PrepopulatedValue
+  {
+    conceptId: String
+    value: String!
+  }
+
+type SDTMTarget
+  {
+    sdtmVariable: String!
+    sdtmAnnotation: String
+    sdtmTargetMapping: String!
+  }
+

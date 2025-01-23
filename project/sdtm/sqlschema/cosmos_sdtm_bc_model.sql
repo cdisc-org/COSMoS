@@ -30,9 +30,9 @@ CREATE TABLE "RelationShip" (
 CREATE TABLE "SDTMGroup" (
 	"packageDate" DATE NOT NULL, 
 	"packageType" VARCHAR(4) NOT NULL, 
+	"datasetSpecializationId" TEXT NOT NULL, 
 	domain TEXT NOT NULL, 
 	"shortName" TEXT NOT NULL, 
-	"datasetSpecializationId" TEXT NOT NULL, 
 	source TEXT NOT NULL, 
 	"sdtmigStartVersion" TEXT NOT NULL, 
 	"sdtmigEndVersion" TEXT, 

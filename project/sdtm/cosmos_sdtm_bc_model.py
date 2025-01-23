@@ -1,8 +1,8 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2025-01-16T10:37:32
-# Schema: COSMoS-Biomedical-Concepts-Schema
+# Generation date: 2025-01-23T13:48:19
+# Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
-# id: https://www.cdisc.org/cosmos/1-0
+# id: https://www.cdisc.org/cosmos/sdtm_v1.0
 # description:
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
@@ -33,9 +33,9 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
 NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
-COSMOS = CurieNamespace('cosmos', 'https://www.cdisc.org/cosmos/1-0')
+COSMOS_SDTM = CurieNamespace('cosmos_sdtm', 'https://www.cdisc.org/cosmos/sdtm_v1.0/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-DEFAULT_ = COSMOS
+DEFAULT_ = COSMOS_SDTM
 
 
 # Types
@@ -57,14 +57,14 @@ class CodeListConceptId(extended_str):
 class SDTMGroup(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.SDTMGroup
-    class_class_curie: ClassVar[str] = "cosmos:SDTMGroup"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMGroup
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMGroup"
     class_name: ClassVar[str] = "SDTMGroup"
-    class_model_uri: ClassVar[URIRef] = COSMOS.SDTMGroup
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMGroup
 
     datasetSpecializationId: Union[str, SDTMGroupDatasetSpecializationId] = None
     packageDate: Union[str, XSDDate] = None
-    packageType: Union[str, "SDTMDatasetSpecializationPackageTypeEnum"] = None
+    packageType: Union[str, "PackageTypeEnum"] = None
     domain: str = None
     shortName: str = None
     source: str = None
@@ -86,8 +86,8 @@ class SDTMGroup(YAMLRoot):
 
         if self._is_empty(self.packageType):
             self.MissingRequiredField("packageType")
-        if not isinstance(self.packageType, SDTMDatasetSpecializationPackageTypeEnum):
-            self.packageType = SDTMDatasetSpecializationPackageTypeEnum(self.packageType)
+        if not isinstance(self.packageType, PackageTypeEnum):
+            self.packageType = PackageTypeEnum(self.packageType)
 
         if self._is_empty(self.domain):
             self.MissingRequiredField("domain")
@@ -126,10 +126,10 @@ class SDTMGroup(YAMLRoot):
 class SDTMVariable(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.SDTMVariable
-    class_class_curie: ClassVar[str] = "cosmos:SDTMVariable"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMVariable
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMVariable"
     class_name: ClassVar[str] = "SDTMVariable"
-    class_model_uri: ClassVar[URIRef] = COSMOS.SDTMVariable
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMVariable
 
     name: Union[str, SDTMVariableName] = None
     dataElementConceptId: Optional[str] = None
@@ -219,10 +219,10 @@ class SDTMVariable(YAMLRoot):
 class RelationShip(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.RelationShip
-    class_class_curie: ClassVar[str] = "cosmos:RelationShip"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.RelationShip
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:RelationShip"
     class_name: ClassVar[str] = "RelationShip"
-    class_model_uri: ClassVar[URIRef] = COSMOS.RelationShip
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.RelationShip
 
     subject: str = None
     linkingPhrase: Union[str, "LinkingPhraseEnum"] = None
@@ -257,10 +257,10 @@ class RelationShip(YAMLRoot):
 class CodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.CodeList
-    class_class_curie: ClassVar[str] = "cosmos:CodeList"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeList
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeList"
     class_name: ClassVar[str] = "CodeList"
-    class_model_uri: ClassVar[URIRef] = COSMOS.CodeList
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeList
 
     conceptId: Union[str, CodeListConceptId] = None
     submissionValue: str = None
@@ -287,10 +287,10 @@ class CodeList(YAMLRoot):
 class CodeListTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.CodeListTerm
-    class_class_curie: ClassVar[str] = "cosmos:CodeListTerm"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeListTerm
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeListTerm"
     class_name: ClassVar[str] = "CodeListTerm"
-    class_model_uri: ClassVar[URIRef] = COSMOS.CodeListTerm
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeListTerm
 
     termId: str = None
     termValue: str = None
@@ -313,10 +313,10 @@ class CodeListTerm(YAMLRoot):
 class SubsetCodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.SubsetCodeList
-    class_class_curie: ClassVar[str] = "cosmos:SubsetCodeList"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SubsetCodeList
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:SubsetCodeList"
     class_name: ClassVar[str] = "SubsetCodeList"
-    class_model_uri: ClassVar[URIRef] = COSMOS.SubsetCodeList
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SubsetCodeList
 
     parentCodelist: str = None
     subsetShortName: str = None
@@ -352,10 +352,10 @@ class SubsetCodeList(YAMLRoot):
 class AssignedTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS.AssignedTerm
-    class_class_curie: ClassVar[str] = "cosmos:AssignedTerm"
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.AssignedTerm
+    class_class_curie: ClassVar[str] = "cosmos_sdtm:AssignedTerm"
     class_name: ClassVar[str] = "AssignedTerm"
-    class_model_uri: ClassVar[URIRef] = COSMOS.AssignedTerm
+    class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.AssignedTerm
 
     value: str = None
     conceptId: Optional[str] = None
@@ -373,12 +373,12 @@ class AssignedTerm(YAMLRoot):
 
 
 # Enumerations
-class SDTMDatasetSpecializationPackageTypeEnum(EnumDefinitionImpl):
+class PackageTypeEnum(EnumDefinitionImpl):
 
     sdtm = PermissibleValue(text="sdtm")
 
     _defn = EnumDefinition(
-        name="SDTMDatasetSpecializationPackageTypeEnum",
+        name="PackageTypeEnum",
     )
 
 class SDTMVariableDataTypeEnum(EnumDefinitionImpl):
@@ -673,137 +673,139 @@ class ComparatorEnum(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.packageDate = Slot(uri=COSMOS.packageDate, name="packageDate", curie=COSMOS.curie('packageDate'),
-                   model_uri=COSMOS.packageDate, domain=None, range=Union[str, XSDDate])
+slots.packageDate = Slot(uri=COSMOS_SDTM.packageDate, name="packageDate", curie=COSMOS_SDTM.curie('packageDate'),
+                   model_uri=COSMOS_SDTM.packageDate, domain=None, range=Union[str, XSDDate])
 
-slots.packageType = Slot(uri=COSMOS.packageType, name="packageType", curie=COSMOS.curie('packageType'),
-                   model_uri=COSMOS.packageType, domain=None, range=Union[str, "SDTMDatasetSpecializationPackageTypeEnum"])
+slots.packageType = Slot(uri=COSMOS_SDTM.packageType, name="packageType", curie=COSMOS_SDTM.curie('packageType'),
+                   model_uri=COSMOS_SDTM.packageType, domain=None, range=Union[str, "PackageTypeEnum"])
 
-slots.domain = Slot(uri=COSMOS.domain, name="domain", curie=COSMOS.curie('domain'),
-                   model_uri=COSMOS.domain, domain=None, range=str)
+slots.datasetSpecializationId = Slot(uri=COSMOS_SDTM.datasetSpecializationId, name="datasetSpecializationId", curie=COSMOS_SDTM.curie('datasetSpecializationId'),
+                   model_uri=COSMOS_SDTM.datasetSpecializationId, domain=None, range=URIRef)
 
-slots.datasetSpecializationId = Slot(uri=COSMOS.datasetSpecializationId, name="datasetSpecializationId", curie=COSMOS.curie('datasetSpecializationId'),
-                   model_uri=COSMOS.datasetSpecializationId, domain=None, range=URIRef)
+slots.domain = Slot(uri=COSMOS_SDTM.domain, name="domain", curie=COSMOS_SDTM.curie('domain'),
+                   model_uri=COSMOS_SDTM.domain, domain=None, range=str)
 
-slots.source = Slot(uri=COSMOS.source, name="source", curie=COSMOS.curie('source'),
-                   model_uri=COSMOS.source, domain=None, range=str)
+slots.source = Slot(uri=COSMOS_SDTM.source, name="source", curie=COSMOS_SDTM.curie('source'),
+                   model_uri=COSMOS_SDTM.source, domain=None, range=str)
 
-slots.shortName = Slot(uri=COSMOS.shortName, name="shortName", curie=COSMOS.curie('shortName'),
-                   model_uri=COSMOS.shortName, domain=None, range=str)
+slots.shortName = Slot(uri=COSMOS_SDTM.shortName, name="shortName", curie=COSMOS_SDTM.curie('shortName'),
+                   model_uri=COSMOS_SDTM.shortName, domain=None, range=str)
 
-slots.sdtmigStartVersion = Slot(uri=COSMOS.sdtmigStartVersion, name="sdtmigStartVersion", curie=COSMOS.curie('sdtmigStartVersion'),
-                   model_uri=COSMOS.sdtmigStartVersion, domain=None, range=str)
+slots.sdtmigStartVersion = Slot(uri=COSMOS_SDTM.sdtmigStartVersion, name="sdtmigStartVersion", curie=COSMOS_SDTM.curie('sdtmigStartVersion'),
+                   model_uri=COSMOS_SDTM.sdtmigStartVersion, domain=None, range=str)
 
-slots.sdtmigEndVersion = Slot(uri=COSMOS.sdtmigEndVersion, name="sdtmigEndVersion", curie=COSMOS.curie('sdtmigEndVersion'),
-                   model_uri=COSMOS.sdtmigEndVersion, domain=None, range=Optional[str])
+slots.sdtmigEndVersion = Slot(uri=COSMOS_SDTM.sdtmigEndVersion, name="sdtmigEndVersion", curie=COSMOS_SDTM.curie('sdtmigEndVersion'),
+                   model_uri=COSMOS_SDTM.sdtmigEndVersion, domain=None, range=Optional[str])
 
-slots.biomedicalConceptId = Slot(uri=COSMOS.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS.curie('biomedicalConceptId'),
-                   model_uri=COSMOS.biomedicalConceptId, domain=None, range=Optional[str],
+slots.biomedicalConceptId = Slot(uri=COSMOS_SDTM.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS_SDTM.curie('biomedicalConceptId'),
+                   model_uri=COSMOS_SDTM.biomedicalConceptId, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
-slots.variables = Slot(uri=COSMOS.variables, name="variables", curie=COSMOS.curie('variables'),
-                   model_uri=COSMOS.variables, domain=None, range=Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]])
+slots.variables = Slot(uri=COSMOS_SDTM.variables, name="variables", curie=COSMOS_SDTM.curie('variables'),
+                   model_uri=COSMOS_SDTM.variables, domain=None, range=Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]])
 
-slots.name = Slot(uri=COSMOS.name, name="name", curie=COSMOS.curie('name'),
-                   model_uri=COSMOS.name, domain=None, range=URIRef)
+slots.name = Slot(uri=COSMOS_SDTM.name, name="name", curie=COSMOS_SDTM.curie('name'),
+                   model_uri=COSMOS_SDTM.name, domain=None, range=URIRef)
 
-slots.dataElementConceptId = Slot(uri=COSMOS.dataElementConceptId, name="dataElementConceptId", curie=COSMOS.curie('dataElementConceptId'),
-                   model_uri=COSMOS.dataElementConceptId, domain=None, range=Optional[str],
+slots.dataElementConceptId = Slot(uri=COSMOS_SDTM.dataElementConceptId, name="dataElementConceptId", curie=COSMOS_SDTM.curie('dataElementConceptId'),
+                   model_uri=COSMOS_SDTM.dataElementConceptId, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
-slots.isNonStandard = Slot(uri=COSMOS.isNonStandard, name="isNonStandard", curie=COSMOS.curie('isNonStandard'),
-                   model_uri=COSMOS.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
+slots.isNonStandard = Slot(uri=COSMOS_SDTM.isNonStandard, name="isNonStandard", curie=COSMOS_SDTM.curie('isNonStandard'),
+                   model_uri=COSMOS_SDTM.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.codelist = Slot(uri=COSMOS.codelist, name="codelist", curie=COSMOS.curie('codelist'),
-                   model_uri=COSMOS.codelist, domain=None, range=Optional[Union[dict, CodeList]])
+slots.codelist = Slot(uri=COSMOS_SDTM.codelist, name="codelist", curie=COSMOS_SDTM.curie('codelist'),
+                   model_uri=COSMOS_SDTM.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
-slots.subsetCodelist = Slot(uri=COSMOS.subsetCodelist, name="subsetCodelist", curie=COSMOS.curie('subsetCodelist'),
-                   model_uri=COSMOS.subsetCodelist, domain=None, range=Optional[str])
+slots.subsetCodelist = Slot(uri=COSMOS_SDTM.subsetCodelist, name="subsetCodelist", curie=COSMOS_SDTM.curie('subsetCodelist'),
+                   model_uri=COSMOS_SDTM.subsetCodelist, domain=None, range=Optional[str])
 
-slots.conceptId = Slot(uri=COSMOS.conceptId, name="conceptId", curie=COSMOS.curie('conceptId'),
-                   model_uri=COSMOS.conceptId, domain=None, range=URIRef,
+slots.conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="conceptId", curie=COSMOS_SDTM.curie('conceptId'),
+                   model_uri=COSMOS_SDTM.conceptId, domain=None, range=URIRef,
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.href = Slot(uri=COSMOS.href, name="href", curie=COSMOS.curie('href'),
-                   model_uri=COSMOS.href, domain=None, range=Optional[Union[str, URI]])
+slots.href = Slot(uri=COSMOS_SDTM.href, name="href", curie=COSMOS_SDTM.curie('href'),
+                   model_uri=COSMOS_SDTM.href, domain=None, range=Optional[Union[str, URI]])
 
-slots.submissionValue = Slot(uri=COSMOS.submissionValue, name="submissionValue", curie=COSMOS.curie('submissionValue'),
-                   model_uri=COSMOS.submissionValue, domain=None, range=str)
+slots.submissionValue = Slot(uri=COSMOS_SDTM.submissionValue, name="submissionValue", curie=COSMOS_SDTM.curie('submissionValue'),
+                   model_uri=COSMOS_SDTM.submissionValue, domain=None, range=str)
 
-slots.parentCodelist = Slot(uri=COSMOS.parentCodelist, name="parentCodelist", curie=COSMOS.curie('parentCodelist'),
-                   model_uri=COSMOS.parentCodelist, domain=None, range=str)
+slots.parentCodelist = Slot(uri=COSMOS_SDTM.parentCodelist, name="parentCodelist", curie=COSMOS_SDTM.curie('parentCodelist'),
+                   model_uri=COSMOS_SDTM.parentCodelist, domain=None, range=str)
 
-slots.subsetShortName = Slot(uri=COSMOS.subsetShortName, name="subsetShortName", curie=COSMOS.curie('subsetShortName'),
-                   model_uri=COSMOS.subsetShortName, domain=None, range=str)
+slots.subsetShortName = Slot(uri=COSMOS_SDTM.subsetShortName, name="subsetShortName", curie=COSMOS_SDTM.curie('subsetShortName'),
+                   model_uri=COSMOS_SDTM.subsetShortName, domain=None, range=str)
 
-slots.subsetLabel = Slot(uri=COSMOS.subsetLabel, name="subsetLabel", curie=COSMOS.curie('subsetLabel'),
-                   model_uri=COSMOS.subsetLabel, domain=None, range=str)
+slots.subsetLabel = Slot(uri=COSMOS_SDTM.subsetLabel, name="subsetLabel", curie=COSMOS_SDTM.curie('subsetLabel'),
+                   model_uri=COSMOS_SDTM.subsetLabel, domain=None, range=str)
 
-slots.codelistTerm = Slot(uri=COSMOS.codelistTerm, name="codelistTerm", curie=COSMOS.curie('codelistTerm'),
-                   model_uri=COSMOS.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]])
+slots.codelistTerm = Slot(uri=COSMOS_SDTM.codelistTerm, name="codelistTerm", curie=COSMOS_SDTM.curie('codelistTerm'),
+                   model_uri=COSMOS_SDTM.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]])
 
-slots.termId = Slot(uri=COSMOS.termId, name="termId", curie=COSMOS.curie('termId'),
-                   model_uri=COSMOS.termId, domain=None, range=str)
+slots.termId = Slot(uri=COSMOS_SDTM.termId, name="termId", curie=COSMOS_SDTM.curie('termId'),
+                   model_uri=COSMOS_SDTM.termId, domain=None, range=str,
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.termValue = Slot(uri=COSMOS.termValue, name="termValue", curie=COSMOS.curie('termValue'),
-                   model_uri=COSMOS.termValue, domain=None, range=str)
+slots.termValue = Slot(uri=COSMOS_SDTM.termValue, name="termValue", curie=COSMOS_SDTM.curie('termValue'),
+                   model_uri=COSMOS_SDTM.termValue, domain=None, range=str)
 
-slots.valueList = Slot(uri=COSMOS.valueList, name="valueList", curie=COSMOS.curie('valueList'),
-                   model_uri=COSMOS.valueList, domain=None, range=Optional[Union[str, List[str]]])
+slots.valueList = Slot(uri=COSMOS_SDTM.valueList, name="valueList", curie=COSMOS_SDTM.curie('valueList'),
+                   model_uri=COSMOS_SDTM.valueList, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.assignedTerm = Slot(uri=COSMOS.assignedTerm, name="assignedTerm", curie=COSMOS.curie('assignedTerm'),
-                   model_uri=COSMOS.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
+slots.assignedTerm = Slot(uri=COSMOS_SDTM.assignedTerm, name="assignedTerm", curie=COSMOS_SDTM.curie('assignedTerm'),
+                   model_uri=COSMOS_SDTM.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
 
-slots.role = Slot(uri=COSMOS.role, name="role", curie=COSMOS.curie('role'),
-                   model_uri=COSMOS.role, domain=None, range=Optional[Union[str, "RoleEnum"]])
+slots.role = Slot(uri=COSMOS_SDTM.role, name="role", curie=COSMOS_SDTM.curie('role'),
+                   model_uri=COSMOS_SDTM.role, domain=None, range=Optional[Union[str, "RoleEnum"]])
 
-slots.relationship = Slot(uri=COSMOS.relationship, name="relationship", curie=COSMOS.curie('relationship'),
-                   model_uri=COSMOS.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
+slots.relationship = Slot(uri=COSMOS_SDTM.relationship, name="relationship", curie=COSMOS_SDTM.curie('relationship'),
+                   model_uri=COSMOS_SDTM.relationship, domain=None, range=Optional[Union[dict, RelationShip]])
 
-slots.subject = Slot(uri=COSMOS.subject, name="subject", curie=COSMOS.curie('subject'),
-                   model_uri=COSMOS.subject, domain=None, range=str)
+slots.subject = Slot(uri=COSMOS_SDTM.subject, name="subject", curie=COSMOS_SDTM.curie('subject'),
+                   model_uri=COSMOS_SDTM.subject, domain=None, range=str)
 
-slots.linkingPhrase = Slot(uri=COSMOS.linkingPhrase, name="linkingPhrase", curie=COSMOS.curie('linkingPhrase'),
-                   model_uri=COSMOS.linkingPhrase, domain=None, range=Union[str, "LinkingPhraseEnum"])
+slots.linkingPhrase = Slot(uri=COSMOS_SDTM.linkingPhrase, name="linkingPhrase", curie=COSMOS_SDTM.curie('linkingPhrase'),
+                   model_uri=COSMOS_SDTM.linkingPhrase, domain=None, range=Union[str, "LinkingPhraseEnum"])
 
-slots.predicateTerm = Slot(uri=COSMOS.predicateTerm, name="predicateTerm", curie=COSMOS.curie('predicateTerm'),
-                   model_uri=COSMOS.predicateTerm, domain=None, range=Union[str, "PredicateTermEnum"])
+slots.predicateTerm = Slot(uri=COSMOS_SDTM.predicateTerm, name="predicateTerm", curie=COSMOS_SDTM.curie('predicateTerm'),
+                   model_uri=COSMOS_SDTM.predicateTerm, domain=None, range=Union[str, "PredicateTermEnum"])
 
-slots.object = Slot(uri=COSMOS.object, name="object", curie=COSMOS.curie('object'),
-                   model_uri=COSMOS.object, domain=None, range=str)
+slots.object = Slot(uri=COSMOS_SDTM.object, name="object", curie=COSMOS_SDTM.curie('object'),
+                   model_uri=COSMOS_SDTM.object, domain=None, range=str)
 
-slots.dataType = Slot(uri=COSMOS.dataType, name="dataType", curie=COSMOS.curie('dataType'),
-                   model_uri=COSMOS.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataTypeEnum"]])
+slots.dataType = Slot(uri=COSMOS_SDTM.dataType, name="dataType", curie=COSMOS_SDTM.curie('dataType'),
+                   model_uri=COSMOS_SDTM.dataType, domain=None, range=Optional[Union[str, "SDTMVariableDataTypeEnum"]])
 
-slots.length = Slot(uri=COSMOS.length, name="length", curie=COSMOS.curie('length'),
-                   model_uri=COSMOS.length, domain=None, range=Optional[int])
+slots.length = Slot(uri=COSMOS_SDTM.length, name="length", curie=COSMOS_SDTM.curie('length'),
+                   model_uri=COSMOS_SDTM.length, domain=None, range=Optional[int])
 
-slots.format = Slot(uri=COSMOS.format, name="format", curie=COSMOS.curie('format'),
-                   model_uri=COSMOS.format, domain=None, range=Optional[str])
+slots.format = Slot(uri=COSMOS_SDTM.format, name="format", curie=COSMOS_SDTM.curie('format'),
+                   model_uri=COSMOS_SDTM.format, domain=None, range=Optional[str])
 
-slots.significantDigits = Slot(uri=COSMOS.significantDigits, name="significantDigits", curie=COSMOS.curie('significantDigits'),
-                   model_uri=COSMOS.significantDigits, domain=None, range=Optional[int])
+slots.significantDigits = Slot(uri=COSMOS_SDTM.significantDigits, name="significantDigits", curie=COSMOS_SDTM.curie('significantDigits'),
+                   model_uri=COSMOS_SDTM.significantDigits, domain=None, range=Optional[int])
 
-slots.mandatoryVariable = Slot(uri=COSMOS.mandatoryVariable, name="mandatoryVariable", curie=COSMOS.curie('mandatoryVariable'),
-                   model_uri=COSMOS.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
+slots.mandatoryVariable = Slot(uri=COSMOS_SDTM.mandatoryVariable, name="mandatoryVariable", curie=COSMOS_SDTM.curie('mandatoryVariable'),
+                   model_uri=COSMOS_SDTM.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.mandatoryValue = Slot(uri=COSMOS.mandatoryValue, name="mandatoryValue", curie=COSMOS.curie('mandatoryValue'),
-                   model_uri=COSMOS.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
+slots.mandatoryValue = Slot(uri=COSMOS_SDTM.mandatoryValue, name="mandatoryValue", curie=COSMOS_SDTM.curie('mandatoryValue'),
+                   model_uri=COSMOS_SDTM.mandatoryValue, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.originType = Slot(uri=COSMOS.originType, name="originType", curie=COSMOS.curie('originType'),
-                   model_uri=COSMOS.originType, domain=None, range=Optional[Union[str, "OriginTypeEnum"]])
+slots.originType = Slot(uri=COSMOS_SDTM.originType, name="originType", curie=COSMOS_SDTM.curie('originType'),
+                   model_uri=COSMOS_SDTM.originType, domain=None, range=Optional[Union[str, "OriginTypeEnum"]])
 
-slots.originSource = Slot(uri=COSMOS.originSource, name="originSource", curie=COSMOS.curie('originSource'),
-                   model_uri=COSMOS.originSource, domain=None, range=Optional[Union[str, "OriginSourceEnum"]])
+slots.originSource = Slot(uri=COSMOS_SDTM.originSource, name="originSource", curie=COSMOS_SDTM.curie('originSource'),
+                   model_uri=COSMOS_SDTM.originSource, domain=None, range=Optional[Union[str, "OriginSourceEnum"]])
 
-slots.comparator = Slot(uri=COSMOS.comparator, name="comparator", curie=COSMOS.curie('comparator'),
-                   model_uri=COSMOS.comparator, domain=None, range=Optional[Union[str, "ComparatorEnum"]])
+slots.comparator = Slot(uri=COSMOS_SDTM.comparator, name="comparator", curie=COSMOS_SDTM.curie('comparator'),
+                   model_uri=COSMOS_SDTM.comparator, domain=None, range=Optional[Union[str, "ComparatorEnum"]])
 
-slots.vlmTarget = Slot(uri=COSMOS.vlmTarget, name="vlmTarget", curie=COSMOS.curie('vlmTarget'),
-                   model_uri=COSMOS.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
+slots.vlmTarget = Slot(uri=COSMOS_SDTM.vlmTarget, name="vlmTarget", curie=COSMOS_SDTM.curie('vlmTarget'),
+                   model_uri=COSMOS_SDTM.vlmTarget, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.assignedTerm__conceptId = Slot(uri=COSMOS.conceptId, name="assignedTerm__conceptId", curie=COSMOS.curie('conceptId'),
-                   model_uri=COSMOS.assignedTerm__conceptId, domain=None, range=Optional[str])
+slots.assignedTerm__conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="assignedTerm__conceptId", curie=COSMOS_SDTM.curie('conceptId'),
+                   model_uri=COSMOS_SDTM.assignedTerm__conceptId, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.assignedTerm__value = Slot(uri=COSMOS.value, name="assignedTerm__value", curie=COSMOS.curie('value'),
-                   model_uri=COSMOS.assignedTerm__value, domain=None, range=str)
+slots.assignedTerm__value = Slot(uri=COSMOS_SDTM.value, name="assignedTerm__value", curie=COSMOS_SDTM.curie('value'),
+                   model_uri=COSMOS_SDTM.assignedTerm__value, domain=None, range=str)

@@ -5,10 +5,10 @@ from linkml_dataops.query.queryengine import QueryEngine
 from linkml_dataops.query.query_model import FetchQuery, Constraint, MatchConstraint, OrConstraint, AbstractQuery,     FetchById
 from linkml_dataops.query.queryengine import MatchExpression
 
-from .COSMoS-Biomedical-Concepts-Schema import *
+from .COSMoS-Biomedical-Concepts-SDTM-Schema import *
 
 @dataclass
-class COSMoS-Biomedical-Concepts-SchemaAPI:
+class COSMoS-Biomedical-Concepts-SDTM-SchemaAPI:
 
     # attributes
     query_engine: QueryEngine = None
@@ -59,9 +59,9 @@ class COSMoS-Biomedical-Concepts-SchemaAPI:
         :param codelist: Codelist
         :param subsetCodelist: Subset codelist short name
         :param valueList: List of SDTM submission values used if subset codelist is not applicable
-        :param assignedTerm: None
+        :param assignedTerm: Assigned term
         :param role: SDTM variable role
-        :param relationship: None
+        :param relationship: Relationship between variables
         :param dataType: Variable data type
         :param length: Variable length
         :param format: Variable display format

@@ -1,0 +1,367 @@
+{
+   "$defs": {
+      "CDASHIGCore": {
+         "description": "",
+         "enum": [
+            "HR",
+            "R/C",
+            "O"
+         ],
+         "title": "CDASHIGCore",
+         "type": "string"
+      },
+      "CodeList": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "conceptId": {
+               "description": "C-code for a codelist in NCIt",
+               "pattern": "^(C[0123456789]+)$",
+               "type": "string"
+            },
+            "href": {
+               "description": "Link to NCIt for the codelist",
+               "type": "string"
+            },
+            "submissionValue": {
+               "description": "CDISC submission value for the codelist",
+               "type": "string"
+            }
+         },
+         "required": [
+            "conceptId",
+            "submissionValue"
+         ],
+         "title": "CodeList",
+         "type": "object"
+      },
+      "CollectionItemDataTypeEnum": {
+         "description": "",
+         "enum": [
+            "decimal",
+            "float",
+            "integer",
+            "text",
+            "date",
+            "time"
+         ],
+         "title": "CollectionItemDataTypeEnum",
+         "type": "string"
+      },
+      "DataCollectionGroup": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "biomedicalConceptId": {
+               "description": "Biomedical Concept identifier foreign key",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+               "type": "string"
+            },
+            "collectionigEndVersion": {
+               "description": "The last data collection IG version that is applicable to the BC dataset specialization",
+               "type": "string"
+            },
+            "collectionigStartVersion": {
+               "description": "The earliest data collection IG version applicable to the BC dataset specialization",
+               "type": "string"
+            },
+            "datasetSpecializationId": {
+               "description": "Identifier for data collection specialization group",
+               "type": "string"
+            },
+            "domain": {
+               "description": "Domain for the data collection specialization group",
+               "type": "string"
+            },
+            "items": {
+               "description": "Item included in the Data Collection dataset specialization",
+               "items": {
+                  "$ref": "#/$defs/DataCollectionItem"
+               },
+               "type": "array"
+            },
+            "packageDate": {
+               "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+               "format": "date",
+               "type": "string"
+            },
+            "packageType": {
+               "$ref": "#/$defs/PackageTypeEnum",
+               "description": "Package type (collection for Data Dollection Dataset Specializations)"
+            },
+            "sdtmDatasetSpecializationId": {
+               "description": "Identifier for SDTM Dataset Specialization group",
+               "type": "string"
+            },
+            "shortName": {
+               "description": "Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId",
+               "type": "string"
+            },
+            "standard": {
+               "description": "Standard for the data collection specialization group",
+               "type": "string"
+            }
+         },
+         "required": [
+            "packageDate",
+            "packageType",
+            "datasetSpecializationId",
+            "standard",
+            "domain",
+            "shortName",
+            "collectionigStartVersion",
+            "items"
+         ],
+         "title": "DataCollectionGroup",
+         "type": "object"
+      },
+      "DataCollectionItem": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "cdashigCore": {
+               "$ref": "#/$defs/CDASHIGCore",
+               "description": "Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'"
+            },
+            "codelist": {
+               "$ref": "#/$defs/CodeList",
+               "description": "Codelist"
+            },
+            "dataElementConceptId": {
+               "description": "Biomedical Concept Data Element Concept identifier foreign key",
+               "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+               "type": "string"
+            },
+            "dataType": {
+               "$ref": "#/$defs/CollectionItemDataTypeEnum",
+               "description": "Item data type"
+            },
+            "displayHidden": {
+               "description": "Indicator that the item is hidden from the user",
+               "type": "boolean"
+            },
+            "eCRFItem": {
+               "description": "Variable included in the data collection dataset specialization used for eCSR set-up",
+               "type": "string"
+            },
+            "isNonStandard": {
+               "description": "Flag that indicates if the variable is a non-standard variable",
+               "type": "boolean"
+            },
+            "length": {
+               "description": "Variable length",
+               "minimum": 1,
+               "type": "integer"
+            },
+            "listStyle": {
+               "$ref": "#/$defs/ListTypeEnum",
+               "description": "Type of list used for eCRF set-up"
+            },
+            "mandatoryVariable": {
+               "description": "Indicator that the item must be present within the data collection group",
+               "type": "boolean"
+            },
+            "name": {
+               "description": "Item included in the data collection dataset specialization",
+               "type": "string"
+            },
+            "orderNumber": {
+               "description": "Data collection item order number",
+               "type": "integer"
+            },
+            "prepopulatedValue": {
+               "$ref": "#/$defs/PrepopulatedValue",
+               "description": "Pre-populated value on a CRF"
+            },
+            "prompt": {
+               "description": "Data collection item prompt",
+               "type": "string"
+            },
+            "questionText": {
+               "description": "Data collection item question text",
+               "type": "string"
+            },
+            "sdtmTarget": {
+               "description": "SDTM target variables for data collection item variable",
+               "items": {
+                  "$ref": "#/$defs/SDTMTarget"
+               },
+               "type": "array"
+            },
+            "significantDigits": {
+               "description": "Variable significant_digits",
+               "type": "integer"
+            },
+            "valueList": {
+               "description": "A set of valid CDISC submission values for a data collection item",
+               "items": {
+                  "$ref": "#/$defs/ListValue"
+               },
+               "type": "array"
+            }
+         },
+         "required": [
+            "name",
+            "eCRFItem",
+            "orderNumber",
+            "dataType"
+         ],
+         "title": "DataCollectionItem",
+         "type": "object"
+      },
+      "ListTypeEnum": {
+         "description": "",
+         "enum": [
+            "Radio",
+            "Dropdown",
+            "DropdownMultiSelect",
+            "Checkbox",
+            "Text",
+            "Date",
+            "Time",
+            "DateTime"
+         ],
+         "title": "ListTypeEnum",
+         "type": "string"
+      },
+      "ListValue": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "displayValue": {
+               "description": "User-friendly display value for the data collection item",
+               "type": "string"
+            },
+            "value": {
+               "description": "CDISC submission value for the data collection item",
+               "type": "string"
+            }
+         },
+         "required": [
+            "value"
+         ],
+         "title": "ListValue",
+         "type": "object"
+      },
+      "PackageTypeEnum": {
+         "description": "",
+         "enum": [
+            "collection"
+         ],
+         "title": "PackageTypeEnum",
+         "type": "string"
+      },
+      "PrepopulatedValue": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "conceptId": {
+               "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
+               "pattern": "^(C[0123456789]+)$",
+               "type": "string"
+            },
+            "value": {
+               "description": "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value",
+               "type": "string"
+            }
+         },
+         "required": [
+            "value"
+         ],
+         "title": "PrepopulatedValue",
+         "type": "object"
+      },
+      "SDTMTarget": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "sdtmAnnotation": {
+               "description": "Annotation of the SDTM target as it should appear on the eCRF",
+               "type": "string"
+            },
+            "sdtmTargetMapping": {
+               "description": "Rule for mapping from data collection item to SDTM target variable.",
+               "type": "string"
+            },
+            "sdtmVariable": {
+               "description": "SDTM target variable for data collection item variable",
+               "type": "string"
+            }
+         },
+         "required": [
+            "sdtmVariable",
+            "sdtmTargetMapping"
+         ],
+         "title": "SDTMTarget",
+         "type": "object"
+      }
+   },
+   "$id": "https://www.cdisc.org/cosmos/collection_v1.0",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
+   "properties": {
+      "biomedicalConceptId": {
+         "description": "Biomedical Concept identifier foreign key",
+         "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+         "type": "string"
+      },
+      "collectionigEndVersion": {
+         "description": "The last data collection IG version that is applicable to the BC dataset specialization",
+         "type": "string"
+      },
+      "collectionigStartVersion": {
+         "description": "The earliest data collection IG version applicable to the BC dataset specialization",
+         "type": "string"
+      },
+      "datasetSpecializationId": {
+         "description": "Identifier for data collection specialization group",
+         "type": "string"
+      },
+      "domain": {
+         "description": "Domain for the data collection specialization group",
+         "type": "string"
+      },
+      "items": {
+         "description": "Item included in the Data Collection dataset specialization",
+         "items": {
+            "$ref": "#/$defs/DataCollectionItem"
+         },
+         "type": "array"
+      },
+      "packageDate": {
+         "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+         "format": "date",
+         "type": "string"
+      },
+      "packageType": {
+         "$ref": "#/$defs/PackageTypeEnum",
+         "description": "Package type (collection for Data Dollection Dataset Specializations)"
+      },
+      "sdtmDatasetSpecializationId": {
+         "description": "Identifier for SDTM Dataset Specialization group",
+         "type": "string"
+      },
+      "shortName": {
+         "description": "Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId",
+         "type": "string"
+      },
+      "standard": {
+         "description": "Standard for the data collection specialization group",
+         "type": "string"
+      }
+   },
+   "required": [
+      "packageDate",
+      "packageType",
+      "datasetSpecializationId",
+      "standard",
+      "domain",
+      "shortName",
+      "collectionigStartVersion",
+      "items"
+   ],
+   "title": "COSMoS-Biomedical-Concepts-Collection-Schema",
+   "type": "object",
+   "version": null
+}

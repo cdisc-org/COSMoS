@@ -28,10 +28,10 @@ type RelationShip
 type SDTMGroup
   {
     packageDate: Date!
-    packageType: SDTMDatasetSpecializationPackageTypeEnum!
+    packageType: PackageTypeEnum!
+    datasetSpecializationId: String!
     domain: String!
     shortName: String!
-    datasetSpecializationId: String!
     source: String!
     sdtmigStartVersion: String!
     sdtmigEndVersion: String

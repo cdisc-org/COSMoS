@@ -2,10 +2,10 @@
 erDiagram
 SDTMGroup {
     date packageDate  
-    SDTMDatasetSpecializationPackageTypeEnum packageType  
+    PackageTypeEnum packageType  
+    string datasetSpecializationId  
     string domain  
     string shortName  
-    string datasetSpecializationId  
     string source  
     string sdtmigStartVersion  
     string sdtmigEndVersion  

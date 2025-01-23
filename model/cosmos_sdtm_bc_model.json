@@ -6,6 +6,7 @@
          "properties": {
             "conceptId": {
                "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
+               "pattern": "^(C[0123456789]+)$",
                "type": "string"
             },
             "value": {
@@ -50,6 +51,7 @@
          "properties": {
             "termId": {
                "description": "C-code term in subset codelist",
+               "pattern": "^(C[0123456789]+)$",
                "type": "string"
             },
             "termValue": {
@@ -184,6 +186,14 @@
          "title": "OriginTypeEnum",
          "type": "string"
       },
+      "PackageTypeEnum": {
+         "description": "",
+         "enum": [
+            "sdtm"
+         ],
+         "title": "PackageTypeEnum",
+         "type": "string"
+      },
       "PredicateTermEnum": {
          "description": "",
          "enum": [
@@ -261,14 +271,6 @@
          "title": "RoleEnum",
          "type": "string"
       },
-      "SDTMDatasetSpecializationPackageTypeEnum": {
-         "description": "",
-         "enum": [
-            "sdtm"
-         ],
-         "title": "SDTMDatasetSpecializationPackageTypeEnum",
-         "type": "string"
-      },
       "SDTMGroup": {
          "additionalProperties": false,
          "description": "",
@@ -292,7 +294,7 @@
                "type": "string"
             },
             "packageType": {
-               "$ref": "#/$defs/SDTMDatasetSpecializationPackageTypeEnum",
+               "$ref": "#/$defs/PackageTypeEnum",
                "description": "Package type (sdtm for SDTM Dataset Specializations)"
             },
             "sdtmigEndVersion": {
@@ -322,9 +324,9 @@
          "required": [
             "packageDate",
             "packageType",
+            "datasetSpecializationId",
             "domain",
             "shortName",
-            "datasetSpecializationId",
             "source",
             "sdtmigStartVersion",
             "variables"
@@ -337,7 +339,8 @@
          "description": "",
          "properties": {
             "assignedTerm": {
-               "$ref": "#/$defs/AssignedTerm"
+               "$ref": "#/$defs/AssignedTerm",
+               "description": "Assigned term"
             },
             "codelist": {
                "$ref": "#/$defs/CodeList",
@@ -390,7 +393,8 @@
                "description": "Variable origin type (define-XML v21)"
             },
             "relationship": {
-               "$ref": "#/$defs/RelationShip"
+               "$ref": "#/$defs/RelationShip",
+               "description": "Relationship between variables"
             },
             "role": {
                "$ref": "#/$defs/RoleEnum",
@@ -439,6 +443,7 @@
          "description": "",
          "properties": {
             "codelistTerm": {
+               "description": "Term in subset codelist",
                "items": {
                   "$ref": "#/$defs/CodeListTerm"
                },
@@ -467,7 +472,7 @@
          "type": "object"
       }
    },
-   "$id": "https://www.cdisc.org/cosmos/1-0",
+   "$id": "https://www.cdisc.org/cosmos/sdtm_v1.0",
    "$schema": "http://json-schema.org/draft-07/schema#",
    "additionalProperties": true,
    "metamodel_version": "1.7.0",
@@ -491,7 +496,7 @@
          "type": "string"
       },
       "packageType": {
-         "$ref": "#/$defs/SDTMDatasetSpecializationPackageTypeEnum",
+         "$ref": "#/$defs/PackageTypeEnum",
          "description": "Package type (sdtm for SDTM Dataset Specializations)"
       },
       "sdtmigEndVersion": {
@@ -521,14 +526,14 @@
    "required": [
       "packageDate",
       "packageType",
+      "datasetSpecializationId",
       "domain",
       "shortName",
-      "datasetSpecializationId",
       "source",
       "sdtmigStartVersion",
       "variables"
    ],
-   "title": "COSMoS-Biomedical-Concepts-Schema",
+   "title": "COSMoS-Biomedical-Concepts-SDTM-Schema",
    "type": "object",
    "version": null
 }

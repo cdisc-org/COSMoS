@@ -1,17 +1,17 @@
 {
-   "_comments": "Auto generated from cosmos_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2024-12-11T10:38:56\n    Schema: COSMoS-Biomedical-Concepts-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/1-0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from cosmos_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2025-01-23T13:54:18\n    Schema: COSMoS-Biomedical-Concepts-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/biomedical_concept_v1.0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
    "@context": {
       "NCIT": {
          "@id": "http://purl.obolibrary.org/obo/NCIT_",
          "@prefix": true
       },
-      "cosmos": {
-         "@id": "https://www.cdisc.org/cosmos/1-0",
+      "cosmos_bc": {
+         "@id": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
          "@prefix": true
       },
       "linkml": "https://w3id.org/linkml/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "@vocab": "https://www.cdisc.org/cosmos/1-0",
+      "@vocab": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "conceptId": "@id",
       "coding": {
          "@type": "@id"

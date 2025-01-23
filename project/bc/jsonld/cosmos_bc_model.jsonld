@@ -1,6 +1,6 @@
 {
   "name": "COSMoS-Biomedical-Concepts-Schema",
-  "id": "https://www.cdisc.org/cosmos/1-0",
+  "id": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
   "imports": [
     "linkml:types"
   ],
@@ -11,15 +11,15 @@
       "prefix_reference": "https://w3id.org/linkml/"
     },
     {
-      "prefix_prefix": "cosmos",
-      "prefix_reference": "https://www.cdisc.org/cosmos/1-0"
+      "prefix_prefix": "cosmos_bc",
+      "prefix_reference": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0"
     },
     {
       "prefix_prefix": "NCIT",
       "prefix_reference": "http://purl.obolibrary.org/obo/NCIT_"
     }
   ],
-  "default_prefix": "cosmos",
+  "default_prefix": "cosmos_bc",
   "default_range": "string",
   "types": [
     {
@@ -333,9 +333,9 @@
   ],
   "enums": [
     {
-      "name": "BiomedicalConceptPackageTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptPackageTypeEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "name": "PackageTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0PackageTypeEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "permissible_values": [
         {
           "text": "bc"
@@ -344,8 +344,8 @@
     },
     {
       "name": "BiomedicalConceptResultScaleEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConceptResultScaleEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0BiomedicalConceptResultScaleEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "permissible_values": [
         {
           "text": "Ordinal"
@@ -366,8 +366,8 @@
     },
     {
       "name": "DataElementConceptDataTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0DataElementConceptDataTypeEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "permissible_values": [
         {
           "text": "boolean"
@@ -399,10 +399,10 @@
   "slots": [
     {
       "name": "conceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "description": "An identifier that uniquely represents an entity",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "identifier": true,
       "owner": "DataElementConcept",
       "domain_of": [
@@ -416,10 +416,10 @@
     },
     {
       "name": "ncitCode",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "description": "NCIt code",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "owner": "DataElementConcept",
       "domain_of": [
         "BiomedicalConcept",
@@ -431,9 +431,10 @@
     },
     {
       "name": "href",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0href",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
+      "description": "Link to NCIt for the Biomedical Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
       "owner": "DataElementConcept",
       "domain_of": [
         "BiomedicalConcept",
@@ -444,10 +445,10 @@
     },
     {
       "name": "packageDate",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0packageDate",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0packageDate",
       "description": "Biomedical Concept package release date indicating when the BC package was published to production",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0packageDate",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0packageDate",
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
@@ -458,24 +459,24 @@
     },
     {
       "name": "packageType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0packageType",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0packageType",
       "description": "Package type (bc for Biomedical Concepts)",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0packageType",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0packageType",
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
-      "range": "BiomedicalConceptPackageTypeEnum",
+      "range": "PackageTypeEnum",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
       "name": "categories",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0categories",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0categories",
       "description": "Biomedical Concept category for the faciliation of API search and extract",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0categories",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0categories",
       "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -488,10 +489,10 @@
     },
     {
       "name": "parentConceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0parentConceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0parentConceptId",
       "description": "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0parentConceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0parentConceptId",
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
@@ -501,10 +502,10 @@
     },
     {
       "name": "shortName",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0shortName",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0shortName",
       "description": "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0shortName",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0shortName",
       "owner": "DataElementConcept",
       "domain_of": [
         "BiomedicalConcept",
@@ -516,10 +517,10 @@
     },
     {
       "name": "synonyms",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0synonyms",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0synonyms",
       "description": "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0synonyms",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0synonyms",
       "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -531,10 +532,10 @@
     },
     {
       "name": "resultScales",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0resultScales",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0resultScales",
       "description": "Scale of measurement for the Biomedical Concept result",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0resultScales",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0resultScales",
       "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -545,10 +546,10 @@
     },
     {
       "name": "definition",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0definition",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0definition",
       "description": "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0definition",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0definition",
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
@@ -559,9 +560,10 @@
     },
     {
       "name": "coding",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0coding",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0coding",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0coding",
+      "description": "Coding for the Biomedical Concept",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0coding",
       "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -574,10 +576,10 @@
     },
     {
       "name": "system",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0system",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0system",
       "description": "Identifies the code system for the synonym concept. The URL of the code system should be used if it exists",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0system",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0system",
       "owner": "Coding",
       "domain_of": [
         "Coding"
@@ -588,10 +590,10 @@
     },
     {
       "name": "systemName",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0systemName",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0systemName",
       "description": "Human-readable name for the code system",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0systemName",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0systemName",
       "owner": "Coding",
       "domain_of": [
         "Coding"
@@ -601,10 +603,10 @@
     },
     {
       "name": "code",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0code",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0code",
       "description": "Synonym concept for the Biomedical Concept as defined in a code system",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0code",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0code",
       "owner": "Coding",
       "domain_of": [
         "Coding"
@@ -615,10 +617,10 @@
     },
     {
       "name": "dataElementConcepts",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0dataElementConcepts",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0dataElementConcepts",
       "description": "Data Element Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0dataElementConcepts",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0dataElementConcepts",
       "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -631,10 +633,10 @@
     },
     {
       "name": "dataType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0dataType",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0dataType",
       "description": "Data Type for the Data Element Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0dataType",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0dataType",
       "owner": "DataElementConcept",
       "domain_of": [
         "DataElementConcept"
@@ -645,10 +647,10 @@
     },
     {
       "name": "exampleSet",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0exampleSet",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0exampleSet",
       "description": "Example values for the Data Element Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0exampleSet",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0exampleSet",
       "multivalued": true,
       "owner": "DataElementConcept",
       "domain_of": [
@@ -660,12 +662,12 @@
     },
     {
       "name": "BiomedicalConcept_conceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "description": "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "conceptId",
       "domain": "BiomedicalConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "identifier": true,
       "alias": "conceptId",
       "owner": "BiomedicalConcept",
@@ -681,12 +683,12 @@
     },
     {
       "name": "BiomedicalConcept_ncitCode",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "description": "NCIt C-code for the Biomedical Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "ncitCode",
       "domain": "BiomedicalConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "alias": "ncitCode",
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -700,12 +702,12 @@
     },
     {
       "name": "BiomedicalConcept_href",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
       "description": "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "href",
       "domain": "BiomedicalConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
       "alias": "href",
       "owner": "BiomedicalConcept",
       "domain_of": [
@@ -718,12 +720,12 @@
     },
     {
       "name": "DataElementConcept_conceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "description": "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "conceptId",
       "domain": "DataElementConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0conceptId",
       "identifier": true,
       "alias": "conceptId",
       "owner": "DataElementConcept",
@@ -739,12 +741,12 @@
     },
     {
       "name": "DataElementConcept_ncitCode",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "description": "NCI C-code for the BC Data Element Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "ncitCode",
       "domain": "DataElementConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0ncitCode",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0ncitCode",
       "alias": "ncitCode",
       "owner": "DataElementConcept",
       "domain_of": [
@@ -758,12 +760,12 @@
     },
     {
       "name": "DataElementConcept_href",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
       "description": "Link to NCIt for the Data Element Concept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "is_a": "href",
       "domain": "DataElementConcept",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0href",
       "alias": "href",
       "owner": "DataElementConcept",
       "domain_of": [
@@ -778,16 +780,16 @@
   "classes": [
     {
       "name": "BiomedicalConcept",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConcept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0BiomedicalConcept",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slots": [
+        "packageDate",
+        "packageType",
         "BiomedicalConcept_conceptId",
         "BiomedicalConcept_ncitCode",
         "BiomedicalConcept_href",
-        "packageDate",
-        "packageType",
-        "categories",
         "parentConceptId",
+        "categories",
         "shortName",
         "synonyms",
         "resultScales",
@@ -796,27 +798,27 @@
         "dataElementConcepts"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0BiomedicalConcept",
+      "class_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0BiomedicalConcept",
       "tree_root": true,
       "@type": "ClassDefinition"
     },
     {
       "name": "Coding",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0Coding",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0Coding",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slots": [
         "code",
         "system",
         "systemName"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0Coding",
+      "class_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0Coding",
       "@type": "ClassDefinition"
     },
     {
       "name": "DataElementConcept",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0DataElementConcept",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConcept",
+      "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slots": [
         "DataElementConcept_conceptId",
         "DataElementConcept_ncitCode",
@@ -826,21 +828,21 @@
         "exampleSet"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0DataElementConcept",
+      "class_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConcept",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2024-12-11T10:37:58",
-  "source_file_size": 4560,
-  "generation_date": "2024-12-11T10:38:57",
+  "source_file_date": "2025-01-23T12:13:01",
+  "source_file_size": 4813,
+  "generation_date": "2025-01-23T13:54:18",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://www.cdisc.org/cosmos/1-0"
+      "@base": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0"
     }
   ]
 }

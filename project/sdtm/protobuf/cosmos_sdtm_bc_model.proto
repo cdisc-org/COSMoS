@@ -24,10 +24,10 @@ message RelationShip
 message SDTMGroup
  {
   date packageDate = 0
-  sDTMDatasetSpecializationPackageTypeEnum packageType = 0
+  packageTypeEnum packageType = 0
+  string datasetSpecializationId = 0
   string domain = 0
   string shortName = 0
-  string datasetSpecializationId = 0
   string source = 0
   string sdtmigStartVersion = 0
   string sdtmigEndVersion = 0

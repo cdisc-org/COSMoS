@@ -1,5 +1,5 @@
 {
    "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
-   "cosmos": "https://www.cdisc.org/cosmos/1-0",
+   "cosmos_sdtm": "https://www.cdisc.org/cosmos/sdtm_v1.0/",
    "linkml": "https://w3id.org/linkml/"
 }

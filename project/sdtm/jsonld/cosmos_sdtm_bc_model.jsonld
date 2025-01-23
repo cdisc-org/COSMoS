@@ -1,6 +1,6 @@
 {
-  "name": "COSMoS-Biomedical-Concepts-Schema",
-  "id": "https://www.cdisc.org/cosmos/1-0",
+  "name": "COSMoS-Biomedical-Concepts-SDTM-Schema",
+  "id": "https://www.cdisc.org/cosmos/sdtm_v1.0",
   "imports": [
     "linkml:types"
   ],
@@ -11,15 +11,15 @@
       "prefix_reference": "https://w3id.org/linkml/"
     },
     {
-      "prefix_prefix": "cosmos",
-      "prefix_reference": "https://www.cdisc.org/cosmos/1-0"
+      "prefix_prefix": "cosmos_sdtm",
+      "prefix_reference": "https://www.cdisc.org/cosmos/sdtm_v1.0/"
     },
     {
       "prefix_prefix": "NCIT",
       "prefix_reference": "http://purl.obolibrary.org/obo/NCIT_"
     }
   ],
-  "default_prefix": "cosmos",
+  "default_prefix": "cosmos_sdtm",
   "default_range": "string",
   "types": [
     {
@@ -333,9 +333,9 @@
   ],
   "enums": [
     {
-      "name": "SDTMDatasetSpecializationPackageTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageTypeEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "name": "PackageTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
           "text": "sdtm"
@@ -344,30 +344,35 @@
     },
     {
       "name": "SDTMVariableDataTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0SDTMVariableDataTypeEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
-          "text": "datetime"
+          "text": "datetime",
+          "title": "datetime"
         },
         {
-          "text": "durationDatetime"
+          "text": "durationDatetime",
+          "title": "durationDatetime"
         },
         {
-          "text": "float"
+          "text": "float",
+          "title": "float"
         },
         {
-          "text": "integer"
+          "text": "integer",
+          "title": "integer"
         },
         {
-          "text": "text"
+          "text": "text",
+          "title": "text"
         }
       ]
     },
     {
       "name": "LinkingPhraseEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
           "text": "assesses seriousness of"
@@ -616,8 +621,8 @@
     },
     {
       "name": "PredicateTermEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0PredicateTermEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
           "text": "ASSESSES"
@@ -710,9 +715,9 @@
     },
     {
       "name": "OriginTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0OriginTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/OriginTypeEnum",
       "description": "Terminology relevant to the origin type for datasets in the Define-XML document.",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "code_set": "NCIT:C170449",
       "permissible_values": [
         {
@@ -744,9 +749,9 @@
     },
     {
       "name": "OriginSourceEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0OriginSourceEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/OriginSourceEnum",
       "description": "Terminology relevant to the origin source for datasets in the Define-XML document.",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "code_set": "NCIT:C170450",
       "permissible_values": [
         {
@@ -773,8 +778,8 @@
     },
     {
       "name": "RoleEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0RoleEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
           "text": "Identifier"
@@ -792,8 +797,8 @@
     },
     {
       "name": "ComparatorEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0ComparatorEnum",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "permissible_values": [
         {
           "text": "EQ"
@@ -807,10 +812,10 @@
   "slots": [
     {
       "name": "packageDate",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0packageDate",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/packageDate",
       "description": "Biomedical Concept package release date indicating when the BC package was published to production",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0packageDate",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/packageDate",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -821,38 +826,24 @@
     },
     {
       "name": "packageType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0packageType",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/packageType",
       "description": "Package type (sdtm for SDTM Dataset Specializations)",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0packageType",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/packageType",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
       ],
-      "range": "SDTMDatasetSpecializationPackageTypeEnum",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "domain",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0domain",
-      "description": "Domain for the SDTM specialization group",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0domain",
-      "owner": "SDTMGroup",
-      "domain_of": [
-        "SDTMGroup"
-      ],
-      "range": "string",
+      "range": "PackageTypeEnum",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
       "name": "datasetSpecializationId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0datasetSpecializationId",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/datasetSpecializationId",
       "description": "Identifier for SDTM Value Level Metadata group",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0datasetSpecializationId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/datasetSpecializationId",
       "identifier": true,
       "owner": "SDTMGroup",
       "domain_of": [
@@ -863,11 +854,25 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "domain",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/domain",
+      "description": "Domain for the SDTM specialization group",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/domain",
+      "owner": "SDTMGroup",
+      "domain_of": [
+        "SDTMGroup"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "source",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0source",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/source",
       "description": "SDTM VLM Source which categorizes VLM groups by topic variable",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0source",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/source",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -878,10 +883,10 @@
     },
     {
       "name": "shortName",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0shortName",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/shortName",
       "description": "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0shortName",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/shortName",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -892,10 +897,10 @@
     },
     {
       "name": "sdtmigStartVersion",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0sdtmigStartVersion",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/sdtmigStartVersion",
       "description": "The earliest SDTMIG version applicable to the BC dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0sdtmigStartVersion",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/sdtmigStartVersion",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -906,10 +911,10 @@
     },
     {
       "name": "sdtmigEndVersion",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0sdtmigEndVersion",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/sdtmigEndVersion",
       "description": "The last SDTMIG version that is applicable to the BC dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0sdtmigEndVersion",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/sdtmigEndVersion",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -919,10 +924,10 @@
     },
     {
       "name": "biomedicalConceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/biomedicalConceptId",
       "description": "Biomedical Concept identifier foreign key",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0biomedicalConceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/biomedicalConceptId",
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
@@ -934,10 +939,10 @@
     },
     {
       "name": "variables",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0variables",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/variables",
       "description": "Variable included in the SDTM dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0variables",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/variables",
       "multivalued": true,
       "owner": "SDTMGroup",
       "domain_of": [
@@ -951,10 +956,10 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0name",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/name",
       "description": "Variable included in the SDTM dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0name",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/name",
       "identifier": true,
       "owner": "SDTMVariable",
       "domain_of": [
@@ -966,10 +971,10 @@
     },
     {
       "name": "dataElementConceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/dataElementConceptId",
       "description": "Biomedical Concept Data Element Concept identifier foreign key",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0dataElementConceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/dataElementConceptId",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -980,10 +985,10 @@
     },
     {
       "name": "isNonStandard",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0isNonStandard",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/isNonStandard",
       "description": "Flag that indicates if the variable is a non-standard variable",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0isNonStandard",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/isNonStandard",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -993,10 +998,10 @@
     },
     {
       "name": "codelist",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0codelist",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/codelist",
       "description": "Codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0codelist",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/codelist",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1007,10 +1012,10 @@
     },
     {
       "name": "subsetCodelist",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0subsetCodelist",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetCodelist",
       "description": "Subset codelist short name",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0subsetCodelist",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetCodelist",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1020,10 +1025,10 @@
     },
     {
       "name": "conceptId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/conceptId",
       "description": "C-code for a codelist in NCIt",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/conceptId",
       "identifier": true,
       "owner": "CodeList",
       "domain_of": [
@@ -1036,10 +1041,10 @@
     },
     {
       "name": "href",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/href",
       "description": "Link to NCIt for the codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0href",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/href",
       "owner": "CodeList",
       "domain_of": [
         "CodeList"
@@ -1049,10 +1054,10 @@
     },
     {
       "name": "submissionValue",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0submissionValue",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/submissionValue",
       "description": "CDISC submission value for the codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0submissionValue",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/submissionValue",
       "owner": "CodeList",
       "domain_of": [
         "CodeList"
@@ -1063,10 +1068,10 @@
     },
     {
       "name": "parentCodelist",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0parentCodelist",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/parentCodelist",
       "description": "Subset codelist parent codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0parentCodelist",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/parentCodelist",
       "owner": "SubsetCodeList",
       "domain_of": [
         "SubsetCodeList"
@@ -1077,10 +1082,10 @@
     },
     {
       "name": "subsetShortName",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0subsetShortName",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetShortName",
       "description": "Subset codelist short name",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0subsetShortName",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetShortName",
       "owner": "SubsetCodeList",
       "domain_of": [
         "SubsetCodeList"
@@ -1091,10 +1096,10 @@
     },
     {
       "name": "subsetLabel",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0subsetLabel",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetLabel",
       "description": "Subset codelist label",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0subsetLabel",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subsetLabel",
       "owner": "SubsetCodeList",
       "domain_of": [
         "SubsetCodeList"
@@ -1105,9 +1110,10 @@
     },
     {
       "name": "codelistTerm",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0codelistTerm",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0codelistTerm",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/codelistTerm",
+      "description": "Term in subset codelist",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/codelistTerm",
       "multivalued": true,
       "owner": "SubsetCodeList",
       "domain_of": [
@@ -1121,24 +1127,25 @@
     },
     {
       "name": "termId",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0termId",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/termId",
       "description": "C-code term in subset codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0termId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/termId",
       "owner": "CodeListTerm",
       "domain_of": [
         "CodeListTerm"
       ],
       "range": "string",
       "required": true,
+      "pattern": "^(C[0123456789]+)$",
       "@type": "SlotDefinition"
     },
     {
       "name": "termValue",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0termValue",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/termValue",
       "description": "Submision value of term in subset codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0termValue",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/termValue",
       "owner": "CodeListTerm",
       "domain_of": [
         "CodeListTerm"
@@ -1149,10 +1156,10 @@
     },
     {
       "name": "valueList",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0valueList",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/valueList",
       "description": "List of SDTM submission values used if subset codelist is not applicable",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0valueList",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/valueList",
       "multivalued": true,
       "owner": "SDTMVariable",
       "domain_of": [
@@ -1164,9 +1171,10 @@
     },
     {
       "name": "assignedTerm",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0assignedTerm",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0assignedTerm",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/assignedTerm",
+      "description": "Assigned term",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/assignedTerm",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1177,10 +1185,10 @@
     },
     {
       "name": "role",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0role",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/role",
       "description": "SDTM variable role",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0role",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/role",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1190,9 +1198,10 @@
     },
     {
       "name": "relationship",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0relationship",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0relationship",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/relationship",
+      "description": "Relationship between variables",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/relationship",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1203,10 +1212,10 @@
     },
     {
       "name": "subject",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0subject",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subject",
       "description": "Subject in a variable relationship",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0subject",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/subject",
       "owner": "RelationShip",
       "domain_of": [
         "RelationShip"
@@ -1217,10 +1226,10 @@
     },
     {
       "name": "linkingPhrase",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0linkingPhrase",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/linkingPhrase",
       "description": "Variable relationship descriptive linking phrase",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0linkingPhrase",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/linkingPhrase",
       "owner": "RelationShip",
       "domain_of": [
         "RelationShip"
@@ -1231,10 +1240,10 @@
     },
     {
       "name": "predicateTerm",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/predicateTerm",
       "description": "Short variable relationship linking phrase for programming purposes",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0predicateTerm",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/predicateTerm",
       "owner": "RelationShip",
       "domain_of": [
         "RelationShip"
@@ -1245,10 +1254,10 @@
     },
     {
       "name": "object",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0object",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/object",
       "description": "Object in a variable relationship",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0object",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/object",
       "owner": "RelationShip",
       "domain_of": [
         "RelationShip"
@@ -1259,10 +1268,10 @@
     },
     {
       "name": "dataType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0dataType",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/dataType",
       "description": "Variable data type",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0dataType",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/dataType",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1272,10 +1281,10 @@
     },
     {
       "name": "length",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0length",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/length",
       "description": "Variable length",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0length",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/length",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1286,10 +1295,10 @@
     },
     {
       "name": "format",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0format",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/format",
       "description": "Variable display format",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0format",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/format",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1299,10 +1308,10 @@
     },
     {
       "name": "significantDigits",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0significantDigits",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/significantDigits",
       "description": "Variable significant_digits",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0significantDigits",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/significantDigits",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1312,10 +1321,10 @@
     },
     {
       "name": "mandatoryVariable",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0mandatoryVariable",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/mandatoryVariable",
       "description": "Indicator that variable must be present within the SDTM group",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0mandatoryVariable",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/mandatoryVariable",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1325,10 +1334,10 @@
     },
     {
       "name": "mandatoryValue",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0mandatoryValue",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/mandatoryValue",
       "description": "Indicator that variable must be populated within the SDTM group",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0mandatoryValue",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/mandatoryValue",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1338,10 +1347,10 @@
     },
     {
       "name": "originType",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0originType",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/originType",
       "description": "Variable origin type (define-XML v21)",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0originType",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/originType",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1351,10 +1360,10 @@
     },
     {
       "name": "originSource",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0originSource",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/originSource",
       "description": "Variable origin source (define-XML v21)",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0originSource",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/originSource",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1364,10 +1373,10 @@
     },
     {
       "name": "comparator",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0comparator",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/comparator",
       "description": "Comparison operator for SDTM group variables included in VLM",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0comparator",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/comparator",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1377,10 +1386,10 @@
     },
     {
       "name": "vlmTarget",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0vlmTarget",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/vlmTarget",
       "description": "Target variable for VLM",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0vlmTarget",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/vlmTarget",
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
@@ -1391,21 +1400,22 @@
     {
       "name": "assignedTerm__conceptId",
       "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0conceptId",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/conceptId",
       "alias": "conceptId",
       "owner": "AssignedTerm",
       "domain_of": [
         "AssignedTerm"
       ],
       "range": "string",
+      "pattern": "^(C[0123456789]+)$",
       "@type": "SlotDefinition"
     },
     {
       "name": "assignedTerm__value",
       "description": "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
-      "slot_uri": "https://www.cdisc.org/cosmos/1-0value",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/value",
       "alias": "value",
       "owner": "AssignedTerm",
       "domain_of": [
@@ -1419,14 +1429,14 @@
   "classes": [
     {
       "name": "SDTMGroup",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0SDTMGroup",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMGroup",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "packageDate",
         "packageType",
+        "datasetSpecializationId",
         "domain",
         "shortName",
-        "datasetSpecializationId",
         "source",
         "sdtmigStartVersion",
         "sdtmigEndVersion",
@@ -1434,14 +1444,14 @@
         "variables"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0SDTMGroup",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMGroup",
       "tree_root": true,
       "@type": "ClassDefinition"
     },
     {
       "name": "SDTMVariable",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0SDTMVariable",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariable",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "name",
         "dataElementConceptId",
@@ -1464,13 +1474,13 @@
         "vlmTarget"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0SDTMVariable",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariable",
       "@type": "ClassDefinition"
     },
     {
       "name": "RelationShip",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0RelationShip",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/RelationShip",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "subject",
         "linkingPhrase",
@@ -1478,38 +1488,38 @@
         "object"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0RelationShip",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/RelationShip",
       "@type": "ClassDefinition"
     },
     {
       "name": "CodeList",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0CodeList",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/CodeList",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "conceptId",
         "href",
         "submissionValue"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0CodeList",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/CodeList",
       "@type": "ClassDefinition"
     },
     {
       "name": "CodeListTerm",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0CodeListTerm",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/CodeListTerm",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "termId",
         "termValue"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0CodeListTerm",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/CodeListTerm",
       "@type": "ClassDefinition"
     },
     {
       "name": "SubsetCodeList",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0SubsetCodeList",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SubsetCodeList",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "parentCodelist",
         "subsetShortName",
@@ -1517,13 +1527,13 @@
         "codelistTerm"
       ],
       "slot_usage": {},
-      "class_uri": "https://www.cdisc.org/cosmos/1-0SubsetCodeList",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/SubsetCodeList",
       "@type": "ClassDefinition"
     },
     {
       "name": "AssignedTerm",
-      "definition_uri": "https://www.cdisc.org/cosmos/1-0AssignedTerm",
-      "from_schema": "https://www.cdisc.org/cosmos/1-0",
+      "definition_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/AssignedTerm",
+      "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slots": [
         "assignedTerm__conceptId",
         "assignedTerm__value"
@@ -1533,6 +1543,8 @@
         {
           "name": "conceptId",
           "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
+          "range": "string",
+          "pattern": "^(C[0123456789]+)$",
           "@type": "SlotDefinition"
         },
         {
@@ -1543,21 +1555,21 @@
           "@type": "SlotDefinition"
         }
       ],
-      "class_uri": "https://www.cdisc.org/cosmos/1-0AssignedTerm",
+      "class_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/AssignedTerm",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-01-16T10:27:56",
-  "source_file_size": 14113,
-  "generation_date": "2025-01-16T10:37:27",
+  "source_file_date": "2025-01-23T13:47:55",
+  "source_file_size": 14585,
+  "generation_date": "2025-01-23T13:48:14",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://www.cdisc.org/cosmos/1-0"
+      "@base": "https://www.cdisc.org/cosmos/sdtm_v1.0/"
     }
   ]
 }

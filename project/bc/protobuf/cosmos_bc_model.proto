@@ -1,12 +1,12 @@
 message BiomedicalConcept
  {
+  date packageDate = 0
+  packageTypeEnum packageType = 0
   string conceptId = 0
   string ncitCode = 0
   uri href = 0
-  date packageDate = 0
-  biomedicalConceptPackageTypeEnum packageType = 0
- repeated  string categories = 0
   string parentConceptId = 0
+ repeated  string categories = 0
   string shortName = 0
  repeated  string synonyms = 0
  repeated  biomedicalConceptResultScaleEnum resultScales = 0

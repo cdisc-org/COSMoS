@@ -1,0 +1,275 @@
+id: https://www.cdisc.org/cosmos/collection_v1.0
+name: COSMoS-Biomedical-Concepts-Collection-Schema
+
+imports:
+  - linkml:types
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cosmos_collection: https://www.cdisc.org/cosmos/collection_v1.0
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+
+default_prefix: cosmos_collection
+default_range: string
+
+classes:
+
+  DataCollectionGroup:
+    tree_root: true
+    slots:
+      - packageDate
+      - packageType
+      - datasetSpecializationId
+      - standard
+      - domain
+      - shortName
+      - collectionigStartVersion
+      - collectionigEndVersion
+      - biomedicalConceptId
+      - sdtmDatasetSpecializationId
+      - items
+
+  DataCollectionItem:
+    slots:
+      - name
+      - dataElementConceptId
+      - isNonStandard
+      - eCRFItem
+      - questionText
+      - prompt
+      - orderNumber
+      - codelist
+      - valueList
+      - listStyle
+      - prepopulatedValue
+      - displayHidden
+      - dataType
+      - length
+      - significantDigits
+      - mandatoryVariable
+      - cdashigCore
+      - sdtmTarget
+
+  CodeList:
+    slots:
+      - conceptId
+      - href
+      - submissionValue
+
+  ListValue:
+    attributes:
+      value:
+        description: CDISC submission value for the data collection item
+        range: string
+        required: true
+      displayValue:
+        description: User-friendly display value for the data collection item
+        range: string
+
+  PrepopulatedValue:
+    attributes:
+      conceptId:
+        description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
+        range: string
+        pattern: "^(C[0123456789]+)$"
+        required: false
+      value:
+        description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
+        range: string
+        required: true
+
+  SDTMTarget:
+    slots:
+      - sdtmVariable
+      - sdtmAnnotation
+      - sdtmTargetMapping
+
+slots:
+
+  packageDate:
+    description: Biomedical Concept package release date indicating when the BC package was published to production
+    range: date
+    required: true
+  packageType:
+    description: Package type (collection for Data Dollection Dataset Specializations)
+    range: PackageTypeEnum
+    required: true
+  datasetSpecializationId:
+    description: Identifier for data collection specialization group
+    identifier: true
+    range: string
+    required: true
+  standard:
+    description: Standard for the data collection specialization group
+    range: string
+    required: true
+  domain:
+    description: Domain for the data collection specialization group
+    range: string
+    required: true
+  shortName:
+    description: Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId
+    range: string
+    required: true
+  collectionigStartVersion:
+    description: The earliest data collection IG version applicable to the BC dataset specialization
+    range: string
+    required: true
+  collectionigEndVersion:
+    description: The last data collection IG version that is applicable to the BC dataset specialization
+    range: string
+  biomedicalConceptId:
+    description: Biomedical Concept identifier foreign key
+    range: string
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    recommended: true
+  sdtmDatasetSpecializationId:
+    description: Identifier for SDTM Dataset Specialization group
+    range: string
+  items:
+    description: Item included in the Data Collection dataset specialization
+    range: DataCollectionItem
+    required: true
+    multivalued: true
+    inlined_as_list: true
+
+  name:
+    description: Item included in the data collection dataset specialization
+    identifier: true
+    range: string
+  dataElementConceptId:
+      description: Biomedical Concept Data Element Concept identifier foreign key
+      range: string
+      pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+  isNonStandard:
+    description: Flag that indicates if the variable is a non-standard variable
+    range: boolean
+  eCRFItem:
+    description: Variable included in the data collection dataset specialization used for eCSR set-up
+    range: string
+    required: true
+  questionText:
+    description: Data collection item question text
+    range: string
+    recommended: true
+  prompt:
+    description: Data collection item prompt
+    range: string
+    recommended: true
+  orderNumber:
+    description: Data collection item order number
+    range: integer
+    required: true
+  codelist:
+    description: Codelist
+    range: CodeList
+    inlined: true
+  prepopulatedValue:
+    description: Pre-populated value on a CRF
+    range: PrepopulatedValue
+  displayHidden:
+    description: Indicator that the item is hidden from the user
+    range: boolean
+
+  conceptId:
+    description: C-code for a codelist in NCIt
+    identifier: true
+    range: string
+    pattern: "^(C[0123456789]+)$"
+    required: true
+  href:
+    description: Link to NCIt for the codelist
+    range: uri
+  submissionValue:
+    description: CDISC submission value for the codelist
+    required: true
+
+  valueList:
+    description: A set of valid CDISC submission values for a data collection item
+    range: ListValue
+    multivalued: true
+    inlined_as_list: true
+  valueDisplayList:
+    description: A set of valid user-friendly CDISC submission values for a data collection item
+    range: string
+    multivalued: true
+    inlined_as_list: true
+  listStyle:
+    description: Type of list used for eCRF set-up
+    range: ListTypeEnum
+
+  sdtmTarget:
+    description: SDTM target variables for data collection item variable
+    range: SDTMTarget
+    multivalued: true
+    inlined_as_list: true
+  sdtmVariable:
+    description: SDTM target variable for data collection item variable
+    range: string
+    required: true
+  sdtmAnnotation:
+    description: Annotation of the SDTM target as it should appear on the eCRF
+    range: string
+  sdtmTargetMapping:
+    description: Rule for mapping from data collection item to SDTM target variable.
+    range: string
+    required: true
+
+  dataType:
+    description: Item data type
+    range: CollectionItemDataTypeEnum
+    required: true
+  length:
+    description: Variable length
+    range: integer
+    minimum_value: 1
+  significantDigits:
+    description: Variable significant_digits
+    range: integer
+  mandatoryVariable:
+    description: Indicator that the item must be present within the data collection group
+    range: boolean
+  cdashigCore:
+    description: Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'
+    range: CDASHIGCore
+    recommended: true
+
+enums:
+
+  PackageTypeEnum:
+    permissible_values:
+      collection:
+
+  CDASHIGCore:
+    permissible_values:
+      HR:
+      R/C:
+      O:
+
+  CollectionItemDataTypeEnum:
+    permissible_values:
+      decimal:
+        title: decimal
+      float:
+        title: float
+      integer:
+        title: integer
+      text:
+        title: text
+      date:
+        title: date
+      time:
+        title: time
+
+  ListTypeEnum:
+    permissible_values:
+      Radio:
+      Dropdown:
+      DropdownMultiSelect:
+      Checkbox:
+      Text:
+      Date:
+      Time:
+      DateTime:
+
+

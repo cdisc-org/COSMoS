@@ -1,0 +1,90 @@
+{
+   "_comments": "Auto generated from cosmos_collection_bc_model.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2025-01-23T15:38:46\n    Schema: COSMoS-Biomedical-Concepts-Collection-Schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://www.cdisc.org/cosmos/collection_v1.0\n    description: \n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "NCIT": {
+         "@id": "http://purl.obolibrary.org/obo/NCIT_",
+         "@prefix": true
+      },
+      "cosmos_collection": {
+         "@id": "https://www.cdisc.org/cosmos/collection_v1.0",
+         "@prefix": true
+      },
+      "linkml": "https://w3id.org/linkml/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "cdashigCore": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "codelist": {
+         "@type": "@id"
+      },
+      "conceptId": "@id",
+      "datasetSpecializationId": "@id",
+      "dataType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "displayHidden": {
+         "@type": "xsd:boolean"
+      },
+      "href": {
+         "@type": "@id"
+      },
+      "isNonStandard": {
+         "@type": "xsd:boolean"
+      },
+      "items": {
+         "@type": "@id"
+      },
+      "length": {
+         "@type": "xsd:integer"
+      },
+      "listStyle": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "mandatoryVariable": {
+         "@type": "xsd:boolean"
+      },
+      "name": "@id",
+      "orderNumber": {
+         "@type": "xsd:integer"
+      },
+      "packageDate": {
+         "@type": "xsd:date"
+      },
+      "packageType": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "prepopulatedValue": {
+         "@type": "@id"
+      },
+      "sdtmTarget": {
+         "@type": "@id"
+      },
+      "significantDigits": {
+         "@type": "xsd:integer"
+      },
+      "valueList": {
+         "@type": "@id"
+      }
+   }
+}

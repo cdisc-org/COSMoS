@@ -1,11 +1,11 @@
 
 
 CREATE TABLE "BiomedicalConcept" (
+	"packageDate" DATE NOT NULL, 
+	"packageType" VARCHAR(2) NOT NULL, 
 	"conceptId" TEXT NOT NULL, 
 	"ncitCode" TEXT, 
 	href TEXT, 
-	"packageDate" DATE NOT NULL, 
-	"packageType" VARCHAR(2) NOT NULL, 
 	"parentConceptId" TEXT, 
 	"shortName" TEXT NOT NULL, 
 	definition TEXT NOT NULL, 

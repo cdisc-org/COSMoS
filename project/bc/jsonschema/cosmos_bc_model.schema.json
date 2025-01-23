@@ -12,6 +12,7 @@
                "type": "array"
             },
             "coding": {
+               "description": "Coding for the Biomedical Concept",
                "items": {
                   "$ref": "#/$defs/Coding"
                },
@@ -48,7 +49,7 @@
                "type": "string"
             },
             "packageType": {
-               "$ref": "#/$defs/BiomedicalConceptPackageTypeEnum",
+               "$ref": "#/$defs/PackageTypeEnum",
                "description": "Package type (bc for Biomedical Concepts)"
             },
             "parentConceptId": {
@@ -75,23 +76,15 @@
             }
          },
          "required": [
-            "conceptId",
             "packageDate",
             "packageType",
+            "conceptId",
             "categories",
             "shortName",
             "definition"
          ],
          "title": "BiomedicalConcept",
          "type": "object"
-      },
-      "BiomedicalConceptPackageTypeEnum": {
-         "description": "",
-         "enum": [
-            "bc"
-         ],
-         "title": "BiomedicalConceptPackageTypeEnum",
-         "type": "string"
       },
       "BiomedicalConceptResultScaleEnum": {
          "description": "",
@@ -185,9 +178,17 @@
          ],
          "title": "DataElementConceptDataTypeEnum",
          "type": "string"
+      },
+      "PackageTypeEnum": {
+         "description": "",
+         "enum": [
+            "bc"
+         ],
+         "title": "PackageTypeEnum",
+         "type": "string"
       }
    },
-   "$id": "https://www.cdisc.org/cosmos/1-0",
+   "$id": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
    "$schema": "http://json-schema.org/draft-07/schema#",
    "additionalProperties": true,
    "metamodel_version": "1.7.0",
@@ -200,6 +201,7 @@
          "type": "array"
       },
       "coding": {
+         "description": "Coding for the Biomedical Concept",
          "items": {
             "$ref": "#/$defs/Coding"
          },
@@ -236,7 +238,7 @@
          "type": "string"
       },
       "packageType": {
-         "$ref": "#/$defs/BiomedicalConceptPackageTypeEnum",
+         "$ref": "#/$defs/PackageTypeEnum",
          "description": "Package type (bc for Biomedical Concepts)"
       },
       "parentConceptId": {
@@ -263,9 +265,9 @@
       }
    },
    "required": [
-      "conceptId",
       "packageDate",
       "packageType",
+      "conceptId",
       "categories",
       "shortName",
       "definition"

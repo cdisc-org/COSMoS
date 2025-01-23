@@ -1,12 +1,12 @@
 type BiomedicalConcept
   {
+    packageDate: Date!
+    packageType: PackageTypeEnum!
     conceptId: String!
     ncitCode: String
     href: Uri
-    packageDate: Date!
-    packageType: BiomedicalConceptPackageTypeEnum!
-    categories: [String]!
     parentConceptId: String
+    categories: [String]!
     shortName: String!
     synonyms: [String]
     resultScales: [BiomedicalConceptResultScaleEnum]
