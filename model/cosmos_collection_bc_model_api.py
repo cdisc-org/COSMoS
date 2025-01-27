@@ -45,7 +45,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
              length: Union[str, MatchExpression] = None,
              significantDigits: Union[str, MatchExpression] = None,
              mandatoryVariable: Union[str, MatchExpression] = None,
-             cdashigCore: Union[str, MatchExpression] = None,
              sdtmTarget: Union[str, MatchExpression] = None,
              
              _extra: Any = None) -> List[DataCollectionItem]:
@@ -68,7 +67,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
         :param length: Variable length
         :param significantDigits: Variable significant_digits
         :param mandatoryVariable: Indicator that the item must be present within the data collection group
-        :param cdashigCore: Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'
         :param sdtmTarget: SDTM target variables for data collection item variable
         
         :return: Person list matching constraints
@@ -106,8 +104,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
                                                  significantDigits=significantDigits,
                                                  
                                                  mandatoryVariable=mandatoryVariable,
-                                                 
-                                                 cdashigCore=cdashigCore,
                                                  
                                                  sdtmTarget=sdtmTarget,
                                                  

@@ -11,10 +11,10 @@ type DataCollectionGroup
     packageType: PackageTypeEnum!
     datasetSpecializationId: String!
     standard: String!
-    domain: String!
+    standardStartVersion: String!
+    standardEndVersion: String
+    domain: String
     shortName: String!
-    collectionigStartVersion: String!
-    collectionigEndVersion: String
     biomedicalConceptId: String
     sdtmDatasetSpecializationId: String
     items: [DataCollectionItem]!
@@ -37,15 +37,14 @@ type DataCollectionItem
     dataType: CollectionItemDataTypeEnum!
     length: Integer
     significantDigits: Integer
-    mandatoryVariable: Boolean
-    cdashigCore: CDASHIGCore
+    mandatoryVariable: Boolean!
     sdtmTarget: [SDTMTarget]
   }
 
 type ListValue
   {
-    value: String!
-    displayValue: String
+    value: String
+    displayValue: String!
   }
 
 type PrepopulatedValue

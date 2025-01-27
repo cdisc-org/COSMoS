@@ -57,10 +57,10 @@ linkml:Sparqlpath xsd:string
           <https://www.cdisc.org/cosmos/collection_v1.0packageType> @<https://www.cdisc.org/cosmos/collection_v1.0PackageTypeEnum>
           ;
           <https://www.cdisc.org/cosmos/collection_v1.0standard> @linkml:String ;
-          <https://www.cdisc.org/cosmos/collection_v1.0domain> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0standardStartVersion> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0standardEndVersion> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0domain> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0shortName> @linkml:String ;
-          <https://www.cdisc.org/cosmos/collection_v1.0collectionigStartVersion> @linkml:String ;
-          <https://www.cdisc.org/cosmos/collection_v1.0collectionigEndVersion> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0biomedicalConceptId> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0sdtmDatasetSpecializationId> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0items> @<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem> +
@@ -87,8 +87,7 @@ linkml:Sparqlpath xsd:string
           @<https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum> ;
           <https://www.cdisc.org/cosmos/collection_v1.0length> @linkml:Integer ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0significantDigits> @linkml:Integer ? ;
-          <https://www.cdisc.org/cosmos/collection_v1.0mandatoryVariable> @linkml:Boolean ? ;
-          <https://www.cdisc.org/cosmos/collection_v1.0cdashigCore> @<https://www.cdisc.org/cosmos/collection_v1.0CDASHIGCore> ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0mandatoryVariable> @linkml:Boolean ;
           <https://www.cdisc.org/cosmos/collection_v1.0sdtmTarget> @<https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> *
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem> ]
@@ -97,8 +96,8 @@ linkml:Sparqlpath xsd:string
 
 <https://www.cdisc.org/cosmos/collection_v1.0ListValue> CLOSED {
     (  $<https://www.cdisc.org/cosmos/collection_v1.0ListValue_tes> (  <https://www.cdisc.org/cosmos/collection_v1.0value>
-          @linkml:String ;
-          <https://www.cdisc.org/cosmos/collection_v1.0displayValue> @linkml:String ?
+          @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0displayValue> @linkml:String
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0ListValue> ] ?
     )

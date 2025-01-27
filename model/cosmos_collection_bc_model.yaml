@@ -21,10 +21,10 @@ classes:
       - packageType
       - datasetSpecializationId
       - standard
+      - standardStartVersion
+      - standardEndVersion
       - domain
       - shortName
-      - collectionigStartVersion
-      - collectionigEndVersion
       - biomedicalConceptId
       - sdtmDatasetSpecializationId
       - items
@@ -47,7 +47,6 @@ classes:
       - length
       - significantDigits
       - mandatoryVariable
-      - cdashigCore
       - sdtmTarget
 
   CodeList:
@@ -61,10 +60,10 @@ classes:
       value:
         description: CDISC submission value for the data collection item
         range: string
-        required: true
       displayValue:
         description: User-friendly display value for the data collection item
         range: string
+        required: true
 
   PrepopulatedValue:
     attributes:
@@ -103,21 +102,20 @@ slots:
     description: Standard for the data collection specialization group
     range: string
     required: true
+  standardStartVersion:
+    description: The earliest data collection IG version applicable to the BC dataset specialization
+    range: string
+    required: true
+  standardEndVersion:
+    description: The last data collection IG version that is applicable to the BC dataset specialization
+    range: string
   domain:
     description: Domain for the data collection specialization group
     range: string
-    required: true
   shortName:
     description: Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId
     range: string
     required: true
-  collectionigStartVersion:
-    description: The earliest data collection IG version applicable to the BC dataset specialization
-    range: string
-    required: true
-  collectionigEndVersion:
-    description: The last data collection IG version that is applicable to the BC dataset specialization
-    range: string
   biomedicalConceptId:
     description: Biomedical Concept identifier foreign key
     range: string
@@ -229,10 +227,7 @@ slots:
   mandatoryVariable:
     description: Indicator that the item must be present within the data collection group
     range: boolean
-  cdashigCore:
-    description: Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'
-    range: CDASHIGCore
-    recommended: true
+    required: true
 
 enums:
 

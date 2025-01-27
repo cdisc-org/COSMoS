@@ -5,10 +5,10 @@ DataCollectionGroup {
     PackageTypeEnum packageType  
     string datasetSpecializationId  
     string standard  
+    string standardStartVersion  
+    string standardEndVersion  
     string domain  
     string shortName  
-    string collectionigStartVersion  
-    string collectionigEndVersion  
     string biomedicalConceptId  
     string sdtmDatasetSpecializationId  
 }
@@ -26,7 +26,6 @@ DataCollectionItem {
     integer length  
     integer significantDigits  
     boolean mandatoryVariable  
-    CDASHIGCore cdashigCore  
 }
 CodeList {
     string conceptId  

@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2025-01-23T15:38:50
+# Generation date: 2025-01-27T15:05:11
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -66,11 +66,11 @@ class DataCollectionGroup(YAMLRoot):
     packageDate: Union[str, XSDDate] = None
     packageType: Union[str, "PackageTypeEnum"] = None
     standard: str = None
-    domain: str = None
+    standardStartVersion: str = None
     shortName: str = None
-    collectionigStartVersion: str = None
     items: Union[Dict[Union[str, DataCollectionItemName], Union[dict, "DataCollectionItem"]], List[Union[dict, "DataCollectionItem"]]] = empty_dict()
-    collectionigEndVersion: Optional[str] = None
+    standardEndVersion: Optional[str] = None
+    domain: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
     sdtmDatasetSpecializationId: Optional[str] = None
 
@@ -95,27 +95,25 @@ class DataCollectionGroup(YAMLRoot):
         if not isinstance(self.standard, str):
             self.standard = str(self.standard)
 
-        if self._is_empty(self.domain):
-            self.MissingRequiredField("domain")
-        if not isinstance(self.domain, str):
-            self.domain = str(self.domain)
+        if self._is_empty(self.standardStartVersion):
+            self.MissingRequiredField("standardStartVersion")
+        if not isinstance(self.standardStartVersion, str):
+            self.standardStartVersion = str(self.standardStartVersion)
 
         if self._is_empty(self.shortName):
             self.MissingRequiredField("shortName")
         if not isinstance(self.shortName, str):
             self.shortName = str(self.shortName)
 
-        if self._is_empty(self.collectionigStartVersion):
-            self.MissingRequiredField("collectionigStartVersion")
-        if not isinstance(self.collectionigStartVersion, str):
-            self.collectionigStartVersion = str(self.collectionigStartVersion)
-
         if self._is_empty(self.items):
             self.MissingRequiredField("items")
         self._normalize_inlined_as_list(slot_name="items", slot_type=DataCollectionItem, key_name="name", keyed=True)
 
-        if self.collectionigEndVersion is not None and not isinstance(self.collectionigEndVersion, str):
-            self.collectionigEndVersion = str(self.collectionigEndVersion)
+        if self.standardEndVersion is not None and not isinstance(self.standardEndVersion, str):
+            self.standardEndVersion = str(self.standardEndVersion)
+
+        if self.domain is not None and not isinstance(self.domain, str):
+            self.domain = str(self.domain)
 
         if self.biomedicalConceptId is not None and not isinstance(self.biomedicalConceptId, str):
             self.biomedicalConceptId = str(self.biomedicalConceptId)
@@ -139,6 +137,7 @@ class DataCollectionItem(YAMLRoot):
     eCRFItem: str = None
     orderNumber: int = None
     dataType: Union[str, "CollectionItemDataTypeEnum"] = None
+    mandatoryVariable: Union[bool, Bool] = None
     dataElementConceptId: Optional[str] = None
     isNonStandard: Optional[Union[bool, Bool]] = None
     questionText: Optional[str] = None
@@ -150,8 +149,6 @@ class DataCollectionItem(YAMLRoot):
     displayHidden: Optional[Union[bool, Bool]] = None
     length: Optional[int] = None
     significantDigits: Optional[int] = None
-    mandatoryVariable: Optional[Union[bool, Bool]] = None
-    cdashigCore: Optional[Union[str, "CDASHIGCore"]] = None
     sdtmTarget: Optional[Union[Union[dict, "SDTMTarget"], List[Union[dict, "SDTMTarget"]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -174,6 +171,11 @@ class DataCollectionItem(YAMLRoot):
             self.MissingRequiredField("dataType")
         if not isinstance(self.dataType, CollectionItemDataTypeEnum):
             self.dataType = CollectionItemDataTypeEnum(self.dataType)
+
+        if self._is_empty(self.mandatoryVariable):
+            self.MissingRequiredField("mandatoryVariable")
+        if not isinstance(self.mandatoryVariable, Bool):
+            self.mandatoryVariable = Bool(self.mandatoryVariable)
 
         if self.dataElementConceptId is not None and not isinstance(self.dataElementConceptId, str):
             self.dataElementConceptId = str(self.dataElementConceptId)
@@ -208,12 +210,6 @@ class DataCollectionItem(YAMLRoot):
 
         if self.significantDigits is not None and not isinstance(self.significantDigits, int):
             self.significantDigits = int(self.significantDigits)
-
-        if self.mandatoryVariable is not None and not isinstance(self.mandatoryVariable, Bool):
-            self.mandatoryVariable = Bool(self.mandatoryVariable)
-
-        if self.cdashigCore is not None and not isinstance(self.cdashigCore, CDASHIGCore):
-            self.cdashigCore = CDASHIGCore(self.cdashigCore)
 
         if not isinstance(self.sdtmTarget, list):
             self.sdtmTarget = [self.sdtmTarget] if self.sdtmTarget is not None else []
@@ -261,17 +257,17 @@ class ListValue(YAMLRoot):
     class_name: ClassVar[str] = "ListValue"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.ListValue
 
-    value: str = None
-    displayValue: Optional[str] = None
+    displayValue: str = None
+    value: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.value):
-            self.MissingRequiredField("value")
-        if not isinstance(self.value, str):
-            self.value = str(self.value)
-
-        if self.displayValue is not None and not isinstance(self.displayValue, str):
+        if self._is_empty(self.displayValue):
+            self.MissingRequiredField("displayValue")
+        if not isinstance(self.displayValue, str):
             self.displayValue = str(self.displayValue)
+
+        if self.value is not None and not isinstance(self.value, str):
+            self.value = str(self.value)
 
         super().__post_init__(**kwargs)
 
@@ -397,17 +393,17 @@ slots.datasetSpecializationId = Slot(uri=COSMOS_COLLECTION.datasetSpecialization
 slots.standard = Slot(uri=COSMOS_COLLECTION.standard, name="standard", curie=COSMOS_COLLECTION.curie('standard'),
                    model_uri=COSMOS_COLLECTION.standard, domain=None, range=str)
 
+slots.standardStartVersion = Slot(uri=COSMOS_COLLECTION.standardStartVersion, name="standardStartVersion", curie=COSMOS_COLLECTION.curie('standardStartVersion'),
+                   model_uri=COSMOS_COLLECTION.standardStartVersion, domain=None, range=str)
+
+slots.standardEndVersion = Slot(uri=COSMOS_COLLECTION.standardEndVersion, name="standardEndVersion", curie=COSMOS_COLLECTION.curie('standardEndVersion'),
+                   model_uri=COSMOS_COLLECTION.standardEndVersion, domain=None, range=Optional[str])
+
 slots.domain = Slot(uri=COSMOS_COLLECTION.domain, name="domain", curie=COSMOS_COLLECTION.curie('domain'),
-                   model_uri=COSMOS_COLLECTION.domain, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.domain, domain=None, range=Optional[str])
 
 slots.shortName = Slot(uri=COSMOS_COLLECTION.shortName, name="shortName", curie=COSMOS_COLLECTION.curie('shortName'),
                    model_uri=COSMOS_COLLECTION.shortName, domain=None, range=str)
-
-slots.collectionigStartVersion = Slot(uri=COSMOS_COLLECTION.collectionigStartVersion, name="collectionigStartVersion", curie=COSMOS_COLLECTION.curie('collectionigStartVersion'),
-                   model_uri=COSMOS_COLLECTION.collectionigStartVersion, domain=None, range=str)
-
-slots.collectionigEndVersion = Slot(uri=COSMOS_COLLECTION.collectionigEndVersion, name="collectionigEndVersion", curie=COSMOS_COLLECTION.curie('collectionigEndVersion'),
-                   model_uri=COSMOS_COLLECTION.collectionigEndVersion, domain=None, range=Optional[str])
 
 slots.biomedicalConceptId = Slot(uri=COSMOS_COLLECTION.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS_COLLECTION.curie('biomedicalConceptId'),
                    model_uri=COSMOS_COLLECTION.biomedicalConceptId, domain=None, range=Optional[str],
@@ -491,16 +487,13 @@ slots.significantDigits = Slot(uri=COSMOS_COLLECTION.significantDigits, name="si
                    model_uri=COSMOS_COLLECTION.significantDigits, domain=None, range=Optional[int])
 
 slots.mandatoryVariable = Slot(uri=COSMOS_COLLECTION.mandatoryVariable, name="mandatoryVariable", curie=COSMOS_COLLECTION.curie('mandatoryVariable'),
-                   model_uri=COSMOS_COLLECTION.mandatoryVariable, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.cdashigCore = Slot(uri=COSMOS_COLLECTION.cdashigCore, name="cdashigCore", curie=COSMOS_COLLECTION.curie('cdashigCore'),
-                   model_uri=COSMOS_COLLECTION.cdashigCore, domain=None, range=Optional[Union[str, "CDASHIGCore"]])
+                   model_uri=COSMOS_COLLECTION.mandatoryVariable, domain=None, range=Union[bool, Bool])
 
 slots.listValue__value = Slot(uri=COSMOS_COLLECTION.value, name="listValue__value", curie=COSMOS_COLLECTION.curie('value'),
-                   model_uri=COSMOS_COLLECTION.listValue__value, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.listValue__value, domain=None, range=Optional[str])
 
 slots.listValue__displayValue = Slot(uri=COSMOS_COLLECTION.displayValue, name="listValue__displayValue", curie=COSMOS_COLLECTION.curie('displayValue'),
-                   model_uri=COSMOS_COLLECTION.listValue__displayValue, domain=None, range=Optional[str])
+                   model_uri=COSMOS_COLLECTION.listValue__displayValue, domain=None, range=str)
 
 slots.prepopulatedValue__conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="prepopulatedValue__conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
                    model_uri=COSMOS_COLLECTION.prepopulatedValue__conceptId, domain=None, range=Optional[str],

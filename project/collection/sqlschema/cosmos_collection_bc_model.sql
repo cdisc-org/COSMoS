@@ -12,10 +12,10 @@ CREATE TABLE "DataCollectionGroup" (
 	"packageType" VARCHAR(10) NOT NULL, 
 	"datasetSpecializationId" TEXT NOT NULL, 
 	standard TEXT NOT NULL, 
-	domain TEXT NOT NULL, 
+	"standardStartVersion" TEXT NOT NULL, 
+	"standardEndVersion" TEXT, 
+	domain TEXT, 
 	"shortName" TEXT NOT NULL, 
-	"collectionigStartVersion" TEXT NOT NULL, 
-	"collectionigEndVersion" TEXT, 
 	"biomedicalConceptId" TEXT, 
 	"sdtmDatasetSpecializationId" TEXT, 
 	PRIMARY KEY ("datasetSpecializationId")
@@ -42,8 +42,7 @@ CREATE TABLE "DataCollectionItem" (
 	"dataType" VARCHAR(7) NOT NULL, 
 	length INTEGER, 
 	"significantDigits" INTEGER, 
-	"mandatoryVariable" BOOLEAN, 
-	"cdashigCore" VARCHAR(3), 
+	"mandatoryVariable" BOOLEAN NOT NULL, 
 	"DataCollectionGroup_datasetSpecializationId" TEXT, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY(codelist) REFERENCES "CodeList" ("conceptId"), 
@@ -51,8 +50,8 @@ CREATE TABLE "DataCollectionItem" (
 );
 
 CREATE TABLE "ListValue" (
-	value TEXT NOT NULL, 
-	"displayValue" TEXT, 
+	value TEXT, 
+	"displayValue" TEXT NOT NULL, 
 	"DataCollectionItem_name" TEXT, 
 	PRIMARY KEY (value, "displayValue", "DataCollectionItem_name"), 
 	FOREIGN KEY("DataCollectionItem_name") REFERENCES "DataCollectionItem" (name)

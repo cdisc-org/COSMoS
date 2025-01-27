@@ -480,6 +480,33 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "standardStartVersion",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0standardStartVersion",
+      "description": "The earliest data collection IG version applicable to the BC dataset specialization",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0standardStartVersion",
+      "owner": "DataCollectionGroup",
+      "domain_of": [
+        "DataCollectionGroup"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "standardEndVersion",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0standardEndVersion",
+      "description": "The last data collection IG version that is applicable to the BC dataset specialization",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0standardEndVersion",
+      "owner": "DataCollectionGroup",
+      "domain_of": [
+        "DataCollectionGroup"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "domain",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0domain",
       "description": "Domain for the data collection specialization group",
@@ -490,7 +517,6 @@
         "DataCollectionGroup"
       ],
       "range": "string",
-      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -505,33 +531,6 @@
       ],
       "range": "string",
       "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "collectionigStartVersion",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0collectionigStartVersion",
-      "description": "The earliest data collection IG version applicable to the BC dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0collectionigStartVersion",
-      "owner": "DataCollectionGroup",
-      "domain_of": [
-        "DataCollectionGroup"
-      ],
-      "range": "string",
-      "required": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "collectionigEndVersion",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0collectionigEndVersion",
-      "description": "The last data collection IG version that is applicable to the BC dataset specialization",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0collectionigEndVersion",
-      "owner": "DataCollectionGroup",
-      "domain_of": [
-        "DataCollectionGroup"
-      ],
-      "range": "string",
       "@type": "SlotDefinition"
     },
     {
@@ -910,20 +909,7 @@
         "DataCollectionItem"
       ],
       "range": "boolean",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "cdashigCore",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0cdashigCore",
-      "description": "Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0cdashigCore",
-      "owner": "DataCollectionItem",
-      "domain_of": [
-        "DataCollectionItem"
-      ],
-      "range": "CDASHIGCore",
-      "recommended": true,
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -937,7 +923,6 @@
         "ListValue"
       ],
       "range": "string",
-      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -951,6 +936,7 @@
         "ListValue"
       ],
       "range": "string",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -992,10 +978,10 @@
         "packageType",
         "datasetSpecializationId",
         "standard",
+        "standardStartVersion",
+        "standardEndVersion",
         "domain",
         "shortName",
-        "collectionigStartVersion",
-        "collectionigEndVersion",
         "biomedicalConceptId",
         "sdtmDatasetSpecializationId",
         "items"
@@ -1026,7 +1012,6 @@
         "length",
         "significantDigits",
         "mandatoryVariable",
-        "cdashigCore",
         "sdtmTarget"
       ],
       "slot_usage": {},
@@ -1060,13 +1045,13 @@
           "name": "value",
           "description": "CDISC submission value for the data collection item",
           "range": "string",
-          "required": true,
           "@type": "SlotDefinition"
         },
         {
           "name": "displayValue",
           "description": "User-friendly display value for the data collection item",
           "range": "string",
+          "required": true,
           "@type": "SlotDefinition"
         }
       ],
@@ -1117,9 +1102,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-01-23T15:38:26",
-  "source_file_size": 7540,
-  "generation_date": "2025-01-23T15:38:46",
+  "source_file_date": "2025-01-27T15:04:33",
+  "source_file_size": 7300,
+  "generation_date": "2025-01-27T15:05:06",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

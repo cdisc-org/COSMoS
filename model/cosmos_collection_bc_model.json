@@ -57,14 +57,6 @@
                "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
                "type": "string"
             },
-            "collectionigEndVersion": {
-               "description": "The last data collection IG version that is applicable to the BC dataset specialization",
-               "type": "string"
-            },
-            "collectionigStartVersion": {
-               "description": "The earliest data collection IG version applicable to the BC dataset specialization",
-               "type": "string"
-            },
             "datasetSpecializationId": {
                "description": "Identifier for data collection specialization group",
                "type": "string"
@@ -100,6 +92,14 @@
             "standard": {
                "description": "Standard for the data collection specialization group",
                "type": "string"
+            },
+            "standardEndVersion": {
+               "description": "The last data collection IG version that is applicable to the BC dataset specialization",
+               "type": "string"
+            },
+            "standardStartVersion": {
+               "description": "The earliest data collection IG version applicable to the BC dataset specialization",
+               "type": "string"
             }
          },
          "required": [
@@ -107,9 +107,8 @@
             "packageType",
             "datasetSpecializationId",
             "standard",
-            "domain",
+            "standardStartVersion",
             "shortName",
-            "collectionigStartVersion",
             "items"
          ],
          "title": "DataCollectionGroup",
@@ -119,10 +118,6 @@
          "additionalProperties": false,
          "description": "",
          "properties": {
-            "cdashigCore": {
-               "$ref": "#/$defs/CDASHIGCore",
-               "description": "Rule for inclusion of a variable within a dataset including 'Hightly Recommended', 'Required/Conditional', and 'Optional'"
-            },
             "codelist": {
                "$ref": "#/$defs/CodeList",
                "description": "Codelist"
@@ -204,7 +199,8 @@
             "name",
             "eCRFItem",
             "orderNumber",
-            "dataType"
+            "dataType",
+            "mandatoryVariable"
          ],
          "title": "DataCollectionItem",
          "type": "object"
@@ -238,7 +234,7 @@
             }
          },
          "required": [
-            "value"
+            "displayValue"
          ],
          "title": "ListValue",
          "type": "object"
@@ -306,14 +302,6 @@
          "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
          "type": "string"
       },
-      "collectionigEndVersion": {
-         "description": "The last data collection IG version that is applicable to the BC dataset specialization",
-         "type": "string"
-      },
-      "collectionigStartVersion": {
-         "description": "The earliest data collection IG version applicable to the BC dataset specialization",
-         "type": "string"
-      },
       "datasetSpecializationId": {
          "description": "Identifier for data collection specialization group",
          "type": "string"
@@ -349,6 +337,14 @@
       "standard": {
          "description": "Standard for the data collection specialization group",
          "type": "string"
+      },
+      "standardEndVersion": {
+         "description": "The last data collection IG version that is applicable to the BC dataset specialization",
+         "type": "string"
+      },
+      "standardStartVersion": {
+         "description": "The earliest data collection IG version applicable to the BC dataset specialization",
+         "type": "string"
       }
    },
    "required": [
@@ -356,9 +352,8 @@
       "packageType",
       "datasetSpecializationId",
       "standard",
-      "domain",
+      "standardStartVersion",
       "shortName",
-      "collectionigStartVersion",
       "items"
    ],
    "title": "COSMoS-Biomedical-Concepts-Collection-Schema",
