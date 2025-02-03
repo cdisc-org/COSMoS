@@ -1,22 +1,50 @@
+# metamodel_version: 1.7.0
+enum CollectionItemDataTypeEnum
+  {
+    decimal
+    float
+    integer
+    text
+    date
+    time
+  }
+
+enum ListTypeEnum
+  {
+    Radio
+    Dropdown
+    DropdownMultiSelect
+    Checkbox
+    Text
+    Date
+    Time
+    DateTime
+  }
+
+enum PackageTypeEnum
+  {
+    collection
+  }
+
 type CodeList
   {
-    conceptId: String!
-    href: Uri
     submissionValue: String!
+    conceptId: String
+    href: Uri
   }
 
 type DataCollectionGroup
   {
     packageDate: Date!
     packageType: PackageTypeEnum!
-    datasetSpecializationId: String!
+    collectionSpecializationId: String!
+    shortName: String!
     standard: String!
     standardStartVersion: String!
     standardEndVersion: String
     domain: String
-    shortName: String!
     biomedicalConceptId: String
-    sdtmDatasetSpecializationId: String
+    sdtmDatasetSpecializationId: String!
     items: [DataCollectionItem]!
   }
 
@@ -25,38 +53,38 @@ type DataCollectionItem
     name: String!
     dataElementConceptId: String
     isNonStandard: Boolean
-    eCRFItem: String!
-    questionText: String
+    dataCollectionInstrumentItem: String!
+    questionText: String!
     prompt: String
     orderNumber: Integer!
-    codelist: CodeList
-    valueList: [ListValue]
-    listStyle: ListTypeEnum
-    prepopulatedValue: PrepopulatedValue
-    displayHidden: Boolean
+    mandatoryVariable: Boolean!
     dataType: CollectionItemDataTypeEnum!
     length: Integer
     significantDigits: Integer
-    mandatoryVariable: Boolean!
+    displayHidden: Boolean
+    valueList: [ListValue]
+    listType: ListTypeEnum
+    prepopulatedValue: PrepopulatedValue
+    codelist: CodeList
     sdtmTarget: [SDTMTarget]
   }
 
 type ListValue
   {
-    value: String
     displayValue: String!
+    value: String
   }
 
 type PrepopulatedValue
   {
-    conceptId: String
     value: String!
+    conceptId: String
   }
 
 type SDTMTarget
   {
     sdtmVariable: String!
     sdtmAnnotation: String
-    sdtmTargetMapping: String!
+    sdtmTargetMapping: String
   }
 

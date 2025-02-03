@@ -1,5 +1,5 @@
-# Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2025-01-27T15:05:11
+# Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
+# Generation date: 2025-01-28T17:24:50
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -7,21 +7,56 @@
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses
-import sys
 import re
-from jsonasobj2 import JsonObj, as_dict
-from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
-from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
+from datetime import (
+    date,
+    datetime,
+    time
+)
+from typing import (
+    Any,
+    ClassVar,
+    Dict,
+    List,
+    Optional,
+    Union
+)
 
-from linkml_runtime.utils.slot import Slot
-from linkml_runtime.utils.metamodelcore import empty_list, empty_dict, bnode
-from linkml_runtime.utils.yamlutils import YAMLRoot, extended_str, extended_float, extended_int
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
-from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
-from linkml_runtime.utils.enumerations import EnumDefinitionImpl
-from rdflib import Namespace, URIRef
+from jsonasobj2 import (
+    JsonObj,
+    as_dict
+)
+from linkml_runtime.linkml_model.meta import (
+    EnumDefinition,
+    PermissibleValue,
+    PvFormulaOptions
+)
 from linkml_runtime.utils.curienamespace import CurieNamespace
+from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
+from linkml_runtime.utils.enumerations import EnumDefinitionImpl
+from linkml_runtime.utils.formatutils import (
+    camelcase,
+    sfx,
+    underscore
+)
+from linkml_runtime.utils.metamodelcore import (
+    bnode,
+    empty_dict,
+    empty_list
+)
+from linkml_runtime.utils.slot import Slot
+from linkml_runtime.utils.yamlutils import (
+    YAMLRoot,
+    extended_float,
+    extended_int,
+    extended_str
+)
+from rdflib import (
+    Namespace,
+    URIRef
+)
+
 from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uri
 from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
 
@@ -41,7 +76,7 @@ DEFAULT_ = COSMOS_COLLECTION
 # Types
 
 # Class references
-class DataCollectionGroupDatasetSpecializationId(extended_str):
+class DataCollectionGroupCollectionSpecializationId(extended_str):
     pass
 
 
@@ -49,36 +84,32 @@ class DataCollectionItemName(extended_str):
     pass
 
 
-class CodeListConceptId(extended_str):
-    pass
-
-
-@dataclass
+@dataclass(repr=False)
 class DataCollectionGroup(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.DataCollectionGroup
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["DataCollectionGroup"]
     class_class_curie: ClassVar[str] = "cosmos_collection:DataCollectionGroup"
     class_name: ClassVar[str] = "DataCollectionGroup"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.DataCollectionGroup
 
-    datasetSpecializationId: Union[str, DataCollectionGroupDatasetSpecializationId] = None
+    collectionSpecializationId: Union[str, DataCollectionGroupCollectionSpecializationId] = None
     packageDate: Union[str, XSDDate] = None
     packageType: Union[str, "PackageTypeEnum"] = None
+    shortName: str = None
     standard: str = None
     standardStartVersion: str = None
-    shortName: str = None
+    sdtmDatasetSpecializationId: str = None
     items: Union[Dict[Union[str, DataCollectionItemName], Union[dict, "DataCollectionItem"]], List[Union[dict, "DataCollectionItem"]]] = empty_dict()
     standardEndVersion: Optional[str] = None
     domain: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
-    sdtmDatasetSpecializationId: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.datasetSpecializationId):
-            self.MissingRequiredField("datasetSpecializationId")
-        if not isinstance(self.datasetSpecializationId, DataCollectionGroupDatasetSpecializationId):
-            self.datasetSpecializationId = DataCollectionGroupDatasetSpecializationId(self.datasetSpecializationId)
+        if self._is_empty(self.collectionSpecializationId):
+            self.MissingRequiredField("collectionSpecializationId")
+        if not isinstance(self.collectionSpecializationId, DataCollectionGroupCollectionSpecializationId):
+            self.collectionSpecializationId = DataCollectionGroupCollectionSpecializationId(self.collectionSpecializationId)
 
         if self._is_empty(self.packageDate):
             self.MissingRequiredField("packageDate")
@@ -90,6 +121,11 @@ class DataCollectionGroup(YAMLRoot):
         if not isinstance(self.packageType, PackageTypeEnum):
             self.packageType = PackageTypeEnum(self.packageType)
 
+        if self._is_empty(self.shortName):
+            self.MissingRequiredField("shortName")
+        if not isinstance(self.shortName, str):
+            self.shortName = str(self.shortName)
+
         if self._is_empty(self.standard):
             self.MissingRequiredField("standard")
         if not isinstance(self.standard, str):
@@ -100,10 +136,10 @@ class DataCollectionGroup(YAMLRoot):
         if not isinstance(self.standardStartVersion, str):
             self.standardStartVersion = str(self.standardStartVersion)
 
-        if self._is_empty(self.shortName):
-            self.MissingRequiredField("shortName")
-        if not isinstance(self.shortName, str):
-            self.shortName = str(self.shortName)
+        if self._is_empty(self.sdtmDatasetSpecializationId):
+            self.MissingRequiredField("sdtmDatasetSpecializationId")
+        if not isinstance(self.sdtmDatasetSpecializationId, str):
+            self.sdtmDatasetSpecializationId = str(self.sdtmDatasetSpecializationId)
 
         if self._is_empty(self.items):
             self.MissingRequiredField("items")
@@ -118,37 +154,34 @@ class DataCollectionGroup(YAMLRoot):
         if self.biomedicalConceptId is not None and not isinstance(self.biomedicalConceptId, str):
             self.biomedicalConceptId = str(self.biomedicalConceptId)
 
-        if self.sdtmDatasetSpecializationId is not None and not isinstance(self.sdtmDatasetSpecializationId, str):
-            self.sdtmDatasetSpecializationId = str(self.sdtmDatasetSpecializationId)
-
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class DataCollectionItem(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.DataCollectionItem
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["DataCollectionItem"]
     class_class_curie: ClassVar[str] = "cosmos_collection:DataCollectionItem"
     class_name: ClassVar[str] = "DataCollectionItem"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.DataCollectionItem
 
     name: Union[str, DataCollectionItemName] = None
-    eCRFItem: str = None
+    dataCollectionInstrumentItem: str = None
+    questionText: str = None
     orderNumber: int = None
-    dataType: Union[str, "CollectionItemDataTypeEnum"] = None
     mandatoryVariable: Union[bool, Bool] = None
+    dataType: Union[str, "CollectionItemDataTypeEnum"] = None
     dataElementConceptId: Optional[str] = None
     isNonStandard: Optional[Union[bool, Bool]] = None
-    questionText: Optional[str] = None
     prompt: Optional[str] = None
-    codelist: Optional[Union[dict, "CodeList"]] = None
-    valueList: Optional[Union[Union[dict, "ListValue"], List[Union[dict, "ListValue"]]]] = empty_list()
-    listStyle: Optional[Union[str, "ListTypeEnum"]] = None
-    prepopulatedValue: Optional[Union[dict, "PrepopulatedValue"]] = None
-    displayHidden: Optional[Union[bool, Bool]] = None
     length: Optional[int] = None
     significantDigits: Optional[int] = None
+    displayHidden: Optional[Union[bool, Bool]] = None
+    valueList: Optional[Union[Union[dict, "ListValue"], List[Union[dict, "ListValue"]]]] = empty_list()
+    listType: Optional[Union[str, "ListTypeEnum"]] = None
+    prepopulatedValue: Optional[Union[dict, "PrepopulatedValue"]] = None
+    codelist: Optional[Union[dict, "CodeList"]] = None
     sdtmTarget: Optional[Union[Union[dict, "SDTMTarget"], List[Union[dict, "SDTMTarget"]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -157,25 +190,30 @@ class DataCollectionItem(YAMLRoot):
         if not isinstance(self.name, DataCollectionItemName):
             self.name = DataCollectionItemName(self.name)
 
-        if self._is_empty(self.eCRFItem):
-            self.MissingRequiredField("eCRFItem")
-        if not isinstance(self.eCRFItem, str):
-            self.eCRFItem = str(self.eCRFItem)
+        if self._is_empty(self.dataCollectionInstrumentItem):
+            self.MissingRequiredField("dataCollectionInstrumentItem")
+        if not isinstance(self.dataCollectionInstrumentItem, str):
+            self.dataCollectionInstrumentItem = str(self.dataCollectionInstrumentItem)
+
+        if self._is_empty(self.questionText):
+            self.MissingRequiredField("questionText")
+        if not isinstance(self.questionText, str):
+            self.questionText = str(self.questionText)
 
         if self._is_empty(self.orderNumber):
             self.MissingRequiredField("orderNumber")
         if not isinstance(self.orderNumber, int):
             self.orderNumber = int(self.orderNumber)
 
-        if self._is_empty(self.dataType):
-            self.MissingRequiredField("dataType")
-        if not isinstance(self.dataType, CollectionItemDataTypeEnum):
-            self.dataType = CollectionItemDataTypeEnum(self.dataType)
-
         if self._is_empty(self.mandatoryVariable):
             self.MissingRequiredField("mandatoryVariable")
         if not isinstance(self.mandatoryVariable, Bool):
             self.mandatoryVariable = Bool(self.mandatoryVariable)
+
+        if self._is_empty(self.dataType):
+            self.MissingRequiredField("dataType")
+        if not isinstance(self.dataType, CollectionItemDataTypeEnum):
+            self.dataType = CollectionItemDataTypeEnum(self.dataType)
 
         if self.dataElementConceptId is not None and not isinstance(self.dataElementConceptId, str):
             self.dataElementConceptId = str(self.dataElementConceptId)
@@ -183,33 +221,30 @@ class DataCollectionItem(YAMLRoot):
         if self.isNonStandard is not None and not isinstance(self.isNonStandard, Bool):
             self.isNonStandard = Bool(self.isNonStandard)
 
-        if self.questionText is not None and not isinstance(self.questionText, str):
-            self.questionText = str(self.questionText)
-
         if self.prompt is not None and not isinstance(self.prompt, str):
             self.prompt = str(self.prompt)
-
-        if self.codelist is not None and not isinstance(self.codelist, CodeList):
-            self.codelist = CodeList(**as_dict(self.codelist))
-
-        if not isinstance(self.valueList, list):
-            self.valueList = [self.valueList] if self.valueList is not None else []
-        self.valueList = [v if isinstance(v, ListValue) else ListValue(**as_dict(v)) for v in self.valueList]
-
-        if self.listStyle is not None and not isinstance(self.listStyle, ListTypeEnum):
-            self.listStyle = ListTypeEnum(self.listStyle)
-
-        if self.prepopulatedValue is not None and not isinstance(self.prepopulatedValue, PrepopulatedValue):
-            self.prepopulatedValue = PrepopulatedValue(**as_dict(self.prepopulatedValue))
-
-        if self.displayHidden is not None and not isinstance(self.displayHidden, Bool):
-            self.displayHidden = Bool(self.displayHidden)
 
         if self.length is not None and not isinstance(self.length, int):
             self.length = int(self.length)
 
         if self.significantDigits is not None and not isinstance(self.significantDigits, int):
             self.significantDigits = int(self.significantDigits)
+
+        if self.displayHidden is not None and not isinstance(self.displayHidden, Bool):
+            self.displayHidden = Bool(self.displayHidden)
+
+        if not isinstance(self.valueList, list):
+            self.valueList = [self.valueList] if self.valueList is not None else []
+        self.valueList = [v if isinstance(v, ListValue) else ListValue(**as_dict(v)) for v in self.valueList]
+
+        if self.listType is not None and not isinstance(self.listType, ListTypeEnum):
+            self.listType = ListTypeEnum(self.listType)
+
+        if self.prepopulatedValue is not None and not isinstance(self.prepopulatedValue, PrepopulatedValue):
+            self.prepopulatedValue = PrepopulatedValue(**as_dict(self.prepopulatedValue))
+
+        if self.codelist is not None and not isinstance(self.codelist, CodeList):
+            self.codelist = CodeList(**as_dict(self.codelist))
 
         if not isinstance(self.sdtmTarget, list):
             self.sdtmTarget = [self.sdtmTarget] if self.sdtmTarget is not None else []
@@ -218,41 +253,11 @@ class DataCollectionItem(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
-class CodeList(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.CodeList
-    class_class_curie: ClassVar[str] = "cosmos_collection:CodeList"
-    class_name: ClassVar[str] = "CodeList"
-    class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.CodeList
-
-    conceptId: Union[str, CodeListConceptId] = None
-    submissionValue: str = None
-    href: Optional[Union[str, URI]] = None
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.conceptId):
-            self.MissingRequiredField("conceptId")
-        if not isinstance(self.conceptId, CodeListConceptId):
-            self.conceptId = CodeListConceptId(self.conceptId)
-
-        if self._is_empty(self.submissionValue):
-            self.MissingRequiredField("submissionValue")
-        if not isinstance(self.submissionValue, str):
-            self.submissionValue = str(self.submissionValue)
-
-        if self.href is not None and not isinstance(self.href, URI):
-            self.href = URI(self.href)
-
-        super().__post_init__(**kwargs)
-
-
-@dataclass
+@dataclass(repr=False)
 class ListValue(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.ListValue
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["ListValue"]
     class_class_curie: ClassVar[str] = "cosmos_collection:ListValue"
     class_name: ClassVar[str] = "ListValue"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.ListValue
@@ -272,11 +277,11 @@ class ListValue(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class PrepopulatedValue(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.PrepopulatedValue
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["PrepopulatedValue"]
     class_class_curie: ClassVar[str] = "cosmos_collection:PrepopulatedValue"
     class_name: ClassVar[str] = "PrepopulatedValue"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.PrepopulatedValue
@@ -296,18 +301,46 @@ class PrepopulatedValue(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
+class CodeList(YAMLRoot):
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["CodeList"]
+    class_class_curie: ClassVar[str] = "cosmos_collection:CodeList"
+    class_name: ClassVar[str] = "CodeList"
+    class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.CodeList
+
+    submissionValue: str = None
+    conceptId: Optional[str] = None
+    href: Optional[Union[str, URI]] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.submissionValue):
+            self.MissingRequiredField("submissionValue")
+        if not isinstance(self.submissionValue, str):
+            self.submissionValue = str(self.submissionValue)
+
+        if self.conceptId is not None and not isinstance(self.conceptId, str):
+            self.conceptId = str(self.conceptId)
+
+        if self.href is not None and not isinstance(self.href, URI):
+            self.href = URI(self.href)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
 class SDTMTarget(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION.SDTMTarget
+    class_class_uri: ClassVar[URIRef] = COSMOS_COLLECTION["SDTMTarget"]
     class_class_curie: ClassVar[str] = "cosmos_collection:SDTMTarget"
     class_name: ClassVar[str] = "SDTMTarget"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.SDTMTarget
 
     sdtmVariable: str = None
-    sdtmTargetMapping: str = None
     sdtmAnnotation: Optional[str] = None
+    sdtmTargetMapping: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.sdtmVariable):
@@ -315,13 +348,11 @@ class SDTMTarget(YAMLRoot):
         if not isinstance(self.sdtmVariable, str):
             self.sdtmVariable = str(self.sdtmVariable)
 
-        if self._is_empty(self.sdtmTargetMapping):
-            self.MissingRequiredField("sdtmTargetMapping")
-        if not isinstance(self.sdtmTargetMapping, str):
-            self.sdtmTargetMapping = str(self.sdtmTargetMapping)
-
         if self.sdtmAnnotation is not None and not isinstance(self.sdtmAnnotation, str):
             self.sdtmAnnotation = str(self.sdtmAnnotation)
+
+        if self.sdtmTargetMapping is not None and not isinstance(self.sdtmTargetMapping, str):
+            self.sdtmTargetMapping = str(self.sdtmTargetMapping)
 
         super().__post_init__(**kwargs)
 
@@ -334,20 +365,6 @@ class PackageTypeEnum(EnumDefinitionImpl):
     _defn = EnumDefinition(
         name="PackageTypeEnum",
     )
-
-class CDASHIGCore(EnumDefinitionImpl):
-
-    HR = PermissibleValue(text="HR")
-    O = PermissibleValue(text="O")
-
-    _defn = EnumDefinition(
-        name="CDASHIGCore",
-    )
-
-    @classmethod
-    def _addvals(cls):
-        setattr(cls, "R/C",
-                PermissibleValue(text="R/C") )
 
 class CollectionItemDataTypeEnum(EnumDefinitionImpl):
 
@@ -387,8 +404,11 @@ slots.packageDate = Slot(uri=COSMOS_COLLECTION.packageDate, name="packageDate", 
 slots.packageType = Slot(uri=COSMOS_COLLECTION.packageType, name="packageType", curie=COSMOS_COLLECTION.curie('packageType'),
                    model_uri=COSMOS_COLLECTION.packageType, domain=None, range=Union[str, "PackageTypeEnum"])
 
-slots.datasetSpecializationId = Slot(uri=COSMOS_COLLECTION.datasetSpecializationId, name="datasetSpecializationId", curie=COSMOS_COLLECTION.curie('datasetSpecializationId'),
-                   model_uri=COSMOS_COLLECTION.datasetSpecializationId, domain=None, range=URIRef)
+slots.collectionSpecializationId = Slot(uri=COSMOS_COLLECTION.collectionSpecializationId, name="collectionSpecializationId", curie=COSMOS_COLLECTION.curie('collectionSpecializationId'),
+                   model_uri=COSMOS_COLLECTION.collectionSpecializationId, domain=None, range=URIRef)
+
+slots.shortName = Slot(uri=COSMOS_COLLECTION.shortName, name="shortName", curie=COSMOS_COLLECTION.curie('shortName'),
+                   model_uri=COSMOS_COLLECTION.shortName, domain=None, range=str)
 
 slots.standard = Slot(uri=COSMOS_COLLECTION.standard, name="standard", curie=COSMOS_COLLECTION.curie('standard'),
                    model_uri=COSMOS_COLLECTION.standard, domain=None, range=str)
@@ -402,15 +422,12 @@ slots.standardEndVersion = Slot(uri=COSMOS_COLLECTION.standardEndVersion, name="
 slots.domain = Slot(uri=COSMOS_COLLECTION.domain, name="domain", curie=COSMOS_COLLECTION.curie('domain'),
                    model_uri=COSMOS_COLLECTION.domain, domain=None, range=Optional[str])
 
-slots.shortName = Slot(uri=COSMOS_COLLECTION.shortName, name="shortName", curie=COSMOS_COLLECTION.curie('shortName'),
-                   model_uri=COSMOS_COLLECTION.shortName, domain=None, range=str)
-
 slots.biomedicalConceptId = Slot(uri=COSMOS_COLLECTION.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS_COLLECTION.curie('biomedicalConceptId'),
                    model_uri=COSMOS_COLLECTION.biomedicalConceptId, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.sdtmDatasetSpecializationId = Slot(uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, name="sdtmDatasetSpecializationId", curie=COSMOS_COLLECTION.curie('sdtmDatasetSpecializationId'),
-                   model_uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, domain=None, range=Optional[str])
+                   model_uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, domain=None, range=str)
 
 slots.items = Slot(uri=COSMOS_COLLECTION.items, name="items", curie=COSMOS_COLLECTION.curie('items'),
                    model_uri=COSMOS_COLLECTION.items, domain=None, range=Union[Dict[Union[str, DataCollectionItemName], Union[dict, DataCollectionItem]], List[Union[dict, DataCollectionItem]]])
@@ -425,11 +442,11 @@ slots.dataElementConceptId = Slot(uri=COSMOS_COLLECTION.dataElementConceptId, na
 slots.isNonStandard = Slot(uri=COSMOS_COLLECTION.isNonStandard, name="isNonStandard", curie=COSMOS_COLLECTION.curie('isNonStandard'),
                    model_uri=COSMOS_COLLECTION.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.eCRFItem = Slot(uri=COSMOS_COLLECTION.eCRFItem, name="eCRFItem", curie=COSMOS_COLLECTION.curie('eCRFItem'),
-                   model_uri=COSMOS_COLLECTION.eCRFItem, domain=None, range=str)
+slots.dataCollectionInstrumentItem = Slot(uri=COSMOS_COLLECTION.dataCollectionInstrumentItem, name="dataCollectionInstrumentItem", curie=COSMOS_COLLECTION.curie('dataCollectionInstrumentItem'),
+                   model_uri=COSMOS_COLLECTION.dataCollectionInstrumentItem, domain=None, range=str)
 
 slots.questionText = Slot(uri=COSMOS_COLLECTION.questionText, name="questionText", curie=COSMOS_COLLECTION.curie('questionText'),
-                   model_uri=COSMOS_COLLECTION.questionText, domain=None, range=Optional[str])
+                   model_uri=COSMOS_COLLECTION.questionText, domain=None, range=str)
 
 slots.prompt = Slot(uri=COSMOS_COLLECTION.prompt, name="prompt", curie=COSMOS_COLLECTION.curie('prompt'),
                    model_uri=COSMOS_COLLECTION.prompt, domain=None, range=Optional[str])
@@ -437,17 +454,35 @@ slots.prompt = Slot(uri=COSMOS_COLLECTION.prompt, name="prompt", curie=COSMOS_CO
 slots.orderNumber = Slot(uri=COSMOS_COLLECTION.orderNumber, name="orderNumber", curie=COSMOS_COLLECTION.curie('orderNumber'),
                    model_uri=COSMOS_COLLECTION.orderNumber, domain=None, range=int)
 
-slots.codelist = Slot(uri=COSMOS_COLLECTION.codelist, name="codelist", curie=COSMOS_COLLECTION.curie('codelist'),
-                   model_uri=COSMOS_COLLECTION.codelist, domain=None, range=Optional[Union[dict, CodeList]])
+slots.mandatoryVariable = Slot(uri=COSMOS_COLLECTION.mandatoryVariable, name="mandatoryVariable", curie=COSMOS_COLLECTION.curie('mandatoryVariable'),
+                   model_uri=COSMOS_COLLECTION.mandatoryVariable, domain=None, range=Union[bool, Bool])
 
-slots.prepopulatedValue = Slot(uri=COSMOS_COLLECTION.prepopulatedValue, name="prepopulatedValue", curie=COSMOS_COLLECTION.curie('prepopulatedValue'),
-                   model_uri=COSMOS_COLLECTION.prepopulatedValue, domain=None, range=Optional[Union[dict, PrepopulatedValue]])
+slots.dataType = Slot(uri=COSMOS_COLLECTION.dataType, name="dataType", curie=COSMOS_COLLECTION.curie('dataType'),
+                   model_uri=COSMOS_COLLECTION.dataType, domain=None, range=Union[str, "CollectionItemDataTypeEnum"])
+
+slots.length = Slot(uri=COSMOS_COLLECTION.length, name="length", curie=COSMOS_COLLECTION.curie('length'),
+                   model_uri=COSMOS_COLLECTION.length, domain=None, range=Optional[int])
+
+slots.significantDigits = Slot(uri=COSMOS_COLLECTION.significantDigits, name="significantDigits", curie=COSMOS_COLLECTION.curie('significantDigits'),
+                   model_uri=COSMOS_COLLECTION.significantDigits, domain=None, range=Optional[int])
 
 slots.displayHidden = Slot(uri=COSMOS_COLLECTION.displayHidden, name="displayHidden", curie=COSMOS_COLLECTION.curie('displayHidden'),
                    model_uri=COSMOS_COLLECTION.displayHidden, domain=None, range=Optional[Union[bool, Bool]])
 
+slots.valueList = Slot(uri=COSMOS_COLLECTION.valueList, name="valueList", curie=COSMOS_COLLECTION.curie('valueList'),
+                   model_uri=COSMOS_COLLECTION.valueList, domain=None, range=Optional[Union[Union[dict, ListValue], List[Union[dict, ListValue]]]])
+
+slots.listType = Slot(uri=COSMOS_COLLECTION.listType, name="listType", curie=COSMOS_COLLECTION.curie('listType'),
+                   model_uri=COSMOS_COLLECTION.listType, domain=None, range=Optional[Union[str, "ListTypeEnum"]])
+
+slots.prepopulatedValue = Slot(uri=COSMOS_COLLECTION.prepopulatedValue, name="prepopulatedValue", curie=COSMOS_COLLECTION.curie('prepopulatedValue'),
+                   model_uri=COSMOS_COLLECTION.prepopulatedValue, domain=None, range=Optional[Union[dict, PrepopulatedValue]])
+
+slots.codelist = Slot(uri=COSMOS_COLLECTION.codelist, name="codelist", curie=COSMOS_COLLECTION.curie('codelist'),
+                   model_uri=COSMOS_COLLECTION.codelist, domain=None, range=Optional[Union[dict, CodeList]])
+
 slots.conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
-                   model_uri=COSMOS_COLLECTION.conceptId, domain=None, range=URIRef,
+                   model_uri=COSMOS_COLLECTION.conceptId, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
 slots.href = Slot(uri=COSMOS_COLLECTION.href, name="href", curie=COSMOS_COLLECTION.curie('href'),
@@ -456,14 +491,11 @@ slots.href = Slot(uri=COSMOS_COLLECTION.href, name="href", curie=COSMOS_COLLECTI
 slots.submissionValue = Slot(uri=COSMOS_COLLECTION.submissionValue, name="submissionValue", curie=COSMOS_COLLECTION.curie('submissionValue'),
                    model_uri=COSMOS_COLLECTION.submissionValue, domain=None, range=str)
 
-slots.valueList = Slot(uri=COSMOS_COLLECTION.valueList, name="valueList", curie=COSMOS_COLLECTION.curie('valueList'),
-                   model_uri=COSMOS_COLLECTION.valueList, domain=None, range=Optional[Union[Union[dict, ListValue], List[Union[dict, ListValue]]]])
+slots.displayValue = Slot(uri=COSMOS_COLLECTION.displayValue, name="displayValue", curie=COSMOS_COLLECTION.curie('displayValue'),
+                   model_uri=COSMOS_COLLECTION.displayValue, domain=None, range=str)
 
-slots.valueDisplayList = Slot(uri=COSMOS_COLLECTION.valueDisplayList, name="valueDisplayList", curie=COSMOS_COLLECTION.curie('valueDisplayList'),
-                   model_uri=COSMOS_COLLECTION.valueDisplayList, domain=None, range=Optional[Union[str, List[str]]])
-
-slots.listStyle = Slot(uri=COSMOS_COLLECTION.listStyle, name="listStyle", curie=COSMOS_COLLECTION.curie('listStyle'),
-                   model_uri=COSMOS_COLLECTION.listStyle, domain=None, range=Optional[Union[str, "ListTypeEnum"]])
+slots.value = Slot(uri=COSMOS_COLLECTION.value, name="value", curie=COSMOS_COLLECTION.curie('value'),
+                   model_uri=COSMOS_COLLECTION.value, domain=None, range=Optional[str])
 
 slots.sdtmTarget = Slot(uri=COSMOS_COLLECTION.sdtmTarget, name="sdtmTarget", curie=COSMOS_COLLECTION.curie('sdtmTarget'),
                    model_uri=COSMOS_COLLECTION.sdtmTarget, domain=None, range=Optional[Union[Union[dict, SDTMTarget], List[Union[dict, SDTMTarget]]]])
@@ -475,29 +507,27 @@ slots.sdtmAnnotation = Slot(uri=COSMOS_COLLECTION.sdtmAnnotation, name="sdtmAnno
                    model_uri=COSMOS_COLLECTION.sdtmAnnotation, domain=None, range=Optional[str])
 
 slots.sdtmTargetMapping = Slot(uri=COSMOS_COLLECTION.sdtmTargetMapping, name="sdtmTargetMapping", curie=COSMOS_COLLECTION.curie('sdtmTargetMapping'),
-                   model_uri=COSMOS_COLLECTION.sdtmTargetMapping, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.sdtmTargetMapping, domain=None, range=Optional[str])
 
-slots.dataType = Slot(uri=COSMOS_COLLECTION.dataType, name="dataType", curie=COSMOS_COLLECTION.curie('dataType'),
-                   model_uri=COSMOS_COLLECTION.dataType, domain=None, range=Union[str, "CollectionItemDataTypeEnum"])
+slots.ListValue_displayValue = Slot(uri=COSMOS_COLLECTION.displayValue, name="ListValue_displayValue", curie=COSMOS_COLLECTION.curie('displayValue'),
+                   model_uri=COSMOS_COLLECTION.ListValue_displayValue, domain=ListValue, range=str)
 
-slots.length = Slot(uri=COSMOS_COLLECTION.length, name="length", curie=COSMOS_COLLECTION.curie('length'),
-                   model_uri=COSMOS_COLLECTION.length, domain=None, range=Optional[int])
+slots.ListValue_value = Slot(uri=COSMOS_COLLECTION.value, name="ListValue_value", curie=COSMOS_COLLECTION.curie('value'),
+                   model_uri=COSMOS_COLLECTION.ListValue_value, domain=ListValue, range=Optional[str])
 
-slots.significantDigits = Slot(uri=COSMOS_COLLECTION.significantDigits, name="significantDigits", curie=COSMOS_COLLECTION.curie('significantDigits'),
-                   model_uri=COSMOS_COLLECTION.significantDigits, domain=None, range=Optional[int])
+slots.PrepopulatedValue_value = Slot(uri=COSMOS_COLLECTION.value, name="PrepopulatedValue_value", curie=COSMOS_COLLECTION.curie('value'),
+                   model_uri=COSMOS_COLLECTION.PrepopulatedValue_value, domain=PrepopulatedValue, range=str)
 
-slots.mandatoryVariable = Slot(uri=COSMOS_COLLECTION.mandatoryVariable, name="mandatoryVariable", curie=COSMOS_COLLECTION.curie('mandatoryVariable'),
-                   model_uri=COSMOS_COLLECTION.mandatoryVariable, domain=None, range=Union[bool, Bool])
-
-slots.listValue__value = Slot(uri=COSMOS_COLLECTION.value, name="listValue__value", curie=COSMOS_COLLECTION.curie('value'),
-                   model_uri=COSMOS_COLLECTION.listValue__value, domain=None, range=Optional[str])
-
-slots.listValue__displayValue = Slot(uri=COSMOS_COLLECTION.displayValue, name="listValue__displayValue", curie=COSMOS_COLLECTION.curie('displayValue'),
-                   model_uri=COSMOS_COLLECTION.listValue__displayValue, domain=None, range=str)
-
-slots.prepopulatedValue__conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="prepopulatedValue__conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
-                   model_uri=COSMOS_COLLECTION.prepopulatedValue__conceptId, domain=None, range=Optional[str],
+slots.PrepopulatedValue_conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="PrepopulatedValue_conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
+                   model_uri=COSMOS_COLLECTION.PrepopulatedValue_conceptId, domain=PrepopulatedValue, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+)$'))
 
-slots.prepopulatedValue__value = Slot(uri=COSMOS_COLLECTION.value, name="prepopulatedValue__value", curie=COSMOS_COLLECTION.curie('value'),
-                   model_uri=COSMOS_COLLECTION.prepopulatedValue__value, domain=None, range=str)
+slots.CodeList_submissionValue = Slot(uri=COSMOS_COLLECTION.submissionValue, name="CodeList_submissionValue", curie=COSMOS_COLLECTION.curie('submissionValue'),
+                   model_uri=COSMOS_COLLECTION.CodeList_submissionValue, domain=CodeList, range=str)
+
+slots.CodeList_conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="CodeList_conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
+                   model_uri=COSMOS_COLLECTION.CodeList_conceptId, domain=CodeList, range=Optional[str],
+                   pattern=re.compile(r'^(C[0123456789]+)$'))
+
+slots.CodeList_href = Slot(uri=COSMOS_COLLECTION.href, name="CodeList_href", curie=COSMOS_COLLECTION.curie('href'),
+                   model_uri=COSMOS_COLLECTION.CodeList_href, domain=CodeList, range=Optional[Union[str, URI]])

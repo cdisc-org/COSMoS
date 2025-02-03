@@ -6,14 +6,51 @@
 cosmos_collection:DataCollectionGroup a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Package type (collection for Data Dollection Dataset Specializations)" ;
+    sh:property [ sh:datatype <xsd:string> ;
+            sh:description "Standard for the data collection specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_collection:standard ],
+        [ sh:datatype <xsd:date> ;
+            sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_collection:packageDate ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "The last data collection IG version that is applicable to the collection specialization" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_collection:standardEndVersion ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Short name which provides a user friendly and intuitive name for the data collection group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path cosmos_collection:shortName ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Biomedical Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path cosmos_collection:biomedicalConceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
+        [ sh:description "Package type for data collection specializations (collection)" ;
             sh:in ( "collection" ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 1 ;
             sh:path cosmos_collection:packageType ],
-        [ sh:description "Identifier for SDTM Dataset Specialization group" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "Identifier for SDTM Dataset Specialization group" ;
             sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 9 ;
             sh:path cosmos_collection:sdtmDatasetSpecializationId ],
         [ sh:class cosmos_collection:DataCollectionItem ;
@@ -22,179 +59,196 @@ cosmos_collection:DataCollectionGroup a sh:NodeShape ;
             sh:nodeKind sh:IRI ;
             sh:order 10 ;
             sh:path cosmos_collection:items ],
-        [ sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "The earliest data collection IG version applicable to the collection specialization" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos_collection:packageDate ],
-        [ sh:description "Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 7 ;
-            sh:path cosmos_collection:shortName ],
-        [ sh:description "Identifier for data collection specialization group" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path cosmos_collection:datasetSpecializationId ],
-        [ sh:description "Domain for the data collection specialization group" ;
-            sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path cosmos_collection:domain ],
-        [ sh:description "The earliest data collection IG version applicable to the BC dataset specialization" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 4 ;
-            sh:path cosmos_collection:standardStartVersion ],
-        [ sh:description "Biomedical Concept identifier foreign key" ;
-            sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path cosmos_collection:biomedicalConceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
-        [ sh:description "Standard for the data collection specialization group" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 3 ;
-            sh:path cosmos_collection:standard ],
-        [ sh:description "The last data collection IG version that is applicable to the BC dataset specialization" ;
-            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 5 ;
-            sh:path cosmos_collection:standardEndVersion ] ;
+            sh:path cosmos_collection:standardStartVersion ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Identifier for data collection specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_collection:collectionSpecializationId ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Domain for the data collection specialization group" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path cosmos_collection:domain ] ;
     sh:targetClass cosmos_collection:DataCollectionGroup .
 
 cosmos_collection:CodeList a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "C-code for a codelist in NCIt" ;
+    sh:property [ sh:datatype <xsd:anyURI> ;
+            sh:description "Link to NCIt for the codelist" ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos_collection:conceptId ;
-            sh:pattern "^(C[0123456789]+)$" ],
-        [ sh:description "Link to NCIt for the codelist" ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_collection:href ],
-        [ sh:description "CDISC submission value for the codelist" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path cosmos_collection:submissionValue ] ;
+            sh:path cosmos_collection:href ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "CDISC submission value for the codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_collection:submissionValue ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "C-code for codelist in NCIt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_collection:conceptId ;
+            sh:pattern "^(C[0123456789]+)$" ] ;
     sh:targetClass cosmos_collection:CodeList .
 
 cosmos_collection:DataCollectionItem a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:class cosmos_collection:PrepopulatedValue ;
-            sh:description "Pre-populated value on a CRF" ;
+    sh:property [ sh:datatype <xsd:integer> ;
+            sh:description "Item significant_digits" ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
+            sh:nodeKind sh:Literal ;
             sh:order 10 ;
+            sh:path cosmos_collection:significantDigits ],
+        [ sh:datatype <xsd:boolean> ;
+            sh:description "Flag that indicates if the variable is a non-standard variable" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_collection:isNonStandard ],
+        [ sh:datatype <xsd:integer> ;
+            sh:description "Item order number" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_collection:orderNumber ],
+        [ sh:datatype <xsd:integer> ;
+            sh:description "Item length" ;
+            sh:maxCount 1 ;
+            sh:minInclusive 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path cosmos_collection:length ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Biomedical Concept Data Element Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_collection:dataElementConceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Item included in the data collection dataset specialization used for eCSR set-up" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path cosmos_collection:dataCollectionInstrumentItem ],
+        [ sh:datatype <xsd:boolean> ;
+            sh:description "Indicator that the item is hidden from the user" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path cosmos_collection:displayHidden ],
+        [ sh:class cosmos_collection:PrepopulatedValue ;
+            sh:description "Pre-populated value for the data collection instrument" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 14 ;
             sh:path cosmos_collection:prepopulatedValue ],
         [ sh:class cosmos_collection:CodeList ;
             sh:description "Codelist" ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 7 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 15 ;
             sh:path cosmos_collection:codelist ],
-        [ sh:description "Variable included in the data collection dataset specialization used for eCSR set-up" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 3 ;
-            sh:path cosmos_collection:eCRFItem ],
-        [ sh:description "Data collection item question text" ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path cosmos_collection:questionText ],
-        [ sh:description "Flag that indicates if the variable is a non-standard variable" ;
-            sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path cosmos_collection:isNonStandard ],
-        [ sh:description "Data collection item prompt" ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path cosmos_collection:prompt ],
-        [ sh:description "Indicator that the item is hidden from the user" ;
-            sh:maxCount 1 ;
-            sh:order 11 ;
-            sh:path cosmos_collection:displayHidden ],
-        [ sh:class cosmos_collection:ListValue ;
-            sh:description "A set of valid CDISC submission values for a data collection item" ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 8 ;
-            sh:path cosmos_collection:valueList ],
-        [ sh:class cosmos_collection:SDTMTarget ;
-            sh:description "SDTM target variables for data collection item variable" ;
-            sh:nodeKind sh:BlankNode ;
-            sh:order 16 ;
-            sh:path cosmos_collection:sdtmTarget ],
-        [ sh:description "Variable length" ;
-            sh:maxCount 1 ;
-            sh:minInclusive 1 ;
-            sh:order 13 ;
-            sh:path cosmos_collection:length ],
-        [ sh:description "Item included in the data collection dataset specialization" ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path cosmos_collection:name ],
-        [ sh:description "Type of list used for eCRF set-up" ;
+        [ sh:description "Type of list used for set-up of the data collection instrument" ;
             sh:in ( "Radio" "Dropdown" "DropdownMultiSelect" "Checkbox" "Text" "Date" "Time" "DateTime" ) ;
             sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path cosmos_collection:listStyle ],
-        [ sh:description "Variable significant_digits" ;
-            sh:maxCount 1 ;
-            sh:order 14 ;
-            sh:path cosmos_collection:significantDigits ],
-        [ sh:description "Indicator that the item must be present within the data collection group" ;
+            sh:order 13 ;
+            sh:path cosmos_collection:listType ],
+        [ sh:class cosmos_collection:SDTMTarget ;
+            sh:description "SDTM target variables for data collection item variable" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 16 ;
+            sh:path cosmos_collection:sdtmTarget ],
+        [ sh:class cosmos_collection:ListValue ;
+            sh:description "A set of values for a data collection item" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 12 ;
+            sh:path cosmos_collection:valueList ],
+        [ sh:datatype <xsd:boolean> ;
+            sh:description "Indicator that the item must be present within the data collection group" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 15 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
             sh:path cosmos_collection:mandatoryVariable ],
-        [ sh:description "Data collection item order number" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 6 ;
-            sh:path cosmos_collection:orderNumber ],
         [ sh:description "Item data type" ;
             sh:in ( "decimal" "float" "integer" "text" "date" "time" ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 12 ;
+            sh:order 8 ;
             sh:path cosmos_collection:dataType ],
-        [ sh:description "Biomedical Concept Data Element Concept identifier foreign key" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "Item question text" ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_collection:dataElementConceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_collection:questionText ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Item included in the data collection dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_collection:name ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Item prompt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path cosmos_collection:prompt ] ;
     sh:targetClass cosmos_collection:DataCollectionItem .
 
 cosmos_collection:ListValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "CDISC submission value for the data collection item" ;
+    sh:property [ sh:datatype <xsd:string> ;
+            sh:description "User-friendly display value for the data collection item" ;
             sh:maxCount 1 ;
-            sh:order 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
             sh:path cosmos_collection:value ],
-        [ sh:description "User-friendly display value for the data collection item" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "CDISC submission value for the data collection item" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
             sh:path cosmos_collection:displayValue ] ;
     sh:targetClass cosmos_collection:ListValue .
 
 cosmos_collection:PrepopulatedValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
+    sh:property [ sh:datatype <xsd:string> ;
+            sh:description "Submission value for pre-populated term in NCIt" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_collection:value ],
-        [ sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 0 ;
+            sh:path cosmos_collection:value ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "C-code for pre-populated term in NCIt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
             sh:path cosmos_collection:conceptId ;
             sh:pattern "^(C[0123456789]+)$" ] ;
     sh:targetClass cosmos_collection:PrepopulatedValue .
@@ -202,18 +256,23 @@ cosmos_collection:PrepopulatedValue a sh:NodeShape ;
 cosmos_collection:SDTMTarget a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Annotation of the SDTM target as it should appear on the eCRF" ;
+    sh:property [ sh:datatype <xsd:string> ;
+            sh:description "Annotation of the SDTM target in the data collection instrument" ;
             sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 1 ;
             sh:path cosmos_collection:sdtmAnnotation ],
-        [ sh:description "Rule for mapping from data collection item to SDTM target variable." ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "Rule for mapping from data collection item to SDTM target variable." ;
             sh:maxCount 1 ;
-            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 2 ;
             sh:path cosmos_collection:sdtmTargetMapping ],
-        [ sh:description "SDTM target variable for data collection item variable" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "SDTM target variable for data collection item variable" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path cosmos_collection:sdtmVariable ] ;
     sh:targetClass cosmos_collection:SDTMTarget .

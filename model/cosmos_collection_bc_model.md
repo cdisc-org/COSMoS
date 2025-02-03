@@ -3,12 +3,12 @@ erDiagram
 DataCollectionGroup {
     date packageDate  
     PackageTypeEnum packageType  
-    string datasetSpecializationId  
+    string collectionSpecializationId  
+    string shortName  
     string standard  
     string standardStartVersion  
     string standardEndVersion  
     string domain  
-    string shortName  
     string biomedicalConceptId  
     string sdtmDatasetSpecializationId  
 }
@@ -16,29 +16,29 @@ DataCollectionItem {
     string name  
     string dataElementConceptId  
     boolean isNonStandard  
-    string eCRFItem  
+    string dataCollectionInstrumentItem  
     string questionText  
     string prompt  
     integer orderNumber  
-    ListTypeEnum listStyle  
-    boolean displayHidden  
+    boolean mandatoryVariable  
     CollectionItemDataTypeEnum dataType  
     integer length  
     integer significantDigits  
-    boolean mandatoryVariable  
-}
-CodeList {
-    string conceptId  
-    uri href  
-    string submissionValue  
+    boolean displayHidden  
+    ListTypeEnum listType  
 }
 ListValue {
-    string value  
     string displayValue  
+    string value  
 }
 PrepopulatedValue {
-    string conceptId  
     string value  
+    string conceptId  
+}
+CodeList {
+    string submissionValue  
+    string conceptId  
+    uri href  
 }
 SDTMTarget {
     string sdtmVariable  
@@ -47,9 +47,9 @@ SDTMTarget {
 }
 
 DataCollectionGroup ||--}| DataCollectionItem : "items"
-DataCollectionItem ||--|o CodeList : "codelist"
 DataCollectionItem ||--}o ListValue : "valueList"
 DataCollectionItem ||--|o PrepopulatedValue : "prepopulatedValue"
+DataCollectionItem ||--|o CodeList : "codelist"
 DataCollectionItem ||--}o SDTMTarget : "sdtmTarget"
 
 ```

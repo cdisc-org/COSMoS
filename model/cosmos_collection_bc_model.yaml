@@ -19,12 +19,12 @@ classes:
     slots:
       - packageDate
       - packageType
-      - datasetSpecializationId
+      - collectionSpecializationId
+      - shortName
       - standard
       - standardStartVersion
       - standardEndVersion
       - domain
-      - shortName
       - biomedicalConceptId
       - sdtmDatasetSpecializationId
       - items
@@ -34,48 +34,72 @@ classes:
       - name
       - dataElementConceptId
       - isNonStandard
-      - eCRFItem
+      - dataCollectionInstrumentItem
       - questionText
       - prompt
       - orderNumber
-      - codelist
-      - valueList
-      - listStyle
-      - prepopulatedValue
-      - displayHidden
+      - mandatoryVariable
       - dataType
       - length
       - significantDigits
-      - mandatoryVariable
+      - displayHidden
+      - valueList
+      - listType
+      - prepopulatedValue
+      - codelist
       - sdtmTarget
+
+  ListValue:
+    slots:
+      - displayValue
+      - value
+    slot_usage:
+      displayValue:
+        description: CDISC submission value for the data collection item
+        required: true
+        aliases:
+          - value_display_list
+      value:
+        description: User-friendly display value for the data collection item
+        required: false
+        aliases:
+          - value_list
+
+  PrepopulatedValue:
+    slots:
+      - value
+      - conceptId
+    slot_usage:
+      value:
+        description: Submission value for pre-populated term in NCIt
+        required: true
+        aliases:
+          - prepopulated_term
+      conceptId:
+        description: C-code for pre-populated term in NCIt
+        required: false
+        aliases:
+          - prepopulated_code
 
   CodeList:
     slots:
+      - submissionValue
       - conceptId
       - href
-      - submissionValue
-
-  ListValue:
-    attributes:
-      value:
-        description: CDISC submission value for the data collection item
-        range: string
-      displayValue:
-        description: User-friendly display value for the data collection item
-        range: string
+    slot_usage:
+      submissionValue:
         required: true
-
-  PrepopulatedValue:
-    attributes:
+        description: CDISC submission value for the codelist
+        aliases:
+          - codelist_submission_value
       conceptId:
-        description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
-        range: string
-        pattern: "^(C[0123456789]+)$"
-        required: false
-      value:
-        description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
-        range: string
-        required: true
+        description: C-code for codelist in NCIt
+        aliases:
+          - codelist
+      href:
+        description: Link to NCIt for the codelist
+        aliases:
+          - codelist_uri
 
   SDTMTarget:
     slots:
@@ -89,41 +113,60 @@ slots:
     description: Biomedical Concept package release date indicating when the BC package was published to production
     range: date
     required: true
+    aliases:
+      - package_date
   packageType:
-    description: Package type (collection for Data Dollection Dataset Specializations)
+    description: Package type for data collection specializations (collection)
     range: PackageTypeEnum
     required: true
-  datasetSpecializationId:
+    aliases:
+      - package_type
+  collectionSpecializationId:
     description: Identifier for data collection specialization group
     identifier: true
     range: string
     required: true
+    aliases:
+      - collection_group_id
+  shortName:
+    description: Short name which provides a user friendly and intuitive name for the data collection group
+    range: string
+    required: true
+    aliases:
+      - short_name
   standard:
     description: Standard for the data collection specialization group
     range: string
     required: true
+    aliases:
+      - standard
   standardStartVersion:
-    description: The earliest data collection IG version applicable to the BC dataset specialization
+    description: The earliest data collection IG version applicable to the collection specialization
     range: string
     required: true
+    aliases:
+      - standard_start_version
   standardEndVersion:
-    description: The last data collection IG version that is applicable to the BC dataset specialization
+    description: The last data collection IG version that is applicable to the collection specialization
     range: string
+    aliases:
+      - standard_end_version
   domain:
     description: Domain for the data collection specialization group
     range: string
-  shortName:
-    description: Data collectrion group short name which provides a user friendly and intuitive name for the datasetSpecializationId
-    range: string
-    required: true
   biomedicalConceptId:
     description: Biomedical Concept identifier foreign key
     range: string
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
     recommended: true
+    aliases:
+      - bc_id
   sdtmDatasetSpecializationId:
     description: Identifier for SDTM Dataset Specialization group
     range: string
+    required: true
+    aliases:
+      - vlm_group_id
   items:
     description: Item included in the Data Collection dataset specialization
     range: DataCollectionItem
@@ -135,66 +178,106 @@ slots:
     description: Item included in the data collection dataset specialization
     identifier: true
     range: string
+    aliases:
+      - data_collection_item
   dataElementConceptId:
-      description: Biomedical Concept Data Element Concept identifier foreign key
-      range: string
-      pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    description: Biomedical Concept Data Element Concept identifier foreign key
+    range: string
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    aliases:
+      - dec_id
   isNonStandard:
     description: Flag that indicates if the variable is a non-standard variable
     range: boolean
-  eCRFItem:
-    description: Variable included in the data collection dataset specialization used for eCSR set-up
+    aliases:
+      - nsv_flag
+  dataCollectionInstrumentItem:
+    description: Item included in the data collection dataset specialization used for eCSR set-up
     range: string
     required: true
+    aliases:
+      - data_collection_instrument_item
   questionText:
-    description: Data collection item question text
+    description: Item question text
     range: string
-    recommended: true
+    required: true
+    aliases:
+      - question_text
   prompt:
-    description: Data collection item prompt
+    description: Item prompt
     range: string
     recommended: true
+    aliases:
+      - prompt
   orderNumber:
-    description: Data collection item order number
+    description: Item order number
     range: integer
     required: true
+    aliases:
+      - order_number
+  mandatoryVariable:
+    description: Indicator that the item must be present within the data collection group
+    range: boolean
+    required: true
+    aliases:
+      - mandatory_variable
+  dataType:
+    description: Item data type
+    range: CollectionItemDataTypeEnum
+    required: true
+    aliases:
+      - data_type
+  length:
+    description: Item length
+    range: integer
+    minimum_value: 1
+    aliases:
+      - length
+  significantDigits:
+    description: Item significant_digits
+    range: integer
+    aliases:
+      - significant_digits
+  displayHidden:
+    description: Indicator that the item is hidden from the user
+    range: boolean
+    aliases:
+      - display_hidden
+  valueList:
+    description: A set of values for a data collection item
+    range: ListValue
+    multivalued: true
+    inlined_as_list: true
+  listType:
+    description: Type of list used for set-up of the data collection instrument
+    range: ListTypeEnum
+    aliases:
+      - list_type
+  prepopulatedValue:
+    description: Pre-populated value for the data collection instrument
+    range: PrepopulatedValue
   codelist:
     description: Codelist
     range: CodeList
     inlined: true
-  prepopulatedValue:
-    description: Pre-populated value on a CRF
-    range: PrepopulatedValue
-  displayHidden:
-    description: Indicator that the item is hidden from the user
-    range: boolean
 
   conceptId:
-    description: C-code for a codelist in NCIt
-    identifier: true
+    description: C-code for codelist or term in NCIt
     range: string
     pattern: "^(C[0123456789]+)$"
-    required: true
   href:
-    description: Link to NCIt for the codelist
+    description: Link to NCIt for the codelist or term
     range: uri
   submissionValue:
-    description: CDISC submission value for the codelist
+    description: CDISC submission value
     required: true
-
-  valueList:
-    description: A set of valid CDISC submission values for a data collection item
-    range: ListValue
-    multivalued: true
-    inlined_as_list: true
-  valueDisplayList:
-    description: A set of valid user-friendly CDISC submission values for a data collection item
+  displayValue:
+    description: User-friendly display value for the data collection item
     range: string
-    multivalued: true
-    inlined_as_list: true
-  listStyle:
-    description: Type of list used for eCRF set-up
-    range: ListTypeEnum
+    required: true
+  value:
+    description: CDISC submission value for the data collection item
+    range: string
 
   sdtmTarget:
     description: SDTM target variables for data collection item variable
@@ -205,41 +288,25 @@ slots:
     description: SDTM target variable for data collection item variable
     range: string
     required: true
+    aliases:
+      - sdtm_target_variable
   sdtmAnnotation:
-    description: Annotation of the SDTM target as it should appear on the eCRF
+    description: Annotation of the SDTM target in the data collection instrument
     range: string
+    recommended: true
+    aliases:
+      - sdtm_annotation
   sdtmTargetMapping:
     description: Rule for mapping from data collection item to SDTM target variable.
     range: string
-    required: true
-
-  dataType:
-    description: Item data type
-    range: CollectionItemDataTypeEnum
-    required: true
-  length:
-    description: Variable length
-    range: integer
-    minimum_value: 1
-  significantDigits:
-    description: Variable significant_digits
-    range: integer
-  mandatoryVariable:
-    description: Indicator that the item must be present within the data collection group
-    range: boolean
-    required: true
+    aliases:
+      - sdtm_mapping
 
 enums:
 
   PackageTypeEnum:
     permissible_values:
       collection:
-
-  CDASHIGCore:
-    permissible_values:
-      HR:
-      R/C:
-      O:
 
   CollectionItemDataTypeEnum:
     permissible_values:
