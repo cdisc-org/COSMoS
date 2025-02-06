@@ -30,9 +30,8 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
 
     def query_DataCollectionItem(self,
              name: Union[str, MatchExpression] = None,
+             variableName: Union[str, MatchExpression] = None,
              dataElementConceptId: Union[str, MatchExpression] = None,
-             isNonStandard: Union[str, MatchExpression] = None,
-             dataCollectionInstrumentItem: Union[str, MatchExpression] = None,
              questionText: Union[str, MatchExpression] = None,
              prompt: Union[str, MatchExpression] = None,
              orderNumber: Union[str, MatchExpression] = None,
@@ -41,20 +40,20 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
              length: Union[str, MatchExpression] = None,
              significantDigits: Union[str, MatchExpression] = None,
              displayHidden: Union[str, MatchExpression] = None,
+             codelist: Union[str, MatchExpression] = None,
              valueList: Union[str, MatchExpression] = None,
              listType: Union[str, MatchExpression] = None,
              prepopulatedValue: Union[str, MatchExpression] = None,
-             codelist: Union[str, MatchExpression] = None,
              sdtmTarget: Union[str, MatchExpression] = None,
+             sdtmAnnotation: Union[str, MatchExpression] = None,
              
              _extra: Any = None) -> List[DataCollectionItem]:
         """
         Queries for instances of `DataCollectionItem`
 
-        :param name: Item included in the data collection dataset specialization
+        :param name: Item name as it appears on the collection instrument
+        :param variableName: Variable name of the collection item for which data are being collected.
         :param dataElementConceptId: Biomedical Concept Data Element Concept identifier foreign key
-        :param isNonStandard: Flag that indicates if the variable is a non-standard variable
-        :param dataCollectionInstrumentItem: Item included in the data collection dataset specialization used for eCSR set-up
         :param questionText: Item question text
         :param prompt: Item prompt
         :param orderNumber: Item order number
@@ -63,11 +62,12 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
         :param length: Item length
         :param significantDigits: Item significant_digits
         :param displayHidden: Indicator that the item is hidden from the user
+        :param codelist: Codelist
         :param valueList: A set of values for a data collection item
         :param listType: Type of list used for set-up of the data collection instrument
         :param prepopulatedValue: Pre-populated value for the data collection instrument
-        :param codelist: Codelist
         :param sdtmTarget: SDTM target variables for data collection item variable
+        :param sdtmAnnotation: Annotation of the SDTM target in the data collection instrument
         
         :return: Person list matching constraints
         """
@@ -75,11 +75,9 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
                                                  
                                                  name=name,
                                                  
+                                                 variableName=variableName,
+                                                 
                                                  dataElementConceptId=dataElementConceptId,
-                                                 
-                                                 isNonStandard=isNonStandard,
-                                                 
-                                                 dataCollectionInstrumentItem=dataCollectionInstrumentItem,
                                                  
                                                  questionText=questionText,
                                                  
@@ -97,15 +95,17 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
                                                  
                                                  displayHidden=displayHidden,
                                                  
+                                                 codelist=codelist,
+                                                 
                                                  valueList=valueList,
                                                  
                                                  listType=listType,
                                                  
                                                  prepopulatedValue=prepopulatedValue,
                                                  
-                                                 codelist=codelist,
-                                                 
                                                  sdtmTarget=sdtmTarget,
+                                                 
+                                                 sdtmAnnotation=sdtmAnnotation,
                                                  
                                                  _extra=_extra)
         return results

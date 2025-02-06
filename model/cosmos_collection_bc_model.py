@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-01-28T17:24:40
+# Generation date: 2025-02-06T12:41:21
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -102,6 +102,8 @@ class DataCollectionGroup(YAMLRoot):
     sdtmDatasetSpecializationId: str = None
     items: Union[Dict[Union[str, DataCollectionItemName], Union[dict, "DataCollectionItem"]], List[Union[dict, "DataCollectionItem"]]] = empty_dict()
     standardEndVersion: Optional[str] = None
+    implementationOption: Optional[Union[str, "ImplementationOptionEnum"]] = None
+    scenario: Optional[str] = None
     domain: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
 
@@ -148,6 +150,12 @@ class DataCollectionGroup(YAMLRoot):
         if self.standardEndVersion is not None and not isinstance(self.standardEndVersion, str):
             self.standardEndVersion = str(self.standardEndVersion)
 
+        if self.implementationOption is not None and not isinstance(self.implementationOption, ImplementationOptionEnum):
+            self.implementationOption = ImplementationOptionEnum(self.implementationOption)
+
+        if self.scenario is not None and not isinstance(self.scenario, str):
+            self.scenario = str(self.scenario)
+
         if self.domain is not None and not isinstance(self.domain, str):
             self.domain = str(self.domain)
 
@@ -167,22 +175,22 @@ class DataCollectionItem(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.DataCollectionItem
 
     name: Union[str, DataCollectionItemName] = None
-    dataCollectionInstrumentItem: str = None
+    variableName: str = None
     questionText: str = None
     orderNumber: int = None
     mandatoryVariable: Union[bool, Bool] = None
     dataType: Union[str, "CollectionItemDataTypeEnum"] = None
     dataElementConceptId: Optional[str] = None
-    isNonStandard: Optional[Union[bool, Bool]] = None
     prompt: Optional[str] = None
     length: Optional[int] = None
     significantDigits: Optional[int] = None
     displayHidden: Optional[Union[bool, Bool]] = None
+    codelist: Optional[Union[dict, "CodeList"]] = None
     valueList: Optional[Union[Union[dict, "ListValue"], List[Union[dict, "ListValue"]]]] = empty_list()
     listType: Optional[Union[str, "ListTypeEnum"]] = None
     prepopulatedValue: Optional[Union[dict, "PrepopulatedValue"]] = None
-    codelist: Optional[Union[dict, "CodeList"]] = None
     sdtmTarget: Optional[Union[Union[dict, "SDTMTarget"], List[Union[dict, "SDTMTarget"]]]] = empty_list()
+    sdtmAnnotation: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.name):
@@ -190,10 +198,10 @@ class DataCollectionItem(YAMLRoot):
         if not isinstance(self.name, DataCollectionItemName):
             self.name = DataCollectionItemName(self.name)
 
-        if self._is_empty(self.dataCollectionInstrumentItem):
-            self.MissingRequiredField("dataCollectionInstrumentItem")
-        if not isinstance(self.dataCollectionInstrumentItem, str):
-            self.dataCollectionInstrumentItem = str(self.dataCollectionInstrumentItem)
+        if self._is_empty(self.variableName):
+            self.MissingRequiredField("variableName")
+        if not isinstance(self.variableName, str):
+            self.variableName = str(self.variableName)
 
         if self._is_empty(self.questionText):
             self.MissingRequiredField("questionText")
@@ -218,9 +226,6 @@ class DataCollectionItem(YAMLRoot):
         if self.dataElementConceptId is not None and not isinstance(self.dataElementConceptId, str):
             self.dataElementConceptId = str(self.dataElementConceptId)
 
-        if self.isNonStandard is not None and not isinstance(self.isNonStandard, Bool):
-            self.isNonStandard = Bool(self.isNonStandard)
-
         if self.prompt is not None and not isinstance(self.prompt, str):
             self.prompt = str(self.prompt)
 
@@ -233,6 +238,9 @@ class DataCollectionItem(YAMLRoot):
         if self.displayHidden is not None and not isinstance(self.displayHidden, Bool):
             self.displayHidden = Bool(self.displayHidden)
 
+        if self.codelist is not None and not isinstance(self.codelist, CodeList):
+            self.codelist = CodeList(**as_dict(self.codelist))
+
         if not isinstance(self.valueList, list):
             self.valueList = [self.valueList] if self.valueList is not None else []
         self.valueList = [v if isinstance(v, ListValue) else ListValue(**as_dict(v)) for v in self.valueList]
@@ -243,12 +251,12 @@ class DataCollectionItem(YAMLRoot):
         if self.prepopulatedValue is not None and not isinstance(self.prepopulatedValue, PrepopulatedValue):
             self.prepopulatedValue = PrepopulatedValue(**as_dict(self.prepopulatedValue))
 
-        if self.codelist is not None and not isinstance(self.codelist, CodeList):
-            self.codelist = CodeList(**as_dict(self.codelist))
-
         if not isinstance(self.sdtmTarget, list):
             self.sdtmTarget = [self.sdtmTarget] if self.sdtmTarget is not None else []
         self.sdtmTarget = [v if isinstance(v, SDTMTarget) else SDTMTarget(**as_dict(v)) for v in self.sdtmTarget]
+
+        if self.sdtmAnnotation is not None and not isinstance(self.sdtmAnnotation, str):
+            self.sdtmAnnotation = str(self.sdtmAnnotation)
 
         super().__post_init__(**kwargs)
 
@@ -338,18 +346,15 @@ class SDTMTarget(YAMLRoot):
     class_name: ClassVar[str] = "SDTMTarget"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.SDTMTarget
 
-    sdtmVariable: str = None
-    sdtmAnnotation: Optional[str] = None
+    sdtmVariable: Union[str, List[str]] = None
     sdtmTargetMapping: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.sdtmVariable):
             self.MissingRequiredField("sdtmVariable")
-        if not isinstance(self.sdtmVariable, str):
-            self.sdtmVariable = str(self.sdtmVariable)
-
-        if self.sdtmAnnotation is not None and not isinstance(self.sdtmAnnotation, str):
-            self.sdtmAnnotation = str(self.sdtmAnnotation)
+        if not isinstance(self.sdtmVariable, list):
+            self.sdtmVariable = [self.sdtmVariable] if self.sdtmVariable is not None else []
+        self.sdtmVariable = [v if isinstance(v, str) else str(v) for v in self.sdtmVariable]
 
         if self.sdtmTargetMapping is not None and not isinstance(self.sdtmTargetMapping, str):
             self.sdtmTargetMapping = str(self.sdtmTargetMapping)
@@ -364,6 +369,15 @@ class PackageTypeEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="PackageTypeEnum",
+    )
+
+class ImplementationOptionEnum(EnumDefinitionImpl):
+
+    Horizontal = PermissibleValue(text="Horizontal")
+    Vertical = PermissibleValue(text="Vertical")
+
+    _defn = EnumDefinition(
+        name="ImplementationOptionEnum",
     )
 
 class CollectionItemDataTypeEnum(EnumDefinitionImpl):
@@ -419,6 +433,12 @@ slots.standardStartVersion = Slot(uri=COSMOS_COLLECTION.standardStartVersion, na
 slots.standardEndVersion = Slot(uri=COSMOS_COLLECTION.standardEndVersion, name="standardEndVersion", curie=COSMOS_COLLECTION.curie('standardEndVersion'),
                    model_uri=COSMOS_COLLECTION.standardEndVersion, domain=None, range=Optional[str])
 
+slots.implementationOption = Slot(uri=COSMOS_COLLECTION.implementationOption, name="implementationOption", curie=COSMOS_COLLECTION.curie('implementationOption'),
+                   model_uri=COSMOS_COLLECTION.implementationOption, domain=None, range=Optional[Union[str, "ImplementationOptionEnum"]])
+
+slots.scenario = Slot(uri=COSMOS_COLLECTION.scenario, name="scenario", curie=COSMOS_COLLECTION.curie('scenario'),
+                   model_uri=COSMOS_COLLECTION.scenario, domain=None, range=Optional[str])
+
 slots.domain = Slot(uri=COSMOS_COLLECTION.domain, name="domain", curie=COSMOS_COLLECTION.curie('domain'),
                    model_uri=COSMOS_COLLECTION.domain, domain=None, range=Optional[str])
 
@@ -435,15 +455,12 @@ slots.items = Slot(uri=COSMOS_COLLECTION.items, name="items", curie=COSMOS_COLLE
 slots.name = Slot(uri=COSMOS_COLLECTION.name, name="name", curie=COSMOS_COLLECTION.curie('name'),
                    model_uri=COSMOS_COLLECTION.name, domain=None, range=URIRef)
 
+slots.variableName = Slot(uri=COSMOS_COLLECTION.variableName, name="variableName", curie=COSMOS_COLLECTION.curie('variableName'),
+                   model_uri=COSMOS_COLLECTION.variableName, domain=None, range=str)
+
 slots.dataElementConceptId = Slot(uri=COSMOS_COLLECTION.dataElementConceptId, name="dataElementConceptId", curie=COSMOS_COLLECTION.curie('dataElementConceptId'),
                    model_uri=COSMOS_COLLECTION.dataElementConceptId, domain=None, range=Optional[str],
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
-
-slots.isNonStandard = Slot(uri=COSMOS_COLLECTION.isNonStandard, name="isNonStandard", curie=COSMOS_COLLECTION.curie('isNonStandard'),
-                   model_uri=COSMOS_COLLECTION.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
-
-slots.dataCollectionInstrumentItem = Slot(uri=COSMOS_COLLECTION.dataCollectionInstrumentItem, name="dataCollectionInstrumentItem", curie=COSMOS_COLLECTION.curie('dataCollectionInstrumentItem'),
-                   model_uri=COSMOS_COLLECTION.dataCollectionInstrumentItem, domain=None, range=str)
 
 slots.questionText = Slot(uri=COSMOS_COLLECTION.questionText, name="questionText", curie=COSMOS_COLLECTION.curie('questionText'),
                    model_uri=COSMOS_COLLECTION.questionText, domain=None, range=str)
@@ -469,6 +486,9 @@ slots.significantDigits = Slot(uri=COSMOS_COLLECTION.significantDigits, name="si
 slots.displayHidden = Slot(uri=COSMOS_COLLECTION.displayHidden, name="displayHidden", curie=COSMOS_COLLECTION.curie('displayHidden'),
                    model_uri=COSMOS_COLLECTION.displayHidden, domain=None, range=Optional[Union[bool, Bool]])
 
+slots.codelist = Slot(uri=COSMOS_COLLECTION.codelist, name="codelist", curie=COSMOS_COLLECTION.curie('codelist'),
+                   model_uri=COSMOS_COLLECTION.codelist, domain=None, range=Optional[Union[dict, CodeList]])
+
 slots.valueList = Slot(uri=COSMOS_COLLECTION.valueList, name="valueList", curie=COSMOS_COLLECTION.curie('valueList'),
                    model_uri=COSMOS_COLLECTION.valueList, domain=None, range=Optional[Union[Union[dict, ListValue], List[Union[dict, ListValue]]]])
 
@@ -477,9 +497,6 @@ slots.listType = Slot(uri=COSMOS_COLLECTION.listType, name="listType", curie=COS
 
 slots.prepopulatedValue = Slot(uri=COSMOS_COLLECTION.prepopulatedValue, name="prepopulatedValue", curie=COSMOS_COLLECTION.curie('prepopulatedValue'),
                    model_uri=COSMOS_COLLECTION.prepopulatedValue, domain=None, range=Optional[Union[dict, PrepopulatedValue]])
-
-slots.codelist = Slot(uri=COSMOS_COLLECTION.codelist, name="codelist", curie=COSMOS_COLLECTION.curie('codelist'),
-                   model_uri=COSMOS_COLLECTION.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
 slots.conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="conceptId", curie=COSMOS_COLLECTION.curie('conceptId'),
                    model_uri=COSMOS_COLLECTION.conceptId, domain=None, range=Optional[str],
@@ -501,7 +518,7 @@ slots.sdtmTarget = Slot(uri=COSMOS_COLLECTION.sdtmTarget, name="sdtmTarget", cur
                    model_uri=COSMOS_COLLECTION.sdtmTarget, domain=None, range=Optional[Union[Union[dict, SDTMTarget], List[Union[dict, SDTMTarget]]]])
 
 slots.sdtmVariable = Slot(uri=COSMOS_COLLECTION.sdtmVariable, name="sdtmVariable", curie=COSMOS_COLLECTION.curie('sdtmVariable'),
-                   model_uri=COSMOS_COLLECTION.sdtmVariable, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.sdtmVariable, domain=None, range=Union[str, List[str]])
 
 slots.sdtmAnnotation = Slot(uri=COSMOS_COLLECTION.sdtmAnnotation, name="sdtmAnnotation", curie=COSMOS_COLLECTION.curie('sdtmAnnotation'),
                    model_uri=COSMOS_COLLECTION.sdtmAnnotation, domain=None, range=Optional[str])

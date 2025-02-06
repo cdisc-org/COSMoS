@@ -1,7 +1,5 @@
-@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix NCIT: <http://purl.obolibrary.org/obo/NCIT_> .
 @prefix cosmos_sdtm: <https://www.cdisc.org/cosmos/sdtm_v1.0/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix linkml: <https://w3id.org/linkml/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,1038 +7,1429 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-linkml:SubsetDefinition a owl:Class ;
-    rdfs:label "subset_definition" .
-
-linkml:TypeDefinition a owl:Class ;
-    rdfs:label "type_definition" .
-
-linkml:topValue a owl:DatatypeProperty ;
-    rdfs:label "value" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0> a owl:Ontology ;
-    rdfs:label "COSMoS-Biomedical-Concepts-SDTM-Schema" ;
-    IAO:0000700 cosmos_sdtm:AssignedTerm,
-        cosmos_sdtm:CodeList,
-        cosmos_sdtm:CodeListTerm,
-        cosmos_sdtm:RelationShip,
-        cosmos_sdtm:SDTMGroup,
-        cosmos_sdtm:SDTMVariable,
-        cosmos_sdtm:SubsetCodeList ;
-    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2025-01-23T13:48:16" ;
-    linkml:metamodel_version "1.7.0" ;
-    linkml:source_file "cosmos_sdtm_bc_model.yaml" ;
-    linkml:source_file_date "2025-01-23T13:47:55" ;
-    linkml:source_file_size 14585 .
-
 cosmos_sdtm:SDTMGroup a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "SDTMGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:datasetSpecializationId ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ) ] ) ] ;
             owl:onProperty cosmos_sdtm:biomedicalConceptId ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom cosmos_sdtm:SDTMVariable ;
-                        owl:onProperty cosmos_sdtm:variables ] [ a owl:Restriction ;
-                        owl:onProperty cosmos_sdtm:variables ;
-                        owl:someValuesFrom cosmos_sdtm:SDTMVariable ] ) ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:shortName ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:datasetSpecializationId ],
         [ a owl:Restriction ;
-            owl:onClass cosmos_sdtm:PackageTypeEnum ;
-            owl:onProperty cosmos_sdtm:packageType ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:biomedicalConceptId ],
         [ a owl:Restriction ;
-            owl:onClass linkml:Date ;
-            owl:onProperty cosmos_sdtm:packageDate ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:datasetSpecializationId ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:source ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:sdtmigEndVersion ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:sdtmigStartVersion ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:datasetSpecializationId ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:domain ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:domain ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:sdtmigEndVersion ] .
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:sdtmigStartVersion ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:sdtmigStartVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:packageType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:source ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:variables ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:domain ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:sdtmigEndVersion ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:sdtmigEndVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:packageType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:shortName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:sdtmigStartVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:packageDate ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:source ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:shortName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:SDTMVariable ;
+            owl:onProperty cosmos_sdtm:variables ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:biomedicalConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:source ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:PackageTypeEnum ;
+            owl:onProperty cosmos_sdtm:packageType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:domain ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Date ;
+            owl:onProperty cosmos_sdtm:packageDate ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:packageDate ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
 cosmos_sdtm:SubsetCodeList a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "SubsetCodeList" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:subsetShortName ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:codelistTerm ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:subsetLabel ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:parentCodelist ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:parentCodelist ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom cosmos_sdtm:CodeListTerm ;
-                        owl:onProperty cosmos_sdtm:codelistTerm ] [ a owl:Restriction ;
-                        owl:onProperty cosmos_sdtm:codelistTerm ;
-                        owl:someValuesFrom cosmos_sdtm:CodeListTerm ] ) ] .
-
-cosmos_sdtm:assignedTerm a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "assignedTerm" ;
-    rdfs:range cosmos_sdtm:AssignedTerm ;
-    skos:definition "Assigned term" .
-
-cosmos_sdtm:biomedicalConceptId a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "biomedicalConceptId" ;
-    rdfs:range linkml:String ;
-    skos:definition "Biomedical Concept identifier foreign key" .
-
-cosmos_sdtm:codelist a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "codelist" ;
-    rdfs:range cosmos_sdtm:CodeList ;
-    skos:definition "Codelist" .
-
-cosmos_sdtm:comparator a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "comparator" ;
-    rdfs:range cosmos_sdtm:ComparatorEnum ;
-    skos:definition "Comparison operator for SDTM group variables included in VLM" .
-
-cosmos_sdtm:dataElementConceptId a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "dataElementConceptId" ;
-    rdfs:range linkml:String ;
-    skos:definition "Biomedical Concept Data Element Concept identifier foreign key" .
-
-cosmos_sdtm:dataType a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "dataType" ;
-    rdfs:range cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    skos:definition "Variable data type" .
-
-cosmos_sdtm:datasetSpecializationId a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "datasetSpecializationId" ;
-    rdfs:range linkml:String ;
-    skos:definition "Identifier for SDTM Value Level Metadata group" .
-
-cosmos_sdtm:domain a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "domain" ;
-    rdfs:range linkml:String ;
-    skos:definition "Domain for the SDTM specialization group" .
-
-cosmos_sdtm:format a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "format" ;
-    rdfs:range linkml:String ;
-    skos:definition "Variable display format" .
-
-cosmos_sdtm:href a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "href" ;
-    rdfs:range linkml:Uri ;
-    skos:definition "Link to NCIt for the codelist" .
-
-cosmos_sdtm:isNonStandard a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "isNonStandard" ;
-    rdfs:range linkml:Boolean ;
-    skos:definition "Flag that indicates if the variable is a non-standard variable" .
-
-cosmos_sdtm:length a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "length" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "Variable length" .
-
-cosmos_sdtm:linkingPhrase a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "linkingPhrase" ;
-    rdfs:range cosmos_sdtm:LinkingPhraseEnum ;
-    skos:definition "Variable relationship descriptive linking phrase" .
-
-cosmos_sdtm:mandatoryValue a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "mandatoryValue" ;
-    rdfs:range linkml:Boolean ;
-    skos:definition "Indicator that variable must be populated within the SDTM group" .
-
-cosmos_sdtm:mandatoryVariable a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "mandatoryVariable" ;
-    rdfs:range linkml:Boolean ;
-    skos:definition "Indicator that variable must be present within the SDTM group" .
-
-cosmos_sdtm:name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "name" ;
-    rdfs:range linkml:String ;
-    skos:definition "Variable included in the SDTM dataset specialization" .
-
-cosmos_sdtm:object a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "object" ;
-    rdfs:range linkml:String ;
-    skos:definition "Object in a variable relationship" .
-
-cosmos_sdtm:originSource a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "originSource" ;
-    rdfs:range cosmos_sdtm:OriginSourceEnum ;
-    skos:definition "Variable origin source (define-XML v21)" .
-
-cosmos_sdtm:originType a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "originType" ;
-    rdfs:range cosmos_sdtm:OriginTypeEnum ;
-    skos:definition "Variable origin type (define-XML v21)" .
-
-cosmos_sdtm:packageDate a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "packageDate" ;
-    rdfs:range linkml:Date ;
-    skos:definition "Biomedical Concept package release date indicating when the BC package was published to production" .
-
-cosmos_sdtm:packageType a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "packageType" ;
-    rdfs:range cosmos_sdtm:PackageTypeEnum ;
-    skos:definition "Package type (sdtm for SDTM Dataset Specializations)" .
-
-cosmos_sdtm:parentCodelist a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "parentCodelist" ;
-    rdfs:range linkml:String ;
-    skos:definition "Subset codelist parent codelist" .
-
-cosmos_sdtm:predicateTerm a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "predicateTerm" ;
-    rdfs:range cosmos_sdtm:PredicateTermEnum ;
-    skos:definition "Short variable relationship linking phrase for programming purposes" .
-
-cosmos_sdtm:relationship a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "relationship" ;
-    rdfs:range cosmos_sdtm:RelationShip ;
-    skos:definition "Relationship between variables" .
-
-cosmos_sdtm:role a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "role" ;
-    rdfs:range cosmos_sdtm:RoleEnum ;
-    skos:definition "SDTM variable role" .
-
-cosmos_sdtm:sdtmigEndVersion a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "sdtmigEndVersion" ;
-    rdfs:range linkml:String ;
-    skos:definition "The last SDTMIG version that is applicable to the BC dataset specialization" .
-
-cosmos_sdtm:sdtmigStartVersion a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "sdtmigStartVersion" ;
-    rdfs:range linkml:String ;
-    skos:definition "The earliest SDTMIG version applicable to the BC dataset specialization" .
-
-cosmos_sdtm:shortName a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "shortName" ;
-    rdfs:range linkml:String ;
-    skos:definition "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" .
-
-cosmos_sdtm:significantDigits a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "significantDigits" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "Variable significant_digits" .
-
-cosmos_sdtm:source a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "source" ;
-    rdfs:range linkml:String ;
-    skos:definition "SDTM VLM Source which categorizes VLM groups by topic variable" .
-
-cosmos_sdtm:subject a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "subject" ;
-    rdfs:range linkml:String ;
-    skos:definition "Subject in a variable relationship" .
-
-cosmos_sdtm:submissionValue a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "submissionValue" ;
-    rdfs:range linkml:String ;
-    skos:definition "CDISC submission value for the codelist" .
-
-cosmos_sdtm:subsetCodelist a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "subsetCodelist" ;
-    rdfs:range linkml:String ;
-    skos:definition "Subset codelist short name" .
-
-cosmos_sdtm:subsetLabel a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "subsetLabel" ;
-    rdfs:range linkml:String ;
-    skos:definition "Subset codelist label" .
-
-cosmos_sdtm:subsetShortName a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "subsetShortName" ;
-    rdfs:range linkml:String ;
-    skos:definition "Subset codelist short name" .
-
-cosmos_sdtm:termId a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "termId" ;
-    rdfs:range linkml:String ;
-    skos:definition "C-code term in subset codelist" .
-
-cosmos_sdtm:termValue a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "termValue" ;
-    rdfs:range linkml:String ;
-    skos:definition "Submision value of term in subset codelist" .
-
-cosmos_sdtm:value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "value" ;
-    rdfs:range linkml:String ;
-    skos:definition "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" .
-
-cosmos_sdtm:valueList a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "valueList" ;
-    rdfs:range linkml:String ;
-    skos:definition "List of SDTM submission values used if subset codelist is not applicable" .
-
-cosmos_sdtm:vlmTarget a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "vlmTarget" ;
-    rdfs:range linkml:Boolean ;
-    skos:definition "Target variable for VLM" .
-
-NCIT:C170547 a owl:Class,
-        cosmos_sdtm:OriginTypeEnum ;
-    rdfs:label "Assigned" .
-
-NCIT:C170548 a owl:Class,
-        cosmos_sdtm:OriginTypeEnum ;
-    rdfs:label "Collected" .
-
-NCIT:C170549 a owl:Class,
-        cosmos_sdtm:OriginTypeEnum ;
-    rdfs:label "Derived" .
-
-NCIT:C170550 a owl:Class,
-        cosmos_sdtm:OriginTypeEnum ;
-    rdfs:label "Predecessor" .
-
-NCIT:C170551 a owl:Class,
-        cosmos_sdtm:OriginTypeEnum ;
-    rdfs:label "Protocol" .
-
-NCIT:C25936 a owl:Class,
-        cosmos_sdtm:OriginSourceEnum ;
-    rdfs:label "Investigator" .
-
-NCIT:C41189 a owl:Class,
-        cosmos_sdtm:OriginSourceEnum ;
-    rdfs:label "Subject" .
-
-NCIT:C68608 a owl:Class,
-        cosmos_sdtm:OriginSourceEnum ;
-    rdfs:label "Vendor" .
-
-NCIT:C70793 a owl:Class,
-        cosmos_sdtm:OriginSourceEnum ;
-    rdfs:label "Sponsor" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> a owl:Class,
-        cosmos_sdtm:ComparatorEnum ;
-    rdfs:label "EQ" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> a owl:Class,
-        cosmos_sdtm:ComparatorEnum ;
-    rdfs:label "IN" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+seriousness+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "assesses seriousness of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+the+severity+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "assesses the severity of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates+the+tumor+identified+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "associates the tumor identified in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "decodes the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+actions+taken> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "describes actions taken" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+relationship+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "describes relationship of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+the+outcome+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "describes the outcome of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+describes+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "further describes the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+specifies+the+anatomical+location+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "further specifies the anatomical location in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+tumor+assessments+used+in+overall+response+identified+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "groups tumor assessments used in overall response identified by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+values+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "groups values in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups,+within+an+individual+subject,+values+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "groups, within an individual subject, values in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+a+pattern+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies a pattern of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+an+observation+described+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies an observation described by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+overall+response+supported+by+tumor+assessments+identified+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies overall response supported by tumor assessments identified by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+image+from+the+procedure+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies the image from the procedure in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+reference+used+in+the+genomic+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies the reference used in the genomic test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+tumor+found+by+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "identifies the tumor found by the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+heritability+of+the+genetic+variant+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates heritability of the genetic variant in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+occurrence+of+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates occurrence of the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+pre-specification+of+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates pre-specification of the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+severity+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates severity of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+previous+irradiation+status+of+the+tumor+identified+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates the previous irradiation status of the tumor identified by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+progression+status+of+the+previous+irradiated+tumor+identified+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "indicates the progression status of the previous irradiated tumor identified by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+code+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is a dictionary-derived class code for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+name+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is a dictionary-derived class name for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+term+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is a dictionary-derived term for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+grouping+of+values+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is a grouping of values in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+a+published+reference+for+the+genetic+variant+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is an identifier for a published reference for the genetic variant in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+copy,+on+one+of+two+homologous+chromosones,+of+the+genetic+variant+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+evaluator+with+the+role+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is an identifier for the evaluator with the role in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+genetic+sequence+of+the+genetic+entity+represented+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is an identifier for the genetic sequence of the genetic entity represented by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+decoded+by+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is decoded by the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+original+text+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is original text for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the administered amount of the treatment in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the administration anatomical location for the treatment in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the aspect of the event used to define the date in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+chromosome+that+is+the+position+of+the+result+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the chromosome that is the position of the result in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the clinical significance interpretation for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+trial+or+treatment+setting+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the clinical trial or treatment setting for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+code+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the code for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the date of occurrence" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the date of occurrence for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the dictionary code for the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+code+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the dictionary-derived class code for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+name+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the dictionary-derived class name for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the dictionary-derived term for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+duration+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the duration for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+end+date+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the end date for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the epoch of the performance of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the frequency of administration of the amount in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+genetic+sub-location+of+the+result+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the genetic sub-location of the result in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the identifier for the source data used in the performance of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+intended+disease+outcome+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the intended disease outcome for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the material type of the subject of the activity in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the medical condition that is the reason for the treatment in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+for+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the method for the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+of+secondary+analysis+of+results+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the method of secondary analysis of results in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+numeric+location,+within+a+chromosone,+genetic+entity,+or+genetic+sub-region,+of+the+result+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+object+of+the+observation+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the object of the observation in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the part of the body through which is administered the treatment in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+physical+form+of+the+product+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the physical form of the product in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+reason+for+stopping+administration+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the reason for stopping administration of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+result+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the result of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the role of the assessor who performed the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+severity+of+the+toxicity+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the severity of the toxicity in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+specimen+tested+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the specimen tested in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+start+date+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the start date for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject's+fasting+status+during+the+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the subject's fasting status during the performance of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject+position+during+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the subject position during performance of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+symbol+for+the+genomic+entity+that+is+the+position+of+the+result+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the symbol for the genomic entity that is the position of the result in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+textual+description+of+the+intended+dose+regimen+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the textual description of the intended dose regimen for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+type+of+genomic+entity+that+is+the+position+of+the+result+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the type of genomic entity that is the position of the result in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the unit for" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for+the+value+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "is the unit for the value in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "specifies the anatomical location in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "specifies the anatomical location of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of+the+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "specifies the anatomical location of the performance of the test in" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+severity+of> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "specifies the severity of" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values+are+grouped+by> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "values are grouped by" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> a owl:Class,
-        cosmos_sdtm:LinkingPhraseEnum ;
-    rdfs:label "was the subject position during performance of the test in" .
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:parentCodelist ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:CodeListTerm ;
+            owl:onProperty cosmos_sdtm:codelistTerm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:parentCodelist ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subsetShortName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:subsetShortName ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:subsetLabel ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subsetLabel ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subsetShortName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subsetLabel ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
 <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> a owl:Class,
         cosmos_sdtm:PackageTypeEnum ;
-    rdfs:label "sdtm" .
+    rdfs:label "sdtm" ;
+    rdfs:subClassOf cosmos_sdtm:PackageTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "ASSESSES" .
+NCIT:C170547 a owl:Class,
+        cosmos_sdtm:OriginTypeEnum ;
+    rdfs:label "Assigned" ;
+    rdfs:subClassOf cosmos_sdtm:OriginTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "CLASSIFIES" .
+NCIT:C170548 a owl:Class,
+        cosmos_sdtm:OriginTypeEnum ;
+    rdfs:label "Collected" ;
+    rdfs:subClassOf cosmos_sdtm:OriginTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "DECODES" .
+NCIT:C170549 a owl:Class,
+        cosmos_sdtm:OriginTypeEnum ;
+    rdfs:label "Derived" ;
+    rdfs:subClassOf cosmos_sdtm:OriginTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "DESCRIBES" .
+NCIT:C170550 a owl:Class,
+        cosmos_sdtm:OriginTypeEnum ;
+    rdfs:label "Predecessor" ;
+    rdfs:subClassOf cosmos_sdtm:OriginTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "GROUPS" .
+NCIT:C170551 a owl:Class,
+        cosmos_sdtm:OriginTypeEnum ;
+    rdfs:label "Protocol" ;
+    rdfs:subClassOf cosmos_sdtm:OriginTypeEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "GROUPS_BY" .
+NCIT:C25936 a owl:Class,
+        cosmos_sdtm:OriginSourceEnum ;
+    rdfs:label "Investigator" ;
+    rdfs:subClassOf cosmos_sdtm:OriginSourceEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IDENTIFIES" .
+NCIT:C41189 a owl:Class,
+        cosmos_sdtm:OriginSourceEnum ;
+    rdfs:label "Subject" ;
+    rdfs:subClassOf cosmos_sdtm:OriginSourceEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IDENTIFIES_OBSERVATION" .
+NCIT:C68608 a owl:Class,
+        cosmos_sdtm:OriginSourceEnum ;
+    rdfs:label "Vendor" ;
+    rdfs:subClassOf cosmos_sdtm:OriginSourceEnum .
 
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IDENTIFIES_PRODUCT_IN" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IDENTIFIES_TUMOR_IN" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#INDICATES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "INDICATES" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_ATTRIBUTE_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_DECODED_BY" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_DERIVED_FROM" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_EPOCH_OF> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_EPOCH_OF" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_GROUPED_BY" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_INDICATOR_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_ORIGINAL_TEXT_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_POSITION_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_POSITION_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REASON_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_REASON_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_RESULT_OF" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_SPECIMEN_TESTED_IN" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SUBJECT_STATE_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_SUBJECT_STATE_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_TIMING_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "IS_UNIT_FOR" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMED> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "PERFORMED" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "PERFORMS" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "QUALIFIES" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> a owl:Class,
-        cosmos_sdtm:PredicateTermEnum ;
-    rdfs:label "SPECIFIES" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> a owl:Class,
-        cosmos_sdtm:RoleEnum ;
-    rdfs:label "Identifier" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> a owl:Class,
-        cosmos_sdtm:RoleEnum ;
-    rdfs:label "Qualifier" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> a owl:Class,
-        cosmos_sdtm:RoleEnum ;
-    rdfs:label "Timing" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> a owl:Class,
-        cosmos_sdtm:RoleEnum ;
-    rdfs:label "Topic" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> a owl:Class,
-        cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    rdfs:label "datetime" ;
-    dcterms:title "datetime" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#durationDatetime> a owl:Class,
-        cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    rdfs:label "durationDatetime" ;
-    dcterms:title "durationDatetime" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> a owl:Class,
-        cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    rdfs:label "float" ;
-    dcterms:title "float" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> a owl:Class,
-        cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    rdfs:label "integer" ;
-    dcterms:title "integer" .
-
-<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> a owl:Class,
-        cosmos_sdtm:SDTMVariableDataTypeEnum ;
-    rdfs:label "text" ;
-    dcterms:title "text" .
-
-cosmos_sdtm:codelistTerm a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "codelistTerm" ;
-    rdfs:range cosmos_sdtm:CodeListTerm ;
-    skos:definition "Term in subset codelist" .
-
-cosmos_sdtm:conceptId a owl:ObjectProperty,
-        linkml:SlotDefinition .
-
-cosmos_sdtm:variables a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "variables" ;
-    rdfs:range cosmos_sdtm:SDTMVariable ;
-    skos:definition "Variable included in the SDTM dataset specialization" .
+NCIT:C70793 a owl:Class,
+        cosmos_sdtm:OriginSourceEnum ;
+    rdfs:label "Sponsor" ;
+    rdfs:subClassOf cosmos_sdtm:OriginSourceEnum .
 
 cosmos_sdtm:AssignedTerm a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "AssignedTerm" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:value ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:value ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:conceptId ] .
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:conceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:conceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+)$" ] ) ] ) ] ;
+            owl:onProperty cosmos_sdtm:conceptId ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
 cosmos_sdtm:CodeList a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CodeList" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Uri ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:conceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:submissionValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_sdtm:href ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:conceptId ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:conceptId ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:submissionValue ;
-            owl:qualifiedCardinality 1 ] .
-
-cosmos_sdtm:PackageTypeEnum a owl:Class,
-        linkml:EnumDefinition ;
-    rdfs:label "PackageTypeEnum" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ) ;
-    linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> .
-
-cosmos_sdtm:RelationShip a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "RelationShip" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:subject ;
-            owl:qualifiedCardinality 1 ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:submissionValue ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:object ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:submissionValue ],
         [ a owl:Restriction ;
-            owl:onClass cosmos_sdtm:LinkingPhraseEnum ;
-            owl:onProperty cosmos_sdtm:linkingPhrase ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+)$" ] ) ] ) ] ;
+            owl:onProperty cosmos_sdtm:conceptId ],
         [ a owl:Restriction ;
-            owl:onClass cosmos_sdtm:PredicateTermEnum ;
-            owl:onProperty cosmos_sdtm:predicateTerm ;
-            owl:qualifiedCardinality 1 ] .
+            owl:allValuesFrom linkml:Uri ;
+            owl:onProperty cosmos_sdtm:href ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:href ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
 cosmos_sdtm:CodeListTerm a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CodeListTerm" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:termValue ;
-            owl:qualifiedCardinality 1 ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:termValue ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:termId ;
-            owl:qualifiedCardinality 1 ] .
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:termId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:termId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+)$" ] ) ] ) ] ;
+            owl:onProperty cosmos_sdtm:termId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:termValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:termValue ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
-cosmos_sdtm:ComparatorEnum a owl:Class,
-        linkml:EnumDefinition ;
-    rdfs:label "ComparatorEnum" ;
-    owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ) ;
-    linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ>,
-        <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> .
+<https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> a owl:Class,
+        cosmos_sdtm:ComparatorEnum ;
+    rdfs:label "EQ" ;
+    rdfs:subClassOf cosmos_sdtm:ComparatorEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> a owl:Class,
+        cosmos_sdtm:ComparatorEnum ;
+    rdfs:label "IN" ;
+    rdfs:subClassOf cosmos_sdtm:ComparatorEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+seriousness+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "assesses seriousness of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+the+severity+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "assesses the severity of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates+the+tumor+identified+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "associates the tumor identified in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "decodes the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+actions+taken> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "describes actions taken" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+relationship+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "describes relationship of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+the+outcome+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "describes the outcome of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+describes+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "further describes the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+specifies+the+anatomical+location+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "further specifies the anatomical location in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+tumor+assessments+used+in+overall+response+identified+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "groups tumor assessments used in overall response identified by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+values+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "groups values in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups,+within+an+individual+subject,+values+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "groups, within an individual subject, values in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+a+pattern+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies a pattern of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+an+observation+described+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies an observation described by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+overall+response+supported+by+tumor+assessments+identified+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies overall response supported by tumor assessments identified by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+image+from+the+procedure+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies the image from the procedure in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+reference+used+in+the+genomic+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies the reference used in the genomic test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+tumor+found+by+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "identifies the tumor found by the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+heritability+of+the+genetic+variant+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates heritability of the genetic variant in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+occurrence+of+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates occurrence of the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+pre-specification+of+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates pre-specification of the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+severity+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates severity of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+previous+irradiation+status+of+the+tumor+identified+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates the previous irradiation status of the tumor identified by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+progression+status+of+the+previous+irradiated+tumor+identified+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "indicates the progression status of the previous irradiated tumor identified by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+code+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is a dictionary-derived class code for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+name+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is a dictionary-derived class name for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+term+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is a dictionary-derived term for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+grouping+of+values+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is a grouping of values in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+a+published+reference+for+the+genetic+variant+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is an identifier for a published reference for the genetic variant in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+copy,+on+one+of+two+homologous+chromosones,+of+the+genetic+variant+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+evaluator+with+the+role+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is an identifier for the evaluator with the role in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+genetic+sequence+of+the+genetic+entity+represented+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is an identifier for the genetic sequence of the genetic entity represented by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+decoded+by+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is decoded by the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+original+text+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is original text for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the administered amount of the treatment in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the administration anatomical location for the treatment in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the aspect of the event used to define the date in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+chromosome+that+is+the+position+of+the+result+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the chromosome that is the position of the result in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the clinical significance interpretation for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+trial+or+treatment+setting+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the clinical trial or treatment setting for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+code+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the code for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the date of occurrence" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the date of occurrence for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the dictionary code for the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+code+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the dictionary-derived class code for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+name+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the dictionary-derived class name for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the dictionary-derived term for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+duration+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the duration for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+end+date+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the end date for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the epoch of the performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the frequency of administration of the amount in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+genetic+sub-location+of+the+result+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the genetic sub-location of the result in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the identifier for the source data used in the performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+intended+disease+outcome+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the intended disease outcome for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the material type of the subject of the activity in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the medical condition that is the reason for the treatment in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+for+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the method for the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+of+secondary+analysis+of+results+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the method of secondary analysis of results in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+numeric+location,+within+a+chromosone,+genetic+entity,+or+genetic+sub-region,+of+the+result+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+object+of+the+observation+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the object of the observation in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the part of the body through which is administered the treatment in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+physical+form+of+the+product+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the physical form of the product in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+reason+for+stopping+administration+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the reason for stopping administration of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+result+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the result of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the role of the assessor who performed the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+severity+of+the+toxicity+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the severity of the toxicity in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+specimen+tested+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the specimen tested in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+start+date+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the start date for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject's+fasting+status+during+the+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the subject's fasting status during the performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject+position+during+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the subject position during performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+symbol+for+the+genomic+entity+that+is+the+position+of+the+result+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the symbol for the genomic entity that is the position of the result in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+textual+description+of+the+intended+dose+regimen+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the textual description of the intended dose regimen for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+type+of+genomic+entity+that+is+the+position+of+the+result+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the type of genomic entity that is the position of the result in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the unit for" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for+the+value+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "is the unit for the value in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "specifies the anatomical location in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "specifies the anatomical location of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of+the+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "specifies the anatomical location of the performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+severity+of> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "specifies the severity of" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values+are+grouped+by> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "values are grouped by" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> a owl:Class,
+        cosmos_sdtm:LinkingPhraseEnum ;
+    rdfs:label "was the subject position during performance of the test in" ;
+    rdfs:subClassOf cosmos_sdtm:LinkingPhraseEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "ASSESSES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "CLASSIFIES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "DECODES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "DESCRIBES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "GROUPS" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "GROUPS_BY" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IDENTIFIES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IDENTIFIES_OBSERVATION" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IDENTIFIES_PRODUCT_IN" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IDENTIFIES_TUMOR_IN" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#INDICATES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "INDICATES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_ATTRIBUTE_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_DECODED_BY" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_DERIVED_FROM" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_EPOCH_OF> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_EPOCH_OF" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_GROUPED_BY" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_INDICATOR_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_ORIGINAL_TEXT_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_POSITION_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_POSITION_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REASON_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_REASON_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_RESULT_OF" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_SPECIMEN_TESTED_IN" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SUBJECT_STATE_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_SUBJECT_STATE_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_TIMING_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "IS_UNIT_FOR" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMED> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "PERFORMED" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "PERFORMS" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "QUALIFIES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> a owl:Class,
+        cosmos_sdtm:PredicateTermEnum ;
+    rdfs:label "SPECIFIES" ;
+    rdfs:subClassOf cosmos_sdtm:PredicateTermEnum .
+
+cosmos_sdtm:RelationShip a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "RelationShip" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:object ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:subject ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:linkingPhrase ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:PredicateTermEnum ;
+            owl:onProperty cosmos_sdtm:predicateTerm ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:object ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:LinkingPhraseEnum ;
+            owl:onProperty cosmos_sdtm:linkingPhrase ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subject ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:predicateTerm ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:object ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:predicateTerm ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:linkingPhrase ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> a owl:Class,
+        cosmos_sdtm:RoleEnum ;
+    rdfs:label "Identifier" ;
+    rdfs:subClassOf cosmos_sdtm:RoleEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> a owl:Class,
+        cosmos_sdtm:RoleEnum ;
+    rdfs:label "Qualifier" ;
+    rdfs:subClassOf cosmos_sdtm:RoleEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> a owl:Class,
+        cosmos_sdtm:RoleEnum ;
+    rdfs:label "Timing" ;
+    rdfs:subClassOf cosmos_sdtm:RoleEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> a owl:Class,
+        cosmos_sdtm:RoleEnum ;
+    rdfs:label "Topic" ;
+    rdfs:subClassOf cosmos_sdtm:RoleEnum .
 
 cosmos_sdtm:SDTMVariable a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "SDTMVariable" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty cosmos_sdtm:length ],
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:dataElementConceptId ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:RoleEnum ;
-            owl:onProperty cosmos_sdtm:role ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_sdtm:name ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
+            owl:minCardinality 0 ;
             owl:onProperty cosmos_sdtm:significantDigits ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:ComparatorEnum ;
-            owl:onProperty cosmos_sdtm:comparator ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos_sdtm:format ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:name ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:SDTMVariableDataTypeEnum ;
-            owl:onProperty cosmos_sdtm:dataType ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:dataElementConceptId ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos_sdtm:valueList ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos_sdtm:isNonStandard ],
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:role ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:CodeList ;
-            owl:onProperty cosmos_sdtm:codelist ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cosmos_sdtm:subsetCodelist ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
-            owl:onProperty cosmos_sdtm:mandatoryVariable ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:RelationShip ;
-            owl:onProperty cosmos_sdtm:relationship ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:AssignedTerm ;
-            owl:onProperty cosmos_sdtm:assignedTerm ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:OriginSourceEnum ;
-            owl:onProperty cosmos_sdtm:originSource ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_sdtm:vlmTarget ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Boolean ;
+            owl:allValuesFrom cosmos_sdtm:SDTMVariableDataTypeEnum ;
+            owl:onProperty cosmos_sdtm:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty cosmos_sdtm:significantDigits ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:relationship ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:codelist ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty cosmos_sdtm:mandatoryValue ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass cosmos_sdtm:OriginTypeEnum ;
-            owl:onProperty cosmos_sdtm:originType ] .
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:vlmTarget ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:subsetCodelist ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:originType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:comparator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:valueList ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:significantDigits ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:format ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:dataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:originSource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:OriginTypeEnum ;
+            owl:onProperty cosmos_sdtm:originType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:codelist ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ) ] ) ] ;
+            owl:onProperty cosmos_sdtm:dataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_sdtm:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_sdtm:subsetCodelist ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:RoleEnum ;
+            owl:onProperty cosmos_sdtm:role ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:format ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:relationship ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:subsetCodelist ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:originType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:RelationShip ;
+            owl:onProperty cosmos_sdtm:relationship ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_sdtm:mandatoryValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:OriginSourceEnum ;
+            owl:onProperty cosmos_sdtm:originSource ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:isNonStandard ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:ComparatorEnum ;
+            owl:onProperty cosmos_sdtm:comparator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:mandatoryValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:comparator ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:assignedTerm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:assignedTerm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:role ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:isNonStandard ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:originSource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_sdtm:vlmTarget ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_sdtm:isNonStandard ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:AssignedTerm ;
+            owl:onProperty cosmos_sdtm:assignedTerm ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:Integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 1 ] ) ] ) ] ;
+            owl:onProperty cosmos_sdtm:length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_sdtm:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_sdtm:CodeList ;
+            owl:onProperty cosmos_sdtm:codelist ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_sdtm:dataType ] ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> a owl:Class,
+        cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    rdfs:label "datetime" ;
+    rdfs:subClassOf cosmos_sdtm:SDTMVariableDataTypeEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#durationDatetime> a owl:Class,
+        cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    rdfs:label "durationDatetime" ;
+    rdfs:subClassOf cosmos_sdtm:SDTMVariableDataTypeEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> a owl:Class,
+        cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    rdfs:label "float" ;
+    rdfs:subClassOf cosmos_sdtm:SDTMVariableDataTypeEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> a owl:Class,
+        cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    rdfs:label "integer" ;
+    rdfs:subClassOf cosmos_sdtm:SDTMVariableDataTypeEnum .
+
+<https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> a owl:Class,
+        cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    rdfs:label "text" ;
+    rdfs:subClassOf cosmos_sdtm:SDTMVariableDataTypeEnum .
+
+cosmos_sdtm:codelistTerm a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "codelistTerm" ;
+    rdfs:range cosmos_sdtm:CodeListTerm ;
+    skos:definition "Term in subset codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:valueList a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "valueList" ;
+    rdfs:range linkml:String ;
+    skos:definition "List of SDTM submission values used if subset codelist is not applicable" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:variables a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "variables" ;
+    rdfs:range cosmos_sdtm:SDTMVariable ;
+    skos:definition "Variable included in the SDTM dataset specialization" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:assignedTerm a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "assignedTerm" ;
+    rdfs:range cosmos_sdtm:AssignedTerm ;
+    skos:definition "Assigned term" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:biomedicalConceptId a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "biomedicalConceptId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ) ] ) ] ;
+    skos:definition "Biomedical Concept identifier foreign key" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:codelist a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "codelist" ;
+    rdfs:range cosmos_sdtm:CodeList ;
+    skos:definition "Codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:comparator a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "comparator" ;
+    rdfs:range cosmos_sdtm:ComparatorEnum ;
+    skos:definition "Comparison operator for SDTM group variables included in VLM" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:dataElementConceptId a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dataElementConceptId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ) ] ) ] ;
+    skos:definition "Biomedical Concept Data Element Concept identifier foreign key" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:dataType a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dataType" ;
+    rdfs:range cosmos_sdtm:SDTMVariableDataTypeEnum ;
+    skos:definition "Variable data type" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:datasetSpecializationId a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "datasetSpecializationId" ;
+    rdfs:range linkml:String ;
+    skos:definition "Identifier for SDTM Value Level Metadata group" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:domain a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "domain" ;
+    rdfs:range linkml:String ;
+    skos:definition "Domain for the SDTM specialization group" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:format a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "format" ;
+    rdfs:range linkml:String ;
+    skos:definition "Variable display format" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:href a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "href" ;
+    rdfs:range linkml:Uri ;
+    skos:definition "Link to NCIt for the codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:isNonStandard a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isNonStandard" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "Flag that indicates if the variable is a non-standard variable" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:length a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "length" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( linkml:Integer [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:integer ;
+                        owl:withRestrictions ( [ xsd:minInclusive 1 ] ) ] ) ] ;
+    skos:definition "Variable length" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:linkingPhrase a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "linkingPhrase" ;
+    rdfs:range cosmos_sdtm:LinkingPhraseEnum ;
+    skos:definition "Variable relationship descriptive linking phrase" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:mandatoryValue a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "mandatoryValue" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "Indicator that variable must be populated within the SDTM group" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:mandatoryVariable a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "mandatoryVariable" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "Indicator that variable must be present within the SDTM group" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:range linkml:String ;
+    skos:definition "Variable included in the SDTM dataset specialization" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:object a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "object" ;
+    rdfs:range linkml:String ;
+    skos:definition "Object in a variable relationship" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:originSource a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "originSource" ;
+    rdfs:range cosmos_sdtm:OriginSourceEnum ;
+    skos:definition "Variable origin source (define-XML v21)" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:originType a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "originType" ;
+    rdfs:range cosmos_sdtm:OriginTypeEnum ;
+    skos:definition "Variable origin type (define-XML v21)" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:packageDate a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "packageDate" ;
+    rdfs:range linkml:Date ;
+    skos:definition "Biomedical Concept package release date indicating when the BC package was published to production" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:packageType a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "packageType" ;
+    rdfs:range cosmos_sdtm:PackageTypeEnum ;
+    skos:definition "Package type (sdtm for SDTM Dataset Specializations)" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:parentCodelist a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "parentCodelist" ;
+    rdfs:range linkml:String ;
+    skos:definition "Subset codelist parent codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:predicateTerm a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "predicateTerm" ;
+    rdfs:range cosmos_sdtm:PredicateTermEnum ;
+    skos:definition "Short variable relationship linking phrase for programming purposes" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:relationship a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "relationship" ;
+    rdfs:range cosmos_sdtm:RelationShip ;
+    skos:definition "Relationship between variables" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:role a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "role" ;
+    rdfs:range cosmos_sdtm:RoleEnum ;
+    skos:definition "SDTM variable role" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:sdtmigEndVersion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "sdtmigEndVersion" ;
+    rdfs:range linkml:String ;
+    skos:definition "The last SDTMIG version that is applicable to the BC dataset specialization" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:sdtmigStartVersion a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "sdtmigStartVersion" ;
+    rdfs:range linkml:String ;
+    skos:definition "The earliest SDTMIG version applicable to the BC dataset specialization" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:shortName a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "shortName" ;
+    rdfs:range linkml:String ;
+    skos:definition "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:significantDigits a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "significantDigits" ;
+    rdfs:range linkml:Integer ;
+    skos:definition "Variable significant_digits" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:source a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "source" ;
+    rdfs:range linkml:String ;
+    skos:definition "SDTM VLM Source which categorizes VLM groups by topic variable" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:subject a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subject" ;
+    rdfs:range linkml:String ;
+    skos:definition "Subject in a variable relationship" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:submissionValue a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "submissionValue" ;
+    rdfs:range linkml:String ;
+    skos:definition "CDISC submission value for the codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:subsetCodelist a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subsetCodelist" ;
+    rdfs:range linkml:String ;
+    skos:definition "Subset codelist short name" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:subsetLabel a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subsetLabel" ;
+    rdfs:range linkml:String ;
+    skos:definition "Subset codelist label" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:subsetShortName a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "subsetShortName" ;
+    rdfs:range linkml:String ;
+    skos:definition "Subset codelist short name" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:termId a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "termId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+)$" ] ) ] ) ] ;
+    skos:definition "C-code term in subset codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:termValue a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "termValue" ;
+    rdfs:range linkml:String ;
+    skos:definition "Submision value of term in subset codelist" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "value" ;
+    skos:definition "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:vlmTarget a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "vlmTarget" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "Target variable for VLM" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
+
+cosmos_sdtm:PackageTypeEnum a owl:Class,
+        linkml:EnumDefinition ;
+    linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> .
+
+cosmos_sdtm:ComparatorEnum a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ> <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ) ;
+    linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ>,
+        <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> .
+
+cosmos_sdtm:conceptId a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "conceptId" ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                        owl:onDatatype xsd:string ;
+                        owl:withRestrictions ( [ xsd:pattern "^(C[0123456789]+)$" ] ) ] ) ] ;
+    skos:definition "C-code for a codelist in NCIt",
+        "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
+    skos:inScheme <https://www.cdisc.org/cosmos/sdtm_v1.0> .
 
 cosmos_sdtm:OriginSourceEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "OriginSourceEnum" ;
     owl:unionOf ( NCIT:C25936 NCIT:C70793 NCIT:C41189 NCIT:C68608 ) ;
     linkml:permissible_values NCIT:C25936,
         NCIT:C41189,
@@ -1049,19 +1438,14 @@ cosmos_sdtm:OriginSourceEnum a owl:Class,
 
 cosmos_sdtm:RoleEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "RoleEnum" ;
     owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier> <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing> <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> ) ;
     linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> .
 
-linkml:ClassDefinition a owl:Class ;
-    rdfs:label "class_definition" .
-
 cosmos_sdtm:OriginTypeEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "OriginTypeEnum" ;
     owl:unionOf ( NCIT:C170547 NCIT:C170548 NCIT:C170549 NCIT:C170550 NCIT:C170551 ) ;
     linkml:permissible_values NCIT:C170547,
         NCIT:C170548,
@@ -1071,7 +1455,6 @@ cosmos_sdtm:OriginTypeEnum a owl:Class,
 
 cosmos_sdtm:SDTMVariableDataTypeEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "SDTMVariableDataTypeEnum" ;
     owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime> <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#durationDatetime> <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float> <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer> <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ) ;
     linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#durationDatetime>,
@@ -1079,9 +1462,11 @@ cosmos_sdtm:SDTMVariableDataTypeEnum a owl:Class,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> .
 
+<https://www.cdisc.org/cosmos/sdtm_v1.0> a owl:Ontology ;
+    rdfs:label "COSMoS-Biomedical-Concepts-SDTM-Schema" .
+
 cosmos_sdtm:PredicateTermEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "PredicateTermEnum" ;
     owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#INDICATES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_EPOCH_OF> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_POSITION_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REASON_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SUBJECT_STATE_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMED> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES> <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ) ;
     linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES>,
@@ -1113,12 +1498,8 @@ cosmos_sdtm:PredicateTermEnum a owl:Class,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> .
 
-linkml:SlotDefinition a owl:Class ;
-    rdfs:label "slot_definition" .
-
 cosmos_sdtm:LinkingPhraseEnum a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "LinkingPhraseEnum" ;
     owl:unionOf ( <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+seriousness+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+the+severity+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates+the+tumor+identified+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+actions+taken> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+relationship+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes+the+outcome+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+describes+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further+specifies+the+anatomical+location+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+tumor+assessments+used+in+overall+response+identified+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups+values+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups,+within+an+individual+subject,+values+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+a+pattern+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+an+observation+described+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+overall+response+supported+by+tumor+assessments+identified+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+image+from+the+procedure+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+tumor+found+by+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+occurrence+of+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+pre-specification+of+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+severity+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+previous+irradiation+status+of+the+tumor+identified+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+the+progression+status+of+the+previous+irradiated+tumor+identified+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+code+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+dictionary-derived+class+name+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+decoded+by+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+original+text+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administered+amount+of+the+treatment+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+administration+anatomical+location+for+the+treatment+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+aspect+of+the+event+used+to+define+the+date+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+significance+interpretation+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+code+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary+code+for+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+term+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+code+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+dictionary-derived+class+name+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+duration+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+end+date+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+epoch+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+frequency+of+administration+of+the+amount+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+identifier+for+the+source+data+used+in+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+material+type+of+the+subject+of+the+activity+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+medical+condition+that+is+the+reason+for+the+treatment+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+for+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+part+of+the+body+through+which+is+administered+the+treatment+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+physical+form+of+the+product+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+result+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+role+of+the+assessor+who+performed+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+specimen+tested+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+start+date+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+subject's+fasting+status+during+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for+the+value+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+unit+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+anatomical+location+of+the+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+severity+of> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values+are+grouped+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies+the+reference+used+in+the+genomic+test+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates+heritability+of+the+genetic+variant+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+a+published+reference+for+the+genetic+variant+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+copy,+on+one+of+two+homologous+chromosones,+of+the+genetic+variant+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+genetic+sequence+of+the+genetic+entity+represented+by> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+chromosome+that+is+the+position+of+the+result+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+clinical+trial+or+treatment+setting+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+date+of+occurrence+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+intended+disease+outcome+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+method+of+secondary+analysis+of+results+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+numeric+location,+within+a+chromosone,+genetic+entity,+or+genetic+sub-region,+of+the+result+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+symbol+for+the+genomic+entity+that+is+the+position+of+the+result+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+type+of+genomic+entity+that+is+the+position+of+the+result+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+genetic+sub-location+of+the+result+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+object+of+the+observation+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+an+identifier+for+the+evaluator+with+the+role+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+severity+of+the+toxicity+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+a+grouping+of+values+in> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+textual+description+of+the+intended+dose+regimen+for> <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is+the+reason+for+stopping+administration+of> ) ;
     linkml:permissible_values <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+seriousness+of>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses+the+severity+of>,
@@ -1201,5 +1582,4 @@ cosmos_sdtm:LinkingPhraseEnum a owl:Class,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies+the+severity+of>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values+are+grouped+by>,
         <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was+the+subject+position+during+performance+of+the+test+in> .
-
 

@@ -9,6 +9,12 @@ enum CollectionItemDataTypeEnum
     time
   }
 
+enum ImplementationOptionEnum
+  {
+    Horizontal
+    Vertical
+  }
+
 enum ListTypeEnum
   {
     Radio
@@ -42,6 +48,8 @@ type DataCollectionGroup
     standard: String!
     standardStartVersion: String!
     standardEndVersion: String
+    implementationOption: ImplementationOptionEnum
+    scenario: String
     domain: String
     biomedicalConceptId: String
     sdtmDatasetSpecializationId: String!
@@ -51,9 +59,8 @@ type DataCollectionGroup
 type DataCollectionItem
   {
     name: String!
+    variableName: String!
     dataElementConceptId: String
-    isNonStandard: Boolean
-    dataCollectionInstrumentItem: String!
     questionText: String!
     prompt: String
     orderNumber: Integer!
@@ -62,11 +69,12 @@ type DataCollectionItem
     length: Integer
     significantDigits: Integer
     displayHidden: Boolean
+    codelist: CodeList
     valueList: [ListValue]
     listType: ListTypeEnum
     prepopulatedValue: PrepopulatedValue
-    codelist: CodeList
     sdtmTarget: [SDTMTarget]
+    sdtmAnnotation: String
   }
 
 type ListValue
@@ -83,8 +91,7 @@ type PrepopulatedValue
 
 type SDTMTarget
   {
-    sdtmVariable: String!
-    sdtmAnnotation: String
+    sdtmVariable: [String]!
     sdtmTargetMapping: String
   }
 

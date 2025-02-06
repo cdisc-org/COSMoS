@@ -343,6 +343,19 @@
       ]
     },
     {
+      "name": "implementationOptionEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "permissible_values": [
+        {
+          "text": "Horizontal"
+        },
+        {
+          "text": "Vertical"
+        }
+      ]
+    },
+    {
       "name": "CollectionItemDataTypeEnum",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
@@ -526,6 +539,38 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "implementationOption",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0implementationOption",
+      "description": "Implementation option for the data collection specialization group",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "aliases": [
+        "implementation_option"
+      ],
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0implementationOption",
+      "owner": "DataCollectionGroup",
+      "domain_of": [
+        "DataCollectionGroup"
+      ],
+      "range": "implementationOptionEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "scenario",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0scenario",
+      "description": "Scenario for the data collection specialization group",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "aliases": [
+        "scenario"
+      ],
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0scenario",
+      "owner": "DataCollectionGroup",
+      "domain_of": [
+        "DataCollectionGroup"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "domain",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0domain",
       "description": "Domain for the data collection specialization group",
@@ -576,7 +621,7 @@
     {
       "name": "items",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0items",
-      "description": "Item included in the Data Collection dataset specialization",
+      "description": "Items included in the Data Collection specialization",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0items",
       "owner": "DataCollectionGroup",
@@ -593,13 +638,30 @@
     {
       "name": "name",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0name",
-      "description": "Item included in the data collection dataset specialization",
+      "description": "Item name as it appears on the collection instrument",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "aliases": [
         "data_collection_item"
       ],
       "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0name",
       "identifier": true,
+      "owner": "DataCollectionItem",
+      "domain_of": [
+        "DataCollectionItem"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "variableName",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0variableName",
+      "description": "Variable name of the collection item for which data are being collected.",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "aliases": [
+        "variable_name"
+      ],
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0variableName",
       "owner": "DataCollectionItem",
       "domain_of": [
         "DataCollectionItem"
@@ -623,39 +685,6 @@
       ],
       "range": "string",
       "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "isNonStandard",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0isNonStandard",
-      "description": "Flag that indicates if the variable is a non-standard variable",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "aliases": [
-        "nsv_flag"
-      ],
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0isNonStandard",
-      "owner": "DataCollectionItem",
-      "domain_of": [
-        "DataCollectionItem"
-      ],
-      "range": "boolean",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "dataCollectionInstrumentItem",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0dataCollectionInstrumentItem",
-      "description": "Item included in the data collection dataset specialization used for eCSR set-up",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "aliases": [
-        "data_collection_instrument_item"
-      ],
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0dataCollectionInstrumentItem",
-      "owner": "DataCollectionItem",
-      "domain_of": [
-        "DataCollectionItem"
-      ],
-      "range": "string",
-      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -793,6 +822,20 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "codelist",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0codelist",
+      "description": "Codelist",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0codelist",
+      "owner": "DataCollectionItem",
+      "domain_of": [
+        "DataCollectionItem"
+      ],
+      "range": "CodeList",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "valueList",
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0valueList",
       "description": "A set of values for a data collection item",
@@ -835,20 +878,6 @@
         "DataCollectionItem"
       ],
       "range": "PrepopulatedValue",
-      "inlined": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "codelist",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0codelist",
-      "description": "Codelist",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0codelist",
-      "owner": "DataCollectionItem",
-      "domain_of": [
-        "DataCollectionItem"
-      ],
-      "range": "CodeList",
       "inlined": true,
       "@type": "SlotDefinition"
     },
@@ -953,6 +982,8 @@
       ],
       "range": "string",
       "required": true,
+      "multivalued": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
@@ -964,9 +995,9 @@
         "sdtm_annotation"
       ],
       "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation",
-      "owner": "SDTMTarget",
+      "owner": "DataCollectionItem",
       "domain_of": [
-        "SDTMTarget"
+        "DataCollectionItem"
       ],
       "range": "string",
       "recommended": true,
@@ -1154,6 +1185,8 @@
         "standard",
         "standardStartVersion",
         "standardEndVersion",
+        "implementationOption",
+        "scenario",
         "domain",
         "biomedicalConceptId",
         "sdtmDatasetSpecializationId",
@@ -1170,9 +1203,8 @@
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "slots": [
         "name",
+        "variableName",
         "dataElementConceptId",
-        "isNonStandard",
-        "dataCollectionInstrumentItem",
         "questionText",
         "prompt",
         "orderNumber",
@@ -1181,11 +1213,12 @@
         "length",
         "significantDigits",
         "displayHidden",
+        "codelist",
         "valueList",
         "listType",
         "prepopulatedValue",
-        "codelist",
-        "sdtmTarget"
+        "sdtmTarget",
+        "sdtmAnnotation"
       ],
       "slot_usage": {},
       "class_uri": "https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem",
@@ -1234,7 +1267,6 @@
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "slots": [
         "sdtmVariable",
-        "sdtmAnnotation",
         "sdtmTargetMapping"
       ],
       "slot_usage": {},
@@ -1244,9 +1276,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-01-28T17:24:36",
-  "source_file_size": 8624,
-  "generation_date": "2025-01-28T17:24:49",
+  "source_file_date": "2025-02-06T11:07:57",
+  "source_file_size": 8896,
+  "generation_date": "2025-02-06T12:41:30",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

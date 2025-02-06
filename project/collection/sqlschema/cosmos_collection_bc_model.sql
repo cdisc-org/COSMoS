@@ -6,14 +6,15 @@
 --     * Slot: standard Description: Standard for the data collection specialization group
 --     * Slot: standardStartVersion Description: The earliest data collection IG version applicable to the collection specialization
 --     * Slot: standardEndVersion Description: The last data collection IG version that is applicable to the collection specialization
+--     * Slot: implementationOption Description: Implementation option for the data collection specialization group
+--     * Slot: scenario Description: Scenario for the data collection specialization group
 --     * Slot: domain Description: Domain for the data collection specialization group
 --     * Slot: biomedicalConceptId Description: Biomedical Concept identifier foreign key
 --     * Slot: sdtmDatasetSpecializationId Description: Identifier for SDTM Dataset Specialization group
 -- # Class: "DataCollectionItem" Description: ""
---     * Slot: name Description: Item included in the data collection dataset specialization
+--     * Slot: name Description: Item name as it appears on the collection instrument
+--     * Slot: variableName Description: Variable name of the collection item for which data are being collected.
 --     * Slot: dataElementConceptId Description: Biomedical Concept Data Element Concept identifier foreign key
---     * Slot: isNonStandard Description: Flag that indicates if the variable is a non-standard variable
---     * Slot: dataCollectionInstrumentItem Description: Item included in the data collection dataset specialization used for eCSR set-up
 --     * Slot: questionText Description: Item question text
 --     * Slot: prompt Description: Item prompt
 --     * Slot: orderNumber Description: Item order number
@@ -23,9 +24,10 @@
 --     * Slot: significantDigits Description: Item significant_digits
 --     * Slot: displayHidden Description: Indicator that the item is hidden from the user
 --     * Slot: listType Description: Type of list used for set-up of the data collection instrument
+--     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the data collection instrument
 --     * Slot: DataCollectionGroup_collectionSpecializationId Description: Autocreated FK slot
---     * Slot: prepopulatedValue_id Description: Pre-populated value for the data collection instrument
 --     * Slot: codelist_id Description: Codelist
+--     * Slot: prepopulatedValue_id Description: Pre-populated value for the data collection instrument
 -- # Class: "ListValue" Description: ""
 --     * Slot: id Description: 
 --     * Slot: displayValue Description: CDISC submission value for the data collection item
@@ -42,10 +44,11 @@
 --     * Slot: href Description: Link to NCIt for the codelist
 -- # Class: "SDTMTarget" Description: ""
 --     * Slot: id Description: 
---     * Slot: sdtmVariable Description: SDTM target variable for data collection item variable
---     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the data collection instrument
 --     * Slot: sdtmTargetMapping Description: Rule for mapping from data collection item to SDTM target variable.
 --     * Slot: DataCollectionItem_name Description: Autocreated FK slot
+-- # Class: "SDTMTarget_sdtmVariable" Description: ""
+--     * Slot: SDTMTarget_id Description: Autocreated FK slot
+--     * Slot: sdtmVariable Description: SDTM target variable for data collection item variable
 
 CREATE TABLE "DataCollectionGroup" (
 	"packageDate" DATE NOT NULL, 
@@ -55,6 +58,8 @@ CREATE TABLE "DataCollectionGroup" (
 	standard TEXT NOT NULL, 
 	"standardStartVersion" TEXT NOT NULL, 
 	"standardEndVersion" TEXT, 
+	"implementationOption" VARCHAR(10), 
+	scenario TEXT, 
 	domain TEXT, 
 	"biomedicalConceptId" TEXT, 
 	"sdtmDatasetSpecializationId" TEXT NOT NULL, 
@@ -75,9 +80,8 @@ CREATE TABLE "CodeList" (
 );
 CREATE TABLE "DataCollectionItem" (
 	name TEXT NOT NULL, 
+	"variableName" TEXT NOT NULL, 
 	"dataElementConceptId" TEXT, 
-	"isNonStandard" BOOLEAN, 
-	"dataCollectionInstrumentItem" TEXT NOT NULL, 
 	"questionText" TEXT NOT NULL, 
 	prompt TEXT, 
 	"orderNumber" INTEGER NOT NULL, 
@@ -87,13 +91,14 @@ CREATE TABLE "DataCollectionItem" (
 	"significantDigits" INTEGER, 
 	"displayHidden" BOOLEAN, 
 	"listType" VARCHAR(19), 
+	"sdtmAnnotation" TEXT, 
 	"DataCollectionGroup_collectionSpecializationId" TEXT, 
-	"prepopulatedValue_id" INTEGER, 
 	codelist_id INTEGER, 
+	"prepopulatedValue_id" INTEGER, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("DataCollectionGroup_collectionSpecializationId") REFERENCES "DataCollectionGroup" ("collectionSpecializationId"), 
-	FOREIGN KEY("prepopulatedValue_id") REFERENCES "PrepopulatedValue" (id), 
-	FOREIGN KEY(codelist_id) REFERENCES "CodeList" (id)
+	FOREIGN KEY(codelist_id) REFERENCES "CodeList" (id), 
+	FOREIGN KEY("prepopulatedValue_id") REFERENCES "PrepopulatedValue" (id)
 );
 CREATE TABLE "ListValue" (
 	id INTEGER NOT NULL, 
@@ -105,10 +110,14 @@ CREATE TABLE "ListValue" (
 );
 CREATE TABLE "SDTMTarget" (
 	id INTEGER NOT NULL, 
-	"sdtmVariable" TEXT NOT NULL, 
-	"sdtmAnnotation" TEXT, 
 	"sdtmTargetMapping" TEXT, 
 	"DataCollectionItem_name" TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("DataCollectionItem_name") REFERENCES "DataCollectionItem" (name)
+);
+CREATE TABLE "SDTMTarget_sdtmVariable" (
+	"SDTMTarget_id" INTEGER, 
+	"sdtmVariable" TEXT NOT NULL, 
+	PRIMARY KEY ("SDTMTarget_id", "sdtmVariable"), 
+	FOREIGN KEY("SDTMTarget_id") REFERENCES "SDTMTarget" (id)
 );

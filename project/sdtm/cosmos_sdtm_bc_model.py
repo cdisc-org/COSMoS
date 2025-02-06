@@ -1,5 +1,5 @@
-# Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2025-01-23T13:48:19
+# Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
+# Generation date: 2025-02-06T12:42:22
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -7,21 +7,56 @@
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses
-import sys
 import re
-from jsonasobj2 import JsonObj, as_dict
-from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
-from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
+from datetime import (
+    date,
+    datetime,
+    time
+)
+from typing import (
+    Any,
+    ClassVar,
+    Dict,
+    List,
+    Optional,
+    Union
+)
 
-from linkml_runtime.utils.slot import Slot
-from linkml_runtime.utils.metamodelcore import empty_list, empty_dict, bnode
-from linkml_runtime.utils.yamlutils import YAMLRoot, extended_str, extended_float, extended_int
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
-from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
-from linkml_runtime.utils.enumerations import EnumDefinitionImpl
-from rdflib import Namespace, URIRef
+from jsonasobj2 import (
+    JsonObj,
+    as_dict
+)
+from linkml_runtime.linkml_model.meta import (
+    EnumDefinition,
+    PermissibleValue,
+    PvFormulaOptions
+)
 from linkml_runtime.utils.curienamespace import CurieNamespace
+from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
+from linkml_runtime.utils.enumerations import EnumDefinitionImpl
+from linkml_runtime.utils.formatutils import (
+    camelcase,
+    sfx,
+    underscore
+)
+from linkml_runtime.utils.metamodelcore import (
+    bnode,
+    empty_dict,
+    empty_list
+)
+from linkml_runtime.utils.slot import Slot
+from linkml_runtime.utils.yamlutils import (
+    YAMLRoot,
+    extended_float,
+    extended_int,
+    extended_str
+)
+from rdflib import (
+    Namespace,
+    URIRef
+)
+
 from linkml_runtime.linkml_model.types import Boolean, Date, Integer, String, Uri
 from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
 
@@ -53,11 +88,11 @@ class CodeListConceptId(extended_str):
     pass
 
 
-@dataclass
+@dataclass(repr=False)
 class SDTMGroup(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMGroup
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SDTMGroup"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMGroup"
     class_name: ClassVar[str] = "SDTMGroup"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMGroup
@@ -122,11 +157,11 @@ class SDTMGroup(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class SDTMVariable(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMVariable
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SDTMVariable"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMVariable"
     class_name: ClassVar[str] = "SDTMVariable"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SDTMVariable
@@ -215,11 +250,11 @@ class SDTMVariable(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class RelationShip(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.RelationShip
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["RelationShip"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:RelationShip"
     class_name: ClassVar[str] = "RelationShip"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.RelationShip
@@ -253,11 +288,11 @@ class RelationShip(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class CodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeList
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["CodeList"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeList"
     class_name: ClassVar[str] = "CodeList"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeList
@@ -283,11 +318,11 @@ class CodeList(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class CodeListTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeListTerm
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["CodeListTerm"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeListTerm"
     class_name: ClassVar[str] = "CodeListTerm"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.CodeListTerm
@@ -309,11 +344,11 @@ class CodeListTerm(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class SubsetCodeList(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.SubsetCodeList
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SubsetCodeList"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SubsetCodeList"
     class_name: ClassVar[str] = "SubsetCodeList"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.SubsetCodeList
@@ -348,11 +383,11 @@ class SubsetCodeList(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class AssignedTerm(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM.AssignedTerm
+    class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["AssignedTerm"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:AssignedTerm"
     class_name: ClassVar[str] = "AssignedTerm"
     class_model_uri: ClassVar[URIRef] = COSMOS_SDTM.AssignedTerm
@@ -402,167 +437,167 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "assesses seriousness of",
-                PermissibleValue(text="assesses seriousness of") )
+            PermissibleValue(text="assesses seriousness of"))
         setattr(cls, "assesses the severity of",
-                PermissibleValue(text="assesses the severity of") )
+            PermissibleValue(text="assesses the severity of"))
         setattr(cls, "associates the tumor identified in",
-                PermissibleValue(text="associates the tumor identified in") )
+            PermissibleValue(text="associates the tumor identified in"))
         setattr(cls, "decodes the value in",
-                PermissibleValue(text="decodes the value in") )
+            PermissibleValue(text="decodes the value in"))
         setattr(cls, "describes actions taken",
-                PermissibleValue(text="describes actions taken") )
+            PermissibleValue(text="describes actions taken"))
         setattr(cls, "describes relationship of",
-                PermissibleValue(text="describes relationship of") )
+            PermissibleValue(text="describes relationship of"))
         setattr(cls, "describes the outcome of",
-                PermissibleValue(text="describes the outcome of") )
+            PermissibleValue(text="describes the outcome of"))
         setattr(cls, "further describes the test in",
-                PermissibleValue(text="further describes the test in") )
+            PermissibleValue(text="further describes the test in"))
         setattr(cls, "further specifies the anatomical location in",
-                PermissibleValue(text="further specifies the anatomical location in") )
+            PermissibleValue(text="further specifies the anatomical location in"))
         setattr(cls, "groups tumor assessments used in overall response identified by",
-                PermissibleValue(text="groups tumor assessments used in overall response identified by") )
+            PermissibleValue(text="groups tumor assessments used in overall response identified by"))
         setattr(cls, "groups values in",
-                PermissibleValue(text="groups values in") )
+            PermissibleValue(text="groups values in"))
         setattr(cls, "groups, within an individual subject, values in",
-                PermissibleValue(text="groups, within an individual subject, values in") )
+            PermissibleValue(text="groups, within an individual subject, values in"))
         setattr(cls, "identifies a pattern of",
-                PermissibleValue(text="identifies a pattern of") )
+            PermissibleValue(text="identifies a pattern of"))
         setattr(cls, "identifies an observation described by",
-                PermissibleValue(text="identifies an observation described by") )
+            PermissibleValue(text="identifies an observation described by"))
         setattr(cls, "identifies overall response supported by tumor assessments identified by",
-                PermissibleValue(text="identifies overall response supported by tumor assessments identified by") )
+            PermissibleValue(text="identifies overall response supported by tumor assessments identified by"))
         setattr(cls, "identifies the image from the procedure in",
-                PermissibleValue(text="identifies the image from the procedure in") )
+            PermissibleValue(text="identifies the image from the procedure in"))
         setattr(cls, "identifies the tumor found by the test in",
-                PermissibleValue(text="identifies the tumor found by the test in") )
+            PermissibleValue(text="identifies the tumor found by the test in"))
         setattr(cls, "indicates occurrence of the value in",
-                PermissibleValue(text="indicates occurrence of the value in") )
+            PermissibleValue(text="indicates occurrence of the value in"))
         setattr(cls, "indicates pre-specification of the value in",
-                PermissibleValue(text="indicates pre-specification of the value in") )
+            PermissibleValue(text="indicates pre-specification of the value in"))
         setattr(cls, "indicates severity of",
-                PermissibleValue(text="indicates severity of") )
+            PermissibleValue(text="indicates severity of"))
         setattr(cls, "indicates the previous irradiation status of the tumor identified by",
-                PermissibleValue(text="indicates the previous irradiation status of the tumor identified by") )
+            PermissibleValue(text="indicates the previous irradiation status of the tumor identified by"))
         setattr(cls, "indicates the progression status of the previous irradiated tumor identified by",
-                PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by") )
+            PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by"))
         setattr(cls, "is a dictionary-derived term for the value in",
-                PermissibleValue(text="is a dictionary-derived term for the value in") )
+            PermissibleValue(text="is a dictionary-derived term for the value in"))
         setattr(cls, "is a dictionary-derived class code for the value in",
-                PermissibleValue(text="is a dictionary-derived class code for the value in") )
+            PermissibleValue(text="is a dictionary-derived class code for the value in"))
         setattr(cls, "is a dictionary-derived class name for the value in",
-                PermissibleValue(text="is a dictionary-derived class name for the value in") )
+            PermissibleValue(text="is a dictionary-derived class name for the value in"))
         setattr(cls, "is decoded by the value in",
-                PermissibleValue(text="is decoded by the value in") )
+            PermissibleValue(text="is decoded by the value in"))
         setattr(cls, "is original text for",
-                PermissibleValue(text="is original text for") )
+            PermissibleValue(text="is original text for"))
         setattr(cls, "is the administered amount of the treatment in",
-                PermissibleValue(text="is the administered amount of the treatment in") )
+            PermissibleValue(text="is the administered amount of the treatment in"))
         setattr(cls, "is the administration anatomical location for the treatment in",
-                PermissibleValue(text="is the administration anatomical location for the treatment in") )
+            PermissibleValue(text="is the administration anatomical location for the treatment in"))
         setattr(cls, "is the aspect of the event used to define the date in",
-                PermissibleValue(text="is the aspect of the event used to define the date in") )
+            PermissibleValue(text="is the aspect of the event used to define the date in"))
         setattr(cls, "is the clinical significance interpretation for",
-                PermissibleValue(text="is the clinical significance interpretation for") )
+            PermissibleValue(text="is the clinical significance interpretation for"))
         setattr(cls, "is the code for the value in",
-                PermissibleValue(text="is the code for the value in") )
+            PermissibleValue(text="is the code for the value in"))
         setattr(cls, "is the dictionary code for the test in",
-                PermissibleValue(text="is the dictionary code for the test in") )
+            PermissibleValue(text="is the dictionary code for the test in"))
         setattr(cls, "is the dictionary-derived term for the value in",
-                PermissibleValue(text="is the dictionary-derived term for the value in") )
+            PermissibleValue(text="is the dictionary-derived term for the value in"))
         setattr(cls, "is the dictionary-derived class code for the value in",
-                PermissibleValue(text="is the dictionary-derived class code for the value in") )
+            PermissibleValue(text="is the dictionary-derived class code for the value in"))
         setattr(cls, "is the dictionary-derived class name for the value in",
-                PermissibleValue(text="is the dictionary-derived class name for the value in") )
+            PermissibleValue(text="is the dictionary-derived class name for the value in"))
         setattr(cls, "is the duration for",
-                PermissibleValue(text="is the duration for") )
+            PermissibleValue(text="is the duration for"))
         setattr(cls, "is the end date for",
-                PermissibleValue(text="is the end date for") )
+            PermissibleValue(text="is the end date for"))
         setattr(cls, "is the epoch of the performance of the test in",
-                PermissibleValue(text="is the epoch of the performance of the test in") )
+            PermissibleValue(text="is the epoch of the performance of the test in"))
         setattr(cls, "is the frequency of administration of the amount in",
-                PermissibleValue(text="is the frequency of administration of the amount in") )
+            PermissibleValue(text="is the frequency of administration of the amount in"))
         setattr(cls, "is the identifier for the source data used in the performance of the test in",
-                PermissibleValue(text="is the identifier for the source data used in the performance of the test in") )
+            PermissibleValue(text="is the identifier for the source data used in the performance of the test in"))
         setattr(cls, "is the material type of the subject of the activity in",
-                PermissibleValue(text="is the material type of the subject of the activity in") )
+            PermissibleValue(text="is the material type of the subject of the activity in"))
         setattr(cls, "is the medical condition that is the reason for the treatment in",
-                PermissibleValue(text="is the medical condition that is the reason for the treatment in") )
+            PermissibleValue(text="is the medical condition that is the reason for the treatment in"))
         setattr(cls, "is the method for the test in",
-                PermissibleValue(text="is the method for the test in") )
+            PermissibleValue(text="is the method for the test in"))
         setattr(cls, "is the part of the body through which is administered the treatment in",
-                PermissibleValue(text="is the part of the body through which is administered the treatment in") )
+            PermissibleValue(text="is the part of the body through which is administered the treatment in"))
         setattr(cls, "is the physical form of the product in",
-                PermissibleValue(text="is the physical form of the product in") )
+            PermissibleValue(text="is the physical form of the product in"))
         setattr(cls, "is the result of the test in",
-                PermissibleValue(text="is the result of the test in") )
+            PermissibleValue(text="is the result of the test in"))
         setattr(cls, "is the role of the assessor who performed the test in",
-                PermissibleValue(text="is the role of the assessor who performed the test in") )
+            PermissibleValue(text="is the role of the assessor who performed the test in"))
         setattr(cls, "is the specimen tested in",
-                PermissibleValue(text="is the specimen tested in") )
+            PermissibleValue(text="is the specimen tested in"))
         setattr(cls, "is the start date for",
-                PermissibleValue(text="is the start date for") )
+            PermissibleValue(text="is the start date for"))
         setattr(cls, "is the subject position during performance of the test in",
-                PermissibleValue(text="is the subject position during performance of the test in") )
+            PermissibleValue(text="is the subject position during performance of the test in"))
         setattr(cls, "is the subject's fasting status during the performance of the test in",
-                PermissibleValue(text="is the subject's fasting status during the performance of the test in") )
+            PermissibleValue(text="is the subject's fasting status during the performance of the test in"))
         setattr(cls, "is the unit for the value in",
-                PermissibleValue(text="is the unit for the value in") )
+            PermissibleValue(text="is the unit for the value in"))
         setattr(cls, "is the unit for",
-                PermissibleValue(text="is the unit for") )
+            PermissibleValue(text="is the unit for"))
         setattr(cls, "specifies the anatomical location in",
-                PermissibleValue(text="specifies the anatomical location in") )
+            PermissibleValue(text="specifies the anatomical location in"))
         setattr(cls, "specifies the anatomical location of",
-                PermissibleValue(text="specifies the anatomical location of") )
+            PermissibleValue(text="specifies the anatomical location of"))
         setattr(cls, "specifies the anatomical location of the performance of the test in",
-                PermissibleValue(text="specifies the anatomical location of the performance of the test in") )
+            PermissibleValue(text="specifies the anatomical location of the performance of the test in"))
         setattr(cls, "specifies the severity of",
-                PermissibleValue(text="specifies the severity of") )
+            PermissibleValue(text="specifies the severity of"))
         setattr(cls, "values are grouped by",
-                PermissibleValue(text="values are grouped by") )
+            PermissibleValue(text="values are grouped by"))
         setattr(cls, "was the subject position during performance of the test in",
-                PermissibleValue(text="was the subject position during performance of the test in") )
+            PermissibleValue(text="was the subject position during performance of the test in"))
         setattr(cls, "identifies the reference used in the genomic test in",
-                PermissibleValue(text="identifies the reference used in the genomic test in") )
+            PermissibleValue(text="identifies the reference used in the genomic test in"))
         setattr(cls, "indicates heritability of the genetic variant in",
-                PermissibleValue(text="indicates heritability of the genetic variant in") )
+            PermissibleValue(text="indicates heritability of the genetic variant in"))
         setattr(cls, "is an identifier for a published reference for the genetic variant in",
-                PermissibleValue(text="is an identifier for a published reference for the genetic variant in") )
+            PermissibleValue(text="is an identifier for a published reference for the genetic variant in"))
         setattr(cls, "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in",
-                PermissibleValue(text="is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in") )
+            PermissibleValue(text="is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in"))
         setattr(cls, "is an identifier for the genetic sequence of the genetic entity represented by",
-                PermissibleValue(text="is an identifier for the genetic sequence of the genetic entity represented by") )
+            PermissibleValue(text="is an identifier for the genetic sequence of the genetic entity represented by"))
         setattr(cls, "is the chromosome that is the position of the result in",
-                PermissibleValue(text="is the chromosome that is the position of the result in") )
+            PermissibleValue(text="is the chromosome that is the position of the result in"))
         setattr(cls, "is the clinical trial or treatment setting for",
-                PermissibleValue(text="is the clinical trial or treatment setting for") )
+            PermissibleValue(text="is the clinical trial or treatment setting for"))
         setattr(cls, "is the date of occurrence",
-                PermissibleValue(text="is the date of occurrence") )
+            PermissibleValue(text="is the date of occurrence"))
         setattr(cls, "is the date of occurrence for",
-                PermissibleValue(text="is the date of occurrence for") )
+            PermissibleValue(text="is the date of occurrence for"))
         setattr(cls, "is the intended disease outcome for",
-                PermissibleValue(text="is the intended disease outcome for") )
+            PermissibleValue(text="is the intended disease outcome for"))
         setattr(cls, "is the method of secondary analysis of results in",
-                PermissibleValue(text="is the method of secondary analysis of results in") )
+            PermissibleValue(text="is the method of secondary analysis of results in"))
         setattr(cls, "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
-                PermissibleValue(text="is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in") )
+            PermissibleValue(text="is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in"))
         setattr(cls, "is the symbol for the genomic entity that is the position of the result in",
-                PermissibleValue(text="is the symbol for the genomic entity that is the position of the result in") )
+            PermissibleValue(text="is the symbol for the genomic entity that is the position of the result in"))
         setattr(cls, "is the type of genomic entity that is the position of the result in",
-                PermissibleValue(text="is the type of genomic entity that is the position of the result in") )
+            PermissibleValue(text="is the type of genomic entity that is the position of the result in"))
         setattr(cls, "is the genetic sub-location of the result in",
-                PermissibleValue(text="is the genetic sub-location of the result in") )
+            PermissibleValue(text="is the genetic sub-location of the result in"))
         setattr(cls, "is the object of the observation in",
-                PermissibleValue(text="is the object of the observation in") )
+            PermissibleValue(text="is the object of the observation in"))
         setattr(cls, "is an identifier for the evaluator with the role in",
-                PermissibleValue(text="is an identifier for the evaluator with the role in") )
+            PermissibleValue(text="is an identifier for the evaluator with the role in"))
         setattr(cls, "is the severity of the toxicity in",
-                PermissibleValue(text="is the severity of the toxicity in") )
+            PermissibleValue(text="is the severity of the toxicity in"))
         setattr(cls, "is a grouping of values in",
-                PermissibleValue(text="is a grouping of values in") )
+            PermissibleValue(text="is a grouping of values in"))
         setattr(cls, "is the textual description of the intended dose regimen for",
-                PermissibleValue(text="is the textual description of the intended dose regimen for") )
+            PermissibleValue(text="is the textual description of the intended dose regimen for"))
         setattr(cls, "is the reason for stopping administration of",
-                PermissibleValue(text="is the reason for stopping administration of") )
+            PermissibleValue(text="is the reason for stopping administration of"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
@@ -604,49 +639,58 @@ class OriginTypeEnum(EnumDefinitionImpl):
     """
     Terminology relevant to the origin type for datasets in the Define-XML document.
     """
-    Assigned = PermissibleValue(text="Assigned",
-                                       description="A value that is derived through designation, such as values from a look up table or a label on a CRF.",
-                                       meaning=NCIT.C170547)
-    Collected = PermissibleValue(text="Collected",
-                                         description="A value that is actually observed and recorded by a person or obtained by an instrument.",
-                                         meaning=NCIT.C170548)
-    Derived = PermissibleValue(text="Derived",
-                                     description="A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.",
-                                     meaning=NCIT.C170549)
-    Predecessor = PermissibleValue(text="Predecessor",
-                                             description="A value that is copied from a variable in another dataset.",
-                                             meaning=NCIT.C170550)
-    Protocol = PermissibleValue(text="Protocol",
-                                       description="A value that is included as part of the study protocol.",
-                                       meaning=NCIT.C170551)
+    Assigned = PermissibleValue(
+        text="Assigned",
+        description="""A value that is derived through designation, such as values from a look up table or a label on a CRF.""",
+        meaning=NCIT["C170547"])
+    Collected = PermissibleValue(
+        text="Collected",
+        description="A value that is actually observed and recorded by a person or obtained by an instrument.",
+        meaning=NCIT["C170548"])
+    Derived = PermissibleValue(
+        text="Derived",
+        description="""A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.""",
+        meaning=NCIT["C170549"])
+    Predecessor = PermissibleValue(
+        text="Predecessor",
+        description="A value that is copied from a variable in another dataset.",
+        meaning=NCIT["C170550"])
+    Protocol = PermissibleValue(
+        text="Protocol",
+        description="A value that is included as part of the study protocol.",
+        meaning=NCIT["C170551"])
 
     _defn = EnumDefinition(
         name="OriginTypeEnum",
         description="Terminology relevant to the origin type for datasets in the Define-XML document.",
-        code_set=NCIT.C170449,
+        code_set=NCIT["C170449"],
     )
 
 class OriginSourceEnum(EnumDefinitionImpl):
     """
     Terminology relevant to the origin source for datasets in the Define-XML document.
     """
-    Investigator = PermissibleValue(text="Investigator",
-                                               description="A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.",
-                                               meaning=NCIT.C25936)
-    Sponsor = PermissibleValue(text="Sponsor",
-                                     description="An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]",
-                                     meaning=NCIT.C70793)
-    Subject = PermissibleValue(text="Subject",
-                                     description="An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.",
-                                     meaning=NCIT.C41189)
-    Vendor = PermissibleValue(text="Vendor",
-                                   description="A person or agency that promotes or exchanges goods or services for money. (NCI)",
-                                   meaning=NCIT.C68608)
+    Investigator = PermissibleValue(
+        text="Investigator",
+        description="""A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.""",
+        meaning=NCIT["C25936"])
+    Sponsor = PermissibleValue(
+        text="Sponsor",
+        description="""An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]""",
+        meaning=NCIT["C70793"])
+    Subject = PermissibleValue(
+        text="Subject",
+        description="""An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.""",
+        meaning=NCIT["C41189"])
+    Vendor = PermissibleValue(
+        text="Vendor",
+        description="A person or agency that promotes or exchanges goods or services for money. (NCI)",
+        meaning=NCIT["C68608"])
 
     _defn = EnumDefinition(
         name="OriginSourceEnum",
         description="Terminology relevant to the origin source for datasets in the Define-XML document.",
-        code_set=NCIT.C170450,
+        code_set=NCIT["C170450"],
     )
 
 class RoleEnum(EnumDefinitionImpl):

@@ -66,8 +66,12 @@
                         "null"
                     ]
                 },
+                "implementationOption": {
+                    "$ref": "#/$defs/ImplementationOptionEnum",
+                    "description": "Implementation option for the data collection specialization group"
+                },
                 "items": {
-                    "description": "Item included in the Data Collection dataset specialization",
+                    "description": "Items included in the Data Collection specialization",
                     "items": {
                         "$ref": "#/$defs/DataCollectionItem"
                     },
@@ -81,6 +85,13 @@
                 "packageType": {
                     "$ref": "#/$defs/PackageTypeEnum",
                     "description": "Package type for data collection specializations (collection)"
+                },
+                "scenario": {
+                    "description": "Scenario for the data collection specialization group",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "sdtmDatasetSpecializationId": {
                     "description": "Identifier for SDTM Dataset Specialization group",
@@ -134,10 +145,6 @@
                     ],
                     "description": "Codelist"
                 },
-                "dataCollectionInstrumentItem": {
-                    "description": "Item included in the data collection dataset specialization used for eCSR set-up",
-                    "type": "string"
-                },
                 "dataElementConceptId": {
                     "description": "Biomedical Concept Data Element Concept identifier foreign key",
                     "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
@@ -152,13 +159,6 @@
                 },
                 "displayHidden": {
                     "description": "Indicator that the item is hidden from the user",
-                    "type": [
-                        "boolean",
-                        "null"
-                    ]
-                },
-                "isNonStandard": {
-                    "description": "Flag that indicates if the variable is a non-standard variable",
                     "type": [
                         "boolean",
                         "null"
@@ -181,7 +181,7 @@
                     "type": "boolean"
                 },
                 "name": {
-                    "description": "Item included in the data collection dataset specialization",
+                    "description": "Item name as it appears on the collection instrument",
                     "type": [
                         "string",
                         "null"
@@ -213,6 +213,13 @@
                     "description": "Item question text",
                     "type": "string"
                 },
+                "sdtmAnnotation": {
+                    "description": "Annotation of the SDTM target in the data collection instrument",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
                 "sdtmTarget": {
                     "description": "SDTM target variables for data collection item variable",
                     "items": {
@@ -239,11 +246,15 @@
                         "array",
                         "null"
                     ]
+                },
+                "variableName": {
+                    "description": "Variable name of the collection item for which data are being collected.",
+                    "type": "string"
                 }
             },
             "required": [
                 "name",
-                "dataCollectionInstrumentItem",
+                "variableName",
                 "questionText",
                 "orderNumber",
                 "mandatoryVariable",
@@ -251,6 +262,15 @@
             ],
             "title": "DataCollectionItem",
             "type": "object"
+        },
+        "ImplementationOptionEnum": {
+            "description": "",
+            "enum": [
+                "Horizontal",
+                "Vertical"
+            ],
+            "title": "ImplementationOptionEnum",
+            "type": "string"
         },
         "ListTypeEnum": {
             "description": "",
@@ -324,13 +344,6 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
-                "sdtmAnnotation": {
-                    "description": "Annotation of the SDTM target in the data collection instrument",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
                 "sdtmTargetMapping": {
                     "description": "Rule for mapping from data collection item to SDTM target variable.",
                     "type": [
@@ -340,7 +353,10 @@
                 },
                 "sdtmVariable": {
                     "description": "SDTM target variable for data collection item variable",
-                    "type": "string"
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
                 }
             },
             "required": [
@@ -375,8 +391,12 @@
                 "null"
             ]
         },
+        "implementationOption": {
+            "$ref": "#/$defs/ImplementationOptionEnum",
+            "description": "Implementation option for the data collection specialization group"
+        },
         "items": {
-            "description": "Item included in the Data Collection dataset specialization",
+            "description": "Items included in the Data Collection specialization",
             "items": {
                 "$ref": "#/$defs/DataCollectionItem"
             },
@@ -390,6 +410,13 @@
         "packageType": {
             "$ref": "#/$defs/PackageTypeEnum",
             "description": "Package type for data collection specializations (collection)"
+        },
+        "scenario": {
+            "description": "Scenario for the data collection specialization group",
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "sdtmDatasetSpecializationId": {
             "description": "Identifier for SDTM Dataset Specialization group",

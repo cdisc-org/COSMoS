@@ -24,6 +24,8 @@ classes:
       - standard
       - standardStartVersion
       - standardEndVersion
+      - implementationOption
+      - scenario
       - domain
       - biomedicalConceptId
       - sdtmDatasetSpecializationId
@@ -32,9 +34,8 @@ classes:
   DataCollectionItem:
     slots:
       - name
+      - variableName
       - dataElementConceptId
-      - isNonStandard
-      - dataCollectionInstrumentItem
       - questionText
       - prompt
       - orderNumber
@@ -43,11 +44,12 @@ classes:
       - length
       - significantDigits
       - displayHidden
+      - codelist
       - valueList
       - listType
       - prepopulatedValue
-      - codelist
       - sdtmTarget
+      - sdtmAnnotation
 
   ListValue:
     slots:
@@ -104,7 +106,6 @@ classes:
   SDTMTarget:
     slots:
       - sdtmVariable
-      - sdtmAnnotation
       - sdtmTargetMapping
 
 slots:
@@ -151,6 +152,16 @@ slots:
     range: string
     aliases:
       - standard_end_version
+  implementationOption:
+    description: Implementation option for the data collection specialization group
+    range: implementationOptionEnum
+    aliases:
+      - implementation_option
+  scenario:
+    description: Scenario for the data collection specialization group
+    range: string
+    aliases:
+      - scenario
   domain:
     description: Domain for the data collection specialization group
     range: string
@@ -168,35 +179,30 @@ slots:
     aliases:
       - vlm_group_id
   items:
-    description: Item included in the Data Collection dataset specialization
+    description: Items included in the Data Collection specialization
     range: DataCollectionItem
     required: true
     multivalued: true
     inlined_as_list: true
 
   name:
-    description: Item included in the data collection dataset specialization
+    description: Item name as it appears on the collection instrument
     identifier: true
     range: string
     aliases:
       - data_collection_item
+  variableName:
+    description: Variable name of the collection item for which data are being collected.
+    range: string
+    required: true
+    aliases:
+      - variable_name
   dataElementConceptId:
     description: Biomedical Concept Data Element Concept identifier foreign key
     range: string
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
     aliases:
       - dec_id
-  isNonStandard:
-    description: Flag that indicates if the variable is a non-standard variable
-    range: boolean
-    aliases:
-      - nsv_flag
-  dataCollectionInstrumentItem:
-    description: Item included in the data collection dataset specialization used for eCSR set-up
-    range: string
-    required: true
-    aliases:
-      - data_collection_instrument_item
   questionText:
     description: Item question text
     range: string
@@ -243,6 +249,10 @@ slots:
     range: boolean
     aliases:
       - display_hidden
+  codelist:
+    description: Codelist
+    range: CodeList
+    inlined: true
   valueList:
     description: A set of values for a data collection item
     range: ListValue
@@ -256,10 +266,6 @@ slots:
   prepopulatedValue:
     description: Pre-populated value for the data collection instrument
     range: PrepopulatedValue
-  codelist:
-    description: Codelist
-    range: CodeList
-    inlined: true
 
   conceptId:
     description: C-code for codelist or term in NCIt
@@ -287,6 +293,8 @@ slots:
   sdtmVariable:
     description: SDTM target variable for data collection item variable
     range: string
+    multivalued: true
+    inlined_as_list: true
     required: true
     aliases:
       - sdtm_target_variable
@@ -307,6 +315,11 @@ enums:
   PackageTypeEnum:
     permissible_values:
       collection:
+
+  implementationOptionEnum:
+    permissible_values:
+      Horizontal:
+      Vertical:
 
   CollectionItemDataTypeEnum:
     permissible_values:

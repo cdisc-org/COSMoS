@@ -1,3 +1,30 @@
+# metamodel_version: 1.7.0
+enum BiomedicalConceptResultScaleEnum
+  {
+    Ordinal
+    Narrative
+    Nominal
+    Quantitative
+    Temporal
+  }
+
+enum DataElementConceptDataTypeEnum
+  {
+    boolean
+    date
+    datetime
+    decimal
+    duration
+    integer
+    string
+    uri
+  }
+
+enum PackageTypeEnum
+  {
+    bc
+  }
+
 type BiomedicalConcept
   {
     packageDate: Date!

@@ -8,15 +8,16 @@ DataCollectionGroup {
     string standard  
     string standardStartVersion  
     string standardEndVersion  
+    implementationOptionEnum implementationOption  
+    string scenario  
     string domain  
     string biomedicalConceptId  
     string sdtmDatasetSpecializationId  
 }
 DataCollectionItem {
     string name  
+    string variableName  
     string dataElementConceptId  
-    boolean isNonStandard  
-    string dataCollectionInstrumentItem  
     string questionText  
     string prompt  
     integer orderNumber  
@@ -26,6 +27,7 @@ DataCollectionItem {
     integer significantDigits  
     boolean displayHidden  
     ListTypeEnum listType  
+    string sdtmAnnotation  
 }
 ListValue {
     string displayValue  
@@ -41,15 +43,14 @@ CodeList {
     uri href  
 }
 SDTMTarget {
-    string sdtmVariable  
-    string sdtmAnnotation  
+    stringList sdtmVariable  
     string sdtmTargetMapping  
 }
 
 DataCollectionGroup ||--}| DataCollectionItem : "items"
+DataCollectionItem ||--|o CodeList : "codelist"
 DataCollectionItem ||--}o ListValue : "valueList"
 DataCollectionItem ||--|o PrepopulatedValue : "prepopulatedValue"
-DataCollectionItem ||--|o CodeList : "codelist"
 DataCollectionItem ||--}o SDTMTarget : "sdtmTarget"
 
 ```

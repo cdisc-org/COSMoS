@@ -1,3 +1,6 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
 message BiomedicalConcept
  {
   date packageDate = 0

@@ -943,13 +943,13 @@
       "description": "Variable included in the SDTM dataset specialization",
       "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/variables",
-      "multivalued": true,
       "owner": "SDTMGroup",
       "domain_of": [
         "SDTMGroup"
       ],
       "range": "SDTMVariable",
       "required": true,
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1114,13 +1114,13 @@
       "description": "Term in subset codelist",
       "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/codelistTerm",
-      "multivalued": true,
       "owner": "SubsetCodeList",
       "domain_of": [
         "SubsetCodeList"
       ],
       "range": "CodeListTerm",
       "required": true,
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1160,12 +1160,12 @@
       "description": "List of SDTM submission values used if subset codelist is not applicable",
       "from_schema": "https://www.cdisc.org/cosmos/sdtm_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/sdtm_v1.0/valueList",
-      "multivalued": true,
       "owner": "SDTMVariable",
       "domain_of": [
         "SDTMVariable"
       ],
       "range": "string",
+      "multivalued": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
@@ -1561,9 +1561,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-01-23T13:47:55",
+  "source_file_date": "2025-02-04T16:39:11",
   "source_file_size": 14585,
-  "generation_date": "2025-01-23T13:48:14",
+  "generation_date": "2025-02-06T12:42:21",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

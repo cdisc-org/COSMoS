@@ -1,5 +1,5 @@
-# Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2025-01-23T13:54:22
+# Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.0.1
+# Generation date: 2025-02-06T12:43:39
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/biomedical_concept_v1.0
@@ -7,21 +7,56 @@
 # license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses
-import sys
 import re
-from jsonasobj2 import JsonObj, as_dict
-from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
-from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
+from datetime import (
+    date,
+    datetime,
+    time
+)
+from typing import (
+    Any,
+    ClassVar,
+    Dict,
+    List,
+    Optional,
+    Union
+)
 
-from linkml_runtime.utils.slot import Slot
-from linkml_runtime.utils.metamodelcore import empty_list, empty_dict, bnode
-from linkml_runtime.utils.yamlutils import YAMLRoot, extended_str, extended_float, extended_int
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
-from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
-from linkml_runtime.utils.enumerations import EnumDefinitionImpl
-from rdflib import Namespace, URIRef
+from jsonasobj2 import (
+    JsonObj,
+    as_dict
+)
+from linkml_runtime.linkml_model.meta import (
+    EnumDefinition,
+    PermissibleValue,
+    PvFormulaOptions
+)
 from linkml_runtime.utils.curienamespace import CurieNamespace
+from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
+from linkml_runtime.utils.enumerations import EnumDefinitionImpl
+from linkml_runtime.utils.formatutils import (
+    camelcase,
+    sfx,
+    underscore
+)
+from linkml_runtime.utils.metamodelcore import (
+    bnode,
+    empty_dict,
+    empty_list
+)
+from linkml_runtime.utils.slot import Slot
+from linkml_runtime.utils.yamlutils import (
+    YAMLRoot,
+    extended_float,
+    extended_int,
+    extended_str
+)
+from rdflib import (
+    Namespace,
+    URIRef
+)
+
 from linkml_runtime.linkml_model.types import Date, String, Uri
 from linkml_runtime.utils.metamodelcore import URI, XSDDate
 
@@ -49,11 +84,11 @@ class DataElementConceptConceptId(extended_str):
     pass
 
 
-@dataclass
+@dataclass(repr=False)
 class BiomedicalConcept(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_BC.BiomedicalConcept
+    class_class_uri: ClassVar[URIRef] = COSMOS_BC["BiomedicalConcept"]
     class_class_curie: ClassVar[str] = "cosmos_bc:BiomedicalConcept"
     class_name: ClassVar[str] = "BiomedicalConcept"
     class_model_uri: ClassVar[URIRef] = COSMOS_BC.BiomedicalConcept
@@ -130,11 +165,11 @@ class BiomedicalConcept(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Coding(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_BC.Coding
+    class_class_uri: ClassVar[URIRef] = COSMOS_BC["Coding"]
     class_class_curie: ClassVar[str] = "cosmos_bc:Coding"
     class_name: ClassVar[str] = "Coding"
     class_model_uri: ClassVar[URIRef] = COSMOS_BC.Coding
@@ -160,11 +195,11 @@ class Coding(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class DataElementConcept(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = COSMOS_BC.DataElementConcept
+    class_class_uri: ClassVar[URIRef] = COSMOS_BC["DataElementConcept"]
     class_class_curie: ClassVar[str] = "cosmos_bc:DataElementConcept"
     class_name: ClassVar[str] = "DataElementConcept"
     class_model_uri: ClassVar[URIRef] = COSMOS_BC.DataElementConcept

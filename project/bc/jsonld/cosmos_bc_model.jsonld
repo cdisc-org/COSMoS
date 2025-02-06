@@ -477,13 +477,13 @@
       "description": "Biomedical Concept category for the faciliation of API search and extract",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0categories",
-      "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
       "range": "string",
       "required": true,
+      "multivalued": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
@@ -521,12 +521,12 @@
       "description": "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0synonyms",
-      "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
       "range": "string",
+      "multivalued": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
@@ -536,12 +536,12 @@
       "description": "Scale of measurement for the Biomedical Concept result",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0resultScales",
-      "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
       "range": "BiomedicalConceptResultScaleEnum",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -564,12 +564,12 @@
       "description": "Coding for the Biomedical Concept",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0coding",
-      "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
       "range": "Coding",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -621,12 +621,12 @@
       "description": "Data Element Concept",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0dataElementConcepts",
-      "multivalued": true,
       "owner": "BiomedicalConcept",
       "domain_of": [
         "BiomedicalConcept"
       ],
       "range": "DataElementConcept",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -651,12 +651,12 @@
       "description": "Example values for the Data Element Concept",
       "from_schema": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
       "slot_uri": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0exampleSet",
-      "multivalued": true,
       "owner": "DataElementConcept",
       "domain_of": [
         "DataElementConcept"
       ],
       "range": "string",
+      "multivalued": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
@@ -834,9 +834,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2025-01-23T12:13:01",
+  "source_file_date": "2025-02-03T11:01:26",
   "source_file_size": 4813,
-  "generation_date": "2025-01-23T13:54:18",
+  "generation_date": "2025-02-06T12:43:39",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",
