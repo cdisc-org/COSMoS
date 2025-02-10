@@ -701,7 +701,6 @@
         "DataCollectionItem"
       ],
       "range": "string",
-      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -718,7 +717,6 @@
         "DataCollectionItem"
       ],
       "range": "string",
-      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1276,9 +1274,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-02-06T11:07:57",
-  "source_file_size": 8896,
-  "generation_date": "2025-02-06T12:41:30",
+  "source_file_date": "2025-02-10T12:31:40",
+  "source_file_size": 8853,
+  "generation_date": "2025-02-10T12:32:09",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

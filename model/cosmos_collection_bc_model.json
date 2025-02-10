@@ -211,7 +211,10 @@
                 },
                 "questionText": {
                     "description": "Item question text",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "sdtmAnnotation": {
                     "description": "Annotation of the SDTM target in the data collection instrument",
@@ -255,7 +258,6 @@
             "required": [
                 "name",
                 "variableName",
-                "questionText",
                 "orderNumber",
                 "mandatoryVariable",
                 "dataType"

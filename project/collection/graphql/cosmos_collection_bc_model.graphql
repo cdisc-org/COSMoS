@@ -61,7 +61,7 @@ type DataCollectionItem
     name: String!
     variableName: String!
     dataElementConceptId: String
-    questionText: String!
+    questionText: String
     prompt: String
     orderNumber: Integer!
     mandatoryVariable: Boolean!

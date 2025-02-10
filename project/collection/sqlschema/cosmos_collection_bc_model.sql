@@ -82,7 +82,7 @@ CREATE TABLE "DataCollectionItem" (
 	name TEXT NOT NULL, 
 	"variableName" TEXT NOT NULL, 
 	"dataElementConceptId" TEXT, 
-	"questionText" TEXT NOT NULL, 
+	"questionText" TEXT, 
 	prompt TEXT, 
 	"orderNumber" INTEGER NOT NULL, 
 	"mandatoryVariable" BOOLEAN NOT NULL, 

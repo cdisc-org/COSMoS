@@ -11,3 +11,9 @@
   jsonout=&root/utilities/data/sdtm_latest_codelist_package.json, 
   dsout=data.sdtm_latest_codelist_package
 );
+
+%get_latest_codelist_package(
+  package=cdashct, 
+  jsonout=&root/utilities/data/cdash_latest_codelist_package.json, 
+  dsout=data.cdash_latest_codelist_package
+);

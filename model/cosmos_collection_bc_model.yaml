@@ -206,13 +206,11 @@ slots:
   questionText:
     description: Item question text
     range: string
-    required: true
     aliases:
       - question_text
   prompt:
     description: Item prompt
     range: string
-    recommended: true
     aliases:
       - prompt
   orderNumber:

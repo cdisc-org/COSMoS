@@ -170,6 +170,23 @@
       );
     quit;
   %end;
+
+  %if %upcase(&type) eq COLLECTION_ISSUE %then %do;
+    proc sql;
+    create table &out
+      (
+       _excel_file_  char(128),
+       _tab_  char(128),
+       severity char(10),
+       collection_group_id char(128),
+       collection_item char(64),
+       issue_type char(64),
+       expected_value char(8192),
+       actual_value char(8192),
+       comment char(8192)
+      );
+    quit;
+  %end;
   
 %mend;
   

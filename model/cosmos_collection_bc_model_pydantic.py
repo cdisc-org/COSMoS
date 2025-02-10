@@ -172,13 +172,10 @@ class DataCollectionItem(ConfiguredBaseModel):
     dataElementConceptId: Optional[str] = Field(default=None, description="""Biomedical Concept Data Element Concept identifier foreign key""", json_schema_extra = { "linkml_meta": {'alias': 'dataElementConceptId',
          'aliases': ['dec_id'],
          'domain_of': ['DataCollectionItem']} })
-    questionText: str = Field(default=..., description="""Item question text""", json_schema_extra = { "linkml_meta": {'alias': 'questionText',
+    questionText: Optional[str] = Field(default=None, description="""Item question text""", json_schema_extra = { "linkml_meta": {'alias': 'questionText',
          'aliases': ['question_text'],
          'domain_of': ['DataCollectionItem']} })
-    prompt: Optional[str] = Field(default=None, description="""Item prompt""", json_schema_extra = { "linkml_meta": {'alias': 'prompt',
-         'aliases': ['prompt'],
-         'domain_of': ['DataCollectionItem'],
-         'recommended': True} })
+    prompt: Optional[str] = Field(default=None, description="""Item prompt""", json_schema_extra = { "linkml_meta": {'alias': 'prompt', 'aliases': ['prompt'], 'domain_of': ['DataCollectionItem']} })
     orderNumber: int = Field(default=..., description="""Item order number""", json_schema_extra = { "linkml_meta": {'alias': 'orderNumber',
          'aliases': ['order_number'],
          'domain_of': ['DataCollectionItem']} })

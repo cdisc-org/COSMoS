@@ -1,0 +1,222 @@
+%macro generate_yaml_from_bc_collection(
+  excel_file=, range=, type=, package=, override_package_date=, 
+  out_folder=, debug=0
+  );
+
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_collection_&type._&package);
+
+  data bc_collection_&type._&package;
+    set bc_collection_&type._&package(where=(not missing(collection_group_id)));
+  run;
+  proc sort;
+    by collection_group_id order_number;
+  run;  
+
+  %if &debug %then %do;
+
+    ods listing close;
+    ods html5 file="get_bc_collection_&range..html";
+
+    proc contents data=bc_collection_&type._&package varnum;
+    run;
+    proc print data=bc_collection_&type._&package;
+    run;
+
+    ods html5 close;
+    ods listing;
+
+  %end;
+
+  data issues(keep=_excel_file_ _tab_ package_date severity collection_group_id collection_item issue_type expected_value actual_value comment);
+    length prev_collection_group_id $128 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
+           codelist_submission_value_cdisc prepopulated_term_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list value_display_list $8192
+           severity $10 issue_type $64 expected_value actual_value comment $2048;
+    retain prev_collection_group_id "" count 0;
+    set work.bc_collection_&type._&package;
+
+    call missing(codelist_submission_value_cdisc, prepopulated_term_cdisc, prepopulated_term_cdisc_preferd, value_code_cdisc, lookup_term_exist);
+    
+    outname=catt("&out_folder\collection_", lowcase(strip(collection_group_id)), ".yaml");
+    file dummy filevar=outname dlm=",";
+    
+    %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
+    
+    prev_collection_group_id = strip(prev_collection_group_id);
+    prev_collection_group_id = lag(collection_group_id);
+    if not(missing(collection_group_id)) and (prev_collection_group_id ne collection_group_id) then do;
+      count=0;
+      qpackage_date = quote(strip(package_date));
+      put "packageDate:" +1 qpackage_date;
+      put "packageType:" +1 "collection";
+      put "collectionSpecializationId:" +1 collection_group_id;
+      if not missing(short_name) then do;
+        if index(short_name, '"') or index(short_name, ":") or index(short_name, "-") 
+          then put "shortName:" +1 '"' short_name +(-1) '"';
+          else put "shortName:" +1 short_name;
+      end;
+      put "standard:" +1 standard;
+      qstandard_start_version = quote(strip(standard_start_version));
+      put "standardStartVersion:" +1 qstandard_start_version;
+      qstandard_end_version = quote(strip(standard_end_version));
+      put "standardEndVersion:" +1 standard_end_version;
+      if not missing(implementation_option) then put "implementationOption:" +1 implementation_option;
+      if not missing(scenario) then put "scenario:" +1 scenario;
+      put "domain:" +1 domain;
+      if not missing(bc_id) then put "biomedicalConceptId:" +1 bc_id;
+      if not missing(vlm_group_id) then put "sdtmDatasetSpecializationId:" +1 vlm_group_id;
+    end;
+    
+    count+1;
+    if count=1 and not missing(collection_item) then put "items:";
+    if not missing(collection_item) then do;
+        put +2 "- name:" +1 collection_item;
+        put +4 "variableName:" +1 variable_name;
+        if not missing(dec_id) then put +4 "dataElementConceptId:" +1 dec_id;
+        
+        %add2issues_collection(missing(question_text) and missing(prompt), 
+                       %str(QUESTION_TEXT_PROMPT_BOTH_MISSING), 
+                       "", "", "", severity=ERROR);
+
+        %add2issues_collection((not missing(question_text)) and (not missing(prompt)), 
+                       %str(QUESTION_TEXT_PROMPT_BOTH_NOT MISSING), 
+                       "", "", %str(cats("question_text=", question_text, ", prompt=", prompt)), severity=ERROR);
+
+        if not missing(question_text) then put +4 "questionText:" +1 question_text;
+        if not missing(prompt) then put +4 "prompt:" +1 prompt;
+
+        if not missing(order_number) then put +4 "orderNumber:" +1 order_number;
+        if missing(mandatory_variable) then mandatory_variable="N";
+        put +4 "mandatoryVariable:" +1 mandatory_variable $YN.;
+
+        if not missing(data_type) then put +4 "dataType:" +1 data_type;
+        if not missing(length) then put +4 "length:" +1 length;
+        if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
+        if missing(display_hidden) then display_hidden="N";
+        put +4 "displayHidden:" +1 display_hidden $YN.;
+
+
+        if not missing(codelist_submission_value) then do;
+          
+           if not missing(codelist) then do;
+             codelist_submission_value_cdisc = get_codelist_submissionvalue(codelist);
+             codelist_extensible = get_codelist_extensible(codelist);
+
+             %add2issues_collection(missing(codelist_submission_value), 
+                              %str(CODELIST_SUBMISSION_VALUE_MISSING), 
+                              codelist_submission_value_cdisc, "", %str(cats("codelist=", codelist)));
+
+             %add2issues_collection((codelist_submission_value ne codelist_submission_value_cdisc), 
+                              %str(CODELIST_SUBMISSION_VALUE_MISMATCH), 
+                              codelist_submission_value_cdisc, codelist_submission_value, %str(cats("codelist=", codelist)));
+
+           end;
+          
+           put +4 "codelist:";
+           put +6 "submissionValue:" +1 codelist_submission_value;
+           if not missing(codelist) then put +6 "conceptId:" +1 codelist;
+           put +6 "href: &ncit_explore" codelist;
+        end;
+        if not missing(value_display_list) then do;
+          put +4 "valueList:";
+          countwords=countw(value_display_list, ";");
+          do i=1 to countwords;
+            value=strip(scan(value_display_list, i, ";"));
+            if not missing(value) then do;
+              qvalue=quote(strip(value));
+              put +6 "- displayValue:" +1 qvalue;
+              
+            end;
+            value=strip(scan(value_list, i, ";"));
+
+            %add2issues_collection(missing(value), 
+                  %str(CODELIST_VALUE_LIST_TERM_MISSING), 
+                  "", "", %str(cats("value_display_list=", value_display_list, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", value_list=", value_list)));
+
+            if not missing(value) then do;
+
+              if not missing(codelist) then do
+                value_code_cdisc = get_term_code(codelist, value);
+                codelist_extensible = get_codelist_extensible(codelist);
+                %add2issues_collection(missing(value_code_cdisc) and (codelist_extensible = "No"), 
+                      %str(CODELIST_VALUE_LIST_TERM_CDISC_MISSING), 
+                      value_code_cdisc, "", %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                      codelist_submission_value, ", value_list=", value_list, ", value=", value)));
+              end;        
+
+              qvalue=quote(strip(value));
+              put +6 "  value:" +1 qvalue;
+            end;
+          end;
+        end;
+
+        if not missing(list_type) then put +4 "listType:" +1 list_type;
+
+        if not missing(prepopulated_term) then do;
+          put +4 "prepopulatedValue:";
+          qvalue=quote(strip(prepopulated_term));
+          put +6 "value:" +1 qvalue;
+          if not missing(prepopulated_code) then put +6 "conceptId:" +1 prepopulated_code;
+          
+          %add2issues_collection((not missing(value_list)) and (not missing(prepopulated_term)), 
+                %str(PREPOPULATED_TERM_AND_VALUE_LIST_NOT_MISSING), 
+                "", value_list, 
+                %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
+                          ", value_list=", value_list, ", prepopulated_term=", prepopulated_term, ", prepopulated_code=", prepopulated_code)));
+          
+          if not missing(codelist) and not missing(prepopulated_code) then do                          
+            prepopulated_term_cdisc_preferd = get_term_preferred_term(codelist, prepopulated_code);
+            codelist_extensible = get_codelist_extensible(codelist);
+            
+            %add2issues_collection(missing(prepopulated_term_cdisc_preferd) and (not missing(prepopulated_term)), 
+                  %str(CODELIST_TERM_CDISC_CCODE_MISSING), 
+                  prepopulated_term_cdisc_preferd, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", prepopulated_term=", prepopulated_term, ", prepopulated_code=", prepopulated_code, ", prepopulated_term_cdisc_preferd=", prepopulated_term_cdisc_preferd)));
+            
+            %add2issues_collection((not missing(prepopulated_term_cdisc)) and (missing(prepopulated_term)), 
+                  %str(CODELIST_TERM_CCODE_MISSING), 
+                  prepopulated_term_cdisc, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", prepopulated_term=", prepopulated_term)));
+            
+            %add2issues_collection((prepopulated_term_cdisc_preferd ne prepopulated_term) and (not missing(prepopulated_term_cdisc_preferd)) and (not missing(prepopulated_term)), 
+                  %str(CODELIST_TERM_CCODE_MISMATCH), 
+                  prepopulated_term_cdisc_preferd, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", prepopulated_term=", prepopulated_term, ", prepopulated_term_cdisc_preferd=", prepopulated_term_cdisc_preferd)));
+
+            %add2issues_collection(missing(prepopulated_term_cdisc) and (codelist_extensible = "No"), 
+                  %str(CODELIST_TERM_CCODE_MISSING_NOTEXTENSIBLE), 
+                  prepopulated_term_cdisc, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", prepopulated_term=", prepopulated_term)));
+            
+          end;
+
+        end;
+
+        if not missing(sdtm_target_variable) then do;
+          
+          put +4 "sdtmTarget:";
+
+          countwords=countw(sdtm_target_variable, ";");
+          do i=1 to countwords;
+            value=strip(scan(sdtm_target_variable, i, ";"));
+            if not missing(value) then do;
+              qvalue=quote(strip(value));
+              put +6 "- sdtmVariable:" +1 qvalue;
+              if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping;
+              
+            end;
+          end;
+            
+          if not missing(sdtm_annotation) then put +4 "sdtmAnnotation:" +1 sdtm_annotation;
+          
+        end;  
+
+    end;
+  run;
+
+  data all_issues_collection;
+    set all_issues_collection issues;
+  run;  
+
+%mend generate_yaml_from_bc_collection;

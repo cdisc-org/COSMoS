@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-02-06T12:41:21
+# Generation date: 2025-02-10T12:31:55
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -176,11 +176,11 @@ class DataCollectionItem(YAMLRoot):
 
     name: Union[str, DataCollectionItemName] = None
     variableName: str = None
-    questionText: str = None
     orderNumber: int = None
     mandatoryVariable: Union[bool, Bool] = None
     dataType: Union[str, "CollectionItemDataTypeEnum"] = None
     dataElementConceptId: Optional[str] = None
+    questionText: Optional[str] = None
     prompt: Optional[str] = None
     length: Optional[int] = None
     significantDigits: Optional[int] = None
@@ -203,11 +203,6 @@ class DataCollectionItem(YAMLRoot):
         if not isinstance(self.variableName, str):
             self.variableName = str(self.variableName)
 
-        if self._is_empty(self.questionText):
-            self.MissingRequiredField("questionText")
-        if not isinstance(self.questionText, str):
-            self.questionText = str(self.questionText)
-
         if self._is_empty(self.orderNumber):
             self.MissingRequiredField("orderNumber")
         if not isinstance(self.orderNumber, int):
@@ -225,6 +220,9 @@ class DataCollectionItem(YAMLRoot):
 
         if self.dataElementConceptId is not None and not isinstance(self.dataElementConceptId, str):
             self.dataElementConceptId = str(self.dataElementConceptId)
+
+        if self.questionText is not None and not isinstance(self.questionText, str):
+            self.questionText = str(self.questionText)
 
         if self.prompt is not None and not isinstance(self.prompt, str):
             self.prompt = str(self.prompt)
@@ -463,7 +461,7 @@ slots.dataElementConceptId = Slot(uri=COSMOS_COLLECTION.dataElementConceptId, na
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.questionText = Slot(uri=COSMOS_COLLECTION.questionText, name="questionText", curie=COSMOS_COLLECTION.curie('questionText'),
-                   model_uri=COSMOS_COLLECTION.questionText, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.questionText, domain=None, range=Optional[str])
 
 slots.prompt = Slot(uri=COSMOS_COLLECTION.prompt, name="prompt", curie=COSMOS_COLLECTION.curie('prompt'),
                    model_uri=COSMOS_COLLECTION.prompt, domain=None, range=Optional[str])

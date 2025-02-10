@@ -14,14 +14,14 @@
 
   proc sql noprint;
     select 
-      href into :_latest_sdtm_ctpackage trimmed
+      href into :_latest_ctpackage trimmed
     from response._links_packages
     where index(href, "&package") > 0
     order by href DESC
     ;
   quit;
 
-  %put &=_latest_sdtm_ctpackage;
+  %put &=_latest_ctpackage;
 
   libname response clear;
   filename response clear;
@@ -31,20 +31,11 @@
   filename map temp;
 
   
-  %if %sysfunc(fileexist(&jsonout)) %then %do;
-    %put;
-    %put WAR%str(NING): [&sysmacroname] The file &jsonout already exist. ;
-    %put;
-  %end;    
-  %else %do;
- 
-    %get_api_response(
-        baseurl=&base_url,
-        endpoint=&_latest_sdtm_ctpackage,
-        response_fileref=response
-      );
-
-  %end;
+  %get_api_response(
+      baseurl=&base_url,
+      endpoint=&_latest_ctpackage,
+      response_fileref=response
+    );
 
   libname response json map=map automap=create fileref=response;
 
@@ -62,7 +53,8 @@
         else ""
       end as codelist_extensible,
       cli.submissionValue as codedValue,
-      cli.conceptId as codedValue_conceptId
+      cli.conceptId as codedValue_conceptId,
+      cli.preferredTerm as preferredTerm
     from response.root root 
     inner join response.codelists cl 
       on root.ordinal_root = cl.ordinal_root

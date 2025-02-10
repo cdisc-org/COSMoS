@@ -223,9 +223,9 @@ title01 "&now";
 /************************************************************************************************************************/
 
 data bc(drop=change_history i vname vvalue F1: F2:);
-  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
+  length package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
-  retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
+  retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
   set bc:(where=(not missing(bc_id)));
   
@@ -238,7 +238,6 @@ data bc(drop=change_history i vname vvalue F1: F2:);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-  order=_n_;
   package_date = upcase(package_date);
 run;  
 
@@ -293,7 +292,7 @@ run;
 %end;  
 
 proc sql;
-  create table sdtm_merged
+  create table sdtm_merged(drop=order)
   as select
     sdtm.*,
     ss.subset_value_list
@@ -320,16 +319,15 @@ quit;
 /************************************************************************************************************************/
 
 data collection(drop=change_history i vname vvalue);
-  length order order_number 8 package_date $64 standard standard_start_version standard_end_version bc_id dec_id collection_item variable_name $64 
+  length order_number 8 package_date $64 standard standard_start_version standard_end_version bc_id dec_id collection_item variable_name $64 
          collection_group_id domain vlm_group_id implementation_option scenario $128
          question_text prompt codelist codelist_submission_value value_list value_display_list list_type prepopulated_term prepopulated_code sdtm_target_variable sdtm_annotation sdtm_mapping
          short_name data_type change_history vvalue $32000 vname $32;
-  retain _excel_file_ _tab_ order package_date standard standard_start_version standard_end_version collection_group_id bc_id domain vlm_group_id short_name  
+  retain _excel_file_ _tab_ package_date standard standard_start_version standard_end_version collection_group_id bc_id domain vlm_group_id short_name  
          dec_id collection_item variable_name order_number mandatory_variable data_type length significant_digits display_hidden codelist codelist_submission_value value_list value_display_list prepopulated_term prepopulated_code 
          sdtm_target_variable sdtm_annotation sdtm_mapping 
          ;
   set collect:(where=(not missing(collection_group_id)));
-  order=_n_;
   package_date = upcase(package_date);
   array carray{*} _character_;
   do i=1 to dim(carray);
@@ -368,7 +366,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved BC Parent BCs */
   proc sql;
     title02 "Missing BC parent_bc_id link to BC bc_id";
-    /* create table parent_bc_missing as */
       select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, parent_bc_id
       from bc
       where 
@@ -378,16 +375,10 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       ;
   quit;
 
-/*
-  proc print data=parent_bc_missing;
-    title02 "Missing BC parent_bc_id link to BC bc_id";
-  run;  
-*/
-
   /* Unresolved Collection BCs */
   proc sql;
     title02 "Missing Collection Specialization bc_id link to BC bc_id";
-    /* create table sdtm_bc_missing as */
+    /* create table collection_bc_missing as */
       select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.bc_id
       from collection col
       where 
@@ -395,13 +386,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       order by _excel_file_, _tab_, collection_group_id, collection_item
       ;
   quit;
-
-/*
-  proc print data=sdtm_bc_missing;
-    title02 "Missing SDTM Specialization bc_id link to BC bc_id";
-  run;  
-*/
-
 
   /* Unresolved Colection BCs/DECs */
   proc sql;
@@ -411,7 +395,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       from collection
       where not missing(dec_id);
 
-   /*  create table collection_bc_dec_missing as */
       select col._excel_file_, col._tab_, col.package_date, col.collection_group_id, col.collection_item, col.bc_id, col.dec_id 
       from collection_bc_dec cold, collection col
       where 
@@ -421,19 +404,23 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       ;
   quit;
 
-/*
-  proc print data=collection_bc_dec_missing;
-    title02 "Missing Collection Specialization bc_id/dec_id link to BC bc_id/dec_id";
-  run;  
-*/
+  /* Unresolved SDTM vlm_group_id */
+  proc sql;
+    title02 "Missing Collection Specialization vlm_group_id link to SDTM vlm_group_id";
+    /* create table collection_bc_missing as */
+      select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.vlm_group_id
+      from collection col
+      where 
+        col.vlm_group_id not in (select vlm_group_id from sdtm_merged)
+      order by _excel_file_, _tab_, collection_group_id, collection_item
+      ;
+  quit;
 
   /* Duplicate BC records */
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
-  /*  create table sdtm_bc_missing as*/
       select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id
       from bc
-      /* group by package_date, bc_categories, bc_id, short_name, dec_id */
       group by package_date, bc_id, dec_id
       having count(*) > 1
       ;
@@ -442,7 +429,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Duplicate Collection records */
   proc sql;
     title02 "Duplicate Collection Specialization records (package_date, collection_group_id, collection_item)";
-  /*  create table sdtm_bc_missing as*/
       select _excel_file_, _tab_, package_date, standard, standard_start_version,	standard_end_version, collection_group_id, collection_item
       from collection
       group by package_date, standard, collection_group_id, collection_item
