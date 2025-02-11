@@ -46,9 +46,9 @@
 --     * Slot: id Description: 
 --     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the data collection instrument
 --     * Slot: sdtmTargetMapping Description: Rule for mapping from data collection item to SDTM target variable.
--- # Class: "SDTMTarget_sdtmVariable" Description: ""
+-- # Class: "SDTMTarget_sdtmVariables" Description: ""
 --     * Slot: SDTMTarget_id Description: Autocreated FK slot
---     * Slot: sdtmVariable Description: SDTM target variable for data collection item variable
+--     * Slot: sdtmVariables Description: SDTM target variable for data collection item variable
 
 CREATE TABLE "DataCollectionGroup" (
 	"packageDate" DATE NOT NULL, 
@@ -107,10 +107,10 @@ CREATE TABLE "DataCollectionItem" (
 	FOREIGN KEY("prepopulatedValue_id") REFERENCES "PrepopulatedValue" (id), 
 	FOREIGN KEY("sdtmTarget_id") REFERENCES "SDTMTarget" (id)
 );
-CREATE TABLE "SDTMTarget_sdtmVariable" (
+CREATE TABLE "SDTMTarget_sdtmVariables" (
 	"SDTMTarget_id" INTEGER, 
-	"sdtmVariable" TEXT NOT NULL, 
-	PRIMARY KEY ("SDTMTarget_id", "sdtmVariable"), 
+	"sdtmVariables" TEXT NOT NULL, 
+	PRIMARY KEY ("SDTMTarget_id", "sdtmVariables"), 
 	FOREIGN KEY("SDTMTarget_id") REFERENCES "SDTMTarget" (id)
 );
 CREATE TABLE "ListValue" (

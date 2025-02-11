@@ -105,7 +105,7 @@ classes:
   SDTMTarget:
     slots:
       - sdtmAnnotation
-      - sdtmVariable
+      - sdtmVariables
       - sdtmTargetMapping
 
 slots:
@@ -292,7 +292,7 @@ slots:
     recommended: true
     aliases:
       - sdtm_annotation
-  sdtmVariable:
+  sdtmVariables:
     description: SDTM target variable for data collection item variable
     range: string
     multivalued: true

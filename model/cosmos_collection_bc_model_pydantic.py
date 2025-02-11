@@ -309,7 +309,7 @@ class SDTMTarget(ConfiguredBaseModel):
          'aliases': ['sdtm_annotation'],
          'domain_of': ['SDTMTarget'],
          'recommended': True} })
-    sdtmVariable: List[str] = Field(default=..., description="""SDTM target variable for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariable',
+    sdtmVariables: List[str] = Field(default=..., description="""SDTM target variable for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariables',
          'aliases': ['sdtm_target_variable'],
          'domain_of': ['SDTMTarget']} })
     sdtmTargetMapping: Optional[str] = Field(default=None, description="""Rule for mapping from data collection item to SDTM target variable.""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTargetMapping',

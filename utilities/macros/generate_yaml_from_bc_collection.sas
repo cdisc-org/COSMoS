@@ -209,7 +209,7 @@
 
           countwords=countw(sdtm_target_variable, ";");
           if not missing(sdtm_annotation) then put +6 "sdtmAnnotation:" +1 sdtm_annotation;
-          if countwords gt 0 then put +6 "sdtmVariable:";
+          if countwords gt 0 then put +6 "sdtmVariables:";
           do i=1 to countwords;
             value=strip(scan(sdtm_target_variable, i, ";"));
             if not missing(value) then do;

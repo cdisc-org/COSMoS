@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-02-11T10:19:26
+# Generation date: 2025-02-11T11:01:11
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -339,16 +339,16 @@ class SDTMTarget(YAMLRoot):
     class_name: ClassVar[str] = "SDTMTarget"
     class_model_uri: ClassVar[URIRef] = COSMOS_COLLECTION.SDTMTarget
 
-    sdtmVariable: Union[str, List[str]] = None
+    sdtmVariables: Union[str, List[str]] = None
     sdtmAnnotation: Optional[str] = None
     sdtmTargetMapping: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.sdtmVariable):
-            self.MissingRequiredField("sdtmVariable")
-        if not isinstance(self.sdtmVariable, list):
-            self.sdtmVariable = [self.sdtmVariable] if self.sdtmVariable is not None else []
-        self.sdtmVariable = [v if isinstance(v, str) else str(v) for v in self.sdtmVariable]
+        if self._is_empty(self.sdtmVariables):
+            self.MissingRequiredField("sdtmVariables")
+        if not isinstance(self.sdtmVariables, list):
+            self.sdtmVariables = [self.sdtmVariables] if self.sdtmVariables is not None else []
+        self.sdtmVariables = [v if isinstance(v, str) else str(v) for v in self.sdtmVariables]
 
         if self.sdtmAnnotation is not None and not isinstance(self.sdtmAnnotation, str):
             self.sdtmAnnotation = str(self.sdtmAnnotation)
@@ -517,8 +517,8 @@ slots.sdtmTarget = Slot(uri=COSMOS_COLLECTION.sdtmTarget, name="sdtmTarget", cur
 slots.sdtmAnnotation = Slot(uri=COSMOS_COLLECTION.sdtmAnnotation, name="sdtmAnnotation", curie=COSMOS_COLLECTION.curie('sdtmAnnotation'),
                    model_uri=COSMOS_COLLECTION.sdtmAnnotation, domain=None, range=Optional[str])
 
-slots.sdtmVariable = Slot(uri=COSMOS_COLLECTION.sdtmVariable, name="sdtmVariable", curie=COSMOS_COLLECTION.curie('sdtmVariable'),
-                   model_uri=COSMOS_COLLECTION.sdtmVariable, domain=None, range=Union[str, List[str]])
+slots.sdtmVariables = Slot(uri=COSMOS_COLLECTION.sdtmVariables, name="sdtmVariables", curie=COSMOS_COLLECTION.curie('sdtmVariables'),
+                   model_uri=COSMOS_COLLECTION.sdtmVariables, domain=None, range=Union[str, List[str]])
 
 slots.sdtmTargetMapping = Slot(uri=COSMOS_COLLECTION.sdtmTargetMapping, name="sdtmTargetMapping", curie=COSMOS_COLLECTION.curie('sdtmTargetMapping'),
                    model_uri=COSMOS_COLLECTION.sdtmTargetMapping, domain=None, range=Optional[str])

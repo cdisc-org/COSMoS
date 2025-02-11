@@ -43,7 +43,7 @@ CodeList {
 }
 SDTMTarget {
     string sdtmAnnotation  
-    stringList sdtmVariable  
+    stringList sdtmVariables  
     string sdtmTargetMapping  
 }
 

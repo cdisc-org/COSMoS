@@ -48,7 +48,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-234.8'>SDTMTarget</text>
 <polyline fill='none' points='-0.5,-224 170.5,-224 ' stroke='black'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-205.8'>sdtmAnnotation:string ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-190.8'>sdtmVariable:string +</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-190.8'>sdtmVariables:string +</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-175.8'>sdtmTargetMapping:string ?</text>
 </g><g class='edge' id='edge1'><title>DataCollectionItem-&gt;SDTMTarget</title>
 <path d='M187.921,-334.83C166.409,-308.738 144.78,-282.506 126.941,-260.869' fill='none' stroke='black'/>

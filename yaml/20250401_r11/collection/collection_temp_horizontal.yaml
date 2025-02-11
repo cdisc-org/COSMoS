@@ -21,7 +21,7 @@ items:
     displayHidden: false
     sdtmTarget:
       sdtmAnnotation: VSDTC
-      sdtmVariable:
+      sdtmVariables:
         -  "VSDTC"
   - name: TEMP
     variableName: VSORRES
@@ -35,7 +35,7 @@ items:
     displayHidden: false
     sdtmTarget:
       sdtmAnnotation: VSORRES when VSTESTCD = TEMP
-      sdtmVariable:
+      sdtmVariables:
         -  "VSORRES"
         -  "VSTESTCD"
         -  "VSTEST"
@@ -60,7 +60,7 @@ items:
     listType: Radio
     sdtmTarget:
       sdtmAnnotation: VSORRESU when VSTESTCD = TEMP
-      sdtmVariable:
+      sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"
         -  "VSTEST"
@@ -91,5 +91,5 @@ items:
     listType: Radio
     sdtmTarget:
       sdtmAnnotation: VSLOC when VSTESTCD = TEMP
-      sdtmVariable:
+      sdtmVariables:
         -  "VSLOC"

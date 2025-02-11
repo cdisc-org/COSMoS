@@ -354,7 +354,7 @@
                         "null"
                     ]
                 },
-                "sdtmVariable": {
+                "sdtmVariables": {
                     "description": "SDTM target variable for data collection item variable",
                     "items": {
                         "type": "string"
@@ -363,7 +363,7 @@
                 }
             },
             "required": [
-                "sdtmVariable"
+                "sdtmVariables"
             ],
             "title": "SDTMTarget",
             "type": "object"

@@ -981,14 +981,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "sdtmVariable",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmVariable",
+      "name": "sdtmVariables",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmVariables",
       "description": "SDTM target variable for data collection item variable",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "aliases": [
         "sdtm_target_variable"
       ],
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmVariable",
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmVariables",
       "owner": "SDTMTarget",
       "domain_of": [
         "SDTMTarget"
@@ -1262,7 +1262,7 @@
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "slots": [
         "sdtmAnnotation",
-        "sdtmVariable",
+        "sdtmVariables",
         "sdtmTargetMapping"
       ],
       "slot_usage": {},
@@ -1272,9 +1272,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-02-11T10:18:43",
-  "source_file_size": 8803,
-  "generation_date": "2025-02-11T10:19:35",
+  "source_file_date": "2025-02-11T11:00:46",
+  "source_file_size": 8805,
+  "generation_date": "2025-02-11T11:01:23",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",
