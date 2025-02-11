@@ -198,11 +198,7 @@ class DataCollectionItem(ConfiguredBaseModel):
          'aliases': ['list_type'],
          'domain_of': ['DataCollectionItem']} })
     prepopulatedValue: Optional[PrepopulatedValue] = Field(default=None, description="""Pre-populated value for the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'prepopulatedValue', 'domain_of': ['DataCollectionItem']} })
-    sdtmTarget: Optional[List[SDTMTarget]] = Field(default=None, description="""SDTM target variables for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTarget', 'domain_of': ['DataCollectionItem']} })
-    sdtmAnnotation: Optional[str] = Field(default=None, description="""Annotation of the SDTM target in the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmAnnotation',
-         'aliases': ['sdtm_annotation'],
-         'domain_of': ['DataCollectionItem'],
-         'recommended': True} })
+    sdtmTarget: Optional[SDTMTarget] = Field(default=None, description="""SDTM target variables for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTarget', 'domain_of': ['DataCollectionItem']} })
 
     @field_validator('dataElementConceptId')
     def pattern_dataElementConceptId(cls, v):
@@ -309,6 +305,10 @@ class CodeList(ConfiguredBaseModel):
 class SDTMTarget(ConfiguredBaseModel):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://www.cdisc.org/cosmos/collection_v1.0'})
 
+    sdtmAnnotation: Optional[str] = Field(default=None, description="""Annotation of the SDTM target in the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmAnnotation',
+         'aliases': ['sdtm_annotation'],
+         'domain_of': ['SDTMTarget'],
+         'recommended': True} })
     sdtmVariable: List[str] = Field(default=..., description="""SDTM target variable for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariable',
          'aliases': ['sdtm_target_variable'],
          'domain_of': ['SDTMTarget']} })

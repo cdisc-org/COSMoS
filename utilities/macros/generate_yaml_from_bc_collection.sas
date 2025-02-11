@@ -82,8 +82,18 @@
                        %str(QUESTION_TEXT_PROMPT_BOTH_NOT MISSING), 
                        "", "", %str(cats("question_text=", question_text, ", prompt=", prompt)), severity=ERROR);
 
-        if not missing(question_text) then put +4 "questionText:" +1 question_text;
-        if not missing(prompt) then put +4 "prompt:" +1 prompt;
+        if not missing(question_text) then do;
+          question_text=tranwrd(question_text, '"', '\"');
+          if index(question_text, '"') or index(question_text, ":") or index(question_text, "-") 
+            then question_text=cats('"', question_text, '"');
+          put +4 "questionText:" +1 question_text;
+        end;  
+        if not missing(prompt) then do;
+          prompt=tranwrd(prompt, '"', '\"');
+          if index(prompt, '"') or index(prompt, ":") or index(prompt, "-") 
+            then prompt=cats('"', prompt, '"');
+          put +4 "prompt:" +1 prompt;
+        end;  
 
         if not missing(order_number) then put +4 "orderNumber:" +1 order_number;
         if missing(mandatory_variable) then mandatory_variable="N";
@@ -198,17 +208,18 @@
           put +4 "sdtmTarget:";
 
           countwords=countw(sdtm_target_variable, ";");
+          if not missing(sdtm_annotation) then put +6 "sdtmAnnotation:" +1 sdtm_annotation;
+          if countwords gt 0 then put +6 "sdtmVariable:";
           do i=1 to countwords;
             value=strip(scan(sdtm_target_variable, i, ";"));
             if not missing(value) then do;
               qvalue=quote(strip(value));
-              put +6 "- sdtmVariable:" +1 qvalue;
+              put +8 "- " +1 qvalue;
               if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping;
               
             end;
           end;
             
-          if not missing(sdtm_annotation) then put +4 "sdtmAnnotation:" +1 sdtm_annotation;
           
         end;  
 

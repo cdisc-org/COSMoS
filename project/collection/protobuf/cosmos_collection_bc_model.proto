@@ -40,8 +40,7 @@ message DataCollectionItem
  repeated  listValue valueList = 0
   listTypeEnum listType = 0
   prepopulatedValue prepopulatedValue = 0
- repeated  sDTMTarget sdtmTarget = 0
-  string sdtmAnnotation = 0
+  sDTMTarget sdtmTarget = 0
  }
 message ListValue
  {
@@ -55,6 +54,7 @@ message PrepopulatedValue
  }
 message SDTMTarget
  {
+  string sdtmAnnotation = 0
  repeated  string sdtmVariable = 0
   string sdtmTargetMapping = 0
  }

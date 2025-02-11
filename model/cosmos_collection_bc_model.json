@@ -216,22 +216,16 @@
                         "null"
                     ]
                 },
-                "sdtmAnnotation": {
-                    "description": "Annotation of the SDTM target in the data collection instrument",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
                 "sdtmTarget": {
-                    "description": "SDTM target variables for data collection item variable",
-                    "items": {
-                        "$ref": "#/$defs/SDTMTarget"
-                    },
-                    "type": [
-                        "array",
-                        "null"
-                    ]
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/SDTMTarget"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "SDTM target variables for data collection item variable"
                 },
                 "significantDigits": {
                     "description": "Item significant_digits",
@@ -346,6 +340,13 @@
             "additionalProperties": false,
             "description": "",
             "properties": {
+                "sdtmAnnotation": {
+                    "description": "Annotation of the SDTM target in the data collection instrument",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
                 "sdtmTargetMapping": {
                     "description": "Rule for mapping from data collection item to SDTM target variable.",
                     "type": [

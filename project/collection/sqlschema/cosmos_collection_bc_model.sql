@@ -24,10 +24,10 @@
 --     * Slot: significantDigits Description: Item significant_digits
 --     * Slot: displayHidden Description: Indicator that the item is hidden from the user
 --     * Slot: listType Description: Type of list used for set-up of the data collection instrument
---     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the data collection instrument
 --     * Slot: DataCollectionGroup_collectionSpecializationId Description: Autocreated FK slot
 --     * Slot: codelist_id Description: Codelist
 --     * Slot: prepopulatedValue_id Description: Pre-populated value for the data collection instrument
+--     * Slot: sdtmTarget_id Description: SDTM target variables for data collection item variable
 -- # Class: "ListValue" Description: ""
 --     * Slot: id Description: 
 --     * Slot: displayValue Description: CDISC submission value for the data collection item
@@ -44,8 +44,8 @@
 --     * Slot: href Description: Link to NCIt for the codelist
 -- # Class: "SDTMTarget" Description: ""
 --     * Slot: id Description: 
+--     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the data collection instrument
 --     * Slot: sdtmTargetMapping Description: Rule for mapping from data collection item to SDTM target variable.
---     * Slot: DataCollectionItem_name Description: Autocreated FK slot
 -- # Class: "SDTMTarget_sdtmVariable" Description: ""
 --     * Slot: SDTMTarget_id Description: Autocreated FK slot
 --     * Slot: sdtmVariable Description: SDTM target variable for data collection item variable
@@ -78,6 +78,12 @@ CREATE TABLE "CodeList" (
 	href TEXT, 
 	PRIMARY KEY (id)
 );
+CREATE TABLE "SDTMTarget" (
+	id INTEGER NOT NULL, 
+	"sdtmAnnotation" TEXT, 
+	"sdtmTargetMapping" TEXT, 
+	PRIMARY KEY (id)
+);
 CREATE TABLE "DataCollectionItem" (
 	name TEXT NOT NULL, 
 	"variableName" TEXT NOT NULL, 
@@ -91,14 +97,21 @@ CREATE TABLE "DataCollectionItem" (
 	"significantDigits" INTEGER, 
 	"displayHidden" BOOLEAN, 
 	"listType" VARCHAR(19), 
-	"sdtmAnnotation" TEXT, 
 	"DataCollectionGroup_collectionSpecializationId" TEXT, 
 	codelist_id INTEGER, 
 	"prepopulatedValue_id" INTEGER, 
+	"sdtmTarget_id" INTEGER, 
 	PRIMARY KEY (name), 
 	FOREIGN KEY("DataCollectionGroup_collectionSpecializationId") REFERENCES "DataCollectionGroup" ("collectionSpecializationId"), 
 	FOREIGN KEY(codelist_id) REFERENCES "CodeList" (id), 
-	FOREIGN KEY("prepopulatedValue_id") REFERENCES "PrepopulatedValue" (id)
+	FOREIGN KEY("prepopulatedValue_id") REFERENCES "PrepopulatedValue" (id), 
+	FOREIGN KEY("sdtmTarget_id") REFERENCES "SDTMTarget" (id)
+);
+CREATE TABLE "SDTMTarget_sdtmVariable" (
+	"SDTMTarget_id" INTEGER, 
+	"sdtmVariable" TEXT NOT NULL, 
+	PRIMARY KEY ("SDTMTarget_id", "sdtmVariable"), 
+	FOREIGN KEY("SDTMTarget_id") REFERENCES "SDTMTarget" (id)
 );
 CREATE TABLE "ListValue" (
 	id INTEGER NOT NULL, 
@@ -107,17 +120,4 @@ CREATE TABLE "ListValue" (
 	"DataCollectionItem_name" TEXT, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("DataCollectionItem_name") REFERENCES "DataCollectionItem" (name)
-);
-CREATE TABLE "SDTMTarget" (
-	id INTEGER NOT NULL, 
-	"sdtmTargetMapping" TEXT, 
-	"DataCollectionItem_name" TEXT, 
-	PRIMARY KEY (id), 
-	FOREIGN KEY("DataCollectionItem_name") REFERENCES "DataCollectionItem" (name)
-);
-CREATE TABLE "SDTMTarget_sdtmVariable" (
-	"SDTMTarget_id" INTEGER, 
-	"sdtmVariable" TEXT NOT NULL, 
-	PRIMARY KEY ("SDTMTarget_id", "sdtmVariable"), 
-	FOREIGN KEY("SDTMTarget_id") REFERENCES "SDTMTarget" (id)
 );

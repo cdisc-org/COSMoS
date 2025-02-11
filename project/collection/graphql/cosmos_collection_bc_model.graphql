@@ -73,8 +73,7 @@ type DataCollectionItem
     valueList: [ListValue]
     listType: ListTypeEnum
     prepopulatedValue: PrepopulatedValue
-    sdtmTarget: [SDTMTarget]
-    sdtmAnnotation: String
+    sdtmTarget: SDTMTarget
   }
 
 type ListValue
@@ -91,6 +90,7 @@ type PrepopulatedValue
 
 type SDTMTarget
   {
+    sdtmAnnotation: String
     sdtmVariable: [String]!
     sdtmTargetMapping: String
   }

@@ -1,13 +1,13 @@
 id: https://www.cdisc.org/cosmos/collection_v1.0
 name: COSMoS-Biomedical-Concepts-Collection-Schema
 
-imports:
-  - linkml:types
-
 prefixes:
   linkml: https://w3id.org/linkml/
   cosmos_collection: https://www.cdisc.org/cosmos/collection_v1.0
   NCIT: http://purl.obolibrary.org/obo/NCIT_
+
+imports:
+  - linkml:types
 
 default_prefix: cosmos_collection
 default_range: string
@@ -49,7 +49,6 @@ classes:
       - listType
       - prepopulatedValue
       - sdtmTarget
-      - sdtmAnnotation
 
   ListValue:
     slots:
@@ -105,6 +104,7 @@ classes:
 
   SDTMTarget:
     slots:
+      - sdtmAnnotation
       - sdtmVariable
       - sdtmTargetMapping
 
@@ -286,8 +286,12 @@ slots:
   sdtmTarget:
     description: SDTM target variables for data collection item variable
     range: SDTMTarget
-    multivalued: true
-    inlined_as_list: true
+  sdtmAnnotation:
+    description: Annotation of the SDTM target in the data collection instrument
+    range: string
+    recommended: true
+    aliases:
+      - sdtm_annotation
   sdtmVariable:
     description: SDTM target variable for data collection item variable
     range: string
@@ -296,12 +300,6 @@ slots:
     required: true
     aliases:
       - sdtm_target_variable
-  sdtmAnnotation:
-    description: Annotation of the SDTM target in the data collection instrument
-    range: string
-    recommended: true
-    aliases:
-      - sdtm_annotation
   sdtmTargetMapping:
     description: Rule for mapping from data collection item to SDTM target variable.
     range: string

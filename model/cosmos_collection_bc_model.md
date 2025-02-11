@@ -27,7 +27,6 @@ DataCollectionItem {
     integer significantDigits  
     boolean displayHidden  
     ListTypeEnum listType  
-    string sdtmAnnotation  
 }
 ListValue {
     string displayValue  
@@ -43,6 +42,7 @@ CodeList {
     uri href  
 }
 SDTMTarget {
+    string sdtmAnnotation  
     stringList sdtmVariable  
     string sdtmTargetMapping  
 }
@@ -51,7 +51,7 @@ DataCollectionGroup ||--}| DataCollectionItem : "items"
 DataCollectionItem ||--|o CodeList : "codelist"
 DataCollectionItem ||--}o ListValue : "valueList"
 DataCollectionItem ||--|o PrepopulatedValue : "prepopulatedValue"
-DataCollectionItem ||--}o SDTMTarget : "sdtmTarget"
+DataCollectionItem ||--|o SDTMTarget : "sdtmTarget"
 
 ```
 

@@ -960,9 +960,24 @@
         "DataCollectionItem"
       ],
       "range": "SDTMTarget",
-      "multivalued": true,
       "inlined": true,
-      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sdtmAnnotation",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation",
+      "description": "Annotation of the SDTM target in the data collection instrument",
+      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
+      "aliases": [
+        "sdtm_annotation"
+      ],
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation",
+      "owner": "SDTMTarget",
+      "domain_of": [
+        "SDTMTarget"
+      ],
+      "range": "string",
+      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -982,23 +997,6 @@
       "required": true,
       "multivalued": true,
       "inlined_as_list": true,
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "sdtmAnnotation",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation",
-      "description": "Annotation of the SDTM target in the data collection instrument",
-      "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
-      "aliases": [
-        "sdtm_annotation"
-      ],
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation",
-      "owner": "DataCollectionItem",
-      "domain_of": [
-        "DataCollectionItem"
-      ],
-      "range": "string",
-      "recommended": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1215,8 +1213,7 @@
         "valueList",
         "listType",
         "prepopulatedValue",
-        "sdtmTarget",
-        "sdtmAnnotation"
+        "sdtmTarget"
       ],
       "slot_usage": {},
       "class_uri": "https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem",
@@ -1264,6 +1261,7 @@
       "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "slots": [
+        "sdtmAnnotation",
         "sdtmVariable",
         "sdtmTargetMapping"
       ],
@@ -1274,9 +1272,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-02-10T12:31:40",
-  "source_file_size": 8853,
-  "generation_date": "2025-02-10T12:32:09",
+  "source_file_date": "2025-02-11T10:18:43",
+  "source_file_size": 8803,
+  "generation_date": "2025-02-11T10:19:35",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

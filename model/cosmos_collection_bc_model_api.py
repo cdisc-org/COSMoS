@@ -45,7 +45,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
              listType: Union[str, MatchExpression] = None,
              prepopulatedValue: Union[str, MatchExpression] = None,
              sdtmTarget: Union[str, MatchExpression] = None,
-             sdtmAnnotation: Union[str, MatchExpression] = None,
              
              _extra: Any = None) -> List[DataCollectionItem]:
         """
@@ -67,7 +66,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
         :param listType: Type of list used for set-up of the data collection instrument
         :param prepopulatedValue: Pre-populated value for the data collection instrument
         :param sdtmTarget: SDTM target variables for data collection item variable
-        :param sdtmAnnotation: Annotation of the SDTM target in the data collection instrument
         
         :return: Person list matching constraints
         """
@@ -104,8 +102,6 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
                                                  prepopulatedValue=prepopulatedValue,
                                                  
                                                  sdtmTarget=sdtmTarget,
-                                                 
-                                                 sdtmAnnotation=sdtmAnnotation,
                                                  
                                                  _extra=_extra)
         return results

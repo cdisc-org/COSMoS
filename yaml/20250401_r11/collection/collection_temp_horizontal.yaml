@@ -20,8 +20,9 @@ items:
     length: 10
     displayHidden: false
     sdtmTarget:
-      - sdtmVariable: "VSDTC"
-    sdtmAnnotation: VSDTC
+      sdtmAnnotation: VSDTC
+      sdtmVariable:
+        -  "VSDTC"
   - name: TEMP
     variableName: VSORRES
     dataElementConceptId: C70856
@@ -33,10 +34,11 @@ items:
     significantDigits: 1
     displayHidden: false
     sdtmTarget:
-      - sdtmVariable: "VSORRES"
-      - sdtmVariable: "VSTESTCD"
-      - sdtmVariable: "VSTEST"
-    sdtmAnnotation: VSORRES when VSTESTCD = TEMP
+      sdtmAnnotation: VSORRES when VSTESTCD = TEMP
+      sdtmVariable:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
   - name: TEMPU
     variableName: VSORRESU
     dataElementConceptId: C44276
@@ -57,10 +59,11 @@ items:
         value: "F"
     listType: Radio
     sdtmTarget:
-      - sdtmVariable: "VSORRESU"
-      - sdtmVariable: "VSTESTCD"
-      - sdtmVariable: "VSTEST"
-    sdtmAnnotation: VSORRESU when VSTESTCD = TEMP
+      sdtmAnnotation: VSORRESU when VSTESTCD = TEMP
+      sdtmVariable:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"
   - name: TEMP_VSLOC
     variableName: VSLOC
     dataElementConceptId: C13717
@@ -87,5 +90,6 @@ items:
         value: "RECTUM"
     listType: Radio
     sdtmTarget:
-      - sdtmVariable: "VSLOC"
-    sdtmAnnotation: VSLOC when VSTESTCD = TEMP
+      sdtmAnnotation: VSLOC when VSTESTCD = TEMP
+      sdtmVariable:
+        -  "VSLOC"
