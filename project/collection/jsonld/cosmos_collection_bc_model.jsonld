@@ -1274,7 +1274,7 @@
   "source_file": "cosmos_collection_bc_model.yaml",
   "source_file_date": "2025-02-11T11:00:46",
   "source_file_size": 8805,
-  "generation_date": "2025-02-11T11:01:23",
+  "generation_date": "2025-02-12T13:34:14",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

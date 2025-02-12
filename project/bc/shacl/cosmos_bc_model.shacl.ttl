@@ -6,49 +6,39 @@
 cosmos_bc:BiomedicalConcept a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Package type (bc for Biomedical Concepts)" ;
-            sh:in ( "bc" ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_bc:packageType ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path cosmos_bc:conceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
-        [ sh:class cosmos_bc:Coding ;
-            sh:description "Coding for the Biomedical Concept" ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:order 11 ;
-            sh:path cosmos_bc:coding ],
-        [ sh:datatype <xsd:string> ;
+    sh:property [ sh:datatype <xsd:string> ;
             sh:description "NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path cosmos_bc:definition ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "NCIt C-code for the Biomedical Concept" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path cosmos_bc:ncitCode ;
-            sh:pattern "^(C[0123456789]+)$" ],
         [ sh:description "Scale of measurement for the Biomedical Concept result" ;
             sh:in ( "Ordinal" "Narrative" "Nominal" "Quantitative" "Temporal" ) ;
             sh:order 9 ;
             sh:path cosmos_bc:resultScales ],
         [ sh:datatype <xsd:string> ;
-            sh:description "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt" ;
-            sh:maxCount 1 ;
+            sh:description "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction" ;
             sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path cosmos_bc:parentConceptId ],
+            sh:order 8 ;
+            sh:path cosmos_bc:synonyms ],
+        [ sh:class cosmos_bc:DataElementConcept ;
+            sh:description "Data Element Concept" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 12 ;
+            sh:path cosmos_bc:dataElementConcepts ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Biomedical Concept category for the faciliation of API search and extract" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_bc:categories ],
+        [ sh:description "Package type (bc for Biomedical Concepts)" ;
+            sh:in ( "bc" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos_bc:packageType ],
         [ sh:datatype <xsd:string> ;
             sh:description "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt" ;
             sh:maxCount 1 ;
@@ -57,11 +47,23 @@ cosmos_bc:BiomedicalConcept a sh:NodeShape ;
             sh:order 7 ;
             sh:path cosmos_bc:shortName ],
         [ sh:datatype <xsd:string> ;
-            sh:description "Biomedical Concept category for the faciliation of API search and extract" ;
-            sh:minCount 1 ;
+            sh:description "NCIt C-code for the Biomedical Concept" ;
+            sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path cosmos_bc:categories ],
+            sh:order 3 ;
+            sh:path cosmos_bc:ncitCode ;
+            sh:pattern "^(C[0123456789]+)$" ],
+        [ sh:datatype <xsd:anyURI> ;
+            sh:description "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_bc:href ],
+        [ sh:class cosmos_bc:Coding ;
+            sh:description "Coding for the Biomedical Concept" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 11 ;
+            sh:path cosmos_bc:coding ],
         [ sh:datatype <xsd:date> ;
             sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
             sh:maxCount 1 ;
@@ -69,28 +71,33 @@ cosmos_bc:BiomedicalConcept a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path cosmos_bc:packageDate ],
-        [ sh:datatype <xsd:anyURI> ;
-            sh:description "URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path cosmos_bc:href ],
-        [ sh:class cosmos_bc:DataElementConcept ;
-            sh:description "Data Element Concept" ;
-            sh:nodeKind sh:IRI ;
-            sh:order 12 ;
-            sh:path cosmos_bc:dataElementConcepts ],
+            sh:order 5 ;
+            sh:path cosmos_bc:parentConceptId ],
         [ sh:datatype <xsd:string> ;
-            sh:description "Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction" ;
+            sh:description "A unique identifier for a Biomedical Concept which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path cosmos_bc:synonyms ] ;
+            sh:order 2 ;
+            sh:path cosmos_bc:conceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ;
     sh:targetClass cosmos_bc:BiomedicalConcept .
 
 cosmos_bc:Coding a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype <xsd:string> ;
+            sh:description "Identifies the code system for the synonym concept. The URL of the code system should be used if it exists" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_bc:system ],
+        [ sh:datatype <xsd:string> ;
             sh:description "Human-readable name for the code system" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -102,20 +109,28 @@ cosmos_bc:Coding a sh:NodeShape ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path cosmos_bc:code ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "Identifies the code system for the synonym concept. The URL of the code system should be used if it exists" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path cosmos_bc:system ] ;
+            sh:path cosmos_bc:code ] ;
     sh:targetClass cosmos_bc:Coding .
 
 cosmos_bc:DataElementConcept a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Data Type for the Data Element Concept" ;
+    sh:property [ sh:datatype <xsd:string> ;
+            sh:description "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_bc:conceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path cosmos_bc:shortName ],
+        [ sh:description "Data Type for the Data Element Concept" ;
             sh:in ( "boolean" "date" "datetime" "decimal" "duration" "integer" "string" "uri" ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -135,24 +150,9 @@ cosmos_bc:DataElementConcept a sh:NodeShape ;
             sh:order 2 ;
             sh:path cosmos_bc:href ],
         [ sh:datatype <xsd:string> ;
-            sh:description "NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path cosmos_bc:shortName ],
-        [ sh:datatype <xsd:string> ;
             sh:description "Example values for the Data Element Concept" ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
-            sh:path cosmos_bc:exampleSet ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "An identifier for a Data Element Concept (DEC) which will be assigned as the NCIt code if it exists or a placeholder identifier if the concept is not yet available in NCIt" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path cosmos_bc:conceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ;
+            sh:path cosmos_bc:exampleSet ] ;
     sh:targetClass cosmos_bc:DataElementConcept .
 

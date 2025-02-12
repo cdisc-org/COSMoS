@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-02-11T11:01:24
+# Generation date: 2025-02-12T13:34:18
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
