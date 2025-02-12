@@ -1,16 +1,15 @@
-id: https://www.cdisc.org/cosmos/1-0
-name: COSMoS-Biomedical-Concepts-Schema
+id: https://www.cdisc.org/cosmos/sdtm_v1.0
+name: COSMoS-Biomedical-Concepts-SDTM-Schema
 
 imports:
   - linkml:types
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  cosmos: https://www.cdisc.org/cosmos/1-0
+  cosmos_sdtm: https://www.cdisc.org/cosmos/sdtm_v1.0/
   NCIT: http://purl.obolibrary.org/obo/NCIT_
 
-default_prefix: cosmos
-
+default_prefix: cosmos_sdtm
 default_range: string
 
 classes:
@@ -20,9 +19,9 @@ classes:
     slots:
       - packageDate
       - packageType
+      - datasetSpecializationId
       - domain
       - shortName
-      - datasetSpecializationId
       - source
       - sdtmigStartVersion
       - sdtmigEndVersion
@@ -79,187 +78,207 @@ classes:
   AssignedTerm:
     attributes:
       conceptId:
-        required: false
         description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
-      value:
-        required: true
         range: string
+        pattern: "^(C[0123456789]+)$"
+        required: false
+      value:
         description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
+        range: string
+        required: true
 
 slots:
 
   packageDate:
-    required: true
-    range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
+    range: date
+    required: true
   packageType:
-    range: SDTMDatasetSpecializationPackageTypeEnum
     description: Package type (sdtm for SDTM Dataset Specializations)
+    range: PackageTypeEnum
+    required: true
+  datasetSpecializationId:
+    description: Identifier for SDTM Value Level Metadata group
+    identifier: true
+    range: string
     required: true
   domain:
-    required: true
-    description: Domain for the SDTM specialization group
-  datasetSpecializationId:
-    identifier: true
-    required: true
-    range: string
-    description: Identifier for SDTM Value Level Metadata group
+      description: Domain for the SDTM specialization group
+      range: string
+      required: true
   source:
-    required: true
-    range: string
     description: SDTM VLM Source which categorizes VLM groups by topic variable
-  shortName:
-    required: true
     range: string
-    description: SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id
-  sdtmigStartVersion:
     required: true
+  shortName:
+    description: SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id
+    range: string
+    required: true
+  sdtmigStartVersion:
     description: The earliest SDTMIG version applicable to the BC dataset specialization
+    range: string
+    required: true
   sdtmigEndVersion:
     description: The last SDTMIG version that is applicable to the BC dataset specialization
-  biomedicalConceptId:
-    recommended: true
     range: string
+  biomedicalConceptId:
     description: Biomedical Concept identifier foreign key
+    range: string
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
-
+    recommended: true
   variables:
+    description: Variable included in the SDTM dataset specialization
+    range: SDTMVariable
+    required: true
     multivalued: true
     inlined_as_list: true
-    required: true
-    range: SDTMVariable
-    description: Variable included in the SDTM dataset specialization
+
   name:
     description: Variable included in the SDTM dataset specialization
+    identifier: true
     range: string
     required: true
-    identifier: true
   dataElementConceptId:
-    range: string
     description: Biomedical Concept Data Element Concept identifier foreign key
+    range: string
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
   isNonStandard:
-    range: boolean
     description: Flag that indicates if the variable is a non-standard variable
+    range: boolean
   codelist:
+    description: Codelist
     range: CodeList
     inlined: true
-    description: Codelist
   subsetCodelist:
     description: Subset codelist short name
+    range: string
 
   conceptId:
-    identifier: true
-    required: true
-    range: string
     description: C-code for a codelist in NCIt
+    identifier: true
+    range: string
     pattern: "^(C[0123456789]+)$"
-  href:
-    required: false
-    range: uri
-    description: Link to NCIt for the codelist
-  submissionValue:
     required: true
+  href:
+    description: Link to NCIt for the codelist
+    range: uri
+    required: false
+  submissionValue:
     description: CDISC submission value for the codelist
+    range: string
+    required: true
 
   parentCodelist:
-    required: true
     description: Subset codelist parent codelist
+    range: string
+    required: true
   subsetShortName:
-    required: true
     description: Subset codelist short name
-  subsetLabel:
+    range: string
     required: true
+  subsetLabel:
     description: Subset codelist label
+    range: string
+    required: true
   codelistTerm:
+    description: Term in subset codelist
     required: true
     range: CodeListTerm
     multivalued: true
     inlined_as_list: true
   termId:
-    required: true
     description: C-code term in subset codelist
-  termValue:
+    range: string
+    pattern: "^(C[0123456789]+)$"
     required: true
+  termValue:
     description: Submision value of term in subset codelist
+    range: string
+    required: true
   valueList:
+    description: List of SDTM submission values used if subset codelist is not applicable
+    range: string
     multivalued: true
     inlined_as_list: true
-    description: List of SDTM submission values used if subset codelist is not applicable
 
   assignedTerm:
+    description: Assigned term
     range: AssignedTerm
 
   role:
-    range: RoleEnum
     description: SDTM variable role
+    range: RoleEnum
 
   relationship:
+    description: Relationship between variables
     range: RelationShip
   subject:
-    required: true
     description: Subject in a variable relationship
+    range: string
+    required: true
   linkingPhrase:
-    required: true
-    range: LinkingPhraseEnum
     description: Variable relationship descriptive linking phrase
+    range: LinkingPhraseEnum
+    required: true
   predicateTerm:
-    required: true
-    range: PredicateTermEnum
     description: Short variable relationship linking phrase for programming purposes
-  object:
+    range: PredicateTermEnum
     required: true
+  object:
     description: Object in a variable relationship
+    range: string
+    required: true
 
   dataType:
-    range: SDTMVariableDataTypeEnum
     description: Variable data type
+    range: SDTMVariableDataTypeEnum
   length:
+    description: Variable length
     range: integer
     minimum_value: 1
-    description: Variable length
   format:
     description: Variable display format
+    range: string
   significantDigits:
-    range: integer
     description: Variable significant_digits
+    range: integer
   mandatoryVariable:
-    range: boolean
     description: Indicator that variable must be present within the SDTM group
+    range: boolean
   mandatoryValue:
-    range: boolean
     description: Indicator that variable must be populated within the SDTM group
-  originType:
-    range: OriginTypeEnum
-    description: Variable origin type (define-XML v21)
-  originSource:
-    range: OriginSourceEnum
-    description: Variable origin source (define-XML v21)
-  comparator:
-    range: ComparatorEnum
-    description: Comparison operator for SDTM group variables included in VLM
-  vlmTarget:
     range: boolean
+  originType:
+    description: Variable origin type (define-XML v21)
+    range: OriginTypeEnum
+  originSource:
+    description: Variable origin source (define-XML v21)
+    range: OriginSourceEnum
+  comparator:
+    description: Comparison operator for SDTM group variables included in VLM
+    range: ComparatorEnum
+  vlmTarget:
     description: Target variable for VLM
+    range: boolean
 
 enums:
 
-  SDTMDatasetSpecializationPackageTypeEnum:
+  PackageTypeEnum:
     permissible_values:
       sdtm:
 
   SDTMVariableDataTypeEnum:
     permissible_values:
       datetime:
-        text: datetime
+        title: datetime
       durationDatetime:
-        text: durationDatetime
+        title: durationDatetime
       float:
-        text: float
+        title: float
       integer:
-        text: integer
+        title: integer
       text:
-        text:  text
+        title: text
 
   LinkingPhraseEnum:
     permissible_values:

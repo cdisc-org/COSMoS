@@ -217,9 +217,9 @@ title01 "&now";
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
-  length order 8 package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
+  length package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
-  retain _excel_file_ _tab_ order package_date bc_id ncit_code parent_bc_id bc_categories short_name 
+  retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name 
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
   set bc:(where=(not missing(bc_id)));
   
@@ -232,7 +232,6 @@ data bc(drop=change_history F1: F2: i vname vvalue);
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
     end; 
   end;
-  order=_n_;
   package_date = upcase(package_date);
 run;  
 
@@ -287,7 +286,7 @@ run;
 
 
 proc sql;
-  create table sdtm_merged
+  create table sdtm_merged(drop=order)
   as select
     sdtm.*,
     ss.subset_value_list
@@ -317,7 +316,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Unresolved BC Parent BCs */
   proc sql;
     title02 "Missing BC parent_bc_id link to BC bc_id";
-    /* create table parent_bc_missing as */
       select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, parent_bc_id
       from bc
       where 
@@ -327,16 +325,9 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       ;
   quit;
 
-/*
-  proc print data=parent_bc_missing;
-    title02 "Missing BC parent_bc_id link to BC bc_id";
-  run;  
-*/
-
   /* Unresolved SDTM BCs */
   proc sql;
     title02 "Missing SDTM Specialization bc_id link to BC bc_id";
-    /* create table sdtm_bc_missing as */
       select _excel_file_, _tab_, package_date, vlm_group_id, sdtm_variable, sd.bc_id
       from sdtm_merged sd
       where 
@@ -344,13 +335,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
       ;
   quit;
-
-/*
-  proc print data=sdtm_bc_missing;
-    title02 "Missing SDTM Specialization bc_id link to BC bc_id";
-  run;  
-*/
-
 
   /* Unresolved SDTM BCs/DECs */
   proc sql;
@@ -360,7 +344,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       from sdtm_merged
       where not missing(dec_id);
 
-   /*  create table sdtm_bc_dec_missing as */
       select sbdi._excel_file_, sbdi._tab_, sbdi.package_date, sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id 
       from sdtm_bc_dec sbd, sdtm_merged sbdi
       where 
@@ -369,12 +352,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
       ;
   quit;
-
-/*
-  proc print data=sdtm_bc_dec_missing;
-    title02 "Missing SDTM Specialization bc_id/dec_id link to BC bc_id/dec_id";
-  run;  
-*/
 
   /* Duplicate BC records */
   proc sql;
@@ -391,7 +368,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Duplicate SDTM records */
   proc sql;
     title02 "Duplicate SDTM Specialization records (package_date, vlm_group_id, sdtm_variable)";
-  /*  create table sdtm_bc_missing as*/
       select _excel_file_, _tab_, package_date, sdtmig_start_version,	sdtmig_end_version, vlm_group_id, sdtm_variable
       from sdtm_merged
       group by package_date, vlm_group_id, sdtm_variable

@@ -1,5 +1,5 @@
 {
    "NCIT": "http://purl.obolibrary.org/obo/NCIT_",
-   "cosmos": "https://www.cdisc.org/cosmos/1-0",
+   "cosmos_bc": "https://www.cdisc.org/cosmos/biomedical_concept_v1.0",
    "linkml": "https://w3id.org/linkml/"
 }

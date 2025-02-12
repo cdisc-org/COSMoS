@@ -62,3 +62,21 @@ libname data "&root/utilities/data";
   end;  
 %mend add2issues_sdtm;
 
+%macro add2issues_collection(condition, type, expected, actual, comment, extracode=, severity=WARNING);
+  if &condition then do;
+    severity="&severity";
+    issue_type = "&type";
+    expected_value=&expected;
+    actual_value=&actual;
+    comment=&comment;
+
+    putlog "WARN" "ING: &type " _excel_file_= _tab_= collection_group_id= collection_item=
+      %if &actual NE "" %then &actual.= ;
+      %if &expected NE "" %then &expected.= ;
+      comment;
+
+    &extracode;
+    output;
+  end;  
+%mend add2issues_collection;
+

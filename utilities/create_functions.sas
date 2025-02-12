@@ -52,6 +52,17 @@ proc fcmp outlib=macros.funcs.python;
     else return ("");
   endsub;
 
+  function get_term_preferred_term(codelist_conceptId $, codedValue_conceptId $) $;
+    length preferredTerm $200;
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
+    rc=hh.definedata("preferredTerm");
+    rc=hh.definekey("codelist_conceptId", "codedValue_conceptId");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(preferredTerm);
+    else return ("");
+  endsub;
+
   function get_codelist_submissionvalue(codelist_conceptId $) $;
     length codedValue_conceptId $20;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
@@ -240,6 +251,7 @@ data codelists;
   exp_codelist_SubmissionValue="PKUDUG";
   exp_term="C119365";
   codedValue_conceptId = get_term_code("C128686", "g/mL/ug");
+  codedValue_preferred = get_term_preferred_term("C128686", "C119365");
   codelist_SubmValue = get_codelist_submissionvalue("C128686");
   codelist_Extensible = get_codelist_extensible("C128686");
 

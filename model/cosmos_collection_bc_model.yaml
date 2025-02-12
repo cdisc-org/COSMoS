@@ -1,0 +1,346 @@
+id: https://www.cdisc.org/cosmos/collection_v1.0
+name: COSMoS-Biomedical-Concepts-Collection-Schema
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cosmos_collection: https://www.cdisc.org/cosmos/collection_v1.0
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+
+imports:
+  - linkml:types
+
+default_prefix: cosmos_collection
+default_range: string
+
+classes:
+
+  DataCollectionGroup:
+    tree_root: true
+    slots:
+      - packageDate
+      - packageType
+      - collectionSpecializationId
+      - shortName
+      - standard
+      - standardStartVersion
+      - standardEndVersion
+      - implementationOption
+      - scenario
+      - domain
+      - biomedicalConceptId
+      - sdtmDatasetSpecializationId
+      - items
+
+  DataCollectionItem:
+    slots:
+      - name
+      - variableName
+      - dataElementConceptId
+      - questionText
+      - prompt
+      - orderNumber
+      - mandatoryVariable
+      - dataType
+      - length
+      - significantDigits
+      - displayHidden
+      - codelist
+      - valueList
+      - listType
+      - prepopulatedValue
+      - sdtmTarget
+
+  ListValue:
+    slots:
+      - displayValue
+      - value
+    slot_usage:
+      displayValue:
+        description: CDISC submission value for the data collection item
+        required: true
+        aliases:
+          - value_display_list
+      value:
+        description: User-friendly display value for the data collection item
+        required: false
+        aliases:
+          - value_list
+
+  PrepopulatedValue:
+    slots:
+      - value
+      - conceptId
+    slot_usage:
+      value:
+        description: Submission value for pre-populated term in NCIt
+        required: true
+        aliases:
+          - prepopulated_term
+      conceptId:
+        description: C-code for pre-populated term in NCIt
+        required: false
+        aliases:
+          - prepopulated_code
+
+  CodeList:
+    slots:
+      - submissionValue
+      - conceptId
+      - href
+    slot_usage:
+      submissionValue:
+        required: true
+        description: CDISC submission value for the codelist
+        aliases:
+          - codelist_submission_value
+      conceptId:
+        description: C-code for codelist in NCIt
+        aliases:
+          - codelist
+      href:
+        description: Link to NCIt for the codelist
+        aliases:
+          - codelist_uri
+
+  SDTMTarget:
+    slots:
+      - sdtmAnnotation
+      - sdtmVariables
+      - sdtmTargetMapping
+
+slots:
+
+  packageDate:
+    description: Biomedical Concept package release date indicating when the BC package was published to production
+    range: date
+    required: true
+    aliases:
+      - package_date
+  packageType:
+    description: Package type for data collection specializations (collection)
+    range: PackageTypeEnum
+    required: true
+    aliases:
+      - package_type
+  collectionSpecializationId:
+    description: Identifier for data collection specialization group
+    identifier: true
+    range: string
+    required: true
+    aliases:
+      - collection_group_id
+  shortName:
+    description: Short name which provides a user friendly and intuitive name for the data collection group
+    range: string
+    required: true
+    aliases:
+      - short_name
+  standard:
+    description: Standard for the data collection specialization group
+    range: string
+    required: true
+    aliases:
+      - standard
+  standardStartVersion:
+    description: The earliest data collection IG version applicable to the collection specialization
+    range: string
+    required: true
+    aliases:
+      - standard_start_version
+  standardEndVersion:
+    description: The last data collection IG version that is applicable to the collection specialization
+    range: string
+    aliases:
+      - standard_end_version
+  implementationOption:
+    description: Implementation option for the data collection specialization group
+    range: implementationOptionEnum
+    aliases:
+      - implementation_option
+  scenario:
+    description: Scenario for the data collection specialization group
+    range: string
+    aliases:
+      - scenario
+  domain:
+    description: Domain for the data collection specialization group
+    range: string
+  biomedicalConceptId:
+    description: Biomedical Concept identifier foreign key
+    range: string
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    recommended: true
+    aliases:
+      - bc_id
+  sdtmDatasetSpecializationId:
+    description: Identifier for SDTM Dataset Specialization group
+    range: string
+    required: true
+    aliases:
+      - vlm_group_id
+  items:
+    description: Items included in the Data Collection specialization
+    range: DataCollectionItem
+    required: true
+    multivalued: true
+    inlined_as_list: true
+
+  name:
+    description: Item name as it appears on the collection instrument
+    identifier: true
+    range: string
+    aliases:
+      - data_collection_item
+  variableName:
+    description: Variable name of the collection item for which data are being collected.
+    range: string
+    required: true
+    aliases:
+      - variable_name
+  dataElementConceptId:
+    description: Biomedical Concept Data Element Concept identifier foreign key
+    range: string
+    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    aliases:
+      - dec_id
+  questionText:
+    description: Item question text
+    range: string
+    aliases:
+      - question_text
+  prompt:
+    description: Item prompt
+    range: string
+    aliases:
+      - prompt
+  orderNumber:
+    description: Item order number
+    range: integer
+    required: true
+    aliases:
+      - order_number
+  mandatoryVariable:
+    description: Indicator that the item must be present within the data collection group
+    range: boolean
+    required: true
+    aliases:
+      - mandatory_variable
+  dataType:
+    description: Item data type
+    range: CollectionItemDataTypeEnum
+    required: true
+    aliases:
+      - data_type
+  length:
+    description: Item length
+    range: integer
+    minimum_value: 1
+    aliases:
+      - length
+  significantDigits:
+    description: Item significant_digits
+    range: integer
+    aliases:
+      - significant_digits
+  displayHidden:
+    description: Indicator that the item is hidden from the user
+    range: boolean
+    aliases:
+      - display_hidden
+  codelist:
+    description: Codelist
+    range: CodeList
+    inlined: true
+  valueList:
+    description: A set of values for a data collection item
+    range: ListValue
+    multivalued: true
+    inlined_as_list: true
+  listType:
+    description: Type of list used for set-up of the data collection instrument
+    range: ListTypeEnum
+    aliases:
+      - list_type
+  prepopulatedValue:
+    description: Pre-populated value for the data collection instrument
+    range: PrepopulatedValue
+
+  conceptId:
+    description: C-code for codelist or term in NCIt
+    range: string
+    pattern: "^(C[0123456789]+)$"
+  href:
+    description: Link to NCIt for the codelist or term
+    range: uri
+  submissionValue:
+    description: CDISC submission value
+    required: true
+  displayValue:
+    description: User-friendly display value for the data collection item
+    range: string
+    required: true
+  value:
+    description: CDISC submission value for the data collection item
+    range: string
+
+  sdtmTarget:
+    description: SDTM target variables for data collection item variable
+    range: SDTMTarget
+  sdtmAnnotation:
+    description: Annotation of the SDTM target in the data collection instrument
+    range: string
+    recommended: true
+    aliases:
+      - sdtm_annotation
+  sdtmVariables:
+    description: SDTM target variable for data collection item variable
+    range: string
+    multivalued: true
+    inlined_as_list: true
+    required: true
+    aliases:
+      - sdtm_target_variable
+  sdtmTargetMapping:
+    description: Rule for mapping from data collection item to SDTM target variable.
+    range: string
+    aliases:
+      - sdtm_mapping
+
+enums:
+
+  PackageTypeEnum:
+    permissible_values:
+      collection:
+
+  implementationOptionEnum:
+    permissible_values:
+      Horizontal:
+      Vertical:
+
+  CollectionItemDataTypeEnum:
+    permissible_values:
+      decimal:
+        title: decimal
+      float:
+        title: float
+      integer:
+        title: integer
+      text:
+        title: text
+      date:
+        title: date
+      time:
+        title: time
+
+  ListTypeEnum:
+    permissible_values:
+      Radio:
+      Dropdown:
+      DropdownMultiSelect:
+      Checkbox:
+      Text:
+      Date:
+      Time:
+      DateTime:
+
+

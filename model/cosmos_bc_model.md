@@ -1,13 +1,13 @@
 ```mermaid
 erDiagram
 BiomedicalConcept {
+    date packageDate  
+    PackageTypeEnum packageType  
     string conceptId  
     string ncitCode  
     uri href  
-    date packageDate  
-    BiomedicalConceptPackageTypeEnum packageType  
-    stringList categories  
     string parentConceptId  
+    stringList categories  
     string shortName  
     stringList synonyms  
     BiomedicalConceptResultScaleEnumList resultScales  

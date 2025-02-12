@@ -1,4 +1,5 @@
-BASE <https://www.cdisc.org/cosmos/1-0/>
+# metamodel_version: 1.7.0
+BASE <https://www.cdisc.org/cosmos/sdtm_v1.0/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
@@ -42,89 +43,205 @@ linkml:Jsonpath xsd:string
 
 linkml:Sparqlpath xsd:string
 
-<https://www.cdisc.org/cosmos/1-0AssignedTerm> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0AssignedTerm_tes> (  <https://www.cdisc.org/cosmos/1-0conceptId> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0value> @linkml:String
+<AssignedTerm> CLOSED {
+    (  $<AssignedTerm_tes> (  <conceptId> @linkml:String ? ;
+          <value> @linkml:String
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0AssignedTerm> ] ?
+       rdf:type [ <AssignedTerm> ] ?
     )
 }
 
-<https://www.cdisc.org/cosmos/1-0CodeList> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0CodeList_tes> (  <https://www.cdisc.org/cosmos/1-0href> @linkml:Uri ? ;
-          <https://www.cdisc.org/cosmos/1-0submissionValue> @linkml:String
+<CodeList> CLOSED {
+    (  $<CodeList_tes> (  <href> @linkml:Uri ? ;
+          <submissionValue> @linkml:String
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0CodeList> ]
+       rdf:type [ <CodeList> ]
     )
 }
 
-<https://www.cdisc.org/cosmos/1-0CodeListTerm> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0CodeListTerm_tes> (  <https://www.cdisc.org/cosmos/1-0termId> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0termValue> @linkml:String
+<CodeListTerm> CLOSED {
+    (  $<CodeListTerm_tes> (  <termId> @linkml:String ;
+          <termValue> @linkml:String
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0CodeListTerm> ] ?
+       rdf:type [ <CodeListTerm> ] ?
     )
 }
 
-<https://www.cdisc.org/cosmos/1-0RelationShip> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0RelationShip_tes> (  <https://www.cdisc.org/cosmos/1-0subject> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0linkingPhrase> @<https://www.cdisc.org/cosmos/1-0LinkingPhraseEnum> ;
-          <https://www.cdisc.org/cosmos/1-0predicateTerm> @<https://www.cdisc.org/cosmos/1-0PredicateTermEnum> ;
-          <https://www.cdisc.org/cosmos/1-0object> @linkml:String
-       ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0RelationShip> ] ?
-    )
-}
-
-<https://www.cdisc.org/cosmos/1-0SDTMGroup> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0SDTMGroup_tes> (  <https://www.cdisc.org/cosmos/1-0packageDate> @linkml:Date ;
-          <https://www.cdisc.org/cosmos/1-0packageType> @<https://www.cdisc.org/cosmos/1-0SDTMDatasetSpecializationPackageTypeEnum>
+<RelationShip> CLOSED {
+    (  $<RelationShip_tes> (  <subject> @linkml:String ;
+          <linkingPhrase> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20seriousness%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#assesses%20the%20severity%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#associates%20the%20tumor%20identified%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#decodes%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20actions%20taken>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20relationship%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#describes%20the%20outcome%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20describes%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#further%20specifies%20the%20anatomical%20location%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20tumor%20assessments%20used%20in%20overall%20response%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%20values%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#groups%2C%20within%20an%20individual%20subject%2C%20values%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20a%20pattern%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20overall%20response%20supported%20by%20tumor%20assessments%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20image%20from%20the%20procedure%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20tumor%20found%20by%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20severity%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20previous%20irradiation%20status%20of%20the%20tumor%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20progression%20status%20of%20the%20previous%20irradiated%20tumor%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20class%20code%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20class%20name%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20decoded%20by%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administered%20amount%20of%20the%20treatment%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administration%20anatomical%20location%20for%20the%20treatment%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20aspect%20of%20the%20event%20used%20to%20define%20the%20date%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20clinical%20significance%20interpretation%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary%20code%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20term%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20class%20code%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20class%20name%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20duration%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20epoch%20of%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20frequency%20of%20administration%20of%20the%20amount%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20medical%20condition%20that%20is%20the%20reason%20for%20the%20treatment%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20part%20of%20the%20body%20through%20which%20is%20administered%20the%20treatment%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20physical%20form%20of%20the%20product%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20subject%27s%20fasting%20status%20during%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20severity%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20reference%20used%20in%20the%20genomic%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20heritability%20of%20the%20genetic%20variant%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20a%20published%20reference%20for%20the%20genetic%20variant%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20copy%2C%20on%20one%20of%20two%20homologous%20chromosones%2C%20of%20the%20genetic%20variant%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20genetic%20sequence%20of%20the%20genetic%20entity%20represented%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20chromosome%20that%20is%20the%20position%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20clinical%20trial%20or%20treatment%20setting%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20intended%20disease%20outcome%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20of%20secondary%20analysis%20of%20results%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20numeric%20location%2C%20within%20a%20chromosone%2C%20genetic%20entity%2C%20or%20genetic%20sub-region%2C%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20symbol%20for%20the%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20type%20of%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20genetic%20sub-location%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20grouping%20of%20values%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20textual%20description%20of%20the%20intended%20dose%20regimen%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20stopping%20administration%20of> ]
           ;
-          <https://www.cdisc.org/cosmos/1-0domain> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0shortName> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0source> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0sdtmigStartVersion> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0sdtmigEndVersion> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0biomedicalConceptId> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0variables> @<https://www.cdisc.org/cosmos/1-0SDTMVariable> +
+          <predicateTerm> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DESCRIBES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#GROUPS_BY>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_OBSERVATION>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_PRODUCT_IN>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IDENTIFIES_TUMOR_IN>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#INDICATES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ATTRIBUTE_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DECODED_BY>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DERIVED_FROM>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_EPOCH_OF>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_GROUPED_BY>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_INDICATOR_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_ORIGINAL_TEXT_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_POSITION_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REASON_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_RESULT_OF>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SPECIMEN_TESTED_IN>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_SUBJECT_STATE_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_TIMING_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_UNIT_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMED>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ] ;
+          <object> @linkml:String
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMGroup> ]
+       rdf:type [ <RelationShip> ] ?
     )
 }
 
-<https://www.cdisc.org/cosmos/1-0SDTMVariable> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0SDTMVariable_tes> (  <https://www.cdisc.org/cosmos/1-0dataElementConceptId> @linkml:String
-          ? ;
-          <https://www.cdisc.org/cosmos/1-0isNonStandard> @linkml:Boolean ? ;
-          <https://www.cdisc.org/cosmos/1-0codelist> @<https://www.cdisc.org/cosmos/1-0CodeList> ? ;
-          <https://www.cdisc.org/cosmos/1-0subsetCodelist> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0valueList> @linkml:String * ;
-          <https://www.cdisc.org/cosmos/1-0assignedTerm> @<https://www.cdisc.org/cosmos/1-0AssignedTerm> ? ;
-          <https://www.cdisc.org/cosmos/1-0role> @<https://www.cdisc.org/cosmos/1-0RoleEnum> ? ;
-          <https://www.cdisc.org/cosmos/1-0relationship> @<https://www.cdisc.org/cosmos/1-0RelationShip> ? ;
-          <https://www.cdisc.org/cosmos/1-0dataType> @<https://www.cdisc.org/cosmos/1-0SDTMVariableDataTypeEnum> ? ;
-          <https://www.cdisc.org/cosmos/1-0length> @linkml:Integer ? ;
-          <https://www.cdisc.org/cosmos/1-0format> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/1-0significantDigits> @linkml:Integer ? ;
-          <https://www.cdisc.org/cosmos/1-0mandatoryVariable> @linkml:Boolean ? ;
-          <https://www.cdisc.org/cosmos/1-0mandatoryValue> @linkml:Boolean ? ;
-          <https://www.cdisc.org/cosmos/1-0originType> @<https://www.cdisc.org/cosmos/1-0OriginTypeEnum> ? ;
-          <https://www.cdisc.org/cosmos/1-0originSource> @<https://www.cdisc.org/cosmos/1-0OriginSourceEnum> ? ;
-          <https://www.cdisc.org/cosmos/1-0comparator> @<https://www.cdisc.org/cosmos/1-0ComparatorEnum> ? ;
-          <https://www.cdisc.org/cosmos/1-0vlmTarget> @linkml:Boolean ?
+<SDTMGroup> CLOSED {
+    (  $<SDTMGroup_tes> (  <packageDate> @linkml:Date ;
+          <packageType> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/PackageTypeEnum#sdtm> ] ;
+          <domain> @linkml:String ;
+          <shortName> @linkml:String ;
+          <source> @linkml:String ;
+          <sdtmigStartVersion> @linkml:String ;
+          <sdtmigEndVersion> @linkml:String ? ;
+          <biomedicalConceptId> @linkml:String ? ;
+          <variables> @<SDTMVariable> +
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0SDTMVariable> ]
+       rdf:type [ <SDTMGroup> ]
     )
 }
 
-<https://www.cdisc.org/cosmos/1-0SubsetCodeList> CLOSED {
-    (  $<https://www.cdisc.org/cosmos/1-0SubsetCodeList_tes> (  <https://www.cdisc.org/cosmos/1-0parentCodelist> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0subsetShortName> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0subsetLabel> @linkml:String ;
-          <https://www.cdisc.org/cosmos/1-0codelistTerm> @<https://www.cdisc.org/cosmos/1-0CodeListTerm> +
+<SDTMVariable> CLOSED {
+    (  $<SDTMVariable_tes> (  <dataElementConceptId> @linkml:String ? ;
+          <isNonStandard> @linkml:Boolean ? ;
+          <codelist> @<CodeList> ? ;
+          <subsetCodelist> @linkml:String ? ;
+          <valueList> @linkml:String * ;
+          <assignedTerm> @<AssignedTerm> ? ;
+          <role> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Identifier>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Qualifier> <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Timing>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/RoleEnum#Topic> ] ? ;
+          <relationship> @<RelationShip> ? ;
+          <dataType> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#datetime>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#durationDatetime>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#float>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#integer>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/SDTMVariableDataTypeEnum#text> ] ? ;
+          <length> @linkml:Integer ? ;
+          <format> @linkml:String ? ;
+          <significantDigits> @linkml:Integer ? ;
+          <mandatoryVariable> @linkml:Boolean ? ;
+          <mandatoryValue> @linkml:Boolean ? ;
+          <originType> [ <http://purl.obolibrary.org/obo/NCIT_C170547> <http://purl.obolibrary.org/obo/NCIT_C170548>
+             <http://purl.obolibrary.org/obo/NCIT_C170549> <http://purl.obolibrary.org/obo/NCIT_C170550>
+             <http://purl.obolibrary.org/obo/NCIT_C170551> ] ? ;
+          <originSource> [ <http://purl.obolibrary.org/obo/NCIT_C25936> <http://purl.obolibrary.org/obo/NCIT_C70793>
+             <http://purl.obolibrary.org/obo/NCIT_C41189> <http://purl.obolibrary.org/obo/NCIT_C68608> ] ? ;
+          <comparator> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#EQ>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/ComparatorEnum#IN> ] ? ;
+          <vlmTarget> @linkml:Boolean ?
        ) ;
-       rdf:type [ <https://www.cdisc.org/cosmos/1-0SubsetCodeList> ] ?
+       rdf:type [ <SDTMVariable> ]
     )
 }
 
+<SubsetCodeList> CLOSED {
+    (  $<SubsetCodeList_tes> (  <parentCodelist> @linkml:String ;
+          <subsetShortName> @linkml:String ;
+          <subsetLabel> @linkml:String ;
+          <codelistTerm> @<CodeListTerm> +
+       ) ;
+       rdf:type [ <SubsetCodeList> ] ?
+    )
+}
 

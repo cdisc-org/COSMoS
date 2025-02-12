@@ -1,4 +1,4 @@
-id: https://www.cdisc.org/cosmos/1-0
+id: https://www.cdisc.org/cosmos/biomedical_concept_v1.0
 name: COSMoS-Biomedical-Concepts-Schema
 
 imports:
@@ -6,11 +6,10 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  cosmos: https://www.cdisc.org/cosmos/1-0
+  cosmos_bc: https://www.cdisc.org/cosmos/biomedical_concept_v1.0
   NCIT: http://purl.obolibrary.org/obo/NCIT_
 
-default_prefix: cosmos
-
+default_prefix: cosmos_bc
 default_range: string
 
 classes:
@@ -18,13 +17,13 @@ classes:
   BiomedicalConcept:
     tree_root: true
     slots:
+      - packageDate
+      - packageType
       - conceptId
       - ncitCode
       - href
-      - packageDate
-      - packageType
-      - categories
       - parentConceptId
+      - categories
       - shortName
       - synonyms
       - resultScales
@@ -65,75 +64,84 @@ slots:
   conceptId:
     description: An identifier that uniquely represents an entity
     identifier: true
-    required: true
     range: string
     pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    required: true
   ncitCode:
     description: NCIt code
     range: string
     pattern: "^(C[0123456789]+)$"
   href:
+    description: Link to NCIt for the Biomedical Concept
     range: uri
   packageDate:
-    range: date
     description: Biomedical Concept package release date indicating when the BC package was published to production
+    range: date
     required: true
   packageType:
-    range: BiomedicalConceptPackageTypeEnum
     description: Package type (bc for Biomedical Concepts)
+    range: PackageTypeEnum
     required: true
   categories:
-    multivalued: true
-    inlined_as_list: true
-    required: true
     description: Biomedical Concept category for the faciliation of API search and extract
+    range: string
+    required: true
+    multivalued: true
+    inlined_as_list: true
   parentConceptId:
-    range: string
     description: C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt
-  shortName:
-    required: true
-    description: NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
-  synonyms:
-    multivalued: true
-    inlined_as_list: true
     range: string
-    description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
-  resultScales:
-    multivalued: true
-    range: BiomedicalConceptResultScaleEnum
-    description: Scale of measurement for the Biomedical Concept result
-  definition:
+  shortName:
+    description: NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt
+    range: string
     required: true
-    description: NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
-  coding:
+  synonyms:
+    description: Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction
+    range: string
     multivalued: true
     inlined_as_list: true
-    range: Coding
-  system:
+  resultScales:
+    description: Scale of measurement for the Biomedical Concept result
+    range: BiomedicalConceptResultScaleEnum
+    multivalued: true
+  definition:
+    description: NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt
+    range: string
     required: true
+  coding:
+    description: Coding for the Biomedical Concept
+    range: Coding
+    multivalued: true
+    inlined_as_list: true
+  system:
     description: Identifies the code system for the synonym concept. The URL of the code system should be used if it exists
+    range: string
+    required: true
   systemName:
     description: Human-readable name for the code system
+    range: string
   code:
-    required: true
     description: Synonym concept for the Biomedical Concept as defined in a code system
+    range: string
+    required: true
   dataElementConcepts:
+    description: Data Element Concept
+    range: DataElementConcept
     multivalued: true
     inlined_as_list: true
-    range: DataElementConcept
-    description: Data Element Concept
   dataType:
+    description: Data Type for the Data Element Concept
     range: DataElementConceptDataTypeEnum
     required: true
-    description: Data Type for the Data Element Concept
   exampleSet:
     description: Example values for the Data Element Concept
+    range: string
     multivalued: true
     inlined_as_list: true
 
 enums:
 
-  BiomedicalConceptPackageTypeEnum:
+  PackageTypeEnum:
     permissible_values:
       bc:
 

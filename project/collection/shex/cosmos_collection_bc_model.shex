@@ -1,0 +1,141 @@
+# metamodel_version: 1.7.0
+BASE <https://www.cdisc.org/cosmos/collection_v1.0/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<https://www.cdisc.org/cosmos/collection_v1.0CodeList> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0CodeList_tes> (  <https://www.cdisc.org/cosmos/collection_v1.0submissionValue>
+          @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0conceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0href> @linkml:Uri ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0CodeList> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionGroup> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionGroup_tes> ( 
+          <https://www.cdisc.org/cosmos/collection_v1.0packageDate> @linkml:Date ;
+          <https://www.cdisc.org/cosmos/collection_v1.0packageType> [
+             <https://www.cdisc.org/cosmos/collection_v1.0PackageTypeEnum#collection> ] ;
+          <https://www.cdisc.org/cosmos/collection_v1.0shortName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0standard> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0standardStartVersion> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0standardEndVersion> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0implementationOption> [
+             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Horizontal>
+             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Vertical> ] ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0scenario> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0domain> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0biomedicalConceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmDatasetSpecializationId> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0items> @<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem> +
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0DataCollectionGroup> ]
+    )
+}
+
+<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem_tes> ( 
+          <https://www.cdisc.org/cosmos/collection_v1.0variableName> @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0dataElementConceptId> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0questionText> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0prompt> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0orderNumber> @linkml:Integer ;
+          <https://www.cdisc.org/cosmos/collection_v1.0mandatoryVariable> @linkml:Boolean ;
+          <https://www.cdisc.org/cosmos/collection_v1.0dataType> [
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#decimal>
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#float>
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#integer>
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#text>
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#date>
+             <https://www.cdisc.org/cosmos/collection_v1.0CollectionItemDataTypeEnum#time> ] ;
+          <https://www.cdisc.org/cosmos/collection_v1.0length> @linkml:Integer ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0significantDigits> @linkml:Integer ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0displayHidden> @linkml:Boolean ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0codelist> @<https://www.cdisc.org/cosmos/collection_v1.0CodeList> ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0valueList> @<https://www.cdisc.org/cosmos/collection_v1.0ListValue> * ;
+          <https://www.cdisc.org/cosmos/collection_v1.0listType> [ <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Radio>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Dropdown>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#DropdownMultiSelect>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Checkbox>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Text>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Date>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#Time>
+             <https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum#DateTime> ] ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0prepopulatedValue>
+          @<https://www.cdisc.org/cosmos/collection_v1.0PrepopulatedValue> ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmTarget> @<https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0DataCollectionItem> ]
+    )
+}
+
+<https://www.cdisc.org/cosmos/collection_v1.0ListValue> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0ListValue_tes> (  <https://www.cdisc.org/cosmos/collection_v1.0displayValue>
+          @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0value> @linkml:String ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0ListValue> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/collection_v1.0PrepopulatedValue> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0PrepopulatedValue_tes> (  <https://www.cdisc.org/cosmos/collection_v1.0value>
+          @linkml:String ;
+          <https://www.cdisc.org/cosmos/collection_v1.0conceptId> @linkml:String ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0PrepopulatedValue> ] ?
+    )
+}
+
+<https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> CLOSED {
+    (  $<https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget_tes> ( 
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation> @linkml:String ? ;
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmVariables> @linkml:String + ;
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmTargetMapping> @linkml:String ?
+       ) ;
+       rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> ] ?
+    )
+}
+

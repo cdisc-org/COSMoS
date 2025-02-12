@@ -1,0 +1,95 @@
+packageDate: "2025-04-01"
+packageType: collection
+collectionSpecializationId: TEMP_HORIZONTAL
+shortName: Vital Signs Temperature (Horizontal)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Horizontal
+domain: VS
+biomedicalConceptId: C174446
+sdtmDatasetSpecializationId: TEMP
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    prompt: Date of assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSDTC
+      sdtmVariables:
+        -  "VSDTC"
+  - name: TEMP
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    prompt: Temperature
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 4
+    significantDigits: 1
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSORRES when VSTESTCD = TEMP
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: TEMPU
+    variableName: VSORRESU
+    dataElementConceptId: C44276
+    prompt: Temperature Unit
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 2
+    displayHidden: false
+    codelist:
+      submissionValue: VSRESU
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+    valueList:
+      - displayValue: "Celsius"
+        value: "C"
+      - displayValue: "Fahrenheit"
+        value: "F"
+    listType: Radio
+    sdtmTarget:
+      sdtmAnnotation: VSORRESU when VSTESTCD = TEMP
+      sdtmVariables:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: TEMP_VSLOC
+    variableName: VSLOC
+    dataElementConceptId: C13717
+    prompt: Temperature location
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 11
+    displayHidden: false
+    codelist:
+      submissionValue: LOC
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+    valueList:
+      - displayValue: "Axilla"
+        value: "AXILLA"
+      - displayValue: "Ear"
+        value: "EAR"
+      - displayValue: "Forehead"
+        value: "FOREHEAD"
+      - displayValue: "Oral Cavity"
+        value: "ORAL CAVITY"
+      - displayValue: "Rectum"
+        value: "RECTUM"
+    listType: Radio
+    sdtmTarget:
+      sdtmAnnotation: VSLOC when VSTESTCD = TEMP
+      sdtmVariables:
+        -  "VSLOC"
