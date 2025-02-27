@@ -23,7 +23,7 @@
 --     * Slot: length Description: Item length
 --     * Slot: significantDigits Description: Item significant_digits
 --     * Slot: displayHidden Description: Indicator that the item is hidden from the user
---     * Slot: listType Description: Type of list used for set-up of the data collection instrument
+--     * Slot: selectionType Description: Type of selection used for set-up of the data collection instrument
 --     * Slot: DataCollectionGroup_collectionSpecializationId Description: Autocreated FK slot
 --     * Slot: codelist_id Description: Codelist
 --     * Slot: prepopulatedValue_id Description: Pre-populated value for the data collection instrument
@@ -62,7 +62,7 @@ CREATE TABLE "DataCollectionGroup" (
 	scenario TEXT, 
 	domain TEXT, 
 	"biomedicalConceptId" TEXT, 
-	"sdtmDatasetSpecializationId" TEXT NOT NULL, 
+	"sdtmDatasetSpecializationId" TEXT, 
 	PRIMARY KEY ("collectionSpecializationId")
 );
 CREATE TABLE "PrepopulatedValue" (
@@ -96,7 +96,7 @@ CREATE TABLE "DataCollectionItem" (
 	length INTEGER, 
 	"significantDigits" INTEGER, 
 	"displayHidden" BOOLEAN, 
-	"listType" VARCHAR(19), 
+	"selectionType" VARCHAR(8), 
 	"DataCollectionGroup_collectionSpecializationId" TEXT, 
 	codelist_id INTEGER, 
 	"prepopulatedValue_id" INTEGER, 

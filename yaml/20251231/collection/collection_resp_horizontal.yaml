@@ -1,0 +1,62 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: RESP_HORIZONTAL
+shortName: Respiratory Rate (Horizontal)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Horizontal
+domain: VS
+biomedicalConceptId: C49678
+sdtmDatasetSpecializationId: RESP
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSDTC
+      sdtmVariables:
+        -  "VSDTC"
+  - name: RESP
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    prompt: Respiratory Rate
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: integer
+    length: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSORRES when VSTESTCD = RESP
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: RESPU
+    variableName: VSORRESU
+    dataElementConceptId: C44276
+    prompt: Respiratory Rate Unit
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 10
+    displayHidden: false
+    codelist:
+      submissionValue: VSRESU
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+    prepopulatedValue:
+      value: "breaths/min"
+      conceptId: C49674
+    sdtmTarget:
+      sdtmAnnotation: VSORRESU when VSTESTCD = RESP
+      sdtmVariables:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"

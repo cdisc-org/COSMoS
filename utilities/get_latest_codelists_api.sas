@@ -17,3 +17,16 @@
   jsonout=&root/utilities/data/cdash_latest_codelist_package.json, 
   dsout=data.cdash_latest_codelist_package
 );
+
+%get_latest_codelist_package(
+  package=ddfct, 
+  jsonout=&root/utilities/data/ddf_latest_codelist_package.json, 
+  dsout=data.ddf_latest_codelist_package
+);
+
+%get_latest_codelist_package(
+  package=protocolct, 
+  jsonout=&root/utilities/data/protocol_latest_codelist_package.json, 
+  dsout=data.protocol_latest_codelist_package
+);
+  

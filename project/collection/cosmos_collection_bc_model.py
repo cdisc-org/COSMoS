@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-02-12T13:34:18
+# Generation date: 2025-02-25T11:59:20
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -99,13 +99,13 @@ class DataCollectionGroup(YAMLRoot):
     shortName: str = None
     standard: str = None
     standardStartVersion: str = None
-    sdtmDatasetSpecializationId: str = None
     items: Union[Dict[Union[str, DataCollectionItemName], Union[dict, "DataCollectionItem"]], List[Union[dict, "DataCollectionItem"]]] = empty_dict()
     standardEndVersion: Optional[str] = None
     implementationOption: Optional[Union[str, "ImplementationOptionEnum"]] = None
     scenario: Optional[str] = None
     domain: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
+    sdtmDatasetSpecializationId: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.collectionSpecializationId):
@@ -138,11 +138,6 @@ class DataCollectionGroup(YAMLRoot):
         if not isinstance(self.standardStartVersion, str):
             self.standardStartVersion = str(self.standardStartVersion)
 
-        if self._is_empty(self.sdtmDatasetSpecializationId):
-            self.MissingRequiredField("sdtmDatasetSpecializationId")
-        if not isinstance(self.sdtmDatasetSpecializationId, str):
-            self.sdtmDatasetSpecializationId = str(self.sdtmDatasetSpecializationId)
-
         if self._is_empty(self.items):
             self.MissingRequiredField("items")
         self._normalize_inlined_as_list(slot_name="items", slot_type=DataCollectionItem, key_name="name", keyed=True)
@@ -161,6 +156,9 @@ class DataCollectionGroup(YAMLRoot):
 
         if self.biomedicalConceptId is not None and not isinstance(self.biomedicalConceptId, str):
             self.biomedicalConceptId = str(self.biomedicalConceptId)
+
+        if self.sdtmDatasetSpecializationId is not None and not isinstance(self.sdtmDatasetSpecializationId, str):
+            self.sdtmDatasetSpecializationId = str(self.sdtmDatasetSpecializationId)
 
         super().__post_init__(**kwargs)
 
@@ -187,7 +185,7 @@ class DataCollectionItem(YAMLRoot):
     displayHidden: Optional[Union[bool, Bool]] = None
     codelist: Optional[Union[dict, "CodeList"]] = None
     valueList: Optional[Union[Union[dict, "ListValue"], List[Union[dict, "ListValue"]]]] = empty_list()
-    listType: Optional[Union[str, "ListTypeEnum"]] = None
+    selectionType: Optional[Union[str, "SelectionTypeEnum"]] = None
     prepopulatedValue: Optional[Union[dict, "PrepopulatedValue"]] = None
     sdtmTarget: Optional[Union[dict, "SDTMTarget"]] = None
 
@@ -242,8 +240,8 @@ class DataCollectionItem(YAMLRoot):
             self.valueList = [self.valueList] if self.valueList is not None else []
         self.valueList = [v if isinstance(v, ListValue) else ListValue(**as_dict(v)) for v in self.valueList]
 
-        if self.listType is not None and not isinstance(self.listType, ListTypeEnum):
-            self.listType = ListTypeEnum(self.listType)
+        if self.selectionType is not None and not isinstance(self.selectionType, SelectionTypeEnum):
+            self.selectionType = SelectionTypeEnum(self.selectionType)
 
         if self.prepopulatedValue is not None and not isinstance(self.prepopulatedValue, PrepopulatedValue):
             self.prepopulatedValue = PrepopulatedValue(**as_dict(self.prepopulatedValue))
@@ -390,19 +388,13 @@ class CollectionItemDataTypeEnum(EnumDefinitionImpl):
         name="CollectionItemDataTypeEnum",
     )
 
-class ListTypeEnum(EnumDefinitionImpl):
+class SelectionTypeEnum(EnumDefinitionImpl):
 
-    Radio = PermissibleValue(text="Radio")
-    Dropdown = PermissibleValue(text="Dropdown")
-    DropdownMultiSelect = PermissibleValue(text="DropdownMultiSelect")
-    Checkbox = PermissibleValue(text="Checkbox")
-    Text = PermissibleValue(text="Text")
-    Date = PermissibleValue(text="Date")
-    Time = PermissibleValue(text="Time")
-    DateTime = PermissibleValue(text="DateTime")
+    Multiple = PermissibleValue(text="Multiple")
+    Single = PermissibleValue(text="Single")
 
     _defn = EnumDefinition(
-        name="ListTypeEnum",
+        name="SelectionTypeEnum",
     )
 
 # Slots
@@ -444,7 +436,7 @@ slots.biomedicalConceptId = Slot(uri=COSMOS_COLLECTION.biomedicalConceptId, name
                    pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
 
 slots.sdtmDatasetSpecializationId = Slot(uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, name="sdtmDatasetSpecializationId", curie=COSMOS_COLLECTION.curie('sdtmDatasetSpecializationId'),
-                   model_uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, domain=None, range=str)
+                   model_uri=COSMOS_COLLECTION.sdtmDatasetSpecializationId, domain=None, range=Optional[str])
 
 slots.items = Slot(uri=COSMOS_COLLECTION.items, name="items", curie=COSMOS_COLLECTION.curie('items'),
                    model_uri=COSMOS_COLLECTION.items, domain=None, range=Union[Dict[Union[str, DataCollectionItemName], Union[dict, DataCollectionItem]], List[Union[dict, DataCollectionItem]]])
@@ -489,8 +481,8 @@ slots.codelist = Slot(uri=COSMOS_COLLECTION.codelist, name="codelist", curie=COS
 slots.valueList = Slot(uri=COSMOS_COLLECTION.valueList, name="valueList", curie=COSMOS_COLLECTION.curie('valueList'),
                    model_uri=COSMOS_COLLECTION.valueList, domain=None, range=Optional[Union[Union[dict, ListValue], List[Union[dict, ListValue]]]])
 
-slots.listType = Slot(uri=COSMOS_COLLECTION.listType, name="listType", curie=COSMOS_COLLECTION.curie('listType'),
-                   model_uri=COSMOS_COLLECTION.listType, domain=None, range=Optional[Union[str, "ListTypeEnum"]])
+slots.selectionType = Slot(uri=COSMOS_COLLECTION.selectionType, name="selectionType", curie=COSMOS_COLLECTION.curie('selectionType'),
+                   model_uri=COSMOS_COLLECTION.selectionType, domain=None, range=Optional[Union[str, "SelectionTypeEnum"]])
 
 slots.prepopulatedValue = Slot(uri=COSMOS_COLLECTION.prepopulatedValue, name="prepopulatedValue", curie=COSMOS_COLLECTION.curie('prepopulatedValue'),
                    model_uri=COSMOS_COLLECTION.prepopulatedValue, domain=None, range=Optional[Union[dict, PrepopulatedValue]])

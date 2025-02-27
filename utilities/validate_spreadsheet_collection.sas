@@ -217,7 +217,7 @@ title01 "&now";
 
 /* Package collections test - */
 
-%let excel_file=&root/curation/draft/collections_specialization_draft.xlsx;
+%let excel_file=&root/curation/draft/collection_specialization_vs_final_draft.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collect11_01); 
 
 /************************************************************************************************************************/

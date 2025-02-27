@@ -42,7 +42,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-400.3'>length:integer ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-385.3'>significantDigits:integer ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-370.3'>displayHidden:boolean ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-355.3'>listType:ListTypeEnum ?</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-355.3'>selectionType:SelectionTypeEnum ?</text>
 </g><g class='node' id='node2'><title>SDTMTarget</title>
 <polygon fill='white' points='-0.5,-165 -0.5,-253 170.5,-253 170.5,-165 -0.5,-165' stroke='black' style='fill:white;stroke:black;'/>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='85' y='-234.8'>SDTMTarget</text>
@@ -109,7 +109,7 @@
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-714.3'>scenario:string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-699.3'>domain:string ?</text>
 <text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-684.3'>biomedicalConceptId:string ?</text>
-<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-669.3'>sdtmDatasetSpecializationId:string</text>
+<text style='font-size:10px; font-family:Verdana;' text-anchor='middle' transform='translate(0,0)' x='287' y='-669.3'>sdtmDatasetSpecializationId:string ?</text>
 </g><g class='edge' id='edge5'><title>DataCollectionGroup-&gt;DataCollectionItem</title>
 <path d='M287,-645.934C287,-623.491 287,-600.096 287,-577.722' fill='none' stroke='black'/>
 <polygon fill='black' points='287,-646.122 291,-652.122 287,-658.122 283,-652.122 287,-646.122' stroke='black'/>

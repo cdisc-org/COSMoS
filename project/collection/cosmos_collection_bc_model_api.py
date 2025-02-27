@@ -42,7 +42,7 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
              displayHidden: Union[str, MatchExpression] = None,
              codelist: Union[str, MatchExpression] = None,
              valueList: Union[str, MatchExpression] = None,
-             listType: Union[str, MatchExpression] = None,
+             selectionType: Union[str, MatchExpression] = None,
              prepopulatedValue: Union[str, MatchExpression] = None,
              sdtmTarget: Union[str, MatchExpression] = None,
              
@@ -63,7 +63,7 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
         :param displayHidden: Indicator that the item is hidden from the user
         :param codelist: Codelist
         :param valueList: A set of values for a data collection item
-        :param listType: Type of list used for set-up of the data collection instrument
+        :param selectionType: Type of selection used for set-up of the data collection instrument
         :param prepopulatedValue: Pre-populated value for the data collection instrument
         :param sdtmTarget: SDTM target variables for data collection item variable
         
@@ -97,7 +97,7 @@ class COSMoS-Biomedical-Concepts-Collection-SchemaAPI:
                                                  
                                                  valueList=valueList,
                                                  
-                                                 listType=listType,
+                                                 selectionType=selectionType,
                                                  
                                                  prepopulatedValue=prepopulatedValue,
                                                  

@@ -95,7 +95,10 @@
                 },
                 "sdtmDatasetSpecializationId": {
                     "description": "Identifier for SDTM Dataset Specialization group",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "shortName": {
                     "description": "Short name which provides a user friendly and intuitive name for the data collection group",
@@ -124,7 +127,6 @@
                 "shortName",
                 "standard",
                 "standardStartVersion",
-                "sdtmDatasetSpecializationId",
                 "items"
             ],
             "title": "DataCollectionGroup",
@@ -171,10 +173,6 @@
                         "integer",
                         "null"
                     ]
-                },
-                "listType": {
-                    "$ref": "#/$defs/ListTypeEnum",
-                    "description": "Type of list used for set-up of the data collection instrument"
                 },
                 "mandatoryVariable": {
                     "description": "Indicator that the item must be present within the data collection group",
@@ -227,6 +225,10 @@
                     ],
                     "description": "SDTM target variables for data collection item variable"
                 },
+                "selectionType": {
+                    "$ref": "#/$defs/SelectionTypeEnum",
+                    "description": "Type of selection used for set-up of the data collection instrument"
+                },
                 "significantDigits": {
                     "description": "Item significant_digits",
                     "type": [
@@ -266,21 +268,6 @@
                 "Vertical"
             ],
             "title": "ImplementationOptionEnum",
-            "type": "string"
-        },
-        "ListTypeEnum": {
-            "description": "",
-            "enum": [
-                "Radio",
-                "Dropdown",
-                "DropdownMultiSelect",
-                "Checkbox",
-                "Text",
-                "Date",
-                "Time",
-                "DateTime"
-            ],
-            "title": "ListTypeEnum",
             "type": "string"
         },
         "ListValue": {
@@ -367,6 +354,15 @@
             ],
             "title": "SDTMTarget",
             "type": "object"
+        },
+        "SelectionTypeEnum": {
+            "description": "",
+            "enum": [
+                "Multiple",
+                "Single"
+            ],
+            "title": "SelectionTypeEnum",
+            "type": "string"
         }
     },
     "$id": "https://www.cdisc.org/cosmos/collection_v1.0",
@@ -423,7 +419,10 @@
         },
         "sdtmDatasetSpecializationId": {
             "description": "Identifier for SDTM Dataset Specialization group",
-            "type": "string"
+            "type": [
+                "string",
+                "null"
+            ]
         },
         "shortName": {
             "description": "Short name which provides a user friendly and intuitive name for the data collection group",
@@ -452,7 +451,6 @@
         "shortName",
         "standard",
         "standardStartVersion",
-        "sdtmDatasetSpecializationId",
         "items"
     ],
     "title": "COSMoS-Biomedical-Concepts-Collection-Schema",

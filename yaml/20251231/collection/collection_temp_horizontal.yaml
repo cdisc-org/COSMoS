@@ -1,7 +1,7 @@
-packageDate: "2025-04-01"
+packageDate: "2025-12-31"
 packageType: collection
 collectionSpecializationId: TEMP_HORIZONTAL
-shortName: Vital Signs Temperature (Horizontal)
+shortName: Temperature (Horizontal)
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
@@ -13,7 +13,7 @@ items:
   - name: VSDAT
     variableName: VSDAT
     dataElementConceptId: C82515
-    prompt: Date of assessment
+    prompt: Date of Assessment
     orderNumber: 1
     mandatoryVariable: false
     dataType: date
@@ -57,7 +57,7 @@ items:
         value: "C"
       - displayValue: "Fahrenheit"
         value: "F"
-    listType: Radio
+    selectionType: Single
     sdtmTarget:
       sdtmAnnotation: VSORRESU when VSTESTCD = TEMP
       sdtmVariables:
@@ -67,7 +67,7 @@ items:
   - name: TEMP_VSLOC
     variableName: VSLOC
     dataElementConceptId: C13717
-    prompt: Temperature location
+    prompt: Anatomical Location
     orderNumber: 4
     mandatoryVariable: false
     dataType: text
@@ -88,7 +88,7 @@ items:
         value: "ORAL CAVITY"
       - displayValue: "Rectum"
         value: "RECTUM"
-    listType: Radio
+    selectionType: Single
     sdtmTarget:
       sdtmAnnotation: VSLOC when VSTESTCD = TEMP
       sdtmVariables:

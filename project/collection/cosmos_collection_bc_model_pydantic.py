@@ -94,15 +94,9 @@ class CollectionItemDataTypeEnum(str, Enum):
     time = "time"
 
 
-class ListTypeEnum(str, Enum):
-    Radio = "Radio"
-    Dropdown = "Dropdown"
-    DropdownMultiSelect = "DropdownMultiSelect"
-    Checkbox = "Checkbox"
-    Text = "Text"
-    Date = "Date"
-    Time = "Time"
-    DateTime = "DateTime"
+class SelectionTypeEnum(str, Enum):
+    Multiple = "Multiple"
+    Single = "Single"
 
 
 
@@ -142,7 +136,7 @@ class DataCollectionGroup(ConfiguredBaseModel):
          'aliases': ['bc_id'],
          'domain_of': ['DataCollectionGroup'],
          'recommended': True} })
-    sdtmDatasetSpecializationId: str = Field(default=..., description="""Identifier for SDTM Dataset Specialization group""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmDatasetSpecializationId',
+    sdtmDatasetSpecializationId: Optional[str] = Field(default=None, description="""Identifier for SDTM Dataset Specialization group""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmDatasetSpecializationId',
          'aliases': ['vlm_group_id'],
          'domain_of': ['DataCollectionGroup']} })
     items: List[DataCollectionItem] = Field(default=..., description="""Items included in the Data Collection specialization""", json_schema_extra = { "linkml_meta": {'alias': 'items', 'domain_of': ['DataCollectionGroup']} })
@@ -194,8 +188,8 @@ class DataCollectionItem(ConfiguredBaseModel):
          'domain_of': ['DataCollectionItem']} })
     codelist: Optional[CodeList] = Field(default=None, description="""Codelist""", json_schema_extra = { "linkml_meta": {'alias': 'codelist', 'domain_of': ['DataCollectionItem']} })
     valueList: Optional[List[ListValue]] = Field(default=None, description="""A set of values for a data collection item""", json_schema_extra = { "linkml_meta": {'alias': 'valueList', 'domain_of': ['DataCollectionItem']} })
-    listType: Optional[ListTypeEnum] = Field(default=None, description="""Type of list used for set-up of the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'listType',
-         'aliases': ['list_type'],
+    selectionType: Optional[SelectionTypeEnum] = Field(default=None, description="""Type of selection used for set-up of the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'selectionType',
+         'aliases': ['selection_type'],
          'domain_of': ['DataCollectionItem']} })
     prepopulatedValue: Optional[PrepopulatedValue] = Field(default=None, description="""Pre-populated value for the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'prepopulatedValue', 'domain_of': ['DataCollectionItem']} })
     sdtmTarget: Optional[SDTMTarget] = Field(default=None, description="""SDTM target variables for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTarget', 'domain_of': ['DataCollectionItem']} })

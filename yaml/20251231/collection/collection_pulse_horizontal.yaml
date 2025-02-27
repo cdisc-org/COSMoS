@@ -1,0 +1,141 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: PULSE_HORIZONTAL
+shortName: Pulse (Horizontal)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Horizontal
+domain: VS
+biomedicalConceptId: C49676
+sdtmDatasetSpecializationId: PULSE
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSDTC
+      sdtmVariables:
+        -  "VSDTC"
+  - name: PULSE_VSPOS
+    variableName: VSPOS
+    dataElementConceptId: C62164
+    prompt: Position
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: VSPOS when VSTESTCD = PULSE
+      sdtmVariables:
+        -  "VSPOS"
+  - name: PULSE_VSLOC
+    variableName: VSLOC
+    dataElementConceptId: C13717
+    prompt: Anatomical Location
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: LOC
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+    valueList:
+      - displayValue: "Brachial Artery"
+        value: "BRACHIAL ARTERY"
+      - displayValue: "Carotid Artery"
+        value: "CAROTID ARTERY"
+      - displayValue: "Dorsalis Pedis Artery"
+        value: "DORSALIS PEDIS ARTERY"
+      - displayValue: "Femoral Artery"
+        value: "FEMORAL ARTERY"
+      - displayValue: "Peripheral Artery"
+        value: "RADIAL ARTERY"
+      - displayValue: "Radial Artery"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: VSLOC when VSTESTCD = PULSE
+      sdtmVariables:
+        -  "VSLOC"
+  - name: PULSE_VSLAT
+    variableName: VSLAT
+    dataElementConceptId: C25185
+    prompt: Side
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 10
+    displayHidden: false
+    codelist:
+      submissionValue: LAT
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+    valueList:
+      - displayValue: "Left"
+        value: "LEFT"
+      - displayValue: "Right"
+        value: "RIGHT"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: VSLAT when VSTESTCD = PULSE
+      sdtmVariables:
+        -  "VSLAT"
+  - name: PULSE
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    prompt: Pulse Rate
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 4
+    significantDigits: 1
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: VSORRES when VSTESTCD = PULSE
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: PULSEU
+    variableName: VSORRESU
+    dataElementConceptId: C44276
+    prompt: Pulse Rate Unit
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 2
+    displayHidden: false
+    codelist:
+      submissionValue: VSRESU
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+    prepopulatedValue:
+      value: "beats/min"
+      conceptId: C49673
+    sdtmTarget:
+      sdtmAnnotation: VSORRESU when VSTESTCD = PULSE
+      sdtmVariables:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"

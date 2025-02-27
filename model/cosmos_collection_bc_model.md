@@ -26,7 +26,7 @@ DataCollectionItem {
     integer length  
     integer significantDigits  
     boolean displayHidden  
-    ListTypeEnum listType  
+    SelectionTypeEnum selectionType  
 }
 ListValue {
     string displayValue  

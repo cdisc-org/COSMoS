@@ -46,7 +46,7 @@ classes:
       - displayHidden
       - codelist
       - valueList
-      - listType
+      - selectionType
       - prepopulatedValue
       - sdtmTarget
 
@@ -175,7 +175,6 @@ slots:
   sdtmDatasetSpecializationId:
     description: Identifier for SDTM Dataset Specialization group
     range: string
-    required: true
     aliases:
       - vlm_group_id
   items:
@@ -256,11 +255,11 @@ slots:
     range: ListValue
     multivalued: true
     inlined_as_list: true
-  listType:
-    description: Type of list used for set-up of the data collection instrument
-    range: ListTypeEnum
+  selectionType:
+    description: Type of selection used for set-up of the data collection instrument
+    range: SelectionTypeEnum
     aliases:
-      - list_type
+      - selection_type
   prepopulatedValue:
     description: Pre-populated value for the data collection instrument
     range: PrepopulatedValue
@@ -332,15 +331,9 @@ enums:
       time:
         title: time
 
-  ListTypeEnum:
+  SelectionTypeEnum:
     permissible_values:
-      Radio:
-      Dropdown:
-      DropdownMultiSelect:
-      Checkbox:
-      Text:
-      Date:
-      Time:
-      DateTime:
+      Multiple:
+      Single:
 
 

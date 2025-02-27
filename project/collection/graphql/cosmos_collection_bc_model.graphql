@@ -15,21 +15,15 @@ enum ImplementationOptionEnum
     Vertical
   }
 
-enum ListTypeEnum
-  {
-    Radio
-    Dropdown
-    DropdownMultiSelect
-    Checkbox
-    Text
-    Date
-    Time
-    DateTime
-  }
-
 enum PackageTypeEnum
   {
     collection
+  }
+
+enum SelectionTypeEnum
+  {
+    Multiple
+    Single
   }
 
 type CodeList
@@ -52,7 +46,7 @@ type DataCollectionGroup
     scenario: String
     domain: String
     biomedicalConceptId: String
-    sdtmDatasetSpecializationId: String!
+    sdtmDatasetSpecializationId: String
     items: [DataCollectionItem]!
   }
 
@@ -71,7 +65,7 @@ type DataCollectionItem
     displayHidden: Boolean
     codelist: CodeList
     valueList: [ListValue]
-    listType: ListTypeEnum
+    selectionType: SelectionTypeEnum
     prepopulatedValue: PrepopulatedValue
     sdtmTarget: SDTMTarget
   }

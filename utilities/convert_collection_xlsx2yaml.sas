@@ -17,12 +17,12 @@ run;
 options mprint;
 
 %let release=11;
-%let package=20250401;
-%let folder=20250401_r11;
+%let package=20251231;
+%let folder=20251231;
 %let TargetFolder=&root/yaml/&folder/collection;
-%let OverrideDate=%str(2025-04-01);
+%let OverrideDate=%str(2025-12-31);
 
-%let ExcelFile=&root/curation/draft/collections_specialization_draft.xlsx;
+%let ExcelFile=&root/curation/draft/collection_specialization_vs_final_draft.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_VS), debug=0);
 
 ods listing close;

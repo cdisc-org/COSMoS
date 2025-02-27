@@ -65,6 +65,9 @@
       put "domain:" +1 domain;
       if not missing(bc_id) then put "biomedicalConceptId:" +1 bc_id;
       if not missing(vlm_group_id) then put "sdtmDatasetSpecializationId:" +1 vlm_group_id;
+      %add2issues_collection(missing(vlm_group_id), 
+                     %str(MISSING_VLM_GROUP_ID), 
+                     "", "", "", severity=NOTE);
     end;
     
     count+1;
@@ -130,6 +133,7 @@
         if not missing(value_display_list) then do;
           put +4 "valueList:";
           countwords=countw(value_display_list, ";");
+          countwords2=countw(value_list, ";");
           do i=1 to countwords;
             value=strip(scan(value_display_list, i, ";"));
             if not missing(value) then do;
@@ -140,9 +144,9 @@
             value=strip(scan(value_list, i, ";"));
 
             %add2issues_collection(missing(value), 
-                  %str(CODELIST_VALUE_LIST_TERM_MISSING), 
-                  "", "", %str(cats("value_display_list=", value_display_list, ", codelist=", codelist, ", codelist_submission_value=", 
-                  codelist_submission_value, ", value_list=", value_list)));
+                  %str(CODELIST_VALUE_LISTS_TERM_COUNTS), 
+                  "", "", %str(cats("value_display_list=", value_display_list, " (", countwords, ")", ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", value_list=", value_list, " (", countwords2, ")")));
 
             if not missing(value) then do;
 
@@ -161,7 +165,7 @@
           end;
         end;
 
-        if not missing(list_type) then put +4 "listType:" +1 list_type;
+        if not missing(selection_type) then put +4 "selectionType:" +1 selection_type;
 
         if not missing(prepopulated_term) then do;
           put +4 "prepopulatedValue:";
@@ -178,6 +182,7 @@
           if not missing(codelist) and not missing(prepopulated_code) then do                          
             prepopulated_term_cdisc_preferd = get_term_preferred_term(codelist, prepopulated_code);
             codelist_extensible = get_codelist_extensible(codelist);
+            value_code_cdisc = get_term_code(codelist, prepopulated_code);
             
             %add2issues_collection(missing(prepopulated_term_cdisc_preferd) and (not missing(prepopulated_term)), 
                   %str(CODELIST_TERM_CDISC_CCODE_MISSING), 
@@ -189,10 +194,10 @@
                   prepopulated_term_cdisc, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                   codelist_submission_value, ", prepopulated_term=", prepopulated_term)));
             
-            %add2issues_collection((prepopulated_term_cdisc_preferd ne prepopulated_term) and (not missing(prepopulated_term_cdisc_preferd)) and (not missing(prepopulated_term)), 
+            %add2issues_collection((value_code_cdisc ne prepopulated_term) and (not missing(value_code_cdisc)) and (not missing(prepopulated_term)), 
                   %str(CODELIST_TERM_CCODE_MISMATCH), 
                   prepopulated_term_cdisc_preferd, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
-                  codelist_submission_value, ", prepopulated_term=", prepopulated_term, ", prepopulated_term_cdisc_preferd=", prepopulated_term_cdisc_preferd)));
+                  codelist_submission_value, ", prepopulated_term=", prepopulated_term, ", value_code_cdisc=", value_code_cdisc)));
 
             %add2issues_collection(missing(prepopulated_term_cdisc) and (codelist_extensible = "No"), 
                   %str(CODELIST_TERM_CCODE_MISSING_NOTEXTENSIBLE), 

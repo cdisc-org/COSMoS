@@ -30,12 +30,20 @@
   filename response "&jsonout";
   filename map temp;
 
-  
-  %get_api_response(
-      baseurl=&base_url,
-      endpoint=&_latest_ctpackage,
-      response_fileref=response
-    );
+   %if %sysfunc(fileexist(&jsonout)) %then %do;
+    %put;
+    %put WAR%str(NING): [&sysmacroname] The file &jsonout already exist. ;
+    %put;
+  %end;    
+  %else %do;
+
+    %get_api_response(
+        baseurl=&base_url,
+        endpoint=&_latest_ctpackage,
+        response_fileref=response
+      );
+
+  %end;
 
   libname response json map=map automap=create fileref=response;
 

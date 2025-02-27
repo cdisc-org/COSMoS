@@ -387,33 +387,15 @@
       ]
     },
     {
-      "name": "ListTypeEnum",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0ListTypeEnum",
+      "name": "SelectionTypeEnum",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0SelectionTypeEnum",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "permissible_values": [
         {
-          "text": "Radio"
+          "text": "Multiple"
         },
         {
-          "text": "Dropdown"
-        },
-        {
-          "text": "DropdownMultiSelect"
-        },
-        {
-          "text": "Checkbox"
-        },
-        {
-          "text": "Text"
-        },
-        {
-          "text": "Date"
-        },
-        {
-          "text": "Time"
-        },
-        {
-          "text": "DateTime"
+          "text": "Single"
         }
       ]
     }
@@ -615,7 +597,6 @@
         "DataCollectionGroup"
       ],
       "range": "string",
-      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -850,19 +831,19 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "listType",
-      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0listType",
-      "description": "Type of list used for set-up of the data collection instrument",
+      "name": "selectionType",
+      "definition_uri": "https://www.cdisc.org/cosmos/collection_v1.0selectionType",
+      "description": "Type of selection used for set-up of the data collection instrument",
       "from_schema": "https://www.cdisc.org/cosmos/collection_v1.0",
       "aliases": [
-        "list_type"
+        "selection_type"
       ],
-      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0listType",
+      "slot_uri": "https://www.cdisc.org/cosmos/collection_v1.0selectionType",
       "owner": "DataCollectionItem",
       "domain_of": [
         "DataCollectionItem"
       ],
-      "range": "ListTypeEnum",
+      "range": "SelectionTypeEnum",
       "@type": "SlotDefinition"
     },
     {
@@ -1211,7 +1192,7 @@
         "displayHidden",
         "codelist",
         "valueList",
-        "listType",
+        "selectionType",
         "prepopulatedValue",
         "sdtmTarget"
       ],
@@ -1272,9 +1253,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-02-11T11:00:46",
-  "source_file_size": 8805,
-  "generation_date": "2025-02-12T13:34:14",
+  "source_file_date": "2025-02-25T11:58:42",
+  "source_file_size": 8715,
+  "generation_date": "2025-02-25T11:59:14",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

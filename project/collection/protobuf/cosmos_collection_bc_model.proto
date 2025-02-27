@@ -38,7 +38,7 @@ message DataCollectionItem
   boolean displayHidden = 0
   codeList codelist = 0
  repeated  listValue valueList = 0
-  listTypeEnum listType = 0
+  selectionTypeEnum selectionType = 0
   prepopulatedValue prepopulatedValue = 0
   sDTMTarget sdtmTarget = 0
  }
