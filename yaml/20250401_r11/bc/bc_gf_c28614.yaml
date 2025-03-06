@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C28614
+ncitCode: C28614
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28614
+parentConceptId: C21049
+categories:
+  - Genomic Findings
+  - Gene Expression Process
+  - Transcription Process
+shortName: Transcription Process
+definition: A Transcription Process is any cellular event or activity directly involved in the synthesis a nascent RNA transcript.

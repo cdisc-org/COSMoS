@@ -1,0 +1,54 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C135727
+ncitCode: C135727
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135727
+parentConceptId: C15189
+categories:
+  - Laboratory Tests
+  - Diagnostic Procedure
+  - Blood Cell Counts
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Tumor/Lesion Identification
+  - Tumor Results
+shortName: Liquid Biopsy
+synonyms:
+  - Plasma Biopsy
+resultScales:
+  - Nominal
+  - Ordinal
+definition: "Sampling and analysis of non-solid biological material (primarily blood), usually to determine if cancer cells or circulating-free cancer DNA is present."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+      - "Variant Detection"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

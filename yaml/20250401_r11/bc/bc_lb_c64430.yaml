@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64430
+ncitCode: C64430
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64430
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Protein or Enzyme Type Measurement
+definition: A term that refers to a chemistry test measuring a specific protein or enzyme in the peripheral blood or body fluid.

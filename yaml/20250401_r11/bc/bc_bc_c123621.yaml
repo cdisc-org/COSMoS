@@ -1,0 +1,40 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C123621
+ncitCode: C123621
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123621
+parentConceptId: C93645
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Recurrence
+shortName: Disease Recurrence Indicator
+synonyms:
+  - DRCRIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether disease recurrence occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Present"
+      - "Absent"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

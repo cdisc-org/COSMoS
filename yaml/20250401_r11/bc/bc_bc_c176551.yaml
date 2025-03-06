@@ -1,0 +1,42 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C176551
+ncitCode: C176551
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176551
+parentConceptId: C38155
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Disease Response
+  - Recurrence
+shortName: Locally Recurrent Disease
+synonyms:
+  - Local Recurrence
+resultScales:
+  - Ordinal
+definition: The return of a disease after a period of remission at the site in which it initially manifested or adjacent to it.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+      - "Absent Present"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

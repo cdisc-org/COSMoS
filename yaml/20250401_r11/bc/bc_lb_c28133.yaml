@@ -1,0 +1,15 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C28133
+ncitCode: C28133
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28133
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+shortName: Blood Cell Count
+synonyms:
+  - Complete Blood Count
+  - CBC
+  - Full Blood Count
+  - FBC
+definition: The determination of the number of red blood cells, white blood cells, and platelets in a biospecimen.

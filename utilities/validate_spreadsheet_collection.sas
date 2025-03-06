@@ -146,7 +146,6 @@ title01 "&now";
 
 
 /* Package 7 - */
-
 %let excel_file=&root/curation/BC_Package_R7_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm7_01, drop=%str(drop=length significant_digits format));
@@ -164,6 +163,7 @@ title01 "&now";
 
 %let excel_file=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format)); 
+
 
 /* Package 8 - */
 %let excel_file=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
@@ -193,6 +193,7 @@ title01 "&now";
 
 %let _debug=2;
 
+
 /* Package 10 - */
 %let release=10;
 %let excel_file=&root/curation/BC_Package_R10.xlsx;
@@ -215,14 +216,40 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm10_06, drop=%str(drop=length significant_digits format)); 
 
 
-/* Package collections test - */
+/* Package 11 - */
+%let release=11;
+%let excel_file=&root/curation/draft/BC_Package_R11_BC_Lindus Health.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Breast_Cancer)$, dsout=bc11_01, drop=%str(drop=change_history)); 
 
+%let excel_file=&root/curation/draft/BC_Package_R11_UR.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_UR)$, dsout=bc11_02, drop=%str(drop=History_of_Change)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_UR)$, dsout=sdtm11_01, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_LB_GF_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc11_03); 
+%ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc11_04, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm11_02, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm11_03, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_DM.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc11_05, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_DM)$, dsout=sdtm11_04, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_MK.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MK)$, dsout=bc11_06, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MK)$, dsout=sdtm11_05, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_VS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm11_06, drop=%str(drop=length significant_digits format)); 
+
+/* Package collections test - */
+%let release=xx;
 %let excel_file=&root/curation/draft/collection_specialization_vs_final_draft.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collect11_01); 
+%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_01); 
 
 /************************************************************************************************************************/
 
-data bc(drop=change_history i vname vvalue F1: F2:);
+data bc(drop=change_history F1: F2: i vname vvalue);
   length package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition 
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name 
@@ -378,7 +405,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved Collection BCs */
   proc sql;
     title02 "Missing Collection Specialization bc_id link to BC bc_id";
-    /* create table collection_bc_missing as */
       select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.bc_id
       from collection col
       where 
@@ -407,7 +433,6 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved SDTM vlm_group_id */
   proc sql;
     title02 "Missing Collection Specialization vlm_group_id link to SDTM vlm_group_id";
-    /* create table collection_bc_missing as */
       select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.vlm_group_id
       from collection col
       where 

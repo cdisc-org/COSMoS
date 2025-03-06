@@ -1,0 +1,59 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C94866
+ncitCode: C94866
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94866
+parentConceptId: C82554
+categories:
+  - Findings
+  - Clinical Test Result
+  - Renal Function Tests
+  - Urinary System Findings
+shortName: Blood Flow Rate
+synonyms:
+  - Blood Flow Rate
+  - BLDFLRT
+resultScales:
+  - Quantitative
+definition: The volume of blood per unit time passing through a specified location, such as a point in a blood vessel or an entire organ. Units are ml/sec.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "mL/s"
+      - "L/min"
+      - "mL/min"
+      - "L/h"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Kidney"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,49 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C181501
+ncitCode: C181501
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181501
+parentConceptId: C87802
+categories:
+  - Musculoskeletal Finding
+  - Physical Strength
+shortName: Muscle Endurance Measurement
+synonyms:
+  - ENDURM
+  - Muscle Endurance
+resultScales:
+  - Quantitative
+definition: A measurement of a muscle's ability to perform repetitive contractions against a force.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Seconds"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

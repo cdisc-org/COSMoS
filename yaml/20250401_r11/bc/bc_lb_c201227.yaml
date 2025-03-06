@@ -1,0 +1,47 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C201227
+ncitCode: C201227
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201227
+parentConceptId: C51946
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Erythrocyte Counts
+  - Blood Cell Count Ratio Measurements
+shortName: Microcyte to Erythrocyte Ratio Measurement
+synonyms:
+  - Microcyte/Erythrocyte
+  - MICRORBC
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of microcytes compared to erythrocytes present in a sample. The measurement may be expressed as a ratio or percentage.
+coding:
+  - code: 74761-8
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"

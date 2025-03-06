@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C75342
+ncitCode: C75342
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C75342
+parentConceptId: C74675
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Drug Class Measurements
+shortName: CNS Stimulant Drug Measurement
+definition: The determination of the amount of any drug that stimulates the central nervous system (CNS) present in a sample.

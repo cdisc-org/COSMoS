@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74954
+ncitCode: C74954
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74954
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+shortName: Liver Function Test
+resultScales:
+  - Quantitative
+definition: The quantitative measurement of liver enzymes in the blood, which is useful in assessing the functional state of a patient's liver. Liver function tests include the measurement of albumin, alanine transaminase, aspartate transaminase, alkaline phosphatase, bilirubin, and gamma glutamyl transferase.

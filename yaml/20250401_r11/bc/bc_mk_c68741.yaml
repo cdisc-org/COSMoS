@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C68741
+ncitCode: C68741
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68741
+categories:
+  - Musculoskeletal Finding
+  - "Z-Score"
+shortName: "Z-Score"
+definition: "A method for converting an individual score into a standard form. The z-score indicates how far and in what direction an item deviates from its distribution's mean, expressed in units of standard deviation. Calculation of a z-score requires knowledge about the population's standard deviation and mean."

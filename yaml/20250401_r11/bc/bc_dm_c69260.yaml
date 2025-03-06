@@ -1,0 +1,38 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C69260
+ncitCode: C69260
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C69260
+parentConceptId: C25150
+categories:
+  - Demographic Data
+  - Demographics
+  - Personal Attribute
+  - Age
+shortName: Subject Age
+synonyms:
+  - Age
+resultScales:
+  - Quantitative
+definition: The age of a person who is the subject in a study.
+dataElementConcepts:
+  - conceptId: C170981
+    ncitCode: C170981
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170981
+    shortName: Numeric Age for Data Tabulation
+    dataType: decimal
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: string
+    exampleSet:
+      - "Years"
+      - "Months"
+      - "Weeks"
+      - "Days"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

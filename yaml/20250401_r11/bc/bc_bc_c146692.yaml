@@ -1,0 +1,67 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C146692
+ncitCode: C146692
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C146692
+parentConceptId: C18302
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Genetic Variation Analysis
+  - Molecular Analysis
+  - Genetic Molecular Analysis
+  - Laboratory Procedures
+shortName: BRCA Mutation Analysis
+synonyms:
+  - BRCA Mutation Status
+  - BRCA Family Gene Mutation Analysis
+resultScales:
+  - Ordinal
+definition: A procedure to test for the presence of mutations in BRCA family genes.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Saliva"
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

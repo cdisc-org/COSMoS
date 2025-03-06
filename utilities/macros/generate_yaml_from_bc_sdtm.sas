@@ -40,13 +40,13 @@
 
   data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
-           codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc linking_phrase_low lookup_predicate $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 subset_value_list value_list $8192
+           codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc value_code_cdisc_up linking_phrase_low lookup_predicate $512 
+           codelist_extensible $3 lookup_term_exist 8 value value_up qvalue $1024 subset_value_list value_list $8192
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
     set work.&type._&package._mrgd;
 
-    call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc, lookup_term_exist, linking_phrase_low, lookup_predicate);
+    call missing(codelist_submission_value_cdisc, assigned_term_cdisc, value_code_cdisc, value_code_cdisc_up, lookup_term_exist, linking_phrase_low, lookup_predicate);
     
     outname=catt("&out_folder\sdtm_", lowcase(strip(vlm_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
@@ -126,11 +126,20 @@
               
               if not missing(codelist) then do
                 value_code_cdisc = get_term_code(codelist, value);
+                value_up=upcase(value);
+                value_code_cdisc_up = get_term_code(codelist, value_up);
+                
                 codelist_extensible = get_codelist_extensible(codelist);
                 %add2issues_sdtm(missing(value_code_cdisc) and (codelist_extensible = "No"), 
                       %str(CODELIST_VALUE_LIST_TERM_CDISC_MISSING), 
                       value_code_cdisc, "", %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                       codelist_submission_value, ", value_list=", value_list, ", value=", value)));
+                      
+                %add2issues_sdtm(value_code_cdisc ne value_code_cdisc_up and (not missing(value_code_cdisc_up)), 
+                      %str(CODELIST_VALUE_LIST_TERM_WRONG_CASE), 
+                      value_up, value, %str(cats("codelist=", codelist, ", codelist_submission_value=", 
+                      codelist_submission_value, ", value_list=", value_list, ", value=", value, ", value_code_cdisc=", value_code_cdisc, ", value_code_cdisc_up=", value_code_cdisc_up)));
+                      
               end;        
             end;
           end;
@@ -150,6 +159,8 @@
           
           if not missing(codelist) then do                          
             assigned_term_cdisc = get_term_code(codelist, assigned_value);
+            value_up = upcase(assigned_value);
+            value_code_cdisc_up = get_term_code(codelist, value_up);
             codelist_extensible = get_codelist_extensible(codelist);
             
             %add2issues_sdtm(missing(assigned_term_cdisc) and (not missing(assigned_term)), 
@@ -171,6 +182,11 @@
                   %str(CODELIST_TERM_CCODE_MISSING_NOTEXTENSIBLE), 
                   assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                   codelist_submission_value, ", assigned_value=", assigned_value)));
+
+            %add2issues_sdtm(assigned_term_cdisc ne value_code_cdisc_up and (not missing(value_code_cdisc_up)), 
+                  %str(CODELIST_ASSIGNED_TERM_WRONG_CASE), 
+                  value_up, value, %str(cats("codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_term=", assigned_term, ", assigned_term_cdisc=", assigned_term_cdisc, ", value_code_cdisc_up=", value_code_cdisc_up)));
             
           end;
 
@@ -233,11 +249,13 @@
         if not missing(origin_source) then put +4 "originSource:" +1 origin_source;
 
         /* xxTEST variables shoukd not be used in the whereclauses */
-        %add2issues_sdtm(length(sdtm_variable) >= 4 and substr(sdtm_variable, length(sdtm_variable)-3, 4) = "TEST" and (not missing(comparator)),
-              %str(XXTEST_IN_WHERECLAUSE), 
-              "", comparator, %str(cats("comparator=", comparator, ", assigned_value=", assigned_value, ", comparator will be set to missing")),
-              extracode=%str(comparator="") 
-              );
+        if length(sdtm_variable) >= 4 then do;
+          %add2issues_sdtm(substr(sdtm_variable, length(sdtm_variable)-3, 4) = "TEST" and (not missing(comparator)),
+                %str(XXTEST_IN_WHERECLAUSE), 
+                "", comparator, %str(cats("comparator=", comparator, ", assigned_value=", assigned_value, ", comparator will be set to missing")),
+                extracode=%str(comparator="") 
+                );
+        end;
         
         /* Variables should only be used in an EQ whereclause when they have an asssigned_value */
         %add2issues_sdtm((not missing(comparator)) and comparator = "EQ" and missing(assigned_value),

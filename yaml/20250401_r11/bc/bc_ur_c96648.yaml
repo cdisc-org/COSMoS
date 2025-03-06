@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C96648
+ncitCode: C96648
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96648
+categories:
+  - Findings
+  - Clinical Test Result
+shortName: Fat Measurement
+definition: The determination of the amount of fat present in a sample.

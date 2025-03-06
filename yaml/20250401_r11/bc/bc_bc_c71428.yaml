@@ -1,0 +1,67 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C71428
+ncitCode: C71428
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71428
+parentConceptId: C94299
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Receptor Status
+shortName: "Triple-Negative Breast Cancer Finding"
+synonyms:
+  - "ER-Negative PR-Negative ERBB2-Negative"
+  - "ER-negative PR-negative HER2/neu-negative"
+  - ER/PR/HER2 Negative
+  - ESR1/PGR/ERBB2 Negative Finding
+  - TNBC
+  - Triple Negative Breast Cancer Result
+resultScales:
+  - Ordinal
+definition: "Triple-negative breast cancer finding is a negative test result that occurs when the cells in the tumor of a breast cancer patient lack the receptors for both estrogen and progesterone and the human epidermal growth factor receptor 2."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Tumor tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Breast"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

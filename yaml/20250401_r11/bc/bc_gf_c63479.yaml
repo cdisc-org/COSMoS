@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C63479
+ncitCode: C63479
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C63479
+categories:
+  - Genomic Findings
+  - Gene Expression Analysis
+shortName: Gene Expression Analysis
+definition: Procedures that examine how genes are transcribed to produce functional products. These analyses can include the study of factors that influence gene transcription or the determination of the presence, absence or level of expression for one more genes.

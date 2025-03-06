@@ -1,0 +1,48 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C28234
+ncitCode: C28234
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28234
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Disease Response
+  - Disease Response Criteria
+  - Survival
+shortName: "Progression-free Survival"
+synonyms:
+  - PFS
+resultScales:
+  - Temporal
+definition: "The length of time during and after treatment in which a patient is living with a disease that does not get worse. Progression-free survival may be used in a clinical study or trial to help find out how well a new treatment works."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Days"
+      - "Weeks"
+      - "Months"
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

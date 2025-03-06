@@ -1,0 +1,68 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C15492
+ncitCode: C15492
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15492
+parentConceptId: C16150
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Endocrine Tests
+  - Hormone Measurements
+shortName: Estrogen Receptor Positive
+synonyms:
+  - ER Alpha Positive
+  - ER Positive
+  - "ER-Alpha Positive"
+  - ER +
+  - ERA Positive
+  - Positive Estrogen Receptor
+  - ERS1 Positive
+resultScales:
+  - Ordinal
+definition: An indication that estrogen receptor alpha expression has been detected in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Hormone Receptor"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Nuclear Receptor"

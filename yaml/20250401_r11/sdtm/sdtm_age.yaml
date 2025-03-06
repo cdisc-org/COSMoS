@@ -1,0 +1,54 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: AGE
+domain: DM
+shortName: Age
+source: DM-AGE
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C69260
+variables:
+  - name: AGE
+    dataElementConceptId: C170981
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 6
+    format: "3.2"
+    significantDigits: 2
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AGEU
+    dataElementConceptId: C50400
+    isNonStandard: false
+    codelist:
+      conceptId: C66781
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66781
+      submissionValue: AGEU
+    valueList:
+      - "DAYS"
+      - "HOURS"
+      - "MONTHS"
+      - "WEEKS"
+      - "YEARS"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: AGEU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: AGE
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: DMDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: true 
+    mandatoryValue: false

@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C35867
+ncitCode: C35867
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C35867
+categories:
+  - Histopathology Findings
+  - Microscopic Findings
+shortName: Morphologic Finding
+definition: A light microscopic finding that describes the cellular characteristics and architectural patterns of cell populations in a tissue sample.

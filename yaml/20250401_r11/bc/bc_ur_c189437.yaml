@@ -1,0 +1,62 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C189437
+ncitCode: C189437
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189437
+parentConceptId: C96648
+categories:
+  - Findings
+  - Clinical Test Result
+  - Fat Quantification
+  - Liver Findings
+  - Urinary System Findings
+shortName: Proton Density Fat Fraction
+synonyms:
+  - Fat Fraction by Proton Density
+  - PDFF
+  - Proton Density Fat Fraction
+resultScales:
+  - Quantitative
+definition: An estimated measurement of the fat in a targeted tissue through proton density assessments via magnetic resonance imaging.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "Percent"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Kidney"
+      - "Bladder"
+      - "Liver"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "MRI"

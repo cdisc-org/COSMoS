@@ -1,0 +1,66 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C181332
+ncitCode: C181332
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181332
+parentConceptId: C63331
+categories:
+  - Genomic Findings
+  - Molecular Analysis
+  - Microsatellite Instability Analysis
+shortName: Microsatellite Instability Length Assessment
+synonyms:
+  - MICRISTB
+  - Microsatellite Instability
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: An assessment of the variability in length of microsatellite sequences.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Detection"
+      - "Microsatallite Instability Overall Status"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C164528
+    ncitCode: C164528
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164528
+    shortName: Genetic Location
+    dataType: string
+  - conceptId: C164533
+    ncitCode: C164533
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164533
+    shortName: Genetic Subregion
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "DNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Capillary Electrophoresis"
+  - conceptId: C117039
+    ncitCode: C117039
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117039
+    shortName: Analysis Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

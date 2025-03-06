@@ -1,0 +1,9 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C16723
+ncitCode: C16723
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16723
+categories:
+  - Laboratory Tests
+shortName: Immunology Test
+definition: Laboratory test involving interaction of antigens with specific antibodies.

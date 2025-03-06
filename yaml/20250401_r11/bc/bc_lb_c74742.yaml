@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74742
+ncitCode: C74742
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74742
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Endocrine Tests
+shortName: Hormone Measurement
+definition: The determination of the amount of hormone present in a sample.

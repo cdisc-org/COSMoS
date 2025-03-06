@@ -1,0 +1,62 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C68748
+ncitCode: C68748
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68748
+parentConceptId: C16152
+categories:
+  - Oncology Standards
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Gene Products
+  - Genetic Variation
+  - Genetic Variation Analysis
+  - Cancer Biomarkers
+  - Breast Cancer TAUG
+shortName: HER2/Neu Positive
+synonyms:
+  - ERBB2 Positive
+  - "HER-2 Positive"
+  - HER2 Positive
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: A laboratory test result indicating the presence of HER2/Neu in a tissue sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

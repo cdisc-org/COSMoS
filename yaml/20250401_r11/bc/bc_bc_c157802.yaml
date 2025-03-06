@@ -1,0 +1,13 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C157802
+ncitCode: C157802
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C157802
+categories:
+  - Surgeries
+  - Procedures
+  - Breast Surgeries
+  - Therapeutic Procedures
+  - Breast Cancer TAUG
+shortName: Breast Surgery
+definition: A surgical procedure on the breast.

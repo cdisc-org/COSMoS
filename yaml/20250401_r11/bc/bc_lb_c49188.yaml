@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C49188
+ncitCode: C49188
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49188
+categories:
+  - Microbiology Tests
+shortName: Microbiology Test
+synonyms:
+  - Laboratory Testing
+  - Microbiology
+definition: A laboratory procedure to detect microorganisms in a sample.

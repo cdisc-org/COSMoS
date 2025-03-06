@@ -1,0 +1,53 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C191307
+ncitCode: C191307
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191307
+parentConceptId: C110937
+categories:
+  - Musculoskeletal Finding
+shortName: Beta Angle of the Hip
+synonyms:
+  - BETAANGL
+  - Beta Angle
+resultScales:
+  - Quantitative
+definition: A measurement of the angle formed by the cartilaginous roof to the vertical cortex of the ilium.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C68667
+    ncitCode: C68667
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68667
+    shortName: Degree Unit of Plane Angle
+    dataType: string
+    exampleSet:
+      - "Degree"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+    exampleSet:
+      - "Hip"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

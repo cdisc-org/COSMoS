@@ -1,0 +1,69 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C19635
+ncitCode: C19635
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19635
+parentConceptId: C146692
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Molecular Analysis
+  - Genetic Molecular Analysis
+  - Laboratory Procedures
+shortName: BRCA1 Gene Mutation
+synonyms:
+  - BRCA1
+  - BRCA1 Mutation
+  - Breast Cancer 1 Gene Mutation
+  - BROVCA1 Gene Mutation
+  - Mutation of the BRCA1 Gene
+resultScales:
+  - Ordinal
+definition: "A mutation that is typically a heritable, permanent change in the nucleotide sequence of the BRCA1 gene. Single nucleotide substitutions and small deletions or insertions (1-20 bases) account for the majority of mutations in the BRCA1 gene. Approximately 75% of these alterations result in a truncated form of the breast cancer type 1 susceptibility protein. Mutations in the BRCA1 gene predispose individuals to breast and ovarian cancers."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Present"
+      - "Absent"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Saliva"
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

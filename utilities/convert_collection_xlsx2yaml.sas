@@ -16,7 +16,7 @@ run;
 
 options mprint;
 
-%let release=11;
+%let release=xx;
 %let package=20251231;
 %let folder=20251231;
 %let TargetFolder=&root/yaml/&folder/collection;

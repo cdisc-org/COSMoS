@@ -1,0 +1,9 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C36292
+ncitCode: C36292
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C36292
+categories:
+  - Laboratory Test Result
+shortName: Laboratory Test Result
+definition: The outcome of a laboratory test.

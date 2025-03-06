@@ -1,0 +1,60 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C52159
+ncitCode: C52159
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C52159
+parentConceptId: C18194
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Diagnostic Tests
+  - Diagnostic Assays
+  - Diagnostic Procedures
+  - Gene Expression Analysis
+  - Assays
+shortName: Oncotype DX Breast Cancer Assay
+synonyms:
+  - Oncotype DX
+resultScales:
+  - Quantitative
+  - Narrative
+definition: "A diagnostic assay that quantifies the likelihood of breast cancer recurrence in women with newly diagnosed, early stage breast cancer. In addition to predicting distant disease recurrence, Oncotype DX also assesses the benefit from certain types of chemotherapy. The assay, performed using formalin-fixed, paraffin-embedded tumor tissue, analyzes the expression of a panel of 21 genes and the results are provided as a Recurrence Score (0-100). The gene panel was selected and the Recurrence Score calculation was derived through extensive laboratory testing and multiple independent clinical development studies. Oncotype DX is validated for use in breast cancer patients whose disease is newly diagnosed, stage I or II, node-negative, estrogen receptor-positive and who will be treated with tamoxifen."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+    exampleSet:
+      - "0-100"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Breast"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "RT-PCR"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

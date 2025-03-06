@@ -1,0 +1,60 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C135522
+ncitCode: C135522
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135522
+parentConceptId: C135508
+categories:
+  - Findings
+  - Clinical Test Result
+  - Renal Function Tests
+  - Urinary System Findings
+  - Organ Transplant Status
+shortName: Graft Status
+synonyms:
+  - Graft Status
+  - GRFTSTAT
+resultScales:
+  - Nominal
+definition: The condition of the donated organ or tissue.
+coding:
+  - code: 44781-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Functioning"
+      - "Non-functioning"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Kidney"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Needle Biopsy"
+      - "Creatinine Measurement"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

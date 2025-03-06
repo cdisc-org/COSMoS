@@ -1,0 +1,13 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C17241
+ncitCode: C17241
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17241
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+shortName: Urinalysis
+synonyms:
+  - Urine Test
+  - UA
+definition: "Laboratory analysis of urine, commonly used to aid in the diagnosis of disease or to detect the presence of a specific substance. It involves examination of the urine by physical or chemical means as well as microscopic examination that helps to screen for urinary tract infections, renal disease, and diseases of other organs, that result in abnormal metabolites (break-down products) appearing in the urine."

@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C75385
+ncitCode: C75385
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C75385
+parentConceptId: C74742
+categories:
+  - Laboratory Tests
+  - Gene Products
+shortName: Peptide Hormone Measurement
+definition: The determination of the amount of any peptide hormone present in a sample.

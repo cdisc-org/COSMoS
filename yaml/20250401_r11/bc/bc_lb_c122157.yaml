@@ -1,0 +1,45 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C122157
+ncitCode: C122157
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122157
+parentConceptId: C51949
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - White Blood Cell Counts
+shortName: "T-Lymphocyte Count"
+synonyms:
+  - "T-Cell Lymphocytes"
+  - "T-Cells"
+  - "T-Lymphocytes"
+resultScales:
+  - Quantitative
+definition: "The determination of the amount of T-lymphocytes in a biological specimen."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67391
+    ncitCode: C67391
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+    exampleSet:
+      - "10^6/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Bronchial Specimen"

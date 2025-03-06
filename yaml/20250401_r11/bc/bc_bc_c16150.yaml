@@ -1,0 +1,70 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C16150
+ncitCode: C16150
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16150
+parentConceptId: C188928
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Hormone Measurements
+  - Endocrine Tests
+  - Chemistry Test
+  - Protein or Enzyme Type Measurement
+shortName: Estrogen Receptor Status
+synonyms:
+  - ER Alpha Status
+  - ER Status
+  - ERA Status
+  - ESR Status
+  - ESR1 Status
+  - ESRA Status
+  - Estrogen Receptor 1 Status
+  - Estrogen Receptor Alpha Status
+  - ESTRR Status
+  - NR3A1 Status
+  - Nuclear Receptor Subfamily 3 Group A Member 1 Status
+resultScales:
+  - Ordinal
+definition: "The estrogen receptor level measured in a primary tumor or in metastases.  There are essentially two distinct forms of breast cancer, one that tends to have an early onset and is characterized by an ER- status, and one that tends to have a late onset and is characterized by an ER+ status.  However, these two variants tend to overlap with respect to age, so it is possible for a young woman to have a \"late-onset\" form of breast cancer and for an older woman to have an \"early-onset\" variant of the disease."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

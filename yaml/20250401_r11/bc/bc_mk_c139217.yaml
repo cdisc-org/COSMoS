@@ -1,0 +1,49 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C139217
+ncitCode: C139217
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139217
+parentConceptId: C68741
+categories:
+  - Musculoskeletal Finding
+  - "Z-Score"
+shortName: "Bone Mineral Density Z-Score"
+synonyms:
+  - BMDZ
+resultScales:
+  - Quantitative
+definition: "A statistical score representing the number of standard deviations above or below what is expected for an individual's bone density based on his age, sex, weight, and race. Z-scores are most useful in evaluating low bone density in children, premenopausal women, and men younger than age fifty."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+    exampleSet:
+      - "SPINE, LUMBAR"
+      - "FEMORAL NECK"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "DXA SCAN"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

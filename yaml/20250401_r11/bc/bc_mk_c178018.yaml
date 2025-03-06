@@ -1,0 +1,55 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C178018
+ncitCode: C178018
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C178018
+parentConceptId: C112025
+categories:
+  - Musculoskeletal Finding
+  - Mass Measurement
+shortName: Appendicular Skeletal Muscle Mass
+synonyms:
+  - ASMM
+  - ASMMASS
+resultScales:
+  - Quantitative
+definition: A measurement of the mass of the muscles of the arms and legs.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42579
+    ncitCode: C42579
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
+    shortName: Unit of Mass
+    dataType: string
+    exampleSet:
+      - "Kilogram"
+      - "Gram"
+      - "Pound"
+      - "Ounce"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "DXA SCAN"
+      - "Bioimpedance Spectroscopy"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

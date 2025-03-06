@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C45398
+ncitCode: C45398
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C45398
+categories:
+  - Laboratory Tests
+  - Nitroso Carcinogens
+shortName: Carcinogenic Nitrosamine
+definition: "An organic N-nitroso compound with possible carcinogenic activity characterized by the group -NNO or -NHNO in its structure, formed by combining nitrates with amines. These compounds are found in various foods and many are carcinogenic or are suspected carcinogens. Cured meats can contain nitrosamines because meats contain amines and can react during cooking with sodium nitrite that is added as a preservative. (NCI05)"

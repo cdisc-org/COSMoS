@@ -1,0 +1,42 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C38155
+ncitCode: C38155
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38155
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Disease Response
+  - Recurrence
+shortName: Recurrent Disease
+synonyms:
+  - Recurrence
+  - Disease Relapse
+resultScales:
+  - Ordinal
+definition: The return of a disease after a period of remission.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+      - "Absent Present"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

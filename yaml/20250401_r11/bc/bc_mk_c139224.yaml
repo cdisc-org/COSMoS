@@ -1,0 +1,60 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C139224
+ncitCode: C139224
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139224
+parentConceptId: C25338
+categories:
+  - Musculoskeletal Finding
+  - Score
+shortName: Brooke Modified Medical Research Council Manual Muscle Test Score, Lateral Rotation
+synonyms:
+  - BMMTLR
+  - Brooke mMRC MMT Score, Lat. Rotat.
+  - Brooke mMRC MMT Score, Lateral Rotation
+resultScales:
+  - Ordinal
+definition: "The numerical value that represents the result of a clinical assessment of muscle strength and function during lateral rotation that is based on the Brooke Modified Medical Research Council Manual Muscle Test. (Brooke MH, Griggs RC, Mendell JR, Fenichel GM, et al. Clinical trial in Duchenne dystrophy. I. The design of the protocol. Muscle Nerve. 1981 May-Jun;4(3):186-97. doi:10.1002/mus.880040304)."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "0 No visible or palpable contraction"
+      - "1 Visible or palpable contraction without motion"
+      - "2 Full range of motion, gravity eliminated"
+      - "3 Full range of motion against gravity"
+      - "4 Full range of motion against gravity, moderate resistance"
+      - "5 Full range of motion against gravity, maximal resistance"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

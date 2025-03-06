@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C120401
+ncitCode: C120401
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120401
+categories:
+  - Musculoskeletal Finding
+  - "T-Score"
+shortName: "T-Score"
+definition: "A method for converting an individual score into a standard form. While similar to a z-score, t-score is used when the conversion is made without knowledge of the population standard deviation and mean."

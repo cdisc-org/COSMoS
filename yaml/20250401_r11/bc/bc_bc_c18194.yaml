@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C18194
+ncitCode: C18194
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18194
+categories:
+  - Oncology Standards
+  - Diagnostic Tests
+  - Diagnostic Assays
+  - Diagnostic Procedures
+shortName: Molecular Diagnostic Method
+definition: Methods for diagnosis or monitoring of disease predisposition by translation and validation of molecular discoveries in medicine into the clinical diagnostic setting.

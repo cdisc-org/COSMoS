@@ -1,0 +1,45 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C82045
+ncitCode: C82045
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82045
+parentConceptId: C67208
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Blood Cell Count Ratio Measurements
+shortName: Segmented Neutrophil to Leukocyte Ratio Measurement
+synonyms:
+  - Segmented Neutrophils/Leukocytes
+  - NEUTSGLE
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of segmented neutrophils compared to leukocytes present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Body fluid"
+      - "Bone Marrow"

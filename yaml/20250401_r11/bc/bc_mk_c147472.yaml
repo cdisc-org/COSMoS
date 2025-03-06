@@ -1,0 +1,53 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C147472
+ncitCode: C147472
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147472
+parentConceptId: C110937
+categories:
+  - Musculoskeletal Finding
+shortName: Bone Mineral Content
+synonyms:
+  - BMC
+  - Bone Mineral Mass
+  - Bone Mass
+resultScales:
+  - Quantitative
+definition: An assessment of the quantity of minerals within a specific bone.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42579
+    ncitCode: C42579
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
+    shortName: Unit of Mass
+    dataType: string
+    exampleSet:
+      - "Kilogram"
+      - "Gram"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

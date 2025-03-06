@@ -1,0 +1,36 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: SEX
+domain: DM
+shortName: Sex
+source: DM.SEX
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C28421
+variables:
+  - name: SEX
+    dataElementConceptId: C28421
+    isNonStandard: false
+    codelist:
+      conceptId: C66731
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66731
+      submissionValue: SEX
+    valueList:
+      - "F"
+      - "INTERSEX"
+      - "M"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 100
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: DMDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: true 
+    mandatoryValue: false

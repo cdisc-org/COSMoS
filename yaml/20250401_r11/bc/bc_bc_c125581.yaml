@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C125581
+ncitCode: C125581
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C125581
+categories:
+  - Laboratory Tests
+shortName: Pathology Result
+synonyms:
+  - Pathology Examination Result
+definition: The outcome of a pathologic examination.

@@ -1,0 +1,62 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C135509
+ncitCode: C135509
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135509
+parentConceptId: C25334
+categories:
+  - Findings
+  - Clinical Test Result
+  - Urinary System Findings
+shortName: Organ Craniocaudal Length Measurement
+synonyms:
+  - Organ Vertical Length
+  - ORVERLN
+resultScales:
+  - Quantitative
+definition: The linear extent along the craniocaudal axis from one end of an organ to the other end.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "mm"
+      - "cm"
+      - "in"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Kidney"
+      - "Bladder"
+      - "Liver"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Sonography"
+      - "Ultrasound"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

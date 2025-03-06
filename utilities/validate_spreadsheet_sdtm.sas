@@ -146,7 +146,6 @@ title01 "&now";
 
 
 /* Package 7 - */
-
 %let excel_file=&root/curation/BC_Package_R7_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm7_01, drop=%str(drop=length significant_digits format));
@@ -164,6 +163,7 @@ title01 "&now";
 
 %let excel_file=&root/curation/BC_Package_R7_SDTM_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format)); 
+
 
 /* Package 8 - */
 %let excel_file=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
@@ -191,7 +191,6 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_Corrections)$, dsout=bc9_01, drop=%str(drop=History_of_Change)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections)$, dsout=sdtm9_01, drop=%str(drop=length significant_digits format));
 
-%let _debug=2;
 
 /* Package 10 - */
 %let release=10;
@@ -214,6 +213,33 @@ title01 "&now";
 %let excel_file=&root/curation/BC_Package_R10_ECG_SDTM.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm10_06, drop=%str(drop=length significant_digits format)); 
 
+
+/* Package 11 - */
+%let release=11;
+%let excel_file=&root/curation/draft/BC_Package_R11_BC_Lindus Health.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Breast_Cancer)$, dsout=bc11_01, drop=%str(drop=change_history)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_UR.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_UR)$, dsout=bc11_02, drop=%str(drop=History_of_Change)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_UR)$, dsout=sdtm11_01, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_LB_GF_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc11_03); 
+%ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc11_04, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm11_02, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm11_03, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_DM.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc11_05, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_DM)$, dsout=sdtm11_04, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_MK.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MK)$, dsout=bc11_06, drop=%str(drop=change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MK)$, dsout=sdtm11_05, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/BC_Package_R11_VS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm11_06, drop=%str(drop=length significant_digits format)); 
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
@@ -235,7 +261,6 @@ data bc(drop=change_history F1: F2: i vname vvalue);
   package_date = upcase(package_date);
 run;  
 
-
 %if &_debug gt 1 %then %do;
   proc freq data=bc;
     tables bc_id * package_date / nopercent norow nocol;
@@ -254,6 +279,8 @@ run;
   ods excel close;
   ods listing;
 %end;
+
+/************************************************************************************************************************/
 
 data sdtm(drop=change_history F3: F4:  i vname vvalue);
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
@@ -284,7 +311,6 @@ run;
   run;  
 %end;  
 
-
 proc sql;
   create table sdtm_merged(drop=order)
   as select
@@ -309,6 +335,9 @@ quit;
   ods excel close;
   ods listing;
 %end;
+
+
+/************************************************************************************************************************/
 
 ods listing close;
 ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&release._&todays..html";
@@ -356,10 +385,8 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Duplicate BC records */
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
-  /*  create table sdtm_bc_missing as*/
       select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id
       from bc
-      /* group by package_date, bc_categories, bc_id, short_name, dec_id */
       group by package_date, bc_id, dec_id
       having count(*) > 1
       ;

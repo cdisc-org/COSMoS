@@ -1,0 +1,46 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64813
+ncitCode: C64813
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64813
+parentConceptId: C75385
+categories:
+  - Laboratory Tests
+  - Protein or Riboprotein Complexes
+shortName: Thyrotropin Measurement
+synonyms:
+  - TSH
+  - Thyrotropin
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: A quantitative measurement of the amount of thyrotropin present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67365
+    ncitCode: C67365
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
+    shortName: Unit of Catalytic Activity Concentration
+    dataType: string
+    exampleSet:
+      - "mU/L"
+      - "mIU/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Blood"
+      - "Saliva"

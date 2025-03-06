@@ -1,0 +1,37 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C199683
+ncitCode: C199683
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199683
+parentConceptId: C51946
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Erythrocyte Counts
+shortName: Polychromatic Erythrocyte Count
+synonyms:
+  - Immature Erythrocytes
+  - Polychromatic Erythrocytes
+  - PCE
+resultScales:
+  - Ordinal
+definition: The determination of the polychromatic erythrocytes in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"

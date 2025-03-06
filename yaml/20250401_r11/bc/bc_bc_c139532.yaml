@@ -1,0 +1,44 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C139532
+ncitCode: C139532
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139532
+parentConceptId: C4872
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Staging
+shortName: Breast Cancer by AJCC v8 Stage
+synonyms:
+  - Breast Carcinoma by AJCC v8 Stage
+  - TNM Staging
+resultScales:
+  - Ordinal
+definition: A term that refers to the staging of breast cancer, following the rules of the TNM AJCC v8 classification system. It applies to invasive (infiltrating) carcinoma of the breast and ductal carcinoma in situ of the breast. It does not apply to breast sarcoma, phyllodes tumor, and breast lymphoma. (from AJCC 8th Ed.)
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Stage 0"
+      - "Stage I"
+      - "Stage II"
+      - "Stage III"
+      - "Stage IV"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

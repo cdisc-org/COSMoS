@@ -96,17 +96,27 @@ proc fcmp outlib=macros.funcs.python;
       url = 'https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/'+ccode+'?include=summary'
       r = requests.get(url)
       concept_info = r.json()
+      conceptDefinition = ''
+      conceptDefinitionCDISC = ''
       if 'definitions' in concept_info:
-        conceptDefinition = ''
-        conceptDefinitionCDISC = ''
+        for d in concept_info['definitions']:
+          if d['source'] == 'CDISC' :
+            conceptDefinitionCDISC = d['definition']
         for d in concept_info['definitions']:
           if d['source'] == 'NCI' :
             conceptDefinition = d['definition']
-          if d['source'] == 'CDISC' :
-            conceptDefinitionCDISC = d['definition']
-      else:
-        conceptDefinition = ''
-        conceptDefinitionCDISC = ''
+        if conceptDefinition == '':
+          for d in concept_info['definitions']:
+            if d['source'] == 'CDISC' :
+              conceptDefinition = d['definition']
+        if conceptDefinition == '':
+          for d in concept_info['definitions']:
+            if d['source'] == 'NCI-GLOSS' :
+              conceptDefinition = d['definition']
+        if conceptDefinition == '':
+          for d in concept_info['definitions']:
+            if d['source'] == 'CDISC-GLOSS' :
+              conceptDefinition = d['definition']
       return conceptDefinition, conceptDefinitionCDISC
     endsubmit;
     rc = py1.publish();
@@ -246,7 +256,7 @@ data test;
 
   * ccodes = "C103420, C117404, C117426, C117446, C124415, C124448, C49164, C94523, C94525, C94534, C94535, C96613, C96642, C96643, C96684, C96685";
   * ccodes = "C124415, C117426";
-  ccodes = "C147856, C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
+  ccodes = "C79416, C15190, C94411, C28234, C147856, C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
 
   do i=1 to countw(ccodes);
     call missing(ccode_parent, shortname, shortname_parent, definition, definition_cdisc, synonyms, preferred_term);

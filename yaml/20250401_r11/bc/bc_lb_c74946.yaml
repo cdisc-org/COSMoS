@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74946
+ncitCode: C74946
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74946
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+shortName: Electrolyte Measurement
+resultScales:
+  - Quantitative
+definition: A quantitative measurement of the amount of an electrolyte present in a sample.

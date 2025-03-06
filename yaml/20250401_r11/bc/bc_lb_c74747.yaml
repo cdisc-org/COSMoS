@@ -1,0 +1,47 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74747
+ncitCode: C74747
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74747
+parentConceptId: C74742
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Endocrine Tests
+  - Hormone Measurements
+shortName: Triiodothyronine Measurement
+synonyms:
+  - T3
+  - Total T3
+resultScales:
+  - Quantitative
+definition: The determination of the amount of free and bound triiodothyronine present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "ng/dL"
+      - "ng/L"
+      - "ug/L"
+      - "nmol/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"

@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C36285
+ncitCode: C36285
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C36285
+categories:
+  - Endocrine Tests
+  - Hormone Measurements
+shortName: Endocrine System Finding
+definition: Symptoms, physical examination results, and/or laboratory test results related to the endocrine system.

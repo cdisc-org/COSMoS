@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C35553
+ncitCode: C35553
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C35553
+categories:
+  - Laboratory Tests
+  - Abnormal Laboratory Test Results
+shortName: Abnormal Blood Chemistry and Hematology Test Result
+definition: A laboratory test result that indicates the presence of abnormal blood chemistry and/or hematology values.

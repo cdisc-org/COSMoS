@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74804
+ncitCode: C74804
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74804
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Cytokine Measurement
+definition: The determination of type and amount of cytokines in a sample.

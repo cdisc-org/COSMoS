@@ -1,0 +1,49 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C147473
+ncitCode: C147473
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147473
+parentConceptId: C120401
+categories:
+  - Musculoskeletal Finding
+  - "T-Score"
+shortName: "Bone Mineral Density T-Score"
+synonyms:
+  - BMDT
+resultScales:
+  - Quantitative
+definition: "The standard deviation of the subject's bone mineral density score in comparison to the expected normal bone mineral density of a healthy 30-year old adult."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+    exampleSet:
+      - "SPINE, LUMBAR"
+      - "FEMORAL NECK"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "DXA SCAN"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

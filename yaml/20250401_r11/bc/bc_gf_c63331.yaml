@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C63331
+ncitCode: C63331
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C63331
+categories:
+  - Genomic Findings
+  - Molecular Analysis
+  - Microsatellite Instability Analysis
+shortName: Microsatellite Instability Analysis
+definition: A laboratory procedure to detect microsatellite instability.

@@ -1,0 +1,49 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C25334
+ncitCode: C25334
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25334
+categories:
+  - Findings
+  - Clinical Test Result
+  - Urinary System Findings
+shortName: Length
+synonyms:
+  - Length
+  - LENGTH
+resultScales:
+  - Quantitative
+definition: The linear extent in space from one end of something to the other end, or the extent of something from beginning to end.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "mm"
+      - "cm"
+      - "in"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

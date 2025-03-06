@@ -1,0 +1,36 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: ETHNIC
+domain: DM
+shortName: Ethnicity
+source: DM.ETHNIC
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C16564
+variables:
+  - name: ETHNIC
+    dataElementConceptId: C16564
+    isNonStandard: false
+    codelist:
+      conceptId: C66790
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66790
+      submissionValue: ETHNIC
+    valueList:
+      - "HISPANIC OR LATINO"
+      - "NOT HISPANIC OR LATINO"
+      - "NOT REPORTED"
+      - "UNKNOWN"
+    role: Qualifier
+    dataType: text
+    length: 100
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: DMDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: true 
+    mandatoryValue: false

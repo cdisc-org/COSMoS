@@ -1,0 +1,13 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C49237
+ncitCode: C49237
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49237
+categories:
+  - Laboratory Tests
+shortName: Chemistry Test
+synonyms:
+  - Chemistry Measurement
+  - Chemistry Procedure
+  - Chemistry Technique
+definition: A laboratory test designed for the quantification of an organic or inorganic chemical within a biological specimen.

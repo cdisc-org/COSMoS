@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C60819
+ncitCode: C60819
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C60819
+categories:
+  - Laboratory Tests
+  - Mixed Category Laboratory Procedure
+  - Assay
+shortName: Assay
+definition: A qualitative or quantitative analysis performed to determine the amount of a particular constituent in a sample or the biological or pharmacological properties of a drug.

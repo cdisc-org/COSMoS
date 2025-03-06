@@ -1,0 +1,47 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C82621
+ncitCode: C82621
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82621
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Measurements
+  - Fibrin Degragation Products
+shortName: "D-Dimer Measurement"
+synonyms:
+  - "D-Dimer"
+  - DDIMER
+  - FDP
+  - Fibrin Degragation Products
+resultScales:
+  - Quantitative
+definition: "The determination of the amount of d-dimers present in a sample."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C64571
+    ncitCode: C64571
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64571
+    shortName: Unit of Mass Concentration
+    dataType: string
+    exampleSet:
+      - "ug/L DDU"
+      - "ug/L FEU"
+      - "mg/L FEU"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Platelet Poor Plasma"

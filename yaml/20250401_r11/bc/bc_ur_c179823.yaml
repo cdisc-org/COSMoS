@@ -1,0 +1,63 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C179823
+ncitCode: C179823
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179823
+parentConceptId: C181043
+categories:
+  - Clinical Findings Indicator
+  - Indicator
+  - Urinary System Findings
+shortName: Hematoma Indicator
+synonyms:
+  - HEMAIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether a hematoma is present.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54215
+    shortName: Directionality
+    dataType: string
+    exampleSet:
+      - "Inner"
+      - "Outer"
+      - "Anterior"
+      - "Dorsal"
+      - "Superior"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "X-Ray"
+      - "CT Scan"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

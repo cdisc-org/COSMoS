@@ -1,0 +1,14 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C82624
+ncitCode: C82624
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82624
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Gas Measurements
+shortName: Gas Measurement
+synonyms:
+  - Gas
+definition: A measurement of the gas in a sample.

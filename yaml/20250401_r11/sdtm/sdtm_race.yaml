@@ -1,0 +1,40 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: RACE
+domain: DM
+shortName: Race
+source: DM.RACE
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C17049
+variables:
+  - name: RACE
+    dataElementConceptId: C17049
+    isNonStandard: false
+    codelist:
+      conceptId: C74457
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74457
+      submissionValue: RACE
+    valueList:
+      - "AMERICAN INDIAN OR ALASKA NATIVE"
+      - "ASIAN"
+      - "BLACK OR AFRICAN AMERICAN"
+      - "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER"
+      - "NOT REPORTED"
+      - "OTHER"
+      - "UNKNOWN"
+      - "WHITE"
+    role: Qualifier
+    dataType: text
+    length: 100
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: DMDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: true 
+    mandatoryValue: false

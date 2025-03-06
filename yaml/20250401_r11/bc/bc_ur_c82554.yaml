@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C82554
+ncitCode: C82554
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82554
+categories:
+  - Findings
+  - Clinical Test Result
+shortName: Flow Rate
+definition: The speed of movement of a liquid.

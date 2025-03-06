@@ -1,0 +1,48 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64830
+ncitCode: C64830
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64830
+parentConceptId: C51950
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Leukocyte Counts
+  - Neutrophil Counts
+shortName: Neutrophil Band Form Count
+synonyms:
+  - Neutrophil Bands
+  - Bands
+  - NEUTB
+resultScales:
+  - Quantitative
+definition: The determination of the number of band neutrophils in a blood sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67391
+    ncitCode: C67391
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+    exampleSet:
+      - "10^6/L"
+      - "/uL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Body fluid"
+      - "Bone Marrow"

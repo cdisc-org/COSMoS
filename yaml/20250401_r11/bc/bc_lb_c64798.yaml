@@ -1,0 +1,42 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64798
+ncitCode: C64798
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64798
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+shortName: Erythrocyte Mean Corpuscular Hemoglobin Concentration
+synonyms:
+  - RBC Mean Corpuscular Hemoglobin Concentration
+  - MCHC
+resultScales:
+  - Quantitative
+definition: The mean cell hemoglobin concentration (MCHC), which is the average concentration of hemoglobin in a given volume of blood. The MCHC is a calculated value derived from the measurement of hemoglobin and the hematocrit.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "g/dL"
+      - "mmol/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Red Blood Cells"

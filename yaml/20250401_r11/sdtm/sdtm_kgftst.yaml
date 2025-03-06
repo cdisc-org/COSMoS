@@ -1,0 +1,150 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: KGFTST
+domain: UR
+shortName: Kidney Graft Status
+source: UR.URTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C135522
+variables:
+  - name: URTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C129942
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129942
+      submissionValue: URNSTSCD
+    assignedTerm:
+      conceptId: C135522
+      value: "GRFTSTAT"
+    role: Topic
+    relationship:
+      subject: URTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: URTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: URTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C129941
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129941
+      submissionValue: URNSTS
+    assignedTerm:
+      conceptId: C135522
+      value: "Graft Status"
+    role: Qualifier
+    relationship:
+      subject: URTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: URCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: URCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: URORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: URORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: URSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "KIDNEY"
+    role: Qualifier
+    relationship:
+      subject: URLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "LEFT"
+      - "RIGHT"
+    role: Qualifier
+    relationship:
+      subject: URLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: URLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    role: Qualifier
+    relationship:
+      subject: URMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: URDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

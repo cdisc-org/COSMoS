@@ -1,0 +1,51 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74676
+ncitCode: C74676
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74676
+parentConceptId: C74803
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Vitamin Measurements
+shortName: Folic Acid Measurement
+synonyms:
+  - Folate
+  - Folic Acid
+  - Vitamin B9
+  - VITB9
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of folic acid present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "nmol/L"
+      - "ng/mL"
+      - "ug/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Blood"
+      - "Red Blood Cells"
+      - "Body Fluid"

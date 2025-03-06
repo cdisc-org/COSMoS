@@ -1,0 +1,29 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C28421
+ncitCode: C28421
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28421
+categories:
+  - Demographic Data
+  - Demographics
+  - Personal Attribute
+shortName: Sex
+resultScales:
+  - Nominal
+definition: The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.
+dataElementConcepts:
+  - conceptId: C28421
+    ncitCode: C28421
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28421
+    shortName: Sex
+    dataType: string
+    exampleSet:
+      - "Male"
+      - "Female"
+      - "Unknown"
+      - "Undifferentiated"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

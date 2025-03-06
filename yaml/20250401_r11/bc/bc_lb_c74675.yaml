@@ -1,0 +1,11 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C74675
+ncitCode: C74675
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74675
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Drug Class Measurement
+definition: The determination of the levels of all members of a specific drug class present in a sample.

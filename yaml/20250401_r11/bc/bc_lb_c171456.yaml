@@ -1,0 +1,14 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C171456
+ncitCode: C171456
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171456
+parentConceptId: C49188
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Virology Tests
+  - "COVID-19 Tests"
+  - "SARS-CoV-2 Tests"
+shortName: Coronaviridae Measurement
+definition: The determination of the amount of coronaviridae in a sample.

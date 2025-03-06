@@ -1,0 +1,32 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C17049
+ncitCode: C17049
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17049
+categories:
+  - Demographic Data
+  - Demographics
+  - Population Group
+shortName: Race
+synonyms:
+  - Racial Group
+resultScales:
+  - Nominal
+definition: A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent.
+dataElementConcepts:
+  - conceptId: C17049
+    ncitCode: C17049
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17049
+    shortName: Race
+    dataType: string
+    exampleSet:
+      - "Asian"
+      - "Black or African American"
+      - "White"
+      - "American Indian or Alaska Native"
+      - "Unknown"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

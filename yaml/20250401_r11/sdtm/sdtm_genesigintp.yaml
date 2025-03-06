@@ -1,0 +1,271 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: GENESIGINTP
+domain: GF
+shortName: Genetic Signature Transcription Interpretation
+source: GF.GFTESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C181333
+variables:
+  - name: GFTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C181178
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181178
+      submissionValue: GFTESTCD
+    assignedTerm:
+      conceptId: C181333
+      value: "GENESIG"
+    role: Topic
+    relationship:
+      subject: GFTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: GFTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: GFTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C181179
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181179
+      submissionValue: GFTEST
+    assignedTerm:
+      conceptId: C181333
+      value: "Gene Signature"
+    role: Qualifier
+    relationship:
+      subject: GFTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: GFTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C181180
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181180
+      submissionValue: GFTSDTL
+    assignedTerm:
+      conceptId: C181339
+      value: "GENETIC TRANSCRIPTION INTERPRETATION"
+    role: Qualifier
+    relationship:
+      subject: GFTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: GFORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: GFSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFINHERT
+    dataElementConceptId: C204091
+    isNonStandard: false
+    codelist:
+      conceptId: C181177
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181177
+      submissionValue: INHERTGF
+    role: Qualifier
+    relationship:
+      subject: GFINHERT
+      linkingPhrase: indicates heritability of the genetic variant in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFGENREF
+    dataElementConceptId: C164815
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFGENREF
+      linkingPhrase: identifies the reference used in the genomic test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFCHROM
+    dataElementConceptId: C164716
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFCHROM
+      linkingPhrase: is the chromosome that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSYM
+    dataElementConceptId: C43568
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFSYM
+      linkingPhrase: is the symbol for the genomic entity that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSYMTYP
+    dataElementConceptId: C204092
+    isNonStandard: false
+    codelist:
+      conceptId: C181176
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181176
+      submissionValue: SYMTYPGF
+    role: Qualifier
+    relationship:
+      subject: GFSYMTYP
+      linkingPhrase: is the type of genomic entity that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFGENLOC
+    dataElementConceptId: C164528
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFGENLOC
+      linkingPhrase: is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFGENSR
+    dataElementConceptId: C164533
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFGENSR
+      linkingPhrase: is the genetic sub-location of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSEQID
+    dataElementConceptId: C164811
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFSEQID
+      linkingPhrase: is an identifier for the genetic sequence of the genetic entity represented by
+      predicateTerm: IDENTIFIES
+      object: GFSYM
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFPRVID
+    dataElementConceptId: C164813
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFPRVID
+      linkingPhrase: is an identifier for a published reference for the genetic variant in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C111114
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111114
+      submissionValue: GENSMP
+    assignedTerm:
+      conceptId: C812
+      value: "RNA"
+    role: Qualifier
+    relationship:
+      subject: GFSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C158252
+      value: "TARGETED TRANSCRIPTOME SEQUENCING"
+    role: Qualifier
+    relationship:
+      subject: GFMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFANMETH
+    dataElementConceptId: C117039
+    isNonStandard: false
+    codelist:
+      conceptId: C181181
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181181
+      submissionValue: GFANMET
+    assignedTerm:
+      conceptId: C181329
+      value: "IFN-1 GENE SIGNATURE"
+    role: Qualifier
+    relationship:
+      subject: GFANMETH
+      linkingPhrase: is the method of secondary analysis of results in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: GFDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

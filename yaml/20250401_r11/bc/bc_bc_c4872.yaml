@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C4872
+ncitCode: C4872
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4872
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+shortName: Breast Carcinoma
+synonyms:
+  - Cancer of the Breast
+definition: "A carcinoma arising from the breast, most commonly the terminal ductal-lobular unit. It is the most common malignant tumor in females. Risk factors include country of birth, family history, menstrual and reproductive history, fibrocystic disease and epithelial hyperplasia, exogenous estrogens, contraceptive agents, and ionizing radiation. The vast majority of breast carcinomas are adenocarcinomas (ductal or lobular). Breast carcinoma spreads by direct invasion, by the lymphatic route, and by the blood vessel route. The most common site of lymph node involvement is the axilla."

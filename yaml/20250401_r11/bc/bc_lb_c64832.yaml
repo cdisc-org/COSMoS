@@ -1,0 +1,36 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64832
+ncitCode: C64832
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64832
+parentConceptId: C60819
+categories:
+  - Laboratory Tests
+  - Urinalysis
+  - Assay
+shortName: Specific Gravity
+synonyms:
+  - SPGRAV
+resultScales:
+  - Quantitative
+definition: The density (mass per unit volume) of any material divided by that of water at a standard temperature.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+      - "Body Fluid"
+      - "Red Blood Cells"

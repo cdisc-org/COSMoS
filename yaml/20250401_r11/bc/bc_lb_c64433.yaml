@@ -1,0 +1,43 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64433
+ncitCode: C64433
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64433
+parentConceptId: C74954
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Liver Function Tests
+shortName: Alanine Aminotransferase Measurement
+synonyms:
+  - ALT
+  - SGPT
+resultScales:
+  - Quantitative
+definition: A quantitative measurement of alanine aminotransferase present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67365
+    ncitCode: C67365
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
+    shortName: Unit of Catalytic Activity Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"

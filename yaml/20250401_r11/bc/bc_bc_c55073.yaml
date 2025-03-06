@@ -1,0 +1,16 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C55073
+ncitCode: C55073
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C55073
+parentConceptId: C38155
+categories:
+  - Oncology Standards
+  - Recurrent Disease
+  - Disease Response
+shortName: Recurrent Disease, Distant Site
+synonyms:
+  - Distant Disease
+  - Distant Recurrence
+  - Relapse Distant Site
+definition: Recurrence of symptoms of a disease, at a site different and away from the original site.

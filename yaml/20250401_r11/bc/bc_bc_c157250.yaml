@@ -1,0 +1,78 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C157250
+ncitCode: C157250
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C157250
+parentConceptId: C28042
+categories:
+  - Cancer Biomarkers
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Molecular Measurements
+shortName: "Ki-67 Labeling Index"
+synonyms:
+  - "Ki-67"
+  - "Ki-67Anti-KI67 Labeling Index"
+  - "Anti-Ki-67 Labeling Index"
+  - "Anti-MKI67 Labeling Index"
+  - "Ki-67 Labeling Index"
+  - "Ki-67 MIB1 Labeling Index"
+  - "MIB-1 Antibody Labeling Index"
+  - "MIB-1 Labeling Index"
+  - MIB1 Antibody Labeling Index
+  - MIB1 Labeling Index
+resultScales:
+  - Quantitative
+definition: "The percentage of cells in a sample that are dividing that is determined by immunohistochemical staining techniques using MIB-1 antibody (anti-Ki-67 protein antibody)."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunohistochemistry"
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

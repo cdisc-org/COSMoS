@@ -1,0 +1,12 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C147905
+ncitCode: C147905
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147905
+parentConceptId: C17241
+categories:
+  - Laboratory Tests
+shortName: Urine Dipstick Test
+synonyms:
+  - Urine Test Strip
+definition: "Use of a test strip designed to detect one or more specific substances in urine. Results are indicated by a color change and may be qualitative or semi-quantitative."

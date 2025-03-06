@@ -1,0 +1,15 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C19770
+ncitCode: C19770
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19770
+categories:
+  - Laboratory Tests
+  - Laboratory Procedures
+shortName: Molecular Analysis
+synonyms:
+  - Molecular Test
+  - Molecular Procedure
+  - Molecular Assay
+  - Molecular Genetic Analysis
+definition: A laboratory procedure that involves the study of tissues, cells, and fluids using techniques to analyze biologically active molecules, including nucleic acids, proteins, lipids and carbohydrates, for the identification of processes, characteristics and abnormalities at the molecular level.

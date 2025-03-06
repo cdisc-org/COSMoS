@@ -1,0 +1,17 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C147128
+ncitCode: C147128
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147128
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hormone Measurements
+  - Choriogonadotropin Measurements
+  - HCG Measurements
+shortName: Choriogonadotropin Measurement
+synonyms:
+  - Choriogonadotropin
+  - Human Chorionic Gonadotropin
+  - HCGND
+definition: The determination of the amount of choriogonadotropin present in a sample.

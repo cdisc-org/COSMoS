@@ -1,0 +1,42 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C64797
+ncitCode: C64797
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64797
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+shortName: Erythrocyte Mean Corpuscular Hemoglobin
+synonyms:
+  - RBC Mean Corpuscular Hemoglobin
+  - MCH
+resultScales:
+  - Quantitative
+definition: The mean cell hemoglobin (MCH), which is the average amount of hemoglobin in the average red cell. The MCH is a calculated value derived from the measurement of hemoglobin and the red cell count.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "pg"
+      - "fmol"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Red Blood Cells"

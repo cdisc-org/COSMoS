@@ -1,0 +1,16 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C18302
+ncitCode: C18302
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18302
+categories:
+  - Oncology Standards
+  - Breast Cancer TAUG
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Molecular Analysis
+  - Laboratory Procedures
+shortName: Genetic Variation Analysis
+synonyms:
+  - Mutation Analysis
+definition: The identification of genetic variation in a biological sample.

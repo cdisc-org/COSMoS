@@ -1,0 +1,48 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C198401
+ncitCode: C198401
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198401
+parentConceptId: C25305
+categories:
+  - Medical Examination
+  - Urinary System Findings
+shortName: Urinary System Examination
+synonyms:
+  - UREXAM
+  - Urinary System Examination
+resultScales:
+  - Narrative
+definition: An observation, assessment or examination of the urinary system.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "X-Ray"
+      - "CT Scan"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

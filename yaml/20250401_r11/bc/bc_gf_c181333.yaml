@@ -1,0 +1,116 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C181333
+ncitCode: C181333
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181333
+parentConceptId: C63479
+categories:
+  - Genomic Findings
+  - Gene Expression Analysis
+shortName: Gene Signature Assessment
+synonyms:
+  - GENESIG
+  - Gene Expression Profile
+  - Gene Expression Signature
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: An assessment of the unique pattern of gene expression of one to many genes associated with a normal or abnormal biological process.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Genetic Transcription Interpretation"
+      - "Score"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93423
+    ncitCode: C93423
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93423
+    shortName: Reference Result
+    dataType: string
+  - conceptId: C204091
+    ncitCode: C204091
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204091
+    shortName: Genomic Inheritability Type
+    dataType: string
+  - conceptId: C164815
+    ncitCode: C164815
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164815
+    shortName: Reference Genome Assembly Version
+    dataType: string
+    exampleSet:
+      - "GRCh38.p12"
+  - conceptId: C164716
+    ncitCode: C164716
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164716
+    shortName: Chromosome Name
+    dataType: string
+  - conceptId: C43568
+    ncitCode: C43568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C43568
+    shortName: Gene Symbol
+    dataType: string
+    exampleSet:
+      - "ACTB"
+  - conceptId: C204092
+    ncitCode: C204092
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204092
+    shortName: Genomic Symbol Entity Type
+    dataType: string
+    exampleSet:
+      - "Gene With Protein Product"
+  - conceptId: C164528
+    ncitCode: C164528
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164528
+    shortName: Genetic Location
+    dataType: string
+  - conceptId: C164533
+    ncitCode: C164533
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164533
+    shortName: Genetic Subregion
+    dataType: string
+  - conceptId: C164811
+    ncitCode: C164811
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164811
+    shortName: Genetic Reference Sequence Identifier
+    dataType: string
+    exampleSet:
+      - "NM_001101.5"
+  - conceptId: C164813
+    ncitCode: C164813
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164813
+    shortName: Genetic Variation Identifier
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "RNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Targeted Transcriptome Sequencing"
+  - conceptId: C117039
+    ncitCode: C117039
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117039
+    shortName: Analysis Method
+    dataType: string
+    exampleSet:
+      - "IFN-1 Gene Signature"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

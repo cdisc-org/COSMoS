@@ -33,7 +33,7 @@
 
     call missing(short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
     
-    outname=catt("&out_folder\bc_", lowcase(strip(BC_ID)), "_&type..yaml");
+    outname=catt("&out_folder\bc_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
 
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
@@ -49,7 +49,7 @@
     
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog / "WARNING: &type " bc_id @30 definition= / @29 definition2=;
+    if definition ne definition2 then putlog / "WARNING: &type " _excel_file_ _tab_ bc_id / @5 definition= / @4 definition2=;
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -200,7 +200,7 @@
       
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 
-                       %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, "", severity=NOTE);
+                       %str(EXAMPLE_SET_ISSUE_COMMA), "", example_set, %str(cats("dec_label=", dec_label)), severity=NOTE);
         put +4 "exampleSet:";
         countwords=countw(example_set, ";");
         do i=1 to countwords;

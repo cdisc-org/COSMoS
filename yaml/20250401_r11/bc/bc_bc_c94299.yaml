@@ -1,0 +1,9 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C94299
+ncitCode: C94299
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C94299
+categories:
+  - Laboratory Tests
+shortName: Receptor Status
+definition: Refers to the presence or absence of specific receptor molecules on the surface of a cells in a specimen.

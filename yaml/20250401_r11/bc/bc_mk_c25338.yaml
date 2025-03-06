@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C25338
+ncitCode: C25338
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25338
+categories:
+  - Musculoskeletal Finding
+  - Score
+shortName: Score
+definition: A number or range of numeric values measuring performance, function, quality, or ability.

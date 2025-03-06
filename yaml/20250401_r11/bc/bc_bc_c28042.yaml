@@ -1,0 +1,10 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C28042
+ncitCode: C28042
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28042
+categories:
+  - Oncology Standards
+  - Tumor Results
+shortName: Proliferative Index
+definition: The percentage of cells in a biological specimen that are dividing.

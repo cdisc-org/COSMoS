@@ -1,0 +1,116 @@
+packageDate: "2025-04-01"
+packageType: sdtm
+datasetSpecializationId: RNLANUM
+domain: UR
+shortName: Number of Renal Arteries
+source: UR.URTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C130195
+variables:
+  - name: URTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C129942
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129942
+      submissionValue: URNSTSCD
+    assignedTerm:
+      conceptId: C130195
+      value: "RNLANUM"
+    role: Topic
+    relationship:
+      subject: URTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: URTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: URTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C129941
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129941
+      submissionValue: URNSTS
+    assignedTerm:
+      conceptId: C130195
+      value: "Number of Renal Arteries"
+    role: Qualifier
+    relationship:
+      subject: URTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: URCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: URCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: URORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: URORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: URSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: URSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: URDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

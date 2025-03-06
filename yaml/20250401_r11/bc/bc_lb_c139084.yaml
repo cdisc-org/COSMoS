@@ -1,0 +1,43 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C139084
+ncitCode: C139084
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139084
+parentConceptId: C82624
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Gas Measurements
+shortName: Carbon Monoxide Measurement
+synonyms:
+  - Carbon Monoxide
+  - CO
+resultScales:
+  - Quantitative
+definition: The determination of the amount of carbon monoxide present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "nmol/L"
+      - "ug/L"
+      - "ppm"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Arterial Blood"
+      - "Venous Blood"
+      - "Capillary Blood"
+      - "Expired Air"

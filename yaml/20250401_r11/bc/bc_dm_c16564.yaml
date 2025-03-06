@@ -1,0 +1,31 @@
+packageDate: "2025-04-01"
+packageType: bc
+conceptId: C16564
+ncitCode: C16564
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16564
+categories:
+  - Demographic Data
+  - Demographics
+  - Ethnicity
+shortName: Ethnic Group
+synonyms:
+  - Ethnicity
+  - Ethnic Origin
+resultScales:
+  - Nominal
+definition: A social group characterized by a distinctive social and cultural tradition that is maintained from generation to generation. Members share a common history and origin and a sense of identification with the group. They have similar and distinctive features in their lifestyle habits and shared experiences. They often have a common genetic heritage which may be reflected in their experience of health and disease.
+dataElementConcepts:
+  - conceptId: C16564
+    ncitCode: C16564
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16564
+    shortName: Ethnic Group
+    dataType: string
+    exampleSet:
+      - "Hispanic or Latino"
+      - "Not Hispanic or Latino"
+      - "Unknown"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
