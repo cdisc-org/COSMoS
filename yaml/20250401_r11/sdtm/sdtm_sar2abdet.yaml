@@ -5,7 +5,7 @@ domain: MB
 shortName: "SARS-CoV-2 Antibody Detection"
 source: MB-MBTESTCD
 sdtmigStartVersion: "3-3"
-sdtmigEndVersion: ""
+sdtmigEndVersion: "3-3"
 biomedicalConceptId: C171439
 variables:
   - name: MBTESTCD

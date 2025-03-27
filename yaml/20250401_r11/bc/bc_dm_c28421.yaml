@@ -10,7 +10,7 @@ categories:
 shortName: Sex
 resultScales:
   - Nominal
-definition: The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female.
+definition: "An arbitrary categorization of individuals based on the assemblage of physical properties related to reproduction, and commonly associated with the designation of such categories as female and male. This designation is based on a combination of observable information from organ inventories, morphological assessments, hormone assessments, genetic testing, observed primary and secondary sex characteristics, menstrual status, and/or obstetric history. Current sex designation may or may not be the same as an individual's sex assigned or reported at birth. IMPORTANT NOTICE: The NCI Thesaurus contains biomedical terminologies that NCI does not own or control. This concept contains gender-related content that does not comply with Executive Order 14168."
 dataElementConcepts:
   - conceptId: C28421
     ncitCode: C28421

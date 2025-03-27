@@ -216,29 +216,32 @@ title01 "&now";
 
 /* Package 11 - */
 %let release=11;
-%let excel_file=&root/curation/draft/BC_Package_R11_BC_Lindus Health.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_BC_Lindus Health.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Breast_Cancer)$, dsout=bc11_01, drop=%str(drop=change_history)); 
 
-%let excel_file=&root/curation/draft/BC_Package_R11_UR.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_UR.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_UR)$, dsout=bc11_02, drop=%str(drop=History_of_Change)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_UR)$, dsout=sdtm11_01, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/BC_Package_R11_LB_GF_Edits.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_LB_GF_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc11_03); 
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc11_04, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm11_02, drop=%str(drop=length significant_digits format)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm11_03, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/BC_Package_R11_DM.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_DM.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc11_05, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_DM)$, dsout=sdtm11_04, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/BC_Package_R11_MK.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_MK.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_MK)$, dsout=bc11_06, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_MK)$, dsout=sdtm11_05, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/BC_Package_R11_VS.xlsx;
+%let excel_file=&root/curation/BC_Package_R11_VS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm11_06, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/BC_Package_R11_AE_Edit.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_AE)$, dsout=sdtm11_07, drop=%str(drop=length significant_digits format)); 
 
 /************************************************************************************************************************/
 

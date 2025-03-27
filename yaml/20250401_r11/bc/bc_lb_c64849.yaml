@@ -8,14 +8,14 @@ categories:
   - Laboratory Tests
   - Hematology Tests
   - Hemoglobin Measurements
-shortName: Glycosylated Hemoglobin Measurement
+shortName: Hemoglobin A1C Measurement
 synonyms:
   - Hemoglobin A1C
   - HBA1C
   - Glycosylated Hemoglobin A1C
 resultScales:
   - Quantitative
-definition: A quantitative measurement of the amount of glycosylated hemoglobin present in a sample of blood.
+definition: The determination of the amount of hemoglobin A1C present in a sample.
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856

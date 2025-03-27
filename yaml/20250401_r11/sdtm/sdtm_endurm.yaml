@@ -65,8 +65,8 @@ variables:
     dataElementConceptId: C42574
     isNonStandard: false
     codelist:
-      conceptId: C42574
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
     assignedTerm:
       conceptId: C42535
@@ -120,8 +120,8 @@ variables:
     dataElementConceptId: C42574
     isNonStandard: false
     codelist:
-      conceptId: C42574
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
     assignedTerm:
       conceptId: C42535
@@ -150,7 +150,6 @@ variables:
       object: MKTESTCD
     mandatoryVariable: false
     mandatoryValue: false
-    comparator: EQ
   - name: MKLAT
     dataElementConceptId: C25185
     isNonStandard: false

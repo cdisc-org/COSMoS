@@ -183,20 +183,20 @@
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2025-04-01);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_BC_Lindus Health.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_BC_Lindus Health.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=bc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Breast_Cancer));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_UR.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_UR.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=ur, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_UR));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_LB_GF_Edits.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_LB_GF_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB));
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_GF));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_DM.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_DM.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=dm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DM));
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_MK.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_MK.xlsx;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=mk, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MK));
 
 ods listing close;

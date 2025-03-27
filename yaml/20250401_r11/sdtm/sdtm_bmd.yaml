@@ -126,6 +126,7 @@ variables:
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
     assignedTerm:
+      conceptId: C71201
       value: "g/cm2"
     role: Qualifier
     relationship:

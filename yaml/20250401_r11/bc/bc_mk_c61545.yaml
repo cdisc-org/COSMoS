@@ -38,8 +38,8 @@ dataElementConcepts:
     shortName: Result Anatomical Location
     dataType: string
     exampleSet:
-      - "SPINE, LUMBAR"
-      - "FEMORAL NECK"
+      - "Cervical Spine"
+      - "Lumbar Spine"
   - conceptId: C25185
     ncitCode: C25185
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185

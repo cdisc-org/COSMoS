@@ -216,21 +216,24 @@ options mprint;
 
 %let checkrelationships=1;
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_UR.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_UR.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ur, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_UR), debug=0, check_relationships=&checkrelationships);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_LB_GF_Edits.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_LB_GF_Edits.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB), debug=0, check_relationships=&checkrelationships);
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_DM.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_DM.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=dm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DM), debug=0, check_relationships=&checkrelationships);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_MK.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_MK.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=mk, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MK), debug=0, check_relationships=&checkrelationships);
 
-%let ExcelFile=&root/curation/draft/BC_Package_R11_VS.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R11_VS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS), debug=0, check_relationships=&checkrelationships);
+
+%let ExcelFile=&root/curation/BC_Package_R11_AE_Edit.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=ae, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_AE), debug=0, check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_R&release._&todays..html";

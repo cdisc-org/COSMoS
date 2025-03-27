@@ -51,7 +51,7 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-06-27;
+%let packageDate=2024-12-17;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 
 data _sdtm_api;

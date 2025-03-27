@@ -5,7 +5,7 @@ domain: MB
 shortName: Treponema pallidum Antibody Detection in Serum
 source: MB.MBTESTCD
 sdtmigStartVersion: "3-3"
-sdtmigEndVersion: ""
+sdtmigEndVersion: "3-3"
 biomedicalConceptId: C132388
 variables:
   - name: MBTESTCD

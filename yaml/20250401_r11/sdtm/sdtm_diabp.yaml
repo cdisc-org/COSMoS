@@ -132,8 +132,9 @@ variables:
       conceptId: C71148
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
       submissionValue: POSITION
-    subsetCodelist: VSPOS
     valueList:
+      - "PRONE"
+      - "SEMI-RECUMBENT"
       - "SITTING"
       - "STANDING"
       - "SUPINE"
@@ -153,12 +154,13 @@ variables:
       conceptId: C74456
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
       submissionValue: LOC
-    subsetCodelist: VSLOC_PULSE
     valueList:
       - "BRACHIAL ARTERY"
       - "CAROTID ARTERY"
       - "DORSALIS PEDIS ARTERY"
       - "FEMORAL ARTERY"
+      - "FINGER"
+      - "PERIPHERAL ARTERY"
       - "RADIAL ARTERY"
     role: Qualifier
     relationship:
