@@ -136,10 +136,10 @@ variables:
       - "%"
     role: Qualifier
     relationship:
-      subject: URORRESU
+      subject: URSTRESU
       linkingPhrase: is the unit for the value in
       predicateTerm: IS_UNIT_FOR
-      object: URORRES
+      object: URSTRESN
     mandatoryVariable: true 
     mandatoryValue: false
     vlmTarget: true 
