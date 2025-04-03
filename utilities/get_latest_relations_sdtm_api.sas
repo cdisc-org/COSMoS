@@ -10,35 +10,39 @@
   filename mapfile "%sysfunc(pathname(work))/sdtm.map";
   libname jsonfile json map=mapfile automap=create fileref=jsonfile noalldata;
 
-  data __tmp__;
-    length href $512 specializationId $64 latest_package_date $10 subject	linkingPhrase	predicateTerm	object $200;
-    merge jsonfile._links_parentpackage(keep=href rename=(href=href_package)) jsonfile._links_self jsonfile.VARIABLES_RELATIONSHIP;
-    latest_package_date=scan(href_package, -2, "\/");
-    specializationId = scan(href, -1, "\/");
-  run;  
-  
-  proc sql;
-    create table __tmp__ 
-    as select
-      t1.datasetSpecializationId as specializationId length=64,
-      scan(t2.href, -2, "\/") as latest_package_date length=10,
-      t3.href length=512,
-      t4.subject length=32,
-      t4.linkingPhrase length=256,
-      t4.predicateTerm length=128,
-      t4.object length=32
+  %if %sysfunc(exist(jsonfile.variables_relationship)) %then %do;
+
+      data __tmp__;
+        length href $512 specializationId $64 latest_package_date $10 subject	linkingPhrase	predicateTerm	object $200;
+        merge jsonfile._links_parentpackage(keep=href rename=(href=href_package)) jsonfile._links_self jsonfile.variables_relationship;
+        latest_package_date=scan(href_package, -2, "\/");
+        specializationId = scan(href, -1, "\/");
+      run;  
       
-    from jsonfile.root t1,
-         jsonfile._links_parentpackage t2, 
-         jsonfile._links_self t3, 
-         jsonfile.variables_relationship t4
-    ;
-  quit;
-       
-  
-  data _sdtm_api;
-    set _sdtm_api __tmp__;
-  run;  
+      proc sql;
+        create table __tmp__ 
+        as select
+          t1.datasetSpecializationId as specializationId length=64,
+          scan(t2.href, -2, "\/") as latest_package_date length=10,
+          t3.href length=512,
+          t4.subject length=32,
+          t4.linkingPhrase length=256,
+          t4.predicateTerm length=128,
+          t4.object length=32
+          
+        from jsonfile.root t1,
+             jsonfile._links_parentpackage t2, 
+             jsonfile._links_self t3, 
+             jsonfile.variables_relationship t4
+        ;
+      quit;
+           
+      
+      data _sdtm_api;
+        set _sdtm_api __tmp__;
+      run;  
+
+  %end;
 
   filename jsonfile clear;
   libname jsonfile clear;
@@ -58,7 +62,6 @@ data _sdtm_api;
   if 0=1;
 run;  
 
-
 %get_api_response(
     baseurl=&base_url_cosmos,
     apikey=&api_key,
@@ -70,13 +73,26 @@ filename jsfile "%sysfunc(pathname(work))/sdtm_specializations_latest.json";
 filename mpfile "%sysfunc(pathname(work))/sdtm_latest.map";
 libname jsfile json map=mpfile automap=create fileref=jsfile noalldata ordinalcount=none;
 
+%let _cstLRECL=%str(LRECL=2048);
+filename initCode CATALOG "work._cosmos.init.source" &_cstLRECL;
+
 data _null_;
   length code $4096 specializationId $64;
+  file initcode;
   set jsfile._links_datasetSpecializations;
   specializationId = scan(href, -1, "/");
   code=cats('%get_sdtm(code=', specializationId, ');');
-  call execute (code);
+  * call execute (code);
+  put code;
 run;
+
+%include initCode;
+
+proc datasets nolist lib=work;
+  delete _cosmos / memtype=catalog;
+quit;
+
+filename initCode clear;
 
 proc sort data=_sdtm_api out=data.sdtm_api_relationships;
   by specializationId;
