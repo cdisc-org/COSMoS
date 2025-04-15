@@ -25,6 +25,7 @@
           t1.datasetSpecializationId as specializationId length=64,
           scan(t2.href, -2, "\/") as latest_package_date length=10,
           t3.href length=512,
+          t5.name as variable length=32,
           t4.subject length=32,
           t4.linkingPhrase length=256,
           t4.predicateTerm length=128,
@@ -33,7 +34,9 @@
         from jsonfile.root t1,
              jsonfile._links_parentpackage t2, 
              jsonfile._links_self t3, 
-             jsonfile.variables_relationship t4
+             jsonfile.variables_relationship t4,
+             jsonfile.variables t5
+        where t4.ordinal_variables = t5.ordinal_variables
         ;
       quit;
            
@@ -55,7 +58,7 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2024-12-17;
+%let packageDate=2025-04-01;
 %let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
 
 data _sdtm_api;
@@ -103,19 +106,26 @@ libname jsfile clear;
 filename mpfile clear;
 
 
-proc sort data=_sdtm_api;
+proc sort data=_sdtm_api(keep=subject object linkingPhrase predicateTerm) out=work.sdtm_subject_rel_object nodupkey;
+  by _ALL_;
+run;  
+proc sort data=work.sdtm_subject_rel_object;
   by subject object linkingPhrase predicateTerm;
 run;  
 
-data _null_;
+data data.sdtm_subject_rel_object;
   retain n 0;
-  set _sdtm_api;
+  set work.sdtm_subject_rel_object;
   by subject object linkingPhrase predicateTerm;
   file "&root/utilities/text/sdtm_specializations_subject_object_phrases_terms.txt";
   if first.object then n = 1;
-    put n @10 subject @20 object @30 linkingPhrase @115 predicateTerm;
+    put n @10 subject @20 linkingPhrase @105 predicateTerm @125 object;
     n + 1;
 run; 
+
+proc sort data=_sdtm_api;
+  by subject object linkingPhrase predicateTerm;
+run;  
 
 proc sql;
   select
@@ -136,7 +146,7 @@ proc sql;
 quit;
 
 
-proc sort data=_sdtm_api(where=(not(linkingPhrase="is a dictionary-derived term for the value in" and predicateTerm="DECODES")));
+proc sort data=_sdtm_api;
   by linkingPhrase predicateTerm;
 run;  
 
@@ -192,12 +202,22 @@ data _null_;
   end;  
 run; 
 
-data data.sdtm_predicateTerms(keep=predicateTerm);
-  set _sdtm_api;
+proc sort data=_sdtm_api(keep=predicateTerm linkingPhrase) out=work.sdtm_predicateTerms nodupkey;
+  by _ALL_;
+run;  
+proc sort data=work.sdtm_predicateTerms;
+  by predicateTerm linkingPhrase;
+run;  
+
+data data.sdtm_predicateTerms(keep=predicateTerm linkingPhrases);
+  retain linkingPhrases 0;
+  set work.sdtm_predicateTerms;
   by predicateTerm linkingPhrase;
   file "&root/utilities/text/sdtm_specializations_terms.txt";
-  if first.predicateTerm then do;
-    put predicateTerm;
+  if first.predicateTerm then linkingPhrases = 0;
+  linkingPhrases + 1;
+  if last.predicateTerm then do;
+    put predicateTerm "," linkingPhrases;
     output;
   end;  
 run; 
@@ -214,7 +234,7 @@ run;
 
 ods excel options(sheet_name="Predicate Terms" flow="tables" autofilter = 'all');
 proc report data=data.sdtm_predicateTerms;
-  column predicateTerm;
+  column predicateTerm linkingPhrases;
 run;  
 
 ods excel options(sheet_name="Link. Phrases - Pred. Terms" flow="tables" autofilter = 'all');
@@ -223,5 +243,15 @@ proc report data=data.sdtm_linkingphrases_predterms;
   define linkingPhrase / width = 256;
 run;  
 
+ods excel options(sheet_name="Subj Phrase/Terms Obj" flow="tables" autofilter = 'all');
+proc report data=data.sdtm_subject_rel_object;
+  column Subject linkingPhrase predicateTerm Object;
+  define linkingPhrase / width = 256;
+run;  
+
 ods excel close;
 ods listing;
+
+proc print data=data.sdtm_subject_rel_object;
+  where substr(subject, 1, 2) ne substr(object, 1, 2);
+run;
