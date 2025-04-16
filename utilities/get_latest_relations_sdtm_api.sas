@@ -25,6 +25,7 @@
           t1.datasetSpecializationId as specializationId length=64,
           scan(t2.href, -2, "\/") as latest_package_date length=10,
           t3.href length=512,
+          t1.domain length=8,
           t5.name as variable length=32,
           t4.subject length=32,
           t4.linkingPhrase length=256,
@@ -123,28 +124,6 @@ data data.sdtm_subject_rel_object;
     n + 1;
 run; 
 
-proc sort data=_sdtm_api;
-  by subject object linkingPhrase predicateTerm;
-run;  
-
-proc sql;
-  select
-    t1.specializationId as id1 length=15,
-    t2.specializationId as id2 length=15,
-    t1.latest_package_date as latest1,
-    t2.latest_package_date as latest2,
-    t1.subject length=8,
-    t1.object length=8,
-    t1.predicateTerm as predicateTerm1 length=15,
-    t2.predicateTerm as predicateTerm2 length=15,
-    t1.linkingPhrase as linkingPhrase1 length=35,
-    t2.linkingPhrase as linkingPhrase2 length=35
-  from _sdtm_api t1, _sdtm_api t2
-  where (t1.subject = t2.subject) and (t1.object = t2.object) and (strip(t1.linkingPhrase) ne strip(t2.LinkingPhrase))
-  order by t1.specializationId, t1.subject, t1.object, t1.linkingPhrase
-  ;
-quit;
-
 
 proc sort data=_sdtm_api;
   by linkingPhrase predicateTerm;
@@ -227,31 +206,68 @@ ods listing close;
 ods excel file="&root/utilities/reports/sdtm_specializations_relationships_&packageDateShort..xlsx";
 
 ods excel options(sheet_name="Linking Phrases" flow="tables" autofilter = 'all');
-proc report data=data.sdtm_linkingphrases;
-  column linkingPhrase;
-  define linkingPhrase / width = 256;
-run;  
+  proc report data=data.sdtm_linkingphrases;
+    column linkingPhrase;
+    define linkingPhrase / width = 256;
+  run;  
 
 ods excel options(sheet_name="Predicate Terms" flow="tables" autofilter = 'all');
-proc report data=data.sdtm_predicateTerms;
-  column predicateTerm linkingPhrases;
-run;  
+  proc report data=data.sdtm_predicateTerms;
+    column predicateTerm linkingPhrases;
+  run;  
 
 ods excel options(sheet_name="Link. Phrases - Pred. Terms" flow="tables" autofilter = 'all');
-proc report data=data.sdtm_linkingphrases_predterms;
-  column linkingPhrase predicateTerm;
-  define linkingPhrase / width = 256;
-run;  
+  proc report data=data.sdtm_linkingphrases_predterms;
+    column linkingPhrase predicateTerm;
+    define linkingPhrase / width = 256;
+  run;  
 
 ods excel options(sheet_name="Subj Phrase/Terms Obj" flow="tables" autofilter = 'all');
-proc report data=data.sdtm_subject_rel_object;
-  column Subject linkingPhrase predicateTerm Object;
-  define linkingPhrase / width = 256;
-run;  
+  proc report data=data.sdtm_subject_rel_object;
+    column Subject linkingPhrase predicateTerm Object;
+    define linkingPhrase / width = 256;
+  run;  
 
 ods excel close;
 ods listing;
 
-proc print data=data.sdtm_subject_rel_object;
-  where substr(subject, 1, 2) ne substr(object, 1, 2);
-run;
+proc sort data=_sdtm_api;
+  by domain specializationId variable;
+run;  
+
+
+ods listing close;
+ods excel file="&root/utilities/reports/relationships_issues_&todays..xlsx"
+    options(sheet_name="Potential issues" flow="tables" autofilter = 'all');
+
+  proc report data=_sdtm_api;
+    where (variable ne subject) or (variable eq object) or (substr(subject, 1, 2) ne substr(object, 1, 2));
+    column latest_package_date domain specializationId variable subject linkingPhrase predicateTerm object;
+    define linkingPhrase / width = 256;
+  run;
+
+ods excel options(sheet_name="Link. Phrases - Pred. Terms" flow="tables" autofilter = 'all');
+  proc sql;
+    title "Multiple Phrases for same subject/object";
+    select
+      t1.specializationId as id1 length=15,
+      t2.specializationId as id2 length=15,
+      t1.latest_package_date as latest1,
+      t2.latest_package_date as latest2,
+      t1.domain length=8,
+      t1.subject length=8,
+      t1.predicateTerm as predicateTerm1 length=15,
+      t2.predicateTerm as predicateTerm2 length=15,
+      t1.linkingPhrase as linkingPhrase1 length=35,
+      t2.linkingPhrase as linkingPhrase2 length=35,
+      t1.object length=8
+    from _sdtm_api t1, _sdtm_api t2
+    where (t1.subject = t2.subject) and (t1.object = t2.object) and 
+          (strip(t1.linkingPhrase) ne strip(t2.LinkingPhrase)) and 
+          (t1.specializationId le t2.specializationId)
+    order by t1.specializationId, t1.subject, t1.object, t1.linkingPhrase
+    ;
+  quit;
+
+ods excel close;
+ods listing;
