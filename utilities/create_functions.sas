@@ -222,10 +222,32 @@ proc fcmp outlib=macros.funcs.python;
     preferredterm = py5.results['preferredTerm'];
   endsub;
   
-  subroutine insert_image(excel_file $, excel_file_new $, image_file $, sheet_name $, anchor $, width, height);
+  subroutine get_concept_status(code $, status $);
+    length status $32;
+    outargs status;
     declare object py6(python);
-    /* Create an embedded Python block to write your Python function */
     submit into py6;
+    def getConceptStatus(ccode):
+        """Output: conceptStatus"""
+        import requests
+        url = 'https://api-evsrest.nci.nih.gov/api/v1/concept/ncit/'+ccode+'?include=minimal'
+        r = requests.get(url)
+        concept_info = r.json()
+        try:
+          conceptStatus = concept_info['conceptStatus']
+        except:
+          conceptStatus = ''
+        return conceptStatus
+    endsubmit;
+    rc = py6.publish();
+    rc = py6.call('getConceptStatus', code);
+    status = py6.results['conceptStatus'];
+  endsub;
+  
+  subroutine insert_image(excel_file $, excel_file_new $, image_file $, sheet_name $, anchor $, width, height);
+    declare object py7(python);
+    /* Create an embedded Python block to write your Python function */
+    submit into py7;
     def insert_image(excel_file, excel_file_new, image_file, sheet_name, anchor, width, height):
         """Output: MyKey"""
         import os
@@ -242,9 +264,9 @@ proc fcmp outlib=macros.funcs.python;
         wb.save(excel_file_new)
     endsubmit;
     /* Publish the code to the Python interpreter */
-    rc=py6.publish();
+    rc=py7.publish();
     /* Call the Python function from SAS */
-    rc = py6.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
+    rc = py7.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
   endsub;
   
 run;
@@ -252,20 +274,21 @@ run;
 /* Test the functions */
 
 data test;
-  length ccodes $200 ccode ccode_parent $100 shortname shortname_parent preferred_term $100 definition definition_cdisc $1000 synonyms $4000;
+  length ccodes $200 ccode ccode_parent $100 status shortname shortname_parent preferred_term $100 definition definition_cdisc $1000 synonyms $4000;
 
   * ccodes = "C103420, C117404, C117426, C117446, C124415, C124448, C49164, C94523, C94525, C94534, C94535, C96613, C96642, C96643, C96684, C96685";
   * ccodes = "C124415, C117426";
   ccodes = "C79416, C15190, C94411, C28234, C147856, C171439, C161483, C54706, NEW_1, C168688, C173522, C164634, C81328, C49672, C54706, C25298, C25299, C49676, C16358, C49680, C49677, C174446, C100948, C49678";
 
   do i=1 to countw(ccodes);
-    call missing(ccode_parent, shortname, shortname_parent, definition, definition_cdisc, synonyms, preferred_term);
+    call missing(status, ccode_parent, shortname, shortname_parent, definition, definition_cdisc, synonyms, preferred_term);
     ccode=scan(ccodes, i);
     call get_shortname(ccode, shortname);
     call get_definitions(ccode, definition, definition_cdisc);
     call get_parent_code_shortname(ccode, ccode_parent, shortname_parent);
     call get_synonyms(ccode, synonyms);
     call get_preferred_term(ccode, preferred_term);
+    call get_concept_status(ccode, status);
     output;
   end;
 run;
@@ -275,7 +298,7 @@ ods html5 file="&root/utilities/create_functions.html";
 
   proc print data=test;
     title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
-    var ccode ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
+    var ccode status ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
   run;
 
 ods html5 close;

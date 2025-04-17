@@ -25,13 +25,13 @@
 
 
   data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
-    length prev_BC_ID parent_bc_id_nci $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
+    length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value  actual_value comment $2048;
     set work.bc_&type._&package;
     retain prev_BC_ID "" count decs 0;
 
-    call missing(short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
+    call missing(concept_status, short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
     
     outname=catt("&out_folder\bc_&type._", lowcase(strip(BC_ID)), ".yaml");
     file dummy filevar=outname dlm=",";
@@ -67,6 +67,11 @@
         %add2issues_bc(bc_id ne ncit_code, 
                        %str(BC_ID_NCIT_CODEMISMATCH), 
                        bc_id, ncit_code, "");
+                       
+        call get_concept_status(ncit_code, concept_status);               
+        %add2issues_bc(not missing(concept_status) and (index(concept_status, "Retired") > 0), 
+                       %str(BC_ID_CONCEPTSTATUS), 
+                       "", concept_status, "");
       end;
       if not missing(parent_bc_id) then do;
         call get_shortname(parent_bc_id, short_name_parent);
@@ -132,6 +137,8 @@
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
       */
+      %add2issues_bc(index(definition, '"') > 0, 
+                     %str(DEFINITION_QUOTE), "", definition, "");
       %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
       %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
@@ -179,6 +186,12 @@
       if not missing(ncit_dec_code) then do;
         put +4 "ncitCode:" +1 ncit_dec_code;
         put +4 "href: &ncit_explore" ncit_dec_code;
+
+        call get_concept_status(ncit_dec_code, concept_status);               
+        %add2issues_bc(not missing(concept_status) and (index(concept_status, "Retired") > 0), 
+                       %str(DEC_ID_CONCEPTSTATUS), 
+                       "", concept_status, "");
+
       end;
       
       %add2issues_bc(dec_id ne ncit_dec_code, 

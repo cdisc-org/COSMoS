@@ -2,6 +2,7 @@
 %include "&root/utilities/config.sas";
 
 %let _debug=0;
+%let checkrelationships=1;
 
 proc format;
   value $YN
@@ -14,7 +15,7 @@ run;
 
 
 %let package=latest;
-%let ExcelFile=&root/utilities/reports/biomedical_concepts_2023-11-21.xlsx;
+%let ExcelFile=&root/export/cdisc_biomedical_concepts_latest.xlsx;
 %let TargetFolder=&root/yaml/latest/bc;
 
 %create_template(type=BC_ISSUE, out=work.all_issues_bc);
@@ -35,14 +36,15 @@ ods excel close;
 
 
 
-%let ExcelFile=&root/curation/draft/BC_Package_R6_LZZT.xlsx;
+%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
-%let ExcelFile=&root/utilities/reports/sdtm_dataset_specializations_2023-11-21.xlsx;
+%let ExcelFile=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
 %let TargetFolder=&root/yaml/latest/sdtm;
 
 %create_template(type=SDTM_ISSUE, out=work.all_issues_sdtm);
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=latest, package=&package, override_package_date=, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM Dataset Specializations));
+%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=latest, package=&package, override_package_date=, out_folder=&TargetFolder, subsetsDS=subsets, 
+                            range=%str(SDTM Dataset Specializations), check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_latest_sdtm_issues_%sysfunc(date(), b8601da8.).html";

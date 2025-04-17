@@ -232,6 +232,23 @@
         %end;
           
         if not missing(subject) then do;
+          %add2issues_sdtm(sdtm_variable ne subject,
+                %str(RELATIONSHIP_ISSUE_VARIABLE_NE_SUBJECT), 
+                sdtm_variable, subject, %str(cats("sdtm_variable=", sdtm_variable, ", subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)),
+                severity=WARNING);
+          %add2issues_sdtm(subject eq object,
+                %str(RELATIONSHIP_ISSUE_SUBJECT_EQ_OBJECT), 
+                "", subject, %str(cats("sdtm_variable=", sdtm_variable, ", subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)),
+                severity=WARNING);
+          %add2issues_sdtm(sdtm_variable eq object,
+                %str(RELATIONSHIP_ISSUE_VARIABLE_EQ_OBJECT), 
+                "", object, %str(cats("sdtm_variable=", sdtm_variable, ", subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)),
+                severity=WARNING);
+          %add2issues_sdtm(%str(substr(subject, 1, 2) ne substr(object, 1, 2)),
+                %str(RELATIONSHIP_ISSUE_DIFFERENT_DOMAINS), 
+                "", "", %str(cats("sdtm_variable=", sdtm_variable, ", subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)),
+                severity=WARNING);
+
           linking_phrase_low = lowcase(linking_phrase);
           put +4 "relationship:";
           put +6 "subject:" +1 subject;
