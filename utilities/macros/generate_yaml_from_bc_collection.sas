@@ -3,7 +3,7 @@
   out_folder=, debug=0
   );
 
-  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_collection_&type._&package);
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_collection_&type._&package, drop=%str(drop=package_date));
 
   data bc_collection_&type._&package;
     set bc_collection_&type._&package(where=(not missing(collection_group_id)));
@@ -30,7 +30,7 @@
   data issues(keep=_excel_file_ _tab_ package_date severity collection_group_id collection_item issue_type expected_value actual_value comment);
     length prev_collection_group_id $128 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
            codelist_submission_value_cdisc prepopulated_term_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list value_display_list $8192
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list value_display_list sdtm_annotation qsdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
     retain prev_collection_group_id "" count 0;
     set work.bc_collection_&type._&package;
@@ -165,6 +165,11 @@
           end;
         end;
 
+        %add2issues_collection(missing(selection_type) and (not missing(value_display_list)), 
+              %str(VALUE_LIST_MISSING_SELECTION_TYPE), 
+              "", "", %str(cats("value_display_list=", value_display_list, ", codelist=", codelist, ", codelist_submission_value=", 
+              codelist_submission_value)));
+              
         if not missing(selection_type) then put +4 "selectionType:" +1 selection_type;
 
         if not missing(prepopulated_term) then do;
@@ -174,7 +179,7 @@
           if not missing(prepopulated_code) then put +6 "conceptId:" +1 prepopulated_code;
           
           %add2issues_collection((not missing(value_list)) and (not missing(prepopulated_term)), 
-                %str(PREPOPULATED_TERM_AND_VALUE_LIST_NOT_MISSING), 
+                %str(BOTH_PREPOPULATED_TERM_AND_VALUE_LIST_NOT_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", value_list=", value_list, ", prepopulated_term=", prepopulated_term, ", prepopulated_code=", prepopulated_code)));
@@ -184,7 +189,7 @@
             codelist_extensible = get_codelist_extensible(codelist);
             value_code_cdisc = get_term_code(codelist, prepopulated_code);
             
-            %add2issues_collection(missing(prepopulated_term_cdisc_preferd) and (not missing(prepopulated_term)), 
+            %*add2issues_collection(missing(prepopulated_term_cdisc_preferd) and (not missing(prepopulated_term)), 
                   %str(CODELIST_TERM_CDISC_CCODE_MISSING), 
                   prepopulated_term_cdisc_preferd, prepopulated_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                   codelist_submission_value, ", prepopulated_term=", prepopulated_term, ", prepopulated_code=", prepopulated_code, ", prepopulated_term_cdisc_preferd=", prepopulated_term_cdisc_preferd)));
@@ -213,7 +218,10 @@
           put +4 "sdtmTarget:";
 
           countwords=countw(sdtm_target_variable, ";");
-          if not missing(sdtm_annotation) then put +6 "sdtmAnnotation:" +1 sdtm_annotation;
+          if not missing(sdtm_annotation) then do;
+            qsdtm_annotation = quote(strip(sdtm_annotation));
+            put +6 "sdtmAnnotation:" +1 qsdtm_annotation;
+          end;  
           if countwords gt 0 then put +6 "sdtmVariables:";
           do i=1 to countwords;
             value=strip(scan(sdtm_target_variable, i, ";"));

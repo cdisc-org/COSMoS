@@ -18,12 +18,33 @@ options mprint;
 
 %let release=xx;
 %let package=20251231;
-%let folder=20251231;
+%let folder=20251231_draft;
 %let TargetFolder=&root/yaml/&folder/collection;
 %let OverrideDate=%str(2025-12-31);
 
-%let ExcelFile=&root/curation/draft/collection_specialization_vs_final_draft.xlsx;
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=eg, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_EG), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_IE.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ie, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_IE), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Blood.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Urin.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_LB_Local_Hematology.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_VS.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_VS), debug=0);
+
+
+
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_collection_xlsx2yaml_issues_R&release._&todays..html";

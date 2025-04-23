@@ -247,8 +247,28 @@ title01 "&now";
 
 /* Package collections test - */
 %let release=xx;
-%let excel_file=&root/curation/draft/collection_specialization_vs_final_draft.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_01); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_EG)$, dsout=collectxx_01, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_IE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_IE)$, dsout=collectxx_02, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Blood.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_03, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Urin.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_04, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Hematology.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_05, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_06, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_VS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_07, drop=%str(drop=package_date length significant_digits)); 
+
 
 /************************************************************************************************************************/
 
@@ -354,7 +374,7 @@ data collection(drop=change_history i vname vvalue);
          question_text prompt codelist codelist_submission_value value_list value_display_list list_type prepopulated_term prepopulated_code sdtm_target_variable sdtm_annotation sdtm_mapping
          short_name data_type change_history vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date standard standard_start_version standard_end_version collection_group_id bc_id domain vlm_group_id short_name  
-         dec_id collection_item variable_name order_number mandatory_variable data_type length significant_digits display_hidden codelist codelist_submission_value value_list value_display_list prepopulated_term prepopulated_code 
+         dec_id collection_item variable_name order_number mandatory_variable data_type display_hidden codelist codelist_submission_value value_list value_display_list prepopulated_term prepopulated_code 
          sdtm_target_variable sdtm_annotation sdtm_mapping 
          ;
   set collect:(where=(not missing(collection_group_id)));
@@ -439,7 +459,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.vlm_group_id
       from collection col
       where 
-        col.vlm_group_id not in (select vlm_group_id from sdtm_merged)
+        (not missing(col.vlm_group_id)) and (col.vlm_group_id not in (select vlm_group_id from sdtm_merged))
       order by _excel_file_, _tab_, collection_group_id, collection_item
       ;
   quit;
