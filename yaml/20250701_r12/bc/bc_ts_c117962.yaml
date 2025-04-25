@@ -1,0 +1,34 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C117962
+ncitCode: C117962
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117962
+parentConceptId: C25466
+categories:
+  - Trial Summary
+shortName: Severity Criteria
+synonyms:
+  - SEVCRIT
+resultScales:
+  - Nominal
+definition: A standard from which a judgment concerning an event severity can be established.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Severity Criteria"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SEVCRIT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

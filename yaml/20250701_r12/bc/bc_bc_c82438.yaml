@@ -1,0 +1,9 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C82438
+ncitCode: C82438
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82438
+categories:
+  - Event Occurrence Indicator
+shortName: Event Occurrence Indicator
+definition: An indication of whether or not an event has taken place.

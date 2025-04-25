@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127801
+ncitCode: C127801
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127801
+parentConceptId: C42743
+categories:
+  - Trial Summary
+shortName: Study Protocol Uniform Resource Locator
+synonyms:
+  - URL Related to Study
+  - URLSTDY
+resultScales:
+  - Nominal
+definition: The uniform resource locator for a clinical study protocol.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "URL Related to Study"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "URLSTDY"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

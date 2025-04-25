@@ -1,0 +1,54 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C51950
+ncitCode: C51950
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51950
+parentConceptId: C51948
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - Leukocyte Counts
+shortName: Neutrophil Count
+synonyms:
+  - Neutrophils
+  - NEUT
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: A test to determine the number of neutrophils in a sample of blood.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67391
+    ncitCode: C67391
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+    exampleSet:
+      - "10^9/L"
+      - "/uL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Urine"
+      - "Body fluid"
+      - "Bone Marrow"
+      - "Stool"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

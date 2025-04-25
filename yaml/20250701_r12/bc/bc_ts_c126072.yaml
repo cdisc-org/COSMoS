@@ -1,0 +1,34 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126072
+ncitCode: C126072
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126072
+parentConceptId: C25365
+categories:
+  - Trial Summary
+shortName: Retained Biospecimen Description
+synonyms:
+  - RTSPCDES
+resultScales:
+  - Nominal
+definition: A textual description of the specimen types, which are collected during the course of the study.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Retained Biospecimen Description"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "RTSPCDES"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C70663
+ncitCode: C70663
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70663
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Unique Identifier
+synonyms:
+  - uuid
+  - UI
+  - UID
+definition: A set of characters used as a code that is unique in the context or the system for which it is created. It serves as a means of identification and reference (often instead of a name) for an entity, person, thing, function, procedure, activity, variable, or body of data.

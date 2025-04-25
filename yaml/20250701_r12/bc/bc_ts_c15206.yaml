@@ -1,0 +1,15 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C15206
+ncitCode: C15206
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15206
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Clinical Study
+synonyms:
+  - study
+  - Clinical Research
+  - Clinical Studies
+  - Study
+definition: Research conducted with human subjects or on material of human origin in which an investigator directly interacts with human subjects; includes development of new technologies, study of mechanisms of human diseases, therapy, clinical trials, epidemiologic, behavior, and health services research.

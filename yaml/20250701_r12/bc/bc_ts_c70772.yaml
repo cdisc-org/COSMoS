@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C70772
+ncitCode: C70772
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70772
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Knowledge Field
+synonyms:
+  - Content Area
+  - Field
+definition: A branch of knowledge.

@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C71610
+ncitCode: C71610
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71610
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Quotient
+definition: A quantity obtained by division.

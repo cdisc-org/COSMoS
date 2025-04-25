@@ -1,0 +1,38 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C85827
+ncitCode: C85827
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85827
+parentConceptId: C142450
+categories:
+  - Trial Summary
+shortName: Trial Secondary Objective
+synonyms:
+  - secondary objective
+  - OBJSEC
+  - Study Secondary Objective
+resultScales:
+  - Nominal
+definition: The auxiliary purpose of the trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Secondary Objective"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OBJSEC"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Percent reduction in the 3-month seizure frequency from baseline"

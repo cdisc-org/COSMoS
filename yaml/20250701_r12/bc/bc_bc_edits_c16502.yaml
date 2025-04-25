@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C16502
+ncitCode: C16502
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16502
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+shortName: Diagnostic Imaging Testing
+synonyms:
+  - Medical Imaging
+definition: Any method that uses a visual display of structural or functional patterns of organs or tissues for diagnostic evaluation.

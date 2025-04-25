@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C43513
+ncitCode: C43513
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C43513
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Keyword
+definition: A word or small set of words designed to convey the subject of a technical article.

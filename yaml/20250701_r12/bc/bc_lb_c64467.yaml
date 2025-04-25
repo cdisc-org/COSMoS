@@ -1,0 +1,48 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64467
+ncitCode: C64467
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64467
+parentConceptId: C74954
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Liver Function Tests
+shortName: Aspartate Aminotransferase Measurement
+synonyms:
+  - AST
+  - SGOT
+resultScales:
+  - Quantitative
+definition: A quantitative measurement of aspartate aminotransferase present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67365
+    ncitCode: C67365
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
+    shortName: Unit of Catalytic Activity Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

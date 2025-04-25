@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C15320
+ncitCode: C15320
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15320
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Study Design
+synonyms:
+  - Experiment Design
+  - Experimental Design
+  - Research Design
+definition: "A plan detailing how a study will be performed in order to represent the phenomenon under examination, to answer the research questions that have been asked, and defining the methods of data analysis. Study design is driven by research hypothesis being posed, study subject/population/sample available, logistics/resources: technology, support, networking, collaborative support, etc."

@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C42774
+ncitCode: C42774
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42774
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Title
+synonyms:
+  - Document Title
+definition: An official descriptive name of a document, e.g. the long name of a study protocol provided by the study sponsor.

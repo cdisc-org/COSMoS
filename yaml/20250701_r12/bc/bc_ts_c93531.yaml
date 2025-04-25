@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C93531
+ncitCode: C93531
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93531
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Citation Description
+definition: A bibliographical reference in an acceptable format.

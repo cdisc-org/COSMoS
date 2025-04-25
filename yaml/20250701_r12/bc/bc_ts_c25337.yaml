@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25337
+ncitCode: C25337
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25337
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Number
+synonyms:
+  - Numeric
+  - Numerical
+definition: A numeral or string of numerals expressing value, quantity, or identification.

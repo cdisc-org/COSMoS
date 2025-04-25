@@ -1,0 +1,62 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C48281
+ncitCode: C48281
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48281
+parentConceptId: C25257
+categories:
+  - Trial Summary
+shortName: Trial Phase
+synonyms:
+  - phase
+  - phase (of clinical development)
+  - TPHASE
+  - Trial Phase Classification
+resultScales:
+  - Nominal
+definition: "Clinical trials are broken into three or four phases: Phase I tests a new drug or treatment for safety in a small group; Phase II expands the study to a larger group of people; Phase III expands the study to an even larger group of people to measure whether the treatment actually benefits patients, and whether its benefits exceed its risks; and Phase IV takes place after the drug or treatment has been licensed and marketed."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Phase Classification"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "TPHASE"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "PHASE I TRIAL"
+      - "PHASE I/II TRIAL"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C15600"
+      - "C15693"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "CDISC CT"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2024-09-27"

@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C41184
+ncitCode: C41184
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41184
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Indication
+synonyms:
+  - Disease/Condition Indication
+  - INDC
+definition: "A sign, signal, circumstance, or symptom which serves to indicate or point out the cause, pathology, treatment, or issue of an attack of disease; the basis for initiation of a treatment for a disease or of a diagnostic test (causal, or symptomatic, or disease-specific indication)."

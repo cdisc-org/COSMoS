@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C50995
+ncitCode: C50995
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50995
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+shortName: Disease Response
+definition: The molecular/pathological and/or clinical changes that result from treatment. The changes may include eradication of detectable disease, stabilization of disease, or disease progression.

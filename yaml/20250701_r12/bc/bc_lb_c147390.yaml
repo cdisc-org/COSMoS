@@ -1,0 +1,50 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C147390
+ncitCode: C147390
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147390
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Macroscopic Blood Measurement
+synonyms:
+  - Visible Blood
+  - Macroscopic Blood
+  - MACROBLD
+resultScales:
+  - Ordinal
+definition: The determination of the amount or presence of macroscopic blood present in a sample.
+coding:
+  - code: 53963-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+      - "Stool"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

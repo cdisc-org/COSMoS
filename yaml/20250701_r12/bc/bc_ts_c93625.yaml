@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C93625
+ncitCode: C93625
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93625
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Planned Duration
+definition: The period of time over which the event or activity is intended to take place.

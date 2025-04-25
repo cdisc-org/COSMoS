@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C68617
+ncitCode: C68617
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68617
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: End Date
+synonyms:
+  - ENDAT
+  - Stop
+  - Stopping Date
+definition: The calendar date on which something is to terminate or did terminate.

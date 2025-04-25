@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C176376
+ncitCode: C176376
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176376
+parentConceptId: C70946
+categories:
+  - Trial Summary
+shortName: Study Contact Postal Address
+synonyms:
+  - CONMAIL
+  - Contact Mailing Address
+  - Study Contact Mailing Address
+resultScales:
+  - Nominal
+definition: A physical location used by a study contact for the purpose of receiving postal mail deliveries.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Contact Mailing Address"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "CONMAIL"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

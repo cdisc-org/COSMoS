@@ -1,0 +1,44 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49692
+ncitCode: C49692
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49692
+parentConceptId: C49695
+categories:
+  - Trial Summary
+shortName: Planned Subject Number
+synonyms:
+  - Target Accrual
+  - target enrollment
+  - Anticipated Enrollment
+  - Planned Enrollment
+  - Planned Number of Participants
+  - Planned Number of Subjects
+  - PLANSUB
+  - Target Enrollment
+  - Number of Study Subjects
+resultScales:
+  - Quantitative
+definition: The number of subjects entered in a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Planned Number of Subjects"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "PLANSUB"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: integer
+    exampleSet:
+      - "200"

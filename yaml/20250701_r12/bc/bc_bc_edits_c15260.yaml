@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C15260
+ncitCode: C15260
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15260
+categories:
+  - Immunology Tests
+  - Immunodiagnostic Procedure
+shortName: Immunodiagnostic Procedure
+definition: Method used to identify disease using laboratory techniques involving interaction of antigens with specific antibodies.

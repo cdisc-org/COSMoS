@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98703
+ncitCode: C98703
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98703
+parentConceptId: C49695
+categories:
+  - Trial Summary
+shortName: Actual Subject Number
+synonyms:
+  - ACTSUB
+  - Actual Number of Subjects
+resultScales:
+  - Quantitative
+definition: The actual number of subjects entered into a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Actual Number of Subjects"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "ACTSUB"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: integer
+    exampleSet:
+      - "304"

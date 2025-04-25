@@ -1,0 +1,39 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C163559
+ncitCode: C163559
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163559
+parentConceptId: C142450
+categories:
+  - Trial Summary
+shortName: Trial Exploratory Objective
+synonyms:
+  - exploratory objective
+  - Exploratory Objective
+  - OBJEXP
+  - Study Exploratory Objective
+resultScales:
+  - Nominal
+definition: The exploratory purpose of the trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Exploratory Objective"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OBJEXP"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Reduction in the 3-month seizure frequency from baseline"

@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25169
+ncitCode: C25169
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25169
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Route
+definition: A way of getting from one place to another; an established line of travel or access; the way a chemical or pollutant enters an organism after contact, particularly, the way of drug administration.

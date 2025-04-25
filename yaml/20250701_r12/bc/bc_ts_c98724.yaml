@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98724
+ncitCode: C98724
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98724
+parentConceptId: C70705
+categories:
+  - Trial Summary
+shortName: Exploratory Outcome Measure
+synonyms:
+  - EXPLORATORY OUTCOME MEASURE
+  - OUTMSEXP
+resultScales:
+  - Nominal
+definition: Exploratory measures that are used to evaluate and/or form hypotheses about the intervention outcome(s).
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Exploratory Outcome Measure"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OUTMSEXP"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "SEIZURE DURATION"

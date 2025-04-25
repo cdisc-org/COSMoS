@@ -1,0 +1,44 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64851
+ncitCode: C64851
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64851
+parentConceptId: C147128
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hormone Measurements
+  - Choriogonadotropin Measurements
+  - HCG Measurements
+shortName: Choriogonadotropin Beta Measurement
+synonyms:
+  - "beta-hCG"
+  - Choriogonadotropin Beta
+  - Pregnancy Test
+  - HCG
+resultScales:
+  - Ordinal
+definition: A determination of the presence of Choriogonadotropin Beta protein.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

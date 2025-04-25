@@ -1,0 +1,53 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98768
+ncitCode: C98768
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98768
+parentConceptId: C90372
+categories:
+  - Trial Summary
+shortName: Pharmacological Class of Investigational Therapy
+synonyms:
+  - PCLAS
+  - PCLASS
+  - Pharmacologic Class
+  - Study Product Pharmacologic Class
+resultScales:
+  - Nominal
+definition: The drug class of the therapy being investigated in the study or trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Pharmacologic Class"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "PCLAS"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Anti-epileptic Agent"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "N0000175753"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "MED-RT"

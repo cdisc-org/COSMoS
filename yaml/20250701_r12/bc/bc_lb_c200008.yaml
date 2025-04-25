@@ -1,0 +1,50 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C200008
+ncitCode: C200008
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C200008
+parentConceptId: C51946
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Erythrocyte Counts
+  - Blood Cell Count Ratio Measurements
+shortName: Polychromatic Erythrocytes to Erythrocytes Ratio Measurement
+synonyms:
+  - Immature Erythrocytes/Erythrocytes
+  - Polychromatic Erythrocytes/Erythrocytes
+  - Reticulocytes/Erythrocytes
+  - PCERBC
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of the polychromatic erythrocytes to total erythrocytes in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

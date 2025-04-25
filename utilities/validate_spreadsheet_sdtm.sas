@@ -2,12 +2,13 @@
 %include "&root/utilities/config.sas";
 
 %let _debug=0;
-%let print_html=1;
+%let print_html=0;
 
 title01 "&now";
 
 
 /* Package 1*/
+
 %let excel_file=&root/curation/BC_Package_2022_10_26.xlsx;
 
 %ReadExcel(file=&excel_file, range=Conceptual VS BC$, dsout=bc1_1);
@@ -18,6 +19,7 @@ title01 "&now";
 
 
 /* Package 2 */
+
 %let excel_file=&root/curation/BC_Package_2023_02_13.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC LB (Common))$, dsout=bc2_1);
@@ -30,6 +32,7 @@ title01 "&now";
 
 
 /* Package 3 */
+
 %let excel_file=&root/curation/BC_Package_2023_03_31.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_DM)$, dsout=bc3_1);
@@ -47,6 +50,7 @@ title01 "&now";
 
 
 /* Package 4 - Oncology */
+
 %let excel_file=&root/curation/BC_Package_R4_Oncology_RECIST11_2023_07_06.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC TU_TR_RS)$, dsout=bc4_onco_1);
@@ -57,6 +61,7 @@ title01 "&now";
 
 
 /* Package 4 - Non-oncology*/
+
 %let excel_file=&root/curation/BC_Package_R4_2023_07_06.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_AE)$, dsout=bc4_1);
@@ -86,6 +91,7 @@ title01 "&now";
 
 
 /* Package 5 - */
+
 %let excel_file=&root/curation/BC_Package_R5_LZZT.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_AE_EDITS)$, dsout=bc5_1); 
@@ -112,6 +118,7 @@ title01 "&now";
 
 
 /* Package 6 - */
+
 %let excel_file=&root/curation/BC_Package_R6_LZZT.xlsx;
 
 %ReadExcel(file=&excel_file, range=%str(BC_CM_EDITS)$, dsout=bc6_01); 
@@ -146,6 +153,7 @@ title01 "&now";
 
 
 /* Package 7 - */
+
 %let excel_file=&root/curation/BC_Package_R7_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm7_01, drop=%str(drop=length significant_digits format));
@@ -166,6 +174,7 @@ title01 "&now";
 
 
 /* Package 8 - */
+
 %let excel_file=&root/curation/BC_Package_R8_LUGANO_RS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RS)$, dsout=bc8_01, drop=%str(drop=change_history)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm8_01, drop=%str(drop=length significant_digits format));
@@ -186,6 +195,7 @@ title01 "&now";
 
 
 /* Package 9 - */
+
 %let release=9;
 %let excel_file=&root/curation/BC_Package_R9_public_review_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Corrections)$, dsout=bc9_01, drop=%str(drop=History_of_Change)); 
@@ -193,6 +203,7 @@ title01 "&now";
 
 
 /* Package 10 - */
+
 %let release=10;
 %let excel_file=&root/curation/BC_Package_R10.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RP)$, dsout=bc10_01, drop=%str(drop=History_of_Change)); 
@@ -215,6 +226,7 @@ title01 "&now";
 
 
 /* Package 11 - */
+
 %let release=11;
 %let excel_file=&root/curation/BC_Package_R11_BC_Lindus Health.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Breast_Cancer)$, dsout=bc11_01, drop=%str(drop=change_history)); 
@@ -242,6 +254,33 @@ title01 "&now";
 
 %let excel_file=&root/curation/BC_Package_R11_AE_Edit.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_AE)$, dsout=sdtm11_07, drop=%str(drop=length significant_digits format)); 
+
+
+/* Package 12 - */
+
+%let release=12;
+%let excel_file=&root/curation/draft/package12/R12_6MWT.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_6MWT)$, dsout=bc12_01); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_6MWT)$, dsout=sdtm12_01, drop=%str(drop=length significant_digits format change_history)); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Test_Occurrence)$, dsout=bc12_02); 
+%ReadExcel(file=&excel_file, range=%str(BC_BRTHDTC)$, dsout=bc12_03); 
+%ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc12_04); 
+
+%let excel_file=&root/curation/draft/package12/R12_LB.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_05); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm12_05, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/package12/R12_SDTM_Misc.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_brthdtc_new)$, dsout=sdtm12_06, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_linking_phrase_edits)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_06); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_08, drop=%str(drop=length significant_digits format)); 
+
+
 
 /************************************************************************************************************************/
 

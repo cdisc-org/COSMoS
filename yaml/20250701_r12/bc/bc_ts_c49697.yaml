@@ -1,0 +1,43 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49697
+ncitCode: C49697
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49697
+parentConceptId: C70705
+categories:
+  - Trial Summary
+shortName: Trial Length
+synonyms:
+  - LENGTH
+resultScales:
+  - Temporal
+definition: The anticipated length of a clinical trial measured as a unit of time.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Length"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "LENGTH"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: duration
+    exampleSet:
+      - "P93D"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 8601"

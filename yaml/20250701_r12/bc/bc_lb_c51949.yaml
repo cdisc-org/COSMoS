@@ -1,0 +1,49 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C51949
+ncitCode: C51949
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51949
+parentConceptId: C51948
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+  - White Blood Cell Counts
+shortName: Lymphocyte Count
+synonyms:
+  - Lymphocytes
+resultScales:
+  - Quantitative
+definition: The determination of the number of lymphocytes in a blood sample.
+coding:
+  - code: 26474-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67391
+    ncitCode: C67391
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

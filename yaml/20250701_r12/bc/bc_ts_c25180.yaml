@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25180
+ncitCode: C25180
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25180
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Indicator
+definition: An event, entity or condition that typically characterizes a prescribed environment or situation and determines or aids in determining whether certain stated circumstances exist or criteria are satisfied.

@@ -269,7 +269,7 @@ proc fcmp outlib=macros.funcs.python;
     rc = py7.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
   endsub;
   
-run;
+quit;
 
 /* Test the functions */
 

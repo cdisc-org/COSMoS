@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C71492
+ncitCode: C71492
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71492
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Sampling Method
+synonyms:
+  - Sampling Design
+  - Sampling Technique
+definition: Sampling Method

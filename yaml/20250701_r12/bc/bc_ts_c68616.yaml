@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C68616
+ncitCode: C68616
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68616
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Start Date
+synonyms:
+  - STDAT
+  - Start
+  - Starting Date
+definition: The calendar date on which something is to start or did start.

@@ -1,0 +1,44 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C115801
+ncitCode: C115801
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115801
+parentConceptId: C115409
+categories:
+  - QRS
+  - Functional Tests
+  - 6MWT
+  - 6 Minute Walk Functional Test
+  - Six Minute Walk
+shortName: "6MWT - Distance at 2 Minutes"
+synonyms:
+  - SIXMW102
+  - "SIXMW1-Distance at 2 Minutes"
+resultScales:
+  - Quantitative
+definition: 6 Minute Walk Test (6MWT) Distance at 2 minutes.
+dataElementConcepts:
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: integer
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "meter"
+  - conceptId: C93300
+    ncitCode: C93300
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93300
+    shortName: Assistive Device
+    dataType: string
+    exampleSet:
+      - "cane"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

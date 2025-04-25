@@ -1,0 +1,16 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C115789
+ncitCode: C115789
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115789
+parentConceptId: C81250
+categories:
+  - QRS
+  - Research or Clinical Assessment Tools
+  - Functional Tests
+shortName: 6 Minute Walk Functional Test
+synonyms:
+  - 6MWT
+  - SIXMW1
+  - SIX MINUTE WALK
+definition: "A standardized rating scale developed by Bruno Blake in 1963, which is a performance-based evaluation of functional exercise capacity in subjects with chronic respiratory disease and heart failure, as well as other populations such as healthy older adults and people suffering from fibromyalgia and scleroderma. This functional test contains 6 items and measures the distance an individual is able to walk over a total of six minutes on a hard, flat surface."

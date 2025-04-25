@@ -1,0 +1,45 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C92249
+ncitCode: C92249
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C92249
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Cotinine Measurement
+synonyms:
+  - Cotinine
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of cotinine present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "nmol/L"
+      - "ug/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
+      - "Hair"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

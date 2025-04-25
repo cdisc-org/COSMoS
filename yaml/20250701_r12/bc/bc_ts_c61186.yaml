@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C61186
+ncitCode: C61186
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C61186
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Applicant
+definition: A person who requests or seeks something such as assistance or employment or admission.

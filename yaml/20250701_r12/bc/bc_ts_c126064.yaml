@@ -1,0 +1,59 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126064
+ncitCode: C126064
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126064
+parentConceptId: C15787
+categories:
+  - Trial Summary
+shortName: Observational Model
+synonyms:
+  - OBSMODEL
+resultScales:
+  - Nominal
+definition: "The trial design developed to compare biomedical and/or health outcomes in pre-defined and non-assigned groups of individuals."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Observational Model"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OBSMODEL"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "CASE ONLY"
+      - "COHORT"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C15362"
+      - "C15208"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "CDISC CT"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2024-09-27"

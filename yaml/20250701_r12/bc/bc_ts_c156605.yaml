@@ -1,0 +1,60 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C156605
+ncitCode: C156605
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156605
+parentConceptId: C25714
+categories:
+  - Trial Summary
+shortName: Study Data Tabulation Model Version
+synonyms:
+  - SDTM Version
+  - SDTMVER
+resultScales:
+  - Nominal
+definition: The version of the CDISC Study Data Tabulation Model that is being used in the study submission.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "SDTM Version"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SDTMVER"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "3.3"
+      - "3.4"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C161437"
+      - "C189638"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "CDISC CT"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2024-09-27"

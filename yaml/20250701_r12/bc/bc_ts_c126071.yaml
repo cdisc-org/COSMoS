@@ -1,0 +1,34 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126071
+ncitCode: C126071
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126071
+parentConceptId: C68805
+categories:
+  - Trial Summary
+shortName: Resubmission Letter
+synonyms:
+  - RESUBLTR
+resultScales:
+  - Nominal
+definition: An alphabetic character that describes the incremental order of trial submissions or resubmissions.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Resubmission Letter"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "RESUBLTR"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

@@ -1,0 +1,41 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C170598
+ncitCode: C170598
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170598
+parentConceptId: C74786
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Endocrine Tests
+  - Hormone Measurements
+shortName: Free Thyroxine Index
+synonyms:
+  - T4FRIDX
+resultScales:
+  - Quantitative
+definition: A measurement of the thyroid status (function, disease diagnosis, or therapy effectiveness) in a biological specimen. This is calculated by a mathematical formula that takes into account the total thyroxine and unbound thyroxine binding globulins.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,44 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49694
+ncitCode: C49694
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49694
+parentConceptId: C49695
+categories:
+  - Trial Summary
+shortName: Planned Maximum Age of Subjects
+synonyms:
+  - AGEMAX
+  - Maximum Age
+resultScales:
+  - Temporal
+definition: The anticipated maximum age of the subjects to be entered in a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Planned Maximum Age of Subjects"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "AGEMAX"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: duration
+    exampleSet:
+      - "P70Y"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 8601"

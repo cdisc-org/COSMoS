@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C19238
+ncitCode: C19238
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19238
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Diagnostic, Therapeutic, or Research Equipment
+synonyms:
+  - Diagnostic, Therapeutic, and Research Equipment
+  - Equipment
+  - Hardware
+definition: A manufactured object that is used to perform diagnostic, therapeutic or research activities.

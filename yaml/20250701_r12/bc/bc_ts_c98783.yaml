@@ -1,0 +1,43 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98783
+ncitCode: C98783
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98783
+parentConceptId: C25330
+categories:
+  - Trial Summary
+shortName: Stable Disease Minimum Duration
+synonyms:
+  - SDMDUR
+resultScales:
+  - Temporal
+definition: The minimum amount of time required to meet the definition of stable disease.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Stable Disease Minimum Duration"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SDMDUR"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: duration
+    exampleSet:
+      - "P1Y"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 8601"

@@ -1,0 +1,50 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C214750
+ncitCode: C214750
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C214750
+parentConceptId: C42614
+categories:
+  - Trial Summary
+shortName: Challenge Agent Name
+synonyms:
+  - CAGTNAM
+resultScales:
+  - Nominal
+definition: "The name of the non-investigational medicinal product (NIMP) given to trial subjects to produce a physiological response that is necessary before the pharmacological action of the investigational medicinal product can be assessed. [After Recommendations from the expert group on clinical trials for the implementation of Regulation (EU) No 536/2014' dd 28 June 2017]"
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Challenge Agent Name"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "CAGTNAM"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "ALBUTEROL"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "SNOMED"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2018-09-01"

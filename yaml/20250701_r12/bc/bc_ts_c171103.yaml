@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C171103
+ncitCode: C171103
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171103
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Study Status
+definition: The status of a study or trial.

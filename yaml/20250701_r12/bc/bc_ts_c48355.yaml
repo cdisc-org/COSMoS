@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C48355
+ncitCode: C48355
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48355
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Sponsor
+synonyms:
+  - Applicant
+definition: A person or organization that supports or champions something.

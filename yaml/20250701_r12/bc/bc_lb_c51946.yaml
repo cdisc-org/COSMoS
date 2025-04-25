@@ -1,0 +1,47 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C51946
+ncitCode: C51946
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51946
+parentConceptId: C28133
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+shortName: Erythrocyte Count
+synonyms:
+  - RBC
+  - Red Blood Cells
+resultScales:
+  - Quantitative
+definition: The determination of the number of erythrocytes in a biospecimen.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C67391
+    ncitCode: C67391
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67391
+    shortName: Unit of Number Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Urine"
+      - "Stool"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

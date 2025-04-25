@@ -1,0 +1,47 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C74686
+ncitCode: C74686
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74686
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Occult Blood Measurement
+synonyms:
+  - Occult Blood
+  - OCCBLD
+resultScales:
+  - Ordinal
+  - Quantitative
+definition: A measurement of the blood in body products such as a urine or stool sample, not detectable on gross examination.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Stool"
+      - "Gastric Fluid"
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

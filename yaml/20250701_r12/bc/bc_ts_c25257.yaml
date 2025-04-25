@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25257
+ncitCode: C25257
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25257
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Phase
+synonyms:
+  - Phased
+  - Stage
+definition: A distinguishable part, a stage in a series of events or in a process of development, e.g. any of the varying aspects or stages in course of a disease; a fraction of a cycle.

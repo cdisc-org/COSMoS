@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C135009
+ncitCode: C135009
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135009
+parentConceptId: C25364
+categories:
+  - Trial Summary
+shortName: Sponsor Study Reference Identifier
+synonyms:
+  - Sponsor's Study Reference ID
+  - SPREFID
+resultScales:
+  - Nominal
+definition: The reference identifier that is assigned by the sponsor and by which the study is known to the sponsor.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Sponsor's Study Reference ID"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SPREFID"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

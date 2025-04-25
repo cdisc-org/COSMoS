@@ -1,0 +1,43 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C139276
+ncitCode: C139276
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139276
+parentConceptId: C93625
+categories:
+  - Trial Summary
+shortName: Planned Treatment Duration
+synonyms:
+  - PTRTDUR
+resultScales:
+  - Temporal
+definition: The period of time during which the treatment is intended to be given.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Planned Treatment Duration"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "PTRTDUR"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: duration
+    exampleSet:
+      - "P30D"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 8601"

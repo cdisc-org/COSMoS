@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98775
+ncitCode: C98775
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98775
+parentConceptId: C71610
+categories:
+  - Trial Summary
+shortName: Randomization Quotient
+synonyms:
+  - RANDQT
+resultScales:
+  - Quantitative
+definition: The number of planned subjects to be exposed to investigational therapy, independent of dose or other factors, divided by the total number of planned subjects.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Randomization Quotient"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "RANDQT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: decimal
+    exampleSet:
+      - "0.67"

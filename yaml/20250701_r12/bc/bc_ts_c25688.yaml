@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25688
+ncitCode: C25688
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25688
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Status
+definition: A condition or state at a particular time.

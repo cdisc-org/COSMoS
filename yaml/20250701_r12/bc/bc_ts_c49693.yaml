@@ -1,0 +1,44 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49693
+ncitCode: C49693
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49693
+parentConceptId: C49695
+categories:
+  - Trial Summary
+shortName: Planned Minimum Age of Subjects
+synonyms:
+  - AGEMIN
+  - Minimum Age
+resultScales:
+  - Temporal
+definition: The anticipated minimum age of the subjects to be entered in a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Planned Minimum Age of Subjects"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "AGEMIN"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: duration
+    exampleSet:
+      - "P18M"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 8601"

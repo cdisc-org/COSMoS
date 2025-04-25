@@ -1,0 +1,46 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64799
+ncitCode: C64799
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64799
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+shortName: Erythrocyte Mean Corpuscular Volume
+synonyms:
+  - RBC Mean Corpuscular Volume
+  - MCV
+resultScales:
+  - Quantitative
+definition: The mean cell volume is the average volume of a red blood cell. This is a calculated value derived from the hematocrit and the red cell count.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "fL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Red Blood Cells"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

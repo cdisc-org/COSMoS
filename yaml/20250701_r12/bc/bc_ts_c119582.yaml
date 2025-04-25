@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C119582
+ncitCode: C119582
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119582
+parentConceptId: C16275
+categories:
+  - Trial Summary
+shortName: ECG T Wave Algorithm
+synonyms:
+  - ECG Twave Algorithm
+  - EGTWVALG
+resultScales:
+  - Nominal
+definition: The defined procedure used to identify the end of the T wave.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "ECG Twave Algorithm"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "EGTWVALG"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

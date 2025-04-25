@@ -1,0 +1,25 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49236
+ncitCode: C49236
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49236
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Therapeutic Procedure
+synonyms:
+  - Treatment
+  - therapy
+  - treatment
+  - treatment or therapy
+  - treatment_or_therapy
+  - TREAT
+  - any therapy
+  - any_therapy
+  - Therapeutic Interventions
+  - Therapeutic Method
+  - Therapeutic Technique
+  - Therapy
+  - TX
+  - Therapeutic
+definition: Medical care intended to treat or cure a condition or lessen its symptoms. This includes the administration of drugs, surgical procedures, physical or psychotherapy, or the use of therapeutic devices.

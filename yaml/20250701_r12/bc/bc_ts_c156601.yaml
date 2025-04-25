@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C156601
+ncitCode: C156601
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156601
+parentConceptId: C70705
+categories:
+  - Trial Summary
+shortName: Additional Outcome Measure
+synonyms:
+  - OUTMSADD
+resultScales:
+  - Nominal
+definition: Additional key measures that will be used to evaluate the intervention(s) or, for observational studies, that are a focus of the study, but which are not considered primary or secondary outcome measures.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Additional Outcome Measure"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OUTMSADD"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "SEIZURE DURATION"

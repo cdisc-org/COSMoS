@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C20189
+ncitCode: C20189
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C20189
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Property or Attribute
+definition: A distinguishing quality or prominent aspect of a person, object, action, process, or substance.

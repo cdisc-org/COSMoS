@@ -1,0 +1,42 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C147406
+ncitCode: C147406
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147406
+parentConceptId: C49237
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Nornicotine Measurement
+synonyms:
+  - Nornicotine
+resultScales:
+  - Quantitative
+definition: The determination of the amount of nornicotine present in a sample.
+coding:
+  - code: 33917-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C64571
+    ncitCode: C64571
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64571
+    shortName: Unit of Mass Concentration
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

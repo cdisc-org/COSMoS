@@ -1,0 +1,106 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: EGREPLTR
+domain: TS
+shortName: "ECG Replicates On-Treatment (TS)"
+source: TS.TSPARMCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C119566
+variables:
+  - name: TSPARMCD
+    dataElementConceptId: C83445
+    isNonStandard: false
+    codelist:
+      conceptId: C66738
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66738
+      submissionValue: TSPARMCD
+    assignedTerm:
+      conceptId: C119566
+      value: "EGREPLTR"
+    role: Topic
+    relationship:
+      subject: TSPARMCD
+      linkingPhrase: is the code for
+      predicateTerm: IS_DECODED_BY
+      object: TSPARM
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: TSPARM
+    dataElementConceptId: C49691
+    isNonStandard: false
+    codelist:
+      conceptId: C67152
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67152
+      submissionValue: TSPARM
+    assignedTerm:
+      conceptId: C119566
+      value: "ECG Replicates On-Treatment"
+    role: Synonym Qualifier
+    relationship:
+      subject: TSPARM
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TSPARMCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: TSVAL
+    dataElementConceptId: C83447
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Result Qualifier
+    relationship:
+      subject: TSVAL
+      linkingPhrase: is the value of the property identified by
+      predicateTerm: IS_VALUE_OF
+      object: TSPARMCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: TSVALCD
+    dataElementConceptId: C117458
+    isNonStandard: false
+    role: Result Qualifier
+    relationship:
+      subject: TSVALCD
+      linkingPhrase: is the code for
+      predicateTerm: IS_DECODED_BY
+      object: TSVAL
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: TSVCDREF
+    dataElementConceptId: C117460
+    isNonStandard: false
+    codelist:
+      conceptId: C66788
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66788
+      submissionValue: DICTNAM
+    role: Result Qualifier
+    relationship:
+      subject: TSVALCDREF
+      linkingPhrase: is the name of the reference terminology for
+      predicateTerm: IS_REFERENCE_TERMINOLOGY FOR
+      object: TSVALCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: TSVCDVER
+    dataElementConceptId: C117461
+    isNonStandard: false
+    role: Result Qualifier
+    relationship:
+      subject: TSVALCDVER
+      linkingPhrase: is the version of the reference terminology in
+      predicateTerm: QUALIFIES
+      object: TSVALCDREF
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 

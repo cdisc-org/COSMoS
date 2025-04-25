@@ -1,0 +1,51 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64796
+ncitCode: C64796
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64796
+parentConceptId: C49286
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+shortName: Hematocrit Measurement
+synonyms:
+  - Hematocrit
+  - Packed Cell Volume
+  - PCV
+  - Erythrocyte Volume Fraction
+  - EVF
+resultScales:
+  - Quantitative
+definition: "A measure of the volume of red blood cells expressed as a percentage of the total blood volume. Normal in males is 43-49%, in females 37-43%."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C69174
+    ncitCode: C69174
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C69174
+    shortName: Unit of Volume Fraction
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Urine"
+      - "Body fluid"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

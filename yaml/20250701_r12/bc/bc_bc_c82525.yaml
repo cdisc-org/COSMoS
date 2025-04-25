@@ -1,0 +1,30 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C82525
+ncitCode: C82525
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+parentConceptId: C82438
+categories:
+  - Test Occurrence
+  - Test Performed
+shortName: Test Occurrence
+synonyms:
+  - PERF
+  - Test Occurrence
+resultScales:
+  - Nominal
+definition: An indication or description that a test has occurred.
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

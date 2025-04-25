@@ -1,0 +1,19 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C172240
+ncitCode: C172240
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172240
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Clinicaltrials.gov Identifier
+synonyms:
+  - clinical trial id
+  - clinical_trial_id
+  - Trial ID
+  - Clinicaltrials.gov ID
+  - Clinicaltrials.gov NCT Identifier
+  - Clinicaltrials.gov NCT Number
+  - NCT ID
+  - NCT Number
+definition: The unique alphanumeric identifier for a trial as assigned by the Clinicaltrials.gov Protocol Registration and Results System (PRS).

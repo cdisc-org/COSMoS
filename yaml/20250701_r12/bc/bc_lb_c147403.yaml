@@ -1,0 +1,49 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C147403
+ncitCode: C147403
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147403
+parentConceptId: C75342
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Drug Class Measurements
+  - CNS Stimulant Drug Measurements
+shortName: Nicotine Measurement
+synonyms:
+  - Nicotine
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of nicotine present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mg/L"
+      - "ug/L"
+      - "nmol/L"
+      - "umol/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
+      - "Hair"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

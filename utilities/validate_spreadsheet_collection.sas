@@ -2,7 +2,7 @@
 %include "&root/utilities/config.sas";
 
 %let _debug=0;
-%let print_html=1;
+%let print_html=0;
 
 title01 "&now";
 

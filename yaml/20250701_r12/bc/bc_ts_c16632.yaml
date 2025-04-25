@@ -1,0 +1,15 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C16632
+ncitCode: C16632
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16632
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Geographic Area
+synonyms:
+  - Geographic Region
+  - Area
+  - Geographic Location
+  - Region
+definition: Any demarcated area of the Earth; may be determined by both natural and human boundaries.

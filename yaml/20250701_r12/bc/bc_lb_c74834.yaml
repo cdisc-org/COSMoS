@@ -1,0 +1,48 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C74834
+ncitCode: C74834
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74834
+parentConceptId: C74804
+categories:
+  - Laboratory Tests
+  - Protein or Enzyme Measurements
+  - Chemistry Tests
+shortName: Interleukin 6 Measurement
+synonyms:
+  - INTLK6
+  - Interleukin 6
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of interleukin 6 present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "ng/L"
+      - "pg/L"
+      - "Arbitrary U/mL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Body fluid"
+      - "CSF"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
