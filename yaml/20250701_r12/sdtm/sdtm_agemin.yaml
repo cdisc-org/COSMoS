@@ -21,7 +21,7 @@ variables:
     role: Topic
     relationship:
       subject: TSPARMCD
-      linkingPhrase: is the code for
+      linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
       object: TSPARM
     mandatoryVariable: false
@@ -37,7 +37,7 @@ variables:
     assignedTerm:
       conceptId: C49693
       value: "Planned Minimum Age of Subjects"
-    role: Synonym Qualifier
+    role: Qualifier
     relationship:
       subject: TSPARM
       linkingPhrase: decodes the value in
@@ -48,7 +48,7 @@ variables:
   - name: TSVAL
     dataElementConceptId: C83447
     isNonStandard: false
-    role: Result Qualifier
+    role: Qualifier
     relationship:
       subject: TSVAL
       linkingPhrase: is the value of the property identified by
@@ -60,11 +60,11 @@ variables:
   - name: TSVCDREF
     dataElementConceptId: C117460
     isNonStandard: false
-    role: Result Qualifier
+    role: Qualifier
     relationship:
-      subject: TSVALCDREF
+      subject: TSVCDREF
       linkingPhrase: is the name of the reference terminology for
-      predicateTerm: IS_REFERENCE_TERMINOLOGY FOR
+      predicateTerm: IS_REFERENCE_TERMINOLOGY_FOR
       object: TSVALCD
     mandatoryVariable: false
     mandatoryValue: false

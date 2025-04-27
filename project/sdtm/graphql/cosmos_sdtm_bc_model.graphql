@@ -88,6 +88,9 @@ enum LinkingPhraseEnum
     is_a_grouping_of_values_in
     is_the_textual_description_of_the_intended_dose_regimen_for
     is_the_reason_for_stopping_administration_of
+    is_the_value_of_the_property_identified_by
+    is_the_name_of_the_reference_terminology_for
+    is_the_version_of_the_reference_terminology_in
   }
 
 enum OriginSourceEnum
@@ -143,6 +146,8 @@ enum PredicateTermEnum
     PERFORMS
     QUALIFIES
     SPECIFIES
+    IS_VALUE_OF
+    IS_REFERENCE_TERMINOLOGY_FOR
   }
 
 enum RoleEnum

@@ -170,6 +170,9 @@ class LinkingPhraseEnum(str, Enum):
     is_a_grouping_of_values_in = "is a grouping of values in"
     is_the_textual_description_of_the_intended_dose_regimen_for = "is the textual description of the intended dose regimen for"
     is_the_reason_for_stopping_administration_of = "is the reason for stopping administration of"
+    is_the_value_of_the_property_identified_by = "is the value of the property identified by"
+    is_the_name_of_the_reference_terminology_for = "is the name of the reference terminology for"
+    is_the_version_of_the_reference_terminology_in = "is the version of the reference terminology in"
 
 
 class PredicateTermEnum(str, Enum):
@@ -202,6 +205,8 @@ class PredicateTermEnum(str, Enum):
     PERFORMS = "PERFORMS"
     QUALIFIES = "QUALIFIES"
     SPECIFIES = "SPECIFIES"
+    IS_VALUE_OF = "IS_VALUE_OF"
+    IS_REFERENCE_TERMINOLOGY_FOR = "IS_REFERENCE_TERMINOLOGY_FOR"
 
 
 class OriginTypeEnum(str, Enum):

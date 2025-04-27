@@ -616,6 +616,15 @@
         },
         {
           "text": "is the reason for stopping administration of"
+        },
+        {
+          "text": "is the value of the property identified by"
+        },
+        {
+          "text": "is the name of the reference terminology for"
+        },
+        {
+          "text": "is the version of the reference terminology in"
         }
       ]
     },
@@ -710,6 +719,12 @@
         },
         {
           "text": "SPECIFIES"
+        },
+        {
+          "text": "IS_VALUE_OF"
+        },
+        {
+          "text": "IS_REFERENCE_TERMINOLOGY_FOR"
         }
       ]
     },
@@ -1561,9 +1576,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-02-04T16:39:11",
-  "source_file_size": 14585,
-  "generation_date": "2025-02-12T13:35:15",
+  "source_file_date": "2025-04-27T11:03:28",
+  "source_file_size": 14801,
+  "generation_date": "2025-04-27T11:04:05",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

@@ -1,12 +1,12 @@
 packageDate: "2025-07-01"
 packageType: sdtm
-datasetSpecializationId: SRNCAIND
+datasetSpecializationId: HEGRDMTH
 domain: TS
-shortName: SUSAR Reporting to NCA Indicator (TS)
+shortName: Holter ECG Read Method (TS)
 source: TS.TSPARMCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
-biomedicalConceptId: C126074
+biomedicalConceptId: C119564
 variables:
   - name: TSPARMCD
     dataElementConceptId: C83445
@@ -16,8 +16,8 @@ variables:
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66738
       submissionValue: TSPARMCD
     assignedTerm:
-      conceptId: C126074
-      value: "SRNCAIND"
+      conceptId: C119564
+      value: "EGRDMETH"
     role: Topic
     relationship:
       subject: TSPARMCD
@@ -35,8 +35,8 @@ variables:
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67152
       submissionValue: TSPARM
     assignedTerm:
-      conceptId: C126074
-      value: "SUSAR Reporting to NCA Indicator"
+      conceptId: C119564
+      value: "ECG Read Method"
     role: Qualifier
     relationship:
       subject: TSPARM
@@ -49,12 +49,9 @@ variables:
     dataElementConceptId: C83447
     isNonStandard: false
     codelist:
-      conceptId: C66742
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
-      submissionValue: NY
-    valueList:
-      - "N"
-      - "Y"
+      conceptId: C184330
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C184330
+      submissionValue: HEGRDMTH
     role: Qualifier
     relationship:
       subject: TSVAL

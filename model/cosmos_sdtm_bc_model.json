@@ -164,7 +164,10 @@
                 "is the severity of the toxicity in",
                 "is a grouping of values in",
                 "is the textual description of the intended dose regimen for",
-                "is the reason for stopping administration of"
+                "is the reason for stopping administration of",
+                "is the value of the property identified by",
+                "is the name of the reference terminology for",
+                "is the version of the reference terminology in"
             ],
             "title": "LinkingPhraseEnum",
             "type": "string"
@@ -231,7 +234,9 @@
                 "PERFORMED",
                 "PERFORMS",
                 "QUALIFIES",
-                "SPECIFIES"
+                "SPECIFIES",
+                "IS_VALUE_OF",
+                "IS_REFERENCE_TERMINOLOGY_FOR"
             ],
             "title": "PredicateTermEnum",
             "type": "string"
