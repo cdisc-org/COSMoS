@@ -52,6 +52,17 @@ proc fcmp outlib=macros.funcs.python;
     else return ("");
   endsub;
 
+  function get_term_value(codelist_conceptId $, codedValue_conceptId $) $;
+    length codedValue $200;
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
+    rc=hh.definedata("codedValue");
+    rc=hh.definekey("codelist_conceptId", "codedValue_conceptId");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(codedValue);
+    else return ("");
+  endsub;
+
   function get_term_preferred_term(codelist_conceptId $, codedValue_conceptId $) $;
     length preferredTerm $200;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
@@ -293,25 +304,16 @@ data test;
   end;
 run;
 
-ods listing close;
-ods html5 file="&root/utilities/create_functions.html";
-
-  proc print data=test;
-    title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
-    var ccode status ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
-  run;
-
-ods html5 close;
-ods listing;
-
-
-data codelists;
-  exp_codelist_SubmissionValue="PKUDUG";
-  exp_term="C119365";
-  codedValue_conceptId = get_term_code("C128686", "g/mL/ug");
-  codedValue_preferred = get_term_preferred_term("C128686", "C119365");
-  codelist_SubmValue = get_codelist_submissionvalue("C128686");
-  codelist_Extensible = get_codelist_extensible("C128686");
+data codelists1;
+  codelist_code="C128686";
+  codelist="PKUDUG";
+  codelist_SubmValue = get_codelist_submissionvalue(codelist_code);
+  term="g/mL/ug";
+  term_code="C119365";
+  codedValue_conceptId = get_term_code(codelist_code, term);
+  codedValue = get_term_value(codelist, term_code);
+  codedValue_preferred = get_term_preferred_term(codelist_code, term_code);
+  codelist_Extensible = get_codelist_extensible(codelist_code);
 
   codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
   codelist_Extensible_yes = get_codelist_extensible("C100129");
@@ -320,6 +322,24 @@ data codelists;
   codelist_Extensible_no = get_codelist_extensible("C141657");
 
   put (_all_) (=/) ;
+  output;
+  
+run;
+
+
+data codelists2;
+  codelist="C66797";
+  codelist_SubmValue = get_codelist_submissionvalue(codelist);
+  term="INCLUSION";
+  term_code="C25532";
+  codedValue = get_term_value(codelist, term_code);
+  codedValue_conceptId = get_term_code(codelist, term);
+  codedValue_preferred = get_term_preferred_term(codelist, term_code);
+  codelist_Extensible = get_codelist_extensible(codelist);
+
+  put (_all_) (=/) ;
+  output;
+  
 run;
 
 data relationships;
@@ -334,4 +354,29 @@ data relationships;
   existnot3 = exists_predicaterm_linkingphrase("", "");
 
   put (_all_) (=/) ;
+  output;
 run;
+
+ods listing close;
+ods html5 file="&root/utilities/create_functions.html";
+
+  proc print data=test;
+    title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
+    var ccode status ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
+  run;
+
+  proc print data=codelists1;
+    title01 "Test Functions - codelists - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+  proc print data=codelists2;
+    title01 "Test Functions - codelists - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+  proc print data=relationships;
+    title01 "Test Functions - relationships - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+
+ods html5 close;
+ods listing;

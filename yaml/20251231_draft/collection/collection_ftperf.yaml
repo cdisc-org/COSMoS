@@ -1,0 +1,54 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: FTPERF
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C82525
+items:
+  - name: FTCAT
+    variableName: FTCAT
+    prompt: Category
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "SIX MINUTE WALK"
+    sdtmTarget:
+      sdtmAnnotation: "FTCAT"
+      sdtmVariables:
+        -  "FTCAT"
+  - name: FTPERF
+    variableName: FTPERF
+    dataElementConceptId: C82525
+    questionText: Was the Six Minute Walk Test performed?
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+  - name: FTDAT
+    variableName: FTDAT
+    dataElementConceptId: C82515
+    questionText: Date of Assessment
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: date
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTDTC"
+      sdtmVariables:
+        -  "FTDTC"

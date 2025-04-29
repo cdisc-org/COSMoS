@@ -22,8 +22,17 @@ options mprint;
 %let TargetFolder=&root/yaml/&folder/collection;
 %let OverrideDate=%str(2025-12-31);
 
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_AE.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ae, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_AE), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_DM.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=dm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_DM), debug=0);
+
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=eg, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_EG), debug=0);
+
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_FT_6MWT.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ft, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_FT), debug=0);
 
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_IE.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ie, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_IE), debug=0);

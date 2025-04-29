@@ -1,0 +1,202 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: COLORURIN_VERTICAL
+shortName: Color Assessment in Urine (Vertical)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Vertical
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C64546
+sdtmDatasetSpecializationId: COLORURIN
+items:
+  - name: COLOR_LBCAT
+    variableName: LBCAT
+    prompt: 
+Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "URINALYSIS"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: COLOR_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: COLOR_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: COLOR_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: COLOR_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "URINE"
+      conceptId: C13283
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: COLOR_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: COLOR_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Color
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = COLOR"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: COLOR_LBORRESU
+    variableName: LBORRESU
+    dataElementConceptId: C48207
+    prompt: Unit
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 20
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRESU when LBTESTCD = COLOR"
+      sdtmVariables:
+        -  "LBORRESU"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: COLOR_LBMETHOD
+    variableName: LBMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBMETHOD"
+      sdtmVariables:
+        -  "LBMETHOD"
+  - name: COLOR_LBORNRLO
+    variableName: LBORNRLO
+    prompt: 
+Normal Range Lower Limit
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRLO"
+      sdtmVariables:
+        -  "LBORNRLO"
+  - name: COLOR_LBORNRHI
+    variableName: LBORNRHI
+    prompt: 
+Normal Range Upper Limit
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRHI"
+      sdtmVariables:
+        -  "LBORNRHI"
+  - name: COLOR_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

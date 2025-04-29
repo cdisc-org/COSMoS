@@ -1,0 +1,52 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: FRMSIZE_VERTICAL
+shortName: Frame Size (Vertical)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Vertical
+domain: VS
+biomedicalConceptId: C49680
+sdtmDatasetSpecializationId: FRMSIZE
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    questionText: What was the date of the measurement?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "VSDTC"
+      sdtmVariables:
+        -  "VSDTC"
+  - name: FRMSIZE_VSORRES
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    questionText: What was the result of the Frame Size Measurement?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    codelist:
+      submissionValue: SIZE
+      conceptId: C66733
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66733
+    valueList:
+      - displayValue: "Small"
+        value: "SMALL"
+      - displayValue: "Medium"
+        value: "MEDIUM"
+      - displayValue: "Large"
+        value: "LARGE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "VSORRES when VSTESTCD = FRMSIZE"
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"

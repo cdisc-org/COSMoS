@@ -268,8 +268,11 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_BRTHDTC)$, dsout=bc12_03); 
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc12_04); 
 
+%let excel_file=&root/curation/draft/package12/R12_BC_IE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_IE)$, dsout=bc12_05); 
+
 %let excel_file=&root/curation/draft/package12/R12_LB.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_05); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_06); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm12_05, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_SDTM_Misc.xlsx;
@@ -277,7 +280,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_linking_phrase_edits)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_06); 
+%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_07); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_08, drop=%str(drop=length significant_digits format)); 
 
 

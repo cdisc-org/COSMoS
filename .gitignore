@@ -22,3 +22,4 @@ create_*.xlsx
 validate_*.html
 validate_*.xlsx
 run_batch.*
+desktop.ini

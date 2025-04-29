@@ -1,0 +1,28 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: INCLEXCLYN
+shortName: Inclusion Exclusion Criteria Yes No
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: IE
+biomedicalConceptId: C83063
+items:
+  - name: IEYN
+    variableName: IEYN
+    questionText: Were all eligibility criteria met?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single

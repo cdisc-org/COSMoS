@@ -1,0 +1,116 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: QTCUNSAG_VERTICAL
+shortName: QTC Aggregate Method Unspecified (Vertical)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Vertical
+scenario: LOCAL READING
+domain: EG
+biomedicalConceptId: C174285
+sdtmDatasetSpecializationId: QTCUNSAG
+items:
+  - name: EGDAT
+    variableName: EGDAT
+    dataElementConceptId: C82515
+    questionText: What was the date of assessment?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGDTC"
+      sdtmVariables:
+        -  "EGDTC"
+  - name: EGMETHOD
+    variableName: EGMETHOD
+    dataElementConceptId: C82535
+    questionText: What was the method used for the ECG?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: EGMETHOD
+      conceptId: C71151
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
+    valueList:
+      - displayValue: "12 Lead Standard"
+        value: "12 LEAD STANDARD"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGMETHOD"
+      sdtmVariables:
+        -  "EGMETHOD"
+  - name: EGPOS
+    variableName: EGPOS
+    dataElementConceptId: C62164
+    questionText: What was the position of the subject during the ECG measurement?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Semi-Fowlers"
+        value: "SEMI-FOWLERS"
+      - displayValue: "Semi-Recumbent"
+        value: "SEMI-RECUMBENT"
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGPOS"
+      sdtmVariables:
+        -  "EGPOS"
+  - name: QTCUNSAG
+    variableName: EGORRES
+    dataElementConceptId: C25330
+    questionText: QTc Corr Method Unspecified, Aggregate Result
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGORRES when EGTESTCD = QTCUNSAG"
+      sdtmVariables:
+        -  "EGORRES"
+        -  "EGTEST"
+        -  "EGTESTCD"
+  - name: QTCUNSAGU
+    variableName: EGORRESU
+    dataElementConceptId: C42574
+    questionText: QTc Corr Method Unspecified, Aggregate Result Unit
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "msec"
+        value: "ms"
+      - displayValue: "per sec"
+        value: "/s"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGORRESU when EGTESTCD = QTCUNSAG"
+      sdtmVariables:
+        -  "EGORRESU"
+        -  "EGTEST"
+        -  "EGTESTCD"

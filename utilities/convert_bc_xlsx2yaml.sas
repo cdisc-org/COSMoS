@@ -216,6 +216,9 @@
 %generate_yaml_from_bc(excel_file=&excel_file, type=bc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BRTHDTC));
 %generate_yaml_from_bc(excel_file=&excel_file, type=bc_edits, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EDITS));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_IE.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=ie, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_IE));
+
 %let excel_file=&root/curation/draft/package12/R12_LB.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB_EDITS));
 

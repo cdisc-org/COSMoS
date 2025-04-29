@@ -268,8 +268,11 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_BRTHDTC)$, dsout=bc12_03); 
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc12_04); 
 
+%let excel_file=&root/curation/draft/package12/R12_BC_IE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_IE)$, dsout=bc12_05); 
+
 %let excel_file=&root/curation/draft/package12/R12_LB.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_05); 
+%ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_06); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm12_05, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_SDTM_Misc.xlsx;
@@ -277,34 +280,43 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_linking_phrase_edits)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_06); 
+%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_07); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_08, drop=%str(drop=length significant_digits format)); 
+
 
 
 /* Package collections test - */
 %let release=xx;
 
+%let excel_file=&root/curation/draft/collection/collection_specialization_AE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_AE)$, dsout=collectxx_01, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_DM.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_DM)$, dsout=collectxx_02, drop=%str(drop=package_date length significant_digits)); 
+
 %let excel_file=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_EG)$, dsout=collectxx_01, drop=%str(drop=package_date length significant_digits)); 
+%ReadExcel(file=&excel_file, range=%str(Collection_EG)$, dsout=collectxx_03, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_FT_6MWT.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_FT)$, dsout=collectxx_04, drop=%str(drop=package_date length significant_digits)); 
 
 %let excel_file=&root/curation/draft/collection/collection_specialization_IE.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_IE)$, dsout=collectxx_02, drop=%str(drop=package_date length significant_digits)); 
+%ReadExcel(file=&excel_file, range=%str(Collection_IE)$, dsout=collectxx_05, drop=%str(drop=package_date length significant_digits)); 
 
 %let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Blood.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_03, drop=%str(drop=package_date length significant_digits)); 
-
-%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Urin.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_04, drop=%str(drop=package_date length significant_digits)); 
-
-%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Hematology.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_05, drop=%str(drop=package_date length significant_digits)); 
-
-%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_06, drop=%str(drop=package_date length significant_digits)); 
 
-%let excel_file=&root/curation/draft/collection/collection_specialization_VS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_07, drop=%str(drop=package_date length significant_digits)); 
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Chem_Urin.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_07, drop=%str(drop=package_date length significant_digits)); 
 
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Hematology.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_08, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_09, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_VS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_10, drop=%str(drop=package_date length significant_digits)); 
 
 /************************************************************************************************************************/
 

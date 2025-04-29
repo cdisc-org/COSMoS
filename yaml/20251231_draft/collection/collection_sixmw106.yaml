@@ -1,0 +1,92 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SIXMW106
+shortName: "SIXMW1-Distance at 6 Minute"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: 2-3
+domain: FT
+biomedicalConceptId: C115805
+sdtmDatasetSpecializationId: SIXMW106
+items:
+  - name: SIXMW106_FTCAT
+    variableName: FTCAT
+    prompt: Category
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: FTCAT
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+    prepopulatedValue:
+      value: "SIX MINUTE WALK"
+      conceptId: C115789
+    sdtmTarget:
+      sdtmAnnotation: "FTCAT"
+      sdtmVariables:
+        -  "FTCAT"
+  - name: SIXMW106_FTDAT
+    variableName: FTDAT
+    dataElementConceptId: C93300
+    prompt: Date
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTDTC"
+      sdtmVariables:
+        -  "FTDTC"
+  - name: SIXMW106_FTASTDEV
+    variableName: FTASTDEV
+    dataElementConceptId: C93300
+    prompt: Assisted Device
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTASTDEV in SUPPFT"
+      sdtmVariables:
+        -  "FTASTDEV"
+  - name: SIXMW106_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: Distance at 6 Minutes
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = SIXMW106"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: SIXMW106_FTORRESU
+    variableName: FTORRESU
+    dataElementConceptId: C42578
+    prompt: Unit
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "m"
+      conceptId: C41139
+    sdtmTarget:
+      sdtmAnnotation: "FTORRESU when FTTESTCD = SIXMW106"
+      sdtmVariables:
+        -  "FTORRESU"
+        -  "FTTESTCD"
+        -  "FTTEST"
