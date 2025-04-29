@@ -24,9 +24,12 @@ Below is an overview of the contents of this repository.
 
 - **export**
 
-  The [export](https://github.com/cdisc-org/COSMoS/tree/main/export) folder contains spreadsheets with the latest versions of all BCs and SDTM Dataset Specializations in the CDISC Library:
+  The [export](https://github.com/cdisc-org/COSMoS/tree/main/export) folder contains spreadsheets and CSV files with the latest versions of all BCs and SDTM Dataset Specializations in the CDISC Library:
   - [Latest CDISC Biomedical Concepts](export/cdisc_biomedical_concepts_latest.xlsx) (Excel spreadsheet)
+  - [Latest CDISC Biomedical Concepts](export/cdisc_biomedical_concepts_latest.csv) (CSV)
+  - [Latest CDISC Biomedical Concepts (hierarchy)](export/cdisc_biomedical_concepts_latest_hierarchy.csv) (CSV)
   - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.xlsx) (Excel spreadsheet)
+  - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.csv) (CSV)
 
 - **model**
 
