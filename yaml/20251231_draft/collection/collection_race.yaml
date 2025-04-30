@@ -59,8 +59,7 @@ items:
         -  "RACE"
   - name: RACEOTH
     variableName: RACEOTH
-    prompt: 
-Specify Other Race
+    prompt: Specify Other Race
     orderNumber: 3
     mandatoryVariable: true 
     dataType: text

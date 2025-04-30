@@ -13,8 +13,7 @@ sdtmDatasetSpecializationId: CABLD
 items:
   - name: CA_LBCAT
     variableName: LBCAT
-    prompt: 
-Lab Panel Name
+    prompt: Lab Panel Name
     orderNumber: 1
     mandatoryVariable: false
     dataType: text
@@ -168,8 +167,7 @@ Lab Panel Name
         -  "LBMETHOD"
   - name: CA_LBORNRLO
     variableName: LBORNRLO
-    prompt: 
-Normal Range Lower Limit
+    prompt: Normal Range Lower Limit
     orderNumber: 10
     mandatoryVariable: false
     dataType: decimal
@@ -182,8 +180,7 @@ Normal Range Lower Limit
         -  "LBORNRLO"
   - name: CA_LBORNRHI
     variableName: LBORNRHI
-    prompt: 
-Normal Range Upper Limit
+    prompt: Normal Range Upper Limit
     orderNumber: 11
     mandatoryVariable: false
     dataType: decimal

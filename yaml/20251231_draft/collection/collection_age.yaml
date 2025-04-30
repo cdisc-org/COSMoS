@@ -38,8 +38,7 @@ items:
   - name: AGEU
     variableName: AGEU
     dataElementConceptId: C50400
-    prompt: 
-Age Unit
+    prompt: Age Unit
     orderNumber: 3
     mandatoryVariable: true 
     dataType: text
