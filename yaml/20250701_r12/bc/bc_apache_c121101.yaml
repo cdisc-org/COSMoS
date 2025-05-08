@@ -1,0 +1,57 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C121101
+ncitCode: C121101
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121101
+parentConceptId: C120994
+categories:
+  - QRS
+  - APACHE II
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+shortName: "APACHE II - Oxygenation, PaO2"
+synonyms:
+  - "APCH1-Oxygenation: PaO2"
+  - APCH105B
+resultScales:
+  - Ordinal
+definition: "Acute Physiology and Chronic Health Evaluation II (APACHE II) Oxygenation (mm Hg): FIO2 less than 0.5 record only PaO2."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<55 (4)"
+      - "55-60 (3)"
+      - "61-70 (1)"
+      - ">70 (0)"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C44278
+    ncitCode: C44278
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44278
+    shortName: Unit
+    dataType: string
+    exampleSet:
+      - "mmHg"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

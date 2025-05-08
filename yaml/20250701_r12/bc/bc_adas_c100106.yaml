@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C100106
+ncitCode: C100106
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100106
+parentConceptId: C211913
+categories:
+  - QRS
+  - "ADAS-Cog CDISC Version Functional Test Question"
+shortName: "ADAS-Cog CDISC Version Functional Test Question"
+synonyms:
+  - "ADAS-Cog CDISC Version Functional Test Question"
+definition: "A question associated with the ADAS-Cog CDISC version functional test."

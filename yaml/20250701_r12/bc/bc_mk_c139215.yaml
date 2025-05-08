@@ -1,53 +1,55 @@
 packageDate: "2025-07-01"
 packageType: bc
-conceptId: C178018
-ncitCode: C178018
-href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C178018
-parentConceptId: C112025
+conceptId: C139215
+ncitCode: C139215
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139215
+parentConceptId: C138967
 categories:
   - Musculoskeletal Finding
-  - Mass Measurement
-shortName: Appendicular Skeletal Muscle Mass Measurement
+  - Isometric Muscle Strength
+shortName: Isometric Muscle Strength, Extension
 synonyms:
-  - ASMM
-  - ASMMASS
+  - ISOMSEXT
 resultScales:
   - Quantitative
-definition: A measurement of the mass of the muscles of the arms and legs.
+definition: An assessment of muscle strength that measures the force produced by static muscle contraction during the straightening (unbending) movement between body parts.
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
     shortName: Observation Result
     dataType: decimal
-  - conceptId: C42579
-    ncitCode: C42579
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
-    shortName: Unit of Mass
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25709
+    shortName: Unit of Measure
     dataType: string
     exampleSet:
       - "Kilogram"
-      - "Gram"
+      - "Newton"
       - "Pound"
-      - "Ounce"
-  - conceptId: C170500
-    ncitCode: C170500
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
-    shortName: Result Anatomical Location
+      - "mmHg"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
     dataType: string
   - conceptId: C25185
     ncitCode: C25185
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
     shortName: Laterality
     dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
   - conceptId: C82535
     ncitCode: C82535
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
     shortName: Test Method
     dataType: string
     exampleSet:
-      - "DXA SCAN"
-      - "Bioimpedance Spectroscopy"
+      - "Dynamometry"
+      - "Hand-held dynamometer"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

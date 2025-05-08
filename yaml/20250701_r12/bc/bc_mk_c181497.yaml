@@ -1,0 +1,57 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C181497
+ncitCode: C181497
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181497
+parentConceptId: C139216
+categories:
+  - Musculoskeletal Finding
+  - Isometric Muscle Strength, Flexion
+shortName: Isometric Muscle Strength, Dorsiflexion
+synonyms:
+  - ISOMSDOR
+resultScales:
+  - Quantitative
+definition: An assessment of muscle strength that measures the force produced by static muscle contraction during the movement of a body part bending upwards towards the dorsal surface of the body.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "Kilogram"
+      - "Newton"
+      - "Pound"
+      - "mmHg"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Dynamometry"
+      - "Hand-held dynamometer"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

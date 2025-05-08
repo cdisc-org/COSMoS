@@ -11,6 +11,8 @@ shortName: Inclusion Exclusion Criteria Yes No Indicator
 synonyms:
   - Inclusion Exclusion Criteria Yes No Indicator
   - IEYN
+resultScales:
+  - Nominal
 definition: An indication of whether inclusion or exclusion criteria has been met.
 dataElementConcepts:
   - conceptId: C83063

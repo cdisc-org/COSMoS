@@ -1,0 +1,62 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C61545
+ncitCode: C61545
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C61545
+parentConceptId: C18020
+categories:
+  - Musculoskeletal Finding
+  - Diagnostic Procedure
+shortName: Bone Mineral Density Test
+synonyms:
+  - BMD
+  - Bone Mineral Density
+  - Bone Mass
+  - Bone Density
+resultScales:
+  - Quantitative
+definition: A scanning procedure used to measure calcium and other minerals present in bone.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42575
+    ncitCode: C42575
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42575
+    shortName: Unit of Mass Density
+    dataType: string
+    exampleSet:
+      - "Gram per Square Meter"
+      - "Gram per Square Centimeter"
+      - "Kilogram per Liter"
+      - "Gram per Liter"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Cervical Spine"
+      - "Lumbar Spine"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "DXA SCAN"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

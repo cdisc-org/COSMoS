@@ -12,8 +12,9 @@ synonyms:
   - Occult Blood
   - OCCBLD
 resultScales:
-  - Ordinal
   - Quantitative
+  - Ordinal
+  - Nominal
 definition: A measurement of the blood in body products such as a urine or stool sample, not detectable on gross examination.
 dataElementConcepts:
   - conceptId: C70856

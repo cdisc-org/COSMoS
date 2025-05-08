@@ -25,11 +25,11 @@
 
 
   data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
-    length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $100 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
+    length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $1000 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value  actual_value comment $2048;
     set work.bc_&type._&package;
-    retain prev_BC_ID "" count decs 0;
+    retain prev_BC_ID "" count decs 0 result_scales_yn 0;
 
     call missing(concept_status, short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);
     
@@ -49,11 +49,12 @@
     
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog / "WARNING: &type " _excel_file_ _tab_ bc_id / @5 definition= / @4 definition2=;
+    if definition ne definition2 then putlog / "WARNING: &type " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
     if not(missing(BC_ID)) and (prev_BC_ID ne BC_ID) then do;
+      result_scales_yn = 0;
       count=0;
       decs = 0;
       qpackage_date = quote(strip(package_date));
@@ -122,6 +123,7 @@
       end;
 
       if not missing(result_scales) then do;
+        result_scales_yn = 1;
         put "resultScales:";
         countwords=countw(result_scales, ";");
         do i=1 to countwords;
@@ -129,8 +131,6 @@
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
-      %add2issues_bc(missing(result_scales), 
-                     %str(RESULTSCALE_MISSING), "", "", "");
       
       call get_definitions(ncit_code, definition_nci, definition_cdisc);
       /*
@@ -175,6 +175,14 @@
 
     count+1;
     if (count=2 and not missing(dec_id) and decs=0) or (count=1 and not missing(dec_id)) then do; 
+      
+      %add2issues_bc(result_scales_yn eq 0, 
+                     %str(RESULTSCALE_MISSING), "", "", "", severity=ERROR);
+      %add2issues_bc(missing(dec_label), 
+                     %str(DEC_SHORTNAME_MISSING), "", "", "", severity=ERROR);
+      %add2issues_bc(missing(data_type), 
+                     %str(DEC_DATATYPE_MISSING), "", "", "", severity=ERROR);
+      
       decs + 1;
       put "dataElementConcepts:";
     end;  
@@ -225,6 +233,7 @@
         end;
       end;
     end;
+    result_scales = "";
   run;
 
   data all_issues_bc;

@@ -265,12 +265,16 @@
         if not missing(origin_type) then put +4 "originType:" +1 origin_type;
         if not missing(origin_source) then put +4 "originSource:" +1 origin_source;
 
-        /* xxTEST variables shoukd not be used in the whereclauses */
+        /* xxTEST and xxxxRESU variables should not be used in the whereclauses */
         if length(sdtm_variable) >= 4 then do;
-          %add2issues_sdtm(substr(sdtm_variable, length(sdtm_variable)-3, 4) = "TEST" and (not missing(comparator)),
-                %str(XXTEST_IN_WHERECLAUSE), 
+          %add2issues_sdtm(substr(sdtm_variable, length(sdtm_variable)-3, 4) in ("TEST") and (not missing(comparator)),
+                %str(WHERECLAUSE_UNEXPECTED), 
                 "", comparator, %str(cats("comparator=", comparator, ", assigned_value=", assigned_value, ", comparator will be set to missing")),
                 extracode=%str(comparator="") 
+                );
+          %add2issues_sdtm(substr(sdtm_variable, length(sdtm_variable)-3, 4) in ("RESU", "RRES", "RESC", "RESN") and (not missing(comparator)),
+                %str(WHERECLAUSE_UNEXPECTED), 
+                "", comparator, %str(cats("comparator=", comparator, ", assigned_value=", assigned_value, ", value_list=", value_list))
                 );
         end;
         
@@ -288,6 +292,15 @@
         %add2issues_sdtm((not missing(comparator)) and (not missing(vlm_target)),
               %str(COMPARATOR_AND_VLM_TARGET_NOT_MISSING), 
               "", "", %str(cats("comparator=", comparator, ", vlm_target=", vlm_target)));
+    
+        %add2issues_sdtm((not missing(vlm_target) and 
+                         (
+                          index(sdtm_variable, "ORRES")=0 and index(sdtm_variable, "ORRESU")=0 and 
+                          index(sdtm_variable, "STRESC")=0 and index(sdtm_variable, "STRESN")=0 and index(sdtm_variable, "STRESU")=0) and
+                          index(sdtm_variable, "VAL")=0 and index(sdtm_variable, "VCDREF")=0 and index(sdtm_variable, "VCDVER")=0
+                          ),
+              %str(VLM_TARGET_UNEXPECTED), 
+              "", "", %str(cats("sdtm_variable=", sdtm_variable, ", comparator=", comparator, ", vlm_target=", vlm_target)));
 
         if not missing(comparator) then put +4 "comparator:" +1 comparator;
 

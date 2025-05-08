@@ -22,8 +22,8 @@ run;
 %generate_yaml_from_bc(excel_file=&ExcelFile, type=latest, package=&package, override_package_date=, out_folder=&TargetFolder, range=%str(Biomedical Concepts));
 
 ods listing close;
-ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest_bc_issues__%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/convert_latest_bc_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).html";
+ods excel options(sheet_name="BC_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest_bc_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_bc;
   title "BC Issues - %sysfunc(date(), b8601da8.)";
@@ -47,8 +47,8 @@ ods excel close;
                             range=%str(SDTM Dataset Specializations), check_relationships=&checkrelationships);
 
 ods listing close;
-ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).html";
-ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest_sdtm_issues_%sysfunc(date(), b8601da8.).xlsx";
+ods html5 file="&root/utilities/reports/convert_latest_sdtm_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).html";
+ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') file="&root/utilities/reports/convert_latest_sdtm_xlsx2yaml_issues_%sysfunc(date(), b8601da8.).xlsx";
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - %sysfunc(date(), b8601da8.)";

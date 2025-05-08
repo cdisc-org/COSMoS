@@ -75,7 +75,7 @@ proc fcmp outlib=macros.funcs.python;
   endsub;
 
   function get_codelist_submissionvalue(codelist_conceptId $) $;
-    length codedValue_conceptId $20;
+    length codelist_SubmissionValue $20;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codelist_SubmissionValue");
     rc=hh.definekey("codelist_conceptId");
@@ -86,7 +86,7 @@ proc fcmp outlib=macros.funcs.python;
   endsub;
 
   function get_codelist_extensible(codelist_conceptId $) $;
-    length codedValue_conceptId $20;
+    length codelist_extensible $20;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codelist_extensible");
     rc=hh.definekey("codelist_conceptId");
@@ -284,6 +284,11 @@ quit;
 
 /* Test the functions */
 
+
+%macro assert_equal(val1, val2);
+  if &val1 ne &val2 then putlog 'ERR' 'OR:' &val1.= " - " &val2;
+%mend assert_equal;
+
 data test;
   length ccodes $200 ccode ccode_parent $100 status shortname shortname_parent preferred_term $100 definition definition_cdisc $1000 synonyms $4000;
 
@@ -307,19 +312,33 @@ run;
 data codelists1;
   codelist_code="C128686";
   codelist="PKUDUG";
-  codelist_SubmValue = get_codelist_submissionvalue(codelist_code);
+  _codelist_SubmValue = get_codelist_submissionvalue(codelist_code);
   term="g/mL/ug";
   term_code="C119365";
-  codedValue_conceptId = get_term_code(codelist_code, term);
-  codedValue = get_term_value(codelist, term_code);
-  codedValue_preferred = get_term_preferred_term(codelist_code, term_code);
-  codelist_Extensible = get_codelist_extensible(codelist_code);
+  _codedValue_conceptId = get_term_code(codelist_code, term);
+  _codedValue = get_term_value(codelist_code, term_code);
+  _codedValue_preferred = get_term_preferred_term(codelist_code, term_code);
+  _codelist_Extensible = get_codelist_extensible(codelist_code);
+  %assert_equal(_codedValue_conceptId, term_code);
+  %assert_equal(_codedValue, term);
+  %assert_equal(_codedValue_preferred, "Gram per Milliliter per Microgram");
+  %assert_equal(_codelist_Extensible, "Yes");
 
-  codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
-  codelist_Extensible_yes = get_codelist_extensible("C100129");
+  _codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
+  _codelist_Extensible_yes = get_codelist_extensible("C100129");
+  %assert_equal(_codelist_SubmValue_qscat, "QSCAT");
+  %assert_equal(_codelist_Extensible_yes, "Yes");
 
-  codelist_SubmValue_TENMW1TC = get_codelist_submissionvalue("C141657");
-  codelist_Extensible_no = get_codelist_extensible("C141657");
+  _codelist_SubmValue_TENMW1TC = get_codelist_submissionvalue("C141657");
+  _codelist_Extensible_no = get_codelist_extensible("C141657");
+  %assert_equal(_codelist_SubmValue_TENMW1TC, "TENMW1TC");
+  %assert_equal(_codelist_Extensible_no, "No");
+
+  _codelist_SubmValue_APCH101OR = get_codelist_submissionvalue("C182484");
+  _codelist_Extensible_no = get_codelist_extensible("C182484");
+  %assert_equal(_codelist_SubmValue_APCH101OR, "APCH101OR");
+  %assert_equal(_codelist_Extensible_no, "No");
+  
 
   put (_all_) (=/) ;
   output;
@@ -329,13 +348,14 @@ run;
 
 data codelists2;
   codelist="C66797";
-  codelist_SubmValue = get_codelist_submissionvalue(codelist);
-  term="INCLUSION";
+  codelist_SubmValue="IECAT";
+  _codelist_SubmValue = get_codelist_submissionvalue(codelist);
   term_code="C25532";
-  codedValue = get_term_value(codelist, term_code);
-  codedValue_conceptId = get_term_code(codelist, term);
-  codedValue_preferred = get_term_preferred_term(codelist, term_code);
-  codelist_Extensible = get_codelist_extensible(codelist);
+  term="INCLUSION";
+  _codedValue = get_term_value(codelist, term_code);
+  _codedValue_conceptId = get_term_code(codelist, term);
+  _codedValue_preferred = get_term_preferred_term(codelist, term_code);
+  _codelist_Extensible = get_codelist_extensible(codelist);
 
   put (_all_) (=/) ;
   output;
@@ -344,7 +364,8 @@ run;
 
 data relationships;
   linkingPhrase = "is a dictionary-derived term for the value in";
-  predicateTerm = get_predicateterm(linkingPhrase);
+  predicateTerm = "IS_DERIVED_FROM";
+  _predicateTerm = get_predicateterm(linkingPhrase);
   exist = exists_predicateterm(predicateTerm);
   exist2 = exists_predicaterm_linkingphrase(linkingPhrase, predicateTerm);
   

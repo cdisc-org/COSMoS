@@ -1,0 +1,11 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25447
+ncitCode: C25447
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25447
+parentConceptId: C158256
+categories:
+  - Musculoskeletal Finding
+  - Characteristic
+shortName: Characteristic
+definition: The distinguishing qualities or prominent aspect of a person, object, action, process, or substance.

@@ -30,7 +30,7 @@ libname data "&root/utilities/data";
     actual_value=&actual;
     comment=&comment;
 
-    putlog "WARN" "ING: &type " _excel_file_= _tab_= BC_ID= short_name= dec_id= 
+    putlog "&severity.: &type " _excel_file_= _tab_= BC_ID= short_name= dec_id= 
       %if &actual NE "" %then &actual.= ;
       %if &expected NE "" %then &expected.= ;
       comment;
@@ -48,7 +48,7 @@ libname data "&root/utilities/data";
     actual_value=&actual;
     comment=&comment;
 
-    putlog "WARN" "ING: &type " _excel_file_= _tab_= vlm_group_id= sdtm_variable=
+    putlog "&severity.: &type " _excel_file_= _tab_= vlm_group_id= sdtm_variable=
       %if &actual NE "" %then &actual.= ;
       %if &expected NE "" %then &expected.= ;
       comment;
@@ -75,4 +75,3 @@ libname data "&root/utilities/data";
     output;
   end;  
 %mend add2issues_collection;
-

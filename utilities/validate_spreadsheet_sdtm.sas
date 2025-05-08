@@ -266,6 +266,8 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package12/R12_BC_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Test_Occurrence)$, dsout=bc12_02); 
 %ReadExcel(file=&excel_file, range=%str(BC_BRTHDTC)$, dsout=bc12_03); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc12_04); 
 
 %let excel_file=&root/curation/draft/package12/R12_BC_IE.xlsx;
@@ -273,16 +275,39 @@ title01 "&now";
 
 %let excel_file=&root/curation/draft/package12/R12_LB.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB_EDITS)$, dsout=bc12_06); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm12_05, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_EDITS)$, dsout=sdtm12_02, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_SDTM_Misc.xlsx;
-%ReadExcel(file=&excel_file, range=%str(SDTM_brthdtc_new)$, dsout=sdtm12_06, drop=%str(drop=length significant_digits format)); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_linking_phrase_edits)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_brthdtc_new)$, dsout=sdtm12_03, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_linking_phrase_edits)$, dsout=sdtm12_04, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_Edits)$, dsout=sdtm12_05, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_07); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_08, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_06, drop=%str(drop=length significant_digits format)); 
 
+%let excel_file=&root/curation/draft/package12/R12_BC_ADAS-Cog.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog)$, dsout=bc12_08); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Indicators)$, dsout=bc12_09); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_LB_Japan_Group.xlsx;
+%ReadExcel(file=&excel_file, range=%str(NEW_BC_LAB_2025.04.24)$, dsout=bc12_10); 
+%ReadExcel(file=&excel_file, range=%str(NEW_SDTM_LAB_2025.04.24)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_MK_Part2.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MK)$, dsout=bc12_11); 
+%ReadExcel(file=&excel_file, range=%str(BC_MK_Edits)$, dsout=bc12_12); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MK)$, dsout=sdtm12_08, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_MK_Edits)$, dsout=sdtm12_09, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_APACHE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_APACHE II)$, dsout=bc12_13); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_APACHE II)$, dsout=sdtm12_10, drop=%str(drop=length significant_digits format)); 
+
+%let excel_file=&root/curation/draft/package12/R12_SDTM_EC_Linking_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EC_EDITS)$, dsout=sdtm12_11, drop=%str(drop=length significant_digits format)); 
 
 
 /************************************************************************************************************************/
@@ -300,7 +325,7 @@ data bc(drop=change_history F1: F2: i vname vvalue);
     vname = vname(carray[i]);
     vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if vvalue ne carray[i] then do;
-     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue ;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue;
     end; 
   end;
   package_date = upcase(package_date);
@@ -418,7 +443,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       from sdtm_merged
       where not missing(dec_id);
 
-      select sbdi._excel_file_, sbdi._tab_, sbdi.package_date, sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id 
+      select sbdi._excel_file_, sbdi._tab_, sbdi.package_date, sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id
       from sdtm_bc_dec sbd, sdtm_merged sbdi
       where 
         sbd.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
@@ -430,7 +455,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Duplicate BC records */
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
-      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id
+      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id, dec_label
       from bc
       group by package_date, bc_id, dec_id
       having count(*) > 1

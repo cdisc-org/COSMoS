@@ -214,6 +214,8 @@
 %let excel_file=&root/curation/draft/package12/R12_BC_New.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=bc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Test_Occurrence));
 %generate_yaml_from_bc(excel_file=&excel_file, type=bc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BRTHDTC));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=bc_edits, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EDITS));
 
 %let excel_file=&root/curation/draft/package12/R12_BC_IE.xlsx;
@@ -224,6 +226,23 @@
 
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=ts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_ADAS-Cog.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=occ, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Indicators));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_LB_Japan_Group.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(NEW_BC_LAB_2025.04.24));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_MK_Part2.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=mk, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MK));
+%generate_yaml_from_bc(excel_file=&excel_file, type=mk, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MK_Edits));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_APACHE.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=apache, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_APACHE II));
+
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_R&release._&todays..html";
@@ -236,4 +255,4 @@ run;
 
 ods listing;
 ods html5 close;
-ods excel close;  
+ods excel close;

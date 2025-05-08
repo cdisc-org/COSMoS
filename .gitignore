@@ -9,6 +9,7 @@ text/
 venv/
 .env
 work/
+_archive/
 yaml/latest
 yaml/*/*_test
 ~$*.*

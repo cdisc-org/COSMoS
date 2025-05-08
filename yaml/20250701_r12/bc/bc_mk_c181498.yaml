@@ -1,0 +1,47 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C181498
+ncitCode: C181498
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181498
+parentConceptId: C138967
+categories:
+  - Musculoskeletal Finding
+  - Isometric Muscle Strength
+shortName: Isometric Muscle Strength, Internal Rotation
+synonyms:
+  - ISOMSIR
+  - Isometric Muscle Strength, Internal Rotation
+resultScales:
+  - Quantitative
+definition: An assessment of muscle strength that measures the force produced by static muscle contraction during the rotational movement of a body part inward, toward the body.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Hand-held dynamometer"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
