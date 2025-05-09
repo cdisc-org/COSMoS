@@ -178,9 +178,6 @@ variables:
       conceptId: C85492
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
       submissionValue: METHOD
-    assignedTerm:
-      conceptId: C178142
-      value: "DIPSTICK MEASUREMENT METHOD"
     role: Qualifier
     relationship:
       subject: LBMETHOD

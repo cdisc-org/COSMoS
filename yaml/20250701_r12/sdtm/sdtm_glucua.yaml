@@ -2,7 +2,7 @@ packageDate: "2025-07-01"
 packageType: sdtm
 datasetSpecializationId: GLUCUA
 domain: LB
-shortName: Glucose in Urine by Dipstick
+shortName: Glucose Presence in Urine by Test Strip
 source: LB.LBTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
