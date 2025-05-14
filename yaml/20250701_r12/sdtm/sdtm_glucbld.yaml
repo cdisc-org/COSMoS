@@ -186,7 +186,6 @@ variables:
       object: LBTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
-    comparator: EQ
   - name: LBFAST
     dataElementConceptId: C93566
     isNonStandard: false

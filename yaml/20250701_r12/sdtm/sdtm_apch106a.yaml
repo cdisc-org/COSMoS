@@ -66,9 +66,9 @@ variables:
     dataElementConceptId: C91106
     isNonStandard: false
     codelist:
-      conceptId: C182484
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182484
-      submissionValue: APCH101OR
+      conceptId: C182490
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182490
+      submissionValue: APCH106AOR
     role: Qualifier
     dataType: text
     length: 20
@@ -86,9 +86,9 @@ variables:
     dataElementConceptId: C46126
     isNonStandard: false
     codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
+      conceptId: C182528
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182528
+      submissionValue: APCH106ASTR
     role: Qualifier
     dataType: integer
     length: 1
@@ -106,9 +106,9 @@ variables:
     dataElementConceptId: C46126
     isNonStandard: false
     codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
+      conceptId: C182528
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182528
+      submissionValue: APCH106ASTR
     role: Qualifier
     dataType: integer
     length: 1

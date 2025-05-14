@@ -65,10 +65,6 @@ variables:
   - name: RSORRES
     dataElementConceptId: C91106
     isNonStandard: false
-    codelist:
-      conceptId: C182484
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182484
-      submissionValue: APCH101OR
     role: Qualifier
     dataType: text
     length: 20
@@ -85,10 +81,6 @@ variables:
   - name: RSSTRESC
     dataElementConceptId: C46126
     isNonStandard: false
-    codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
     role: Qualifier
     dataType: integer
     length: 1
@@ -105,10 +97,6 @@ variables:
   - name: RSSTRESN
     dataElementConceptId: C46126
     isNonStandard: false
-    codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
     role: Qualifier
     dataType: integer
     length: 1

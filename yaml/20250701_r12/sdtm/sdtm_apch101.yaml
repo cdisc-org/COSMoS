@@ -143,27 +143,24 @@ variables:
     originType: Assigned
     originSource: Sponsor
     vlmTarget: true 
-  - name: RSSTRESU
-    dataElementConceptId: C44278
+  - name: RSLOC
+    dataElementConceptId: C13717
     isNonStandard: false
     codelist:
-      conceptId: C71620
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
-      submissionValue: UNIT
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
     assignedTerm:
-      conceptId: C42559
-      value: "C"
+      conceptId: C12390
+      value: "RECTUM"
     role: Qualifier
     relationship:
-      subject: RSSTRESU
-      linkingPhrase: is the unit for the value in
-      predicateTerm: IS_UNIT_FOR
-      object: RSSTRES
-    mandatoryVariable: true 
+      subject: RSLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: RSTESTCD
+    mandatoryVariable: false
     mandatoryValue: false
-    originType: Assigned
-    originSource: Sponsor
-    vlmTarget: true 
   - name: RSDTC
     dataElementConceptId: C82515
     isNonStandard: false

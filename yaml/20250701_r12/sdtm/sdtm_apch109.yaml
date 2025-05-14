@@ -66,9 +66,9 @@ variables:
     dataElementConceptId: C91106
     isNonStandard: false
     codelist:
-      conceptId: C182484
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182484
-      submissionValue: APCH101OR
+      conceptId: C182494
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182494
+      submissionValue: APCH109OR
     role: Qualifier
     dataType: text
     length: 20
@@ -107,9 +107,9 @@ variables:
     dataElementConceptId: C46126
     isNonStandard: false
     codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
+      conceptId: C182532
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182532
+      submissionValue: APCH109STR
     role: Qualifier
     dataType: integer
     length: 1
@@ -127,9 +127,9 @@ variables:
     dataElementConceptId: C46126
     isNonStandard: false
     codelist:
-      conceptId: C182522
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182522
-      submissionValue: APCH101STR
+      conceptId: C182532
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182532
+      submissionValue: APCH109STR
     role: Qualifier
     dataType: integer
     length: 1
@@ -138,23 +138,6 @@ variables:
       linkingPhrase: is the result of the test in
       predicateTerm: IS_RESULT_OF
       object: RSTESTCD
-    mandatoryVariable: true 
-    mandatoryValue: false
-    originType: Assigned
-    originSource: Sponsor
-    vlmTarget: true 
-  - name: RSSTRESU
-    dataElementConceptId: C44278
-    isNonStandard: false
-    assignedTerm:
-      conceptId: C67015
-      value: "mg/dL"
-    role: Qualifier
-    relationship:
-      subject: RSSTRESU
-      linkingPhrase: is the unit for the value in
-      predicateTerm: IS_UNIT_FOR
-      object: RSSTRES
     mandatoryVariable: true 
     mandatoryValue: false
     originType: Assigned
