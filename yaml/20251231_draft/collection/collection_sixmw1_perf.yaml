@@ -1,6 +1,7 @@
 packageDate: "2025-12-31"
 packageType: collection
-collectionSpecializationId: FTPERF
+collectionSpecializationId: SIXMW1_PERF
+shortName: Six Minute Walk Test Performed
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  

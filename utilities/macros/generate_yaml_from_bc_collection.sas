@@ -50,6 +50,9 @@
       put "packageDate:" +1 qpackage_date;
       put "packageType:" +1 "collection";
       put "collectionSpecializationId:" +1 collection_group_id;
+      %add2issues_collection(missing(short_name), 
+                     %str(MISSING_SHORT_NAME), 
+                     "", "", "", severity=ERROR);
       if not missing(short_name) then do;
         if index(short_name, '"') or index(short_name, ":") or index(short_name, "-") 
           then put "shortName:" +1 '"' short_name +(-1) '"';
