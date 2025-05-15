@@ -306,9 +306,12 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_APACHE II)$, dsout=bc12_13); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_APACHE II)$, dsout=sdtm12_10, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/package12/R12_SDTM_EC_Linking_Edits.xlsx;
-%ReadExcel(file=&excel_file, range=%str(SDTM_EC_EDITS)$, dsout=sdtm12_11, drop=%str(drop=length significant_digits format)); 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_AIMS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_AIMS)$, dsout=bc12_14); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_AIMS)$, dsout=sdtm12_11, drop=%str(drop=length significant_digits format)); 
 
+%let excel_file=&root/curation/draft/package12/R12_SDTM_EC_Linking_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EC_EDITS)$, dsout=sdtm12_12, drop=%str(drop=length significant_digits format)); 
 
 /************************************************************************************************************************/
 

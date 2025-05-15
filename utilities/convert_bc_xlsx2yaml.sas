@@ -243,6 +243,9 @@
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_APACHE.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=apache, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_APACHE II));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_AIMS.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=aims, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_AIMS));
+
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_R&release._&todays..html";

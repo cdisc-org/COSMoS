@@ -1,0 +1,45 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C102041
+ncitCode: C102041
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102041
+parentConceptId: C101869
+categories:
+  - QRS
+  - AIMS
+  - Abnormal Involuntary Movement Scale Clinical Classification
+shortName: "AIMS - Severity of Abnormal Movements"
+synonyms:
+  - "AIMS01-Severity of Abnormal Movements"
+  - AIMS0108
+resultScales:
+  - Ordinal
+definition: Abnormal Involuntary Movement Scale (AIMS) Global Judgments, Severity of abnormal movements, based on the highest single score on the above items.
+dataElementConcepts:
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "None, normal"
+      - "Minimal"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
