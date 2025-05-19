@@ -16,14 +16,6 @@ resultScales:
   - Ordinal
 definition: Abnormal Involuntary Movement Scale (AIMS) Dental Status, Current problems with teeth and/or dentures.
 dataElementConcepts:
-  - conceptId: C91106
-    ncitCode: C91106
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
-    shortName: Clinical or Research Assessment Answer
-    dataType: string
-    exampleSet:
-      - "No"
-      - "Yes"
   - conceptId: C46126
     ncitCode: C46126
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
@@ -32,6 +24,28 @@ dataElementConcepts:
     exampleSet:
       - "0"
       - "1"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "No"
+      - "Yes"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AIMS"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "DENTAL STATUS"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

@@ -16,17 +16,6 @@ resultScales:
   - Ordinal
 definition: Abnormal Involuntary Movement Scale (AIMS) Trunk Movements, Neck, shoulders, hips, e.g., rocking, twisting, squirming, pelvic gyrations. Include diaphragmatic movements.
 dataElementConcepts:
-  - conceptId: C91106
-    ncitCode: C91106
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
-    shortName: Clinical or Research Assessment Answer
-    dataType: string
-    exampleSet:
-      - "None"
-      - "Minimal, may be extreme normal"
-      - "Mild"
-      - "Moderate"
-      - "Severe"
   - conceptId: C46126
     ncitCode: C46126
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
@@ -38,6 +27,31 @@ dataElementConcepts:
       - "2"
       - "3"
       - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "None"
+      - "Minimal, may be extreme normal"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AIMS"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "TRUNK MOVEMENTS"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

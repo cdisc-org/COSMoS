@@ -44,6 +44,7 @@ variables:
     mandatoryVariable: true 
     mandatoryValue: false
   - name: RSCAT
+    dataElementConceptId: C25372
     isNonStandard: false
     codelist:
       conceptId: C118971
@@ -62,6 +63,7 @@ variables:
     mandatoryValue: false
     comparator: EQ
   - name: RSSCAT
+    dataElementConceptId: C25692
     isNonStandard: false
     assignedTerm:
       value: "EXTREMITY MOVEMENTS"
