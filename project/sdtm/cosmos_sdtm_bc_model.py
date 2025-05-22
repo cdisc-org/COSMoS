@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-04-27T11:04:13
+# Generation date: 2025-05-20T15:30:05
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -550,6 +550,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="specifies the anatomical location of"))
         setattr(cls, "specifies the anatomical location of the performance of the test in",
             PermissibleValue(text="specifies the anatomical location of the performance of the test in"))
+        setattr(cls, "specifies the anatomical location of the tumor identified by",
+            PermissibleValue(text="specifies the anatomical location of the tumor identified by"))
         setattr(cls, "specifies the severity of",
             PermissibleValue(text="specifies the severity of"))
         setattr(cls, "values are grouped by",

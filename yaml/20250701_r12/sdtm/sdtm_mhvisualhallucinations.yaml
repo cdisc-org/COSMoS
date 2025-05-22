@@ -1,0 +1,203 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: MHVISUALHALLUCINATIONS
+domain: MH
+shortName: "Medical History Prespecified: Visual Hallucinations"
+source: MH.MHTERM
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C200145
+variables:
+  - name: MHTERM
+    dataElementConceptId: C83118
+    isNonStandard: false
+    assignedTerm:
+      value: "VISUAL HALLUCINATIONS AND/OR PARANOID DELUSIONS"
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: MHDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHDECOD
+    dataElementConceptId: C83346
+    isNonStandard: false
+    assignedTerm:
+      value: "HALLUCINATION"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHPTCD
+    isNonStandard: false
+    assignedTerm:
+      value: "10019063"
+    dataType: integer
+    length: 8
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHLLT
+    isNonStandard: false
+    assignedTerm:
+      value: "HALLUCINATION"
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHLLTCD
+    isNonStandard: false
+    assignedTerm:
+      value: "10019063"
+    dataType: integer
+    length: 8
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "ALZHEIMER'S DISEASE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MHTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    assignedTerm:
+      value: "CLINICAL FEATURES OF ALZHEIMER'S DISEASE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MHSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: MHCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_Y
+    valueList:
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MHPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHOCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MHOCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: MHTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MHENRF
+    dataElementConceptId: C82557
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHENRTPT
+    dataElementConceptId: C82558
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MHENTPT
+    dataElementConceptId: C82574
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

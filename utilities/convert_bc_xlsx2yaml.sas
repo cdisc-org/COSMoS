@@ -227,7 +227,7 @@
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=ts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS));
 
-%let excel_file=&root/curation/draft/package12/R12_BC_ADAS-Cog.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_ADAS-Cog_BC.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog));
 
 %let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
@@ -245,6 +245,9 @@
 
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_AIMS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=aims, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_AIMS));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_MH_AE_CM_SU.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=various, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MH_AE_CM_SU));
 
 
 ods listing close;

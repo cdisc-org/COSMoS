@@ -546,6 +546,9 @@
           "text": "specifies the anatomical location of the performance of the test in"
         },
         {
+          "text": "specifies the anatomical location of the tumor identified by"
+        },
+        {
           "text": "specifies the severity of"
         },
         {
@@ -1576,9 +1579,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-04-27T11:03:28",
-  "source_file_size": 14801,
-  "generation_date": "2025-04-27T11:04:05",
+  "source_file_date": "2025-05-20T15:28:45",
+  "source_file_size": 14870,
+  "generation_date": "2025-05-20T15:29:56",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

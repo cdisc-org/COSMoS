@@ -273,8 +273,17 @@ run;
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_AIMS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=aims, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_AIMS), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package12/R12_ADAS-Cog_SDTM.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_ADAS-Cog), debug=0, check_relationships=&checkrelationships);
+
 %let excel_file=&root/curation/draft/package12/R12_SDTM_EC_Linking_Edits.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=ec, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EC_EDITS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_MH_AE_CM_SU.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=misc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MH_AE_CM_SU), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package12/R12_SDTM_TU_TULOC_Linking_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=tu, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TU), debug=0, check_relationships=&checkrelationships);
 
 
 ods listing close;

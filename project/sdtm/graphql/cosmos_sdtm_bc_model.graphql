@@ -64,6 +64,7 @@ enum LinkingPhraseEnum
     specifies_the_anatomical_location_in
     specifies_the_anatomical_location_of
     specifies_the_anatomical_location_of_the_performance_of_the_test_in
+    specifies_the_anatomical_location_of_the_tumor_identified_by
     specifies_the_severity_of
     values_are_grouped_by
     was_the_subject_position_during_performance_of_the_test_in

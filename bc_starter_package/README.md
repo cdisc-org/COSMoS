@@ -13,9 +13,7 @@
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [High Level Biomedical Concept Process](doc/High%20Level%20Biomedical%20Concept%20Process.pdf)
 - [BC Curation Principles and Completion Guidelines](doc/BC%20Curation%20Principles%20and%20Completion%20GLs.xlsx) (Excel spreadsheet)
-- [BC Examples](doc/BC%20Examples.xlsx) (Excel spreadsheet)
 - [BC DEC Templates](doc/BC%20DEC%20Templates.xlsx) (Excel spreadsheet)
-- [BC\_Oncology\_RECIST11\_2023\_07\_06](../curation/BC_Oncology_RECIST11_2023_07_06.xlsx) (Excel spreadsheet)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 - [Charter for COSMoS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
 
@@ -51,7 +49,7 @@ This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.p
 
 Give feedback or gain clarification on BC and Dataset Specialization content, data models, APIs
 
-- [JIRA](https://wiki.cdisc.org/display/PUB/Biomedical+Concept+API+Feedback), our issue-tracking system
+- [JIRA](https://wiki.cdisc.org/display/PUB/Biomedical+Concepts), our issue-tracking system
 
 Refer to BC and Dataset Specialization Curation Principles and Guidelines to understand how  metadata is defined.
 

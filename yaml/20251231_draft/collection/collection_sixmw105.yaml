@@ -4,60 +4,16 @@ collectionSpecializationId: SIXMW105
 shortName: "SIXMW1-Distance at 5 Minute"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion: 2-3
+standardEndVersion:  
 domain: FT
 biomedicalConceptId: C115804
 sdtmDatasetSpecializationId: SIXMW105
 items:
-  - name: SIXMW105_FTCAT
-    variableName: FTCAT
-    prompt: Category
-    orderNumber: 1
-    mandatoryVariable: true 
-    dataType: text
-    length: 100
-    displayHidden: false
-    codelist:
-      submissionValue: FTCAT
-      conceptId: C115304
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
-    prepopulatedValue:
-      value: "SIX MINUTE WALK"
-      conceptId: C115789
-    sdtmTarget:
-      sdtmAnnotation: "FTCAT"
-      sdtmVariables:
-        -  "FTCAT"
-  - name: SIXMW105_FTDAT
-    variableName: FTDAT
-    dataElementConceptId: C93300
-    prompt: Date
-    orderNumber: 2
-    mandatoryVariable: true 
-    dataType: date
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "FTDTC"
-      sdtmVariables:
-        -  "FTDTC"
-  - name: SIXMW105_FTASTDEV
-    variableName: FTASTDEV
-    dataElementConceptId: C93300
-    prompt: Assisted Device
-    orderNumber: 3
-    mandatoryVariable: true 
-    dataType: text
-    length: 200
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "FTASTDEV in SUPPFT"
-      sdtmVariables:
-        -  "FTASTDEV"
   - name: SIXMW105_FTORRES
     variableName: FTORRES
     dataElementConceptId: C91106
     prompt: Distance at 5 Minutes
-    orderNumber: 4
+    orderNumber: 1
     mandatoryVariable: true 
     dataType: integer
     length: 3
@@ -72,7 +28,7 @@ items:
     variableName: FTORRESU
     dataElementConceptId: C42578
     prompt: Unit
-    orderNumber: 5
+    orderNumber: 2
     mandatoryVariable: true 
     dataType: text
     length: 1
@@ -88,5 +44,3 @@ items:
       sdtmAnnotation: "FTORRESU when FTTESTCD = SIXMW105"
       sdtmVariables:
         -  "FTORRESU"
-        -  "FTTESTCD"
-        -  "FTTEST"

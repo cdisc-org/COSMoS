@@ -146,6 +146,7 @@ class LinkingPhraseEnum(str, Enum):
     specifies_the_anatomical_location_in = "specifies the anatomical location in"
     specifies_the_anatomical_location_of = "specifies the anatomical location of"
     specifies_the_anatomical_location_of_the_performance_of_the_test_in = "specifies the anatomical location of the performance of the test in"
+    specifies_the_anatomical_location_of_the_tumor_identified_by = "specifies the anatomical location of the tumor identified by"
     specifies_the_severity_of = "specifies the severity of"
     values_are_grouped_by = "values are grouped by"
     was_the_subject_position_during_performance_of_the_test_in = "was the subject position during performance of the test in"

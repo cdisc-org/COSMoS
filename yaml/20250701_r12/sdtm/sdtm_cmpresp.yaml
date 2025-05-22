@@ -1,0 +1,363 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: CMPRESP
+domain: CM
+shortName: Concomitant Medication Prespecified
+source: CM.CMTRT
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C53630
+variables:
+  - name: CMTRT
+    dataElementConceptId: C70902
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: CMTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: CMDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: CMDECOD
+    dataElementConceptId: C83345
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CMDECOD
+      linkingPhrase: is the dictionary-derived term for the value in
+      predicateTerm: DECODES
+      object: CMTRT
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMCLAS
+    dataElementConceptId: C83219
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CMCLAS
+      linkingPhrase: is a dictionary-derived class name for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMCLASCD
+    dataElementConceptId: C83219
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CMCLASCD
+      linkingPhrase: is a dictionary-derived class code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_Y
+    valueList:
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: CMPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMINDC
+    dataElementConceptId: C83085
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CMINDC
+      linkingPhrase: is the medical condition that is the reason for the treatment in
+      predicateTerm: IS_REASON_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMDOSE
+    dataElementConceptId: C83221
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: CMDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMDOSTXT
+    dataElementConceptId: C83221
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: CMDOSTXT
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMDOSU
+    dataElementConceptId: C83034
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: CMDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: CMDOSE
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMDOSFRM
+    dataElementConceptId: C83110
+    isNonStandard: false
+    codelist:
+      conceptId: C66726
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66726
+      submissionValue: FRM
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: CMDOSFRM
+      linkingPhrase: is the physical form of the product in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMDOSFRQ
+    dataElementConceptId: C83042
+    isNonStandard: false
+    codelist:
+      conceptId: C71113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71113
+      submissionValue: FREQ
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: CMDOSFRQ
+      linkingPhrase: is the frequency of administration of the amount in
+      predicateTerm: SPECIFIES
+      object: CMDOSE
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMROUTE
+    dataElementConceptId: C83120
+    isNonStandard: false
+    codelist:
+      conceptId: C66729
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66729
+      submissionValue: ROUTE
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: CMROUTE
+      linkingPhrase: is the part of the body through which is administered the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMSTDTC
+    dataElementConceptId: C83235
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: CMSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMENDTC
+    dataElementConceptId: C83225
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: CMENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: CMTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CMSTRF
+    dataElementConceptId: C82559
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMSTRTPT
+    dataElementConceptId: C82560
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMSTTPT
+    dataElementConceptId: C82575
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMENRF
+    dataElementConceptId: C82557
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMENRTPT
+    dataElementConceptId: C82558
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CMENTPT
+    dataElementConceptId: C82574
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

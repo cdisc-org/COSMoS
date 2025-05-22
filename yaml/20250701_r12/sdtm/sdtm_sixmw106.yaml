@@ -162,7 +162,7 @@ variables:
     originType: Collected
     originSource: Investigator
   - name: FTDTC
-    dataElementConceptId: C93300
+    dataElementConceptId: C82515
     isNonStandard: false
     role: Timing
     relationship:

@@ -1,0 +1,704 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: AE
+domain: AE
+shortName: Adverse Event Free Text Format
+source: AE.AETERM
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C179175
+variables:
+  - name: AETERM
+    dataElementConceptId: C78541
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: AETERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: AEDECODE
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: AEDECOD
+    dataElementConceptId: C83344
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AELLT
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AELLT
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AELLTCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AELLTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEPTCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AEPTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEHLT
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEHLT
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEHLTCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AEHLTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEHLGT
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEHLGT
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEHLGTCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AEHLGTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AECAT
+    dataElementConceptId: C83198
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AESCAT
+    dataElementConceptId: C83212
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AESCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: AECAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEBODSYS
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEBODSYS
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEBDSYCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AEBDSYCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AESOC
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AESOC
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AESOCCD
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: AESOCCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AELOC
+    dataElementConceptId: C83205
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AELOC
+      linkingPhrase: specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESEV
+    dataElementConceptId: C53253
+    isNonStandard: false
+    codelist:
+      conceptId: C66769
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66769
+      submissionValue: AESEV
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AESEV
+      linkingPhrase: assesses the severity of
+      predicateTerm: ASSESSES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESER
+    dataElementConceptId: C53252
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESER
+      linkingPhrase: assesses seriousness of
+      predicateTerm: ASSESSES
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEACN
+    dataElementConceptId: C83013
+    isNonStandard: false
+    codelist:
+      conceptId: C66767
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66767
+      submissionValue: ACN
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEACN
+      linkingPhrase: describes actions taken
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEACNOTH
+    dataElementConceptId: C83109
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEACNOTH
+      linkingPhrase: describes actions taken
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEREL
+    dataElementConceptId: C41358
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEREL
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AERLDEV
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AERLDEV
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AERELNST
+    dataElementConceptId: C83210
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AERELNST
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEPATT
+    dataElementConceptId: C83208
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEPATT
+      linkingPhrase: identifies a pattern of
+      predicateTerm: IDENTIFIES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEOUT
+    dataElementConceptId: C49489
+    isNonStandard: false
+    codelist:
+      conceptId: C66768
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66768
+      submissionValue: OUT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: AEOUT
+      linkingPhrase: describes the outcome of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESCAN
+    dataElementConceptId: C83211
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESCAN
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESCONG
+    dataElementConceptId: C83117
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESCONG
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESDISAB
+    dataElementConceptId: C113380
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESDISAB
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESDTH
+    dataElementConceptId: C48275
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESDTH
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESHOSP
+    dataElementConceptId: C83052
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESHOSP
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESLIFE
+    dataElementConceptId: C84266
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESLIFE
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESOD
+    dataElementConceptId: C83214
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESOD
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESMIE
+    dataElementConceptId: C83053
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AESMIE
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AECONTRT
+    dataElementConceptId: C83199
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AECONTRT
+      linkingPhrase: describes relationship of
+      predicateTerm: DESCRIBES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AETOXGR
+    dataElementConceptId: C78605
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: AETOXGR
+      linkingPhrase: is the severity of the toxicity in
+      predicateTerm: SPECIFIES
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AESTDTC
+    dataElementConceptId: C83215
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: AESTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEENDTC
+    dataElementConceptId: C83201
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: AEENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: AETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: AEENRF
+    dataElementConceptId: C82557
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEENRTPT
+    dataElementConceptId: C82558
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: AEENTPT
+    dataElementConceptId: C82574
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

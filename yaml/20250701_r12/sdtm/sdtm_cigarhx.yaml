@@ -1,0 +1,311 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: CIGARHX
+domain: SU
+shortName: Cigar History
+source: SU.SUTRT
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C181760
+variables:
+  - name: SUTRT
+    dataElementConceptId: C83092
+    isNonStandard: false
+    assignedTerm:
+      value: "CIGAR"
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: SUTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: SUDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: SUCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "TOBACCO"
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_Y
+    valueList:
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: SUPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUOCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: SUOCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUDOSE
+    dataElementConceptId: C83416
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: SUDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUDOSTXT
+    dataElementConceptId: C83041
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: SUDOSTXT
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUDOSU
+    dataElementConceptId: C83038
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "CIGAR"
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: SUDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUDOSFRQ
+    dataElementConceptId: C83044
+    isNonStandard: false
+    codelist:
+      conceptId: C71113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71113
+      submissionValue: FREQ
+    valueList:
+      - "QD"
+      - "Q7D"
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: SUDOSFRQ
+      linkingPhrase: is the frequency of administration of the amount in
+      predicateTerm: SPECIFIES
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUSTDTC
+    dataElementConceptId: C83431
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: SUSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUENDTC
+    dataElementConceptId: C83419
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: SUENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUDUR
+    dataElementConceptId: C83419
+    isNonStandard: false
+    role: Timing
+    dataType: durationDatetime
+    relationship:
+      subject: SUDUR
+      linkingPhrase: is the duration for
+      predicateTerm: IS_TIMING_FOR
+      object: SUTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: SUSTRF
+    dataElementConceptId: C82559
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUSTRTPT
+    dataElementConceptId: C82560
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUSTTPT
+    dataElementConceptId: C82575
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUENRF
+    dataElementConceptId: C82557
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "DURING"
+      - "DURING/AFTER"
+      - "AFTER"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUENRTPT
+    dataElementConceptId: C82558
+    isNonStandard: false
+    codelist:
+      conceptId: C66728
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66728
+      submissionValue: STENRF
+    valueList:
+      - "BEFORE"
+      - "COINCIDENT"
+      - "AFTER"
+      - "ONGOING"
+      - "UNKNOWN"
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SUENTPT
+    dataElementConceptId: C82574
+    isNonStandard: false
+    role: Timing
+    dataType: text
+    length: 20
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
