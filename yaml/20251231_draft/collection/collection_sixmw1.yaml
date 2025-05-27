@@ -1,0 +1,23 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SIXMW1
+shortName: Six Minute Walk Test
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C115409
+items:
+  - name: FTASTDEV
+    variableName: FTASTDEV
+    dataElementConceptId: C93300
+    prompt: Assisted Device
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTASTDEV in SUPPFT"
+      sdtmVariables:
+        -  "FTASTDEV"

@@ -4,7 +4,7 @@ collectionSpecializationId: SIXMW1_PERF
 shortName: Six Minute Walk Test Performed
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion: 3-0
+standardEndVersion:  
 domain: FT
 biomedicalConceptId: C82525
 items:
@@ -63,16 +63,3 @@ items:
       sdtmAnnotation: "FTDTC"
       sdtmVariables:
         -  "FTDTC"
-  - name: FTASTDEV
-    variableName: FTASTDEV
-    dataElementConceptId: C93300
-    prompt: Assisted Device
-    orderNumber: 4
-    mandatoryVariable: true 
-    dataType: text
-    length: 200
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "FTASTDEV in SUPPFT"
-      sdtmVariables:
-        -  "FTASTDEV"
