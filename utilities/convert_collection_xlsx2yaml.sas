@@ -49,6 +49,9 @@ options mprint;
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB), debug=0);
 
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_LBPERF_generic.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_LB_Perf), debug=0);
+
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_VS.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_VS), debug=0);
 

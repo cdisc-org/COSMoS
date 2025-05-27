@@ -1,17 +1,17 @@
 packageDate: "2025-12-31"
 packageType: collection
-collectionSpecializationId: PHOSSERPL_VERTICAL
-shortName: Phosphate Concentration in Serum or Plasma (Vertical)
+collectionSpecializationId: GLUCUA_VERTICAL
+shortName: Glucose in Urine by Dipstickn (Vertical)
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
 implementationOption: Vertical
 scenario: Local Processing
 domain: LB
-biomedicalConceptId: C64857
-sdtmDatasetSpecializationId: PHOSSERPL
+biomedicalConceptId: C105585
+sdtmDatasetSpecializationId: GLUCUA
 items:
-  - name: PHOS_LBCAT
+  - name: GLUC_LBCAT
     variableName: LBCAT
     prompt: Lab Panel Name
     orderNumber: 1
@@ -25,7 +25,7 @@ items:
       sdtmAnnotation: "LBCAT"
       sdtmVariables:
         -  "LBCAT"
-  - name: PHOS_LBSCAT
+  - name: GLUC_LBSCAT
     variableName: LBSCAT
     prompt: "Lab Sub-Panel Name"
     orderNumber: 2
@@ -37,7 +37,7 @@ items:
       sdtmAnnotation: "LBSCAT"
       sdtmVariables:
         -  "LBSCAT"
-  - name: PHOS_LBNAM
+  - name: GLUC_LBNAM
     variableName: LBNAM
     questionText: What was the name of the laboratory used?
     orderNumber: 3
@@ -49,7 +49,7 @@ items:
       sdtmAnnotation: "LBNAM"
       sdtmVariables:
         -  "LBNAM"
-  - name: PHOS_LBDAT
+  - name: GLUC_LBDAT
     variableName: LBDAT
     dataElementConceptId: C82515
     prompt: Specimen Collection Date
@@ -62,7 +62,7 @@ items:
       sdtmAnnotation: "LBDTC"
       sdtmVariables:
         -  "LBDTC"
-  - name: PHOS_LBSPEC
+  - name: GLUC_LBSPEC
     variableName: LBSPEC
     dataElementConceptId: C70713
     prompt: Specimen Material
@@ -76,17 +76,33 @@ items:
       conceptId: C78734
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
     prepopulatedValue:
-      value: "SERUM OR PLASMA"
-      conceptId: C105706
+      value: "URINE"
+      conceptId: C13283
     sdtmTarget:
       sdtmAnnotation: "LBSPEC"
       sdtmVariables:
         -  "LBSPEC"
-  - name: PHOS_LBFAST
+  - name: GLUC_LBMETHOD
+    variableName: LBMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "TEST STRIP"
+      conceptId: C50322
+    sdtmTarget:
+      sdtmAnnotation: "LBMETHOD"
+      sdtmVariables:
+        -  "LBMETHOD"
+  - name: GLUC_LBFAST
     variableName: LBFAST
     dataElementConceptId: C93566
     questionText: Was the subject fasting?
-    orderNumber: 6
+    orderNumber: 7
     mandatoryVariable: false
     dataType: text
     length: 1
@@ -105,30 +121,31 @@ items:
       sdtmAnnotation: "LBFAST"
       sdtmVariables:
         -  "LBFAST"
-  - name: PHOS_LBORRES
+  - name: GLUC_LBORRES
     variableName: LBORRES
     dataElementConceptId: C70856
-    prompt: Phosphate
-    orderNumber: 7
+    prompt: Glucose
+    orderNumber: 8
     mandatoryVariable: true 
     dataType: decimal
     length: 8
     significantDigits: 2
     displayHidden: false
     sdtmTarget:
-      sdtmAnnotation: "LBORRES when LBTESTCD = PHOS"
+      sdtmAnnotation: "LBORRES when LBTESTCD = GLUC"
       sdtmVariables:
         -  "LBORRES"
         -  "LBTESTCD"
         -  "LBTEST"
-  - name: PHOS_LBORRESU
+  - name: GLUC_LBORRESU
     variableName: LBORRESU
     dataElementConceptId: C48207
     prompt: Unit
-    orderNumber: 8
+    orderNumber: 9
     mandatoryVariable: true 
     dataType: text
     length: 20
+    significantDigits: 2
     displayHidden: false
     codelist:
       submissionValue: UNIT
@@ -137,23 +154,21 @@ items:
     valueList:
       - displayValue: "mg/dL"
         value: "mg/dL"
-      - displayValue: "mg/L"
-        value: "mg/L"
-      - displayValue: "umol/L"
-        value: "umol/L"
       - displayValue: "mmol/L"
         value: "mmol/L"
+      - displayValue: "umol/L"
+        value: "umol/L"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "LBORRESU when LBTESTCD = PHOS"
+      sdtmAnnotation: "LBORRESU when LBTESTCD = GLUC"
       sdtmVariables:
         -  "LBORRESU"
         -  "LBTESTCD"
         -  "LBTEST"
-  - name: PHOS_LBORNRLO
+  - name: GLUC_LBORNRLO
     variableName: LBORNRLO
     prompt: Normal Range Lower Limit
-    orderNumber: 9
+    orderNumber: 10
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -163,10 +178,10 @@ items:
       sdtmAnnotation: "LBORNRLO"
       sdtmVariables:
         -  "LBORNRLO"
-  - name: PHOS_LBORNRHI
+  - name: GLUC_LBORNRHI
     variableName: LBORNRHI
     prompt: Normal Range Upper Limit
-    orderNumber: 10
+    orderNumber: 11
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -176,10 +191,10 @@ items:
       sdtmAnnotation: "LBORNRHI"
       sdtmVariables:
         -  "LBORNRHI"
-  - name: PHOS_LBCLSIG
+  - name: GLUC_LBCLSIG
     variableName: LBCLSIG
     questionText: Was this result clinically significant?
-    orderNumber: 11
+    orderNumber: 12
     mandatoryVariable: false
     dataType: text
     length: 1

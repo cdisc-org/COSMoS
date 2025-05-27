@@ -29,7 +29,7 @@ items:
         -  "FTCAT"
   - name: FTPERF
     variableName: FTPERF
-    dataElementConceptId: C70856
+    dataElementConceptId: C82525
     questionText: Was the Six Minute Walk Test performed?
     orderNumber: 2
     mandatoryVariable: false

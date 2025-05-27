@@ -121,38 +121,10 @@ items:
         -  "LBORRES"
         -  "LBTESTCD"
         -  "LBTEST"
-  - name: PH_LBORRESU
-    variableName: LBORRESU
-    dataElementConceptId: C48207
-    prompt: Unit
-    orderNumber: 8
-    mandatoryVariable: false
-    dataType: text
-    length: 20
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "LBORRESU when LBTESTCD = PH"
-      sdtmVariables:
-        -  "LBORRESU"
-        -  "LBTESTCD"
-        -  "LBTEST"
-  - name: PH_LBMETHOD
-    variableName: LBMETHOD
-    dataElementConceptId: C82535
-    prompt: Method
-    orderNumber: 9
-    mandatoryVariable: false
-    dataType: text
-    length: 100
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "LBMETHOD"
-      sdtmVariables:
-        -  "LBMETHOD"
   - name: PH_LBORNRLO
     variableName: LBORNRLO
     prompt: Normal Range Lower Limit
-    orderNumber: 10
+    orderNumber: 8
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -165,7 +137,7 @@ items:
   - name: PH_LBORNRHI
     variableName: LBORNRHI
     prompt: Normal Range Upper Limit
-    orderNumber: 11
+    orderNumber: 9
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -178,7 +150,7 @@ items:
   - name: PH_LBCLSIG
     variableName: LBCLSIG
     questionText: Was this result clinically significant?
-    orderNumber: 12
+    orderNumber: 10
     mandatoryVariable: false
     dataType: text
     length: 1

@@ -82,34 +82,11 @@ items:
       sdtmAnnotation: "LBSPEC"
       sdtmVariables:
         -  "LBSPEC"
-  - name: HBCOHGB_LBFAST
-    variableName: LBFAST
-    dataElementConceptId: C93566
-    questionText: Was the subject fasting?
-    orderNumber: 6
-    mandatoryVariable: false
-    dataType: text
-    length: 1
-    displayHidden: false
-    codelist:
-      submissionValue: NY
-      conceptId: C66742
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
-    valueList:
-      - displayValue: "No"
-        value: "N"
-      - displayValue: "Yes"
-        value: "Y"
-    selectionType: Single
-    sdtmTarget:
-      sdtmAnnotation: "LBFAST"
-      sdtmVariables:
-        -  "LBFAST"
   - name: HBCOHGB_LBORRES
     variableName: LBORRES
     dataElementConceptId: C70856
     prompt: Carboxyhemoglobin/Total Hemoglobin
-    orderNumber: 7
+    orderNumber: 6
     mandatoryVariable: true 
     dataType: decimal
     length: 8
@@ -125,7 +102,7 @@ items:
     variableName: LBORRESU
     dataElementConceptId: C48570
     prompt: Unit
-    orderNumber: 8
+    orderNumber: 7
     mandatoryVariable: true 
     dataType: text
     length: 20
@@ -144,23 +121,10 @@ items:
         -  "LBORRESU"
         -  "LBTESTCD"
         -  "LBTEST"
-  - name: HBCOHGB_LBMETHOD
-    variableName: LBMETHOD
-    dataElementConceptId: C82535
-    prompt: Method
-    orderNumber: 9
-    mandatoryVariable: false
-    dataType: text
-    length: 100
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "LBMETHOD"
-      sdtmVariables:
-        -  "LBMETHOD"
   - name: HBCOHGB_LBORNRLO
     variableName: LBORNRLO
     prompt: Normal Range Lower Limit
-    orderNumber: 10
+    orderNumber: 8
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -173,7 +137,7 @@ items:
   - name: HBCOHGB_LBORNRHI
     variableName: LBORNRHI
     prompt: Normal Range Upper Limit
-    orderNumber: 11
+    orderNumber: 9
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -186,7 +150,7 @@ items:
   - name: HBCOHGB_LBCLSIG
     variableName: LBCLSIG
     questionText: Was this result clinically significant?
-    orderNumber: 12
+    orderNumber: 10
     mandatoryVariable: false
     dataType: text
     length: 1

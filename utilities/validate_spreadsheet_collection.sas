@@ -358,8 +358,11 @@ title01 "&now";
 %let excel_file=&root/curation/draft/collection/collection_specialization_LB_Local_Urinalysis.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_09, drop=%str(drop=package_date length significant_digits)); 
 
+%let excel_file=&root/curation/draft/collection/collection_specialization_LBPERF_generic.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_LB_Perf)$, dsout=collectxx_10, drop=%str(drop=package_date length significant_digits)); 
+
 %let excel_file=&root/curation/draft/collection/collection_specialization_VS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_10, drop=%str(drop=package_date length significant_digits)); 
+%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_11, drop=%str(drop=package_date length significant_digits)); 
 
 /************************************************************************************************************************/
 

@@ -149,23 +149,10 @@ items:
         -  "LBORRESU"
         -  "LBTESTCD"
         -  "LBTEST"
-  - name: GLUC_LBMETHOD
-    variableName: LBMETHOD
-    dataElementConceptId: C82535
-    prompt: Method
-    orderNumber: 9
-    mandatoryVariable: false
-    dataType: text
-    length: 100
-    displayHidden: false
-    sdtmTarget:
-      sdtmAnnotation: "LBMETHOD"
-      sdtmVariables:
-        -  "LBMETHOD"
   - name: GLUC_LBORNRLO
     variableName: LBORNRLO
     prompt: Normal Range Lower Limit
-    orderNumber: 10
+    orderNumber: 9
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -178,7 +165,7 @@ items:
   - name: GLUC_LBORNRHI
     variableName: LBORNRHI
     prompt: Normal Range Upper Limit
-    orderNumber: 11
+    orderNumber: 10
     mandatoryVariable: false
     dataType: decimal
     length: 8
@@ -191,7 +178,7 @@ items:
   - name: GLUC_LBCLSIG
     variableName: LBCLSIG
     questionText: Was this result clinically significant?
-    orderNumber: 12
+    orderNumber: 11
     mandatoryVariable: false
     dataType: text
     length: 1
