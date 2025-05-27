@@ -57,3 +57,8 @@ dataElementConcepts:
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
     shortName: Collection Date Time
     dataType: datetime
+  - conceptId: C215501
+    ncitCode: C215501
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C215501
+    shortName: Medical Device Identifier
+    dataType: string

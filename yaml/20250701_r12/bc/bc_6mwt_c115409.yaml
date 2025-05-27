@@ -10,4 +10,14 @@ categories:
 shortName: 6MWT Functional Test Question
 synonyms:
   - 6MWT Question
+resultScales:
+  - Nominal
 definition: A question associated with the 6MWT functional test.
+dataElementConcepts:
+  - conceptId: C93300
+    ncitCode: C93300
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93300
+    shortName: Assistive Device
+    dataType: string
+    exampleSet:
+      - "cane"

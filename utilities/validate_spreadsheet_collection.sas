@@ -323,6 +323,10 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package12/R12_SDTM_TU_TULOC_Linking_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm12_15, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_GF.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc12_16); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm12_16, drop=%str(drop=length significant_digits format)); 
+
 /* Package collections test - */
 
 %let release=xx;

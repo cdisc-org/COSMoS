@@ -249,6 +249,11 @@
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_MH_AE_CM_SU.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=various, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MH_AE_CM_SU));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_GF.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_GF));
+
+
+/************************************************************************************************************************/
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_bc_xlsx2yaml_issues_R&release._&todays..html";

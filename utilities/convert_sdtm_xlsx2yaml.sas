@@ -285,6 +285,10 @@ run;
 %let excel_file=&root/curation/draft/package12/R12_SDTM_TU_TULOC_Linking_Edits.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=tu, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TU), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_GF.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
+
+/************************************************************************************************************************/
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_R&release._&todays..html";

@@ -1,61 +1,88 @@
 packageDate: "2025-07-01"
 packageType: sdtm
-datasetSpecializationId: GLUCPE
-domain: LB
-shortName: Plasma Equivalent Glucose
-source: LB.LBTESTCD
-sdtmigStartVersion: "3-2"
+datasetSpecializationId: TMBNORMNUMSEQVAR
+domain: GF
+shortName: Tumor Mutation Burden Normalized Number of Sequence Variants
+source: GF.GFTESTCD
+sdtmigStartVersion: "3-4"
 sdtmigEndVersion: ""
-biomedicalConceptId: C105585
+biomedicalConceptId: C181335
 variables:
-  - name: LBTESTCD
+  - name: SPDEVID
+    dataElementConceptId: C117060
+    isNonStandard: false
+    role: Identifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFTESTCD
     isNonStandard: false
     codelist:
-      conceptId: C65047
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C65047
-      submissionValue: LBTESTCD
+      conceptId: C181178
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181178
+      submissionValue: GFTESTCD
     assignedTerm:
-      conceptId: C163446
-      value: "GLUCPE"
+      conceptId: C181335
+      value: "TMB"
     role: Topic
     relationship:
-      subject: LBTESTCD
+      subject: GFTESTCD
       linkingPhrase: is the code for the value in
       predicateTerm: IS_DECODED_BY
-      object: LBTEST
+      object: GFTEST
     mandatoryVariable: true 
-    mandatoryValue: false
+    mandatoryValue: true 
     comparator: EQ
-  - name: LBTEST
+  - name: GFTEST
     isNonStandard: false
     codelist:
-      conceptId: C67154
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67154
-      submissionValue: LBTEST
+      conceptId: C181179
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181179
+      submissionValue: GFTEST
     assignedTerm:
-      conceptId: C163446
-      value: "Plasma Equivalent Glucose"
+      conceptId: C181335
+      value: "Tumor Mutation Burden"
     role: Qualifier
     relationship:
-      subject: LBTEST
+      subject: GFTEST
       linkingPhrase: decodes the value in
       predicateTerm: DECODES
-      object: LBTESTCD
+      object: GFTESTCD
     mandatoryVariable: true 
-    mandatoryValue: false
-  - name: LBCAT
+    mandatoryValue: true 
+  - name: GFTSTDTL
+    dataElementConceptId: C117062
     isNonStandard: false
+    codelist:
+      conceptId: C181180
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181180
+      submissionValue: GFTSDTL
     assignedTerm:
-      value: "CHEMISTRY"
+      conceptId: C189448
+      value: "NORMALIZED NUMBER OF SEQUENCE VARIANTS"
     role: Qualifier
     relationship:
-      subject: LBCAT
+      subject: GFTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "GENETIC VARIATION"
+    role: Qualifier
+    relationship:
+      subject: GFCAT
       linkingPhrase: groups values in
       predicateTerm: GROUPS
-      object: LBTESTCD
-    mandatoryVariable: true 
+      object: GFTESTCD
+    mandatoryVariable: false
     mandatoryValue: false
-  - name: LBORRES
+    comparator: EQ
+  - name: GFORRES
     dataElementConceptId: C70856
     isNonStandard: false
     role: Qualifier
@@ -64,172 +91,150 @@ variables:
     format: "12.4"
     significantDigits: 4
     relationship:
-      subject: LBORRES
+      subject: GFORRES
       linkingPhrase: is the result of the test in
       predicateTerm: IS_RESULT_OF
-      object: LBTESTCD
+      object: GFTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
     originType: Collected
     originSource: Vendor
     vlmTarget: true 
-  - name: LBORRESU
-    dataElementConceptId: C48207
-    isNonStandard: false
-    codelist:
-      conceptId: C71620
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
-      submissionValue: UNIT
-    valueList:
-      - "mg/dL"
-      - "g/L"
-      - "mmol/L"
-    role: Qualifier
-    relationship:
-      subject: LBORRESU
-      linkingPhrase: is the unit for the value in
-      predicateTerm: IS_UNIT_FOR
-      object: LBORRES
-    mandatoryVariable: true 
-    mandatoryValue: false
-    vlmTarget: true 
-  - name: LBSTRESC
-    dataElementConceptId: C70856
-    isNonStandard: false
-    role: Qualifier
-    dataType: float
-    length: 12
-    format: "12.4"
-    significantDigits: 4
-    relationship:
-      subject: LBSTRESC
-      linkingPhrase: is the result of the test in
-      predicateTerm: IS_RESULT_OF
-      object: LBTESTCD
-    mandatoryVariable: true 
-    mandatoryValue: false
-    originType: Collected
-    originSource: Vendor
-    vlmTarget: true 
-  - name: LBSTRESN
-    dataElementConceptId: C70856
-    isNonStandard: false
-    role: Qualifier
-    dataType: float
-    length: 12
-    format: "12.4"
-    significantDigits: 4
-    relationship:
-      subject: LBSTRESN
-      linkingPhrase: is the result of the test in
-      predicateTerm: IS_RESULT_OF
-      object: LBTESTCD
-    mandatoryVariable: true 
-    mandatoryValue: false
-    originType: Collected
-    originSource: Vendor
-    vlmTarget: true 
-  - name: LBSTRESU
-    dataElementConceptId: C48207
+  - name: GFORRESU
+    dataElementConceptId: C103223
     isNonStandard: false
     codelist:
       conceptId: C71620
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
     assignedTerm:
-      conceptId: C64387
-      value: "mmol/L"
+      conceptId: C176387
+      value: "/MBP"
     role: Qualifier
     relationship:
-      subject: LBSTRESU
+      subject: GFORRESU
       linkingPhrase: is the unit for the value in
       predicateTerm: IS_UNIT_FOR
-      object: LBSTRESN
+      object: GFORRES
     mandatoryVariable: false
     mandatoryValue: false
     vlmTarget: true 
-  - name: LBLOINC
+  - name: GFSTRESC
+    dataElementConceptId: C70856
     isNonStandard: false
-    valueList:
-      - "99504-3"
-      - "105272-9"
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: GFSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: GFSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFSTRESU
+    dataElementConceptId: C103223
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C176387
+      value: "/MBP"
     role: Qualifier
     relationship:
-      subject: LBLOINC
-      linkingPhrase: identifies an observation described by
-      predicateTerm: IDENTIFIES_OBSERVATION
-      object: LBTESTCD
+      subject: GFSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: GFSTRESN
     mandatoryVariable: false
     mandatoryValue: false
-  - name: LBSPEC
+    vlmTarget: true 
+  - name: GFSPEC
     dataElementConceptId: C70713
     isNonStandard: false
     codelist:
-      conceptId: C78734
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
-      submissionValue: SPECTYPE
+      conceptId: C111114
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111114
+      submissionValue: GENSMP
     assignedTerm:
-      conceptId: C120839
-      value: "INTERSTITIAL FLUID"
+      conceptId: C113243
+      value: "ctDNA"
     role: Qualifier
     relationship:
-      subject: LBSPEC
+      subject: GFSPEC
       linkingPhrase: is the specimen tested in
       predicateTerm: IS_SPECIMEN_TESTED_IN
-      object: LBTESTCD
-    mandatoryVariable: true 
+      object: GFTESTCD
+    mandatoryVariable: false
     mandatoryValue: false
     comparator: EQ
-  - name: LBMETHOD
+  - name: GFMETHOD
     dataElementConceptId: C82535
     isNonStandard: false
     codelist:
       conceptId: C85492
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
       submissionValue: METHOD
+    assignedTerm:
+      conceptId: C130177
+      value: "NEXT GENERATION TARGETED SEQUENCING"
     role: Qualifier
     relationship:
-      subject: LBMETHOD
+      subject: GFMETHOD
       linkingPhrase: is the method for the test in
       predicateTerm: SPECIFIES
-      object: LBTESTCD
-    mandatoryVariable: false
+      object: GFTESTCD
+    mandatoryVariable: true 
     mandatoryValue: false
-  - name: LBFAST
-    dataElementConceptId: C93566
+    comparator: EQ
+  - name: GFANMETH
+    dataElementConceptId: C117039
     isNonStandard: false
     codelist:
-      conceptId: C66742
-      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
-      submissionValue: NY
-    subsetCodelist: NY_NY
-    valueList:
-      - "N"
-      - "Y"
+      conceptId: C181181
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181181
+      submissionValue: GFANMET
     role: Qualifier
     relationship:
-      subject: LBFAST
-      linkingPhrase: is the subject's fasting status during the performance of the test in
-      predicateTerm: IS_SUBJECT_STATE_FOR
-      object: LBTESTCD
+      subject: GFANMETH
+      linkingPhrase: is the method of secondary analysis of results in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
     mandatoryVariable: false
     mandatoryValue: false
-  - name: LBDTC
+  - name: GFDTC
     dataElementConceptId: C82515
     isNonStandard: false
     role: Timing
     relationship:
-      subject: LBDTC
-      linkingPhrase: is the start date for
+      subject: GFDTC
+      linkingPhrase: is the date of occurrence for
       predicateTerm: IS_TIMING_FOR
-      object: LBTESTCD
-    mandatoryVariable: true 
-    mandatoryValue: false
-  - name: SPDEVID
-    dataElementConceptId: C215501
-    isNonStandard: true 
-    role: Identifier
-    dataType: text
-    length: 20
+      object: GFTESTCD
     mandatoryVariable: false
     mandatoryValue: false

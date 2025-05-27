@@ -1,0 +1,115 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C189439
+ncitCode: C189439
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189439
+parentConceptId: C17248
+categories:
+  - Genomic Findings
+  - Genetic Variation
+shortName: Sequence Rearrangement
+synonyms:
+  - SEQREAR
+resultScales:
+  - Quantitative
+  - Nominal
+definition: Any product of a process affecting a nucleic acid sequence that results in the gain, loss, inversion, or translocation of nucleic acid.
+dataElementConcepts:
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Rearrangement Impact Classification"
+      - "Rearrangement Gene 1"
+      - "Rearrangement Gene 2"
+      - "Rearrangement Type"
+      - "Predicted In-Frame Indicator"
+      - "Read Depth"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Genetic Variation"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93423
+    ncitCode: C93423
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93423
+    shortName: Reference Result
+    dataType: string
+  - conceptId: C204091
+    ncitCode: C204091
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204091
+    shortName: Genomic Inheritability Type
+    dataType: string
+  - conceptId: C164815
+    ncitCode: C164815
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164815
+    shortName: Reference Genome Assembly Version
+    dataType: string
+  - conceptId: C164716
+    ncitCode: C164716
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164716
+    shortName: Chromosome Name
+    dataType: string
+  - conceptId: C43568
+    ncitCode: C43568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C43568
+    shortName: Gene Symbol
+    dataType: string
+    exampleSet:
+      - "BRD4"
+      - "MYO10"
+  - conceptId: C204092
+    ncitCode: C204092
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204092
+    shortName: Genomic Symbol Entity Type
+    dataType: string
+    exampleSet:
+      - "Gene With Protein Product"
+  - conceptId: C164528
+    ncitCode: C164528
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164528
+    shortName: Genetic Location
+    dataType: string
+  - conceptId: C164533
+    ncitCode: C164533
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164533
+    shortName: Genetic Subregion
+    dataType: string
+  - conceptId: C164811
+    ncitCode: C164811
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164811
+    shortName: Genetic Reference Sequence Identifier
+    dataType: string
+  - conceptId: C164813
+    ncitCode: C164813
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164813
+    shortName: Genetic Variation Identifier
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "DNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Targeted Genome Sequencing"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
