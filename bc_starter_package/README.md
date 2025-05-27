@@ -16,6 +16,7 @@
 - [BC DEC Templates](doc/BC%20DEC%20Templates.xlsx) (Excel spreadsheet)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
 - [Charter for COSMoS\_V1](doc/Charter%20for%20COSMOS_V1.pdf)
+- [Charter for COSMoS\_V2](doc/Charter%20for%20COSMOS_V2.pdf)
 
 ## Use Case: Users who want to retrieve and use BCs and Dataset Specializations from the CDISC Library<a id='usecase2'></a>
 
