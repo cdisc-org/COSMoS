@@ -55,6 +55,9 @@ options mprint;
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_VS.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_VS), debug=0);
 
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_MH.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=mh, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_MH), debug=0);
+
 
 
 

@@ -364,6 +364,9 @@ title01 "&now";
 %let excel_file=&root/curation/draft/collection/collection_specialization_VS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_11, drop=%str(drop=package_date length significant_digits)); 
 
+%let excel_file=&root/curation/draft/collection/collection_specialization_MH.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_MH)$, dsout=collectxx_12, drop=%str(drop=package_date length significant_digits)); 
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
