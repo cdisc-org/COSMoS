@@ -221,15 +221,17 @@
 
         end;
 
-        if not missing(sdtm_target_variable) then do;
+        if (not missing(sdtm_target_variable)) or 
+           (not missing(sdtm_annotation)) or 
+           (not missing(sdtm_mapping)) then do;
           
           put +4 "sdtmTarget:";
 
-          countwords=countw(sdtm_target_variable, ";");
           if not missing(sdtm_annotation) then do;
             qsdtm_annotation = quote(strip(sdtm_annotation));
             put +6 "sdtmAnnotation:" +1 qsdtm_annotation;
           end;  
+          countwords=countw(sdtm_target_variable, ";");
           if countwords gt 0 then put +6 "sdtmVariables:";
           do i=1 to countwords;
             value=strip(scan(sdtm_target_variable, i, ";"));

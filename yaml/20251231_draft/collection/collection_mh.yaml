@@ -28,6 +28,9 @@ items:
       - displayValue: "Yes"
         value: "Y"
     selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+      sdtmVariables:
   - name: MHDAT
     variableName: MHDAT
     dataElementConceptId: C82515

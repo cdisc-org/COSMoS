@@ -26,3 +26,6 @@ items:
       - displayValue: "Yes"
         value: "Y"
     selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+      sdtmVariables:
