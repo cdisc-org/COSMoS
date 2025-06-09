@@ -4,7 +4,9 @@
   debug=0, check_relationships=1
   );
 
-%ReadExcel(file=&excel_file, range=&range.$, dsout=bc_sdtm_&type._&package);
+  %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
+
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_sdtm_&type._&package);
 
   data bc_sdtm_&type._&package;
     set bc_sdtm_&type._&package(where=(not missing(vlm_group_id)));

@@ -273,7 +273,7 @@ run;
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_AIMS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=aims, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_AIMS), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package12/R12_ADAS-Cog_SDTM.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_SDTM_QRS_ADAS-Cog.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_ADAS-Cog), debug=0, check_relationships=&checkrelationships);
 
 %let excel_file=&root/curation/draft/package12/R12_SDTM_EC_Linking_Edits.xlsx;
@@ -287,6 +287,12 @@ run;
 
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_GF.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=gf, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GF), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_ATLAS.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=atlas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_ATLAS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_HAM-A.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=ham-a, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_HAM-A), debug=0, check_relationships=&checkrelationships);
 
 /************************************************************************************************************************/
 

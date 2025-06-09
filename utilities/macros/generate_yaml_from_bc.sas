@@ -1,5 +1,7 @@
 %macro generate_yaml_from_bc(excel_file=, range=, type=, package=, override_package_date=, out_folder=, debug=0);
 
+  %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
+  
   %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package, print=999);
 
   data bc_&type._&package;

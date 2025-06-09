@@ -1,0 +1,41 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C155646
+ncitCode: C155646
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C155646
+parentConceptId: C101876
+categories:
+  - QRS
+  - Hamilton Anxiety Rating Scale Clinical Classification
+  - "HAM-A"
+shortName: "HAMA - Total Score"
+synonyms:
+  - "HAMA1-Total Score"
+  - HAMA115
+  - "HAMA - Total Score"
+resultScales:
+  - ordinal
+definition: Hamilton Anxiety Rating Scale (HAMA) Total score.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "HAM-A"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

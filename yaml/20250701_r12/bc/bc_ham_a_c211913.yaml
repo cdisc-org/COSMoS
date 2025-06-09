@@ -1,0 +1,11 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C211913
+ncitCode: C211913
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C211913
+categories:
+  - Research or Clinical Assessment Tools
+  - Clinical Classification Instruments
+  - QRS
+shortName: CDISC QRS Instruments Questions
+definition: A header for CDISC Questionnaires, Ratings and Scales

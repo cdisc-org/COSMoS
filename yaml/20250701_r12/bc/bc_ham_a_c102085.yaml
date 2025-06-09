@@ -1,0 +1,53 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C102085
+ncitCode: C102085
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102085
+parentConceptId: C101876
+categories:
+  - QRS
+  - Hamilton Anxiety Rating Scale Clinical Classification
+  - "HAM-A"
+shortName: "HAMA - Autonomic Symptoms"
+synonyms:
+  - "HAMA1-Autonomic Symptoms"
+  - HAMA113
+  - "HAMA - Autonomic Symptoms"
+resultScales:
+  - ordinal
+definition: Hamilton Anxiety Rating Scale (HAMA) Autonomic symptoms; dry mouth, flushing, pallor, tendency to sweat, giddiness, tension, headache, raising of hair.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Not present"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+      - "Very severe"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "HAM-A"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

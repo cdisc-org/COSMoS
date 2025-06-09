@@ -3,6 +3,8 @@
   out_folder=, debug=0
   );
 
+  %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
+
   %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_collection_&type._&package, drop=%str(drop=package_date));
 
   data bc_collection_&type._&package;

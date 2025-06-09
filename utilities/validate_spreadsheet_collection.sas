@@ -286,10 +286,10 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_07); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_06, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/package12/R12_ADAS-Cog_BC.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_BC_QRS_ADAS-Cog.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog)$, dsout=bc12_08); 
 
-%let excel_file=&root/curation/draft/package12/R12_ADAS-Cog_SDTM.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_SDTM_QRS_ADAS-Cog.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_ADAS-Cog)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
@@ -325,7 +325,18 @@ title01 "&now";
 
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc12_16); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm12_16, drop=%str(drop=length significant_digits format)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_GF)$, dsout=sdtm12_16, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_ATLAS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_ATLAS)$, dsout=bc12_17); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_ATLAS)$, dsout=sdtm12_17, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_HAM-A.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_HAM-A)$, dsout=bc12_18); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_HAM-A)$, dsout=sdtm12_18, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_QRS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_QRS)$, dsout=bc12_19); 
 
 /* Package collections test - */
 
