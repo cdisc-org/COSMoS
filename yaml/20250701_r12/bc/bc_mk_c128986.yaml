@@ -13,7 +13,7 @@ synonyms:
   - Sharp/Genant Bone Erosion Score
 resultScales:
   - Ordinal
-definition: "The numerical value that represents the result of a clinical assessment of bone erosion based on the Genant modification of the Sharp Joint Erosion Assessment (Genant HK. Methods of assessing radiographic change in rheumatoid arthritis. Am J Med. 1983 Dec 30;75(6A):35-47)."
+definition: The numerical value that represents the result of a clinical assessment of bone erosion based on the Genant modification of the Sharp Joint Erosion Assessment (Genant HK. Methods of assessing radiographic change in rheumatoid arthritis. Am J Med. 1983 Dec
 dataElementConcepts:
   - conceptId: C46126
     ncitCode: C46126
@@ -37,11 +37,7 @@ dataElementConcepts:
       - "0 Normal"
       - "0.5 Subtle loss of cortical continuity or equivocal findings of bone erosion"
       - "1.0 mild: definite but small erosions involving less than 25% of the articular bone"
-      - "1.5 Mild-to-moderate: small-medium erosions involving less than 25% of the articular bone"
-      - "2.0 Moderate: medium-large erosions involving approximately 26-50% of the articular bone"
-      - "2.5 Moderate-to-severe: erosion of approxi mately 51-75% of the articular bone"
-      - "3.0 Severe: erosion of approximately 76-90% of the articular bone"
-      - "3.5 Very severe: erosion of 100% of the articular bone"
+      - "1.5 Mild-to-moderate: small-medium erosions involving less than 25% of the articul"
   - conceptId: C13717
     ncitCode: C13717
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717

@@ -15,7 +15,7 @@ synonyms:
   - Study Sponsor
 resultScales:
   - Nominal
-definition: "An entity such as an individual, company, institution, group, or organization which takes responsibility for the initiation, management, and/or financing of a clinical study. The sponsor does not actually conduct the investigation unless the sponsor is a sponsor-investigator. A person other than an individual (e.g., corporation or agency) that uses one or more of its own employees to conduct research it has initiated is considered to be a sponsor, and the employees are considered to be investigators. [21 CFR P.50.3(k)] [21 CFR P.50.102(j)] [21 CFR P.312.3]"
+definition: An entity such as an individual, company, institution, group, or organization which takes responsibility for the initiation, management, and/or financing of a clinical study. The sponsor does not actually conduct the investigation unless the sponsor is a
 dataElementConcepts:
   - conceptId: C49691
     ncitCode: C49691

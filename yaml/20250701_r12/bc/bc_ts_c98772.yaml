@@ -12,7 +12,7 @@ synonyms:
   - PRIMARY OUTCOME MEASURE
 resultScales:
   - Nominal
-definition: The primary measurement(s) or observation(s) used to measure the effect of experimental variables in a study, or for observational studies, to describe patterns of diseases or traits or associations with exposures, risk factors or treatment. These are the outcome measures used to assess the primary objective(s).
+definition: The primary measurement(s) or observation(s) used to measure the effect of experimental variables in a study, or for observational studies, to describe patterns of diseases or traits or associations with exposures, risk factors or treatment. These are the
 dataElementConcepts:
   - conceptId: C49691
     ncitCode: C49691

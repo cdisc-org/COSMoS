@@ -84,8 +84,7 @@ variables:
       - "Very mild - one instance of poor concentration"
       - "Mild - 2-3 instances of poor concentration/distractibility, signs of restlessness and inattentiveness"
       - "Moderate - 4-5 instances during interview"
-      - "Moderately severe - poor concentration/distractibility throughout much of interview"
-      - "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks"
+      - "Moderat"
     role: Qualifier
     dataType: float
     length: 5

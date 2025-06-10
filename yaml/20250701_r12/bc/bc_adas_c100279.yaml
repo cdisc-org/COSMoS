@@ -38,9 +38,7 @@ dataElementConcepts:
       - "No evidence of poor concentration or distractibility (0)"
       - "Very mild - one instance of poor concentration (1)"
       - "Mild - 2-3 instances of poor concentration/distractibility, signs of restlessness and inattentiveness (2)"
-      - "Moderate - 4-5 instances during interview (3)"
-      - "Moderately severe - poor concentration/distractibility throughout much of interview (4)"
-      - "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks (5)"
+      - "Moderate - 4-5 instances during interv"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

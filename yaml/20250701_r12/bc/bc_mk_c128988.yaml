@@ -13,7 +13,7 @@ synonyms:
   - Sharp/Van der Heijde Bone Erosion Score
 resultScales:
   - Ordinal
-definition: "The numerical value that represents the result of a clinical assessment of bone erosion based on the Van der Heijde modification of the Sharp Joint Erosion Assessment (Van der Heijde DM, van Riel PL, Nuver-Zwart IH, Gribnau FW, van de Putte LB. Effects of hydroxychloroquine and sulphasalazine on progression of joint damage in rheumatoid arthritis. Lancet 1989;1:1036-8)."
+definition: "The numerical value that represents the result of a clinical assessment of bone erosion based on the Van der Heijde modification of the Sharp Joint Erosion Assessment (Van der Heijde DM, van Riel PL, Nuver-Zwart IH, Gribnau FW, van de Putte LB. Effects of"
 dataElementConcepts:
   - conceptId: C46126
     ncitCode: C46126

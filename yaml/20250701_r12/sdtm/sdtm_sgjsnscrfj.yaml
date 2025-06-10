@@ -53,8 +53,7 @@ variables:
       - "1.5 Mild-moderate, definite medium erosion"
       - "2.0 Moderate, definite erosion, 26-50% of articular bone"
       - "2.5 Moderate-severe, definite erosion, 51-75% of articular bone"
-      - "3.0 Severe, definite erosion, 76-90% of articular bone"
-      - "3.5 Very severe, definite erosion, nearly complete loss of articular bone"
+      - "3"
     role: Qualifier
     dataType: float
     length: 8

@@ -13,7 +13,7 @@ synonyms:
   - Sharp/Genant JSN Score
 resultScales:
   - Ordinal
-definition: "The numerical value that represents the result of a clinical assessment of joint space narrowing based on the Genant modification of the Sharp Joint Space Narrowing Assessment (Genant HK. Methods of assessing radiographic change in rheumatoid arthritis. Am J Med. 1983 Dec 30;75(6A):35-47)."
+definition: The numerical value that represents the result of a clinical assessment of joint space narrowing based on the Genant modification of the Sharp Joint Space Narrowing Assessment (Genant HK. Methods of assessing radiographic change in rheumatoid arthritis. A
 dataElementConcepts:
   - conceptId: C46126
     ncitCode: C46126
@@ -40,8 +40,7 @@ dataElementConcepts:
       - "1.5 Mild-moderate, definite medium erosion"
       - "2.0 Moderate, definite erosion, 26-50% of articular bone"
       - "2.5 Moderate-severe, definite erosion, 51-75% of articular bone"
-      - "3.0 Severe, definite erosion, 76-90% of articular bone"
-      - "3.5 Very severe, definite erosion, nearly complete loss of articular bone"
+      - "3"
   - conceptId: C13717
     ncitCode: C13717
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717

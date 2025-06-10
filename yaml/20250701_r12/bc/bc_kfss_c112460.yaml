@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C112460
+ncitCode: C112460
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112460
+parentConceptId: C211913
+categories:
+  - Clinical or Research Assessment Questions
+shortName: KFSS Questionnaire Question
+definition: A question associated with the KFSS questionnaire.

@@ -82,6 +82,27 @@ variables:
     originType: Collected
     originSource: Investigator
     vlmTarget: true 
+  - name: RSORRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C42576
+      value: "g/L"
+    role: Qualifier
+    relationship:
+      subject: RSORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: RSORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
   - name: RSSTRESC
     dataElementConceptId: C46126
     isNonStandard: false

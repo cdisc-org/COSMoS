@@ -84,8 +84,7 @@ variables:
       - "Very mild - one instance of lack of understandability"
       - "Mild - patient has difficulty less than 25% of the time"
       - "Moderate - patient has difficulty 25-50% of the time"
-      - "Moderately severe - patient has difficulty 50% of the time"
-      - "Severe - one or two word utterance - fluent, but empty speech, mute"
+      - "Moderately severe - patien"
     role: Qualifier
     dataType: float
     length: 5

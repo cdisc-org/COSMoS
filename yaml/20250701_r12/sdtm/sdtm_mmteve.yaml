@@ -52,7 +52,7 @@ variables:
       - "2 Full range of motion, gravity eliminated"
       - "3 Full range of motion against gravity"
       - "4 Full range of motion against gravity, moderate resistance"
-      - "5 Full range of motion against gravity, maximal resistance"
+      - "5 Full range of motion"
     role: Qualifier
     dataType: integer
     length: 8

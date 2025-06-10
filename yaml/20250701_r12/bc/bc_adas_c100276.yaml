@@ -39,8 +39,7 @@ dataElementConcepts:
       - "Very mild - one instance of lack of understandability (1)"
       - "Mild - patient has difficulty less than 25% of the time (2)"
       - "Moderate - patient has difficulty 25-50% of the time (3)"
-      - "Moderately severe - patient has difficulty 50% of the time (4)"
-      - "Severe - one or two word utterance, fluent, but empty speech, mute (5)"
+      - "Moderately"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

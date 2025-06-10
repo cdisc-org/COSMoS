@@ -261,6 +261,8 @@
 %let excel_file=&root/curation/draft/package12/R12_BC_QRS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=qrs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_QRS));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KFSS.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=kfss, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_KFSS));
 
 /************************************************************************************************************************/
 

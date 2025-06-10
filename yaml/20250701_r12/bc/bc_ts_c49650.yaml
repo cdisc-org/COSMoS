@@ -11,7 +11,7 @@ synonyms:
   - TDIGRP
 resultScales:
   - Nominal
-definition: A grouping of individuals on the basis of a shared procedure or disease, or lack thereof (e.g. healthy volunteers, type 2 diabetic subjects, subjects with renal cell cancer).  Standardized naming systems are available that define the groups within which a subject should be placed.
+definition: A grouping of individuals on the basis of a shared procedure or disease, or lack thereof (e.g. healthy volunteers, type 2 diabetic subjects, subjects with renal cell cancer).  Standardized naming systems are available that define the groups within which a
 dataElementConcepts:
   - conceptId: C49691
     ncitCode: C49691

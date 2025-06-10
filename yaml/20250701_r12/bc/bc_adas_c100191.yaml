@@ -39,8 +39,7 @@ dataElementConcepts:
       - "3-5 items (objects and fingers) named incorrectly (1)"
       - "6-8 items (objects and fingers) named incorrectly (2)"
       - "9-11 items (objects and fingers) named incorrectly (3)"
-      - "12-14 items (objects and fingers) named incorrectly (4)"
-      - "15-17 items (objects and fingers) named incorrectly (5)"
+      - "12-14 items (objects and fingers)"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

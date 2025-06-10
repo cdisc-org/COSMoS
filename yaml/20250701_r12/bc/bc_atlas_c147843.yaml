@@ -42,6 +42,13 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "ATLAS"
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: integer
+    exampleSet:
+      - "Years"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

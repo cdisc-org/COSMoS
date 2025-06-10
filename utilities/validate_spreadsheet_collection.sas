@@ -338,6 +338,10 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package12/R12_BC_QRS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_QRS)$, dsout=bc12_19); 
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KFSS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_KFSS)$, dsout=bc12_20); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_KFSS)$, dsout=sdtm12_19, drop=%str(drop=length significant_digits format));
+
 /* Package collections test - */
 
 %let release=xx;
