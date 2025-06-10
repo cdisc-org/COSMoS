@@ -84,7 +84,8 @@ variables:
       - "Very mild - 1 or 2 instances, not clinically significant"
       - "Mild - noticeable circumlocution or synonym substitution"
       - "Moderate - loss of words without compensation on occasion"
-      - "Moderately severe"
+      - "Moderately severe - frequent loss of words without compensation"
+      - "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances"
     role: Qualifier
     dataType: float
     length: 5

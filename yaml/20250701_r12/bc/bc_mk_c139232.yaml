@@ -14,7 +14,7 @@ synonyms:
   - MRC MMT Score, Lateral Rotation
 resultScales:
   - Ordinal
-definition: The numerical value that represents the result of a clinical assessment of muscle strength and function during lateral rotation that is based on the Medical Research Council Manual Muscle Test. (Medical Research Council. Aids to examination of the periphe
+definition: "The numerical value that represents the result of a clinical assessment of muscle strength and function during lateral rotation that is based on the Medical Research Council Manual Muscle Test. (Medical Research Council. Aids to examination of the peripheral nervous system. Memorandum no. 45, superseding War Memorandum No. 7. London: Her Majesty's Stationary Office; 1976. doi:10.1016/0022-510X(77)90205-2)."
 dataElementConcepts:
   - conceptId: C46126
     ncitCode: C46126
@@ -39,7 +39,7 @@ dataElementConcepts:
       - "2 Full range of motion, gravity eliminated"
       - "3 Full range of motion against gravity"
       - "4 Full range of motion against gravity, moderate resistance"
-      - "5 Full range of motion"
+      - "5 Full range of motion against gravity, maximal resistance"
   - conceptId: C13717
     ncitCode: C13717
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717

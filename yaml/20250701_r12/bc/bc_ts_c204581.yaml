@@ -14,7 +14,7 @@ synonyms:
   - Applicant Organization Name
 resultScales:
   - Nominal
-definition: Any party, which may include the tobacco manufacturer and its authorized representative, who is subject to FDA's jurisdiction under chapter IX of the FD&C Act and submits an application to FDA for authority to market a tobacco product. (After PMTA Rule 21
+definition: Any party, which may include the tobacco manufacturer and its authorized representative, who is subject to FDA's jurisdiction under chapter IX of the FD&C Act and submits an application to FDA for authority to market a tobacco product. (After PMTA Rule 21 CFR Part 1114 2021; SE Final Rule 21 CFR Part 1107 2021)
 dataElementConcepts:
   - conceptId: C49691
     ncitCode: C49691

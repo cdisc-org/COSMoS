@@ -40,7 +40,7 @@ dataElementConcepts:
       - "Mild - must be reminded 2 times (2)"
       - "Moderate - must be reminded 3 or 4 times (3)"
       - "Moderately severe - must be reminded 5 or 6 times (4)"
-      - "Severe - must be reminded 7 or"
+      - "Severe - must be reminded 7 or more times (5)"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

@@ -39,7 +39,8 @@ dataElementConcepts:
       - "Very mild - 1 or 2 instances of misunderstanding (1)"
       - "Mild - 3-5 instances of misunderstanding (2)"
       - "Moderate - requires several repetitions and rephrasings (3)"
-      - "Moderately severe - patient only occasionally responds"
+      - "Moderately severe - patient only occasionally responds correctly (i.e., yes/no questions) (4)"
+      - "Severe - patient rarely responds to questions appropriately, not due to poverty of speech (5)"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

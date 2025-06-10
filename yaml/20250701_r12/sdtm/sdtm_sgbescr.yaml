@@ -50,7 +50,11 @@ variables:
       - "0 Normal"
       - "0.5 Subtle loss of cortical continuity or equivocal findings of bone erosion"
       - "1.0 mild: definite but small erosions involving less than 25% of the articular bone"
-      - "1.5 Mild-to-moderate: small-medium erosions involving less than 25% of the articul"
+      - "1.5 Mild-to-moderate: small-medium erosions involving less than 25% of the articular bone"
+      - "2.0 Moderate: medium-large erosions involving approximately 26-50% of the articular bone"
+      - "2.5 Moderate-to-severe: erosion of approximately 51-75% of the articular bone"
+      - "3.0 Severe: erosion of approximately 76-90% of the articular bone"
+      - "3.5 Very severe: erosion of 100% of the articular bone"
     role: Qualifier
     dataType: float
     length: 8

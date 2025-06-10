@@ -13,7 +13,7 @@ synonyms:
   - Greulich and Pyle Skeletal Maturity Estimation
 resultScales:
   - Quantitative
-definition: An estimated assessment of an individual's skeletal maturity (bone age) based on comparison of standard radiographic images of the bones of the hand and wrist. (Greulich WW, Pyle SI. Radiographic atlas of skeletal development of the hand and wrist. The Am
+definition: "An estimated assessment of an individual's skeletal maturity (bone age) based on comparison of standard radiographic images of the bones of the hand and wrist. (Greulich WW, Pyle SI. Radiographic atlas of skeletal development of the hand and wrist. The American Journal of the Medical Sciences. 1959;238(3):393.)"
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856

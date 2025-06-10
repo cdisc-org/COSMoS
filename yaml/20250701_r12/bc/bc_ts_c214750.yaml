@@ -11,7 +11,7 @@ synonyms:
   - CAGTNAM
 resultScales:
   - Nominal
-definition: "The name of the non-investigational medicinal product (NIMP) given to trial subjects to produce a physiological response that is necessary before the pharmacological action of the investigational medicinal product can be assessed. [After Recommendations f"
+definition: "The name of the non-investigational medicinal product (NIMP) given to trial subjects to produce a physiological response that is necessary before the pharmacological action of the investigational medicinal product can be assessed. [After Recommendations from the expert group on clinical trials for the implementation of Regulation (EU) No 536/2014' dd 28 June 2017]"
 dataElementConcepts:
   - conceptId: C49691
     ncitCode: C49691

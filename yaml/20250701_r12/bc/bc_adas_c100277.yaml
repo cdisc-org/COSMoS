@@ -39,7 +39,8 @@ dataElementConcepts:
       - "Very mild - 1 or 2 instances, not clinically significant (1)"
       - "Mild - noticeable circumlocution or synonym substitution (2)"
       - "Moderate - loss of words without compensation on occasion (3)"
-      - "Mo"
+      - "Moderately severe - frequent loss of words without compensation (4)"
+      - "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances (5)"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
