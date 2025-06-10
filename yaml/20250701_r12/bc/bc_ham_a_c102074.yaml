@@ -14,7 +14,7 @@ synonyms:
   - HAMA102
   - "HAMA - Tension"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Tension; feelings of tension, fatigability, startle response, moved to tears easily, trembling, feelings of restlessness, inability to relax.
 dataElementConcepts:
   - conceptId: C46126

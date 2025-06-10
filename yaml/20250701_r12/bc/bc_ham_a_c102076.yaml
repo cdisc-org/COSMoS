@@ -14,7 +14,7 @@ synonyms:
   - HAMA104
   - "HAMA - Insomnia"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Insomnia; difficulty falling asleep, broken sleep, unsatisfying sleep and fatigue on waking, dreams, nightmares, night terrors.
 dataElementConcepts:
   - conceptId: C46126

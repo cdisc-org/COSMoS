@@ -14,7 +14,7 @@ synonyms:
   - HAMA106
   - "HAMA - Depressed Mood"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Depressed mood; loss of interest, lack of pleasure in hobbies, depression, early waking, diurnal swing.
 dataElementConcepts:
   - conceptId: C46126

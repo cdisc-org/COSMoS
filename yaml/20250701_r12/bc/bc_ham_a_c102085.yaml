@@ -14,7 +14,7 @@ synonyms:
   - HAMA113
   - "HAMA - Autonomic Symptoms"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Autonomic symptoms; dry mouth, flushing, pallor, tendency to sweat, giddiness, tension, headache, raising of hair.
 dataElementConcepts:
   - conceptId: C46126

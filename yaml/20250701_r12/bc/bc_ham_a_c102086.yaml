@@ -14,7 +14,7 @@ synonyms:
   - HAMA114
   - "HAMA - Behavior at Interview"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Behavior at interview; fidgeting, restlessness or pacing, tremor of hands, furrowed brow, strained face, sighing or rapid respiration, facial pallor, swallowing, etc.
 dataElementConcepts:
   - conceptId: C46126

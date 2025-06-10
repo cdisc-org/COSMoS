@@ -14,7 +14,7 @@ synonyms:
   - HAMA111
   - "HAMA - Gastrointestinal Symptoms"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Gastrointestinal symptoms; difficulty swallowing, wind abdominal pain, burning sensations, abdominal fullness, nausea, vomiting, borborygmi, looseness of bowels, loss of weight, constipation.
 dataElementConcepts:
   - conceptId: C46126

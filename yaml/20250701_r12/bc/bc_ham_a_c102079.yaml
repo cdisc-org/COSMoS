@@ -14,7 +14,7 @@ synonyms:
   - HAMA107
   - "HAMA - Somatic (Muscular)"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Somatic (muscular); pains and aches, twitching, stiffness, myoclonic jerks, grinding of teeth, unsteady voice, increased muscular tone.
 dataElementConcepts:
   - conceptId: C46126

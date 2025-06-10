@@ -14,7 +14,7 @@ synonyms:
   - HAMA103
   - "HAMA - Fears"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Fears; of dark, of strangers, of being left alone, of animals, of traffic, of crowds.
 dataElementConcepts:
   - conceptId: C46126

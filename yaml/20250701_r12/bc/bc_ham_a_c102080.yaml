@@ -14,7 +14,7 @@ synonyms:
   - HAMA108
   - "HAMA - Somatic (Sensory)"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Somatic (sensory); tinnitus, blurring of vision, hot and cold flushes, feelings of weakness, pricking sensation.
 dataElementConcepts:
   - conceptId: C46126

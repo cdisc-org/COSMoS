@@ -14,7 +14,7 @@ synonyms:
   - HAMA115
   - "HAMA - Total Score"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Total score.
 dataElementConcepts:
   - conceptId: C46126

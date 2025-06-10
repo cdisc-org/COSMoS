@@ -14,7 +14,7 @@ synonyms:
   - HAMA112
   - "HAMA - Genitourinary Symptoms"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Genitourinary symptoms; frequency of micturition, urgency of micturition, amenorrhea, menorrhagia, development of frigidity, premature ejaculation, loss of libido, impotence.
 dataElementConcepts:
   - conceptId: C46126

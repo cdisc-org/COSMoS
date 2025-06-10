@@ -14,7 +14,7 @@ synonyms:
   - HAMA109
   - "HAMA - Cardiovascular Symptoms"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Cardiovascular symptoms; tachycardia, palpitations, pain in chest, throbbing of vessels, fainting feelings, missing beat.
 dataElementConcepts:
   - conceptId: C46126

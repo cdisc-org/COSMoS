@@ -14,7 +14,7 @@ synonyms:
   - HAMA101
   - "HAMA - Anxious Mood"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Hamilton Anxiety Rating Scale (HAMA) Anxious mood; worries, anticipation of the worst, fearful anticipation, irritability.
 dataElementConcepts:
   - conceptId: C46126
