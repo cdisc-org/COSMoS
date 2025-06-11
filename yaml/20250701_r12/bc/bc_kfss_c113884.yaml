@@ -27,7 +27,6 @@ dataElementConcepts:
     exampleSet:
       - "0"
       - "1"
-      - "Unknown"
   - conceptId: C91106
     ncitCode: C91106
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106

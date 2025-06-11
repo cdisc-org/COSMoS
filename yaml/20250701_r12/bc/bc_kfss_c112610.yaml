@@ -31,7 +31,6 @@ dataElementConcepts:
       - "3"
       - "4"
       - "5"
-      - "Unknown"
   - conceptId: C91106
     ncitCode: C91106
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106

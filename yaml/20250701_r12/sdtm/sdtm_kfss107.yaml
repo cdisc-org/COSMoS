@@ -109,6 +109,13 @@ variables:
       conceptId: C182520
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182520
       submissionValue: KFSS107STR
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
     role: Qualifier
     dataType: integer
     length: 1
