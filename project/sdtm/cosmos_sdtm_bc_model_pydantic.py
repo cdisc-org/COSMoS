@@ -174,6 +174,8 @@ class LinkingPhraseEnum(str, Enum):
     is_the_value_of_the_property_identified_by = "is the value of the property identified by"
     is_the_name_of_the_reference_terminology_for = "is the name of the reference terminology for"
     is_the_version_of_the_reference_terminology_in = "is the version of the reference terminology in"
+    is_the_period_of_time_for_the_test_in = "is the period of time for the test in"
+    is_a_reference_range_value_for = "is a reference range value for"
 
 
 class PredicateTermEnum(str, Enum):
@@ -208,6 +210,7 @@ class PredicateTermEnum(str, Enum):
     SPECIFIES = "SPECIFIES"
     IS_VALUE_OF = "IS_VALUE_OF"
     IS_REFERENCE_TERMINOLOGY_FOR = "IS_REFERENCE_TERMINOLOGY_FOR"
+    IS_REFERENCE_VALUE_FOR = "IS_REFERENCE_VALUE_FOR"
 
 
 class OriginTypeEnum(str, Enum):

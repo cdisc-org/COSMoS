@@ -168,7 +168,9 @@
                 "is the reason for stopping administration of",
                 "is the value of the property identified by",
                 "is the name of the reference terminology for",
-                "is the version of the reference terminology in"
+                "is the version of the reference terminology in",
+                "is the period of time for the test in",
+                "is a reference range value for"
             ],
             "title": "LinkingPhraseEnum",
             "type": "string"
@@ -237,7 +239,8 @@
                 "QUALIFIES",
                 "SPECIFIES",
                 "IS_VALUE_OF",
-                "IS_REFERENCE_TERMINOLOGY_FOR"
+                "IS_REFERENCE_TERMINOLOGY_FOR",
+                "IS_REFERENCE_VALUE_FOR"
             ],
             "title": "PredicateTermEnum",
             "type": "string"

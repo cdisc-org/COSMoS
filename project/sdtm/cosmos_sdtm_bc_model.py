@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-05-20T15:30:05
+# Generation date: 2025-06-16T11:59:07
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -606,6 +606,10 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="is the name of the reference terminology for"))
         setattr(cls, "is the version of the reference terminology in",
             PermissibleValue(text="is the version of the reference terminology in"))
+        setattr(cls, "is the period of time for the test in",
+            PermissibleValue(text="is the period of time for the test in"))
+        setattr(cls, "is a reference range value for",
+            PermissibleValue(text="is a reference range value for"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
@@ -640,6 +644,7 @@ class PredicateTermEnum(EnumDefinitionImpl):
     SPECIFIES = PermissibleValue(text="SPECIFIES")
     IS_VALUE_OF = PermissibleValue(text="IS_VALUE_OF")
     IS_REFERENCE_TERMINOLOGY_FOR = PermissibleValue(text="IS_REFERENCE_TERMINOLOGY_FOR")
+    IS_REFERENCE_VALUE_FOR = PermissibleValue(text="IS_REFERENCE_VALUE_FOR")
 
     _defn = EnumDefinition(
         name="PredicateTermEnum",

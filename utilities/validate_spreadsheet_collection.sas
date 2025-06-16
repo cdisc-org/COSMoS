@@ -342,6 +342,10 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_KFSS)$, dsout=bc12_20); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_KFSS)$, dsout=sdtm12_19, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_EQ5D.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_EQ5D5L)$, dsout=bc12_21); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_EQ5D5L)$, dsout=sdtm12_20, drop=%str(drop=length significant_digits format));
+
 /* Package collections test - */
 
 %let release=xx;

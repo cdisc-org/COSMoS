@@ -367,6 +367,8 @@ enums:
       is the value of the property identified by:
       is the name of the reference terminology for:
       is the version of the reference terminology in:
+      is the period of time for the test in:
+      is a reference range value for:
 
 
   PredicateTermEnum:
@@ -402,6 +404,7 @@ enums:
       SPECIFIES:
       IS_VALUE_OF:
       IS_REFERENCE_TERMINOLOGY_FOR:
+      IS_REFERENCE_VALUE_FOR:
 
   OriginTypeEnum:
     description: Terminology relevant to the origin type for datasets in the Define-XML document.

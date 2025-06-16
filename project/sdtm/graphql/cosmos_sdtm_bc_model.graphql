@@ -92,6 +92,8 @@ enum LinkingPhraseEnum
     is_the_value_of_the_property_identified_by
     is_the_name_of_the_reference_terminology_for
     is_the_version_of_the_reference_terminology_in
+    is_the_period_of_time_for_the_test_in
+    is_a_reference_range_value_for
   }
 
 enum OriginSourceEnum
@@ -149,6 +151,7 @@ enum PredicateTermEnum
     SPECIFIES
     IS_VALUE_OF
     IS_REFERENCE_TERMINOLOGY_FOR
+    IS_REFERENCE_VALUE_FOR
   }
 
 enum RoleEnum

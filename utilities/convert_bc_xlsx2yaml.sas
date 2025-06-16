@@ -264,6 +264,9 @@
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KFSS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=kfss, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_KFSS));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_EQ5D.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=eq5d, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EQ5D5L));
+
 /************************************************************************************************************************/
 
 ods listing close;

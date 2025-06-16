@@ -63,6 +63,9 @@
       put "packageDate:" +1 qpackage_date;
       put "packageType:" +1 "bc";
       put "conceptId:" +1 BC_ID;
+      %add2issues_bc(missing(ncit_code), 
+                     %str(NCIT_CODE_MISSING), 
+                     "", "", "");
       if not missing(ncit_code) then do;
         ncit_code=strip(ncit_code);
         put "ncitCode:" +1 ncit_code;
@@ -192,9 +195,13 @@
     end;  
 
     if not missing(dec_id) then do;
+      
       dec_id=strip(dec_id);
       put "  - conceptId:" +1 dec_id;
       
+      %add2issues_bc(missing(ncit_dec_code), 
+                     %str(NCIT_DEC_CODE_MISSING), 
+                     "", "", "");
       if not missing(ncit_dec_code) then do;
         put +4 "ncitCode:" +1 ncit_dec_code;
         put +4 "href: &ncit_explore" ncit_dec_code;

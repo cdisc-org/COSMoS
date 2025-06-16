@@ -297,6 +297,9 @@ run;
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KFSS.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=kfss, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_KFSS), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_EQ5D.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=eq5d, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EQ5D5L), debug=0, check_relationships=&checkrelationships);
+
 /************************************************************************************************************************/
 
 ods listing close;
