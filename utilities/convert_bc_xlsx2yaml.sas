@@ -208,7 +208,7 @@
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2025-07-01);
 
-%let excel_file=&root/curation/draft/package12/R12_6MWT.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_6MWT.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=6mwt, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_6MWT));
 
 %let excel_file=&root/curation/draft/package12/R12_BC_New.xlsx;
@@ -266,6 +266,10 @@
 
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_EQ5D.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=eq5d, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EQ5D5L));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_DILI.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lb_dili, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DILI_EDITS_NEW));
+
 
 /************************************************************************************************************************/
 

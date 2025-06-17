@@ -1,36 +1,43 @@
 packageDate: "2025-07-01"
 packageType: bc
-conceptId: C64467
-ncitCode: C64467
-href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64467
+conceptId: C38037
+ncitCode: C38037
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38037
 parentConceptId: C74954
 categories:
   - Laboratory Tests
   - Chemistry Tests
   - Liver Function Tests
-shortName: Aspartate Aminotransferase Measurement
+  - "Drug-Induced Liver Injury"
+  - DILI
+shortName: Total Bilirubin Measurement
 synonyms:
-  - AST
-  - SGOT
+  - Bilirubin
+  - Total Bilirubin Level
 resultScales:
   - Quantitative
-definition: A quantitative measurement of aspartate aminotransferase present in a sample.
+  - Ordinal
+definition: The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
     shortName: Observation Result
-    dataType: decimal
+    dataType: string
   - conceptId: C93566
     ncitCode: C93566
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
     shortName: Fasting Status Indicator
     dataType: boolean
-  - conceptId: C67365
-    ncitCode: C67365
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
-    shortName: Unit of Catalytic Activity Concentration
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
     dataType: string
+    exampleSet:
+      - "umol/L"
+      - "mg/dL"
+      - "mg/L"
   - conceptId: C70713
     ncitCode: C70713
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713

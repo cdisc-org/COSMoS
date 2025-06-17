@@ -1,20 +1,22 @@
 packageDate: "2025-07-01"
 packageType: bc
-conceptId: C64433
-ncitCode: C64433
-href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64433
-parentConceptId: C74954
+conceptId: C62656
+ncitCode: C62656
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62656
+parentConceptId: C98774
 categories:
   - Laboratory Tests
-  - Chemistry Tests
-  - Liver Function Tests
-shortName: Alanine Aminotransferase Measurement
+  - Hematology Tests
+  - Coagulation Study
+  - Prothrombin Activity Measurements
+  - "Drug-Induced Liver Injury"
+  - DILI
+shortName: Prothrombin Time
 synonyms:
-  - ALT
-  - SGPT
+  - PT
 resultScales:
   - Quantitative
-definition: A quantitative measurement of alanine aminotransferase present in a sample.
+definition: A measurement of the clotting time of plasma recalcified in the presence of excess tissue thromboplastin; it is a measure of the extrinsic pathway of coagulation. It is used to determine the clotting tendency of blood, in the measure of warfarin dosage, liver damage and vitamin K status. Factors measured are fibrinogen, prothrombin, and factors V, VII, and X.
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856
@@ -26,11 +28,13 @@ dataElementConcepts:
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
     shortName: Fasting Status Indicator
     dataType: boolean
-  - conceptId: C67365
-    ncitCode: C67365
-    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
-    shortName: Unit of Catalytic Activity Concentration
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
     dataType: string
+    exampleSet:
+      - "Seconds"
   - conceptId: C70713
     ncitCode: C70713
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
@@ -38,9 +42,7 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "Blood"
-      - "Plasma"
-      - "Serum"
-      - "Urine"
+      - "Platelet Poor Plasma"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

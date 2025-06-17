@@ -259,7 +259,7 @@ title01 "&now";
 /* Package 12 - */
 
 %let release=12;
-%let excel_file=&root/curation/draft/package12/R12_6MWT.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_6MWT.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_6MWT)$, dsout=bc12_01); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_6MWT)$, dsout=sdtm12_01, drop=%str(drop=length significant_digits format change_history)); 
 
@@ -345,6 +345,10 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_EQ5D.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_EQ5D5L)$, dsout=bc12_21); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_EQ5D5L)$, dsout=sdtm12_20, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_DILI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DILI_EDITS_NEW)$, dsout=bc12_22); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_DILI_NEW)$, dsout=sdtm12_21, drop=%str(drop=length significant_digits format));
 
 /************************************************************************************************************************/
 
@@ -491,20 +495,22 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Duplicate BC records */
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
-      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id, dec_label
+      select bc_id, short_name, dec_id, dec_label, _excel_file_, _tab_, package_date, bc_categories
       from bc
       group by package_date, bc_id, dec_id
       having count(*) > 1
+      order by bc_id, _excel_file_, _tab_, dec_id
       ;
   run;
 
   /* Duplicate SDTM records */
   proc sql;
     title02 "Duplicate SDTM Specialization records (package_date, vlm_group_id, sdtm_variable)";
-      select _excel_file_, _tab_, package_date, sdtmig_start_version,	sdtmig_end_version, vlm_group_id, sdtm_variable
+      select vlm_group_id, sdtm_variable, sdtmig_start_version,	sdtmig_end_version, _excel_file_, _tab_, package_date
       from sdtm_merged
       group by package_date, vlm_group_id, sdtm_variable
       having count(*) > 1
+      order by vlm_group_id, _excel_file_, _tab_, sdtm_variable
       ;
   run;
 

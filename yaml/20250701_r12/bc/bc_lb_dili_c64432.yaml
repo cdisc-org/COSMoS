@@ -1,22 +1,21 @@
 packageDate: "2025-07-01"
 packageType: bc
-conceptId: C64847
-ncitCode: C64847
-href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64847
+conceptId: C64432
+ncitCode: C64432
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64432
 parentConceptId: C74954
 categories:
   - Laboratory Tests
   - Chemistry Tests
   - Liver Function Tests
-  - Protein or Enzyme Type Measurements
-shortName: Gamma Glutamyl Transpeptidase Measurement
+  - "Drug-Induced Liver Injury"
+  - DILI
+shortName: Alkaline Phosphatase Measurement
 synonyms:
-  - Gamma Glutamyl Transferase
-  - GGT
-  - GGTP
+  - Alkaline Phosphatase
 resultScales:
   - Quantitative
-definition: A quantitative measurement of the amount of gamma glutamyl transpeptidase present in a sample.
+definition: A quantitative measurement of alkaline phosphatase present in a sample.
 dataElementConcepts:
   - conceptId: C70856
     ncitCode: C70856
@@ -33,21 +32,16 @@ dataElementConcepts:
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67365
     shortName: Unit of Catalytic Activity Concentration
     dataType: string
-    exampleSet:
-      - "U/L"
-      - "IU/L"
-      - "nkat/L"
-      - "ukat/L"
   - conceptId: C70713
     ncitCode: C70713
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
     shortName: Biospecimen Type
     dataType: string
     exampleSet:
-      - "Serum"
+      - "Blood"
       - "Plasma"
+      - "Serum"
       - "Urine"
-      - "Body Fluid"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
