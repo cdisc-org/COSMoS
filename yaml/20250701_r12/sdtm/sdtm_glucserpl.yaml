@@ -152,7 +152,7 @@ variables:
     isNonStandard: false
     valueList:
       - "14749-6"
-      - "47622-6"
+      - "2345-7"
     role: Qualifier
     relationship:
       subject: LBLOINC
