@@ -227,7 +227,7 @@
 %let excel_file=&root/curation/draft/package12/R12_TS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=ts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS));
 
-%let excel_file=&root/curation/draft/package12/R12_BC_QRS_ADAS-Cog.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_ADAS-Cog.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog));
 
 %let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
@@ -269,6 +269,9 @@
 
 %let excel_file=&root/curation/draft/package12/R12_BC_SDTM_DILI.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=lb_dili, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DILI_EDITS_NEW));
+
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KPS.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=kps, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_KPS));
 
 
 /************************************************************************************************************************/

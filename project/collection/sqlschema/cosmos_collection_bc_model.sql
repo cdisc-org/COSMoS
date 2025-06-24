@@ -109,7 +109,7 @@ CREATE TABLE "DataCollectionItem" (
 );
 CREATE TABLE "SDTMTarget_sdtmVariables" (
 	"SDTMTarget_id" INTEGER, 
-	"sdtmVariables" TEXT NOT NULL, 
+	"sdtmVariables" TEXT, 
 	PRIMARY KEY ("SDTMTarget_id", "sdtmVariables"), 
 	FOREIGN KEY("SDTMTarget_id") REFERENCES "SDTMTarget" (id)
 );

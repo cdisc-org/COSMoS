@@ -85,7 +85,7 @@ type PrepopulatedValue
 type SDTMTarget
   {
     sdtmAnnotation: String
-    sdtmVariables: [String]!
+    sdtmVariables: [String]
     sdtmTargetMapping: String
   }
 

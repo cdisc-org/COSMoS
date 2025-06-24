@@ -29,7 +29,6 @@ items:
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "[NOT SUBMITTED]; EGSTAT = NOT DONE when EGTESTCD = EGALL"
-      sdtmVariables:
   - name: EGDAT
     variableName: EGDAT
     dataElementConceptId: C82515

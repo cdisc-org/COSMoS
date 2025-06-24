@@ -31,8 +31,8 @@ options mprint;
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=eg, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_EG), debug=0);
 
-%let ExcelFile=&root/curation/draft/collection/collection_specialization_FT_6MWT.xlsx;
-%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ft, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_FT), debug=0);
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_QRS_6MWT.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=6mwt, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_QRS_6MWT), debug=0);
 
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_IE.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=ie, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_IE), debug=0);
@@ -58,7 +58,8 @@ options mprint;
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_MH.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=mh, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_MH), debug=0);
 
-
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_QRS_EQ5D-5L.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=eq5d-l, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_QRS_EQ5D-5L), debug=0);
 
 
 ods listing close;

@@ -975,7 +975,6 @@
         "SDTMTarget"
       ],
       "range": "string",
-      "required": true,
       "multivalued": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -1253,9 +1252,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-02-25T11:58:42",
-  "source_file_size": 8715,
-  "generation_date": "2025-02-25T11:59:14",
+  "source_file_date": "2025-06-18T13:08:52",
+  "source_file_size": 8695,
+  "generation_date": "2025-06-18T13:09:46",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

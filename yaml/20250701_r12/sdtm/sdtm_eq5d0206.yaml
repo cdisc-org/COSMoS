@@ -416,6 +416,25 @@ variables:
     originType: Assigned
     originSource: Sponsor
     vlmTarget: true 
+  - name: QSMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C158113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C158113
+      submissionValue: QRSMTHOD
+    assignedTerm:
+      conceptId: C179788
+      value: "VISUAL ANALOG SCALE (1-100)"
+    role: Qualifier
+    relationship:
+      subject: QSMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
   - name: QSANTXLO
     dataElementConceptId: C70934
     isNonStandard: true 

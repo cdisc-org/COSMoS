@@ -37,6 +37,13 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "cane"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "SIX MINUTE WALK"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

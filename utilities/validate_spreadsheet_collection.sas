@@ -286,10 +286,8 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc12_07); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_TS)$, dsout=sdtm12_06, drop=%str(drop=length significant_digits format)); 
 
-%let excel_file=&root/curation/draft/package12/R12_BC_QRS_ADAS-Cog.xlsx;
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_ADAS-Cog.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog)$, dsout=bc12_08); 
-
-%let excel_file=&root/curation/draft/package12/R12_SDTM_QRS_ADAS-Cog.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_ADAS-Cog)$, dsout=sdtm12_07, drop=%str(drop=length significant_digits format)); 
 
 %let excel_file=&root/curation/draft/package12/R12_BC_Event_Occurrence.xlsx;
@@ -350,6 +348,10 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_DILI_EDITS_NEW)$, dsout=bc12_22); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_DILI_NEW)$, dsout=sdtm12_21, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package12/R12_BC_SDTM_QRS_KPS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_KPS)$, dsout=bc12_23); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_KPS)$, dsout=sdtm12_22, drop=%str(drop=length significant_digits format));
+
 /* Package collections test - */
 
 %let release=xx;
@@ -363,8 +365,8 @@ title01 "&now";
 %let excel_file=&root/curation/draft/collection/collection_specialization_EG_Local.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_EG)$, dsout=collectxx_03, drop=%str(drop=package_date length significant_digits)); 
 
-%let excel_file=&root/curation/draft/collection/collection_specialization_FT_6MWT.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_FT)$, dsout=collectxx_04, drop=%str(drop=package_date length significant_digits)); 
+%let excel_file=&root/curation/draft/collection/collection_specialization_QRS_6MWT.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_QRS_6MWT)$, dsout=collectxx_04, drop=%str(drop=package_date length significant_digits)); 
 
 %let excel_file=&root/curation/draft/collection/collection_specialization_IE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_IE)$, dsout=collectxx_05, drop=%str(drop=package_date length significant_digits)); 
@@ -389,6 +391,9 @@ title01 "&now";
 
 %let excel_file=&root/curation/draft/collection/collection_specialization_MH.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_MH)$, dsout=collectxx_12, drop=%str(drop=package_date length significant_digits)); 
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_QRS_EQ5D-5L.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_QRS_EQ5D-5L)$, dsout=collectxx_13, drop=%str(drop=package_date length significant_digits)); 
 
 /************************************************************************************************************************/
 

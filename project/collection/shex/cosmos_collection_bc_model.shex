@@ -127,7 +127,7 @@ linkml:Sparqlpath xsd:string
 <https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> CLOSED {
     (  $<https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget_tes> ( 
           <https://www.cdisc.org/cosmos/collection_v1.0sdtmAnnotation> @linkml:String ? ;
-          <https://www.cdisc.org/cosmos/collection_v1.0sdtmVariables> @linkml:String + ;
+          <https://www.cdisc.org/cosmos/collection_v1.0sdtmVariables> @linkml:String * ;
           <https://www.cdisc.org/cosmos/collection_v1.0sdtmTargetMapping> @linkml:String ?
        ) ;
        rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> ] ?

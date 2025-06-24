@@ -30,7 +30,7 @@
   %end;
 
   data issues(keep=_excel_file_ _tab_ package_date severity collection_group_id collection_item issue_type expected_value actual_value comment);
-    length prev_collection_group_id $128 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
+    length prev_collection_group_id $128 outname $512 package_date qpackage_date standard collection_item $64 qstandard_start_version qstandard_end_version $20  
            codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
            codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list value_display_list sdtm_annotation qsdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
@@ -233,18 +233,19 @@
             qsdtm_annotation = quote(strip(sdtm_annotation));
             put +6 "sdtmAnnotation:" +1 qsdtm_annotation;
           end;  
-          countwords=countw(sdtm_target_variable, ";");
-          if countwords gt 0 then put +6 "sdtmVariables:";
-          do i=1 to countwords;
-            value=strip(scan(sdtm_target_variable, i, ";"));
-            if not missing(value) then do;
-              qvalue=quote(strip(value));
-              put +8 "- " +1 qvalue;
-              if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping;
-              
+          
+          if not missing(sdtm_target_variable) then do;
+            countwords=countw(sdtm_target_variable, ";");
+            put +6 "sdtmVariables:";
+            do i=1 to countwords;
+              value=strip(scan(sdtm_target_variable, i, ";"));
+              if not missing(value) then do;
+                qvalue=quote(strip(value));
+                put +8 "- " +1 qvalue;
+                if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping;
+              end;
             end;
-          end;
-            
+          end;            
           
         end;  
 

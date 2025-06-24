@@ -173,6 +173,13 @@ dataElementConcepts:
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
     shortName: Collection Date Time
     dataType: datetime
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Visual Analog Scale (1-100)"
   - conceptId: C117044
     ncitCode: C117044
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117044

@@ -184,7 +184,7 @@
     if (count=2 and not missing(dec_id) and decs=0) or (count=1 and not missing(dec_id)) then do; 
       
       %add2issues_bc(result_scales_yn eq 0, 
-                     %str(RESULTSCALE_MISSING), "", "", "", severity=ERROR);
+                     %str(RESULTSCALE_MISSING), "", "", "", severity=WARNING);
       %add2issues_bc(missing(dec_label), 
                      %str(DEC_SHORTNAME_MISSING), "", "", "", severity=ERROR);
       %add2issues_bc(missing(data_type), 
