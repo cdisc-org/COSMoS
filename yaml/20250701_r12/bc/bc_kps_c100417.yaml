@@ -16,7 +16,7 @@ synonyms:
   - KPSS0101
   - "KPS Scale - Karnofsky Performance Status"
 resultScales:
-  - ordinal
+  - Ordinal
 definition: Karnofsky Performance Status Scale (KPS Scale) Karnofsky Performance Status.
 dataElementConcepts:
   - conceptId: C46126
