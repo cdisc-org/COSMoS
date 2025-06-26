@@ -216,16 +216,12 @@ def set_cmd_line_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--source", required=True, default="API", help="Input source (YAML/API)", dest="source")
     parser.add_argument("-y", "--directory", help="Input folder with YAML files", dest="directory")
-    parser.add_argument("-o", "--excel_file", default="cdisc_sdtm_dataset_specializations_latest_update.xlsx", help="Excel file to write the SDTM Dataset Specializations to", dest="excel_file")
+    parser.add_argument("-o", "--excel_file", default="cdisc_sdtm_dataset_specializations_latest.xlsx", help="Excel file to write the SDTM Dataset Specializations to", dest="excel_file")
     parser.add_argument("-d", "--date, required=True", help="Latest package date", dest="bc_date")
     args = parser.parse_args()
     return args
 
 def main():
-
-    args = set_cmd_line_args()
-    script_path = os.path.dirname(os.path.realpath(__file__))
-    sdtm_template = os.path.join(script_path, "templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx")
 
     # Define the headers for the SDTM Dataset Specializations
     HEADERS_SDTM_CORE = ["package_date", "bc_id", "sdtmig_start_version", "sdtmig_end_version", "domain", "vlm_source", "vlm_group_id", "short_name"]
@@ -235,15 +231,24 @@ def main():
                       "mandatory_variable", "mandatory_value", "origin_type", "origin_source", "comparator", "vlm_target"]
     HEADERS_SDTM = HEADERS_SDTM_CORE + HEADERS_SDTM_VARIABLE
 
-    api_key = os.environ.get("CDISC_LIBRARY_API_KEY")
-    base_api_url = "https://library.cdisc.org/api"
-    # api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
-    # base_api_url = "https://api.dev.cdisclibrary.org/api"
+    SDTM_TEMPLATE = "templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx"
 
-    cosmos_api_version = "v2"
-    client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
-    client._session.verify = False
-    requests.urllib3.disable_warnings()
+    args = set_cmd_line_args()
+
+    if args.source.lower() == "api":
+        api_key = os.environ.get("CDISC_LIBRARY_API_KEY")
+        base_api_url = os.environ.get("CDISC_LIBRARY_API_URL")
+        if not api_key or not base_api_url:
+            print("Please set the CDISC_LIBRARY_API_KEY and CDISC_LIBRARY_API_URL environment variables.")
+            return
+
+        cosmos_api_version = "v2"
+        client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
+
+        print(f"URL: {base_api_url}")
+        if "dev" in base_api_url:
+          client._session.verify = False
+          requests.urllib3.disable_warnings()
 
     if args.source.lower() == "yaml":
         if args.directory is None:
@@ -253,6 +258,9 @@ def main():
     else:
         all_sdtm_list = get_sdtm_list(client, cosmos_api_version)
         sdtm_list = get_sdtms(client, cosmos_api_version, all_sdtm_list)
+
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    sdtm_template = os.path.join(script_path, SDTM_TEMPLATE)
 
     df, df_domain = process_sdtm_dataset_specializations(sdtm_list, HEADERS_SDTM_CORE, HEADERS_SDTM_VARIABLE)
 

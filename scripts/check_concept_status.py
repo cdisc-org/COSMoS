@@ -24,6 +24,12 @@ def get_bcs(client, cosmos_api_version, all_bc_list, count=1000):
             break
     return bc_list
 
+def get_ncit_concept_status(client, concept_id):
+    concept = client.get_api_json("/concept/ncit/"+concept_id+"?include=minimal")
+    status = concept.get("conceptStatus", "")
+    name = concept.get("name", "")
+    return name, status
+
 def process_biomedical_concepts(evs_client, bc_list):
   for bc in bc_list:
     bc_id = bc.get("conceptId", "")
@@ -42,12 +48,6 @@ def process_biomedical_concepts(evs_client, bc_list):
                         print(f"Processing DEC ID: {dec_id} - Status: {status} - name: {name}")
   return
 
-def get_ncit_concept_status(client, concept_id):
-    concept = client.get_api_json("/concept/ncit/"+concept_id+"?include=minimal")
-    status = concept.get("conceptStatus", "")
-    name = concept.get("name", "")
-    return name, status
-
 def set_cmd_line_args():
     parser = argparse.ArgumentParser()
     args = parser.parse_args()
@@ -58,9 +58,7 @@ def main():
     args = set_cmd_line_args()
 
     api_key = os.environ.get("CDISC_LIBRARY_API_KEY")
-    base_api_url = "https://library.cdisc.org/api"
-    # api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
-    # base_api_url = "https://api.dev.cdisclibrary.org/api"
+    base_api_url = os.environ.get("CDISC_LIBRARY_API_URL")
     cosmos_api_version = "v2"
 
     client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)

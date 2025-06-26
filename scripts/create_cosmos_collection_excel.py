@@ -192,16 +192,12 @@ def set_cmd_line_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--source", required=True, default="API", help="Input source (YAML/API)", dest="source")
     parser.add_argument("-y", "--directory", required=True, help="Input folder with YAML files", dest="directory")
-    parser.add_argument("-o", "--excel_file", default="cdisc_collection_dataset_specializations_latest_update.xlsx", help="Excel file to write the Collection Dataset Specializations to", dest="excel_file")
+    parser.add_argument("-o", "--excel_file", default="cdisc_collection_dataset_specializations_latest.xlsx", help="Excel file to write the Collection Dataset Specializations to", dest="excel_file")
     parser.add_argument("-d", "--date, required=True", help="Latest package date", dest="bc_date")
     args = parser.parse_args()
     return args
 
 def main():
-
-    args = set_cmd_line_args()
-    script_path = os.path.dirname(os.path.realpath(__file__))
-    collection_template = os.path.join(script_path, "templates/cdisc_collection_dataset_specializations_latest_template.xlsx")
 
     # Define the headers for the Collection Dataset Specializations
     HEADERS_COLLECTION_CORE = ["package_date", "bc_id", "vlm_group_id", "standard", "standard_start_version", "standard_end_version", "domain",
@@ -212,6 +208,10 @@ def main():
                                "sdtm_target_variable", "sdtm_annotation", "sdtm_mapping"]
     HEADERS_COLLECTION = HEADERS_COLLECTION_CORE + HEADERS_COLLECTION_ITEM
 
+    TEMPLATE_COLLECTION = "templates/cdisc_collection_dataset_specializations_latest_template.xlsx"
+
+    args = set_cmd_line_args()
+
     if args.source.lower() == "yaml":
         if args.directory is None:
             print("Please provide a directory with YAML files using -y or --directory")
@@ -220,6 +220,9 @@ def main():
     else:
         print("Only YAML source is supported at this time.")
         return
+
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    collection_template = os.path.join(script_path, TEMPLATE_COLLECTION)
 
     df, df_domain = process_collection_dataset_specializations(collection_list, HEADERS_COLLECTION_CORE, HEADERS_COLLECTION_ITEM)
 

@@ -261,16 +261,12 @@ def set_cmd_line_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--source", required=True, default="API", help="Input source (YAML/API)", dest="source")
     parser.add_argument("-y", "--directory", help="Input folder with YAML files", dest="directory")
-    parser.add_argument("-o", "--excel_file", default="cdisc_biomedical_concepts_latest_update.xlsx", help="Excel file to write the Biomedical Concepts to", dest="excel_file")
+    parser.add_argument("-o", "--excel_file", default="cdisc_biomedical_concepts_latest.xlsx", help="Excel file to write the Biomedical Concepts to", dest="excel_file")
     parser.add_argument("-d", "--date, required=True", help="Latest package date", dest="bc_date")
     args = parser.parse_args()
     return args
 
 def main():
-
-    args = set_cmd_line_args()
-    script_path = os.path.dirname(os.path.realpath(__file__))
-    bc_template = os.path.join(script_path, "templates/cdisc_biomedical_concepts_latest_template.xlsx")
 
     # Define the headers for the Biomedical Concepts
     HEADERS_BC_CORE = ["package_date", "short_name", "bc_id", "ncit_code", "parent_bc_id",
@@ -282,15 +278,24 @@ def main():
                     'bc_categories', 'bc_synonyms', 'result_scales', 'bc_definition',
                     'bc_hierarchy_level', 'bc_hierarchy_full', 'dec_n']
 
-    api_key = os.environ.get("CDISC_LIBRARY_API_KEY")
-    base_api_url = "https://library.cdisc.org/api"
-    # api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
-    # base_api_url = "https://api.dev.cdisclibrary.org/api"
+    BC_TEMPLATE = "templates/cdisc_biomedical_concepts_latest_template.xlsx"
 
-    cosmos_api_version = "v2"
-    client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
-    client._session.verify = False
-    requests.urllib3.disable_warnings()
+    args = set_cmd_line_args()
+
+    if args.source.lower() == "api":
+        api_key = os.environ.get("CDISC_LIBRARY_API_KEY")
+        base_api_url = os.environ.get("CDISC_LIBRARY_API_URL")
+        if not api_key or not base_api_url:
+            print("Please set the CDISC_LIBRARY_API_KEY and CDISC_LIBRARY_API_URL environment variables.")
+            return
+
+        cosmos_api_version = "v2"
+        client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
+
+        print(f"URL: {base_api_url}")
+        if "dev" in base_api_url:
+            client._session.verify = False
+            requests.urllib3.disable_warnings()
 
     if args.source.lower() == "yaml":
         if args.directory is None:
@@ -300,6 +305,9 @@ def main():
     else:
         all_bc_list = get_bc_list(client, cosmos_api_version)
         bc_list = get_bcs(client, cosmos_api_version, all_bc_list)
+
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    bc_template = os.path.join(script_path, BC_TEMPLATE)
 
     df, df_cat = process_biomedical_concepts(bc_list, HEADERS_BC_CORE, HEADERS_BC_DEC)
 

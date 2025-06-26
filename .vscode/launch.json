@@ -67,6 +67,39 @@
             "2025-12-31"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Create BC Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_bc_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "API",
+            "-o",
+            "${workspaceFolder}/export/cdisc_biomedical_concepts_latest.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Create SDTM Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_sdtm_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "API",
+            "-o",
+            "${workspaceFolder}/export/cdisc_sdtm_dataset_specializations_latest.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
         }
+
     ]
 }
