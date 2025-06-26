@@ -15,7 +15,7 @@ if not exist "%~dp0\%folder%\collection\." (
 
 call ..\venv\Scripts\activate
 
-set logfile=%~dpn0_%folder%.log
+set logfile=%~dp0log\%~n0_%folder%.log
 echo.>%logfile%
 
 set counter=0
