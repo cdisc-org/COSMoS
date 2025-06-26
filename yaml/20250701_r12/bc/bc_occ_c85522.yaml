@@ -1,0 +1,28 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C85522
+ncitCode: C85522
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85522
+parentConceptId: C82438
+categories:
+  - Event Occurrence Indicators
+shortName: Medical History Yes No Indicator
+synonyms:
+  - MHYN
+resultScales:
+  - Nominal
+definition: An indication of whether a medical history has been taken.
+dataElementConcepts:
+  - conceptId: C85522
+    ncitCode: C85522
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85522
+    shortName: Medical History Yes No Indicator
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

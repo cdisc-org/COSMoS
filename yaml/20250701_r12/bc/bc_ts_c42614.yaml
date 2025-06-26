@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C42614
+ncitCode: C42614
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42614
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Name
+definition: The words or language units by which a thing is known.

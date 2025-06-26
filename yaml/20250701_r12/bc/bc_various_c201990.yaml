@@ -1,0 +1,159 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C201990
+ncitCode: C201990
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201990
+categories:
+  - Substance Use
+  - Personal Medical History
+  - Medical History
+shortName: Caffeine Use History
+synonyms:
+  - Caffeine History
+  - Caffeine Use
+resultScales:
+  - Nominal
+definition: A description of an individual's current or previous caffeine consumption.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Caffeine"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83092
+    ncitCode: C83092
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83092
+    shortName: Substance Use Reported Name
+    dataType: string
+    exampleSet:
+      - "Coffee"
+      - "Tea"
+      - "Cola"
+  - conceptId: C83416
+    ncitCode: C83416
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83416
+    shortName: Substance Use Dose
+    dataType: integer
+  - conceptId: C83041
+    ncitCode: C83041
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83041
+    shortName: Substance Use Dose Description
+    dataType: string
+  - conceptId: C83038
+    ncitCode: C83038
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83038
+    shortName: Substance Use Dose Unit
+    dataType: string
+    exampleSet:
+      - "Glass"
+      - "Fluid Ounce"
+      - "Milliliter"
+      - "Liter"
+  - conceptId: C83044
+    ncitCode: C83044
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83044
+    shortName: Substance Use Dose Frequency
+    dataType: string
+    exampleSet:
+      - "Daily"
+      - "Weekly"
+  - conceptId: C83431
+    ncitCode: C83431
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83431
+    shortName: Substance Use Start Date Time
+    dataType: datetime
+  - conceptId: C83419
+    ncitCode: C83419
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83419
+    shortName: Substance Use End Date Time
+    dataType: datetime
+  - conceptId: C162326
+    ncitCode: C162326
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162326
+    shortName: Substance Use Previous Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C82559
+    ncitCode: C82559
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82559
+    shortName: Start Relative to Reference Period
+    dataType: string
+    exampleSet:
+      - "Before"
+      - "During"
+      - "During/After"
+      - "After"
+      - "Unknown"
+  - conceptId: C82560
+    ncitCode: C82560
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82560
+    shortName: Start Relative to Reference Time Point
+    dataType: string
+    exampleSet:
+      - "Before"
+      - "Coincident"
+      - "After"
+      - "Unknown"
+  - conceptId: C82575
+    ncitCode: C82575
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82575
+    shortName: Reference Start Time Point
+    dataType: string
+    exampleSet:
+      - "2020-12-25"
+      - "VISIT 2"
+  - conceptId: C82557
+    ncitCode: C82557
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82557
+    shortName: End Relative to Reference Period
+    dataType: string
+    exampleSet:
+      - "Before"
+      - "During"
+      - "During/After"
+      - "After"
+      - "Unknown"
+  - conceptId: C82558
+    ncitCode: C82558
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82558
+    shortName: End Relative to Reference Time Point
+    dataType: string
+    exampleSet:
+      - "Before"
+      - "Coincident"
+      - "After"
+      - "Ongoing"
+      - "Unknown"
+  - conceptId: C82574
+    ncitCode: C82574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82574
+    shortName: Reference End Time Point End
+    dataType: string
+    exampleSet:
+      - "2020-12-25"
+      - "VISIT 2"

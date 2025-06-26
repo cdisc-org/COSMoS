@@ -141,6 +141,7 @@
                 "specifies the anatomical location in",
                 "specifies the anatomical location of",
                 "specifies the anatomical location of the performance of the test in",
+                "specifies the anatomical location of the tumor identified by",
                 "specifies the severity of",
                 "values are grouped by",
                 "was the subject position during performance of the test in",
@@ -164,7 +165,12 @@
                 "is the severity of the toxicity in",
                 "is a grouping of values in",
                 "is the textual description of the intended dose regimen for",
-                "is the reason for stopping administration of"
+                "is the reason for stopping administration of",
+                "is the value of the property identified by",
+                "is the name of the reference terminology for",
+                "is the version of the reference terminology in",
+                "is the period of time for the test in",
+                "is a reference range value for"
             ],
             "title": "LinkingPhraseEnum",
             "type": "string"
@@ -231,7 +237,10 @@
                 "PERFORMED",
                 "PERFORMS",
                 "QUALIFIES",
-                "SPECIFIES"
+                "SPECIFIES",
+                "IS_VALUE_OF",
+                "IS_REFERENCE_TERMINOLOGY_FOR",
+                "IS_REFERENCE_VALUE_FOR"
             ],
             "title": "PredicateTermEnum",
             "type": "string"

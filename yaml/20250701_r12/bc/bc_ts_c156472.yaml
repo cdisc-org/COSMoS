@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C156472
+ncitCode: C156472
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156472
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Name and Version
+definition: An identifier that includes the words or language units by which a thing is known and the form or variant of the original.

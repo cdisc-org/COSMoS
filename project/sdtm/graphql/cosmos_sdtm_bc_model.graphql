@@ -64,6 +64,7 @@ enum LinkingPhraseEnum
     specifies_the_anatomical_location_in
     specifies_the_anatomical_location_of
     specifies_the_anatomical_location_of_the_performance_of_the_test_in
+    specifies_the_anatomical_location_of_the_tumor_identified_by
     specifies_the_severity_of
     values_are_grouped_by
     was_the_subject_position_during_performance_of_the_test_in
@@ -88,6 +89,11 @@ enum LinkingPhraseEnum
     is_a_grouping_of_values_in
     is_the_textual_description_of_the_intended_dose_regimen_for
     is_the_reason_for_stopping_administration_of
+    is_the_value_of_the_property_identified_by
+    is_the_name_of_the_reference_terminology_for
+    is_the_version_of_the_reference_terminology_in
+    is_the_period_of_time_for_the_test_in
+    is_a_reference_range_value_for
   }
 
 enum OriginSourceEnum
@@ -143,6 +149,9 @@ enum PredicateTermEnum
     PERFORMS
     QUALIFIES
     SPECIFIES
+    IS_VALUE_OF
+    IS_REFERENCE_TERMINOLOGY_FOR
+    IS_REFERENCE_VALUE_FOR
   }
 
 enum RoleEnum

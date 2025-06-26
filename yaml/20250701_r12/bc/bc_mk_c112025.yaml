@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C112025
+ncitCode: C112025
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112025
+categories:
+  - Musculoskeletal Finding
+  - Mass Measurement
+shortName: Mass Measurement
+definition: A measurement of the mass of an item of interest.

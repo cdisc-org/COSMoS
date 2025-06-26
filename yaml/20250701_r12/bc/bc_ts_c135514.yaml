@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C135514
+ncitCode: C135514
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135514
+parentConceptId: C117960
+categories:
+  - Trial Summary
+shortName: Delayed Graft Function Diagnostic Criteria Name
+synonyms:
+  - Delayed Graft Function Diagnostic Criteria
+  - Delayed Graft Function Dx Criteria
+  - DGFCRIT
+resultScales:
+  - Nominal
+definition: The name of a standard criterion from which a judgment concerning an occurrence of a delayed graft function (DGF) can be established.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Delayed Graft Function Dx Criteria"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "DGFCRIT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

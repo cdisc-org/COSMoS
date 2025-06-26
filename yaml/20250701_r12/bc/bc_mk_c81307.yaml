@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C81307
+ncitCode: C81307
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81307
+categories:
+  - Musculoskeletal Finding
+  - Estimation Method
+shortName: Estimation Method
+definition: A description of the technique for the approximate calculation of a value.

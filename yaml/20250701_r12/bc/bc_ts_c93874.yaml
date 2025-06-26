@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C93874
+ncitCode: C93874
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93874
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Organization Name
+synonyms:
+  - Organization
+definition: A textual identifier for an organization.

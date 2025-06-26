@@ -1,0 +1,51 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126062
+ncitCode: C126062
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126062
+parentConceptId: C43513
+categories:
+  - Trial Summary
+shortName: Protocol Keyword
+synonyms:
+  - KEYWORD
+  - Keyword
+resultScales:
+  - Nominal
+definition: A word or small set of words designed to convey the subject of a clinical study.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Protocol Keyword"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "KEYWORD"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Hypertension"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C14.907.489"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ClinTrials.gov"

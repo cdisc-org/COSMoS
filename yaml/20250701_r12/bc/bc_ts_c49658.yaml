@@ -1,0 +1,65 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49658
+ncitCode: C49658
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49658
+parentConceptId: C15320
+categories:
+  - Trial Summary
+shortName: Trial Blinding Schema
+synonyms:
+  - Study Blinding Design
+  - Study Blinding Schema
+  - Study Masking Design
+  - TBLIND
+  - Trial Blinding Design
+  - Trial Masking Design
+  - Blinding Schema
+resultScales:
+  - Nominal
+definition: The type of experimental design used to describe the level of awareness of the study subjects and/ or study personnel as it relates to the respective intervention(s) or assessments being observed, received or administered.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Blinding Schema"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "TBLIND"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "DOUBLE BLIND"
+      - "OBSERVER BLIND"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C15228"
+      - "C187674"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "CDISC CT"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2024-09-27"

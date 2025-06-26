@@ -1,0 +1,190 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: SGBESCR
+domain: MK
+shortName: Sharp/Genant Bone Erosion Score
+source: MK.MKTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C128986
+variables:
+  - name: MKTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C127269
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127269
+      submissionValue: MUSCTSCD
+    assignedTerm:
+      conceptId: C128986
+      value: "SGBESCR"
+    role: Topic
+    relationship:
+      subject: MKTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MKTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MKTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C127270
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127270
+      submissionValue: MUSCTS
+    assignedTerm:
+      conceptId: C128986
+      value: "Sharp/Genant Bone Erosion Score"
+    role: Qualifier
+    relationship:
+      subject: MKTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MKORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "0 Normal"
+      - "0.5 Subtle loss of cortical continuity or equivocal findings of bone erosion"
+      - "1.0 mild: definite but small erosions involving less than 25% of the articular bone"
+      - "1.5 Mild-to-moderate: small-medium erosions involving less than 25% of the articular bone"
+      - "2.0 Moderate: medium-large erosions involving approximately 26-50% of the articular bone"
+      - "2.5 Moderate-to-severe: erosion of approximately 51-75% of the articular bone"
+      - "3.0 Severe: erosion of approximately 76-90% of the articular bone"
+      - "3.5 Very severe: erosion of 100% of the articular bone"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "0.5"
+      - "1.0"
+      - "2.0"
+      - "2.5"
+      - "3.0"
+      - "3.5"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "0.5"
+      - "1.0"
+      - "2.0"
+      - "2.5"
+      - "3.0"
+      - "3.5"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: MKLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MKLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "RIGHT"
+      - "LEFT"
+    role: Qualifier
+    relationship:
+      subject: MKLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MKLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "X-RAY"
+      - "MRI"
+    role: Qualifier
+    relationship:
+      subject: MKMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MKDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

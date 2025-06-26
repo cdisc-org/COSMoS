@@ -1,0 +1,113 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: EGHRMN_VERTICAL
+shortName: Mean Heart Rate by Electrocardiogram (Vertical)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Vertical
+scenario: LOCAL READING
+domain: EG
+biomedicalConceptId: C119259
+sdtmDatasetSpecializationId: EGHRMN
+items:
+  - name: EGDAT
+    variableName: EGDAT
+    dataElementConceptId: C82515
+    questionText: What was the date of assessment?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGDTC"
+      sdtmVariables:
+        -  "EGDTC"
+  - name: EGMETHOD
+    variableName: EGMETHOD
+    dataElementConceptId: C82535
+    questionText: What was the method used for the ECG?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: EGMETHOD
+      conceptId: C71151
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
+    valueList:
+      - displayValue: "12 Lead Standard"
+        value: "12 LEAD STANDARD"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGMETHOD"
+      sdtmVariables:
+        -  "EGMETHOD"
+  - name: EGPOS
+    variableName: EGPOS
+    dataElementConceptId: C62164
+    questionText: What was the position of the subject during the ECG measurement?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Semi-Fowlers"
+        value: "SEMI-FOWLERS"
+      - displayValue: "Semi-Recumbent"
+        value: "SEMI-RECUMBENT"
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGPOS"
+      sdtmVariables:
+        -  "EGPOS"
+  - name: EGHRMN
+    variableName: EGORRES
+    dataElementConceptId: C49148
+    questionText: ECG Mean Heart Rate Result
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGORRES when EGTESTCD = EGHRMN"
+      sdtmVariables:
+        -  "EGORRES"
+        -  "EGTEST"
+        -  "EGTESTCD"
+  - name: EGHRMNU
+    variableName: EGORRESU
+    dataElementConceptId: C73688
+    questionText: ECG Mean Heart Rate Result Unit
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "beats/min"
+      conceptId: C49673
+    sdtmTarget:
+      sdtmAnnotation: "EGORRESU when EGTESTCD = EGHRMN"
+      sdtmVariables:
+        -  "EGORRESU"
+        -  "EGTEST"
+        -  "EGTESTCD"

@@ -1,0 +1,48 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127774
+ncitCode: C127774
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127774
+parentConceptId: C119241
+categories:
+  - Musculoskeletal Finding
+  - Symptom Indicator
+shortName: Swollen Indicator
+synonyms:
+  - SWLLIND
+resultScales:
+  - Ordinal
+definition: An indicator as to whether the subject has symptoms of swelling.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

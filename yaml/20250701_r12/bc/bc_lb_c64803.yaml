@@ -1,0 +1,40 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64803
+ncitCode: C64803
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64803
+parentConceptId: C35553
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Abnormal Blood Chemistry and Hematology Test Results
+shortName: Polychromasia
+synonyms:
+  - POLYCHR
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The reaction of red cells to stain as indicated by the appearance of bluish or grayish colored erythrocytes.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

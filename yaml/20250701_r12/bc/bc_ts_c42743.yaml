@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C42743
+ncitCode: C42743
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42743
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Uniform Resource Locator
+synonyms:
+  - uniform resource locator (URL)
+  - URL
+definition: The global address of documents and other resources on the World Wide Web.

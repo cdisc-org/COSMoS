@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C70946
+ncitCode: C70946
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70946
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Postal Address
+synonyms:
+  - Mail Address
+  - Mailing Address
+definition: A physical location used by a person or organization for the purpose of receiving postal mail deliveries.

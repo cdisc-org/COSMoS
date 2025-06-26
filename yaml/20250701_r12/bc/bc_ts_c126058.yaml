@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126058
+ncitCode: C126058
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126058
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Biospecimen Retained and/or Contains DNA Indicator
+definition: An indication as to whether biospecimens have been retained and/or whether those retained biospecimens contain DNA.

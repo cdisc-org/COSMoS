@@ -1,0 +1,47 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127793
+ncitCode: C127793
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127793
+parentConceptId: C171103
+categories:
+  - Trial Summary
+shortName: Trial Expanded Access Status
+synonyms:
+  - Expanded Access Status
+  - EXPASTAT
+resultScales:
+  - Nominal
+definition: The state or condition of an experimental drug or device as it pertains to its availability for use in expanded access studies.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Expanded Access Status"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "EXPASTAT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Available"
+      - "No longer available"
+      - "Temporarily not available"
+      - "Approved for marketing"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ClinTrials.gov"

@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C142450
+ncitCode: C142450
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C142450
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Clinical Trial Objective
+synonyms:
+  - objective
+  - Study Objective
+definition: The main purpose of an investigation that can be measured objectively to determine whether the treatment or intervention being studied is beneficial.

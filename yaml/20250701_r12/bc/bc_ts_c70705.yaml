@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C70705
+ncitCode: C70705
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70705
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Component of Study Protocol
+synonyms:
+  - Protocol Component
+definition: A component of a plan on which a study is based.

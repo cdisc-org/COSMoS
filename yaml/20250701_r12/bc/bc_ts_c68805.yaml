@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C68805
+ncitCode: C68805
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68805
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Character
+definition: Any single letter, number, or symbol.

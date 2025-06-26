@@ -1,0 +1,61 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C41161
+ncitCode: C41161
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41161
+parentConceptId: C1708
+categories:
+  - Trial Summary
+shortName: Protocol Agent
+synonyms:
+  - experimental intervention
+  - Study Treatment
+  - Target Product
+  - Test Article
+  - Experimental Intervention
+  - Investigational Interventional
+  - Investigational Therapy or Treatment
+  - TRT
+  - investigational product
+  - study agent
+  - Agent
+  - Study Agent
+resultScales:
+  - Nominal
+definition: A medical product, practice, or application that is tested in a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Investigational Therapy or Treatment"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "TRT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Gabapentin"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "6CW7F3G59X"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "UNII"

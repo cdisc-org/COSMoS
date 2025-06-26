@@ -1,0 +1,55 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C38037
+ncitCode: C38037
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38037
+parentConceptId: C74954
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Liver Function Tests
+  - "Drug-Induced Liver Injury"
+  - DILI
+shortName: Total Bilirubin Measurement
+synonyms:
+  - Bilirubin
+  - Total Bilirubin Level
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The measurement of the total amount of bilirubin present in a particular substrate. The substrate most often tested is blood, but other fluids extracted from the body may be used periodically depending on the purpose of the test.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "umol/L"
+      - "mg/dL"
+      - "mg/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

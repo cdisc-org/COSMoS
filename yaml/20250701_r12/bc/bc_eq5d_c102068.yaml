@@ -1,0 +1,61 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C102068
+ncitCode: C102068
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102068
+parentConceptId: C101875
+categories:
+  - QRS
+  - "EQ-5D-5L"
+  - EQ5D02
+  - European Quality of Life Five Dimension Five Level Scale
+  - "EQ-5D-5L Questionnaire Questions"
+shortName: "EQ-5D-5L - Self-Care"
+synonyms:
+  - "EQ5D02-Self-Care"
+  - EQ5D0202
+resultScales:
+  - Ordinal
+definition: "The EuroQol (European Quality of Life) Five Dimension Five Level Scale (EQ-5D-5L) Check the one box that best describes your health today: Self-care."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "I have no problems washing or dressing myself"
+      - "I have slight problems washing or dressing myself"
+      - "I have moderate problems washing or dressing myself"
+      - "I have severe problems washing or dressing myself"
+      - "I am unable to wash or dress myself"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "EQ-5D-5L"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117044
+    ncitCode: C117044
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117044
+    shortName: Evaluation Interval Text
+    dataType: string
+    exampleSet:
+      - "Today"

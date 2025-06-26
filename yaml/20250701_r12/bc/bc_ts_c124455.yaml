@@ -1,0 +1,54 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C124455
+ncitCode: C124455
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124455
+parentConceptId: C16632
+categories:
+  - Trial Summary
+shortName: Country of Manufacture
+synonyms:
+  - MNFCNTRY
+resultScales:
+  - Nominal
+definition: The name of the country within which the product under study is made.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Country of Manufacture"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "MNFCNTRY"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "USA"
+      - "CAN"
+      - "MEX"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "840"
+      - "124"
+      - "484"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "ISO 3166"

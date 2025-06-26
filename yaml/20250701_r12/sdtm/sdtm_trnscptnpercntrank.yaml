@@ -1,0 +1,302 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: TRNSCPTNPERCNTRANK
+domain: GF
+shortName: Transcription Percentile Rank
+source: GF.GFTESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C17208
+variables:
+  - name: SPDEVID
+    dataElementConceptId: C117060
+    isNonStandard: false
+    role: Identifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C181178
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181178
+      submissionValue: GFTESTCD
+    assignedTerm:
+      conceptId: C17208
+      value: "TRNSCPTN"
+    role: Topic
+    relationship:
+      subject: GFTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: GFTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: GFTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C181179
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181179
+      submissionValue: GFTEST
+    assignedTerm:
+      conceptId: C17208
+      value: "Transcription"
+    role: Qualifier
+    relationship:
+      subject: GFTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: GFTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C181180
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181180
+      submissionValue: GFTSDTL
+    assignedTerm:
+      conceptId: C181342
+      value: "PERCENTILE RANK"
+    role: Qualifier
+    relationship:
+      subject: GFTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "GENE EXPRESSION"
+    role: Qualifier
+    relationship:
+      subject: GFCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: GFORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFORRESU
+    dataElementConceptId: C25709
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "%"
+      - "RATIO"
+    role: Qualifier
+    relationship:
+      subject: GFORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: GFSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: GFSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: GFSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: GFSTRESU
+    dataElementConceptId: C25709
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "%"
+      - "RATIO"
+    role: Qualifier
+    relationship:
+      subject: GFSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: GFSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: GFGENREF
+    dataElementConceptId: C164815
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFGENREF
+      linkingPhrase: identifies the reference used in the genomic test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFCHROM
+    dataElementConceptId: C164716
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFCHROM
+      linkingPhrase: is the chromosome that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSYM
+    dataElementConceptId: C43568
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFSYM
+      linkingPhrase: is the symbol for the genomic entity that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSYMTYP
+    dataElementConceptId: C204092
+    isNonStandard: false
+    codelist:
+      conceptId: C181176
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181176
+      submissionValue: SYMTYPGF
+    assignedTerm:
+      conceptId: C181531
+      value: "GENE WITH PROTEIN PRODUCT"
+    role: Qualifier
+    relationship:
+      subject: GFSYMTYP
+      linkingPhrase: is the type of genomic entity that is the position of the result in
+      predicateTerm: IS_POSITION_FOR
+      object: GFORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFSEQID
+    dataElementConceptId: C164811
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: GFSEQID
+      linkingPhrase: is an identifier for the genetic sequence of the genetic entity represented by
+      predicateTerm: IDENTIFIES
+      object: GFSYM
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C111114
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111114
+      submissionValue: GENSMP
+    assignedTerm:
+      conceptId: C812
+      value: "RNA"
+    role: Qualifier
+    relationship:
+      subject: GFSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C158252
+      value: "TARGETED TRANSCRIPTOME SEQUENCING"
+    role: Qualifier
+    relationship:
+      subject: GFMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: GFANMETH
+    dataElementConceptId: C117039
+    isNonStandard: false
+    codelist:
+      conceptId: C181181
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181181
+      submissionValue: GFANMET
+    role: Qualifier
+    relationship:
+      subject: GFANMETH
+      linkingPhrase: is the method of secondary analysis of results in
+      predicateTerm: SPECIFIES
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: GFDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: GFDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: GFTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false

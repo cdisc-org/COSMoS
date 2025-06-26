@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C63507
+ncitCode: C63507
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C63507
+categories:
+  - Musculoskeletal Finding
+  - Range of Motion
+shortName: Range of Motion
+definition: A measure of joint flexibility consisting of flexion, how far it can bend, and extension, how far it can stretch. It is usually measured by the number of degrees from the starting position of a segment to its position at the end of its arc.

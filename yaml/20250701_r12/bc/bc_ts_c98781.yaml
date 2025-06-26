@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98781
+ncitCode: C98781
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98781
+parentConceptId: C70705
+categories:
+  - Trial Summary
+shortName: Secondary Outcome Measure
+synonyms:
+  - OUTMSSEC
+  - SECONDARY OUTCOME MEASURE
+resultScales:
+  - Nominal
+definition: Other key measures that will be used to evaluate the intervention(s) or, for observational studies, that are a focus of the study. These are the outcome measures used to assess the secondary objective(s).
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Secondary Outcome Measure"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OUTMSSEC"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "SEIZURE FREQUENCY"

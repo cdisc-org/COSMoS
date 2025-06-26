@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C98772
+ncitCode: C98772
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98772
+parentConceptId: C70705
+categories:
+  - Trial Summary
+shortName: Primary Outcome Measure
+synonyms:
+  - OUTMSPRI
+  - PRIMARY OUTCOME MEASURE
+resultScales:
+  - Nominal
+definition: The primary measurement(s) or observation(s) used to measure the effect of experimental variables in a study, or for observational studies, to describe patterns of diseases or traits or associations with exposures, risk factors or treatment. These are the outcome measures used to assess the primary objective(s).
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Primary Outcome Measure"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "OUTMSPRI"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "SEIZURE FREQUENCY"

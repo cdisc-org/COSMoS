@@ -1,0 +1,195 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: HBA1CHGBBLD_VERTICAL
+shortName: Hemoglobin A1C to Hemoglobin Ratio Measurement (Vertical)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Vertical
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C111207
+sdtmDatasetSpecializationId: HBA1CHGBBLD
+items:
+  - name: HBA1CHGB_LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "HEMATOLOGY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: HBA1CHGB_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: HBA1CHGB_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: HBA1CHGB_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: HBA1CHGB_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "BLOOD"
+      conceptId: C12434
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: HBA1CHGB_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: HBA1CHGB_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Hemoglobin A1C/Hemoglobin
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = HBA1CHGB"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: HBA1CHGB_LBORRESU
+    variableName: LBORRESU
+    prompt: Unit
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "%"
+        value: "%"
+      - displayValue: "mmol/mol"
+        value: "mmol/mol"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBORRESU when LBTESTCD = HBA1CHGB"
+      sdtmVariables:
+        -  "LBORRESU"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: HBA1CHGB_LBORNRLO
+    variableName: LBORNRLO
+    prompt: Normal Range Lower Limit
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRLO"
+      sdtmVariables:
+        -  "LBORNRLO"
+  - name: HBA1CHGB_LBORNRHI
+    variableName: LBORNRHI
+    prompt: Normal Range Upper Limit
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRHI"
+      sdtmVariables:
+        -  "LBORNRHI"
+  - name: HBA1CHGB_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

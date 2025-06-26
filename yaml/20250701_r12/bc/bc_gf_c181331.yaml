@@ -1,0 +1,153 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C181331
+ncitCode: C181331
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181331
+parentConceptId: C18302
+categories:
+  - Genomics Findings
+  - Genetic Variation Analysis
+shortName: Single Nucleotide Variation Assessment
+synonyms:
+  - SNV
+  - Single Nucleotide Variation
+resultScales:
+  - Quantitative
+  - Nominal
+definition: An assessment of the variability in a nucleotide found within a specified position of the genome, when compared to a reference nucleotide.
+dataElementConcepts:
+  - conceptId: C117060
+    ncitCode: C117060
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117060
+    shortName: Sponsor Device Identifier
+    dataType: string
+    exampleSet:
+      - "ACME GenePanel 500"
+      - "DMET Plus"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Allele Sequence"
+      - "Genotype"
+      - "Predicted Amino Acid Change"
+      - "Predicted Coding Sequence Change"
+      - "Read Depth"
+      - "Variant Impact Classification"
+      - "Variant Read Depth"
+      - "Variant Read Depth/Read Depth"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Genetic Variation"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93423
+    ncitCode: C93423
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93423
+    shortName: Reference Result
+    dataType: string
+  - conceptId: C204091
+    ncitCode: C204091
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204091
+    shortName: Genomic Inheritability Type
+    dataType: string
+    exampleSet:
+      - "Somatic Variation"
+      - "Germline Variation"
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "%"
+      - "Ratio"
+  - conceptId: C164815
+    ncitCode: C164815
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164815
+    shortName: Reference Genome Assembly Version
+    dataType: string
+  - conceptId: C164716
+    ncitCode: C164716
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164716
+    shortName: Chromosome Name
+    dataType: string
+  - conceptId: C43568
+    ncitCode: C43568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C43568
+    shortName: Gene Symbol
+    dataType: string
+    exampleSet:
+      - "CYP2C19"
+  - conceptId: C204092
+    ncitCode: C204092
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204092
+    shortName: Genomic Symbol Entity Type
+    dataType: string
+    exampleSet:
+      - "Gene With Protein Product"
+  - conceptId: C164528
+    ncitCode: C164528
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164528
+    shortName: Genetic Location
+    dataType: string
+  - conceptId: C164533
+    ncitCode: C164533
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164533
+    shortName: Genetic Subregion
+    dataType: string
+  - conceptId: C164811
+    ncitCode: C164811
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164811
+    shortName: Genetic Reference Sequence Identifier
+    dataType: string
+  - conceptId: C164813
+    ncitCode: C164813
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164813
+    shortName: Genetic Variation Identifier
+    dataType: string
+  - conceptId: C204090
+    ncitCode: C204090
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204090
+    shortName: Copy Identifier
+    dataType: string
+    exampleSet:
+      - "1"
+      - "2"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "DNA"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Microarray"
+      - "Targeted Genome Sequencing"
+      - "Real-Time Polymerase Chain Reaction"
+  - conceptId: C117039
+    ncitCode: C117039
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117039
+    shortName: Analysis Method
+    dataType: string
+    exampleSet:
+      - "ADME Variant Profile"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

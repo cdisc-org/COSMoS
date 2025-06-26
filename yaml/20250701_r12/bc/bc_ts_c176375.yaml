@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C176375
+ncitCode: C176375
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176375
+parentConceptId: C42775
+categories:
+  - Trial Summary
+shortName: "Study Contact E-mail Address"
+synonyms:
+  - CONEMAIL
+  - "Contact E-Mail Address"
+resultScales:
+  - Nominal
+definition: "A text string identifier for a location to which e-mail for the study contact can be delivered."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Contact E-Mail Address"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "CONEMAIL"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

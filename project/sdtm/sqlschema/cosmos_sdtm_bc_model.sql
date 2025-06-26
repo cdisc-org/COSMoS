@@ -72,7 +72,7 @@ CREATE TABLE "RelationShip" (
 	id INTEGER NOT NULL, 
 	subject TEXT NOT NULL, 
 	"linkingPhrase" VARCHAR(101) NOT NULL, 
-	"predicateTerm" VARCHAR(22) NOT NULL, 
+	"predicateTerm" VARCHAR(28) NOT NULL, 
 	object TEXT NOT NULL, 
 	PRIMARY KEY (id)
 );

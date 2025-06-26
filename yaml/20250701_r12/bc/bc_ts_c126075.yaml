@@ -1,0 +1,34 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126075
+ncitCode: C126075
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126075
+parentConceptId: C25365
+categories:
+  - Trial Summary
+shortName: Substudy Details
+synonyms:
+  - SSTDYDTL
+resultScales:
+  - Nominal
+definition: A textual description of the substudy.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Substudy Details"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SSTDYDTL"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

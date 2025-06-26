@@ -1,0 +1,42 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C154909
+ncitCode: C154909
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C154909
+parentConceptId: C181043
+categories:
+  - Musculoskeletal Finding
+  - Clinical Findings Indicator
+shortName: Fontanelle Closure Indicator
+synonyms:
+  - FOCLOIND
+resultScales:
+  - Ordinal
+definition: An indication as to whether the fontanelle is closed.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Fontanelle"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,71 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: RACE
+shortName: RACE
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: DM
+biomedicalConceptId: C17049
+sdtmDatasetSpecializationId: RACE
+items:
+  - name: DMDAT
+    variableName: DMDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "DMDTC"
+      sdtmVariables:
+        -  "DMDTC"
+  - name: RACE
+    variableName: RACE
+    dataElementConceptId: C17049
+    questionText: Which of the following five racial designations best describes you?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: RACE
+      conceptId: C74457
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74457
+    valueList:
+      - displayValue: "American Indian Or Alaska Native"
+        value: "AMERICAN INDIAN OR ALASKA NATIVE"
+      - displayValue: "Asian"
+        value: "ASIAN"
+      - displayValue: "Black Or African American"
+        value: "BLACK OR AFRICAN AMERICAN"
+      - displayValue: "Native Hawaiian Or Other Pacific Islander"
+        value: "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER"
+      - displayValue: "Not Reported"
+        value: "NOT REPORTED"
+      - displayValue: "Other"
+        value: "OTHER"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+      - displayValue: "White"
+        value: "WHITE"
+    selectionType: Multiple
+    sdtmTarget:
+      sdtmAnnotation: "RACE"
+      sdtmVariables:
+        -  "RACE"
+  - name: RACEOTH
+    variableName: RACEOTH
+    prompt: Specify Other Race
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "RACEOTH in SUPPDM"
+      sdtmVariables:
+        -  "RACEOTH"

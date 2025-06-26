@@ -1,0 +1,43 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126090
+ncitCode: C126090
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126090
+parentConceptId: C93874
+categories:
+  - Trial Summary
+shortName: EudraVigilance Sender Organization
+synonyms:
+  - EVSNDORG
+resultScales:
+  - Nominal
+definition: The name of the group or institution that is transmitting an adverse drug reaction report to the EudraVigilance system.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "EudraVigilance Sender Organization"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "EVSNDORG"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Pharmaco"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "EudraVigilance Sender Organization"

@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25284
+ncitCode: C25284
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25284
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Type
+synonyms:
+  - Kind
+definition: Something distinguishable as an identifiable class based on common qualities.

@@ -146,6 +146,7 @@ class LinkingPhraseEnum(str, Enum):
     specifies_the_anatomical_location_in = "specifies the anatomical location in"
     specifies_the_anatomical_location_of = "specifies the anatomical location of"
     specifies_the_anatomical_location_of_the_performance_of_the_test_in = "specifies the anatomical location of the performance of the test in"
+    specifies_the_anatomical_location_of_the_tumor_identified_by = "specifies the anatomical location of the tumor identified by"
     specifies_the_severity_of = "specifies the severity of"
     values_are_grouped_by = "values are grouped by"
     was_the_subject_position_during_performance_of_the_test_in = "was the subject position during performance of the test in"
@@ -170,6 +171,11 @@ class LinkingPhraseEnum(str, Enum):
     is_a_grouping_of_values_in = "is a grouping of values in"
     is_the_textual_description_of_the_intended_dose_regimen_for = "is the textual description of the intended dose regimen for"
     is_the_reason_for_stopping_administration_of = "is the reason for stopping administration of"
+    is_the_value_of_the_property_identified_by = "is the value of the property identified by"
+    is_the_name_of_the_reference_terminology_for = "is the name of the reference terminology for"
+    is_the_version_of_the_reference_terminology_in = "is the version of the reference terminology in"
+    is_the_period_of_time_for_the_test_in = "is the period of time for the test in"
+    is_a_reference_range_value_for = "is a reference range value for"
 
 
 class PredicateTermEnum(str, Enum):
@@ -202,6 +208,9 @@ class PredicateTermEnum(str, Enum):
     PERFORMS = "PERFORMS"
     QUALIFIES = "QUALIFIES"
     SPECIFIES = "SPECIFIES"
+    IS_VALUE_OF = "IS_VALUE_OF"
+    IS_REFERENCE_TERMINOLOGY_FOR = "IS_REFERENCE_TERMINOLOGY_FOR"
+    IS_REFERENCE_VALUE_FOR = "IS_REFERENCE_VALUE_FOR"
 
 
 class OriginTypeEnum(str, Enum):

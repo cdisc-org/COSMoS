@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C115409
+ncitCode: C115409
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115409
+parentConceptId: C211913
+categories:
+  - QRS
+  - Clinical or Research Assessment Questions
+  - Functional Tests
+shortName: 6MWT Functional Test Question
+synonyms:
+  - 6MWT Question
+definition: A question associated with the 6MWT functional test.

@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C90372
+ncitCode: C90372
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90372
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Class of Trial Agent
+definition: A classification of the type of trial agent.

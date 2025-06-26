@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C82571
+ncitCode: C82571
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82571
+categories:
+  - Reported Events
+  - Medical History Events
+  - Medical Conditions
+  - Presenting Conditions
+shortName: Reported Event Term (delete)
+definition: The collected name for an event observation.

@@ -9,6 +9,7 @@ text/
 venv/
 .env
 work/
+_archive/
 yaml/latest
 yaml/*/*_test
 ~$*.*
@@ -22,3 +23,4 @@ create_*.xlsx
 validate_*.html
 validate_*.xlsx
 run_batch.*
+desktop.ini

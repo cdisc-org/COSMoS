@@ -1,0 +1,59 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C102043
+ncitCode: C102043
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102043
+parentConceptId: C101869
+categories:
+  - QRS
+  - AIMS
+  - Abnormal Involuntary Movement Scale Clinical Classification
+shortName: "AIMS - Patient's Awareness of Abnormal Movements"
+synonyms:
+  - "AIMS01-Patient Awareness Abn Movements"
+  - AIMS0110
+resultScales:
+  - Ordinal
+definition: Abnormal Involuntary Movement Scale (AIMS) Global Judgments, Patient's awareness of abnormal movements.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "No awareness"
+      - "Aware, no distress"
+      - "Aware, mild distress"
+      - "Aware, moderate distress"
+      - "Aware, severe distress"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AIMS"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "GLOBAL JUDGMENTS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

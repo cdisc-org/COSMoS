@@ -1,0 +1,51 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C68612
+ncitCode: C68612
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68612
+parentConceptId: C68609
+categories:
+  - Trial Summary
+shortName: Active Comparator Drug
+synonyms:
+  - Comparative Treatment Name
+  - COMPTRT
+resultScales:
+  - Nominal
+definition: A therapeutically active agent that is intended to provide baseline measurements for the experimental protocol of a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Comparative Treatment Name"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "COMPTRT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Gabapentin"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "6CW7F3G59X"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "UNII"

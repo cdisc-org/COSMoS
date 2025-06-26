@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C93638
+ncitCode: C93638
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93638
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Publication Identifier
+definition: A unique symbol that establishes identity to a publication.

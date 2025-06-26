@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C142438
+ncitCode: C142438
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C142438
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Clinical Study Functional Role
+synonyms:
+  - functional roles (in a study)
+definition: The responsibility assumed by a person administering any activities within a clinical study.

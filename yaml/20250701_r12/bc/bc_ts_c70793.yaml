@@ -1,0 +1,54 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C70793
+ncitCode: C70793
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70793
+parentConceptId: C48355
+categories:
+  - Trial Summary
+shortName: Clinical Study Sponsor
+synonyms:
+  - Sponsor
+  - sponsor
+  - CLINICAL STUDY SPONSOR
+  - SPONSOR
+  - Study Sponsor
+resultScales:
+  - Nominal
+definition: "An entity such as an individual, company, institution, group, or organization which takes responsibility for the initiation, management, and/or financing of a clinical study. The sponsor does not actually conduct the investigation unless the sponsor is a sponsor-investigator. A person other than an individual (e.g., corporation or agency) that uses one or more of its own employees to conduct research it has initiated is considered to be a sponsor, and the employees are considered to be investigators. [21 CFR P.50.3(k)] [21 CFR P.50.102(j)] [21 CFR P.312.3]"
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Clinical Study Sponsor"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SPONSOR"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "Pharmaco"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "123456789"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "D-U-N-S NUMBER"

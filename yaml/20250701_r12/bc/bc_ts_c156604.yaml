@@ -1,0 +1,15 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C156604
+ncitCode: C156604
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156604
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Study Data Tabulation Model Implementation Guide Version
+synonyms:
+  - SDTIGVER
+  - SDTM IG Version
+  - SDTM Implementation Guide Version
+  - SDTMIG Version
+definition: The version of the CDISC Study Data Tabulation Model implementation guide that is being used in the study submission.

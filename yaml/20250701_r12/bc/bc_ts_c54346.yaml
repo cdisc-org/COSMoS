@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C54346
+ncitCode: C54346
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54346
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Dose Modification
+definition: Change, alteration, or adjustment of a dose specified in a treatment plan or/and administered to a patient.

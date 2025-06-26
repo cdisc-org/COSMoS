@@ -1,0 +1,53 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C181502
+ncitCode: C181502
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181502
+parentConceptId: C81307
+categories:
+  - Musculoskeletal Finding
+  - Estimation Method
+shortName: Greulich and Pyle Bone Age Estimation
+synonyms:
+  - GPBAEST
+  - Greulich and Pyle Skeletal Maturity Estimation
+resultScales:
+  - Quantitative
+definition: "An estimated assessment of an individual's skeletal maturity (bone age) based on comparison of standard radiographic images of the bones of the hand and wrist. (Greulich WW, Pyle SI. Radiographic atlas of skeletal development of the hand and wrist. The American Journal of the Medical Sciences. 1959;238(3):393.)"
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: string
+    exampleSet:
+      - "Years"
+      - "Months"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,47 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127797
+ncitCode: C127797
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127797
+parentConceptId: C93638
+categories:
+  - Trial Summary
+shortName: PubMed Unique Identifier
+synonyms:
+  - PubMed ID for Citation Used in Study
+  - PUBMEDID
+  - PubMed ID
+  - PubMed Identifier
+  - PubMed Indexing Number
+resultScales:
+  - Nominal
+definition: A globally unique identifier for a biomedical article, as assigned by PubMed.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "PubMed ID for Citation Used in Study"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "PUBMEDID"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "12345678"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "PUBMED"

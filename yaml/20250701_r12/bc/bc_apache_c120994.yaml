@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C120994
+ncitCode: C120994
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120994
+parentConceptId: C211913
+categories:
+  - Clinical or Research Assessment Questions
+shortName: APACHE II Clinical Classification Question
+synonyms:
+  - APACHE II Question
+definition: A question associated with the APACHE II clinical classification.

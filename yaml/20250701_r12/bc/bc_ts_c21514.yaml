@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C21514
+ncitCode: C21514
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C21514
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Temporal Qualifier
+definition: Terms used to indicate units of time or other terms associated with time.

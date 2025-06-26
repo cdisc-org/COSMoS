@@ -1,0 +1,177 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: SIXMW106
+domain: FT
+shortName: "SIXMW1-Distance at 6 Minute"
+source: FT.FTTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C115805
+variables:
+  - name: FTTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C115388
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115388
+      submissionValue: SIXMW1TC
+    assignedTerm:
+      conceptId: C115805
+      value: "SIXMW106"
+    role: Topic
+    relationship:
+      subject: FTTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: FTTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: FTTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C115387
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115387
+      submissionValue: SIXMW1TN
+    assignedTerm:
+      conceptId: C115805
+      value: "SIXMW1-Distance at 6 Minutes"
+    role: Qualifier
+    relationship:
+      subject: FTTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: FTCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+      submissionValue: FTCAT
+    assignedTerm:
+      conceptId: C115789
+      value: "SIX MINUTE WALK"
+    role: Qualifier
+    relationship:
+      subject: FTCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: FTORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: FTORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: FTORRESU
+    dataElementConceptId: C42578
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C41139
+      value: "m"
+    role: Qualifier
+    relationship:
+      subject: FTORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: FTORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: FTSTRESC
+    dataElementConceptId: C91106
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: FTSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTRESN
+    dataElementConceptId: C91106
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: FTSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTRESU
+    dataElementConceptId: C42578
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C41139
+      value: "m"
+    role: Qualifier
+    relationship:
+      subject: FTSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: FTSTRESN
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTASTDEV
+    dataElementConceptId: C93300
+    isNonStandard: true 
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: FTDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: FTDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

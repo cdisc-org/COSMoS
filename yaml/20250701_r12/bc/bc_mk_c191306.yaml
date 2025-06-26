@@ -1,0 +1,53 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C191306
+ncitCode: C191306
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191306
+parentConceptId: C110937
+categories:
+  - Musculoskeletal Finding
+shortName: Alpha Angle of the Hip
+synonyms:
+  - ALPHANGL
+  - Alpha Angle
+resultScales:
+  - Quantitative
+definition: "A measurement of the angle between the line from the center of the femoral head to the center of the femoral neck at its narrowest point and the line from the center of the femoral head to a point where the distance from the bone to the center of the head is greater than the radius of the cartilage-covered femoral head."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C68667
+    ncitCode: C68667
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68667
+    shortName: Degree Unit of Plane Angle
+    dataType: string
+    exampleSet:
+      - "Degree"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Hip"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

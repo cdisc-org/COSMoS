@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C176373
+ncitCode: C176373
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176373
+parentConceptId: C176230
+categories:
+  - Trial Summary
+shortName: Study Contact Name
+synonyms:
+  - CONNAME
+  - Contact Name
+resultScales:
+  - Nominal
+definition: "A non-unique textual identifier for the study contact."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Contact Name"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "CONNAME"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

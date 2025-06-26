@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127795
+ncitCode: C127795
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127795
+parentConceptId: C25337
+categories:
+  - Trial Summary
+shortName: Number of Trial Sites within European Union State
+synonyms:
+  - Number of Trial Sites EU State
+  - NUMSEUST
+resultScales:
+  - Quantitative
+definition: The number of trial sites within a European Union state.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Number of Trial Sites EU State"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "NUMSEUST"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: integer
+    exampleSet:
+      - "2"

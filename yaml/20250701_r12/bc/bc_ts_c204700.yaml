@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C204700
+ncitCode: C204700
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204700
+parentConceptId: C156604
+categories:
+  - Trial Summary
+shortName: CDISC Tobacco Implementation Guide Version
+synonyms:
+  - TIGVER
+  - Tobacco IG Version
+  - Tobacco Implementation Guide Version
+resultScales:
+  - Nominal
+definition: The version of the CDISC Tobacco Study Data Tabulation Model implementation guide that is being used in the study submission.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Tobacco IG Version"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "TIGVER"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

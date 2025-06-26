@@ -22,6 +22,7 @@ set counter=0
 for /F "eol=; tokens=1 delims=" %%i IN ('dir /b /s %~dp0%folder%\sdtm\*.yaml') do @call :ValidateFile %%i
 
 findstr /i /n /s "error" %logfile%
+PING localhost -n 3 >NUL
 goto:EOF
 
 :ValidateFile

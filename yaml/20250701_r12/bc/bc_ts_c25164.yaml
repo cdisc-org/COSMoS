@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25164
+ncitCode: C25164
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25164
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Date
+synonyms:
+  - Date (MM/DD/YYYY)
+  - Dated
+definition: The particular day, month and year an event has happened or will happen.

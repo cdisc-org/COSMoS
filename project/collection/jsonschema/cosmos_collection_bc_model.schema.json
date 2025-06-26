@@ -346,12 +346,12 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
-            "required": [
-                "sdtmVariables"
-            ],
             "title": "SDTMTarget",
             "type": "object"
         },

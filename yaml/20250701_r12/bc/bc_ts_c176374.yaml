@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C176374
+ncitCode: C176374
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176374
+parentConceptId: C40978
+categories:
+  - Trial Summary
+shortName: Study Contact Telephone Number
+synonyms:
+  - CONPHONE
+  - Contact Phone Number
+resultScales:
+  - Nominal
+definition: "A sequence of decimal digits (0-9) that is used for identifying a destination telephone line or other device in a telephone network that is used by the study contact."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Contact Phone Number"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "CONPHONE"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "123-456-7890"

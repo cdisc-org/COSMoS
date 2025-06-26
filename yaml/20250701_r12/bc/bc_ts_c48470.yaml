@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C48470
+ncitCode: C48470
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48470
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Potency Unit
+synonyms:
+  - Unit of Potency
+definition: The basic quantity or increment used to describe the strength of a product or amount of product in a package.

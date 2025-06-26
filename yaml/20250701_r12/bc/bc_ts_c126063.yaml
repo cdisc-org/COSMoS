@@ -1,0 +1,37 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C126063
+ncitCode: C126063
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126063
+parentConceptId: C25337
+categories:
+  - Trial Summary
+shortName: Number of Groups or Cohorts
+synonyms:
+  - NCOHORT
+  - Number of Groups/Cohorts
+resultScales:
+  - Quantitative
+definition: The number of groups or cohorts that are part of the study.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Number of Groups/Cohorts"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "NCOHORT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: integer
+    exampleSet:
+      - "2"

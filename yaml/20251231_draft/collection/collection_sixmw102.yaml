@@ -1,0 +1,46 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SIXMW102
+shortName: "SIXMW1-Distance at 2 Minute"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C115801
+sdtmDatasetSpecializationId: SIXMW102
+items:
+  - name: SIXMW102_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: Distance at 2 Minutes
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = SIXMW102"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: SIXMW102_FTORRESU
+    variableName: FTORRESU
+    dataElementConceptId: C42578
+    prompt: Unit
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "m"
+      conceptId: C41139
+    sdtmTarget:
+      sdtmAnnotation: "FTORRESU when FTTESTCD = SIXMW102"
+      sdtmVariables:
+        -  "FTORRESU"

@@ -1,0 +1,28 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C83347
+ncitCode: C83347
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83347
+parentConceptId: C82438
+categories:
+  - Event Occurrence Indicators
+shortName: Adverse Event Yes No Indicator
+synonyms:
+  - AEYN
+resultScales:
+  - Nominal
+definition: An indication of whether an adverse event has occurred.
+dataElementConcepts:
+  - conceptId: C83347
+    ncitCode: C83347
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83347
+    shortName: Adverse Event Yes No Indicator
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

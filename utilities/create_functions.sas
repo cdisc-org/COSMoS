@@ -52,6 +52,17 @@ proc fcmp outlib=macros.funcs.python;
     else return ("");
   endsub;
 
+  function get_term_value(codelist_conceptId $, codedValue_conceptId $) $;
+    length codedValue $200;
+    declare hash hh(dataset: "data.sdtm_latest_codelist_package");
+    rc=hh.definedata("codedValue");
+    rc=hh.definekey("codelist_conceptId", "codedValue_conceptId");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(codedValue);
+    else return ("");
+  endsub;
+
   function get_term_preferred_term(codelist_conceptId $, codedValue_conceptId $) $;
     length preferredTerm $200;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
@@ -64,7 +75,7 @@ proc fcmp outlib=macros.funcs.python;
   endsub;
 
   function get_codelist_submissionvalue(codelist_conceptId $) $;
-    length codedValue_conceptId $20;
+    length codelist_SubmissionValue $20;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codelist_SubmissionValue");
     rc=hh.definekey("codelist_conceptId");
@@ -75,7 +86,7 @@ proc fcmp outlib=macros.funcs.python;
   endsub;
 
   function get_codelist_extensible(codelist_conceptId $) $;
-    length codedValue_conceptId $20;
+    length codelist_extensible $20;
     declare hash hh(dataset: "data.sdtm_latest_codelist_package");
     rc=hh.definedata("codelist_extensible");
     rc=hh.definekey("codelist_conceptId");
@@ -269,9 +280,14 @@ proc fcmp outlib=macros.funcs.python;
     rc = py7.call('insert_image', excel_file, excel_file_new, image_file, sheet_name, anchor, width, height);
   endsub;
   
-run;
+quit;
 
 /* Test the functions */
+
+
+%macro assert_equal(val1, val2);
+  if &val1 ne &val2 then putlog 'ERR' 'OR:' &val1.= " - " &val2;
+%mend assert_equal;
 
 data test;
   length ccodes $200 ccode ccode_parent $100 status shortname shortname_parent preferred_term $100 definition definition_cdisc $1000 synonyms $4000;
@@ -293,38 +309,63 @@ data test;
   end;
 run;
 
-ods listing close;
-ods html5 file="&root/utilities/create_functions.html";
+data codelists1;
+  codelist_code="C128686";
+  codelist="PKUDUG";
+  _codelist_SubmValue = get_codelist_submissionvalue(codelist_code);
+  term="g/mL/ug";
+  term_code="C119365";
+  _codedValue_conceptId = get_term_code(codelist_code, term);
+  _codedValue = get_term_value(codelist_code, term_code);
+  _codedValue_preferred = get_term_preferred_term(codelist_code, term_code);
+  _codelist_Extensible = get_codelist_extensible(codelist_code);
+  %assert_equal(_codedValue_conceptId, term_code);
+  %assert_equal(_codedValue, term);
+  %assert_equal(_codedValue_preferred, "Gram per Milliliter per Microgram");
+  %assert_equal(_codelist_Extensible, "Yes");
 
-  proc print data=test;
-    title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
-    var ccode status ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
-  run;
+  _codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
+  _codelist_Extensible_yes = get_codelist_extensible("C100129");
+  %assert_equal(_codelist_SubmValue_qscat, "QSCAT");
+  %assert_equal(_codelist_Extensible_yes, "Yes");
 
-ods html5 close;
-ods listing;
+  _codelist_SubmValue_TENMW1TC = get_codelist_submissionvalue("C141657");
+  _codelist_Extensible_no = get_codelist_extensible("C141657");
+  %assert_equal(_codelist_SubmValue_TENMW1TC, "TENMW1TC");
+  %assert_equal(_codelist_Extensible_no, "No");
 
-
-data codelists;
-  exp_codelist_SubmissionValue="PKUDUG";
-  exp_term="C119365";
-  codedValue_conceptId = get_term_code("C128686", "g/mL/ug");
-  codedValue_preferred = get_term_preferred_term("C128686", "C119365");
-  codelist_SubmValue = get_codelist_submissionvalue("C128686");
-  codelist_Extensible = get_codelist_extensible("C128686");
-
-  codelist_SubmValue_qscat = get_codelist_submissionvalue("C100129");
-  codelist_Extensible_yes = get_codelist_extensible("C100129");
-
-  codelist_SubmValue_TENMW1TC = get_codelist_submissionvalue("C141657");
-  codelist_Extensible_no = get_codelist_extensible("C141657");
+  _codelist_SubmValue_APCH101OR = get_codelist_submissionvalue("C182484");
+  _codelist_Extensible_no = get_codelist_extensible("C182484");
+  %assert_equal(_codelist_SubmValue_APCH101OR, "APCH101OR");
+  %assert_equal(_codelist_Extensible_no, "No");
+  
 
   put (_all_) (=/) ;
+  output;
+  
+run;
+
+
+data codelists2;
+  codelist="C66797";
+  codelist_SubmValue="IECAT";
+  _codelist_SubmValue = get_codelist_submissionvalue(codelist);
+  term_code="C25532";
+  term="INCLUSION";
+  _codedValue = get_term_value(codelist, term_code);
+  _codedValue_conceptId = get_term_code(codelist, term);
+  _codedValue_preferred = get_term_preferred_term(codelist, term_code);
+  _codelist_Extensible = get_codelist_extensible(codelist);
+
+  put (_all_) (=/) ;
+  output;
+  
 run;
 
 data relationships;
   linkingPhrase = "is a dictionary-derived term for the value in";
-  predicateTerm = get_predicateterm(linkingPhrase);
+  predicateTerm = "IS_DERIVED_FROM";
+  _predicateTerm = get_predicateterm(linkingPhrase);
   exist = exists_predicateterm(predicateTerm);
   exist2 = exists_predicaterm_linkingphrase(linkingPhrase, predicateTerm);
   
@@ -334,4 +375,29 @@ data relationships;
   existnot3 = exists_predicaterm_linkingphrase("", "");
 
   put (_all_) (=/) ;
+  output;
 run;
+
+ods listing close;
+ods html5 file="&root/utilities/create_functions.html";
+
+  proc print data=test;
+    title01 "Test Functions - %sysfunc(datetime(), is8601dt.)";
+    var ccode status ccode_parent shortname preferred_term shortname_parent definition definition_cdisc synonyms;
+  run;
+
+  proc print data=codelists1;
+    title01 "Test Functions - codelists - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+  proc print data=codelists2;
+    title01 "Test Functions - codelists - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+  proc print data=relationships;
+    title01 "Test Functions - relationships - %sysfunc(datetime(), is8601dt.)";
+  run;
+
+
+ods html5 close;
+ods listing;

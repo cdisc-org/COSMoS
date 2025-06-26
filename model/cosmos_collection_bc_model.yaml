@@ -296,7 +296,6 @@ slots:
     range: string
     multivalued: true
     inlined_as_list: true
-    required: true
     aliases:
       - sdtm_target_variable
   sdtmTargetMapping:

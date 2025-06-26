@@ -1,0 +1,78 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SIXMW1
+shortName: Six Minute Walk Test
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C115789
+items:
+  - name: FTPERF
+    variableName: FTPERF
+    dataElementConceptId: C82525
+    questionText: Was the Six Minute Walk Test performed?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]; FTSTAT = NOT DONE when FTTESTCD = FTALL"
+      sdtmVariables:
+        -  "FTSTAT"
+  - name: FTDAT
+    variableName: FTDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTDTC"
+      sdtmVariables:
+        -  "FTDTC"
+  - name: FTCAT
+    variableName: FTCAT
+    prompt: Category
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: FTCAT
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+    prepopulatedValue:
+      value: "SIX MINUTE WALK"
+      conceptId: C115789
+    sdtmTarget:
+      sdtmAnnotation: "FTCAT"
+      sdtmVariables:
+        -  "FTCAT"
+  - name: FTASTDEV
+    variableName: FTASTDEV
+    dataElementConceptId: C93300
+    prompt: Assisted Device
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTASTDEV in SUPPFT"
+      sdtmVariables:
+        -  "FTASTDEV"

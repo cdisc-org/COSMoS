@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C15367
+ncitCode: C15367
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15367
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Health Risk Assessment
+synonyms:
+  - Risk Assessment
+  - risk assessment
+definition: An estimated probability that one or more adverse event(s) will occur as a result of exposure to an actual or potential hazardous situation or chemical.

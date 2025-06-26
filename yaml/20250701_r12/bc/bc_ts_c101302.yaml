@@ -1,0 +1,36 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C101302
+ncitCode: C101302
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101302
+parentConceptId: C70772
+categories:
+  - Trial Summary
+shortName: Therapeutic Area
+synonyms:
+  - therapeutic area
+  - Therapeutic Areas
+  - THERAREA
+resultScales:
+  - Nominal
+definition: A knowledge field that focuses on research and development of treatments for diseases and pathologic findings, as well as prevention of conditions that negatively impact the health of an individual.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Therapeutic Area"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "THERAREA"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

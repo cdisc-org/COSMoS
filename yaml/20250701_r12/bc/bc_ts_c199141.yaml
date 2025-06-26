@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C199141
+ncitCode: C199141
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199141
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Health Issue Related Group
+definition: Groups that have a focus on health issues.

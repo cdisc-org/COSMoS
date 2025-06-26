@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C40978
+ncitCode: C40978
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C40978
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Telephone Number
+synonyms:
+  - Phone Number
+  - Phone
+  - Telephone
+definition: "A sequence of decimal digits (0-9) that is used for identifying a destination telephone line or other device in a telephone network."

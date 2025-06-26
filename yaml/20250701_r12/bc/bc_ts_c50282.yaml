@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C50282
+ncitCode: C50282
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50282
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Lead Device
+synonyms:
+  - Patient Lead
+  - Lead
+definition: An insulated electrical conductor designed to connect to an electrical device.

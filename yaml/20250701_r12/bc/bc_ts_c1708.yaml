@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C1708
+ncitCode: C1708
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C1708
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Agent
+definition: An active power or cause (as principle, substance, physical or biological factor, etc.) that produces a specific effect.

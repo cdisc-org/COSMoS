@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25466
+ncitCode: C25466
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25466
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Criterion
+synonyms:
+  - Criteria
+definition: That which constitutes a standard from which a judgment can be established, a reference point against which other things can be evaluated, or a basis for comparison.

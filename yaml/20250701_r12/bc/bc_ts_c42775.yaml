@@ -1,0 +1,15 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C42775
+ncitCode: C42775
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42775
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: "E-mail Address"
+synonyms:
+  - Email Address
+  - "E-mail"
+  - Electronic Mail Address
+  - Email
+definition: "A text string identifier for a location to which e-mail can be delivered."

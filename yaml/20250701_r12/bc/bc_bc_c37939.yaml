@@ -1,0 +1,9 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C37939
+ncitCode: C37939
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C37939
+categories:
+  - Termporal Qualifiers
+shortName: Date and Time
+definition: An expression of both date and time that an event has happened or will happen.

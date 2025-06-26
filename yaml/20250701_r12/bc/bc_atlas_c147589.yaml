@@ -1,0 +1,15 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C147589
+ncitCode: C147589
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147589
+parentConceptId: C118969
+categories:
+  - Research or Clinical Assessment Tools
+  - Clinical Classification Instruments
+  - QRS
+shortName: ATLAS Score Clinical Classification
+synonyms:
+  - ATLAS
+  - ATLAS1
+definition: A standardized scoring system created by Miller et al. in 2013 that assesses age, treatment with systemic antibiotics, leukocyte count, albumin and serum creatinine to predict treatment response or mortality from Clostridium difficile infection.

@@ -1,0 +1,10 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C176230
+ncitCode: C176230
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176230
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Contact Name
+definition: The name of the person acting as a channel for communication between groups or on behalf of a group.

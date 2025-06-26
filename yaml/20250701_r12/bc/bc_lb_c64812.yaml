@@ -1,0 +1,53 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C64812
+ncitCode: C64812
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64812
+parentConceptId: C74949
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Lipid Measurements
+shortName: Triglyceride Measurement
+synonyms:
+  - TRIG
+  - Triglycerides
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: A quantitative measurement of the amount of triglyceride present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mmol/L"
+      - "umol/L"
+      - "mg/dL"
+      - "ug/dL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Plasma"
+      - "Serum"
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

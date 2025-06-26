@@ -126,6 +126,7 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20tumor%20identified%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20severity%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
@@ -149,8 +150,12 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20grouping%20of%20values%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20textual%20description%20of%20the%20intended%20dose%20regimen%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20stopping%20administration%20of> ]
-          ;
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20stopping%20administration%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20value%20of%20the%20property%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20name%20of%20the%20reference%20terminology%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20version%20of%20the%20reference%20terminology%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20reference%20range%20value%20for> ] ;
           <predicateTerm> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES>
@@ -179,7 +184,10 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMED>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#PERFORMS>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#QUALIFIES>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES> ] ;
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_VALUE_OF>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REFERENCE_TERMINOLOGY_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REFERENCE_VALUE_FOR> ] ;
           <object> @linkml:String
        ) ;
        rdf:type [ <RelationShip> ] ?

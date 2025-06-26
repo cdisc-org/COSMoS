@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25365
+ncitCode: C25365
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25365
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Description
+synonyms:
+  - DESCR
+  - Desc
+  - Descriptive
+definition: A written or verbal account, representation, statement, or explanation of something.

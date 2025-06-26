@@ -1,0 +1,179 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: ADCCMD
+domain: FT
+shortName: "CDISC ADAS-Cog - Commands Summary Score"
+source: FT.FTTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C100209
+variables:
+  - name: FTTESTCD
+    isNonStandard: false
+    assignedTerm:
+      conceptId: C100209
+      value: "ADCCMD"
+    role: Topic
+    relationship:
+      subject: FTTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: FTTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: FTTEST
+    isNonStandard: false
+    assignedTerm:
+      conceptId: C100209
+      value: "Commands"
+    role: Qualifier
+    relationship:
+      subject: FTTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: FTCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+      submissionValue: FTCAT
+    assignedTerm:
+      conceptId: C100762
+      value: "ADAS-COG"
+    role: Qualifier
+    relationship:
+      subject: FTCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: FTSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    assignedTerm:
+      value: "COMMANDS"
+    role: Qualifier
+    relationship:
+      subject: FTSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: FTCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: FTORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "all commands correct"
+      - "1 command incorrect"
+      - "2 commands incorrect"
+      - "3 commands incorrect"
+      - "4 commands incorrect"
+      - "all 5 commands incorrect"
+    role: Qualifier
+    dataType: float
+    length: 5
+    format: "2.2"
+    significantDigits: 2
+    relationship:
+      subject: FTORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: FTSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: float
+    length: 5
+    format: "2.2"
+    significantDigits: 2
+    relationship:
+      subject: FTSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: float
+    length: 5
+    format: "2.2"
+    significantDigits: 2
+    relationship:
+      subject: FTSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTAT
+    dataElementConceptId: C41202
+    isNonStandard: false
+    codelist:
+      conceptId: C66789
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66789
+      submissionValue: ND
+    valueList:
+      - "NOT DONE"
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: FTREASND
+    dataElementConceptId: C82556
+    isNonStandard: false
+    valueList:
+      - "Participant refused"
+      - "Participant unable for physical reasons"
+      - "Participant unable for cognitive reasons"
+      - "Not done for reasons other than physical/cognitive"
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: FTDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: FTDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

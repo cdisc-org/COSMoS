@@ -1,0 +1,35 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C127791
+ncitCode: C127791
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127791
+parentConceptId: C42775
+categories:
+  - Trial Summary
+shortName: "E-mail Address for XML File Feedback"
+synonyms:
+  - Email Address for XML File
+  - EMAILXML
+resultScales:
+  - Nominal
+definition: "The E-mail address to which copies of the XML format of the CT application should be sent."
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Email Address for XML File"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "EMAILXML"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

@@ -1,0 +1,140 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: SWLLIND
+domain: MK
+shortName: Swollen Indicator
+source: MK.MKTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C127774
+variables:
+  - name: MKTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C127269
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127269
+      submissionValue: MUSCTSCD
+    assignedTerm:
+      conceptId: C127774
+      value: "SWLLIND"
+    role: Topic
+    relationship:
+      subject: MKTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MKTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MKTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C127270
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127270
+      submissionValue: MUSCTS
+    assignedTerm:
+      conceptId: C127774
+      value: "Swollen Indicator"
+    role: Qualifier
+    relationship:
+      subject: MKTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MKORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MKORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: MKSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: MKLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MKLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "RIGHT"
+      - "LEFT"
+    role: Qualifier
+    relationship:
+      subject: MKLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MKLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MKDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

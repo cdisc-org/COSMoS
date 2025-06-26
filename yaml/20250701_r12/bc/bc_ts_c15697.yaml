@@ -1,0 +1,17 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C15697
+ncitCode: C15697
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15697
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Treatment Regimen
+synonyms:
+  - regimen or line of therapy
+  - regimen_or_line_of_therapy
+  - regimen
+  - Regimen
+  - Treatment Protocol
+  - Treatment Schedule
+definition: A treatment plan that specifies the dosage, the schedule, and the duration of treatment.

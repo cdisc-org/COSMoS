@@ -1,0 +1,16 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25364
+ncitCode: C25364
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25364
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Identifier
+synonyms:
+  - ID
+  - id
+  - Descriptor
+  - Designation
+  - Designator
+definition: One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing.

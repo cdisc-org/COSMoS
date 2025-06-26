@@ -1,0 +1,14 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25330
+ncitCode: C25330
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25330
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Duration
+synonyms:
+  - Time
+  - TIME
+  - Time Duration
+definition: The period of time during which something continues.

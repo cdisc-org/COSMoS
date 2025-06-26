@@ -1,0 +1,151 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: AIMS0108
+domain: RS
+shortName: "AIMS01-Severity of Abnormal Movements"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C102041
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C101805
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101805
+      submissionValue: AIMS01TC
+    assignedTerm:
+      conceptId: C102041
+      value: "AIMS0108"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C101806
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101806
+      submissionValue: AIMS01TN
+    assignedTerm:
+      conceptId: C102041
+      value: "AIMS01-Severity of Abnormal Movements"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C118971
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
+      submissionValue: CCCAT
+    assignedTerm:
+      conceptId: C102111
+      value: "AIMS"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    assignedTerm:
+      value: "GLOBAL JUDGMENTS"
+    role: Qualifier
+    relationship:
+      subject: RSSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: RSCAT
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C182465
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182465
+      submissionValue: AIMS0108T09OR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C182503
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182503
+      submissionValue: AIMS0108T09STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C182503
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182503
+      submissionValue: AIMS0108T09STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

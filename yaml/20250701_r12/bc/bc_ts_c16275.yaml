@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C16275
+ncitCode: C16275
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16275
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Algorithm
+synonyms:
+  - Algorithms
+definition: "A defined procedure for solving a problem. Applied to a problem-solving procedure implemented in software to be executed by a computer."

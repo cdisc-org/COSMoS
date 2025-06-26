@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C71465
+ncitCode: C71465
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71465
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Intervention Duration
+synonyms:
+  - Duration of Intervention
+definition: The period of time during which an intervention continues.

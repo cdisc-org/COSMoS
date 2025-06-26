@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-02-12T13:35:21
+# Generation date: 2025-06-16T11:59:07
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -550,6 +550,8 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="specifies the anatomical location of"))
         setattr(cls, "specifies the anatomical location of the performance of the test in",
             PermissibleValue(text="specifies the anatomical location of the performance of the test in"))
+        setattr(cls, "specifies the anatomical location of the tumor identified by",
+            PermissibleValue(text="specifies the anatomical location of the tumor identified by"))
         setattr(cls, "specifies the severity of",
             PermissibleValue(text="specifies the severity of"))
         setattr(cls, "values are grouped by",
@@ -598,6 +600,16 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="is the textual description of the intended dose regimen for"))
         setattr(cls, "is the reason for stopping administration of",
             PermissibleValue(text="is the reason for stopping administration of"))
+        setattr(cls, "is the value of the property identified by",
+            PermissibleValue(text="is the value of the property identified by"))
+        setattr(cls, "is the name of the reference terminology for",
+            PermissibleValue(text="is the name of the reference terminology for"))
+        setattr(cls, "is the version of the reference terminology in",
+            PermissibleValue(text="is the version of the reference terminology in"))
+        setattr(cls, "is the period of time for the test in",
+            PermissibleValue(text="is the period of time for the test in"))
+        setattr(cls, "is a reference range value for",
+            PermissibleValue(text="is a reference range value for"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
@@ -630,6 +642,9 @@ class PredicateTermEnum(EnumDefinitionImpl):
     PERFORMS = PermissibleValue(text="PERFORMS")
     QUALIFIES = PermissibleValue(text="QUALIFIES")
     SPECIFIES = PermissibleValue(text="SPECIFIES")
+    IS_VALUE_OF = PermissibleValue(text="IS_VALUE_OF")
+    IS_REFERENCE_TERMINOLOGY_FOR = PermissibleValue(text="IS_REFERENCE_TERMINOLOGY_FOR")
+    IS_REFERENCE_VALUE_FOR = PermissibleValue(text="IS_REFERENCE_VALUE_FOR")
 
     _defn = EnumDefinition(
         name="PredicateTermEnum",

@@ -546,6 +546,9 @@
           "text": "specifies the anatomical location of the performance of the test in"
         },
         {
+          "text": "specifies the anatomical location of the tumor identified by"
+        },
+        {
           "text": "specifies the severity of"
         },
         {
@@ -616,6 +619,21 @@
         },
         {
           "text": "is the reason for stopping administration of"
+        },
+        {
+          "text": "is the value of the property identified by"
+        },
+        {
+          "text": "is the name of the reference terminology for"
+        },
+        {
+          "text": "is the version of the reference terminology in"
+        },
+        {
+          "text": "is the period of time for the test in"
+        },
+        {
+          "text": "is a reference range value for"
         }
       ]
     },
@@ -710,6 +728,15 @@
         },
         {
           "text": "SPECIFIES"
+        },
+        {
+          "text": "IS_VALUE_OF"
+        },
+        {
+          "text": "IS_REFERENCE_TERMINOLOGY_FOR"
+        },
+        {
+          "text": "IS_REFERENCE_VALUE_FOR"
         }
       ]
     },
@@ -1561,9 +1588,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-02-04T16:39:11",
-  "source_file_size": 14585,
-  "generation_date": "2025-02-12T13:35:15",
+  "source_file_date": "2025-06-16T11:57:08",
+  "source_file_size": 14986,
+  "generation_date": "2025-06-16T11:58:58",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

@@ -1,0 +1,13 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C25714
+ncitCode: C25714
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25714
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Version
+synonyms:
+  - VERS
+  - Versioned
+definition: A form or variant of a type or original; one of a sequence of copies of a program, each incorporating new modifications.

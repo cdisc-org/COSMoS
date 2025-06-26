@@ -1,0 +1,68 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C121109
+ncitCode: C121109
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121109
+parentConceptId: C120994
+categories:
+  - QRS
+  - APACHE II
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+shortName: "APACHE II - 15 Minus Glasgow Coma Score"
+synonyms:
+  - "APCH1-15 Minus Glasgow Coma Score"
+  - APCH112
+resultScales:
+  - Ordinal
+definition: "Acute Physiology and Chronic Health Evaluation II (APACHE II) Glasgow coma score: Score equals 15 minus actual GCS."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: integer
+    exampleSet:
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,11 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C91105
+ncitCode: C91105
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91105
+categories:
+  - Research or Clinical Assessment Tools
+shortName: Clinical or Research Assessment Questionnaire
+synonyms:
+  - QS
+definition: An instrument consisting of a predetermined set of questions for a clinical or research assessment.

@@ -1,0 +1,62 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C121104
+ncitCode: C121104
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121104
+parentConceptId: C120994
+categories:
+  - QRS
+  - APACHE II
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+shortName: "APACHE II - Serum Sodium"
+synonyms:
+  - "APCH1-Serum Sodium"
+  - APCH107
+resultScales:
+  - Ordinal
+definition: Acute Physiology and Chronic Health Evaluation II (APACHE II) Serum sodium (mMol/L).
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<=110 (4)"
+      - "111-119 (3)"
+      - "120-129 (2)"
+      - "130-149 (0)"
+      - "150-154 (1)"
+      - "155-159 (2)"
+      - "160-179 (3)"
+      - ">=180 (4)"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C44278
+    ncitCode: C44278
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44278
+    shortName: Unit
+    dataType: string
+    exampleSet:
+      - "mmol/L"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

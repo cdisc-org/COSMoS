@@ -8,12 +8,39 @@ cosmos_sdtm:SDTMGroup a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype <xsd:string> ;
+            sh:description "The earliest SDTMIG version applicable to the BC dataset specialization" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_sdtm:sdtmigStartVersion ],
+        [ sh:description "Package type (sdtm for SDTM Dataset Specializations)" ;
+            sh:in ( "sdtm" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos_sdtm:packageType ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_sdtm:shortName ],
+        [ sh:datatype <xsd:string> ;
             sh:description "SDTM VLM Source which categorizes VLM groups by topic variable" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
             sh:path cosmos_sdtm:source ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Identifier for SDTM Value Level Metadata group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_sdtm:datasetSpecializationId ],
         [ sh:datatype <xsd:date> ;
             sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
             sh:maxCount 1 ;
@@ -27,33 +54,6 @@ cosmos_sdtm:SDTMGroup a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 7 ;
             sh:path cosmos_sdtm:sdtmigEndVersion ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "The earliest SDTMIG version applicable to the BC dataset specialization" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path cosmos_sdtm:sdtmigStartVersion ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "Biomedical Concept identifier foreign key" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path cosmos_sdtm:biomedicalConceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "Identifier for SDTM Value Level Metadata group" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path cosmos_sdtm:datasetSpecializationId ],
-        [ sh:description "Package type (sdtm for SDTM Dataset Specializations)" ;
-            sh:in ( "sdtm" ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_sdtm:packageType ],
         [ sh:class cosmos_sdtm:SDTMVariable ;
             sh:description "Variable included in the SDTM dataset specialization" ;
             sh:minCount 1 ;
@@ -61,32 +61,25 @@ cosmos_sdtm:SDTMGroup a sh:NodeShape ;
             sh:order 9 ;
             sh:path cosmos_sdtm:variables ],
         [ sh:datatype <xsd:string> ;
-            sh:description "SDTM group short name which provides a user friendly and intuitive name for the vlm_group_id" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path cosmos_sdtm:shortName ],
-        [ sh:datatype <xsd:string> ;
             sh:description "Domain for the SDTM specialization group" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 3 ;
-            sh:path cosmos_sdtm:domain ] ;
+            sh:path cosmos_sdtm:domain ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Biomedical Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path cosmos_sdtm:biomedicalConceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ] ;
     sh:targetClass cosmos_sdtm:SDTMGroup .
 
 cosmos_sdtm:SubsetCodeList a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype <xsd:string> ;
-            sh:description "Subset codelist parent codelist" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path cosmos_sdtm:parentCodelist ],
-        [ sh:datatype <xsd:string> ;
             sh:description "Subset codelist label" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -105,38 +98,39 @@ cosmos_sdtm:SubsetCodeList a sh:NodeShape ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path cosmos_sdtm:subsetShortName ] ;
+            sh:path cosmos_sdtm:subsetShortName ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Subset codelist parent codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_sdtm:parentCodelist ] ;
     sh:targetClass cosmos_sdtm:SubsetCodeList .
 
 cosmos_sdtm:AssignedTerm a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype <xsd:string> ;
-            sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path cosmos_sdtm:conceptId ;
-            sh:pattern "^(C[0123456789]+)$" ],
-        [ sh:datatype <xsd:string> ;
             sh:description "Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path cosmos_sdtm:value ] ;
+            sh:path cosmos_sdtm:value ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_sdtm:conceptId ;
+            sh:pattern "^(C[0123456789]+)$" ] ;
     sh:targetClass cosmos_sdtm:AssignedTerm .
 
 cosmos_sdtm:CodeList a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype <xsd:anyURI> ;
-            sh:description "Link to NCIt for the codelist" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path cosmos_sdtm:href ],
-        [ sh:datatype <xsd:string> ;
+    sh:property [ sh:datatype <xsd:string> ;
             sh:description "C-code for a codelist in NCIt" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -144,6 +138,12 @@ cosmos_sdtm:CodeList a sh:NodeShape ;
             sh:order 0 ;
             sh:path cosmos_sdtm:conceptId ;
             sh:pattern "^(C[0123456789]+)$" ],
+        [ sh:datatype <xsd:anyURI> ;
+            sh:description "Link to NCIt for the codelist" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_sdtm:href ],
         [ sh:datatype <xsd:string> ;
             sh:description "CDISC submission value for the codelist" ;
             sh:maxCount 1 ;
@@ -176,14 +176,8 @@ cosmos_sdtm:CodeListTerm a sh:NodeShape ;
 cosmos_sdtm:RelationShip a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "Variable relationship descriptive linking phrase" ;
-            sh:in ( "assesses seriousness of" "assesses the severity of" "associates the tumor identified in" "decodes the value in" "describes actions taken" "describes relationship of" "describes the outcome of" "further describes the test in" "further specifies the anatomical location in" "groups tumor assessments used in overall response identified by" "groups values in" "groups, within an individual subject, values in" "identifies a pattern of" "identifies an observation described by" "identifies overall response supported by tumor assessments identified by" "identifies the image from the procedure in" "identifies the tumor found by the test in" "indicates occurrence of the value in" "indicates pre-specification of the value in" "indicates severity of" "indicates the previous irradiation status of the tumor identified by" "indicates the progression status of the previous irradiated tumor identified by" "is a dictionary-derived term for the value in" "is a dictionary-derived class code for the value in" "is a dictionary-derived class name for the value in" "is decoded by the value in" "is original text for" "is the administered amount of the treatment in" "is the administration anatomical location for the treatment in" "is the aspect of the event used to define the date in" "is the clinical significance interpretation for" "is the code for the value in" "is the dictionary code for the test in" "is the dictionary-derived term for the value in" "is the dictionary-derived class code for the value in" "is the dictionary-derived class name for the value in" "is the duration for" "is the end date for" "is the epoch of the performance of the test in" "is the frequency of administration of the amount in" "is the identifier for the source data used in the performance of the test in" "is the material type of the subject of the activity in" "is the medical condition that is the reason for the treatment in" "is the method for the test in" "is the part of the body through which is administered the treatment in" "is the physical form of the product in" "is the result of the test in" "is the role of the assessor who performed the test in" "is the specimen tested in" "is the start date for" "is the subject position during performance of the test in" "is the subject's fasting status during the performance of the test in" "is the unit for the value in" "is the unit for" "specifies the anatomical location in" "specifies the anatomical location of" "specifies the anatomical location of the performance of the test in" "specifies the severity of" "values are grouped by" "was the subject position during performance of the test in" "identifies the reference used in the genomic test in" "indicates heritability of the genetic variant in" "is an identifier for a published reference for the genetic variant in" "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in" "is an identifier for the genetic sequence of the genetic entity represented by" "is the chromosome that is the position of the result in" "is the clinical trial or treatment setting for" "is the date of occurrence" "is the date of occurrence for" "is the intended disease outcome for" "is the method of secondary analysis of results in" "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in" "is the symbol for the genomic entity that is the position of the result in" "is the type of genomic entity that is the position of the result in" "is the genetic sub-location of the result in" "is the object of the observation in" "is an identifier for the evaluator with the role in" "is the severity of the toxicity in" "is a grouping of values in" "is the textual description of the intended dose regimen for" "is the reason for stopping administration of" ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 1 ;
-            sh:path cosmos_sdtm:linkingPhrase ],
-        [ sh:description "Short variable relationship linking phrase for programming purposes" ;
-            sh:in ( "ASSESSES" "CLASSIFIES" "DECODES" "DESCRIBES" "GROUPS" "GROUPS_BY" "IDENTIFIES" "IDENTIFIES_OBSERVATION" "IDENTIFIES_PRODUCT_IN" "IDENTIFIES_TUMOR_IN" "INDICATES" "IS_ATTRIBUTE_FOR" "IS_DECODED_BY" "IS_DERIVED_FROM" "IS_EPOCH_OF" "IS_GROUPED_BY" "IS_INDICATOR_FOR" "IS_ORIGINAL_TEXT_FOR" "IS_POSITION_FOR" "IS_REASON_FOR" "IS_RESULT_OF" "IS_SPECIMEN_TESTED_IN" "IS_SUBJECT_STATE_FOR" "IS_TIMING_FOR" "IS_UNIT_FOR" "PERFORMED" "PERFORMS" "QUALIFIES" "SPECIFIES" ) ;
+    sh:property [ sh:description "Short variable relationship linking phrase for programming purposes" ;
+            sh:in ( "ASSESSES" "CLASSIFIES" "DECODES" "DESCRIBES" "GROUPS" "GROUPS_BY" "IDENTIFIES" "IDENTIFIES_OBSERVATION" "IDENTIFIES_PRODUCT_IN" "IDENTIFIES_TUMOR_IN" "INDICATES" "IS_ATTRIBUTE_FOR" "IS_DECODED_BY" "IS_DERIVED_FROM" "IS_EPOCH_OF" "IS_GROUPED_BY" "IS_INDICATOR_FOR" "IS_ORIGINAL_TEXT_FOR" "IS_POSITION_FOR" "IS_REASON_FOR" "IS_RESULT_OF" "IS_SPECIMEN_TESTED_IN" "IS_SUBJECT_STATE_FOR" "IS_TIMING_FOR" "IS_UNIT_FOR" "PERFORMED" "PERFORMS" "QUALIFIES" "SPECIFIES" "IS_VALUE_OF" "IS_REFERENCE_TERMINOLOGY_FOR" "IS_REFERENCE_VALUE_FOR" ) ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 2 ;
@@ -195,6 +189,12 @@ cosmos_sdtm:RelationShip a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 3 ;
             sh:path cosmos_sdtm:object ],
+        [ sh:description "Variable relationship descriptive linking phrase" ;
+            sh:in ( "assesses seriousness of" "assesses the severity of" "associates the tumor identified in" "decodes the value in" "describes actions taken" "describes relationship of" "describes the outcome of" "further describes the test in" "further specifies the anatomical location in" "groups tumor assessments used in overall response identified by" "groups values in" "groups, within an individual subject, values in" "identifies a pattern of" "identifies an observation described by" "identifies overall response supported by tumor assessments identified by" "identifies the image from the procedure in" "identifies the tumor found by the test in" "indicates occurrence of the value in" "indicates pre-specification of the value in" "indicates severity of" "indicates the previous irradiation status of the tumor identified by" "indicates the progression status of the previous irradiated tumor identified by" "is a dictionary-derived term for the value in" "is a dictionary-derived class code for the value in" "is a dictionary-derived class name for the value in" "is decoded by the value in" "is original text for" "is the administered amount of the treatment in" "is the administration anatomical location for the treatment in" "is the aspect of the event used to define the date in" "is the clinical significance interpretation for" "is the code for the value in" "is the dictionary code for the test in" "is the dictionary-derived term for the value in" "is the dictionary-derived class code for the value in" "is the dictionary-derived class name for the value in" "is the duration for" "is the end date for" "is the epoch of the performance of the test in" "is the frequency of administration of the amount in" "is the identifier for the source data used in the performance of the test in" "is the material type of the subject of the activity in" "is the medical condition that is the reason for the treatment in" "is the method for the test in" "is the part of the body through which is administered the treatment in" "is the physical form of the product in" "is the result of the test in" "is the role of the assessor who performed the test in" "is the specimen tested in" "is the start date for" "is the subject position during performance of the test in" "is the subject's fasting status during the performance of the test in" "is the unit for the value in" "is the unit for" "specifies the anatomical location in" "specifies the anatomical location of" "specifies the anatomical location of the performance of the test in" "specifies the anatomical location of the tumor identified by" "specifies the severity of" "values are grouped by" "was the subject position during performance of the test in" "identifies the reference used in the genomic test in" "indicates heritability of the genetic variant in" "is an identifier for a published reference for the genetic variant in" "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in" "is an identifier for the genetic sequence of the genetic entity represented by" "is the chromosome that is the position of the result in" "is the clinical trial or treatment setting for" "is the date of occurrence" "is the date of occurrence for" "is the intended disease outcome for" "is the method of secondary analysis of results in" "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in" "is the symbol for the genomic entity that is the position of the result in" "is the type of genomic entity that is the position of the result in" "is the genetic sub-location of the result in" "is the object of the observation in" "is an identifier for the evaluator with the role in" "is the severity of the toxicity in" "is a grouping of values in" "is the textual description of the intended dose regimen for" "is the reason for stopping administration of" "is the value of the property identified by" "is the name of the reference terminology for" "is the version of the reference terminology in" "is the period of time for the test in" "is a reference range value for" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos_sdtm:linkingPhrase ],
         [ sh:datatype <xsd:string> ;
             sh:description "Subject in a variable relationship" ;
             sh:maxCount 1 ;
@@ -208,23 +208,17 @@ cosmos_sdtm:SDTMVariable a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype <xsd:boolean> ;
-            sh:description "Indicator that variable must be present within the SDTM group" ;
+            sh:description "Flag that indicates if the variable is a non-standard variable" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path cosmos_sdtm:mandatoryVariable ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "Biomedical Concept Data Element Concept identifier foreign key" ;
+            sh:order 2 ;
+            sh:path cosmos_sdtm:isNonStandard ],
+        [ sh:class cosmos_sdtm:CodeList ;
+            sh:description "Codelist" ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path cosmos_sdtm:dataElementConceptId ;
-            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
-        [ sh:description "Comparison operator for SDTM group variables included in VLM" ;
-            sh:in ( "EQ" "IN" ) ;
-            sh:maxCount 1 ;
-            sh:order 17 ;
-            sh:path cosmos_sdtm:comparator ],
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path cosmos_sdtm:codelist ],
         [ sh:datatype <xsd:string> ;
             sh:description "Variable included in the SDTM dataset specialization" ;
             sh:maxCount 1 ;
@@ -232,50 +226,52 @@ cosmos_sdtm:SDTMVariable a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
             sh:path cosmos_sdtm:name ],
-        [ sh:description "Variable origin type (define-XML v21)" ;
-            sh:in ( NCIT:C170547 NCIT:C170548 NCIT:C170549 NCIT:C170550 NCIT:C170551 ) ;
+        [ sh:description "Comparison operator for SDTM group variables included in VLM" ;
+            sh:in ( "EQ" "IN" ) ;
             sh:maxCount 1 ;
-            sh:order 15 ;
-            sh:path cosmos_sdtm:originType ],
-        [ sh:description "Variable origin source (define-XML v21)" ;
-            sh:in ( NCIT:C25936 NCIT:C70793 NCIT:C41189 NCIT:C68608 ) ;
-            sh:maxCount 1 ;
-            sh:order 16 ;
-            sh:path cosmos_sdtm:originSource ],
-        [ sh:datatype <xsd:string> ;
-            sh:description "Subset codelist short name" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path cosmos_sdtm:subsetCodelist ],
-        [ sh:description "Variable data type" ;
-            sh:in ( "datetime" "durationDatetime" "float" "integer" "text" ) ;
-            sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path cosmos_sdtm:dataType ],
+            sh:order 17 ;
+            sh:path cosmos_sdtm:comparator ],
         [ sh:datatype <xsd:boolean> ;
             sh:description "Indicator that variable must be populated within the SDTM group" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 14 ;
             sh:path cosmos_sdtm:mandatoryValue ],
-        [ sh:description "SDTM variable role" ;
-            sh:in ( "Identifier" "Qualifier" "Timing" "Topic" ) ;
-            sh:maxCount 1 ;
-            sh:order 7 ;
-            sh:path cosmos_sdtm:role ],
-        [ sh:datatype <xsd:integer> ;
-            sh:description "Variable significant_digits" ;
+        [ sh:datatype <xsd:string> ;
+            sh:description "Subset codelist short name" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path cosmos_sdtm:significantDigits ],
+            sh:order 4 ;
+            sh:path cosmos_sdtm:subsetCodelist ],
         [ sh:class cosmos_sdtm:AssignedTerm ;
             sh:description "Assigned term" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:order 6 ;
             sh:path cosmos_sdtm:assignedTerm ],
+        [ sh:datatype <xsd:integer> ;
+            sh:description "Variable significant_digits" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path cosmos_sdtm:significantDigits ],
+        [ sh:datatype <xsd:string> ;
+            sh:description "Biomedical Concept Data Element Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_sdtm:dataElementConceptId ;
+            sh:pattern "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$" ],
+        [ sh:description "Variable origin source (define-XML v21)" ;
+            sh:in ( NCIT:C25936 NCIT:C70793 NCIT:C41189 NCIT:C68608 ) ;
+            sh:maxCount 1 ;
+            sh:order 16 ;
+            sh:path cosmos_sdtm:originSource ],
+        [ sh:description "Variable data type" ;
+            sh:in ( "datetime" "durationDatetime" "float" "integer" "text" ) ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path cosmos_sdtm:dataType ],
         [ sh:datatype <xsd:string> ;
             sh:description "List of SDTM submission values used if subset codelist is not applicable" ;
             sh:nodeKind sh:Literal ;
@@ -300,23 +296,27 @@ cosmos_sdtm:SDTMVariable a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 10 ;
             sh:path cosmos_sdtm:length ],
+        [ sh:description "SDTM variable role" ;
+            sh:in ( "Identifier" "Qualifier" "Timing" "Topic" ) ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path cosmos_sdtm:role ],
+        [ sh:datatype <xsd:boolean> ;
+            sh:description "Indicator that variable must be present within the SDTM group" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path cosmos_sdtm:mandatoryVariable ],
+        [ sh:description "Variable origin type (define-XML v21)" ;
+            sh:in ( NCIT:C170547 NCIT:C170548 NCIT:C170549 NCIT:C170550 NCIT:C170551 ) ;
+            sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path cosmos_sdtm:originType ],
         [ sh:datatype <xsd:boolean> ;
             sh:description "Target variable for VLM" ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 18 ;
-            sh:path cosmos_sdtm:vlmTarget ],
-        [ sh:class cosmos_sdtm:CodeList ;
-            sh:description "Codelist" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:order 3 ;
-            sh:path cosmos_sdtm:codelist ],
-        [ sh:datatype <xsd:boolean> ;
-            sh:description "Flag that indicates if the variable is a non-standard variable" ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path cosmos_sdtm:isNonStandard ] ;
+            sh:path cosmos_sdtm:vlmTarget ] ;
     sh:targetClass cosmos_sdtm:SDTMVariable .
 

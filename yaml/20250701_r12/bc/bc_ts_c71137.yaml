@@ -1,0 +1,34 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C71137
+ncitCode: C71137
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71137
+parentConceptId: C15697
+categories:
+  - Trial Summary
+shortName: Dose Regimen
+synonyms:
+  - DOSRGM
+resultScales:
+  - Nominal
+definition: A treatment plan that specifies the amount, schedule, and the duration of intervention(s).
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Dose Regimen"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "DOSRGM"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

@@ -1,0 +1,51 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C79463
+ncitCode: C79463
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C79463
+parentConceptId: C74760
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Urine Chemistry Tests
+  - Urine Protein Measurement
+shortName: Protein to Creatinine Ratio Measurement
+synonyms:
+  - Protein/Creatinine
+  - PROTCRT
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of total protein compared to creatinine present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "g/g"
+      - "g/kg"
+      - "kg/mol"
+      - "g/mol"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

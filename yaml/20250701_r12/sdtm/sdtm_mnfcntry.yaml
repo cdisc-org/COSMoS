@@ -1,0 +1,87 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: MNFCNTRY
+domain: TS
+shortName: Country of Manufacture (TS)
+source: TS.TSPARMCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C124455
+variables:
+  - name: TSPARMCD
+    dataElementConceptId: C83445
+    isNonStandard: false
+    codelist:
+      conceptId: C66738
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66738
+      submissionValue: TSPARMCD
+    assignedTerm:
+      conceptId: C124455
+      value: "MNFCNTRY"
+    role: Topic
+    relationship:
+      subject: TSPARMCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: TSPARM
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: TSPARM
+    dataElementConceptId: C49691
+    isNonStandard: false
+    codelist:
+      conceptId: C67152
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67152
+      submissionValue: TSPARM
+    assignedTerm:
+      conceptId: C124455
+      value: "Country of Manufacture"
+    role: Qualifier
+    relationship:
+      subject: TSPARM
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TSPARMCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: TSVAL
+    dataElementConceptId: C83447
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: TSVAL
+      linkingPhrase: is the value of the property identified by
+      predicateTerm: IS_VALUE_OF
+      object: TSPARMCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: TSVALCD
+    dataElementConceptId: C117458
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: TSVALCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: TSVAL
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: TSVCDREF
+    dataElementConceptId: C117460
+    isNonStandard: false
+    codelist:
+      conceptId: C66788
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66788
+      submissionValue: DICTNAM
+    role: Qualifier
+    relationship:
+      subject: TSVCDREF
+      linkingPhrase: is the name of the reference terminology for
+      predicateTerm: IS_REFERENCE_TERMINOLOGY_FOR
+      object: TSVALCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 

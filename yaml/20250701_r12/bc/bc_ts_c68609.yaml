@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C68609
+ncitCode: C68609
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68609
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Active Comparator
+synonyms:
+  - Active Control
+definition: A therapeutically active agent, treatment regimen or procedure that is intended to provide baseline measurements for the experimental protocol of a clinical trial.

@@ -1,0 +1,48 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C111207
+ncitCode: C111207
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111207
+parentConceptId: C64848
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Hemoglobin Measurements
+shortName: Hemoglobin A1C to Hemoglobin Ratio Measurement
+synonyms:
+  - Hemoglobin A1C/Hemoglobin
+  - HBA1CHGB
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of the glycosylated hemoglobin compared to total hemoglobin present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C81268
+    ncitCode: C81268
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81268
+    shortName: Molar Ratio
+    dataType: string
+    exampleSet:
+      - "mmol/mol"
+      - "%"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

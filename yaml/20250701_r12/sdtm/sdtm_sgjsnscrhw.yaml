@@ -1,0 +1,230 @@
+packageDate: "2025-07-01"
+packageType: sdtm
+datasetSpecializationId: SGJSNSCRHW
+domain: MK
+shortName: Sharp/Genant JSN Score Hand/ Wrist
+source: MK.MKTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C128987
+variables:
+  - name: MKTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C127269
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127269
+      submissionValue: MUSCTSCD
+    assignedTerm:
+      conceptId: C128987
+      value: "SGJSNSCR"
+    role: Topic
+    relationship:
+      subject: MKTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MKTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MKTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C127270
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127270
+      submissionValue: MUSCTS
+    assignedTerm:
+      conceptId: C128987
+      value: "Sharp/Genant JSN Score"
+    role: Qualifier
+    relationship:
+      subject: MKTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MKORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "0 Normal"
+      - "0.5 Questionable"
+      - "1.0 Mild, definite small erosions, <25% of articular bone"
+      - "1.5 Mild-moderate, definite medium erosion"
+      - "2.0 Moderate, definite erosion, 26-50% of articular bone"
+      - "2.5 Moderate-severe, definite erosion, 51-75% of articular bone"
+      - "3.0 Severe, definite erosion, 76-90% of articular bone"
+      - "3.5 Very severe, definite erosion, nearly complete loss of articular bone"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "0.5"
+      - "1.0"
+      - "2.0"
+      - "2.5"
+      - "3.0"
+      - "3.5"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "0.5"
+      - "1.0"
+      - "2.0"
+      - "2.5"
+      - "3.0"
+      - "3.5"
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "INTERPHALANGEAL JOINT 1"
+      - "PROXIMAL INTERPHALANGEAL JOINT 2 OF THE HAND"
+      - "PROXIMAL INTERPHALANGEAL JOINT 3 OF THE HAND"
+      - "PROXIMAL INTERPHALANGEAL"
+      - "PROXIMAL INTERPHALANGEAL JOINT 5 OF THE HAND JOINT 4 OF THE HAND"
+      - "METACARPOPHALANGEAL JOINT 1"
+      - "METACARPOPHALANGEAL JOINT 2"
+      - "METACARPOPHALANGEAL JOINT 4 METACARPOPHALANGEAL JOINT 3"
+      - "METACARPOPHALANGEAL JOINT 4"
+      - "METACARPOPHALANGEAL JOINT 5"
+      - "CARPOMETACARPAL JOINTS 3-5"
+      - "SCAPHOID-LUNATE-CAPITATE JOINT"
+      - "RADIOCARPAL JOINT"
+    role: Qualifier
+    relationship:
+      subject: MKLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "RIGHT"
+      - "LEFT"
+    role: Qualifier
+    relationship:
+      subject: MKLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MKLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "X-RAY"
+      - "MRI"
+    role: Qualifier
+    relationship:
+      subject: MKMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    valueList:
+      - "INVESTIGATOR"
+      - "INDEPENDENT ASSESSOR"
+    role: Qualifier
+    relationship:
+      subject: MKEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: IN
+  - name: MKEVALID
+    dataElementConceptId: C117043
+    isNonStandard: false
+    codelist:
+      conceptId: C96777
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96777
+      submissionValue: MEDEVAL
+    valueList:
+      - "READER 1"
+      - "READER 2"
+    role: Qualifier
+    relationship:
+      subject: MKEVALID
+      linkingPhrase: is an identifier for the evaluator with the role in
+      predicateTerm: IDENTIFIES
+      object: MKEVAL
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: IN

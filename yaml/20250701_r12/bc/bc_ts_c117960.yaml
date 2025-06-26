@@ -1,0 +1,12 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C117960
+ncitCode: C117960
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117960
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Diagnostic Criteria
+synonyms:
+  - DXCRIT
+definition: A standard from which a judgment concerning a medical diagnosis can be established.

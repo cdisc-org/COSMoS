@@ -1,0 +1,38 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C49802
+ncitCode: C49802
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49802
+parentConceptId: C42774
+categories:
+  - Trial Summary
+shortName: Trial Title
+synonyms:
+  - Official Study Title
+  - Study Title
+  - TITLE
+resultScales:
+  - Nominal
+definition: The name of a clinical trial.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Trial Title"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "TITLE"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "A Phase 1b/3, Multicenter Trial of Drug Z in Combination with Drug X for Treatment of Melanoma"
