@@ -7,6 +7,16 @@ from openpyxl.styles import Alignment, Font, Border, Side
 from os import listdir
 from os.path import isfile, join
 
+"""
+This script creates an Excel file with Collection Dataset Specializations from YAML files.
+Usage: python create_cosmos_collection_excel.py -s <source> -y <directory> -o <excel_file> -d <date>
+Source can be 'YAML'. Provide a directory with YAML files.
+If 'API', the script will use the CDISC Library API to get the latest Collection Dataset Specializations.
+The output will be saved in an Excel file and a CSV file.
+The Excel file will contain sheets for Collection Specializations and Domains.
+"""
+
+
 def load_yaml_files(directory):
 
   files = [join(directory,f) for f in listdir(directory) if isfile(join(directory, f)) and os.path.splitext(f)[1] == '.yaml']
@@ -240,10 +250,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# This script creates an Excel file with Collection Dataset Specializations from YAML files.
-# Usage: python create_cosmos_collection_excel.py -s <source> -y <directory> -o <excel_file> -d <date>
-# Source can be 'YAML'. Provide a directory with YAML files.
-# If 'API', the script will use the CDISC Library API to get the latest Collection Dataset Specializations.
-# The output will be saved in an Excel file and a CSV file.
-# The Excel file will contain sheets for Collection Specializations and Domains.
