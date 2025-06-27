@@ -278,3 +278,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# This script creates an Excel file with SDTM Dataset Specializations from YAML files or the CDISC Library API.
+# Usage: python create_cosmos_sdtm_excel.py -s <source> -y <directory> -o <excel_file> -d <date>
+# Source can be 'API' or 'YAML'. If 'YAML', provide a directory with YAML files.
+# If 'API', the script will use the CDISC Library API to get the latest SDTM Dataset Specializations.
+# The output will be saved in an Excel file and a CSV file.
+# The Excel file will contain sheets for SDTM Dataset Specializations and Domains.
+# The CSV file will contain the SDTM Dataset Specializations data.
+# The script also updates a ReadMe sheet with information about the source and date of the data.

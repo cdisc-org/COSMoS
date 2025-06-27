@@ -53,6 +53,12 @@ Below is an overview of the contents of this repository.
 
   The [project](https://github.com/cdisc-org/COSMoS/tree/main/project) folder contains various artefacts generated from the [LinkML](https://linkml.io/linkml/) schema, such as JSON-Schema, or the Python object model.
 
+- **scripts**
+  - Scripts to generate artifacts from a LinkML schema
+  - Scripts to create Excel spreadsheets fron YAML files or API JSON responses
+  - Scripts to validate the YAML files
+  - A script to check the status of concepts at NCI EVS
+
 - **utilities**
 
   The [utilities](https://github.com/cdisc-org/COSMoS/tree/main/utilities) folder contains utilities to:
@@ -64,7 +70,6 @@ Below is an overview of the contents of this repository.
 
   The [yaml](https://github.com/cdisc-org/COSMoS/tree/main/yaml) folder contains:
   - YAML files generated from the curation spreadsheets
-  - Scripts to validate the YAML files
 
 ## License
 

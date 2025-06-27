@@ -15,6 +15,7 @@ run;
 
 
 %let package=latest;
+
 %let ExcelFile=&root/export/cdisc_biomedical_concepts_latest.xlsx;
 %let TargetFolder=&root/yaml/latest/bc;
 
@@ -35,8 +36,7 @@ ods html5 close;
 ods excel close;  
 
 
-
-%let ExcelFile=&root/curation/BC_Package_R6_LZZT.xlsx;
+%let ExcelFile=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
 
 %let ExcelFile=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;

@@ -99,7 +99,54 @@
             "2025-07-01"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate BC YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/bc",
+            "-s",
+            "${workspaceFolder}/model/cosmos_bc_model.yaml",
+            "-c",
+            "BiomedicalConcept"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate SDTM YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/sdtm",
+            "-s",
+            "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
+            "-c",
+            "DatasetSpecialization"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate Collection YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20251231_draft/collection",
+            "-s",
+            "${workspaceFolder}/model/cosmos_collection_bc_model.yaml",
+            "-c",
+            "CollectionDatasetSpecialization"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
         }
-
     ]
 }
