@@ -352,6 +352,9 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_KPS)$, dsout=bc12_23); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_KPS)$, dsout=sdtm12_22, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/package12/R12_BC_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_EDITS2)$, dsout=bc12_24); 
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
