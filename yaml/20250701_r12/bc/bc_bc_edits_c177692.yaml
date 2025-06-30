@@ -1,0 +1,63 @@
+packageDate: "2025-07-01"
+packageType: bc
+conceptId: C177692
+ncitCode: C177692
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C177692
+categories:
+  - Oncology Standards
+  - Laboratory Tests
+  - Immunology Tests
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Gene Products
+  - Genetic Variation
+  - Genetic Variation Analysis
+  - Breast Cancer TAUG
+shortName: Expression Positive
+resultScales:
+  - Ordinal
+definition: An indication that the expression of a gene, transcript or protein has been detected in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Blood"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
