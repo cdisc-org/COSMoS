@@ -15,7 +15,7 @@ synonyms:
   - TRTDOS
   - Dosage
   - Doses
-  - \{Dose\}
+  - "{Dose}"
 resultScales:
   - Quantitative
 definition: A quantity of an agent (such as substance or energy) administered, taken, or absorbed at one time.

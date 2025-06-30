@@ -122,9 +122,7 @@
         do i=1 to countwords;
           value=strip(scan(synonyms, i, ";"));
           value=tranwrd(value, '"', '\"');
-          value=tranwrd(value, '{', '\{');
-        value=tranwrd(value, '}', '\}');
-          if index(value, '"') or index(value, ":") or index(value, "-") then value=cats('"', value, '"');
+          if index(value, '"') or index(value, ":") or index(value, "-") or index(value, "{") or index(value, "}") then value=cats('"', value, '"');
           if not missing(value) then put +2 "-" +1 value;
         end;
       end;
