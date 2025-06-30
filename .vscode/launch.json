@@ -128,7 +128,7 @@
             "-s",
             "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
             "-c",
-            "DatasetSpecialization"
+            "SDTMGroup"
           ],
           "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -144,7 +144,7 @@
             "-s",
             "${workspaceFolder}/model/cosmos_collection_bc_model.yaml",
             "-c",
-            "CollectionDatasetSpecialization"
+            "DataCollectionGroup"
           ],
           "env": { "PYTHONPATH": "${workspaceRoot}"}
         }
