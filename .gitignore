@@ -1,4 +1,4 @@
-.vscode/
+.vscode/settings.json
 .hypothesis/
 __pycache__/
 *.code-workspace

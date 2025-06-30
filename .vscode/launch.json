@@ -1,0 +1,152 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "DRAFT: Create BC Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_bc_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "YAML",
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/bc",
+            "-o",
+            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r12.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "DRAFT: Create SDTM Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_sdtm_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "YAML",
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/sdtm",
+            "-o",
+            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r12.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "DRAFT: Create Collection Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_collection_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "YAML",
+            "-y",
+            "${workspaceFolder}/yaml/20251231_draft/collection",
+            "-o",
+            "${workspaceFolder}/curation/draft/cdisc_collection_dataset_specializations_draft.xlsx",
+            "-d",
+            "2025-12-31"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Create BC Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_bc_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "API",
+            "-o",
+            "${workspaceFolder}/export/cdisc_biomedical_concepts_latest.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Create SDTM Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_sdtm_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "API",
+            "-o",
+            "${workspaceFolder}/export/cdisc_sdtm_dataset_specializations_latest.xlsx",
+            "-d",
+            "2025-07-01"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate BC YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/bc",
+            "-s",
+            "${workspaceFolder}/model/cosmos_bc_model.yaml",
+            "-c",
+            "BiomedicalConcept"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate SDTM YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20250701_r12/sdtm",
+            "-s",
+            "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
+            "-c",
+            "DatasetSpecialization"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate Collection YAML",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/20251231_draft/collection",
+            "-s",
+            "${workspaceFolder}/model/cosmos_collection_bc_model.yaml",
+            "-c",
+            "CollectionDatasetSpecialization"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        }
+    ]
+}
