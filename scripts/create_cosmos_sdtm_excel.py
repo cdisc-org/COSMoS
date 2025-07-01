@@ -37,7 +37,7 @@ def get_sdtm_list(client, cosmos_api_version,):
     all_sdtm_list = client.get_sdtm_latest_sdtm_datasetspecializations(cosmos_api_version)
     return all_sdtm_list
 
-def get_sdtms(client, cosmos_api_version, all_sdtm_list, count=1000):
+def get_sdtms(client, cosmos_api_version, all_sdtm_list, count=100000):
     print(f"\nGetting {len(all_sdtm_list)} SDTM Dataset Specializations from the CDISC Library")
     sdtm_list = []
     for sdtm in all_sdtm_list:
