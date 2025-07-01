@@ -37,7 +37,7 @@ def get_bc_list(client, cosmos_api_version,):
     all_bc_list = client.get_bc_latest_biomedicalconcepts(cosmos_api_version)
     return all_bc_list
 
-def get_bcs(client, cosmos_api_version, all_bc_list, count=1000):
+def get_bcs(client, cosmos_api_version, all_bc_list, count=100000):
     print(f"\nGetting {len(all_bc_list)} Biomedical Concepts from the CDISC Library")
     bc_list = []
     for bc in all_bc_list:
