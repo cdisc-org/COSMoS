@@ -59,9 +59,6 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
-%let packageDate=2025-04-01;
-%let packageDateShort=%sysfunc(compress(&packageDate, %str(-)));
-
 data _sdtm_api;
   if 0=1;
 run;  
@@ -106,6 +103,13 @@ filename jsfile clear;
 libname jsfile clear;
 filename mpfile clear;
 
+proc sql noprint;
+  select max(latest_package_date) into :latest_package_date trimmed
+  from data.sdtm_api_relationships
+;
+quit;
+%let latest_package_date=%sysfunc(compress(&latest_package_date, %str(-)));
+%put &=latest_package_date;
 
 proc sort data=_sdtm_api(keep=subject object linkingPhrase predicateTerm) out=work.sdtm_subject_rel_object nodupkey;
   by _ALL_;
@@ -203,7 +207,7 @@ run;
 
 options ls=256;
 ods listing close;
-ods excel file="&root/utilities/reports/sdtm_specializations_relationships_&packageDateShort..xlsx";
+ods excel file="&root/utilities/reports/sdtm_specializations_relationships_&latest_package_date..xlsx";
 
 ods excel options(sheet_name="Linking Phrases" flow="tables" autofilter = 'all');
   proc report data=data.sdtm_linkingphrases;
