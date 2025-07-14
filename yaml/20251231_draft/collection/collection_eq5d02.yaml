@@ -72,7 +72,7 @@ items:
     mandatoryVariable: true 
     dataType: text
     length: 5
-    displayHidden: true 
+    displayHidden: false
     prepopulatedValue:
       value: "TODAY"
     sdtmTarget:
