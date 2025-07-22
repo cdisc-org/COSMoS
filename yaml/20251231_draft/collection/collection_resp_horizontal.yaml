@@ -55,7 +55,7 @@ items:
       value: "breaths/min"
       conceptId: C49674
     sdtmTarget:
-      sdtmAnnotation: "VSORRESU when VSTESTCD = RESP"
+      sdtmAnnotation: "VSORRESU = breaths/min when VSTESTCD = RESP"
       sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"

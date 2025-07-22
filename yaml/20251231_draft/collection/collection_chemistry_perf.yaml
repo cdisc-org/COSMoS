@@ -19,7 +19,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: LBPERF

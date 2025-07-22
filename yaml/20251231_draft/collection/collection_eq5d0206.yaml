@@ -39,7 +39,7 @@ items:
       value: "VISUAL ANALOG SCALE (1-100)"
       conceptId: C187968
     sdtmTarget:
-      sdtmAnnotation: "QSMETHOD"
+      sdtmAnnotation: "QSMETHOD = VISUAL ANALOG SCALE (1-100) when QSTESTCD = EQ5D0206"
       sdtmVariables:
         -  "QSMETHOD"
   - name: EQ5D0206_QSANTXLO

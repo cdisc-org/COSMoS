@@ -139,7 +139,7 @@ items:
       value: "beats/min"
       conceptId: C49673
     sdtmTarget:
-      sdtmAnnotation: "VSORRESU when VSTESTCD = PULSE"
+      sdtmAnnotation: "VSORRESU = beats/min when VSTESTCD = PULSE"
       sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"

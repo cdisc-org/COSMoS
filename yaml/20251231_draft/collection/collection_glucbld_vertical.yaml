@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: GLUC_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "BLOOD"
       conceptId: C12434
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = BLOOD"
       sdtmVariables:
         -  "LBSPEC"
   - name: GLUC_LBFAST
@@ -163,7 +163,7 @@ items:
       value: "DIPSTICK MEASUREMENT METHOD"
       conceptId: C178142
     sdtmTarget:
-      sdtmAnnotation: "LBMETHOD"
+      sdtmAnnotation: "LBMETHOD = DIPSTICK MEASUREMENT METHOD"
       sdtmVariables:
         -  "LBMETHOD"
   - name: GLUC_LBORNRLO

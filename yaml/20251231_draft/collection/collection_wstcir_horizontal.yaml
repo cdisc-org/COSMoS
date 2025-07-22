@@ -40,7 +40,7 @@ items:
       value: "WAIST"
       conceptId: C64192
     sdtmTarget:
-      sdtmAnnotation: "VSLOC when VSTESTCD = WSTCIR"
+      sdtmAnnotation: "VSLOC = WAIST when VSTESTCD = WSTCIR"
       sdtmVariables:
         -  "VSLOC"
   - name: WSTCIR

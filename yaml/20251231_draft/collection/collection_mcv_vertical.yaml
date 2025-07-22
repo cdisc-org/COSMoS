@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "HEMATOLOGY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = HEMATOLOGY"
       sdtmVariables:
         -  "LBCAT"
   - name: MCV_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "ERYTHROCYTES"
       conceptId: C12521
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = ERYTHROCYTES"
       sdtmVariables:
         -  "LBSPEC"
   - name: MCV_LBFAST
@@ -138,7 +138,7 @@ items:
       value: "fL"
       conceptId: C64780
     sdtmTarget:
-      sdtmAnnotation: "LBORRESU when LBTESTCD = MCV"
+      sdtmAnnotation: "LBORRESU = fL when LBTESTCD = MCV"
       sdtmVariables:
         -  "LBORRESU"
         -  "LBTESTCD"

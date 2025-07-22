@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "HEMATOLOGY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = HEMATOLOGY"
       sdtmVariables:
         -  "LBCAT"
   - name: NEUT_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "BLOOD"
       conceptId: C12434
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = BLOOD"
       sdtmVariables:
         -  "LBSPEC"
   - name: NEUT_LBFAST
@@ -138,7 +138,7 @@ items:
       value: "10^9/L"
       conceptId: C67255
     sdtmTarget:
-      sdtmAnnotation: "LBORRESU when LBTESTCD = NEUT"
+      sdtmAnnotation: "LBORRESU = 10^9/L when LBTESTCD = NEUT"
       sdtmVariables:
         -  "LBORRESU"
         -  "LBTESTCD"

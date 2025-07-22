@@ -23,7 +23,7 @@ items:
     prepopulatedValue:
       value: "ALZHEIMER'S DISEASE"
     sdtmTarget:
-      sdtmAnnotation: "MHTERM"
+      sdtmAnnotation: "MHTERM = ALZHEIMER'S DISEASE"
       sdtmVariables:
         -  "MHTERM"
   - name: MHPRESP
@@ -43,7 +43,7 @@ items:
       value: "Y"
       conceptId: C49488
     sdtmTarget:
-      sdtmAnnotation: "MHPRESP"
+      sdtmAnnotation: "MHPRESP = Y"
       sdtmVariables:
         -  "MHPRESP"
   - name: MHOCCUR
@@ -63,7 +63,7 @@ items:
       value: "Y"
       conceptId: C49488
     sdtmTarget:
-      sdtmAnnotation: "MHOCCUR"
+      sdtmAnnotation: "MHOCCUR = Y"
       sdtmVariables:
         -  "MHOCCUR"
   - name: MHEVDTYP

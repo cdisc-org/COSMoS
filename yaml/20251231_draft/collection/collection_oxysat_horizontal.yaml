@@ -40,7 +40,7 @@ items:
       value: "PULSE OXIMETRY"
       conceptId: C38085
     sdtmTarget:
-      sdtmAnnotation: "VSMETHOD when VSTESTCD = OXYSAT"
+      sdtmAnnotation: "VSMETHOD = PULSE OXIMETRY when VSTESTCD = OXYSAT"
       sdtmVariables:
         -  "VSMETHOD"
   - name: OXYSAT_VSLOC
@@ -118,12 +118,11 @@ items:
       submissionValue: VSRESU
       conceptId: C66770
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
-    valueList:
-      - displayValue: "%"
-        value: "%"
-    selectionType: Single
+    prepopulatedValue:
+      value: "%"
+      conceptId: C25613
     sdtmTarget:
-      sdtmAnnotation: "VSORRESU when VSTESTCD = OXYSAT"
+      sdtmAnnotation: "VSORRESU = % when VSTESTCD = OXYSAT"
       sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"
