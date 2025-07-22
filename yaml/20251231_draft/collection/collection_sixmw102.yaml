@@ -41,6 +41,6 @@ items:
       value: "m"
       conceptId: C41139
     sdtmTarget:
-      sdtmAnnotation: "FTORRESU when FTTESTCD = SIXMW102"
+      sdtmAnnotation: "FTORRESU = m when FTTESTCD = SIXMW102"
       sdtmVariables:
         -  "FTORRESU"

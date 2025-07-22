@@ -37,12 +37,11 @@ items:
       submissionValue: EGMETHOD
       conceptId: C71151
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
-    valueList:
-      - displayValue: "12 Lead Standard"
-        value: "12 LEAD STANDARD"
-    selectionType: Single
+    prepopulatedValue:
+      value: "12 LEAD STANDARD"
+      conceptId: C71102
     sdtmTarget:
-      sdtmAnnotation: "EGMETHOD"
+      sdtmAnnotation: "EGMETHOD = 12 LEAD STANDARD when EGTESTCD = PRAG"
       sdtmVariables:
         -  "EGMETHOD"
   - name: EGPOS

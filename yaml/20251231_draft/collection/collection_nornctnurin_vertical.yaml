@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: NORNCTN_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "URINE"
       conceptId: C13283
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = URINE"
       sdtmVariables:
         -  "LBSPEC"
   - name: NORNCTN_LBORRES
@@ -111,12 +111,11 @@ items:
       submissionValue: UNIT
       conceptId: C71620
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
-    valueList:
-      - displayValue: "ug/L"
-        value: "ug/L"
-    selectionType: Single
+    prepopulatedValue:
+      value: "ug/L"
+      conceptId: C67306
     sdtmTarget:
-      sdtmAnnotation: "LBORRESU when LBTESTCD = NORNCTN"
+      sdtmAnnotation: "LBORRESU = ug/L when LBTESTCD = NORNCTN"
       sdtmVariables:
         -  "LBORRESU"
         -  "LBTESTCD"

@@ -19,7 +19,7 @@ items:
     prepopulatedValue:
       value: "URINALYSIS"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = URINALYSIS"
       sdtmVariables:
         -  "LBCAT"
   - name: LBPERF

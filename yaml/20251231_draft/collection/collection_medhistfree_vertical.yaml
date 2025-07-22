@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "GENERAL MEDICAL HISTORY"
     sdtmTarget:
-      sdtmAnnotation: "MHCAT"
+      sdtmAnnotation: "MHCAT = GENERAL MEDICAL HISTORY"
       sdtmVariables:
         -  "MHCAT"
   - name: MHSCAT

@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: K_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "URINE"
       conceptId: C13283
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = URINE"
       sdtmVariables:
         -  "LBSPEC"
   - name: K_LBFAST

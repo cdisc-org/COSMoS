@@ -19,7 +19,7 @@ items:
     prepopulatedValue:
       value: "HEMATOLOGY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = HEMATOLOGY"
       sdtmVariables:
         -  "LBCAT"
   - name: LBPERF

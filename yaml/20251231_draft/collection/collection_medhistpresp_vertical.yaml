@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "DISEASE-SPECIFIC MEDICAL HISTORY"
     sdtmTarget:
-      sdtmAnnotation: "MHCAT"
+      sdtmAnnotation: "MHCAT = DISEASE-SPECIFIC MEDICAL HISTORY"
       sdtmVariables:
         -  "MHCAT"
   - name: MHSCAT
@@ -68,7 +68,7 @@ items:
       value: "Y"
       conceptId: C49488
     sdtmTarget:
-      sdtmAnnotation: "MHPRESP"
+      sdtmAnnotation: "MHPRESP = Y"
       sdtmVariables:
         -  "MHPRESP"
   - name: MHOCCUR

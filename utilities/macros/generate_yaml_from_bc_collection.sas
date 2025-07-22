@@ -148,6 +148,11 @@
           countwords=countw(value_display_list, ";");
           countwords2=countw(value_list, ";");
 
+          %add2issues_collection(countwords eq 1, 
+                %str(CODELIST_VALUE_LISTS_1_TERM), 
+                "", "", %str(cats("value_display_list=", value_display_list, " (", countwords, ")", ", codelist=", codelist, ", codelist_submission_value=", 
+                codelist_submission_value, ", value_list=", value_list, " (", countwords2, ")")));
+
           %add2issues_collection(countwords ne countwords2, 
                 %str(CODELIST_VALUE_LISTS_TERM_COUNTS), 
                 "", "", %str(cats("value_display_list=", value_display_list, " (", countwords, ")", ", codelist=", codelist, ", codelist_submission_value=", 

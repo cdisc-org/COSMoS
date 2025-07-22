@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "URINALYSIS"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = URINALYSIS"
       sdtmVariables:
         -  "LBCAT"
   - name: NITRITE_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "URINE"
       conceptId: C13283
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = URINE"
       sdtmVariables:
         -  "LBSPEC"
   - name: NITRITE_LBFAST

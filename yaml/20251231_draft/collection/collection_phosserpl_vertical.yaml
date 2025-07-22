@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: PHOS_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "SERUM OR PLASMA"
       conceptId: C105706
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = SERUM OR PLASMA"
       sdtmVariables:
         -  "LBSPEC"
   - name: PHOS_LBFAST

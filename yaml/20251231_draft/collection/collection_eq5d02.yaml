@@ -25,7 +25,7 @@ items:
       value: "EQ-5D-5L"
       conceptId: C102117
     sdtmTarget:
-      sdtmAnnotation: "QSCAT"
+      sdtmAnnotation: "QSCAT = EQ-5D-5L"
       sdtmVariables:
         -  "QSCAT"
   - name: QSPERF
@@ -76,6 +76,6 @@ items:
     prepopulatedValue:
       value: "TODAY"
     sdtmTarget:
-      sdtmAnnotation: "QSEVINTX"
+      sdtmAnnotation: "QSEVINTX = TODAY"
       sdtmVariables:
         -  "QSEVINTX"

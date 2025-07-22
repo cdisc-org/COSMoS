@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "HEMATOLOGY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = HEMATOLOGY"
       sdtmVariables:
         -  "LBCAT"
   - name: BLYCE_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "BLOOD"
       conceptId: C12434
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = BLOOD"
       sdtmVariables:
         -  "LBSPEC"
   - name: BLYCE_LBFAST

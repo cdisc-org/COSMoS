@@ -24,9 +24,9 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20250701_r12/bc",
+            "${workspaceFolder}/yaml/20250923_r13/bc",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r12.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r13.xlsx",
             "-d",
             "2025-07-01"
           ],
@@ -42,9 +42,9 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20250701_r12/sdtm",
+            "${workspaceFolder}/yaml/20250923_r13/sdtm",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r12.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r13.xlsx",
             "-d",
             "2025-07-01"
           ],

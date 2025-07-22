@@ -22,7 +22,7 @@ items:
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
-      sdtmAnnotation: "LBCAT"
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
       sdtmVariables:
         -  "LBCAT"
   - name: GLUC_LBSCAT
@@ -79,7 +79,7 @@ items:
       value: "URINE"
       conceptId: C13283
     sdtmTarget:
-      sdtmAnnotation: "LBSPEC"
+      sdtmAnnotation: "LBSPEC = URINE"
       sdtmVariables:
         -  "LBSPEC"
   - name: GLUC_LBMETHOD
@@ -95,7 +95,7 @@ items:
       value: "TEST STRIP"
       conceptId: C50322
     sdtmTarget:
-      sdtmAnnotation: "LBMETHOD"
+      sdtmAnnotation: "LBMETHOD = TEST STRIP when LBTESTCD = GLUC"
       sdtmVariables:
         -  "LBMETHOD"
   - name: GLUC_LBFAST

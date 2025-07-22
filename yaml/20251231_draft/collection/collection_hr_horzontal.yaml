@@ -134,7 +134,7 @@ items:
       value: "beats/min"
       conceptId: C49673
     sdtmTarget:
-      sdtmAnnotation: "VSORRESU when VSTESTCD = HR"
+      sdtmAnnotation: "VSORRESU = beats/min when VSTESTCD = HR"
       sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"

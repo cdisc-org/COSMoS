@@ -60,7 +60,7 @@ items:
       value: "SIX MINUTE WALK"
       conceptId: C115789
     sdtmTarget:
-      sdtmAnnotation: "FTCAT"
+      sdtmAnnotation: "FTCAT = SIX MINUTE WALK"
       sdtmVariables:
         -  "FTCAT"
   - name: FTASTDEV

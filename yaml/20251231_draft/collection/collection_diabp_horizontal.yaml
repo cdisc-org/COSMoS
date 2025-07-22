@@ -111,7 +111,7 @@ items:
       value: "mmHg"
       conceptId: C49670
     sdtmTarget:
-      sdtmAnnotation: "VSORRESU when VSTESTCD = DIABP"
+      sdtmAnnotation: "VSORRESU = mmHg when VSTESTCD = DIABP"
       sdtmVariables:
         -  "VSORRESU"
         -  "VSTESTCD"

@@ -202,6 +202,7 @@
 */
 
 
+/*
 %let release=12;
 %let package=20250701;
 %let folder=20250701_r12;
@@ -273,7 +274,17 @@
 
 %let excel_file=&root/curation/package12/R12_BC_SDTM_QRS_KPS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=kps, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_KPS));
+*/
 
+%let release=13;
+%let package=20250923;
+%let folder=20250923_r13;
+%let TargetFolder=&root/yaml/&folder/bc;
+%let OverrideDate=%str(2025-09-23);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_NEW));
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EDITS));
 
 /************************************************************************************************************************/
 
