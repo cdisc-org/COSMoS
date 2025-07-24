@@ -361,8 +361,11 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_NEW)$, dsout=bc13_01); 
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc13_02); 
-%ReadExcel(file=&excel_file, range=%str(SDTM_NEW)$, dsout=sdtm13_01, drop=%str(drop=length significant_digits format change_history)); 
+%ReadExcel(file=&excel_file, range=%str(SDTM_NEW)$, dsout=sdtm13_01, drop=%str(drop=length significant_digits format)); 
 %ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_02, drop=%str(drop=length significant_digits format change_history)); 
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog)$, dsout=bc13_03); 
 
 /************************************************************************************************************************/
 

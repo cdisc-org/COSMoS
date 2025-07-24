@@ -1,0 +1,79 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: ADCRI
+shortName: "CDISC ADAS-Cog - Remembering Test Instructions"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C100275
+sdtmDatasetSpecializationId: ADCRI
+items:
+  - name: ADCRI_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "Degree of Impairment"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Degree of Impairment"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCRI_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: REMEMBERING TEST INSTRUCTIONS
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    valueList:
+      - displayValue: "Subject never needs extra reminders of instructions"
+        value: "Subject never needs extra reminders of instructions"
+      - displayValue: "Very mild - forgets once"
+        value: "Very mild - forgets once"
+      - displayValue: "Mild - must be reminded 2 times"
+        value: "Mild - must be reminded 2 times"
+      - displayValue: "Moderate - must be reminded 3 or 4 times"
+        value: "Moderate - must be reminded 3 or 4 times"
+      - displayValue: "Moderately severe - must be reminded 5 or 6 times"
+        value: "Moderately severe - must be reminded 5 or 6 times"
+      - displayValue: "Severe - must be reminded 7 or more times"
+        value: "Severe - must be reminded 7 or more times"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCRI"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCRI_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

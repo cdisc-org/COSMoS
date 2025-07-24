@@ -1,0 +1,141 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: ADCRG
+shortName: "CDISC ADAS-Cog - Word Recognition Summary Score"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C100247
+sdtmDatasetSpecializationId: ADCRG
+items:
+  - name: ADCRG_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "Word Recognition"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Word Recognition"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCRG_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: WORD RECOGNITION SUMMARY
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    valueList:
+      - displayValue: "0"
+        value: "0"
+      - displayValue: "0.33"
+        value: "0.33"
+      - displayValue: "0.67"
+        value: "0.67"
+      - displayValue: "1"
+        value: "1"
+      - displayValue: "1.33"
+        value: "1.33"
+      - displayValue: "1.67"
+        value: "1.67"
+      - displayValue: "2"
+        value: "2"
+      - displayValue: "2.33"
+        value: "2.33"
+      - displayValue: "2.67"
+        value: "2.67"
+      - displayValue: "3"
+        value: "3"
+      - displayValue: "3.33"
+        value: "3.33"
+      - displayValue: "3.67"
+        value: "3.67"
+      - displayValue: "4"
+        value: "4"
+      - displayValue: "4.33"
+        value: "4.33"
+      - displayValue: "4.67"
+        value: "4.67"
+      - displayValue: "5"
+        value: "5"
+      - displayValue: "5.33"
+        value: "5.33"
+      - displayValue: "5.67"
+        value: "5.67"
+      - displayValue: "6"
+        value: "6"
+      - displayValue: "6.33"
+        value: "6.33"
+      - displayValue: "6.67"
+        value: "6.67"
+      - displayValue: "7"
+        value: "7"
+      - displayValue: "7.33"
+        value: "7.33"
+      - displayValue: "7.67"
+        value: "7.67"
+      - displayValue: "8"
+        value: "8"
+      - displayValue: "8.33"
+        value: "8.33"
+      - displayValue: "8.67"
+        value: "8.67"
+      - displayValue: "9"
+        value: "9"
+      - displayValue: "9.33"
+        value: "9.33"
+      - displayValue: "9.67"
+        value: "9.67"
+      - displayValue: "10"
+        value: "10"
+      - displayValue: "10.33"
+        value: "10.33"
+      - displayValue: "10.67"
+        value: "10.67"
+      - displayValue: "11"
+        value: "11"
+      - displayValue: "11.33"
+        value: "11.33"
+      - displayValue: "11.67"
+        value: "11.67"
+      - displayValue: "12"
+        value: "12"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCRG"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCRG_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

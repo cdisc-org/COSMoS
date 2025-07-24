@@ -1,0 +1,79 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: ADCDIF
+shortName: "CDISC ADAS-Cog - Word Difficulty in Spontaneous Speech"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C100277
+sdtmDatasetSpecializationId: ADCDIF
+items:
+  - name: ADCDIF_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "Degree of Impairment"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Degree of Impairment"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCDIF_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: WORD FINDING DIFFICULTY IN SPONTANEOUS SPEECH
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    valueList:
+      - displayValue: "No evidence of word finding difficulty in spontaneous speech"
+        value: "No evidence of word finding difficulty in spontaneous speech"
+      - displayValue: "Very mild - 1 or 2 instances, not clinically significant"
+        value: "Very mild - 1 or 2 instances, not clinically significant"
+      - displayValue: "Mild - noticeable circumlocution or synonym substitution"
+        value: "Mild - noticeable circumlocution or synonym substitution"
+      - displayValue: "Moderate - loss of words without compensation on occasion"
+        value: "Moderate - loss of words without compensation on occasion"
+      - displayValue: "Moderately severe - frequent loss of words without compensation"
+        value: "Moderately severe - frequent loss of words without compensation"
+      - displayValue: "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances"
+        value: "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCDIF"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCDIF_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

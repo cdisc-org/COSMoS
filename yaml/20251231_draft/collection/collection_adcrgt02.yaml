@@ -1,0 +1,78 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: ADCRGT02
+shortName: "CDISC ADAS-Cog - Word Recognition Trial 2 Subscore"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C100249
+sdtmDatasetSpecializationId: ADCRGT02
+items:
+  - name: ADCRGT02_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "Word Recognition"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Word Recognition"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCRGT02_FTTPT
+    variableName: FTTPT
+    prompt: Timepoint
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "Trial 2"
+    sdtmTarget:
+      sdtmAnnotation: "FTTPT = Trial 2"
+      sdtmVariables:
+        -  "FTTPT"
+  - name: ADCRGT02_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: WORD RECOGNITION / TRIAL 2
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: integer
+    length: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCRGT02"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCRGT02_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

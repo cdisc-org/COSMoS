@@ -1,0 +1,56 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: ADCSL
+shortName: "CDISC ADAS-Cog - Spoken Language Ability"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C100276
+sdtmDatasetSpecializationId: ADCSL
+items:
+  - name: ADCSL_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    prepopulatedValue:
+      value: "Degree of Impairment"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Degree of Impairment"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCSL_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: SPOKEN LANGUAGE ABILITY
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    valueList:
+      - displayValue: "No instances where it is difficult to understand the subject"
+        value: "No instances where it is difficult to understand the subject"
+      - displayValue: "Very mild - one instance of lack of understandability"
+        value: "Very mild - one instance of lack of understandability"
+      - displayValue: "Mild - patient has difficulty less than 25% of the time"
+        value: "Mild - patient has difficulty less than 25% of the time"
+      - displayValue: "Moderate - patient has difficulty 25-50% of the time"
+        value: "Moderate - patient has difficulty 25-50% of the time"
+      - displayValue: "Moderately severe - patient has difficulty 50% of the time"
+        value: "Moderately severe - patient has difficulty 50% of the time"
+      - displayValue: "Severe - one or two word utterance - fluent, but empty speech, mute"
+        value: "Severe - one or two word utterance - fluent, but empty speech, mute"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCSL"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"

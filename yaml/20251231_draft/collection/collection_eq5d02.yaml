@@ -8,7 +8,7 @@ standardEndVersion:
 domain: QS
 biomedicalConceptId: C102117
 items:
-  - name: QSCAT
+  - name: EQ5D02_QSCAT
     variableName: QSCAT
     dataElementConceptId: C25372
     prompt: Category of Questionnaire
@@ -28,7 +28,7 @@ items:
       sdtmAnnotation: "QSCAT = EQ-5D-5L"
       sdtmVariables:
         -  "QSCAT"
-  - name: QSPERF
+  - name: EQ5D02_QSPERF
     variableName: QSPERF
     dataElementConceptId: C82525
     questionText: "Was the EQ-5D-5L questionnaire performed?"
@@ -51,7 +51,7 @@ items:
       sdtmAnnotation: "[NOT SUBMITTED]; QSSTAT = NOT DONE when QSTESTCD = QSALL"
       sdtmVariables:
         -  "QSSTAT"
-  - name: QSDAT
+  - name: EQ5D02_QSDAT
     variableName: QSDAT
     dataElementConceptId: C82515
     prompt: Date of Assessment
@@ -64,7 +64,7 @@ items:
       sdtmAnnotation: "QSDTC"
       sdtmVariables:
         -  "QSDTC"
-  - name: QSEVINTX
+  - name: EQ5D02_QSEVINTX
     variableName: QSEVINTX
     dataElementConceptId: C117044
     prompt: Collected Evaluation Interval

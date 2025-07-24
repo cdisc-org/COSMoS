@@ -61,6 +61,9 @@ options mprint;
 %let ExcelFile=&root/curation/draft/collection/collection_specialization_QRS_EQ5D-5L.xlsx;
 %generate_yaml_from_bc_collection(excel_file=&Excelfile, type=eq5d-l, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_QRS_EQ5D-5L), debug=0);
 
+%let ExcelFile=&root/curation/draft/collection/collection_specialization_ADAS_COG.xlsx;
+%generate_yaml_from_bc_collection(excel_file=&Excelfile, type=adas-cog, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Collection_ADAS-COG), debug=0);
+
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_collection_xlsx2yaml_issues_R&release._&todays..html";

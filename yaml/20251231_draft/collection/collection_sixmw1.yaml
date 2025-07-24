@@ -8,7 +8,7 @@ standardEndVersion:
 domain: FT
 biomedicalConceptId: C115789
 items:
-  - name: FTPERF
+  - name: SIXMW1_FTPERF
     variableName: FTPERF
     dataElementConceptId: C82525
     questionText: Was the Six Minute Walk Test performed?
@@ -31,7 +31,7 @@ items:
       sdtmAnnotation: "[NOT SUBMITTED]; FTSTAT = NOT DONE when FTTESTCD = FTALL"
       sdtmVariables:
         -  "FTSTAT"
-  - name: FTDAT
+  - name: SIXMW1_FTDAT
     variableName: FTDAT
     dataElementConceptId: C82515
     prompt: Date of Assessment
@@ -44,7 +44,7 @@ items:
       sdtmAnnotation: "FTDTC"
       sdtmVariables:
         -  "FTDTC"
-  - name: FTCAT
+  - name: SIXMW1_FTCAT
     variableName: FTCAT
     prompt: Category
     orderNumber: 3
@@ -63,7 +63,7 @@ items:
       sdtmAnnotation: "FTCAT = SIX MINUTE WALK"
       sdtmVariables:
         -  "FTCAT"
-  - name: FTASTDEV
+  - name: SIXMW1_FTASTDEV
     variableName: FTASTDEV
     dataElementConceptId: C93300
     prompt: Assisted Device
