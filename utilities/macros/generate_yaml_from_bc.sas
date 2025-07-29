@@ -249,6 +249,9 @@
     set all_issues_bc issues;
   run;  
 
+  proc delete data=work.bc_&type._&package work.issues;
+  run;  
+
 %mend generate_YAML_from_BC;
 
 /*******************************************************************************/

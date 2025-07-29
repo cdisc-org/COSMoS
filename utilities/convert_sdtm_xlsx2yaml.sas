@@ -336,4 +336,7 @@ run;
 
 ods listing;
 ods html5 close;
-ods excel close;  
+ods excel close;
+
+proc delete data=work.all_issues_sdtm work.subsets;
+run;

@@ -260,5 +260,8 @@
   data all_issues_collection;
     set all_issues_collection issues;
   run;  
+  
+  proc delete data=work.bc_collection_&type._&package work.issues;
+  run;  
 
 %mend generate_yaml_from_bc_collection;

@@ -17,7 +17,7 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Commands"
     sdtmTarget:
@@ -35,7 +35,7 @@ items:
     significantDigits: 2
     displayHidden: false
     valueList:
-      - displayValue: "all commands correct"
+      - displayValue: "All commands correct"
         value: "all commands correct"
       - displayValue: "1 command incorrect"
         value: "1 command incorrect"

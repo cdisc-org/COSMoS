@@ -17,32 +17,18 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Word Recognition"
     sdtmTarget:
       sdtmAnnotation: "FTSCAT = Word Recognition"
       sdtmVariables:
         -  "FTSCAT"
-  - name: ADCRGT01_FTTPT
-    variableName: FTTPT
-    prompt: Timepoint
-    orderNumber: 2
-    mandatoryVariable: false
-    dataType: text
-    length: 100
-    displayHidden: true 
-    prepopulatedValue:
-      value: "Trial 1"
-    sdtmTarget:
-      sdtmAnnotation: "FTTPT = Trial 1"
-      sdtmVariables:
-        -  "FTTPT"
   - name: ADCRGT01_FTORRES
     variableName: FTORRES
     dataElementConceptId: C91106
     prompt: WORD RECOGNITION / TRIAL 1
-    orderNumber: 3
+    orderNumber: 2
     mandatoryVariable: true 
     dataType: integer
     length: 2
@@ -57,7 +43,7 @@ items:
     variableName: FTREASND
     dataElementConceptId: C82556
     questionText: "If any item(s) are incomplete or not done, please specify reason:"
-    orderNumber: 4
+    orderNumber: 3
     mandatoryVariable: false
     dataType: text
     length: 200

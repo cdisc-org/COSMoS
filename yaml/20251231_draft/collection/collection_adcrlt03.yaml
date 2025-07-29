@@ -17,32 +17,18 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Word Recall"
     sdtmTarget:
       sdtmAnnotation: "FTSCAT = Word Recall"
       sdtmVariables:
         -  "FTSCAT"
-  - name: ADCRLT03_FTTPT
-    variableName: FTTPT
-    prompt: Timepoint
-    orderNumber: 2
-    mandatoryVariable: false
-    dataType: text
-    length: 100
-    displayHidden: true 
-    prepopulatedValue:
-      value: "Trial 3"
-    sdtmTarget:
-      sdtmAnnotation: "FTTPT = Trial 3"
-      sdtmVariables:
-        -  "FTTPT"
   - name: ADCRLT03_FTORRES
     variableName: FTORRES
     dataElementConceptId: C91106
     prompt: WORD RECALL / TRIAL 3
-    orderNumber: 3
+    orderNumber: 2
     mandatoryVariable: true 
     dataType: integer
     length: 3
@@ -57,7 +43,7 @@ items:
     variableName: FTREASND
     dataElementConceptId: C82556
     questionText: "If any item(s) are incomplete or not done, please specify reason:"
-    orderNumber: 4
+    orderNumber: 3
     mandatoryVariable: false
     dataType: text
     length: 200

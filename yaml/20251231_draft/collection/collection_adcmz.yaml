@@ -17,7 +17,7 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Executive Function Maze"
     sdtmTarget:

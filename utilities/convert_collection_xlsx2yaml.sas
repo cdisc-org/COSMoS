@@ -76,4 +76,7 @@ run;
 
 ods listing;
 ods html5 close;
-ods excel close;  
+ods excel close;
+
+proc delete data=all_issues_collection;
+run;

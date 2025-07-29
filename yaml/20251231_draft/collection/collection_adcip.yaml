@@ -17,7 +17,7 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Ideational Praxis"
     sdtmTarget:
@@ -35,17 +35,17 @@ items:
     significantDigits: 2
     displayHidden: false
     valueList:
-      - displayValue: "all components performed correctly"
+      - displayValue: "All components performed correctly"
         value: "all components performed correctly"
-      - displayValue: "failure to perform 1 component"
+      - displayValue: "Failure to perform 1 component"
         value: "failure to perform 1 component"
-      - displayValue: "failure to perform 2 components"
+      - displayValue: "Failure to perform 2 components"
         value: "failure to perform 2 components"
-      - displayValue: "failure to perform 3 components"
+      - displayValue: "Failure to perform 3 components"
         value: "failure to perform 3 components"
-      - displayValue: "failure to perform 4 components"
+      - displayValue: "Failure to perform 4 components"
         value: "failure to perform 4 components"
-      - displayValue: "failure to perform 5 components"
+      - displayValue: "Failure to perform 5 components"
         value: "failure to perform 5 components"
     selectionType: Single
     sdtmTarget:

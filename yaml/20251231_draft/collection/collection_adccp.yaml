@@ -17,7 +17,7 @@ items:
     mandatoryVariable: false
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     prepopulatedValue:
       value: "Constructional Praxis"
     sdtmTarget:
@@ -35,7 +35,7 @@ items:
     significantDigits: 2
     displayHidden: false
     valueList:
-      - displayValue: "all 4 drawings correct"
+      - displayValue: "All 4 drawings correct"
         value: "all 4 drawings correct"
       - displayValue: "1 form drawn incorrectly"
         value: "1 form drawn incorrectly"

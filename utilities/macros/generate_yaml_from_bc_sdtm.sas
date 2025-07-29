@@ -314,5 +314,8 @@
   data all_issues_sdtm;
     set all_issues_sdtm issues;
   run;  
+  
+  proc delete data=work.bc_sdtm_&type._&package work.&type._&package._mrgd work.issues;
+  run;  
 
 %mend generate_yaml_from_bc_sdtm;
