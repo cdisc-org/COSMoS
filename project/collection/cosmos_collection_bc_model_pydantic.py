@@ -12,8 +12,6 @@ from enum import Enum
 from typing import (
     Any,
     ClassVar,
-    Dict,
-    List,
     Literal,
     Optional,
     Union
@@ -47,7 +45,7 @@ class ConfiguredBaseModel(BaseModel):
 
 
 class LinkMLMeta(RootModel):
-    root: Dict[str, Any] = {}
+    root: dict[str, Any] = {}
     model_config = ConfigDict(frozen=True)
 
     def __getattr__(self, key:str):
@@ -139,18 +137,45 @@ class DataCollectionGroup(ConfiguredBaseModel):
     sdtmDatasetSpecializationId: Optional[str] = Field(default=None, description="""Identifier for SDTM Dataset Specialization group""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmDatasetSpecializationId',
          'aliases': ['vlm_group_id'],
          'domain_of': ['DataCollectionGroup']} })
-    items: List[DataCollectionItem] = Field(default=..., description="""Items included in the Data Collection specialization""", json_schema_extra = { "linkml_meta": {'alias': 'items', 'domain_of': ['DataCollectionGroup']} })
+    items: list[DataCollectionItem] = Field(default=..., description="""Items included in the Data Collection specialization""", json_schema_extra = { "linkml_meta": {'alias': 'items', 'domain_of': ['DataCollectionGroup']} })
+
+    @field_validator('collectionSpecializationId')
+    def pattern_collectionSpecializationId(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid collectionSpecializationId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid collectionSpecializationId format: {v}"
+            raise ValueError(err_msg)
+        return v
 
     @field_validator('biomedicalConceptId')
     def pattern_biomedicalConceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid biomedicalConceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid biomedicalConceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid biomedicalConceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid biomedicalConceptId format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+    @field_validator('sdtmDatasetSpecializationId')
+    def pattern_sdtmDatasetSpecializationId(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid sdtmDatasetSpecializationId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid sdtmDatasetSpecializationId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -187,23 +212,50 @@ class DataCollectionItem(ConfiguredBaseModel):
          'aliases': ['display_hidden'],
          'domain_of': ['DataCollectionItem']} })
     codelist: Optional[CodeList] = Field(default=None, description="""Codelist""", json_schema_extra = { "linkml_meta": {'alias': 'codelist', 'domain_of': ['DataCollectionItem']} })
-    valueList: Optional[List[ListValue]] = Field(default=None, description="""A set of values for a data collection item""", json_schema_extra = { "linkml_meta": {'alias': 'valueList', 'domain_of': ['DataCollectionItem']} })
+    valueList: Optional[list[ListValue]] = Field(default=None, description="""A set of values for a data collection item""", json_schema_extra = { "linkml_meta": {'alias': 'valueList', 'domain_of': ['DataCollectionItem']} })
     selectionType: Optional[SelectionTypeEnum] = Field(default=None, description="""Type of selection used for set-up of the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'selectionType',
          'aliases': ['selection_type'],
          'domain_of': ['DataCollectionItem']} })
     prepopulatedValue: Optional[PrepopulatedValue] = Field(default=None, description="""Pre-populated value for the data collection instrument""", json_schema_extra = { "linkml_meta": {'alias': 'prepopulatedValue', 'domain_of': ['DataCollectionItem']} })
     sdtmTarget: Optional[SDTMTarget] = Field(default=None, description="""SDTM target variables for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTarget', 'domain_of': ['DataCollectionItem']} })
 
+    @field_validator('name')
+    def pattern_name(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid name format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid name format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+    @field_validator('variableName')
+    def pattern_variableName(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid variableName format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid variableName format: {v}"
+            raise ValueError(err_msg)
+        return v
+
     @field_validator('dataElementConceptId')
     def pattern_dataElementConceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid dataElementConceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid dataElementConceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid dataElementConceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid dataElementConceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -250,14 +302,15 @@ class PrepopulatedValue(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -283,16 +336,30 @@ class CodeList(ConfiguredBaseModel):
          'domain_of': ['PrepopulatedValue', 'CodeList']} })
     href: Optional[str] = Field(default=None, description="""Link to NCIt for the codelist""", json_schema_extra = { "linkml_meta": {'alias': 'href', 'aliases': ['codelist_uri'], 'domain_of': ['CodeList']} })
 
+    @field_validator('submissionValue')
+    def pattern_submissionValue(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid submissionValue format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid submissionValue format: {v}"
+            raise ValueError(err_msg)
+        return v
+
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -303,7 +370,7 @@ class SDTMTarget(ConfiguredBaseModel):
          'aliases': ['sdtm_annotation'],
          'domain_of': ['SDTMTarget'],
          'recommended': True} })
-    sdtmVariables: Optional[List[str]] = Field(default=None, description="""SDTM target variable for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariables',
+    sdtmVariables: Optional[list[str]] = Field(default=None, description="""SDTM target variable for data collection item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariables',
          'aliases': ['sdtm_target_variable'],
          'domain_of': ['SDTMTarget']} })
     sdtmTargetMapping: Optional[str] = Field(default=None, description="""Rule for mapping from data collection item to SDTM target variable.""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTargetMapping',

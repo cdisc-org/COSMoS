@@ -451,6 +451,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -580,7 +581,7 @@
       ],
       "range": "string",
       "recommended": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -597,6 +598,7 @@
         "DataCollectionGroup"
       ],
       "range": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -632,6 +634,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -649,6 +652,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -665,7 +669,7 @@
         "DataCollectionItem"
       ],
       "range": "string",
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -872,7 +876,7 @@
         "CodeList"
       ],
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -900,6 +904,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1079,7 +1084,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "conceptId",
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1102,6 +1107,7 @@
       "usage_slot_name": "submissionValue",
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1123,7 +1129,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "conceptId",
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1252,9 +1258,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_collection_bc_model.yaml",
-  "source_file_date": "2025-06-18T13:08:52",
-  "source_file_size": 8695,
-  "generation_date": "2025-06-18T13:09:46",
+  "source_file_date": "2025-07-29T11:21:06",
+  "source_file_size": 8849,
+  "generation_date": "2025-07-29T11:22:42",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/collection/jsonld/cosmos_collection_bc_model.context.jsonld",

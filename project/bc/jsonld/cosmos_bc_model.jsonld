@@ -411,7 +411,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -426,7 +426,7 @@
         "DataElementConcept"
       ],
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -678,7 +678,7 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -697,7 +697,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ncitCode",
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -736,7 +736,7 @@
       "usage_slot_name": "conceptId",
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -755,7 +755,7 @@
       "is_usage_slot": true,
       "usage_slot_name": "ncitCode",
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -834,9 +834,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_bc_model.yaml",
-  "source_file_date": "2025-02-03T11:01:26",
-  "source_file_size": 4813,
-  "generation_date": "2025-02-12T13:34:45",
+  "source_file_date": "2025-07-29T11:21:06",
+  "source_file_size": 4792,
+  "generation_date": "2025-07-29T11:22:01",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/bc/jsonld/cosmos_bc_model.context.jsonld",

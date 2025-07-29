@@ -878,6 +878,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -961,7 +962,7 @@
       ],
       "range": "string",
       "recommended": true,
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -994,6 +995,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1007,7 +1009,7 @@
         "SDTMVariable"
       ],
       "range": "string",
-      "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1048,6 +1050,7 @@
         "SDTMVariable"
       ],
       "range": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1063,7 +1066,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^C[0-9]+$",
       "@type": "SlotDefinition"
     },
     {
@@ -1091,6 +1094,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1105,6 +1109,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^C[0-9]+$",
       "@type": "SlotDefinition"
     },
     {
@@ -1119,6 +1124,7 @@
       ],
       "range": "string",
       "required": true,
+      "pattern": "^[A-Z][A-Z0-9_]*$",
       "@type": "SlotDefinition"
     },
     {
@@ -1164,7 +1170,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1435,7 +1441,7 @@
         "AssignedTerm"
       ],
       "range": "string",
-      "pattern": "^(C[0123456789]+)$",
+      "pattern": "^(C[0-9]+)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1571,7 +1577,7 @@
           "name": "conceptId",
           "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
           "range": "string",
-          "pattern": "^(C[0123456789]+)$",
+          "pattern": "^(C[0-9]+)$",
           "@type": "SlotDefinition"
         },
         {
@@ -1588,9 +1594,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-06-16T11:57:08",
-  "source_file_size": 14986,
-  "generation_date": "2025-06-16T11:58:58",
+  "source_file_date": "2025-07-29T11:32:28",
+  "source_file_size": 15131,
+  "generation_date": "2025-07-29T11:33:07",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

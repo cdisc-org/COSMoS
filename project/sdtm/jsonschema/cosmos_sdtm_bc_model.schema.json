@@ -6,7 +6,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
-                    "pattern": "^(C[0123456789]+)$",
+                    "pattern": "^(C[0-9]+)$",
                     "type": [
                         "string",
                         "null"
@@ -29,7 +29,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for a codelist in NCIt",
-                    "pattern": "^(C[0123456789]+)$",
+                    "pattern": "^C[0-9]+$",
                     "type": "string"
                 },
                 "href": {
@@ -41,6 +41,7 @@
                 },
                 "submissionValue": {
                     "description": "CDISC submission value for the codelist",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 }
             },
@@ -57,7 +58,7 @@
             "properties": {
                 "termId": {
                     "description": "C-code term in subset codelist",
-                    "pattern": "^(C[0123456789]+)$",
+                    "pattern": "^(C[0-9]+)$",
                     "type": "string"
                 },
                 "termValue": {
@@ -292,7 +293,7 @@
             "properties": {
                 "biomedicalConceptId": {
                     "description": "Biomedical Concept identifier foreign key",
-                    "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -300,6 +301,7 @@
                 },
                 "datasetSpecializationId": {
                     "description": "Identifier for SDTM Value Level Metadata group",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 },
                 "domain": {
@@ -387,7 +389,7 @@
                 },
                 "dataElementConceptId": {
                     "description": "Biomedical Concept Data Element Concept identifier foreign key",
-                    "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -435,6 +437,7 @@
                 },
                 "name": {
                     "description": "Variable included in the SDTM dataset specialization",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 },
                 "originSource": {
@@ -469,6 +472,7 @@
                 },
                 "subsetCodelist": {
                     "description": "Subset codelist short name",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": [
                         "string",
                         "null"
@@ -523,6 +527,7 @@
                 },
                 "parentCodelist": {
                     "description": "Subset codelist parent codelist",
+                    "pattern": "^C[0-9]+$",
                     "type": "string"
                 },
                 "subsetLabel": {
@@ -531,6 +536,7 @@
                 },
                 "subsetShortName": {
                     "description": "Subset codelist short name",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 }
             },
@@ -552,7 +558,7 @@
     "properties": {
         "biomedicalConceptId": {
             "description": "Biomedical Concept identifier foreign key",
-            "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+            "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
             "type": [
                 "string",
                 "null"
@@ -560,6 +566,7 @@
         },
         "datasetSpecializationId": {
             "description": "Identifier for SDTM Value Level Metadata group",
+            "pattern": "^[A-Z][A-Z0-9_]*$",
             "type": "string"
         },
         "domain": {

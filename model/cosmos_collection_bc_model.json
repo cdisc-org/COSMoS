@@ -6,7 +6,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for codelist in NCIt",
-                    "pattern": "^(C[0123456789]+)$",
+                    "pattern": "^(C[0-9]+)$",
                     "type": [
                         "string",
                         "null"
@@ -21,6 +21,7 @@
                 },
                 "submissionValue": {
                     "description": "CDISC submission value for the codelist",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 }
             },
@@ -49,7 +50,7 @@
             "properties": {
                 "biomedicalConceptId": {
                     "description": "Biomedical Concept identifier foreign key",
-                    "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -57,6 +58,7 @@
                 },
                 "collectionSpecializationId": {
                     "description": "Identifier for data collection specialization group",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 },
                 "domain": {
@@ -95,6 +97,7 @@
                 },
                 "sdtmDatasetSpecializationId": {
                     "description": "Identifier for SDTM Dataset Specialization group",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": [
                         "string",
                         "null"
@@ -149,7 +152,7 @@
                 },
                 "dataElementConceptId": {
                     "description": "Biomedical Concept Data Element Concept identifier foreign key",
-                    "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -180,6 +183,7 @@
                 },
                 "name": {
                     "description": "Item name as it appears on the collection instrument",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": [
                         "string",
                         "null"
@@ -248,6 +252,7 @@
                 },
                 "variableName": {
                     "description": "Variable name of the collection item for which data are being collected.",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
                     "type": "string"
                 }
             },
@@ -306,7 +311,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for pre-populated term in NCIt",
-                    "pattern": "^(C[0123456789]+)$",
+                    "pattern": "^(C[0-9]+)$",
                     "type": [
                         "string",
                         "null"
@@ -373,7 +378,7 @@
     "properties": {
         "biomedicalConceptId": {
             "description": "Biomedical Concept identifier foreign key",
-            "pattern": "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$",
+            "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
             "type": [
                 "string",
                 "null"
@@ -381,6 +386,7 @@
         },
         "collectionSpecializationId": {
             "description": "Identifier for data collection specialization group",
+            "pattern": "^[A-Z][A-Z0-9_]*$",
             "type": "string"
         },
         "domain": {
@@ -419,6 +425,7 @@
         },
         "sdtmDatasetSpecializationId": {
             "description": "Identifier for SDTM Dataset Specialization group",
+            "pattern": "^[A-Z][A-Z0-9_]*$",
             "type": [
                 "string",
                 "null"

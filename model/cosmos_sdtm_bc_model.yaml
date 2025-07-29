@@ -80,7 +80,7 @@ classes:
       conceptId:
         description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
         range: string
-        pattern: "^(C[0123456789]+)$"
+        pattern: "^(C[0-9]+)$"
         required: false
       value:
         description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
@@ -101,6 +101,7 @@ slots:
     description: Identifier for SDTM Value Level Metadata group
     identifier: true
     range: string
+    pattern: "^[A-Z][A-Z0-9_]*$"
     required: true
   domain:
       description: Domain for the SDTM specialization group
@@ -124,7 +125,7 @@ slots:
   biomedicalConceptId:
     description: Biomedical Concept identifier foreign key
     range: string
-    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    pattern: "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$"
     recommended: true
   variables:
     description: Variable included in the SDTM dataset specialization
@@ -137,11 +138,12 @@ slots:
     description: Variable included in the SDTM dataset specialization
     identifier: true
     range: string
+    pattern: "^[A-Z][A-Z0-9_]*$"
     required: true
   dataElementConceptId:
     description: Biomedical Concept Data Element Concept identifier foreign key
     range: string
-    pattern: "^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$"
+    pattern: "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$"
   isNonStandard:
     description: Flag that indicates if the variable is a non-standard variable
     range: boolean
@@ -152,12 +154,13 @@ slots:
   subsetCodelist:
     description: Subset codelist short name
     range: string
+    pattern: "^[A-Z][A-Z0-9_]*$"
 
   conceptId:
     description: C-code for a codelist in NCIt
     identifier: true
     range: string
-    pattern: "^(C[0123456789]+)$"
+    pattern: "^C[0-9]+$"
     required: true
   href:
     description: Link to NCIt for the codelist
@@ -166,15 +169,18 @@ slots:
   submissionValue:
     description: CDISC submission value for the codelist
     range: string
+    pattern: "^[A-Z][A-Z0-9_]*$"
     required: true
 
   parentCodelist:
     description: Subset codelist parent codelist
     range: string
+    pattern: "^C[0-9]+$"
     required: true
   subsetShortName:
     description: Subset codelist short name
     range: string
+    pattern: "^[A-Z][A-Z0-9_]*$"
     required: true
   subsetLabel:
     description: Subset codelist label
@@ -189,7 +195,7 @@ slots:
   termId:
     description: C-code term in subset codelist
     range: string
-    pattern: "^(C[0123456789]+)$"
+    pattern: "^(C[0-9]+)$"
     required: true
   termValue:
     description: Submision value of term in subset codelist

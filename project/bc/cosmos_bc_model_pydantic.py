@@ -12,8 +12,6 @@ from enum import Enum
 from typing import (
     Any,
     ClassVar,
-    Dict,
-    List,
     Literal,
     Optional,
     Union
@@ -47,7 +45,7 @@ class ConfiguredBaseModel(BaseModel):
 
 
 class LinkMLMeta(RootModel):
-    root: Dict[str, Any] = {}
+    root: dict[str, Any] = {}
     model_config = ConfigDict(frozen=True)
 
     def __getattr__(self, key:str):
@@ -124,36 +122,38 @@ class BiomedicalConcept(ConfiguredBaseModel):
     ncitCode: Optional[str] = Field(default=None, description="""NCIt C-code for the Biomedical Concept""", json_schema_extra = { "linkml_meta": {'alias': 'ncitCode', 'domain_of': ['BiomedicalConcept', 'DataElementConcept']} })
     href: Optional[str] = Field(default=None, description="""URI link to NCIt for the Biomedical Concept; blank if  concept is not available in NCIt""", json_schema_extra = { "linkml_meta": {'alias': 'href', 'domain_of': ['BiomedicalConcept', 'DataElementConcept']} })
     parentConceptId: Optional[str] = Field(default=None, description="""C-code for the parent concept in the NCIt hiearchy; blank if concept is not available in NCIt""", json_schema_extra = { "linkml_meta": {'alias': 'parentConceptId', 'domain_of': ['BiomedicalConcept']} })
-    categories: List[str] = Field(default=..., description="""Biomedical Concept category for the faciliation of API search and extract""", json_schema_extra = { "linkml_meta": {'alias': 'categories', 'domain_of': ['BiomedicalConcept']} })
+    categories: list[str] = Field(default=..., description="""Biomedical Concept category for the faciliation of API search and extract""", json_schema_extra = { "linkml_meta": {'alias': 'categories', 'domain_of': ['BiomedicalConcept']} })
     shortName: str = Field(default=..., description="""NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt""", json_schema_extra = { "linkml_meta": {'alias': 'shortName', 'domain_of': ['BiomedicalConcept', 'DataElementConcept']} })
-    synonyms: Optional[List[str]] = Field(default=None, description="""Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction""", json_schema_extra = { "linkml_meta": {'alias': 'synonyms', 'domain_of': ['BiomedicalConcept']} })
-    resultScales: Optional[List[BiomedicalConceptResultScaleEnum]] = Field(default=None, description="""Scale of measurement for the Biomedical Concept result""", json_schema_extra = { "linkml_meta": {'alias': 'resultScales', 'domain_of': ['BiomedicalConcept']} })
+    synonyms: Optional[list[str]] = Field(default=None, description="""Biomedical Concept synonym equivalent to BC short name for the facilitation of API search and extraction""", json_schema_extra = { "linkml_meta": {'alias': 'synonyms', 'domain_of': ['BiomedicalConcept']} })
+    resultScales: Optional[list[BiomedicalConceptResultScaleEnum]] = Field(default=None, description="""Scale of measurement for the Biomedical Concept result""", json_schema_extra = { "linkml_meta": {'alias': 'resultScales', 'domain_of': ['BiomedicalConcept']} })
     definition: str = Field(default=..., description="""NCIt definition for the Biomedical Concept; provisional defintion if concept is not available in NCIt""", json_schema_extra = { "linkml_meta": {'alias': 'definition', 'domain_of': ['BiomedicalConcept']} })
-    coding: Optional[List[Coding]] = Field(default=None, description="""Coding for the Biomedical Concept""", json_schema_extra = { "linkml_meta": {'alias': 'coding', 'domain_of': ['BiomedicalConcept']} })
-    dataElementConcepts: Optional[List[DataElementConcept]] = Field(default=None, description="""Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'dataElementConcepts', 'domain_of': ['BiomedicalConcept']} })
+    coding: Optional[list[Coding]] = Field(default=None, description="""Coding for the Biomedical Concept""", json_schema_extra = { "linkml_meta": {'alias': 'coding', 'domain_of': ['BiomedicalConcept']} })
+    dataElementConcepts: Optional[list[DataElementConcept]] = Field(default=None, description="""Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'dataElementConcepts', 'domain_of': ['BiomedicalConcept']} })
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
     @field_validator('ncitCode')
     def pattern_ncitCode(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid ncitCode format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid ncitCode format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid ncitCode format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid ncitCode format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -186,30 +186,32 @@ class DataElementConcept(ConfiguredBaseModel):
     href: Optional[str] = Field(default=None, description="""Link to NCIt for the Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'href', 'domain_of': ['BiomedicalConcept', 'DataElementConcept']} })
     shortName: str = Field(default=..., description="""NCI Preferred Name for the concept; provisional name will be used if concept is not available in NCIt""", json_schema_extra = { "linkml_meta": {'alias': 'shortName', 'domain_of': ['BiomedicalConcept', 'DataElementConcept']} })
     dataType: DataElementConceptDataTypeEnum = Field(default=..., description="""Data Type for the Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'dataType', 'domain_of': ['DataElementConcept']} })
-    exampleSet: Optional[List[str]] = Field(default=None, description="""Example values for the Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'exampleSet', 'domain_of': ['DataElementConcept']} })
+    exampleSet: Optional[list[str]] = Field(default=None, description="""Example values for the Data Element Concept""", json_schema_extra = { "linkml_meta": {'alias': 'exampleSet', 'domain_of': ['DataElementConcept']} })
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
     @field_validator('ncitCode')
     def pattern_ncitCode(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid ncitCode format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid ncitCode format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid ncitCode format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid ncitCode format: {v}"
+            raise ValueError(err_msg)
         return v
 
 

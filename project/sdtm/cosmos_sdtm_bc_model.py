@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-06-16T11:59:07
+# Generation date: 2025-07-29T11:33:16
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -33,7 +33,6 @@ from linkml_runtime.linkml_model.meta import (
     PvFormulaOptions
 )
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from linkml_runtime.utils.formatutils import (
     camelcase,
@@ -63,9 +62,6 @@ from linkml_runtime.utils.metamodelcore import Bool, URI, XSDDate
 metamodel_version = "1.7.0"
 version = None
 
-# Overwrite dataclasses _init_fn to add **kwargs in __init__
-dataclasses._init_fn = dataclasses_init_fn_with_kwargs
-
 # Namespaces
 NCIT = CurieNamespace('NCIT', 'http://purl.obolibrary.org/obo/NCIT_')
 COSMOS_SDTM = CurieNamespace('cosmos_sdtm', 'https://www.cdisc.org/cosmos/sdtm_v1.0/')
@@ -90,7 +86,7 @@ class CodeListConceptId(extended_str):
 
 @dataclass(repr=False)
 class SDTMGroup(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SDTMGroup"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMGroup"
@@ -104,11 +100,11 @@ class SDTMGroup(YAMLRoot):
     shortName: str = None
     source: str = None
     sdtmigStartVersion: str = None
-    variables: Union[Dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], List[Union[dict, "SDTMVariable"]]] = empty_dict()
+    variables: Union[dict[Union[str, SDTMVariableName], Union[dict, "SDTMVariable"]], list[Union[dict, "SDTMVariable"]]] = empty_dict()
     sdtmigEndVersion: Optional[str] = None
     biomedicalConceptId: Optional[str] = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.datasetSpecializationId):
             self.MissingRequiredField("datasetSpecializationId")
         if not isinstance(self.datasetSpecializationId, SDTMGroupDatasetSpecializationId):
@@ -159,7 +155,7 @@ class SDTMGroup(YAMLRoot):
 
 @dataclass(repr=False)
 class SDTMVariable(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SDTMVariable"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SDTMVariable"
@@ -171,7 +167,7 @@ class SDTMVariable(YAMLRoot):
     isNonStandard: Optional[Union[bool, Bool]] = None
     codelist: Optional[Union[dict, "CodeList"]] = None
     subsetCodelist: Optional[str] = None
-    valueList: Optional[Union[str, List[str]]] = empty_list()
+    valueList: Optional[Union[str, list[str]]] = empty_list()
     assignedTerm: Optional[Union[dict, "AssignedTerm"]] = None
     role: Optional[Union[str, "RoleEnum"]] = None
     relationship: Optional[Union[dict, "RelationShip"]] = None
@@ -186,7 +182,7 @@ class SDTMVariable(YAMLRoot):
     comparator: Optional[Union[str, "ComparatorEnum"]] = None
     vlmTarget: Optional[Union[bool, Bool]] = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.name):
             self.MissingRequiredField("name")
         if not isinstance(self.name, SDTMVariableName):
@@ -252,7 +248,7 @@ class SDTMVariable(YAMLRoot):
 
 @dataclass(repr=False)
 class RelationShip(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["RelationShip"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:RelationShip"
@@ -264,7 +260,7 @@ class RelationShip(YAMLRoot):
     predicateTerm: Union[str, "PredicateTermEnum"] = None
     object: str = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.subject):
             self.MissingRequiredField("subject")
         if not isinstance(self.subject, str):
@@ -290,7 +286,7 @@ class RelationShip(YAMLRoot):
 
 @dataclass(repr=False)
 class CodeList(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["CodeList"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeList"
@@ -301,7 +297,7 @@ class CodeList(YAMLRoot):
     submissionValue: str = None
     href: Optional[Union[str, URI]] = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.conceptId):
             self.MissingRequiredField("conceptId")
         if not isinstance(self.conceptId, CodeListConceptId):
@@ -320,7 +316,7 @@ class CodeList(YAMLRoot):
 
 @dataclass(repr=False)
 class CodeListTerm(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["CodeListTerm"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:CodeListTerm"
@@ -330,7 +326,7 @@ class CodeListTerm(YAMLRoot):
     termId: str = None
     termValue: str = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.termId):
             self.MissingRequiredField("termId")
         if not isinstance(self.termId, str):
@@ -346,7 +342,7 @@ class CodeListTerm(YAMLRoot):
 
 @dataclass(repr=False)
 class SubsetCodeList(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["SubsetCodeList"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:SubsetCodeList"
@@ -356,9 +352,9 @@ class SubsetCodeList(YAMLRoot):
     parentCodelist: str = None
     subsetShortName: str = None
     subsetLabel: str = None
-    codelistTerm: Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]] = None
+    codelistTerm: Union[Union[dict, CodeListTerm], list[Union[dict, CodeListTerm]]] = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.parentCodelist):
             self.MissingRequiredField("parentCodelist")
         if not isinstance(self.parentCodelist, str):
@@ -385,7 +381,7 @@ class SubsetCodeList(YAMLRoot):
 
 @dataclass(repr=False)
 class AssignedTerm(YAMLRoot):
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = COSMOS_SDTM["AssignedTerm"]
     class_class_curie: ClassVar[str] = "cosmos_sdtm:AssignedTerm"
@@ -395,7 +391,7 @@ class AssignedTerm(YAMLRoot):
     value: str = None
     conceptId: Optional[str] = None
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.value):
             self.MissingRequiredField("value")
         if not isinstance(self.value, str):
@@ -739,7 +735,8 @@ slots.packageType = Slot(uri=COSMOS_SDTM.packageType, name="packageType", curie=
                    model_uri=COSMOS_SDTM.packageType, domain=None, range=Union[str, "PackageTypeEnum"])
 
 slots.datasetSpecializationId = Slot(uri=COSMOS_SDTM.datasetSpecializationId, name="datasetSpecializationId", curie=COSMOS_SDTM.curie('datasetSpecializationId'),
-                   model_uri=COSMOS_SDTM.datasetSpecializationId, domain=None, range=URIRef)
+                   model_uri=COSMOS_SDTM.datasetSpecializationId, domain=None, range=URIRef,
+                   pattern=re.compile(r'^[A-Z][A-Z0-9_]*$'))
 
 slots.domain = Slot(uri=COSMOS_SDTM.domain, name="domain", curie=COSMOS_SDTM.curie('domain'),
                    model_uri=COSMOS_SDTM.domain, domain=None, range=str)
@@ -758,17 +755,18 @@ slots.sdtmigEndVersion = Slot(uri=COSMOS_SDTM.sdtmigEndVersion, name="sdtmigEndV
 
 slots.biomedicalConceptId = Slot(uri=COSMOS_SDTM.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS_SDTM.curie('biomedicalConceptId'),
                    model_uri=COSMOS_SDTM.biomedicalConceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
 
 slots.variables = Slot(uri=COSMOS_SDTM.variables, name="variables", curie=COSMOS_SDTM.curie('variables'),
-                   model_uri=COSMOS_SDTM.variables, domain=None, range=Union[Dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], List[Union[dict, SDTMVariable]]])
+                   model_uri=COSMOS_SDTM.variables, domain=None, range=Union[dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], list[Union[dict, SDTMVariable]]])
 
 slots.name = Slot(uri=COSMOS_SDTM.name, name="name", curie=COSMOS_SDTM.curie('name'),
-                   model_uri=COSMOS_SDTM.name, domain=None, range=URIRef)
+                   model_uri=COSMOS_SDTM.name, domain=None, range=URIRef,
+                   pattern=re.compile(r'^[A-Z][A-Z0-9_]*$'))
 
 slots.dataElementConceptId = Slot(uri=COSMOS_SDTM.dataElementConceptId, name="dataElementConceptId", curie=COSMOS_SDTM.curie('dataElementConceptId'),
                    model_uri=COSMOS_SDTM.dataElementConceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
 
 slots.isNonStandard = Slot(uri=COSMOS_SDTM.isNonStandard, name="isNonStandard", curie=COSMOS_SDTM.curie('isNonStandard'),
                    model_uri=COSMOS_SDTM.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
@@ -777,39 +775,43 @@ slots.codelist = Slot(uri=COSMOS_SDTM.codelist, name="codelist", curie=COSMOS_SD
                    model_uri=COSMOS_SDTM.codelist, domain=None, range=Optional[Union[dict, CodeList]])
 
 slots.subsetCodelist = Slot(uri=COSMOS_SDTM.subsetCodelist, name="subsetCodelist", curie=COSMOS_SDTM.curie('subsetCodelist'),
-                   model_uri=COSMOS_SDTM.subsetCodelist, domain=None, range=Optional[str])
+                   model_uri=COSMOS_SDTM.subsetCodelist, domain=None, range=Optional[str],
+                   pattern=re.compile(r'^[A-Z][A-Z0-9_]*$'))
 
 slots.conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="conceptId", curie=COSMOS_SDTM.curie('conceptId'),
                    model_uri=COSMOS_SDTM.conceptId, domain=None, range=URIRef,
-                   pattern=re.compile(r'^(C[0123456789]+)$'))
+                   pattern=re.compile(r'^C[0-9]+$'))
 
 slots.href = Slot(uri=COSMOS_SDTM.href, name="href", curie=COSMOS_SDTM.curie('href'),
                    model_uri=COSMOS_SDTM.href, domain=None, range=Optional[Union[str, URI]])
 
 slots.submissionValue = Slot(uri=COSMOS_SDTM.submissionValue, name="submissionValue", curie=COSMOS_SDTM.curie('submissionValue'),
-                   model_uri=COSMOS_SDTM.submissionValue, domain=None, range=str)
+                   model_uri=COSMOS_SDTM.submissionValue, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Z][A-Z0-9_]*$'))
 
 slots.parentCodelist = Slot(uri=COSMOS_SDTM.parentCodelist, name="parentCodelist", curie=COSMOS_SDTM.curie('parentCodelist'),
-                   model_uri=COSMOS_SDTM.parentCodelist, domain=None, range=str)
+                   model_uri=COSMOS_SDTM.parentCodelist, domain=None, range=str,
+                   pattern=re.compile(r'^C[0-9]+$'))
 
 slots.subsetShortName = Slot(uri=COSMOS_SDTM.subsetShortName, name="subsetShortName", curie=COSMOS_SDTM.curie('subsetShortName'),
-                   model_uri=COSMOS_SDTM.subsetShortName, domain=None, range=str)
+                   model_uri=COSMOS_SDTM.subsetShortName, domain=None, range=str,
+                   pattern=re.compile(r'^[A-Z][A-Z0-9_]*$'))
 
 slots.subsetLabel = Slot(uri=COSMOS_SDTM.subsetLabel, name="subsetLabel", curie=COSMOS_SDTM.curie('subsetLabel'),
                    model_uri=COSMOS_SDTM.subsetLabel, domain=None, range=str)
 
 slots.codelistTerm = Slot(uri=COSMOS_SDTM.codelistTerm, name="codelistTerm", curie=COSMOS_SDTM.curie('codelistTerm'),
-                   model_uri=COSMOS_SDTM.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], List[Union[dict, CodeListTerm]]])
+                   model_uri=COSMOS_SDTM.codelistTerm, domain=None, range=Union[Union[dict, CodeListTerm], list[Union[dict, CodeListTerm]]])
 
 slots.termId = Slot(uri=COSMOS_SDTM.termId, name="termId", curie=COSMOS_SDTM.curie('termId'),
                    model_uri=COSMOS_SDTM.termId, domain=None, range=str,
-                   pattern=re.compile(r'^(C[0123456789]+)$'))
+                   pattern=re.compile(r'^(C[0-9]+)$'))
 
 slots.termValue = Slot(uri=COSMOS_SDTM.termValue, name="termValue", curie=COSMOS_SDTM.curie('termValue'),
                    model_uri=COSMOS_SDTM.termValue, domain=None, range=str)
 
 slots.valueList = Slot(uri=COSMOS_SDTM.valueList, name="valueList", curie=COSMOS_SDTM.curie('valueList'),
-                   model_uri=COSMOS_SDTM.valueList, domain=None, range=Optional[Union[str, List[str]]])
+                   model_uri=COSMOS_SDTM.valueList, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.assignedTerm = Slot(uri=COSMOS_SDTM.assignedTerm, name="assignedTerm", curie=COSMOS_SDTM.curie('assignedTerm'),
                    model_uri=COSMOS_SDTM.assignedTerm, domain=None, range=Optional[Union[dict, AssignedTerm]])
@@ -864,7 +866,7 @@ slots.vlmTarget = Slot(uri=COSMOS_SDTM.vlmTarget, name="vlmTarget", curie=COSMOS
 
 slots.assignedTerm__conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="assignedTerm__conceptId", curie=COSMOS_SDTM.curie('conceptId'),
                    model_uri=COSMOS_SDTM.assignedTerm__conceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0123456789]+)$'))
+                   pattern=re.compile(r'^(C[0-9]+)$'))
 
 slots.assignedTerm__value = Slot(uri=COSMOS_SDTM.value, name="assignedTerm__value", curie=COSMOS_SDTM.curie('value'),
                    model_uri=COSMOS_SDTM.assignedTerm__value, domain=None, range=str)

@@ -12,8 +12,6 @@ from enum import Enum
 from typing import (
     Any,
     ClassVar,
-    Dict,
-    List,
     Literal,
     Optional,
     Union
@@ -47,7 +45,7 @@ class ConfiguredBaseModel(BaseModel):
 
 
 class LinkMLMeta(RootModel):
-    root: Dict[str, Any] = {}
+    root: dict[str, Any] = {}
     model_config = ConfigDict(frozen=True)
 
     def __getattr__(self, key:str):
@@ -217,30 +215,48 @@ class OriginTypeEnum(str, Enum):
     """
     Terminology relevant to the origin type for datasets in the Define-XML document.
     """
-    # A value that is derived through designation, such as values from a look up table or a label on a CRF.
     Assigned = "Assigned"
-    # A value that is actually observed and recorded by a person or obtained by an instrument.
+    """
+    A value that is derived through designation, such as values from a look up table or a label on a CRF.
+    """
     Collected = "Collected"
-    # A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.
+    """
+    A value that is actually observed and recorded by a person or obtained by an instrument.
+    """
     Derived = "Derived"
-    # A value that is copied from a variable in another dataset.
+    """
+    A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.
+    """
     Predecessor = "Predecessor"
-    # A value that is included as part of the study protocol.
+    """
+    A value that is copied from a variable in another dataset.
+    """
     Protocol = "Protocol"
+    """
+    A value that is included as part of the study protocol.
+    """
 
 
 class OriginSourceEnum(str, Enum):
     """
     Terminology relevant to the origin source for datasets in the Define-XML document.
     """
-    # A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.
     Investigator = "Investigator"
-    # An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]
+    """
+    A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.
+    """
     Sponsor = "Sponsor"
-    # An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.
+    """
+    An individual, company, institution, or organization that takes responsibility for the initiation, management, and/or financing of a clinical study. [After ICH E6, WHO, 21 CFR 50.3 (e), and after IDMP]
+    """
     Subject = "Subject"
-    # A person or agency that promotes or exchanges goods or services for money. (NCI)
+    """
+    An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.
+    """
     Vendor = "Vendor"
+    """
+    A person or agency that promotes or exchanges goods or services for money. (NCI)
+    """
 
 
 class RoleEnum(str, Enum):
@@ -270,18 +286,32 @@ class SDTMGroup(ConfiguredBaseModel):
     biomedicalConceptId: Optional[str] = Field(default=None, description="""Biomedical Concept identifier foreign key""", json_schema_extra = { "linkml_meta": {'alias': 'biomedicalConceptId',
          'domain_of': ['SDTMGroup'],
          'recommended': True} })
-    variables: List[SDTMVariable] = Field(default=..., description="""Variable included in the SDTM dataset specialization""", json_schema_extra = { "linkml_meta": {'alias': 'variables', 'domain_of': ['SDTMGroup']} })
+    variables: list[SDTMVariable] = Field(default=..., description="""Variable included in the SDTM dataset specialization""", json_schema_extra = { "linkml_meta": {'alias': 'variables', 'domain_of': ['SDTMGroup']} })
+
+    @field_validator('datasetSpecializationId')
+    def pattern_datasetSpecializationId(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid datasetSpecializationId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid datasetSpecializationId format: {v}"
+            raise ValueError(err_msg)
+        return v
 
     @field_validator('biomedicalConceptId')
     def pattern_biomedicalConceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid biomedicalConceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid biomedicalConceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid biomedicalConceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid biomedicalConceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -293,7 +323,7 @@ class SDTMVariable(ConfiguredBaseModel):
     isNonStandard: Optional[bool] = Field(default=None, description="""Flag that indicates if the variable is a non-standard variable""", json_schema_extra = { "linkml_meta": {'alias': 'isNonStandard', 'domain_of': ['SDTMVariable']} })
     codelist: Optional[CodeList] = Field(default=None, description="""Codelist""", json_schema_extra = { "linkml_meta": {'alias': 'codelist', 'domain_of': ['SDTMVariable']} })
     subsetCodelist: Optional[str] = Field(default=None, description="""Subset codelist short name""", json_schema_extra = { "linkml_meta": {'alias': 'subsetCodelist', 'domain_of': ['SDTMVariable']} })
-    valueList: Optional[List[str]] = Field(default=None, description="""List of SDTM submission values used if subset codelist is not applicable""", json_schema_extra = { "linkml_meta": {'alias': 'valueList', 'domain_of': ['SDTMVariable']} })
+    valueList: Optional[list[str]] = Field(default=None, description="""List of SDTM submission values used if subset codelist is not applicable""", json_schema_extra = { "linkml_meta": {'alias': 'valueList', 'domain_of': ['SDTMVariable']} })
     assignedTerm: Optional[AssignedTerm] = Field(default=None, description="""Assigned term""", json_schema_extra = { "linkml_meta": {'alias': 'assignedTerm', 'domain_of': ['SDTMVariable']} })
     role: Optional[RoleEnum] = Field(default=None, description="""SDTM variable role""", json_schema_extra = { "linkml_meta": {'alias': 'role', 'domain_of': ['SDTMVariable']} })
     relationship: Optional[RelationShip] = Field(default=None, description="""Relationship between variables""", json_schema_extra = { "linkml_meta": {'alias': 'relationship', 'domain_of': ['SDTMVariable']} })
@@ -308,16 +338,43 @@ class SDTMVariable(ConfiguredBaseModel):
     comparator: Optional[ComparatorEnum] = Field(default=None, description="""Comparison operator for SDTM group variables included in VLM""", json_schema_extra = { "linkml_meta": {'alias': 'comparator', 'domain_of': ['SDTMVariable']} })
     vlmTarget: Optional[bool] = Field(default=None, description="""Target variable for VLM""", json_schema_extra = { "linkml_meta": {'alias': 'vlmTarget', 'domain_of': ['SDTMVariable']} })
 
+    @field_validator('name')
+    def pattern_name(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid name format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid name format: {v}"
+            raise ValueError(err_msg)
+        return v
+
     @field_validator('dataElementConceptId')
     def pattern_dataElementConceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+|NEW_[A-Z]*[0123456789]*)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid dataElementConceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid dataElementConceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid dataElementConceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid dataElementConceptId format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+    @field_validator('subsetCodelist')
+    def pattern_subsetCodelist(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid subsetCodelist format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid subsetCodelist format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -339,14 +396,28 @@ class CodeList(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^C[0-9]+$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+    @field_validator('submissionValue')
+    def pattern_submissionValue(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid submissionValue format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid submissionValue format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -358,14 +429,15 @@ class CodeListTerm(ConfiguredBaseModel):
 
     @field_validator('termId')
     def pattern_termId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid termId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid termId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid termId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid termId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
@@ -375,7 +447,33 @@ class SubsetCodeList(ConfiguredBaseModel):
     parentCodelist: str = Field(default=..., description="""Subset codelist parent codelist""", json_schema_extra = { "linkml_meta": {'alias': 'parentCodelist', 'domain_of': ['SubsetCodeList']} })
     subsetShortName: str = Field(default=..., description="""Subset codelist short name""", json_schema_extra = { "linkml_meta": {'alias': 'subsetShortName', 'domain_of': ['SubsetCodeList']} })
     subsetLabel: str = Field(default=..., description="""Subset codelist label""", json_schema_extra = { "linkml_meta": {'alias': 'subsetLabel', 'domain_of': ['SubsetCodeList']} })
-    codelistTerm: List[CodeListTerm] = Field(default=..., description="""Term in subset codelist""", json_schema_extra = { "linkml_meta": {'alias': 'codelistTerm', 'domain_of': ['SubsetCodeList']} })
+    codelistTerm: list[CodeListTerm] = Field(default=..., description="""Term in subset codelist""", json_schema_extra = { "linkml_meta": {'alias': 'codelistTerm', 'domain_of': ['SubsetCodeList']} })
+
+    @field_validator('parentCodelist')
+    def pattern_parentCodelist(cls, v):
+        pattern=re.compile(r"^C[0-9]+$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid parentCodelist format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid parentCodelist format: {v}"
+            raise ValueError(err_msg)
+        return v
+
+    @field_validator('subsetShortName')
+    def pattern_subsetShortName(cls, v):
+        pattern=re.compile(r"^[A-Z][A-Z0-9_]*$")
+        if isinstance(v, list):
+            for element in v:
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid subsetShortName format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid subsetShortName format: {v}"
+            raise ValueError(err_msg)
+        return v
 
 
 class AssignedTerm(ConfiguredBaseModel):
@@ -386,14 +484,15 @@ class AssignedTerm(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0123456789]+)$")
-        if isinstance(v,list):
+        pattern=re.compile(r"^(C[0-9]+)$")
+        if isinstance(v, list):
             for element in v:
-                if isinstance(v, str) and not pattern.match(element):
-                    raise ValueError(f"Invalid conceptId format: {element}")
-        elif isinstance(v,str):
-            if not pattern.match(v):
-                raise ValueError(f"Invalid conceptId format: {v}")
+                if isinstance(element, str) and not pattern.match(element):
+                    err_msg = f"Invalid conceptId format: {element}"
+                    raise ValueError(err_msg)
+        elif isinstance(v, str) and not pattern.match(v):
+            err_msg = f"Invalid conceptId format: {v}"
+            raise ValueError(err_msg)
         return v
 
 
