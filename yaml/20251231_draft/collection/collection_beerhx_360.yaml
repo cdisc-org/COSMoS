@@ -1,0 +1,127 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: BEERHX_360
+shortName: Beer Use History
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: LZZT - 360i
+domain: SU
+biomedicalConceptId: C81229
+sdtmDatasetSpecializationId: BEERHX
+items:
+  - name: SUCAT
+    variableName: SUCAT
+    dataElementConceptId: C25372
+    prompt: Substance Use Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    prepopulatedValue:
+      value: "ALCOHOL"
+    sdtmTarget:
+      sdtmAnnotation: "SUCAT = ALCOHOL"
+      sdtmVariables:
+        -  "SUCAT"
+  - name: SUTRT
+    variableName: SUTRT
+    dataElementConceptId: C83092
+    prompt: Substance Used
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    prepopulatedValue:
+      value: "BEER"
+    sdtmTarget:
+      sdtmAnnotation: "SUTRT = BEER"
+      sdtmVariables:
+        -  "SUTRT"
+  - name: SUPRESP
+    variableName: SUPRESP
+    dataElementConceptId: C171000
+    prompt: Prespecified
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: true 
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "SUPRESP"
+      sdtmVariables:
+        -  "SUPRESP"
+  - name: SUOCCUR
+    variableName: SUOCCUR
+    dataElementConceptId: C127786
+    prompt: Used
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SUOCCUR"
+      sdtmVariables:
+        -  "SUOCCUR"
+  - name: SUDSTXT
+    variableName: SUDSTXT
+    prompt: Number of beers or wine coolers/spritzers
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "SUDOSE;SUDOSTXT"
+      sdtmVariables:
+        -  "SUDOSE"
+        -  "SUDOSTXT"
+  - name: SUDOSU
+    variableName: SUDOSU
+    dataElementConceptId: C83038
+    prompt: Unit
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "Glass"
+        value: "GLASS"
+      - displayValue: "Drink"
+        value: "DRINK"
+      - displayValue: "mL"
+        value: "mL"
+      - displayValue: "oz"
+        value: "oz"
+      - displayValue: "L"
+        value: "L"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SUDOSU"
+      sdtmVariables:
+        -  "SUDOSU"

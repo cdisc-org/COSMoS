@@ -1,6 +1,7 @@
 %let root=C:/_github/cdisc-org/COSMoS;
 %include "&root/utilities/config.sas";
 
+options mprint;
 %let _debug=0;
 %let print_html=0;
 
@@ -413,6 +414,17 @@ title01 "&now";
 %let excel_file=&root/curation/draft/collection/collection_specialization_ADAS_COG.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Collection_ADAS-COG)$, dsout=collectxx_14, drop=%str(drop=package_date length significant_digits));
 
+%let excel_file=&root/curation/draft/collection/collection_specialization_SC.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_SC)$, dsout=collectxx_15, drop=%str(drop=package_date length significant_digits));
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_SU.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_SU)$, dsout=collectxx_16, drop=%str(drop=package_date length significant_digits));
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_PR.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_PR)$, dsout=collectxx_17, drop=%str(drop=package_date length significant_digits));
+
+%let excel_file=&root/curation/draft/collection/collection_specialization_EC.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Collection_EC)$, dsout=collectxx_18, drop=%str(drop=package_date length significant_digits));
 
 /************************************************************************************************************************/
 

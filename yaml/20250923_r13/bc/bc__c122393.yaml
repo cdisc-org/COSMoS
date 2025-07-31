@@ -1,0 +1,36 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C122393
+ncitCode: C122393
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122393
+parentConceptId: C17468
+categories:
+  - Subject Characteristics
+  - Socioeconomic Factors
+  - Socioeconomic Status
+  - Education
+shortName: Number of Years of Education
+synonyms:
+  - EDUYRNUM
+  - Education
+resultScales:
+  - Quantitative
+definition: The number of education years that a subject has competed.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

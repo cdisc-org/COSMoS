@@ -1,0 +1,111 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: EDULEVEL
+domain: SC
+shortName: Education Level
+source: SC.SCTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C17953
+variables:
+  - name: SCTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C74559
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74559
+      submissionValue: SCTESTCD
+    assignedTerm:
+      conceptId: C17953
+      value: "EDULEVEL"
+    role: Topic
+    relationship:
+      subject: SCTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: SCTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: SCTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C103330
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C103330
+      submissionValue: SCTEST
+    role: Qualifier
+    relationship:
+      subject: SCTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: SCCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: SCCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SCORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 100
+    relationship:
+      subject: SCORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SCSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 100
+    relationship:
+      subject: SCSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: SCSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 100
+    relationship:
+      subject: SCSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: SCDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: SCDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

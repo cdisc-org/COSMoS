@@ -1,0 +1,211 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: EXPOSCOLL
+shortName: Exposure as Collected Name of Treatment
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: EC
+biomedicalConceptId: C117466
+sdtmDatasetSpecializationId: EXPOSCOLL
+items:
+  - name: ECTRT
+    variableName: ECTRT
+    dataElementConceptId: C117473
+    prompt: Study Treatment Name
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECTRT"
+      sdtmVariables:
+        -  "ECTRT"
+  - name: ECREFID
+    variableName: ECREFID
+    dataElementConceptId: C117469
+    prompt: Study Treatment Label Identifier
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECREFID"
+      sdtmVariables:
+        -  "ECREFID"
+  - name: ECLOT
+    variableName: ECLOT
+    prompt: Lot Number
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECLOT"
+      sdtmVariables:
+        -  "ECLOT"
+  - name: ECFAST
+    variableName: ECFAST
+    prompt: Fasting
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "ECFAST"
+      sdtmVariables:
+        -  "ECFAST"
+  - name: ECSTDAT
+    variableName: ECSTDAT
+    dataElementConceptId: C117496
+    prompt: Start Date
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECSTDTC"
+      sdtmVariables:
+        -  "ECSTDTC"
+  - name: ECSTTIM
+    variableName: ECSTTIM
+    dataElementConceptId: C117496
+    prompt: Start Time
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECSTDTC"
+      sdtmVariables:
+        -  "ECSTDTC"
+  - name: ECENDAT
+    variableName: ECENDAT
+    dataElementConceptId: C117497
+    prompt: End Date
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECENDTC"
+      sdtmVariables:
+        -  "ECENDTC"
+  - name: ECENTIM
+    variableName: ECENTIM
+    dataElementConceptId: C117497
+    prompt: End Time
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECENDTC"
+      sdtmVariables:
+        -  "ECENDTC"
+  - name: ECDSTXT
+    variableName: ECDSTXT
+    prompt: Dose
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSE;ECDOSTXT"
+      sdtmVariables:
+        -  "ECDOSE"
+        -  "ECDOSTXT"
+  - name: ECDOSU
+    variableName: ECDOSU
+    dataElementConceptId: C117481
+    prompt: Unit
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSU"
+      sdtmVariables:
+        -  "ECDOSU"
+  - name: ECDOSFRQ
+    variableName: ECDOSFRQ
+    dataElementConceptId: C117483
+    prompt: Frequency
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    codelist:
+      submissionValue: FREQ
+      conceptId: C71113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71113
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSFRQ"
+      sdtmVariables:
+        -  "ECDOSFRQ"
+  - name: ECROUTE
+    variableName: ECROUTE
+    dataElementConceptId: C117486
+    prompt: Route
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    codelist:
+      submissionValue: ROUTE
+      conceptId: C66729
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66729
+    sdtmTarget:
+      sdtmAnnotation: "ECROUTE"
+      sdtmVariables:
+        -  "ECROUTE"
+  - name: ECDOSADJ
+    variableName: ECDOSADJ
+    prompt: Dose Adjusted
+    orderNumber: 13
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSADJ"
+      sdtmVariables:
+        -  "ECDOSADJ"
+  - name: ECADJ
+    variableName: ECADJ
+    prompt: Reason Dose Adjusted
+    orderNumber: 14
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "ECADJ"
+      sdtmVariables:
+        -  "ECADJ"

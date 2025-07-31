@@ -1,0 +1,189 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: PIPEHX_360
+shortName: Pipe History
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: LZZT - 360i
+domain: SU
+biomedicalConceptId: C181760
+sdtmDatasetSpecializationId: PIPEHX
+items:
+  - name: SUCAT
+    variableName: SUCAT
+    dataElementConceptId: C25372
+    prompt: Substance Use Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    prepopulatedValue:
+      value: "TOBACCO"
+    sdtmTarget:
+      sdtmAnnotation: "SUCAT = TOBACCO"
+      sdtmVariables:
+        -  "SUCAT"
+  - name: SUTRT
+    variableName: SUTRT
+    dataElementConceptId: C83092
+    prompt: Substance Used
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    prepopulatedValue:
+      value: "PIPE"
+    sdtmTarget:
+      sdtmAnnotation: "SUTRT = PIPE"
+      sdtmVariables:
+        -  "SUTRT"
+  - name: SUPRESP
+    variableName: SUPRESP
+    dataElementConceptId: C171000
+    prompt: Prespecified
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: true 
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "SUPRESP"
+      sdtmVariables:
+        -  "SUPRESP"
+  - name: SUOCCUR
+    variableName: SUOCCUR
+    dataElementConceptId: C127786
+    prompt: Used
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SUOCCUR"
+      sdtmVariables:
+        -  "SUOCCUR"
+  - name: SUDSTXT
+    variableName: SUDSTXT
+    prompt: Number of pipesful
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "SUDOSE;SUDOSTXT"
+      sdtmVariables:
+        -  "SUDOSE"
+        -  "SUDOSTXT"
+  - name: SUDOSU
+    variableName: SUDOSU
+    dataElementConceptId: C83038
+    prompt: Unit
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "PIPE"
+      conceptId: C116246
+    sdtmTarget:
+      sdtmAnnotation: "SUDOSU = PIPE"
+      sdtmVariables:
+        -  "SUDOSU"
+  - name: SUSTDAT
+    variableName: SUSTDAT
+    dataElementConceptId: C83431
+    prompt: Start Date
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "SUSTDTC"
+      sdtmVariables:
+        -  "SUSTDTC"
+  - name: SUPRIOR
+    variableName: SUPRIOR
+    prompt: Prior to Study
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SUPRIOR"
+      sdtmVariables:
+        -  "SUPRIOR"
+  - name: SUENDAT
+    variableName: SUENDAT
+    dataElementConceptId: C83419
+    prompt: End Date
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "SUENDTC"
+      sdtmVariables:
+        -  "SUENDTC"
+  - name: SUONGO
+    variableName: SUONGO
+    prompt: Ongoing
+    orderNumber: 14
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SUENRF;SUENRTPT"
+      sdtmVariables:
+        -  "SUENRF"
+        -  "SUENRTPT"

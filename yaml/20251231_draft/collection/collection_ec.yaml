@@ -1,17 +1,17 @@
 packageDate: "2025-12-31"
 packageType: collection
-collectionSpecializationId: INCLEXCLYN
-shortName: Inclusion Exclusion Criteria Yes No
+collectionSpecializationId: EC
+shortName: Exposure Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-domain: IE
-biomedicalConceptId: C83063
+domain: EC
+biomedicalConceptId: C87885
 items:
-  - name: IEYN
-    variableName: IEYN
-    dataElementConceptId: C83063
-    questionText: Were all eligibility criteria met?
+  - name: ECYN
+    variableName: ECYN
+    dataElementConceptId: C87885
+    questionText: Was any study treatment administered?
     orderNumber: 1
     mandatoryVariable: true 
     dataType: text
@@ -29,16 +29,16 @@ items:
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "[NOT SUBMITTED]"
-  - name: IEDAT
-    variableName: IEDAT
+  - name: ECDAT
+    variableName: ECDAT
     dataElementConceptId: C82515
-    questionText: What was the date the eligibility criteria assessment was performed?
+    prompt: Collection Date
     orderNumber: 2
     mandatoryVariable: false
     dataType: date
     length: 10
     displayHidden: false
     sdtmTarget:
-      sdtmAnnotation: "IEDTC"
+      sdtmAnnotation: "ECDTC"
       sdtmVariables:
-        -  "IEDTC"
+        -  "ECDTC"

@@ -1,0 +1,148 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: MRIBRAIN
+shortName: MRI Brain
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: PR
+biomedicalConceptId: C16809
+sdtmDatasetSpecializationId: MRIBRAIN
+items:
+  - name: PRCAT
+    variableName: PRCAT
+    dataElementConceptId: C25372
+    prompt: Procedure Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    prepopulatedValue:
+      value: "IMAGING"
+    sdtmTarget:
+      sdtmAnnotation: "PRCAT = IMAGING"
+      sdtmVariables:
+        -  "PRCAT"
+  - name: PRSCAT
+    variableName: PRSCAT
+    dataElementConceptId: C25692
+    prompt: ProcedureSubcategory
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSCAT"
+      sdtmVariables:
+        -  "PRSCAT"
+  - name: PRTRT
+    variableName: PRTRT
+    dataElementConceptId: C117511
+    prompt: Procedure Name
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    codelist:
+      submissionValue: PROCEDUR
+      conceptId: C101858
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101858
+    prepopulatedValue:
+      value: "MRI"
+      conceptId: C16809
+    sdtmTarget:
+      sdtmAnnotation: "PRTRT = MRI"
+      sdtmVariables:
+        -  "PRTRT"
+  - name: PRPRESP
+    variableName: PRPRESP
+    dataElementConceptId: C171000
+    prompt: Prespecified
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: true 
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "PRPRESP = Y"
+      sdtmVariables:
+        -  "PRPRESP"
+  - name: PROCCUR
+    variableName: PROCCUR
+    dataElementConceptId: C127786
+    questionText: Was the Brain MRI perfomed?
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PROCCUR"
+      sdtmVariables:
+        -  "PROCCUR"
+  - name: PRSTDAT
+    variableName: PRSTDAT
+    dataElementConceptId: C117529
+    prompt: Start Date
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSTDTC"
+      sdtmVariables:
+        -  "PRSTDTC"
+  - name: PRSTTIM
+    variableName: PRSTTIM
+    dataElementConceptId: C117529
+    prompt: Start Time
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSTDTC"
+      sdtmVariables:
+        -  "PRSTDTC"
+  - name: PRLOC
+    variableName: PRLOC
+    dataElementConceptId: C13717
+    prompt: Location
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    codelist:
+      submissionValue: LOC
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+    prepopulatedValue:
+      value: "BRAIN"
+      conceptId: C12439
+    sdtmTarget:
+      sdtmAnnotation: "PRLOC = BRAIN"
+      sdtmVariables:
+        -  "PRLOC"
