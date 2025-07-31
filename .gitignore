@@ -10,6 +10,8 @@ venv/
 .env
 work/
 _archive/
+_new/
+_done/
 yaml/latest
 yaml/*/*_test
 ~$*.*

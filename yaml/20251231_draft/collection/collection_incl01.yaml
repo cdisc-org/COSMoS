@@ -1,14 +1,13 @@
 packageDate: "2025-12-31"
 packageType: collection
-collectionSpecializationId: EXCL01_VERTICAL
-shortName: Exclusion Criteria 01 (Vertical)
+collectionSpecializationId: INCL01
+shortName: Inclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-implementationOption: Vertical
 domain: IE
-biomedicalConceptId: C25370
-sdtmDatasetSpecializationId: EXCL01
+biomedicalConceptId: C25532
+sdtmDatasetSpecializationId: INCL01
 items:
   - name: IEDAT
     variableName: IEDAT
@@ -20,7 +19,7 @@ items:
     length: 10
     displayHidden: false
     sdtmTarget:
-      sdtmAnnotation: "IEDTC when IECAT = EXCLUSION"
+      sdtmAnnotation: "IEDTC when IECAT = INCLUSION"
       sdtmVariables:
         -  "IEDTC"
   - name: IECAT
@@ -37,31 +36,31 @@ items:
       conceptId: C66797
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66797
     prepopulatedValue:
-      value: "EXCLUSION"
-      conceptId: C25370
+      value: "INCLUSION"
+      conceptId: C25532
     sdtmTarget:
-      sdtmAnnotation: "IECAT = EXCLUSION"
+      sdtmAnnotation: "IECAT = INCLUSION"
       sdtmVariables:
         -  "IECAT"
   - name: IEORRES
     variableName: IEORRES
     dataElementConceptId: C181043
-    questionText: What was the identifier of the exclusion criterion the subject met?
+    questionText: What was the identifier of the inclusion criterion the subject did not meet ?
     orderNumber: 3
     mandatoryVariable: true 
     dataType: text
     length: 20
     displayHidden: false
     valueList:
-      - displayValue: "EXCL01"
-        value: "EXCL01"
-      - displayValue: "EXCL02"
-        value: "EXCL02"
-      - displayValue: "EXCL03"
-        value: "EXCL03"
+      - displayValue: "INCL01"
+        value: "INCL01"
+      - displayValue: "INCL02"
+        value: "INCL02"
+      - displayValue: "INCL03"
+        value: "INCL03"
     selectionType: Multiple
     sdtmTarget:
-      sdtmAnnotation: "IETESTCD when IECAT = EXCLUSION"
+      sdtmAnnotation: "IETESTCD when IECAT = INCLUSION"
       sdtmVariables:
         -  "IEORRES"
         -  "IETESTCD"
