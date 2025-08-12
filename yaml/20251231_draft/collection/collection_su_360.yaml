@@ -1,0 +1,32 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SU_360
+shortName: Substance Use Yes No Indicator
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: LZZT - 360i
+domain: SU
+biomedicalConceptId: NEW_2
+items:
+  - name: SUYN
+    variableName: SUYN
+    dataElementConceptId: NEW_2
+    questionText: Information Not Obtained
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"

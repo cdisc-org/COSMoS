@@ -1,0 +1,29 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: NEW_2
+ncitCode: NEW_2
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/NEW_2
+parentConceptId: C82438
+categories:
+  - Event Occurrence Indicators
+  - Substance Use
+shortName: Substance Use Yes No Indicator
+synonyms:
+  - SUYN
+resultScales:
+  - Nominal
+definition: An indication of whether substance usage has occurred.
+dataElementConcepts:
+  - conceptId: NEW_2
+    ncitCode: NEW_2
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/NEW_2
+    shortName: Substance Use Yes No Indicator
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,36 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C17953
+ncitCode: C17953
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17953
+parentConceptId: C17468
+categories:
+  - Subject Characteristics
+  - Socioeconomic Factors
+  - Socioeconomic Status
+  - Education
+shortName: Education Level
+synonyms:
+  - EDULEVEL
+  - Education Level Completed
+  - Education
+resultScales:
+  - Nominal
+definition: An indication of the years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "8th Grade Completion"
+      - "High School Completion"
+      - "College Completion"
+      - "Bachelor's Degree Completion"
+      - "Master's Degree Completion"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

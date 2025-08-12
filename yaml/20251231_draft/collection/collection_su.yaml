@@ -1,17 +1,17 @@
 packageDate: "2025-12-31"
 packageType: collection
-collectionSpecializationId: INCLEXCLYN
-shortName: Inclusion Exclusion Criteria Yes No
+collectionSpecializationId: SU
+shortName: Substance Use Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-domain: IE
-biomedicalConceptId: C83063
+domain: SU
+biomedicalConceptId: NEW_2
 items:
-  - name: IEYN
-    variableName: IEYN
-    dataElementConceptId: C83063
-    questionText: Were all eligibility criteria met?
+  - name: SUYN
+    variableName: SUYN
+    dataElementConceptId: NEW_2
+    questionText: Was any substance used?
     orderNumber: 1
     mandatoryVariable: true 
     dataType: text
@@ -29,16 +29,16 @@ items:
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "[NOT SUBMITTED]"
-  - name: IEDAT
-    variableName: IEDAT
+  - name: SUDAT
+    variableName: SUDAT
     dataElementConceptId: C82515
-    questionText: What was the date the eligibility criteria assessment was performed?
+    prompt: Collection Date
     orderNumber: 2
     mandatoryVariable: false
     dataType: date
     length: 10
     displayHidden: false
     sdtmTarget:
-      sdtmAnnotation: "IEDTC"
+      sdtmAnnotation: "SUDTC"
       sdtmVariables:
-        -  "IEDTC"
+        -  "SUDTC"

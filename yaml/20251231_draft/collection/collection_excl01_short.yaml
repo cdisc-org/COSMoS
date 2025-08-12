@@ -1,0 +1,55 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: EXCL01_SHORT
+shortName: Exclusion Criteria 01
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: Without Date
+domain: IE
+biomedicalConceptId: C25370
+sdtmDatasetSpecializationId: EXCL01
+items:
+  - name: IECAT
+    variableName: IECAT
+    dataElementConceptId: C25372
+    questionText: What was the category of the criterion?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 15
+    displayHidden: false
+    codelist:
+      submissionValue: IECAT
+      conceptId: C66797
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66797
+    prepopulatedValue:
+      value: "EXCLUSION"
+      conceptId: C25370
+    sdtmTarget:
+      sdtmAnnotation: "IECAT = EXCLUSION"
+      sdtmVariables:
+        -  "IECAT"
+  - name: IEORRES
+    variableName: IEORRES
+    dataElementConceptId: C181043
+    questionText: What was the identifier of the exclusion criterion the subject met?
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    valueList:
+      - displayValue: "EXCL01"
+        value: "EXCL01"
+      - displayValue: "EXCL02"
+        value: "EXCL02"
+      - displayValue: "EXCL03"
+        value: "EXCL03"
+    selectionType: Multiple
+    sdtmTarget:
+      sdtmAnnotation: "IETESTCD when IECAT = EXCLUSION"
+      sdtmVariables:
+        -  "IEORRES"
+        -  "IETESTCD"
+        -  "IETEST"
