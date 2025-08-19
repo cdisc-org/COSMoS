@@ -3,6 +3,8 @@ options sasautos = ("&root/utilities/macros", %sysfunc(compress(%sysfunc(getopti
 options set=MAS_PYPATH="&root/venv/Scripts/python.exe";
 options set=MAS_M2PATH="%sysget(SASROOT)/tkmas/sasmisc/mas2py.py";
 
+/* Check registry keys for TypeGuessRows */
+%check_reg_keys();
 
 libname macros "&root/utilities/macros";
 options cmplib=macros.funcs;
