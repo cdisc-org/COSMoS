@@ -1,0 +1,17 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C132532
+ncitCode: C132532
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132532
+parentConceptId: C91105
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - Combat Exposure Scale Questionnaire
+  - CES
+  - CES01
+shortName: Combat Exposure Scale Questionnaire
+synonyms:
+  - CES
+  - CES01
+definition: "A standardized 7-item self-report scale that was developed by Keane et al in 1989 to measure combat exposure. The instrument is derived from Figley's combat scale (1980), with additional items included by consensus of a group of clinical psychologists with experience in the assessment and treatment of combat-related PTSD. The items are weighted according to the severity of the combat experience."

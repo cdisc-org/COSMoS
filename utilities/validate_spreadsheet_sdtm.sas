@@ -367,6 +367,28 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog)$, dsout=bc13_03);
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog_FT.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_ADAS-Cog TotalScore)$, dsout=bc13_04);
+%ReadExcel(file=&excel_file, range=%str(SDTM_ADAS-Cog)$, dsout=sdtm13_03, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_QRS_CGI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_CGI)$, dsout=bc13_05);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_QRS_PGI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_PGI)$, dsout=bc13_06);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CES.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_CES)$, dsout=bc13_07);
+%ReadExcel(file=&excel_file, range=%str(SDTM_CES)$, dsout=sdtm13_04, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ECOG.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_ECOG)$, dsout=bc13_08);
+%ReadExcel(file=&excel_file, range=%str(SDTM_ECOG)$, dsout=sdtm13_05, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_rutgeerts.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_RUTGEERTS)$, dsout=bc13_09);
+%ReadExcel(file=&excel_file, range=%str(SDTM_RUTGEERTS)$, dsout=sdtm13_06, drop=%str(drop=length significant_digits format change_history));
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);

@@ -1,0 +1,137 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: CES0101
+domain: QS
+shortName: "CES01-Ever Combat Patrols/Dangerous Duty"
+source: QS.QSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C132556
+variables:
+  - name: QSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C132519
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132519
+      submissionValue: CES01TC
+    assignedTerm:
+      conceptId: C132556
+      value: "CES0101"
+    role: Topic
+    relationship:
+      subject: QSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C132518
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132518
+      submissionValue: CES01TN
+    assignedTerm:
+      conceptId: C132556
+      value: "CES01-Ever Combat Patrols/Dangerous Duty"
+    role: Qualifier
+    relationship:
+      subject: QSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: QSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+      submissionValue: QSCAT
+    assignedTerm:
+      conceptId: C132532
+      value: "CES"
+    role: Qualifier
+    relationship:
+      subject: QSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C179945
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179945
+      submissionValue: CES0101OR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: QSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C179950
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179950
+      submissionValue: CES0101STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C179950
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179950
+      submissionValue: CES0101STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: QSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

@@ -1,0 +1,67 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C135817
+ncitCode: C135817
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135817
+parentConceptId: C135706
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - Patient Global Impression Generic Modification Version Questionnaire
+  - PGI
+  - PGI01
+  - PGI Generic Modification Version Questionnaire Question
+shortName: "PGI Generic Modification Version - Severity"
+synonyms:
+  - "PGI01-Severity"
+  - PGI0101
+  - "PGI Generic Modification Version - Severity"
+resultScales:
+  - ordinal
+definition: Patient Global Impression Generic Modification Version (PGI Generic Modification Version) Considering all the ways your condition impacts you, how severe is your condition at this time?
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "PGI"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "VERBAL RATING SCALE 4-POINT"
+      - "VERBAL RATING SCALE 7-POINT"
+      - "LIKERT SCALE 4-POINT"
+      - "LIKERT SCALE 7-POINT"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

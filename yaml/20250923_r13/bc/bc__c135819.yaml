@@ -1,0 +1,70 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C135819
+ncitCode: C135819
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135819
+parentConceptId: C135706
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - Patient Global Impression Generic Modification Version Questionnaire
+  - PGI
+  - PGI01
+  - PGI Generic Modification Version Questionnaire Question
+shortName: "PGI Generic Modification Version - Improvement"
+synonyms:
+  - "PGI01-Improvement"
+  - PGI0103
+  - "PGI Generic Modification Version - Improvement"
+resultScales:
+  - ordinal
+definition: Patient Global Impression Generic Modification Version (PGI Generic Modification Version) Compared to <previously assessed protocol specified time point> how much has your condition improved?
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "No change"
+      - "Almost the same"
+      - "A little better"
+      - "Somewhat better"
+      - "Moderately better"
+      - "Much better"
+      - "A great deal better"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "PGI"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "VERBAL RATING SCALE 4-POINT"
+      - "VERBAL RATING SCALE 7-POINT"
+      - "LIKERT SCALE 4-POINT"
+      - "LIKERT SCALE 7-POINT"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C135705
+ncitCode: C135705
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135705
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: CGI Generic Modification Version Questionnaire Question
+definition: A question associated with the CGI Generic Modification Version questionnaire.
