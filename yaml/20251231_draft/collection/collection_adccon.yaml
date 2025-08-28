@@ -43,10 +43,8 @@ items:
         value: "Mild - 2-3 instances of poor concentration/distractibility, signs of restlessness and inattentiveness"
       - displayValue: "Moderate - 4-5 instances during interview"
         value: "Moderate - 4-5 instances during interview"
-      - displayValue: "Moderately severe - poor concentration/distractibility throughout much of interview"
-        value: "Moderately severe - poor concentration/distractibility throughout much of interview"
-      - displayValue: "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks"
-        value: "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks"
+      - displayValue: "Moderately"
+        value: "Moderately"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCCON"

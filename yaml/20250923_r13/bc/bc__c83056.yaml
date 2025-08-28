@@ -9,7 +9,7 @@ categories:
   - Concomitant Medication
 shortName: Concomitant Medication Yes No Indicator
 synonyms:
-  - CNYN
+  - CMYN
 resultScales:
   - Nominal
 definition: An indication of whether concomitant medication usage has occurred.

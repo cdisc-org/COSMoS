@@ -84,8 +84,7 @@ variables:
       - "3-5 items (objects and fingers) named incorrectly"
       - "6-8 items (objects and fingers) named incorrectly"
       - "9-11 items (objects and fingers) named incorrectly"
-      - "12-14 items (objects and fingers) named incorrectly"
-      - "15-17 items (objects and fingers) named incorrectly"
+      - "12-14 items (objects and fingers) named incorrectl"
     role: Qualifier
     dataType: float
     length: 4

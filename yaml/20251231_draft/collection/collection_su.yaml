@@ -6,11 +6,11 @@ standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
 domain: SU
-biomedicalConceptId: NEW_2
+biomedicalConceptId: C219639
 items:
   - name: SUYN
     variableName: SUYN
-    dataElementConceptId: NEW_2
+    dataElementConceptId: C219639
     questionText: Was any substance used?
     orderNumber: 1
     mandatoryVariable: true 

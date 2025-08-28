@@ -43,10 +43,8 @@ items:
         value: "Mild - patient has difficulty less than 25% of the time"
       - displayValue: "Moderate - patient has difficulty 25-50% of the time"
         value: "Moderate - patient has difficulty 25-50% of the time"
-      - displayValue: "Moderately severe - patient has difficulty 50% of the time"
-        value: "Moderately severe - patient has difficulty 50% of the time"
-      - displayValue: "Severe - one or two word utterance - fluent, but empty speech, mute"
-        value: "Severe - one or two word utterance - fluent, but empty speech, mute"
+      - displayValue: "Moderately severe - patient has"
+        value: "Moderately severe - patient has"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCSL"

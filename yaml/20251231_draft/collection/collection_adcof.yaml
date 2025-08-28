@@ -44,9 +44,8 @@ items:
       - displayValue: "9-11 items (objects and fingers) named incorrectly"
         value: "9-11 items (objects and fingers) named incorrectly"
       - displayValue: "12-14 items (objects and fingers) named incorrectly"
-        value: "12-14 items (objects and fingers) named incorrectly"
-      - displayValue: "15-17 items (objects and fingers) named incorrectly"
-        value: "15-17 items (objects and fingers) named incorrectly"
+        value: "12-14 items (objects and fingers) named incorrectl"
+      - displayValue: "15"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCOF"
