@@ -1,0 +1,55 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C160723
+ncitCode: C160723
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C160723
+categories:
+  - Tumor Results
+  - Disease Response
+shortName: Residual Cancer Burden Index
+synonyms:
+  - RCB Index
+resultScales:
+  - Ordinal
+definition: "A score estimated from routine pathologic sections of the primary breast tumor site and the regional lymph nodes after the completion of neoadjuvant therapy. Variables used in the calculation include: primary tumor bed area, overall cancer cellularity, percentage of cancer that is in situ disease, number of positive lymph nodes, and diameter of largest metastasis. These scores are divided into 4 classes that stratify patients based on their chance of disease recurrence."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "RCB-0"
+      - "RCB-I"
+      - "RCB-II"
+      - "RCB-III"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Breast"
+      - "Lymph Node"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

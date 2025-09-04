@@ -1,0 +1,40 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C192424
+ncitCode: C192424
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C192424
+parentConceptId: C55073
+categories:
+  - Disease Response
+  - Recurrent Disease
+shortName: Recurrence in Distant Nodes
+synonyms:
+  - "Nodal-Distant"
+  - Recurrence in Distant Nodes
+resultScales:
+  - Ordinal
+definition: A recurrence of disease in distant lymph nodes.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Present"
+      - "Absent"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

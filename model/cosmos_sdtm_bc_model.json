@@ -171,7 +171,11 @@
                 "is the name of the reference terminology for",
                 "is the version of the reference terminology in",
                 "is the period of time for the test in",
-                "is a reference range value for"
+                "is a reference range value for",
+                "is the identifier for the device which collected data for the test in",
+                "is the substance bound to the analyte in",
+                "is the operational objective of the test in",
+                "is the period of time to be considered when answering the question in"
             ],
             "title": "LinkingPhraseEnum",
             "type": "string"

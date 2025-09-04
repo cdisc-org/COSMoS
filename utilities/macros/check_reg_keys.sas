@@ -27,7 +27,7 @@
           TypeGuessRows = input(trim(scan(_infile_,-1,'x')),hex2.);
           if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
                              else do;
-                               put "WARN" "NING: " TypeGuessRows= /;
+                               put "ER" "ROR: " TypeGuessRows= /;
                                call symput('TypeGuessRows_ACE',TypeGuessRows);
                              end;
         end;
@@ -50,7 +50,7 @@
           TypeGuessRows = input(trim(scan(_infile_,-1,'x')),hex2.);
           if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
                              else do;
-                               put "WARN" "NING: " TypeGuessRows= /;
+                               put "ER" "ROR: " TypeGuessRows= /;
                                call symput('TypeGuessRows_ACE',TypeGuessRows);
                              end;
         end;

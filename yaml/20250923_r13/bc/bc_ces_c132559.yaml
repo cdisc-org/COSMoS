@@ -1,0 +1,57 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C132559
+ncitCode: C132559
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132559
+parentConceptId: C132527
+categories:
+  - QRS
+  - QRS Instrument Question
+  - Clinical or Research Assessment Questionnaire
+  - Combat Exposure Scale Questionnaire
+  - CES
+  - CES01
+  - CES Questionnaire Question
+shortName: "CES - Soldiers in Unit Killed (KIA), Wounded, Missing (MIA)"
+synonyms:
+  - "CES01-Soldiers in Unit KIA, Wounded, MIA"
+  - CES0104
+  - "CES - Soldiers in Unit Killed (KIA), Wounded, Missing (MIA)"
+resultScales:
+  - Ordinal
+definition: Combat Exposure Scale (CES) What percentage of the soldiers in your unit were killed (KIA), wounded or missing in action (MIA)?
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "1-25%"
+      - "26-50%"
+      - "51-75%"
+      - "76% or more"
+      - "None"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CES"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

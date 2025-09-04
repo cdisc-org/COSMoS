@@ -174,6 +174,10 @@ class LinkingPhraseEnum(str, Enum):
     is_the_version_of_the_reference_terminology_in = "is the version of the reference terminology in"
     is_the_period_of_time_for_the_test_in = "is the period of time for the test in"
     is_a_reference_range_value_for = "is a reference range value for"
+    is_the_identifier_for_the_device_which_collected_data_for_the_test_in = "is the identifier for the device which collected data for the test in"
+    is_the_substance_bound_to_the_analyte_in = "is the substance bound to the analyte in"
+    is_the_operational_objective_of_the_test_in = "is the operational objective of the test in"
+    is_the_period_of_time_to_be_considered_when_answering_the_question_in = "is the period of time to be considered when answering the question in"
 
 
 class PredicateTermEnum(str, Enum):

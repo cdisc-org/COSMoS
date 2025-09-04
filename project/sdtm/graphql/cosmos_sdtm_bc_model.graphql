@@ -94,6 +94,10 @@ enum LinkingPhraseEnum
     is_the_version_of_the_reference_terminology_in
     is_the_period_of_time_for_the_test_in
     is_a_reference_range_value_for
+    is_the_identifier_for_the_device_which_collected_data_for_the_test_in
+    is_the_substance_bound_to_the_analyte_in
+    is_the_operational_objective_of_the_test_in
+    is_the_period_of_time_to_be_considered_when_answering_the_question_in
   }
 
 enum OriginSourceEnum

@@ -388,6 +388,46 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_RUTGEERTS)$, dsout=bc13_09);
 %ReadExcel(file=&excel_file, range=%str(SDTM_RUTGEERTS)$, dsout=sdtm13_05, drop=%str(drop=length significant_digits format change_history));
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_DHT_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_GLUC_Edit)$, dsout=bc13_10);
+%ReadExcel(file=&excel_file, range=%str(SDTM_GLUCPE_Edit)$, dsout=sdtm13_06, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_SDTM_EG.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG_NEW)$, dsout=sdtm13_07, drop=%str(drop=length significant_digits format change_history));
+%ReadExcel(file=&excel_file, range=%str(SDTM_EG_EDITS)$, dsout=sdtm13_08, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_IS_NEW.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc13_11);
+%ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm13_09, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_QRS_LOINC_EDITS)$, dsout=bc13_12);
+%ReadExcel(file=&excel_file, range=%str(BC_EQ5D_EDITS)$, dsout=bc13_13);
+%ReadExcel(file=&excel_file, range=%str(SDTM_EQ5D_EDITS)$, dsout=sdtm13_10, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-BOY.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TS-BOY)$, dsout=bc13_14);
+%ReadExcel(file=&excel_file, range=%str(SDTM_TS-BOY)$, dsout=sdtm13_11, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-GIRL.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TS-GIRL)$, dsout=bc13_15);
+%ReadExcel(file=&excel_file, range=%str(SDTM_TS-GIRL)$, dsout=sdtm13_12, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CHILD-PUGH.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Child-Pugh)$, dsout=bc13_16);
+%ReadExcel(file=&excel_file, range=%str(SDTM_Child-Pugh)$, dsout=sdtm13_13, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_HBI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_HBI)$, dsout=bc13_17);
+%ReadExcel(file=&excel_file, range=%str(SDTM_HBI)$, dsout=sdtm13_14, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_Lindus Health_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Lindus_BC_Category_Edits)$, dsout=bc13_18);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_BPRS-A.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_BPRS-A)$, dsout=bc13_19);
+%ReadExcel(file=&excel_file, range=%str(SDTM_BPRS-A)$, dsout=sdtm13_15, drop=%str(drop=length significant_digits format change_history));
+
 /* Package collections test - */
 
 %let release=xx;
@@ -592,7 +632,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved BC Parent BCs */
   proc sql;
     title02 "Missing BC parent_bc_id link to BC bc_id";
-      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, parent_bc_id
+      select package_date, _excel_file_, _tab_, bc_categories, bc_id, short_name, parent_bc_id
       from bc
       where
         parent_bc_id not in (select bc_id from bc)
@@ -604,7 +644,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved Collection BCs */
   proc sql;
     title02 "Missing Collection Specialization bc_id link to BC bc_id";
-      select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.bc_id
+      select package_date, _excel_file_, _tab_, collection_group_id, collection_item, col.bc_id
       from collection col
       where
         col.bc_id not in (select bc_id from bc)
@@ -620,7 +660,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
       from collection
       where not missing(dec_id);
 
-      select col._excel_file_, col._tab_, col.package_date, col.collection_group_id, col.collection_item, col.bc_id, col.dec_id
+      select col.package_date, col._excel_file_, col._tab_, col.collection_group_id, col.collection_item, col.bc_id, col.dec_id
       from collection_bc_dec cold, collection col
       where
         cold.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
@@ -632,7 +672,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Unresolved SDTM vlm_group_id */
   proc sql;
     title02 "Missing Collection Specialization vlm_group_id link to SDTM vlm_group_id";
-      select _excel_file_, _tab_, package_date, collection_group_id, collection_item, col.vlm_group_id
+      select package_date,  _excel_file_, _tab_, collection_group_id, collection_item, col.vlm_group_id
       from collection col
       where
         (not missing(col.vlm_group_id)) and (col.vlm_group_id not in (select vlm_group_id from sdtm_merged))
@@ -643,20 +683,22 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_collection_sdtm_bc_
   /* Duplicate BC records */
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
-      select _excel_file_, _tab_, package_date, bc_categories, bc_id, short_name, dec_id
+      select package_date, _excel_file_, _tab_, _record_, bc_id, short_name, dec_id, dec_label, bc_categories
       from bc
       group by package_date, bc_id, dec_id
       having count(*) > 1
+      order by _excel_file_, _tab_, _record_, bc_id, dec_id
       ;
   run;
 
   /* Duplicate Collection records */
   proc sql;
     title02 "Duplicate Collection Specialization records (package_date, collection_group_id, collection_item)";
-      select _excel_file_, _tab_, package_date, standard, standard_start_version,	standard_end_version, collection_group_id, collection_item
+      select package_date, _excel_file_, _tab_, standard, _record_, collection_group_id, collection_item, order_number, standard_start_version,	standard_end_version
       from collection
       group by package_date, standard, collection_group_id, collection_item
       having count(*) > 1
+      order by _excel_file_, _tab_, _record_, collection_group_id, collection_item
       ;
   run;
 

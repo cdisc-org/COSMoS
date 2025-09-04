@@ -1,0 +1,137 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: HBI0105H
+domain: RS
+shortName: "HBI01-Complication: Abscess"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C191055
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C190926
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190926
+      submissionValue: HBI01TC
+    assignedTerm:
+      conceptId: C191055
+      value: "HBI0105H"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C190925
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190925
+      submissionValue: HBI01TN
+    assignedTerm:
+      conceptId: C191055
+      value: "HBI01-Complication: Abscess"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C118971
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
+      submissionValue: RSCAT
+    assignedTerm:
+      conceptId: C191036
+      value: "HBI"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C190891
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190891
+      submissionValue: HBI0105AT05HOR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C190892
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190892
+      submissionValue: HBI0105AT05HSTR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C190892
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190892
+      submissionValue: HBI0105AT05HSTR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

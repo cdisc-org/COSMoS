@@ -1,0 +1,69 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C19636
+ncitCode: C19636
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19636
+parentConceptId: C146692
+categories:
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Molecular Analysis
+  - Genetic Molecular Analysis
+shortName: BRCA2 Gene Mutation
+synonyms:
+  - BRCA2
+  - BRCA2 Mutation
+  - Breast Cancer 2 Gene Mutation
+  - BROVCA2 Gene Mutation
+  - Mutation of the BRCA2 Gene
+  - XRCC11 Gene Mutation
+  - BRCC2 Gene Mutation
+  - FANCD1 Gene Mutation
+resultScales:
+  - Ordinal
+definition: "A mutation that is typically a heritable, permanent change in the nucleotide sequence of the BRCA2 gene. Single nucleotide substitutions and small deletions or insertions (1-20 bases) account for the majority of mutations in the BRCA2 gene. Most of these alterations result in a truncated form of the breast cancer type 2 susceptibility protein. Mutations in the BRCA2 gene predispose males to breast cancer."
+dataElementConcepts:
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Saliva"
+      - "Tissue"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Present"
+      - "Absent"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"

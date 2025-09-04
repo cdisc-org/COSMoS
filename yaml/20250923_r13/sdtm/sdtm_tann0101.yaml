@@ -1,0 +1,117 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: TANN0101
+domain: RS
+shortName: "TANN01-Breast Stages"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C124718
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C124664
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124664
+      submissionValue: TANN01TC
+    assignedTerm:
+      conceptId: C124718
+      value: "TANN0101"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C124663
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124663
+      submissionValue: TANN01TN
+    assignedTerm:
+      conceptId: C124718
+      value: "TANN01-Breast Stages"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C118971
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
+      submissionValue: RSCAT
+    assignedTerm:
+      conceptId: C124704
+      value: "TANNER SCALE GIRL"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C193257
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C193257
+      submissionValue: TANN0101OR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C193258
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C193258
+      submissionValue: TANN0101STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

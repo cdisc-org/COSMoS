@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C15280
+ncitCode: C15280
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15280
+categories:
+  - Surgeries
+  - Procedures
+shortName: Breast Conservation Treatment
+definition: "Breast conservation treatment is defined as excision of the primary tumor and adjacent breast tissue, followed by radiation therapy.  This procedure is also referred to as lumpectomy, segmental mastectomy, or partial mastectomy. (from Consensus Statements: Treatment of Early-stage Breast Cancer, 1990)"

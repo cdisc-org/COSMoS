@@ -1,0 +1,22 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C121007
+ncitCode: C121007
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121007
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Child-Pugh Clinical Classification"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh"
+  - CPS01
+  - "Child-Pugh Clinical Classification Question"
+shortName: "Child-Pugh Clinical Classification"
+synonyms:
+  - "Child-Pugh"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh Classification"
+  - "Child-Pugh Score"
+  - CPS01
+definition: "A standardized rating scale used to assess the severity of liver cirrhosis and determine the prognosis, the required strength of treatment, and the necessity of liver transplantation. This instrument uses the following clinical and lab criteria: encephalopathy grade, ascites, bilirubin, albumin, and prothrombin index."

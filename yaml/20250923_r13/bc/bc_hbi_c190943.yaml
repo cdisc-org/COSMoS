@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C190943
+ncitCode: C190943
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190943
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: "Harvey-Bradshaw Index Clinical Classification Question"
+definition: "A question associated with the Harvey-Bradshaw Index clinical classification."

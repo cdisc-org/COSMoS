@@ -1,0 +1,71 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C121070
+ncitCode: C121070
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121070
+parentConceptId: C120996
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Child-Pugh Clinical Classification"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh"
+  - CPS01
+  - "Child-Pugh Clinical Classification Question"
+shortName: "Child-Pugh - Serum Bilirubin"
+synonyms:
+  - "CPS01-Serum Bilirubin"
+  - CPS0103
+  - "Child-Pugh - Serum Bilirubin"
+resultScales:
+  - Ordinal
+definition: "Child-Pugh Classification (Child-Pugh) Serum bilirubin, mg/dL."
+coding:
+  - code: 1975-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "2 to 3"
+      - "<2"
+      - ">3"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CHILD-PUGH CLASSIFICATION"
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mg/dL"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "INVESTIGATOR"

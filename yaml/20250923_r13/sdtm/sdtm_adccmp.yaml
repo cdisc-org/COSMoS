@@ -81,7 +81,8 @@ variables:
       - "Very mild - 1 or 2 instances of misunderstanding"
       - "Mild - 3-5 instances of misunderstanding"
       - "Moderate - requires several repetitions and rephrasings"
-      - "Moderately severe - patient only occasionally responds correctly (i.e.,"
+      - "Moderately severe - patient only occasionally responds correctly (i.e., yes/no questions)"
+      - "Severe - patient rarely responds to questions appropriately, not due to poverty of speech"
     role: Qualifier
     dataType: float
     length: 4

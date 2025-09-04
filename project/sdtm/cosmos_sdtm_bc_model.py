@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-07-29T11:33:16
+# Generation date: 2025-09-04T13:40:17
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -606,6 +606,14 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="is the period of time for the test in"))
         setattr(cls, "is a reference range value for",
             PermissibleValue(text="is a reference range value for"))
+        setattr(cls, "is the identifier for the device which collected data for the test in",
+            PermissibleValue(text="is the identifier for the device which collected data for the test in"))
+        setattr(cls, "is the substance bound to the analyte in",
+            PermissibleValue(text="is the substance bound to the analyte in"))
+        setattr(cls, "is the operational objective of the test in",
+            PermissibleValue(text="is the operational objective of the test in"))
+        setattr(cls, "is the period of time to be considered when answering the question in",
+            PermissibleValue(text="is the period of time to be considered when answering the question in"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 

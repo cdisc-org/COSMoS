@@ -1,0 +1,70 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C100381
+ncitCode: C100381
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100381
+parentConceptId: C100109
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Brief Psychiatric Rating Scale A Clinical Classification
+  - "BPRS-A"
+  - BPRSA1
+  - "BPRS-Anchored Clinical Classification Question"
+shortName: "BPRS-Anchored - Hostility"
+synonyms:
+  - "BPRSA1-Hostility"
+  - BPRSA110
+  - "BPRS-Anchored - Hostility"
+resultScales:
+  - Ordinal
+definition: "Brief Psychiatric Rating Scale-Anchored (BPRS-A) Hostility."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "9"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Not reported"
+      - "Very Mild"
+      - "Mild"
+      - "Moderate"
+      - "Moderately Severe"
+      - "Severe"
+      - "Very Severe"
+      - "Cannot be assessed adequately because of severe formal thought disorder, uncooperativeness, or marked evasiveness/guardedness"
+      - "or Not assessed"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "BPRS-A"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82534
+    ncitCode: C82534
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82534
+    shortName: Evaluation Interval
+    dataType: string
+    exampleSet:
+      - "-P1W"

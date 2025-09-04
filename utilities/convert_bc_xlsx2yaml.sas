@@ -283,27 +283,57 @@
 %let OverrideDate=%str(2025-09-23);
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DCS_NEW));
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_SC_EDITS));
+%generate_yaml_from_bc(excel_file=&excel_file, type=dcs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DCS_NEW));
+%generate_yaml_from_bc(excel_file=&excel_file, type=sc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_SC_EDITS));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog_FT.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog TotalScore));
+%generate_yaml_from_bc(excel_file=&excel_file, type=adas, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ADAS-Cog TotalScore));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_QRS_CGI.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_CGI));
+%generate_yaml_from_bc(excel_file=&excel_file, type=cgi, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_CGI));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_QRS_PGI.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_PGI));
+%generate_yaml_from_bc(excel_file=&excel_file, type=pgi, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_PGI));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CES.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_CES));
+%generate_yaml_from_bc(excel_file=&excel_file, type=ces, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_CES));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ECOG.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ECOG));
+%generate_yaml_from_bc(excel_file=&excel_file, type=ecog, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_ECOG));
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_rutgeerts.xlsx;
-%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RUTGEERTS));
+%generate_yaml_from_bc(excel_file=&excel_file, type=rutgeerts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RUTGEERTS));
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_DHT_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=dht_gluc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_GLUC_Edit));
+
+%let excel_file=&root/curation/draft/package13/R13_bc_SDTM_IS_NEW.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_IS));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=qrs_loinc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_QRS_LOINC_EDITS));
+%generate_yaml_from_bc(excel_file=&excel_file, type=eq5d, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EQ5D_EDITS));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-BOY.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=tan_boy, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS-BOY));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-GIRL.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=tan_girl, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS-GIRL));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CHILD-PUGH.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=child_pugh, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Child-Pugh));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_HBI.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=hbi, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_HBI));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_Lindus Health_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lindus, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Lindus_BC_Category_Edits));
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_BPRS-A.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=bprsa, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BPRS-A));
 
 /************************************************************************************************************************/
 

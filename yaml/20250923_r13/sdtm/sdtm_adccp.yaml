@@ -85,7 +85,7 @@ variables:
       - "2 forms drawn incorrectly"
       - "3 forms drawn incorrectly"
       - "4 forms drawn incorrectly (but one or more side/section of at least one shape drawn)"
-      - "No figures drawn, no recognizable attempt at drawing any side/sec"
+      - "No figures drawn, no recognizable attempt at drawing any side/section of any figure"
     role: Qualifier
     dataType: float
     length: 4

@@ -1,0 +1,44 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C139554
+ncitCode: C139554
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139554
+parentConceptId: C139532
+categories:
+  - Staging
+  - Breast Cancer
+shortName: Breast Cancer by AJCC v8 Prognostic Stage
+synonyms:
+  - Breast Carcinoma by AJCC v8 Prognostic Stage
+  - Breast Cancer by AJCC v8 Prognostic Stage Group
+  - TNM Staging
+resultScales:
+  - Ordinal
+definition: A term that refers to the staging of breast cancer, following the rules of the TNM AJCC v8 classification system. This staging system should be used in countries where HER2, ER, and PR biomarker tests are routinely performed for patient care (U.S., Canada, etc.). (from AJCC 8th Ed.)
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Stage 0"
+      - "Stage I"
+      - "Stage II"
+      - "Stage III"
+      - "Stage IV"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
