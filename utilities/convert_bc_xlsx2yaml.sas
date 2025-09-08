@@ -275,7 +275,6 @@
 %let excel_file=&root/curation/package12/R12_BC_SDTM_QRS_KPS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=kps, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_KPS));
 */
-
 %let release=13;
 %let package=20250923;
 %let folder=20250923_r13;

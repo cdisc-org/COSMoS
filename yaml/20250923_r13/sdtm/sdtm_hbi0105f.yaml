@@ -2,7 +2,7 @@ packageDate: "2025-09-23"
 packageType: sdtm
 datasetSpecializationId: HBI0105F
 domain: RS
-shortName: "HBI01-Complication: Anal Fistula"
+shortName: "HBI - Complication: Anal Fissures"
 source: RS.RSTESTCD
 sdtmigStartVersion: "3-2"
 sdtmigEndVersion: ""
@@ -34,7 +34,7 @@ variables:
       submissionValue: HBI01TN
     assignedTerm:
       conceptId: C191053
-      value: "HBI01-Complication: Anal Fistula"
+      value: "HBI01-Complication: Anal Fissures"
     role: Qualifier
     relationship:
       subject: RSTEST

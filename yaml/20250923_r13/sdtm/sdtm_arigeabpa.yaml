@@ -55,7 +55,7 @@ variables:
       value: "PEANUT ANTIGEN"
     role: Qualifier
     relationship:
-      subject: ISBDAGT
+      subject: ISBDAGNT
       linkingPhrase: is the substance bound to the analyte in
       predicateTerm: IS_ATTRIBUTE_FOR
       object: ISTESTCD
