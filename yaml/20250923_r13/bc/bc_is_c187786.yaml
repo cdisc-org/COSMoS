@@ -62,7 +62,7 @@ dataElementConcepts:
   - conceptId: C218437
     ncitCode: C218437
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C218437
-    shortName: Test Operational Objective
+    shortName: Immunogenicity Specimen Test Operational Objective
     dataType: string
     exampleSet:
       - "Screen"

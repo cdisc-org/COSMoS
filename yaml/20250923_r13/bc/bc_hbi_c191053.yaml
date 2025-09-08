@@ -11,11 +11,11 @@ categories:
   - HBI
   - HBI01
   - "Harvey-Bradshaw Index Clinical Classification Question"
-shortName: "HBI - Complication: Anal Fistula"
+shortName: "HBI - Complication: Anal Fissures"
 synonyms:
-  - "HBI01-Complication: Anal Fistula"
+  - "HBI - Complication: Anal Fissures"
+  - "HBI01-Complication: Anal Fissures"
   - HBI0105F
-  - "HBI - Complication: Anal Fistula"
 resultScales:
   - Ordinal
 definition: "Harvey-Bradshaw Index (HBI) Complication: Anal fissures."

@@ -68,7 +68,7 @@ libname data "&root/utilities/data";
     actual_value=&actual;
     comment=&comment;
 
-    putlog "WARN" "ING: &type " _excel_file_= _tab_= collection_group_id= collection_item=
+    putlog "&severity.: &type " _excel_file_= _tab_= collection_group_id= collection_item=
       %if &actual NE "" %then &actual.= ;
       %if &expected NE "" %then &expected.= ;
       comment;
