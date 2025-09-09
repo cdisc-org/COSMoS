@@ -49,7 +49,7 @@ variables:
     codelist:
       conceptId: C118971
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
-      submissionValue: RSCAT
+      submissionValue: CCCAT
     assignedTerm:
       conceptId: C100761
       value: "BPRS-A"

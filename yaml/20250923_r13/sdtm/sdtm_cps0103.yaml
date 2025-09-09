@@ -49,7 +49,7 @@ variables:
     codelist:
       conceptId: C118971
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
-      submissionValue: RSCAT
+      submissionValue: CCCAT
     assignedTerm:
       conceptId: C121007
       value: "CHILD-PUGH CLASSIFICATION"
@@ -163,7 +163,7 @@ variables:
     mandatoryValue: false
     originType: Assigned
     originSource: Sponsor
-    comparator: IN
+    comparator: EQ
   - name: RSDTC
     dataElementConceptId: C82515
     isNonStandard: false

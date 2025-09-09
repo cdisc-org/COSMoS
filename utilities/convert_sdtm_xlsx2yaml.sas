@@ -317,7 +317,7 @@ run;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 %let OverrideDate=%str(2025-09-23);
 
-%let checkrelationships=1;
+%let checkrelationships=0;
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC_EDITS), debug=0, check_relationships=&checkrelationships);
