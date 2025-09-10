@@ -51,7 +51,6 @@
     
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog / "WARNING: &type " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -157,13 +156,17 @@
       %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
+      if count = 0 then do;
+        if definition ne definition2 then putlog / "WAR" "NING: (DEFINITION) " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
+      end;
+
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;
       end;
-
+      
       if not missing(system_name) then do;
         %add2issues_bc(missing(system) or missing(code), 
                        %str(BC_SYSTEM_CODE_MISSING), 

@@ -1,0 +1,16 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C159204
+ncitCode: C159204
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C159204
+categories:
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Molecular Analysis
+  - Molecular Genetic Variation
+  - Gene Abnormality
+shortName: Fanconi Anemia Complementation Group Gene Mutation
+synonyms:
+  - BRCA2 and FANC Gene Mutations
+  - Fanconi Anemia Group Gene Mutation
+definition: A change in the nucleotide sequence for a gene that is a member of the Fanconi anemia complementation group.

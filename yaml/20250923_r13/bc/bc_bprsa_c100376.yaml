@@ -47,8 +47,7 @@ dataElementConcepts:
       - "Moderately Severe"
       - "Severe"
       - "Very Severe"
-      - "Cannot be assessed adequately because of severe formal thought disorder, uncooperativeness, or marked evasiveness/guardedness"
-      - "or Not assessed"
+      - "Cannot be assessed adequately because of severe formal thought disorder, uncooperativeness, or marked evasiveness/guardedness, or Not assessed"
   - conceptId: C25372
     ncitCode: C25372
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372

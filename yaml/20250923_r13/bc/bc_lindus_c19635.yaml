@@ -3,12 +3,13 @@ packageType: bc
 conceptId: C19635
 ncitCode: C19635
 href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19635
-parentConceptId: C146692
+parentConceptId: C159204
 categories:
   - Genetic Testing
   - Gene Expression Analysis
   - Molecular Analysis
-  - Genetic Molecular Analysis
+  - Molecular Genetic Variation
+  - Gene Abnormality
 shortName: BRCA1 Gene Mutation
 synonyms:
   - BRCA1

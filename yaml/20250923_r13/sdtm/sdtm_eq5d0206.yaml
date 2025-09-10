@@ -516,9 +516,9 @@ variables:
     role: Timing
     relationship:
       subject: QSEVINTX
-      linkingPhrase: is the period of time for the test in
+      linkingPhrase: is the period of time to be considered when answering the question in
       predicateTerm: IS_TIMING_FOR
-      object: QSDTC
+      object: QSTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
     originType: Assigned
