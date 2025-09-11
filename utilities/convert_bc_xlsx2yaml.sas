@@ -334,6 +334,10 @@
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_BPRS-A.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=bprsa, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BPRS-A));
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits_collections.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_NEW));
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_EDITS));
+
 /************************************************************************************************************************/
 
 ods listing close;

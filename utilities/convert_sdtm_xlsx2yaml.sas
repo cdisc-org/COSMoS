@@ -363,6 +363,10 @@ run;
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_BPRS-A.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_BPRS-A), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits_collections.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EDITS), debug=0, check_relationships=&checkrelationships);
+
+
 /************************************************************************************************************************/
 
 ods listing close;

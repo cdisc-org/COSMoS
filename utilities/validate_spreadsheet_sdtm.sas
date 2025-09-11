@@ -255,6 +255,12 @@ title01 "&now";
 %let excel_file=&root/curation/package11/BC_Package_R11_AE_Edit.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_AE)$, dsout=sdtm11_07, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits_collections.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_NEW)$, dsout=bc13_20);
+%ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc13_21);
+%ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
+
+
 
 /* Package 12 - */
 
