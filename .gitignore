@@ -1,4 +1,5 @@
 .vscode/settings.json
+.DS_Store
 .hypothesis/
 __pycache__/
 *.code-workspace
