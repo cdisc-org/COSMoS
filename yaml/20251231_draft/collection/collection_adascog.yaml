@@ -48,7 +48,7 @@ items:
         value: "Y"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "[NOT SUBMITTED]; FTSTAT = NOT DONE when FTTESTCD = FTALL"
+      sdtmAnnotation: "[NOT SUBMITTED]; FTSTAT = NOT DONE"
       sdtmVariables:
         -  "FTSTAT"
   - name: ADASCOG_FTDAT

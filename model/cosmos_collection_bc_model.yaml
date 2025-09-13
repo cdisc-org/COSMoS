@@ -318,8 +318,8 @@ enums:
 
   implementationOptionEnum:
     permissible_values:
-      Horizontal:
-      Vertical:
+      Normalized:
+      Denormalized:
 
   CollectionItemDataTypeEnum:
     permissible_values:

@@ -198,9 +198,11 @@ items:
         value: "Y"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "SUPRIOR"
+      sdtmAnnotation: "[NOT SUBMITTED];SUSTRF;SUSTRTPT;SUSTTPT"
       sdtmVariables:
-        -  "SUPRIOR"
+        -  "SUSTRF"
+        -  "SUSTRTPT"
+        -  "SUSTTPT"
   - name: SUENDAT
     variableName: SUENDAT
     dataElementConceptId: C83419
@@ -246,7 +248,8 @@ items:
         value: "Y"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "SUENRF;SUENRTPT"
+      sdtmAnnotation: "[NOT SUBMITTED];SUENRF;SUENRTPT;SUENTPT"
       sdtmVariables:
         -  "SUENRF"
         -  "SUENRTPT"
+        -  "SUENTPT"

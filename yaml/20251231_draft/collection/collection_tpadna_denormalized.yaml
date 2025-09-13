@@ -1,0 +1,143 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: TPADNA_DENORMALIZED
+shortName: Treponema pallidum DNA by Nucleic Acid Amplification (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+domain: MB
+biomedicalConceptId: C198341
+sdtmDatasetSpecializationId: TPADNA
+items:
+  - name: TPADNA_MBCAT
+    variableName: MBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "MBCAT"
+      sdtmVariables:
+        -  "MBCAT"
+  - name: TPADNA_MBSCAT
+    variableName: MBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "MBSCAT"
+      sdtmVariables:
+        -  "MBSCAT"
+  - name: TPADNA_MBNAM
+    variableName: MBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "MBNAM"
+      sdtmVariables:
+        -  "MBNAM"
+  - name: TPADNA_MBDAT
+    variableName: MBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "MBDAT"
+      sdtmVariables:
+        -  "MBDAT"
+  - name: TPADNA_MBSPEC
+    variableName: MBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    valueList:
+      - displayValue: "Blood"
+        value: "BLOOD"
+      - displayValue: "Cerebrospinal Fluid"
+        value: "CEREBROSPINAL FLUID"
+      - displayValue: "Fluid"
+        value: "FLUID"
+      - displayValue: "Swabbed Material"
+        value: "SWABBED MATERIAL"
+      - displayValue: "Urine"
+        value: "URINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "MBSPEC"
+      sdtmVariables:
+        -  "MBSPEC"
+  - name: TPADNA_MBORRES
+    variableName: MBORRES
+    dataElementConceptId: C70856
+    prompt: Treponema pallidum DNA
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "MBORRES"
+      sdtmVariables:
+        -  "MBORRES"
+  - name: TPADNA_MBTSTDTL
+    variableName: MBTSTDTL
+    dataElementConceptId: C117062
+    prompt: Test Detail
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: true 
+    codelist:
+      submissionValue: MBFTSDTL
+      conceptId: C174225
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174225
+    prepopulatedValue:
+      value: "DETECTION"
+      conceptId: C174330
+    sdtmTarget:
+      sdtmAnnotation: "MBTSTDTL = DETECTION"
+      sdtmVariables:
+        -  "MBTSTDTL"
+  - name: TPADNA_MBMETHOD
+    variableName: MBMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: METHOD
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+    prepopulatedValue:
+      value: "LINE PROBE ASSAY"
+      conceptId: C102656
+    sdtmTarget:
+      sdtmAnnotation: "MBMETHOD = LINE PROBE ASSAY"
+      sdtmVariables:
+        -  "MBMETHOD"

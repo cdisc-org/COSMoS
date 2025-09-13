@@ -1,0 +1,54 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: PATCHSURVEYACCEPTABILITY
+shortName: "TTS Acceptability Survey - Patch Acceptability"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: QS
+biomedicalConceptId: NEW_LZZT4
+sdtmDatasetSpecializationId: PATCHSURVEYACCEPTABILITY
+items:
+  - name: TTSACC04_QSORRES
+    variableName: QSORRES
+    dataElementConceptId: C46126
+    questionText: Based on the experience of applying and wearing this patch, if the patient were prescribed a drug for Alzheimer's disease and was given the choice of this patch or an oral pill given twice daily (assume that both formulations are equally effective), would you (the caregiver)
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    valueList:
+      - displayValue: "Insist that the patient receive an oral pill"
+        value: "Insist that the patient receive an oral pill"
+      - displayValue: "Prefer that the patient receive an oral pill"
+        value: "Prefer that the patient receive an oral pill"
+      - displayValue: "Have no preference (neutral) for an oral or patch formulation"
+        value: "Have no preference (neutral) for an oral or patch formulation"
+      - displayValue: "Prefer that the patient receive a patch"
+        value: "Prefer that the patient receive a patch"
+      - displayValue: "Insist that the patient receive a patch"
+        value: "Insist that the patient receive a patch"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "QSORRES when QSTESTCD = TTSACC04- Durability"
+      sdtmVariables:
+        -  "QSORRES"
+        -  "QSTESTCD"
+        -  "QSTEST"
+  - name: TTSACC04_QSEVAL
+    variableName: QSEVAL
+    dataElementConceptId: C51824
+    prompt: Evaluator
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "CAREGIVER"
+      conceptId: C17445
+    sdtmTarget:
+      sdtmAnnotation: "QSEVAL = CAREGIVER"
+      sdtmVariables:
+        -  "QSEVAL"

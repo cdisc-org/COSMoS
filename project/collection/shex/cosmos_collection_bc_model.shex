@@ -63,8 +63,8 @@ linkml:Sparqlpath xsd:string
           <https://www.cdisc.org/cosmos/collection_v1.0standardStartVersion> @linkml:String ;
           <https://www.cdisc.org/cosmos/collection_v1.0standardEndVersion> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0implementationOption> [
-             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Horizontal>
-             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Vertical> ] ? ;
+             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Normalized>
+             <https://www.cdisc.org/cosmos/collection_v1.0ImplementationOptionEnum#Denormalized> ] ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0scenario> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0domain> @linkml:String ? ;
           <https://www.cdisc.org/cosmos/collection_v1.0biomedicalConceptId> @linkml:String ? ;
@@ -133,4 +133,3 @@ linkml:Sparqlpath xsd:string
        rdf:type [ <https://www.cdisc.org/cosmos/collection_v1.0SDTMTarget> ] ?
     )
 }
-

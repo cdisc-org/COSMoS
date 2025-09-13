@@ -5,7 +5,6 @@ shortName: Coffee Use History
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-scenario: LZZT - 360i
 domain: SU
 biomedicalConceptId: C201990
 sdtmDatasetSpecializationId: COFFEEHX

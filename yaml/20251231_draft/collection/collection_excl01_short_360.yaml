@@ -5,7 +5,6 @@ shortName: Exclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-scenario: 360i
 domain: IE
 biomedicalConceptId: C25370
 sdtmDatasetSpecializationId: EXCL01

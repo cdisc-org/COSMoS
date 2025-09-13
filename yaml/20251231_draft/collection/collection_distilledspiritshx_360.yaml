@@ -5,7 +5,6 @@ shortName: Distilled Spirits Use History
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-scenario: LZZT - 360i
 domain: SU
 biomedicalConceptId: C81229
 sdtmDatasetSpecializationId: DISTILLEDSPIRITSHX

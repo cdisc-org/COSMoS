@@ -1,0 +1,118 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: AVCOND_NORMALIZED
+shortName: Atrioventricular Conduction ECG Assessment (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Normalized
+scenario: LOCAL READING
+domain: EG
+biomedicalConceptId: C111131
+sdtmDatasetSpecializationId: AVCOND
+items:
+  - name: EGDAT
+    variableName: EGDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGDTC"
+      sdtmVariables:
+        -  "EGDTC"
+  - name: EGMETHOD
+    variableName: EGMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: EGMETHOD
+      conceptId: C71151
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
+    prepopulatedValue:
+      value: "12 LEAD STANDARD"
+      conceptId: C71102
+    sdtmTarget:
+      sdtmAnnotation: "EGMETHOD = 12 LEAD STANDARD"
+      sdtmVariables:
+        -  "EGMETHOD"
+  - name: EGPOS
+    variableName: EGPOS
+    dataElementConceptId: C62164
+    prompt: Position
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Semi-Fowlers"
+        value: "SEMI-FOWLERS"
+      - displayValue: "Semi-Recumbent"
+        value: "SEMI-RECUMBENT"
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGPOS"
+      sdtmVariables:
+        -  "EGPOS"
+  - name: EGTPT
+    variableName: EGTPT
+    prompt: Timepoint
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+  - name: EGTEST
+    variableName: EGTEST
+    prompt: Test
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: EGTEST
+      conceptId: C71152
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71152
+    prepopulatedValue:
+      value: "Atrioventricular Conduction"
+      conceptId: C111131
+    sdtmTarget:
+      sdtmAnnotation: "EGTEST = Atrioventricular Conduction"
+      sdtmVariables:
+        -  "EGTEST"
+        -  "EGTESTCD"
+  - name: EGORRES
+    variableName: EGORRES
+    dataElementConceptId: C70856
+    prompt: Result
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "EGORRES when EGTESTCD = AVCOND"
+      sdtmVariables:
+        -  "EGORRES"
+        -  "EGTEST"
+        -  "EGTESTCD"

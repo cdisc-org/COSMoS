@@ -1,0 +1,78 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: SITETRANSFER
+shortName: Site Transfer
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: Site Transfer
+domain: DS
+biomedicalConceptId: C142742
+sdtmDatasetSpecializationId: SITETRANSFER
+items:
+  - name: DSCAT
+    variableName: DSCAT
+    dataElementConceptId: C82977
+    prompt: Disposition Category
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: true 
+    codelist:
+      submissionValue: DSCAT
+      conceptId: C74558
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74558
+    prepopulatedValue:
+      value: "OTHER EVENT"
+      conceptId: C150824
+    sdtmTarget:
+      sdtmAnnotation: "DSCAT"
+      sdtmVariables:
+        -  "DSCAT"
+  - name: DSSCAT
+    variableName: DSSCAT
+    dataElementConceptId: C25692
+    prompt: Disposition Subcategory
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "DSSCAT"
+      sdtmVariables:
+        -  "DSSCAT"
+  - name: DSDECOD
+    variableName: DSDECOD
+    dataElementConceptId: C82977
+    prompt: Disposition Event
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    codelist:
+      submissionValue: OTHEVENT
+      conceptId: C150811
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C150811
+    prepopulatedValue:
+      value: "SITE TRANSFER"
+      conceptId: C186208
+    sdtmTarget:
+      sdtmAnnotation: "DSDECOD"
+      sdtmVariables:
+        -  "DSDECOD"
+  - name: DSSTDAT
+    variableName: DSSTDAT
+    dataElementConceptId: C82517
+    questionText: What was the date of the site transfer?
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "DSSTDTC"
+      sdtmVariables:
+        -  "DSSTDTC"

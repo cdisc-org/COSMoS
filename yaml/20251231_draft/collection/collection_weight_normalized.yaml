@@ -1,0 +1,84 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: WEIGHT_NORMALIZED
+shortName: Weight (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Normalized
+domain: VS
+biomedicalConceptId: C81328
+sdtmDatasetSpecializationId: WEIGHT
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    questionText: What was the date of the measurement?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "VSDTC"
+      sdtmVariables:
+        -  "VSDTC"
+  - name: VSTEST
+    variableName: VSTEST
+    prompt: Test
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    prepopulatedValue:
+      value: "Weight"
+      conceptId: C25208
+    sdtmTarget:
+      sdtmAnnotation: "VSTEST = Weight"
+      sdtmVariables:
+        -  "VSTEST"
+        -  "VSTESTCD"
+  - name: VSORRES
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    questionText: What was the result of the Weight measurement?
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 4
+    significantDigits: 1
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "VSORRES when VSTESTCD = WEIGHT"
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: VSORRESU
+    variableName: VSORRESU
+    dataElementConceptId: C48208
+    questionText: What was the unit of the Weight measurement?
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 2
+    displayHidden: false
+    codelist:
+      submissionValue: VSRESU
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+    valueList:
+      - displayValue: "LB"
+        value: "LB"
+      - displayValue: "g"
+        value: "g"
+      - displayValue: "kg"
+        value: "kg"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "VSORRESU when VSTESTCD = WEIGHT"
+      sdtmVariables:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"

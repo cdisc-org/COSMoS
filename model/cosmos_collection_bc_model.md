@@ -1,5 +1,10 @@
 ```mermaid
 erDiagram
+CodeList {
+    string submissionValue  
+    string conceptId  
+    uri href  
+}
 DataCollectionGroup {
     date packageDate  
     PackageTypeEnum packageType  
@@ -36,11 +41,6 @@ PrepopulatedValue {
     string value  
     string conceptId  
 }
-CodeList {
-    string submissionValue  
-    string conceptId  
-    uri href  
-}
 SDTMTarget {
     string sdtmAnnotation  
     stringList sdtmVariables  
@@ -49,9 +49,9 @@ SDTMTarget {
 
 DataCollectionGroup ||--}| DataCollectionItem : "items"
 DataCollectionItem ||--|o CodeList : "codelist"
-DataCollectionItem ||--}o ListValue : "valueList"
 DataCollectionItem ||--|o PrepopulatedValue : "prepopulatedValue"
 DataCollectionItem ||--|o SDTMTarget : "sdtmTarget"
+DataCollectionItem ||--}o ListValue : "valueList"
 
 ```
 

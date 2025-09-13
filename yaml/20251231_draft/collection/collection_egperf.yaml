@@ -32,7 +32,7 @@ items:
   - name: EGDAT
     variableName: EGDAT
     dataElementConceptId: C82515
-    questionText: Date of Assessment
+    prompt: Date of Assessment
     orderNumber: 2
     mandatoryVariable: false
     dataType: date

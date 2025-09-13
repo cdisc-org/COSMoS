@@ -1,0 +1,198 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: KBLD_DENORMALIZED
+shortName: Potassium Concentration in Blood (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C64853
+sdtmDatasetSpecializationId: KBLD
+items:
+  - name: K_LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "CHEMISTRY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: K_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: K_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: K_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: K_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "BLOOD"
+      conceptId: C12434
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC = BLOOD"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: K_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: K_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Potassium
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = K"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: K_LBORRESU
+    variableName: LBORRESU
+    dataElementConceptId: C64567
+    prompt: Unit
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "mEq/L"
+        value: "mEq/L"
+      - displayValue: "mEq/dL"
+        value: "mEq/dL"
+      - displayValue: "mmol/L"
+        value: "mmol/L"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBORRESU when LBTESTCD = K"
+      sdtmVariables:
+        -  "LBORRESU"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: K_LBORNRLO
+    variableName: LBORNRLO
+    prompt: Normal Range Lower Limit
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRLO"
+      sdtmVariables:
+        -  "LBORNRLO"
+  - name: K_LBORNRHI
+    variableName: LBORNRHI
+    prompt: Normal Range Upper Limit
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRHI"
+      sdtmVariables:
+        -  "LBORNRHI"
+  - name: K_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

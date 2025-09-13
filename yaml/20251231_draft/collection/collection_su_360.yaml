@@ -5,7 +5,6 @@ shortName: Substance Use Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
-scenario: LZZT - 360i
 domain: SU
 biomedicalConceptId: C219639
 items:

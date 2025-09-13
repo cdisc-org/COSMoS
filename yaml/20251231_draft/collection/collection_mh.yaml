@@ -3,9 +3,8 @@ packageType: collection
 collectionSpecializationId: MH
 shortName: Medical History Yes No Indicator
 standard: CDASHIG
-standardStartVersion: "2-3"
+standardStartVersion: "2-1"
 standardEndVersion:  
-scenario: General Medical History
 domain: MH
 biomedicalConceptId: C85522
 items:

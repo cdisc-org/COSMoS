@@ -1,0 +1,144 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: MACROCYBLD_DENORMALIZED
+shortName: Macrocytes in Blood (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C64821
+sdtmDatasetSpecializationId: MACROCYBLD
+items:
+  - name: MACROCY_LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    prepopulatedValue:
+      value: "HEMATOLOGY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT = HEMATOLOGY"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: MACROCY_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: MACROCY_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: MACROCY_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: MACROCY_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "BLOOD"
+      conceptId: C12434
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC = BLOOD"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: MACROCY_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: MACROCY_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Macrocytes
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = MACROCY"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: MACROCY_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

@@ -269,8 +269,8 @@
         "ImplementationOptionEnum": {
             "description": "",
             "enum": [
-                "Horizontal",
-                "Vertical"
+                "Normalized",
+                "Denormalized"
             ],
             "title": "ImplementationOptionEnum",
             "type": "string"
@@ -464,3 +464,4 @@
     "type": "object",
     "version": null
 }
+

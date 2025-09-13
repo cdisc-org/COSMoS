@@ -1,0 +1,239 @@
+packageDate: "2025-12-31"
+packageType: collection
+collectionSpecializationId: CMFREE_NORMALIZED
+shortName: Concomitant Medication Free Text Format (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Normalized
+domain: CM
+biomedicalConceptId: C53630
+sdtmDatasetSpecializationId: CMFREE
+items:
+  - name: CMCAT
+    variableName: CMCAT
+    dataElementConceptId: C25372
+    prompt: Concomitant Medication Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "CMCAT"
+      sdtmVariables:
+        -  "CMCAT"
+  - name: CMSCAT
+    variableName: CMSCAT
+    dataElementConceptId: C25692
+    prompt: Concomitant Medication Subcategory
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    sdtmTarget:
+      sdtmAnnotation: "CMSCAT"
+      sdtmVariables:
+        -  "CMSCAT"
+  - name: CMTRT
+    variableName: CMTRT
+    dataElementConceptId: C70902
+    prompt: Concomitant Medication
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMTRT"
+      sdtmVariables:
+        -  "CMTRT"
+  - name: CMINDC
+    variableName: CMINDC
+    dataElementConceptId: C83085
+    prompt: Indication
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMINDC"
+      sdtmVariables:
+        -  "CMINDC"
+  - name: CMDSTXT
+    variableName: CMDSTXT
+    prompt: Dose
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMDOSE;CMDOSTXT"
+      sdtmVariables:
+        -  "CMDOSE"
+        -  "CMDOSTXT"
+  - name: CMDOSU
+    variableName: CMDOSU
+    dataElementConceptId: C83034
+    prompt: Unit
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "CMDOSU"
+      sdtmVariables:
+        -  "CMDOSU"
+  - name: CMDOSFRM
+    variableName: CMDOSFRM
+    dataElementConceptId: C83110
+    prompt: Dose Form
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: FRM
+      conceptId: C66726
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66726
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "CMDOSFRM"
+      sdtmVariables:
+        -  "CMDOSFRM"
+  - name: CMDOSFRQ
+    variableName: CMDOSFRQ
+    dataElementConceptId: C83042
+    prompt: Frequency
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: FREQ
+      conceptId: C71113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71113
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "CMDOSFRQ"
+      sdtmVariables:
+        -  "CMDOSFRQ"
+  - name: CMROUTE
+    variableName: CMROUTE
+    dataElementConceptId: C83120
+    prompt: Route
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    codelist:
+      submissionValue: ROUTE
+      conceptId: C66729
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66729
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "CMROUTE"
+      sdtmVariables:
+        -  "CMROUTE"
+  - name: CMSTDAT
+    variableName: CMSTDTC
+    dataElementConceptId: C83235
+    prompt: Start Date
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMSTDTC"
+      sdtmVariables:
+        -  "CMSTDTC"
+  - name: CMSTTIM
+    variableName: CMSTDTC
+    dataElementConceptId: C83235
+    prompt: Start Time
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMSTDTC"
+      sdtmVariables:
+        -  "CMSTDTC"
+  - name: CMPRIOR
+    variableName: CMPRIOR
+    prompt: Prior to Study
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED];CMSTRF;CMSTRTPT;CMSTTPT"
+      sdtmVariables:
+        -  "CMSTRF"
+        -  "CMSTRTPT"
+        -  "CMSTTPT"
+  - name: CMENDAT
+    variableName: CMENDTC
+    dataElementConceptId: C83225
+    prompt: End Date
+    orderNumber: 13
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMENDTC"
+      sdtmVariables:
+        -  "CMENDTC"
+  - name: CMENTIM
+    variableName: CMENDTC
+    dataElementConceptId: C83225
+    prompt: End Time
+    orderNumber: 14
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    sdtmTarget:
+      sdtmAnnotation: "CMENDTC"
+      sdtmVariables:
+        -  "CMENDTC"
+  - name: CMONGO
+    variableName: CMONGO
+    prompt: Ongoing
+    orderNumber: 15
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED];CMENRF;CMENRTPT;CMENTPT"
+      sdtmVariables:
+        -  "CMENRF"
+        -  "CMENRTPT"
+        -  "CMENTPT"

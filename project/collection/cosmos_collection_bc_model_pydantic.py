@@ -79,8 +79,8 @@ class PackageTypeEnum(str, Enum):
 
 
 class ImplementationOptionEnum(str, Enum):
-    Horizontal = "Horizontal"
-    Vertical = "Vertical"
+    Normalized = "Normalized"
+    Denormalized = "Denormalized"
 
 
 class CollectionItemDataTypeEnum(str, Enum):

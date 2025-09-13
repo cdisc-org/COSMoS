@@ -11,8 +11,8 @@ enum CollectionItemDataTypeEnum
 
 enum ImplementationOptionEnum
   {
-    Horizontal
-    Vertical
+    Normalized
+    Denormalized
   }
 
 enum PackageTypeEnum
@@ -88,4 +88,3 @@ type SDTMTarget
     sdtmVariables: [String]
     sdtmTargetMapping: String
   }
-

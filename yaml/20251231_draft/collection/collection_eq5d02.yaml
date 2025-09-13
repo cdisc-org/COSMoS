@@ -48,7 +48,7 @@ items:
         value: "Y"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "[NOT SUBMITTED]; QSSTAT = NOT DONE when QSTESTCD = QSALL"
+      sdtmAnnotation: "[NOT SUBMITTED]; QSSTAT = NOT DONE"
       sdtmVariables:
         -  "QSSTAT"
   - name: EQ5D02_QSDAT
