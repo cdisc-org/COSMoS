@@ -1,0 +1,30 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C83063
+ncitCode: C83063
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83063
+parentConceptId: C82438
+categories:
+  - Eligibility Criteria
+  - Inclusion Exclusion Criteria Yes No Indicator
+shortName: Inclusion Exclusion Criteria Yes No Indicator
+synonyms:
+  - Inclusion Exclusion Criteria Yes No Indicator
+  - IEYN
+resultScales:
+  - Nominal
+definition: An indication of whether inclusion or exclusion criteria has been met.
+dataElementConcepts:
+  - conceptId: C83063
+    ncitCode: C83063
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83063
+    shortName: Inclusion Exclusion Criteria Yes No Indicator
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,71 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C121072
+ncitCode: C121072
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121072
+parentConceptId: C120996
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Child-Pugh Clinical Classification"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh"
+  - CPS01
+  - "Child-Pugh Clinical Classification Question"
+shortName: "Child-Pugh - PT, Sec Prolonged"
+synonyms:
+  - "CPS01-PT, Sec Prolonged"
+  - CPS0105A
+  - "Child-Pugh - PT, Sec Prolonged"
+resultScales:
+  - Ordinal
+definition: "Child-Pugh Classification (Child-Pugh) Prothrombin time, sec prolonged."
+coding:
+  - code: 5902-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "4 to 6"
+      - "<4"
+      - ">6"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CHILD-PUGH CLASSIFICATION"
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "s"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "INVESTIGATOR"

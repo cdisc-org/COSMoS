@@ -7,11 +7,11 @@ standardStartVersion: "2-1"
 standardEndVersion:  
 scenario: LZZT - 360i
 domain: SU
-biomedicalConceptId: NEW_2
+biomedicalConceptId: C219639
 items:
   - name: SUYN
     variableName: SUYN
-    dataElementConceptId: NEW_2
+    dataElementConceptId: C219639
     questionText: Information Not Obtained
     orderNumber: 1
     mandatoryVariable: true 

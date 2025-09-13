@@ -1,0 +1,40 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C93645
+ncitCode: C93645
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93645
+parentConceptId: C25180
+categories:
+  - Disease Response
+  - Recurrence
+  - Indicators
+shortName: Recurrence Indicator
+synonyms:
+  - Recurrence
+resultScales:
+  - Ordinal
+definition: Specifies whether this is a reappearance of an entity, event or activity.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

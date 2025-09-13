@@ -1,0 +1,77 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C128554
+ncitCode: C128554
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C128554
+parentConceptId: C177692
+categories:
+  - Laboratory Tests
+  - Immunology Tests
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Gene Products
+  - Genetic Variation
+  - Genetic Variation Analysis
+shortName: "PD-L1 Positive"
+synonyms:
+  - B7 Homolog 1 Positive
+  - "B7-H Positive"
+  - B7H1 Positive
+  - CD274 Antigen Positive
+  - CD274 Molecule Positive
+  - CD274 Positive
+  - "Expression of PD-L1"
+  - "PD-L1 Positive"
+  - "PD-L1+"
+  - PDCD1L1 Positive
+  - PDCD1LG1 Positive
+  - PDL1 Positive
+  - Positive
+  - Programmed Cell Death 1 Ligand 1 Positive
+resultScales:
+  - Ordinal
+definition: "An immunohistochemical test result that indicates expression of PD-L1 in a tissue sample of a primary or metastatic malignant neoplasm."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Blood"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"

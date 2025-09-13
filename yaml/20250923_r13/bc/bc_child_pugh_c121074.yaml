@@ -1,0 +1,56 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C121074
+ncitCode: C121074
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121074
+parentConceptId: C120996
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Child-Pugh Clinical Classification"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh"
+  - CPS01
+  - "Child-Pugh Clinical Classification Question"
+shortName: "Child-Pugh - Total Score"
+synonyms:
+  - "CPS01-Total Score"
+  - CPS0106
+  - "Child-Pugh - Total Score"
+resultScales:
+  - Ordinal
+definition: "Child-Pugh Classification (Child-Pugh) Child-Pugh total score."
+coding:
+  - code: 98152-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CHILD-PUGH CLASSIFICATION"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "INVESTIGATOR"

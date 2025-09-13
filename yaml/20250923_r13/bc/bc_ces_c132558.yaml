@@ -1,0 +1,57 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C132558
+ncitCode: C132558
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132558
+parentConceptId: C132527
+categories:
+  - QRS
+  - QRS Instrument Question
+  - Clinical or Research Assessment Questionnaire
+  - Combat Exposure Scale Questionnaire
+  - CES
+  - CES01
+  - CES Questionnaire Question
+shortName: "CES - Ever Surrounded by the Enemy"
+synonyms:
+  - "CES01-Ever Surrounded by the Enemy"
+  - CES0103
+  - "CES - Ever Surrounded by the Enemy"
+resultScales:
+  - Ordinal
+definition: Combat Exposure Scale (CES) Were you ever surrounded by the enemy?
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "1-2 times"
+      - "13-25 times"
+      - "26+ times"
+      - "3-12 times"
+      - "No"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CES"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C124689
+ncitCode: C124689
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124689
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: "Tanner Scale-Boy Clinical Classification Question"
+definition: "A question associated with the Tanner Scale-Boy clinical classification."

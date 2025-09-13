@@ -1,0 +1,57 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C132562
+ncitCode: C132562
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132562
+parentConceptId: C132527
+categories:
+  - QRS
+  - QRS Instrument Question
+  - Clinical or Research Assessment Questionnaire
+  - Combat Exposure Scale Questionnaire
+  - CES
+  - CES01
+  - CES Questionnaire Question
+shortName: "CES - In Danger of Being Injured or Killed"
+synonyms:
+  - "CES01-In Danger of Being Injured/Killed"
+  - CES0107
+  - "CES - In Danger of Being Injured or Killed"
+resultScales:
+  - Ordinal
+definition: Combat Exposure Scale (CES) How often were you in danger of being injured or killed (i.e., being pinned down, overrun, ambushed, near miss, etc.)?
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "1-2 times"
+      - "13-50 times"
+      - "3-12 times"
+      - "51+ times"
+      - "Never"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CES"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

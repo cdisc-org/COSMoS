@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C124690
+ncitCode: C124690
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124690
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: "Tanner Scale-Girl Clinical Classification Question"
+definition: "A question associated with the Tanner Scale-Girl clinical classification."

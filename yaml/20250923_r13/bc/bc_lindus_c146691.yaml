@@ -1,0 +1,56 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C146691
+ncitCode: C146691
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C146691
+categories:
+  - Diagnostic Procedures
+  - Genetic Testing
+  - Laboratory Tests
+  - Blood Cell Counts
+  - Tumor Results
+shortName: Circulating Tumor Cells Positive
+synonyms:
+  - CTC Positive
+  - Circulating Tumor Cells Present
+resultScales:
+  - Ordinal
+definition: An indication that tumor cells have been detected in a peripheral blood sample.
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"

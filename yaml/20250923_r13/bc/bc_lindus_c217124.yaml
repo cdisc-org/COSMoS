@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C217124
+ncitCode: C217124
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C217124
+categories:
+  - Diagnostic Procedures
+  - Biopsies
+shortName: Biopsy Procedure by Anatomic Location
+definition: A classification of biopsy procedures based on anatomic location.

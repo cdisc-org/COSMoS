@@ -1,0 +1,10 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C100109
+ncitCode: C100109
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100109
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: "BPRS-Anchored Clinical Classification Question"
+definition: "A question associated with the BPRS-Anchored clinical classification."

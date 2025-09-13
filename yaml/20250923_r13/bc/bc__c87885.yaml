@@ -1,0 +1,29 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C87885
+ncitCode: C87885
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87885
+parentConceptId: C25180
+categories:
+  - Event Occurrence Indicators
+  - Exposure
+shortName: Exposure Yes No Indicator
+synonyms:
+  - EXYN
+resultScales:
+  - Nominal
+definition: An indication of whether an exposure occurrence has taken place.
+dataElementConcepts:
+  - conceptId: C87885
+    ncitCode: C87885
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87885
+    shortName: Exposure Yes No Indicator
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

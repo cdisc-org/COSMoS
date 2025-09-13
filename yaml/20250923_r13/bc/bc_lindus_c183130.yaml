@@ -1,0 +1,59 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C183130
+ncitCode: C183130
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C183130
+categories:
+  - Diagnostic Procedures
+  - Genetic Testing
+  - Laboratory Tests
+  - Blood Cell Counts
+  - Tumor Results
+shortName: "Circulating Tumor-Derived DNA Positive"
+synonyms:
+  - "Cell-Free Circulating Tumor DNA"
+  - Circulating Tumor DNA
+  - "Circulating Tumor-Derived DNA"
+  - ctDNA
+  - ctdDNA
+resultScales:
+  - Ordinal
+definition: "An indication that circulating tumor-derived DNA has been detected in a sample."
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Overall Status"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"

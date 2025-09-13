@@ -1,0 +1,46 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C125201
+ncitCode: C125201
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C125201
+categories:
+  - Disease Response
+  - Disease Response Criteria
+  - Survival
+shortName: Overall Survival
+synonyms:
+  - Overall Survival Time
+resultScales:
+  - Temporal
+definition: A measure of the time until death from any cause.
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Days"
+      - "Weeks"
+      - "Months"
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

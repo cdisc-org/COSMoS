@@ -634,6 +634,18 @@
         },
         {
           "text": "is a reference range value for"
+        },
+        {
+          "text": "is the identifier for the device which collected data for the test in"
+        },
+        {
+          "text": "is the substance bound to the analyte in"
+        },
+        {
+          "text": "is the operational objective of the test in"
+        },
+        {
+          "text": "is the period of time to be considered when answering the question in"
         }
       ]
     },
@@ -1594,9 +1606,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_bc_model.yaml",
-  "source_file_date": "2025-07-29T11:32:28",
-  "source_file_size": 15131,
-  "generation_date": "2025-07-29T11:33:07",
+  "source_file_date": "2025-09-04T13:38:37",
+  "source_file_size": 15392,
+  "generation_date": "2025-09-04T13:40:09",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_bc_model.context.jsonld",

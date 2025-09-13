@@ -1,0 +1,64 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C15709
+ncitCode: C15709
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15709
+parentConceptId: C19770
+categories:
+  - Molecular Analysis
+  - Genetic Variation Analysis
+  - Gene Expression Analysis
+  - Oncology Standards
+shortName: Genetic Testing
+synonyms:
+  - Genetic Analysis
+  - Genetic Examination
+resultScales:
+  - Narrative
+  - Ordinal
+  - Nominal
+definition: The process of isolating and testing the DNA of an embryo or a person to detect the presence of genetic alterations or defects that may predispose to the future development of a disease or disorder.
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Single Nucleotide Polymorphism"
+      - "Copy Number Variation"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+      - "Variant of Unknown Significance"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Genetic Variation"
+      - "Gene Expression"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+      - "Blood"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string

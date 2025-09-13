@@ -317,11 +317,58 @@ run;
 %let TargetFolder=&root/yaml/&folder/sdtm;
 %let OverrideDate=%str(2025-09-23);
 
-%let checkrelationships=1;
+%let checkrelationships=0;
 
 %let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_NEW), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC_EDITS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ADAS-Cog_FT.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_ADAS-Cog), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CES.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CES), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_ECOG.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_ECOG), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_rutgeerts.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RUTGEERTS), debug=0, check_relationships=&checkrelationships);
+
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_DHT_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_GLUCPE_Edit), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_SDTM_EG.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EG_NEW), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EG_EDITS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_IS_NEW.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EQ5D_EDITS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-BOY.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TS-BOY), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_TANNER-SCALE-GIRL.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TS-GIRL), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_CHILD-PUGH.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Child-Pugh), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_HBI.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_HBI), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_QRS_BPRS-A.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_BPRS-A), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits_collections.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EDITS), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package13/R13_BC_SDTM_Edits_collections.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
+
 
 /************************************************************************************************************************/
 

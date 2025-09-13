@@ -1,0 +1,64 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C199199
+ncitCode: C199199
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199199
+parentConceptId: C190808
+categories:
+  - Diagnostic Tests
+  - Diagnostic Procedures
+  - Gene Expression Analysis
+shortName: MammaPrint Index
+synonyms:
+  - MammaPrint Index Score
+  - MPI
+resultScales:
+  - Quantitative
+  - Nominal
+definition: "A predictive score for breast cancer reoccurrence based on the expression activity of 70 genes. The results are presented as a score between -1 and 1 with negative scores correlating with low risk of reoccurrence and positive scores correlating with high risk of reoccurrence."
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Breast"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Gene Expression Profiling"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Low Risk"
+      - "High Risk"
+      - "-1.0-+1.0"

@@ -18,13 +18,14 @@ proc import out=&dsout
 run;
 
 data &dsout(&drop &keep &rename);
-  length _tab_ _excel_file_ $100;
+  length _tab_ _excel_file_ $100 _record_ 8;
   retain _tab_;
   set &dsout;
   format _character_;
   informat _character_;
   _tab_ = compress("&range", "$");
   _excel_file_ = scan("&file", -1, "\/");
+  _record_ = _n_;
 run;
 
 %if &_Debug ge 1 %then %do;

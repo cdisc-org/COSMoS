@@ -1,0 +1,61 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C102069
+ncitCode: C102069
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102069
+parentConceptId: C101875
+categories:
+  - QRS
+  - "EQ-5D-5L"
+  - EQ5D02
+  - European Quality of Life Five Dimension Five Level Scale
+  - "EQ-5D-5L Questionnaire Questions"
+shortName: "EQ-5D-5L - Usual Activities"
+synonyms:
+  - "EQ5D02-Usual Activities"
+  - EQ5D0203
+resultScales:
+  - Ordinal
+definition: "The EuroQol (European Quality of Life) Five Dimension Five Level Scale (EQ-5D-5L) Check the one box that best describes your health today: Usual activities."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "EQ-5D-5L"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "I have no problems doing my usual activities"
+      - "I have slight problems doing my usual activities"
+      - "I have moderate problems doing my usual activities"
+      - "I have severe problems doing my usual activities"
+      - "I am unable to do my usual activities"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82534
+    ncitCode: C82534
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82534
+    shortName: Evaluation Interval
+    dataType: string
+    exampleSet:
+      - "Today"

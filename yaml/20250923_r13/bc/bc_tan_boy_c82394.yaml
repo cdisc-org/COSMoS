@@ -1,0 +1,21 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C82394
+ncitCode: C82394
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82394
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Tanner Scale-Boy Clinical Classification Question"
+  - Tanner Scale Boy Version
+  - TANN02
+  - TANNER SCALE BOY
+  - "Tanner Scale-Boy"
+  - "Tanner Scale-Girl Clinical Classification Question"
+  - Tanner Scale Girl Version
+  - TANN01
+  - TANNER SCALE GIRL
+  - Tanner Scale Girl Version
+  - "Tanner Scale-Girl"
+shortName: Tanner Scale
+definition: A scale of physical development in children, adolescents and adults based on external primary and secondary sex characteristics, such as the size of the breasts, genitalia, and development of pubic hair.

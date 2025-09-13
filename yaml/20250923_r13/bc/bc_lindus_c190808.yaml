@@ -1,0 +1,9 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C190808
+ncitCode: C190808
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190808
+categories:
+  - Diagnostic Tests
+shortName: Recurrence Risk Score
+definition: A score that estimates the likelihood that an individual with have a recurrence of a disease.

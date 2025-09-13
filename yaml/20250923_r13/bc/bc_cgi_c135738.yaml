@@ -1,0 +1,17 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C135738
+ncitCode: C135738
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135738
+parentConceptId: C91105
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - Clinical Global Impression Generic Modification Version Questionnaire
+  - CGI02
+  - CGI
+shortName: Clinical Global Impression Generic Modification Version Questionnaire
+synonyms:
+  - CGI
+  - CGI02
+definition: "A modified version of a standardized questionnaire published in 1976 by Guy et al. that was initially created to provide a clinician-determined summary measure of a patient's global functioning prior to and after initiating a study medication. It has been modified for use in any disease/condition concept use case."

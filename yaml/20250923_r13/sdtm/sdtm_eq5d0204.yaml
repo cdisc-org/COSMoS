@@ -1,0 +1,158 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: EQ5D0204
+domain: QS
+shortName: "EQ5D02-Pain/Discomfort"
+source: QS.QSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C102070
+variables:
+  - name: QSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C101817
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101817
+      submissionValue: EQ5D02TC
+    assignedTerm:
+      conceptId: C102070
+      value: "EQ5D0204"
+    role: Topic
+    relationship:
+      subject: QSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C101818
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101818
+      submissionValue: EQ5D02TN
+    assignedTerm:
+      conceptId: C102070
+      value: "EQ5D02-Pain/Discomfort"
+    role: Qualifier
+    relationship:
+      subject: QSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: QSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+      submissionValue: QSCAT
+    assignedTerm:
+      conceptId: C102117
+      value: "EQ-5D-5L"
+    role: Qualifier
+    relationship:
+      subject: QSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "I have no pain or discomfort"
+      - "I have slight pain or discomfort"
+      - "I have moderate pain or discomfort"
+      - "I have severe pain or discomfort"
+      - "I have extreme pain or discomfort"
+    role: Qualifier
+    dataType: text
+    length: 60
+    relationship:
+      subject: QSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: QSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: QSEVINTX
+    dataElementConceptId: C82534
+    isNonStandard: false
+    assignedTerm:
+      value: "TODAY"
+    role: Timing
+    relationship:
+      subject: QSEVINTX
+      linkingPhrase: is the period of time to be considered when answering the question in
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

@@ -1,0 +1,99 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C17007
+ncitCode: C17007
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17007
+parentConceptId: C17369
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+  - Diagnostic Procedures
+shortName: Positron Emission Tomography
+synonyms:
+  - Medical Imaging
+  - PET
+  - PET SCAN
+  - PET Scan
+  - PET scan
+  - PT
+  - Pet Scan
+  - Positron Emission Tomography Scan
+  - Positron emission tomography (procedure)
+  - "Positron-Emission Tomography"
+  - positron emission tomography scan
+  - proton magnetic resonance spectroscopic imaging
+resultScales:
+  - Nominal
+definition: "A technique for measuring the gamma radiation produced by collisions of electrons and positrons (anti-electrons) within living tissue. In positron emission tomography (PET), a subject is given a dose of a positron-emitting radionuclide attached to a metabolically active substance (for example, 2-fluoro-2-deoxy-D-glucose (FDG), which is similar to a naturally occurring sugar, glucose, with the addition of a radioactive fluorine atom). When living tissue containing the positron emitter is bombarded by electrons, gamma radiation produced by collisions of electrons and positrons is detected by a scanner, revealing in fine detail the tissue location of the metabolically-active substance administered."
+dataElementConcepts:
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54215
+    shortName: Directionality
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+      - "Bilateral"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Brain"
+      - "Heart"
+      - "Lung"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+    exampleSet:
+      - "Positron Emission Tomography"
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

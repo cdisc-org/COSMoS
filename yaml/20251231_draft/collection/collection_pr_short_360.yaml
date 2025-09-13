@@ -7,10 +7,11 @@ standardStartVersion: "2-1"
 standardEndVersion:  
 scenario: LZZT - 360i
 domain: PR
-biomedicalConceptId: C87885
+biomedicalConceptId: C219640
 items:
   - name: PRYN
     variableName: PRYN
+    dataElementConceptId: C82515
     prompt: NOT DONE
     orderNumber: 1
     mandatoryVariable: false

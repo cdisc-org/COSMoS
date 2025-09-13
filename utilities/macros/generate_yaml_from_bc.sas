@@ -29,7 +29,7 @@
   data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
     length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $1000 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
-           issue_type $64 expected_value  actual_value comment $2048;
+           issue_type $64 expected_value actual_value comment $2048;
     set work.bc_&type._&package;
     retain prev_BC_ID "" count decs 0 result_scales_yn 0;
 
@@ -42,7 +42,7 @@
 
     ncit_code = kcompress(ncit_code, , 's');
     dec_id = kcompress(dec_id, , 's');
-    parent_bc_id=kcompress(parent_bc_id, , 's');
+    parent_bc_id = kcompress(parent_bc_id, , 's');
     bc_id=kcompress(bc_id, , 's');
     ncit_dec_code=kcompress(ncit_dec_code, , 's');
     
@@ -51,7 +51,6 @@
     
     definition = strip(definition);
     definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
-    if definition ne definition2 then putlog / "WARNING: &type " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -82,7 +81,15 @@
       if not missing(parent_bc_id) then do;
         call get_shortname(parent_bc_id, short_name_parent);
         call get_parent_code_shortname(BC_ID, parent_bc_id_nci, short_name_parent_nci);
-        %add2issues_bc(parent_bc_id ne parent_bc_id_nci, 
+        parent_bc_id_nci = kcompress(parent_bc_id_nci, , 's');
+        
+        parent_bc_id = strip(parent_bc_id);
+        parent_bc_id_nci = strip(parent_bc_id_nci);
+        find_parent=index(parent_bc_id_nci, trim(parent_bc_id));
+        %*add2issues_bc((parent_bc_id ne parent_bc_id_nci) and (find_parent > 0), 
+                       %str(PARENT_ID_MISMATCH), 
+                       parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)), severity=NOTE);
+        %add2issues_bc(%str(find_parent = 0), 
                        %str(PARENT_ID_MISMATCH), 
                        parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)));
         put "parentConceptId:" +1 parent_bc_id;
@@ -149,13 +156,17 @@
       %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
+      if count = 0 then do;
+        if definition ne definition2 then putlog / "WAR" "NING: (DEFINITION) " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
+      end;
+
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;
       end;
-
+      
       if not missing(system_name) then do;
         %add2issues_bc(missing(system) or missing(code), 
                        %str(BC_SYSTEM_CODE_MISSING), 

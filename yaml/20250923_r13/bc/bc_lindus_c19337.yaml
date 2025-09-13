@@ -1,0 +1,91 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C19337
+ncitCode: C19337
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19337
+parentConceptId: C17230
+categories:
+  - Diagnostic Imaging
+  - Medical Imaging
+  - Diagnostic Procedures
+shortName: Diagnostic Ultrasound
+synonyms:
+  - Diagnostic Ultrasonography
+  - Diagnosis (US)
+  - Ultrasound
+resultScales:
+  - Nominal
+definition: Use of ultrasound for imaging for diagnostic purposes.
+dataElementConcepts:
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+    exampleSet:
+      - "Diagnostic Ultrasound"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+      - "Bilateral"
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54215
+    shortName: Directionality
+    dataType: string
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Abdomen"
+      - "Pelvis"
+      - "Heart"
+      - "Breast"

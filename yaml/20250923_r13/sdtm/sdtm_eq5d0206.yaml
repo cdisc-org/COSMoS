@@ -1,0 +1,525 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: EQ5D0206
+domain: QS
+shortName: "EQ5D02-EQ VAS Score"
+source: QS.QSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C102072
+variables:
+  - name: QSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C101817
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101817
+      submissionValue: EQ5D02TC
+    assignedTerm:
+      conceptId: C102072
+      value: "EQ5D0206"
+    role: Topic
+    relationship:
+      subject: QSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C101818
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101818
+      submissionValue: EQ5D02TN
+    assignedTerm:
+      conceptId: C102072
+      value: "EQ5D02-EQ VAS Score"
+    role: Qualifier
+    relationship:
+      subject: QSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: QSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+      submissionValue: QSCAT
+    assignedTerm:
+      conceptId: C102117
+      value: "EQ-5D-5L"
+    role: Qualifier
+    relationship:
+      subject: QSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+      - "32"
+      - "33"
+      - "34"
+      - "35"
+      - "36"
+      - "37"
+      - "38"
+      - "39"
+      - "40"
+      - "41"
+      - "42"
+      - "43"
+      - "44"
+      - "45"
+      - "46"
+      - "47"
+      - "48"
+      - "49"
+      - "50"
+      - "51"
+      - "52"
+      - "53"
+      - "54"
+      - "55"
+      - "56"
+      - "57"
+      - "58"
+      - "59"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "66"
+      - "67"
+      - "68"
+      - "69"
+      - "70"
+      - "71"
+      - "72"
+      - "73"
+      - "74"
+      - "75"
+      - "76"
+      - "77"
+      - "78"
+      - "79"
+      - "80"
+      - "81"
+      - "82"
+      - "83"
+      - "84"
+      - "85"
+      - "86"
+      - "87"
+      - "88"
+      - "89"
+      - "90"
+      - "91"
+      - "92"
+      - "93"
+      - "94"
+      - "95"
+      - "96"
+      - "97"
+      - "98"
+      - "99"
+      - "100"
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: QSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+      - "32"
+      - "33"
+      - "34"
+      - "35"
+      - "36"
+      - "37"
+      - "38"
+      - "39"
+      - "40"
+      - "41"
+      - "42"
+      - "43"
+      - "44"
+      - "45"
+      - "46"
+      - "47"
+      - "48"
+      - "49"
+      - "50"
+      - "51"
+      - "52"
+      - "53"
+      - "54"
+      - "55"
+      - "56"
+      - "57"
+      - "58"
+      - "59"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "66"
+      - "67"
+      - "68"
+      - "69"
+      - "70"
+      - "71"
+      - "72"
+      - "73"
+      - "74"
+      - "75"
+      - "76"
+      - "77"
+      - "78"
+      - "79"
+      - "80"
+      - "81"
+      - "82"
+      - "83"
+      - "84"
+      - "85"
+      - "86"
+      - "87"
+      - "88"
+      - "89"
+      - "90"
+      - "91"
+      - "92"
+      - "93"
+      - "94"
+      - "95"
+      - "96"
+      - "97"
+      - "98"
+      - "99"
+      - "100"
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: QSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+      - "32"
+      - "33"
+      - "34"
+      - "35"
+      - "36"
+      - "37"
+      - "38"
+      - "39"
+      - "40"
+      - "41"
+      - "42"
+      - "43"
+      - "44"
+      - "45"
+      - "46"
+      - "47"
+      - "48"
+      - "49"
+      - "50"
+      - "51"
+      - "52"
+      - "53"
+      - "54"
+      - "55"
+      - "56"
+      - "57"
+      - "58"
+      - "59"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "66"
+      - "67"
+      - "68"
+      - "69"
+      - "70"
+      - "71"
+      - "72"
+      - "73"
+      - "74"
+      - "75"
+      - "76"
+      - "77"
+      - "78"
+      - "79"
+      - "80"
+      - "81"
+      - "82"
+      - "83"
+      - "84"
+      - "85"
+      - "86"
+      - "87"
+      - "88"
+      - "89"
+      - "90"
+      - "91"
+      - "92"
+      - "93"
+      - "94"
+      - "95"
+      - "96"
+      - "97"
+      - "98"
+      - "99"
+      - "100"
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C158113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C158113
+      submissionValue: QRSMTHOD
+    assignedTerm:
+      conceptId: C179788
+      value: "VISUAL ANALOG SCALE (1-100)"
+    role: Qualifier
+    relationship:
+      subject: QSMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: QSANTXLO
+    dataElementConceptId: C70934
+    isNonStandard: true 
+    assignedTerm:
+      value: "The worst health you can imagine"
+    role: Qualifier
+    relationship:
+      subject: QSANTXLO
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANTXHI
+    dataElementConceptId: C121936
+    isNonStandard: true 
+    assignedTerm:
+      value: "The best health you can imagine"
+    role: Qualifier
+    relationship:
+      subject: QSANTXHI
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANVLLO
+    dataElementConceptId: C70933
+    isNonStandard: true 
+    assignedTerm:
+      value: "0"
+    role: Qualifier
+    relationship:
+      subject: QSANVLLO
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANVLHI
+    dataElementConceptId: C121935
+    isNonStandard: true 
+    assignedTerm:
+      value: "100"
+    role: Qualifier
+    relationship:
+      subject: QSANVLHI
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: QSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: QSEVINTX
+    dataElementConceptId: C82534
+    isNonStandard: false
+    assignedTerm:
+      value: "TODAY"
+    role: Timing
+    relationship:
+      subject: QSEVINTX
+      linkingPhrase: is the period of time to be considered when answering the question in
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

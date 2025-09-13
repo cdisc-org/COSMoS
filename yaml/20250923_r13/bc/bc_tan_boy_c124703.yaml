@@ -1,0 +1,21 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C124703
+ncitCode: C124703
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124703
+parentConceptId: C82394
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Tanner Scale-Boy Clinical Classification Question"
+  - Tanner Scale Boy Version
+  - TANN02
+  - TANNER SCALE BOY
+  - "Tanner Scale-Boy"
+shortName: Tanner Scale Boy Version
+synonyms:
+  - TANN02
+  - TANNER SCALE BOY
+  - Tanner Scale Boy Version
+  - "Tanner Scale-Boy"
+definition: A standardized rating scale developed by Marshal and Tanner in 1970, which is a classification system used to measure physical development in children, adolescents and adults. The boy version of the tanner scale assesses the different stages of physical maturity based on testicular volume, genitalia growth and the development of pubic hair. This instrument has 5 stages.

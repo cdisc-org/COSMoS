@@ -1,0 +1,14 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C190946
+ncitCode: C190946
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190946
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: Rutgeerts Score Clinical Classification Question
+synonyms:
+  - Rutgeerts Score Clinical Classification
+  - RUTGEERTS SCORE
+  - RUTG01
+definition: A question associated with the Rutgeerts Score clinical classification.

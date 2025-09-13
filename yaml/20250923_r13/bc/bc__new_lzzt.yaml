@@ -1,0 +1,31 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: NEW_LZZT
+parentConceptId: C91105
+categories:
+  - Questionnaires
+  - Surveys
+  - Acceptability Surveys
+shortName: TTS Acceptability Survey
+definition: A survey question to assess acceptability of the transdermal patch
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "TTS ACCEPTABILITY SURVEY - LZZT"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"

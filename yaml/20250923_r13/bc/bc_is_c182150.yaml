@@ -1,0 +1,9 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C182150
+ncitCode: C182150
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182150
+categories:
+  - "Allergen-induced Antibody Measurement"
+shortName: "Allergen-induced Antibody Measurement"
+definition: "The determination of the allergen-induced, binding antibody in a biospecimen."

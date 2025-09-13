@@ -1,0 +1,194 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: MBIMABHHV2PN
+domain: IS
+shortName: "Microbial-induced IgM Antibody Human Herpesvirus 2 Positive Negative"
+source: IS.ISTESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C187786
+variables:
+  - name: ISTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120525
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120525
+      submissionValue: ISTESTCD
+    assignedTerm:
+      conceptId: C187786
+      value: "MBIMAB"
+    role: Topic
+    relationship:
+      subject: ISTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: ISTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: ISTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120526
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120526
+      submissionValue: ISTEST
+    assignedTerm:
+      conceptId: C187786
+      value: "Microbial-induced IgM Antibody"
+    role: Qualifier
+    relationship:
+      subject: ISTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: ISBDAGNT
+    dataElementConceptId: C42647
+    isNonStandard: false
+    codelist:
+      conceptId: C85491
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85491
+      submissionValue: MICROORG
+    assignedTerm:
+      conceptId: C112313
+      value: "HERPES SIMPLEX VIRUS 2"
+    role: Qualifier
+    relationship:
+      subject: ISBDAGNT
+      linkingPhrase: is the substance bound to the analyte in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISTSTOPO
+    dataElementConceptId: C218437
+    isNonStandard: false
+    codelist:
+      conceptId: C181170
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181170
+      submissionValue: TSTOPOBJ
+    valueList:
+      - "SCREEN"
+      - "CONFIRM"
+    role: Qualifier
+    relationship:
+      subject: ISTSTOPO
+      linkingPhrase: is the operational objective of the test in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: ISCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: ISCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    valueList:
+      - "POSITIVE"
+      - "NEGATIVE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ISORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: ISSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    valueList:
+      - "POSITIVE"
+      - "NEGATIVE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: ISSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: ISSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    valueList:
+      - "SERUM"
+      - "SERUM OR PLASMA"
+      - "BLOOD"
+    role: Qualifier
+    relationship:
+      subject: ISSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: ISMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "IMMUNOASSAY"
+    role: Qualifier
+    relationship:
+      subject: ISMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: ISDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: ISDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

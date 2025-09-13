@@ -6,10 +6,11 @@ standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
 domain: PR
-biomedicalConceptId: C87885
+biomedicalConceptId: C219640
 items:
   - name: PRYN
     variableName: PRYN
+    dataElementConceptId: C219640
     questionText: Were any procedures performed?
     orderNumber: 1
     mandatoryVariable: false
@@ -30,6 +31,7 @@ items:
       sdtmAnnotation: "[NOT SUBMITTED]"
   - name: PRDAT
     variableName: PRDAT
+    dataElementConceptId: C82515
     prompt: Collection Date
     orderNumber: 2
     mandatoryVariable: false

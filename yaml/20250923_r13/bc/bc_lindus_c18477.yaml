@@ -1,0 +1,60 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C18477
+ncitCode: C18477
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18477
+parentConceptId: C19770
+categories:
+  - Genetic Testing
+  - Gene Expression Analysis
+  - Molecular Analysis
+  - Genetic Molecular Analysis
+  - Laboratory Procedures
+shortName: Microarray Analysis
+synonyms:
+  - Gene Expression Profiling
+  - Gene Expression Profile
+resultScales:
+  - Ordinal
+  - Narrative
+definition: Analysis using microarray technology (e.g., cDNA arrays to see gene expression or protein microarrays to profile the pattern of proteins).
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Saliva"
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

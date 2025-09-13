@@ -1,0 +1,83 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C187779
+ncitCode: C187779
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C187779
+parentConceptId: C182150
+categories:
+  - Laboratory Tests
+  - Immunogenicity Specimen Assessments
+  - Immunoglobulin M Measurements
+  - "Allergen-induced Antibody Measurements"
+shortName: "Allergen-induced IgM Antibody Measurement"
+synonyms:
+  - ARIGMAB
+  - "Allergen-induced IgM Antibody"
+resultScales:
+  - Quantitative
+definition: "The determination of the amount of allergen-induced IgM antibody in a sample."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C42647
+    ncitCode: C42647
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42647
+    shortName: Binder Excipient
+    dataType: string
+    exampleSet:
+      - "Keyhole Limpet Hemocyanin"
+  - conceptId: C218437
+    ncitCode: C218437
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C218437
+    shortName: Immunogenicity Specimen Test Operational Objective
+    dataType: string
+    exampleSet:
+      - "Screen"
+      - "Confirm"
+      - "Quantify"
+      - "Overall Subject Status"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mmol/L"
+      - "g/L"
+      - "mg/dL"
+      - "mg/mL"
+      - "umol/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunoassay"
+      - "Enzyme-linked Immunosorbent Assay"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

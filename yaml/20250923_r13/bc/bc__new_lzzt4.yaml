@@ -1,0 +1,47 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: NEW_LZZT4
+parentConceptId: NEW_LZZT
+categories:
+  - Questionnaires
+  - Surveys
+  - Acceptability Surveys
+shortName: "TTS Acceptability Survey -  Patch Acceptability"
+resultScales:
+  - Ordinal
+definition: A survey question to assess acceptability of using a transdermal patch compared to oral medication
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Insist that the patient receive an oral pill"
+      - "Prefer that the patient receive an oral pill"
+      - "Have no preference (neutral) for an oral or patch formulation"
+      - "Prefer that the patient receive a patch"
+      - "Insist that the patient receive a patch"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Caregiver"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,102 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C187776
+ncitCode: C187776
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C187776
+parentConceptId: C182150
+categories:
+  - Laboratory Tests
+  - Immunogenicity Specimen Assessments
+  - Immunoglobulin A Measurements
+  - "Allergen-induced Antibody Measurements"
+shortName: "Allergen-induced IgA Antibody Measurement"
+synonyms:
+  - ARIGAAB
+  - "Allergen-induced IgA Antibody"
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: "The determination of the amount of allergen-induced IgA antibody in a sample."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C42647
+    ncitCode: C42647
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42647
+    shortName: Binder Excipient
+    dataType: string
+    exampleSet:
+      - "American Cockroach Antigen"
+      - "Bermuda Grass Pollen"
+      - "Cat Dander Antigen"
+      - "Dog Dander Antigen"
+      - "English Plantain Pollen"
+      - "German Cockroach Antigen"
+      - "Gliadin Antigen"
+      - "Grass Mix Pollens"
+      - "Mold Mix Antigens"
+      - "Orchard Grass Pollen"
+      - "Silver Birch Pollen"
+      - "Timothy Grass Pollen"
+      - "Weed Mix Pollens"
+      - "Western Ragweed Pollen"
+      - "Alternaria Alternata"
+      - "Penicillium Chrysogenum"
+      - "Mucor Racemosus"
+  - conceptId: C218437
+    ncitCode: C218437
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C218437
+    shortName: Immunogenicity Specimen Test Operational Objective
+    dataType: string
+    exampleSet:
+      - "Screen"
+      - "Confirm"
+      - "Quantify"
+      - "Overall Subject Status"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mg/dL"
+      - "g/L"
+      - "umol/L"
+      - "U/mL"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Blood"
+      - "Saliva"
+      - "Urine"
+      - "Cerebrospinal Fluid"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunoassay"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

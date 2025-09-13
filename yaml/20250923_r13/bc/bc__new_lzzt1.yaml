@@ -1,0 +1,51 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: NEW_LZZT1
+parentConceptId: NEW_LZZT
+categories:
+  - Questionnaires
+  - Surveys
+  - Acceptability Surveys
+shortName: "TTS Acceptability Survey -  Patch Appearance"
+resultScales:
+  - Ordinal
+definition: A survey question to assess acceptability of the appearance of a transdermal patch
+dataElementConcepts:
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "1 Strongly Disagree"
+      - "2"
+      - "3"
+      - "4 Neutral"
+      - "5"
+      - "6"
+      - "7 Strongly Agree"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Caregiver"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

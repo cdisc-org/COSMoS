@@ -1,0 +1,58 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C111153
+ncitCode: C111153
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111153
+parentConceptId: C48938
+categories:
+  - Tumor Results
+  - Tumor Measurements
+shortName: Cellularity Measurement
+synonyms:
+  - CELLULAR
+  - Cellularity Grade
+  - Cellularity Index
+  - Percent Cellularity
+resultScales:
+  - Quantitative
+definition: The determination of the amount of degree, quality or condition of cells present in a sample.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string

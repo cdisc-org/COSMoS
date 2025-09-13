@@ -1,0 +1,14 @@
+packageDate: "2025-09-23"
+packageType: bc
+conceptId: C102116
+ncitCode: C102116
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102116
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Eastern Cooperative Oncology Group Performance Status Clinical Classification
+  - ECOG
+  - ECOG1
+shortName: Eastern Cooperative Oncology Group Performance Status Clinical Classification
+definition: A standardized classification scale, published by Oken et al. in 1982 for the Eastern Cooperative Oncology Group (ECOG), that utilizes a six point rating scale to assess a patient's functional status.

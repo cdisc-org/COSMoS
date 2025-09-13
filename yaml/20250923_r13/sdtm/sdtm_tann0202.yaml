@@ -1,0 +1,117 @@
+packageDate: "2025-09-23"
+packageType: sdtm
+datasetSpecializationId: TANN0202
+domain: RS
+shortName: "TANN02-Pubic Hair Stages"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C124717
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C124662
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124662
+      submissionValue: TANN02TC
+    assignedTerm:
+      conceptId: C124717
+      value: "TANN0202"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C124661
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124661
+      submissionValue: TANN02TN
+    assignedTerm:
+      conceptId: C124717
+      value: "TANN02-Pubic Hair Stages"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C118971
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
+      submissionValue: CCCAT
+    assignedTerm:
+      conceptId: C124703
+      value: "TANNER SCALE BOY"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C193263
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C193263
+      submissionValue: TANN0202OR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C193264
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C193264
+      submissionValue: TANN0202STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
