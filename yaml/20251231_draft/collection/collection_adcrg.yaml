@@ -5,6 +5,8 @@ shortName: "CDISC ADAS-Cog - Word Recognition Summary Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100247
 sdtmDatasetSpecializationId: ADCRG
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Word Recognition"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     length: 5
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "0"
         value: "0"
@@ -125,6 +129,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "Participant refused"
         value: "Participant refused"

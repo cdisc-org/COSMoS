@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: DSCAT
       conceptId: C74558
@@ -39,6 +40,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: DSSCAT
       conceptId: C170443
@@ -58,6 +60,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NCOMPLT
       conceptId: C66727
@@ -78,6 +81,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "DSTERM"
       sdtmVariables:
@@ -91,6 +95,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "DSSTDTC"
       sdtmVariables:

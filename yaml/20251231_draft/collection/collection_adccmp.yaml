@@ -5,6 +5,8 @@ shortName: "CDISC ADAS-Cog - Comprehension"
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100278
 sdtmDatasetSpecializationId: ADCCMP
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Degree of Impairment"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     length: 5
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "No evidence of poor comprehension"
         value: "No evidence of poor comprehension"

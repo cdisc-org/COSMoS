@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECTRT"
       sdtmVariables:
@@ -32,6 +33,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECREFID"
       sdtmVariables:
@@ -44,6 +46,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECLOT"
       sdtmVariables:
@@ -56,6 +59,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -74,6 +78,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECSTDTC"
       sdtmVariables:
@@ -87,6 +92,7 @@ items:
     dataType: time
     length: 5
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECSTDTC"
       sdtmVariables:
@@ -100,6 +106,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECENDTC"
       sdtmVariables:
@@ -113,6 +120,7 @@ items:
     dataType: time
     length: 5
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECENDTC"
       sdtmVariables:
@@ -125,6 +133,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECDOSE;ECDOSTXT"
       sdtmVariables:
@@ -139,6 +148,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620
@@ -156,6 +166,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: FREQ
       conceptId: C71113
@@ -173,6 +184,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: ROUTE
       conceptId: C66729
@@ -189,6 +201,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -206,6 +219,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECADJ"
       sdtmVariables:

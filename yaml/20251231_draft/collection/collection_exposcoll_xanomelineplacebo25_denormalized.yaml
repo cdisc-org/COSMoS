@@ -7,6 +7,8 @@ standardStartVersion: "2-1"
 standardEndVersion:  
 implementationOption: Denormalized
 scenario: Patch 25cm2
+categories:
+  - "360"
 domain: EC
 biomedicalConceptId: C117466
 sdtmDatasetSpecializationId: EXPOSCOLL_XANOMELINEPLACEBO
@@ -20,6 +22,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Xanomeline (LY246708) or Placebo"
     sdtmTarget:
@@ -35,6 +38,7 @@ items:
     dataType: integer
     length: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECDOSE"
       sdtmVariables:
@@ -48,6 +52,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620
@@ -68,6 +73,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: FRM
       conceptId: C66726
@@ -88,6 +94,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: FREQ
       conceptId: C71113
@@ -108,6 +115,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: ROUTE
       conceptId: C66729
@@ -127,6 +135,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "27"
     sdtmTarget:
@@ -141,6 +150,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "mg"
       conceptId: C28253
@@ -157,6 +167,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECSTDTC"
       sdtmVariables:
@@ -170,6 +181,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "ECENDTC"
       sdtmVariables:

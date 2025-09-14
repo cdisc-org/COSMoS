@@ -5,6 +5,8 @@ shortName: Medical Procedure Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
+categories:
+  - "360"
 domain: PR
 biomedicalConceptId: C219640
 items:
@@ -17,6 +19,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

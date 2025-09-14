@@ -17,6 +17,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -38,6 +39,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "PRDTC"
       sdtmVariables:

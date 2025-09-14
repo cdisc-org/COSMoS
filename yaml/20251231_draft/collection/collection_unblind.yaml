@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: DSCAT
       conceptId: C74558
@@ -39,6 +40,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "DSSCAT"
       sdtmVariables:
@@ -52,6 +54,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: OTHEVENT
       conceptId: C150811
@@ -72,6 +75,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "DSSTDTC"
       sdtmVariables:

@@ -17,6 +17,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: QSCAT
       conceptId: C100129
@@ -37,6 +38,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -60,6 +62,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "QSDTC"
       sdtmVariables:
@@ -73,6 +76,7 @@ items:
     dataType: text
     length: 5
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "TODAY"
     sdtmTarget:

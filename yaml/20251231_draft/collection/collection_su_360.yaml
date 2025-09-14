@@ -5,6 +5,8 @@ shortName: Substance Use Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
+categories:
+  - "360"
 domain: SU
 biomedicalConceptId: C219639
 items:
@@ -17,6 +19,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

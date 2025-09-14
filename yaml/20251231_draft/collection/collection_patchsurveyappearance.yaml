@@ -5,6 +5,8 @@ shortName: "TTS Acceptability Survey - Patch Appearance"
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
+categories:
+  - "360"
 domain: QS
 biomedicalConceptId: NEW_LZZT1
 sdtmDatasetSpecializationId: PATCHSURVEYAPPEARANCE
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "1 Strongly Disagree"
         value: "1 Strongly Disagree"
@@ -49,6 +52,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "CAREGIVER"
       conceptId: C17445

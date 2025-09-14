@@ -5,6 +5,8 @@ shortName: "CDISC ADAS-Cog - Delayed Word Recall Summary Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100215
 sdtmDatasetSpecializationId: ADCDRL
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Delayed Word Recall"
     sdtmTarget:
@@ -33,6 +36,7 @@ items:
     dataType: integer
     length: 2
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "0"
         value: "0"
@@ -72,6 +76,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "Participant refused"
         value: "Participant refused"

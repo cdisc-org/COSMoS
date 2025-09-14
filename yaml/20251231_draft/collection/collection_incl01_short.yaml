@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 15
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: IECAT
       conceptId: C66797
@@ -39,6 +40,7 @@ items:
     dataType: text
     length: 20
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "INCL01"
         value: "INCL01"

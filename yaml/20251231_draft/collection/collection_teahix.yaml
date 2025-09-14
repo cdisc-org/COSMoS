@@ -18,6 +18,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "CAFFEINE"
     sdtmTarget:
@@ -33,6 +34,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUSCAT"
       sdtmVariables:
@@ -46,6 +48,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "TEA"
     sdtmTarget:
@@ -61,6 +64,7 @@ items:
     dataType: text
     length: 1
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -81,6 +85,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -103,6 +108,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUDOSE;SUDOSTXT"
       sdtmVariables:
@@ -117,6 +123,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620
@@ -134,6 +141,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: FREQ
       conceptId: C71113
@@ -156,6 +164,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUROUTE"
       sdtmVariables:
@@ -169,6 +178,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUSTDTC"
       sdtmVariables:
@@ -181,6 +191,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -206,6 +217,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUENDTC"
       sdtmVariables:
@@ -219,6 +231,7 @@ items:
     dataType: time
     length: 5
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SUENDTC"
       sdtmVariables:
@@ -231,6 +244,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

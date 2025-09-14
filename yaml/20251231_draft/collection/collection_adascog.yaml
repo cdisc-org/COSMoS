@@ -5,6 +5,8 @@ shortName: "Alzheimer's Disease Assessment Scale-Cognitive CDISC Version Functio
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100762
 items:
@@ -17,6 +19,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: FTCAT
       conceptId: C115304
@@ -37,6 +40,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -60,6 +64,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "FTDTC"
       sdtmVariables:
@@ -73,6 +78,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "Participant refused"
         value: "Participant refused"

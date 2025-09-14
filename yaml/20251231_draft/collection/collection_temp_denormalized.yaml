@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -33,6 +34,7 @@ items:
     length: 4
     significantDigits: 1
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSORRES when VSTESTCD = TEMP"
       sdtmVariables:
@@ -48,6 +50,7 @@ items:
     dataType: text
     length: 2
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: VSRESU
       conceptId: C66770
@@ -73,6 +76,7 @@ items:
     dataType: text
     length: 11
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: LOC
       conceptId: C74456

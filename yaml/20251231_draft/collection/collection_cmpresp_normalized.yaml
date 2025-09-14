@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMCAT"
       sdtmVariables:
@@ -32,6 +33,7 @@ items:
     dataType: text
     length: 200
     displayHidden: true 
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMSCAT"
       sdtmVariables:
@@ -45,6 +47,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMINDC"
       sdtmVariables:
@@ -58,6 +61,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMTRT"
       sdtmVariables:
@@ -71,6 +75,7 @@ items:
     dataType: text
     length: 1
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -89,6 +94,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -106,6 +112,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMDOSE;CMDOSTXT"
       sdtmVariables:
@@ -120,6 +127,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620
@@ -138,6 +146,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: FRM
       conceptId: C66726
@@ -156,6 +165,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: FREQ
       conceptId: C71113
@@ -174,6 +184,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: ROUTE
       conceptId: C66729
@@ -192,6 +203,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMSTDTC"
       sdtmVariables:
@@ -205,6 +217,7 @@ items:
     dataType: time
     length: 5
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMSTDTC"
       sdtmVariables:
@@ -217,6 +230,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -237,6 +251,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMENDTC"
       sdtmVariables:
@@ -250,6 +265,7 @@ items:
     dataType: time
     length: 5
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "CMENDTC"
       sdtmVariables:
@@ -262,6 +278,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

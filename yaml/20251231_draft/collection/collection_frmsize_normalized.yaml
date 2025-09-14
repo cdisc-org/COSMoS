@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -31,6 +32,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "Frame Size"
       conceptId: C49680
@@ -48,6 +50,7 @@ items:
     dataType: text
     length: 20
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: SIZE
       conceptId: C66733

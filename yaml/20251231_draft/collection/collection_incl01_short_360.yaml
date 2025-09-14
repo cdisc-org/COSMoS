@@ -5,6 +5,8 @@ shortName: Inclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
+categories:
+  - "360"
 domain: IE
 biomedicalConceptId: C25532
 sdtmDatasetSpecializationId: INCL01
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 15
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: IECAT
       conceptId: C66797
@@ -38,6 +41,7 @@ items:
     dataType: text
     length: 20
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "INCL01"
         value: "INCL01"

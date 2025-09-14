@@ -32,7 +32,7 @@
   data issues(keep=_excel_file_ _tab_ package_date severity collection_group_id collection_item issue_type expected_value actual_value comment);
     length prev_collection_group_id $128 outname $512 package_date qpackage_date standard collection_item $64 qstandard_start_version qstandard_end_version $20  
            codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 value_list value_display_list sdtm_annotation qsdtm_annotation $8192
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 categories derivation_description value_list value_display_list sdtm_annotation qsdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
     retain prev_collection_group_id "" count 0;
     set work.bc_collection_&type._&package;
@@ -67,6 +67,20 @@
       put "standardEndVersion:" +1 standard_end_version;
       if not missing(implementation_option) then put "implementationOption:" +1 implementation_option;
       if not missing(scenario) then put "scenario:" +1 scenario;
+
+      if not missing(categories) then do;
+        put "categories:";
+        countwords=countw(categories, ";");
+        do i=1 to countwords;
+          value=strip(scan(categories, i, ";"));
+          value=tranwrd(value, '"', '\"');
+          qvalue=quote(strip(value));
+          if not missing(value) then do;
+            put +2 "-" +1 qvalue;
+          end;  
+        end;
+      end;
+
       put "domain:" +1 domain;
       if not missing(bc_id) then put "biomedicalConceptId:" +1 bc_id;
       if not missing(vlm_group_id) then put "sdtmDatasetSpecializationId:" +1 vlm_group_id;
@@ -112,6 +126,14 @@
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
         if missing(display_hidden) then display_hidden="N";
         put +4 "displayHidden:" +1 display_hidden $YN.;
+        if missing(derived_variable) then derived_variable="N";
+
+        put +4 "derivedVariable:" +1 derived_variable $YN.;
+        if not missing(derivation_description) then do;
+          if index(derivation_description, '"') or index(derivation_description, ":") or index(derivation_description, "-") 
+            then put +4 "derivationDescription:" +1 '"' derivation_description +(-1) '"';
+            else put +4 "derivationDescription:" +1 derivation_description;
+        end;
 
 
         if missing(codelist_submission_value) and not missing(codelist) then do;

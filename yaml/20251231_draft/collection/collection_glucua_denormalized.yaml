@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "CHEMISTRY"
     sdtmTarget:
@@ -33,6 +34,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBSCAT"
       sdtmVariables:
@@ -45,6 +47,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBNAM"
       sdtmVariables:
@@ -58,6 +61,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBDTC"
       sdtmVariables:
@@ -71,6 +75,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: SPECTYPE
       conceptId: C78734
@@ -91,6 +96,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "TEST STRIP"
       conceptId: C50322
@@ -107,6 +113,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -131,6 +138,7 @@ items:
     length: 8
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBORRES when LBTESTCD = GLUC"
       sdtmVariables:
@@ -147,6 +155,7 @@ items:
     length: 20
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620
@@ -174,6 +183,7 @@ items:
     length: 8
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBORNRLO"
       sdtmVariables:
@@ -187,6 +197,7 @@ items:
     length: 8
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "LBORNRHI"
       sdtmVariables:
@@ -199,6 +210,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

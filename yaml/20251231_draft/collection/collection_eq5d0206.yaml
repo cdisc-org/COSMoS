@@ -18,6 +18,7 @@ items:
     dataType: integer
     length: 3
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0206"
       sdtmVariables:
@@ -35,6 +36,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "VISUAL ANALOG SCALE (1-100)"
       conceptId: C187968
@@ -51,6 +53,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "The worst health you can imagine"
     sdtmTarget:
@@ -66,6 +69,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "The best health you can imagine"
     sdtmTarget:
@@ -81,6 +85,7 @@ items:
     dataType: integer
     length: 3
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "0"
     sdtmTarget:
@@ -96,6 +101,7 @@ items:
     dataType: integer
     length: 3
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "100"
     sdtmTarget:

@@ -20,6 +20,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "EGDTC"
       sdtmVariables:
@@ -33,6 +34,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: EGMETHOD
       conceptId: C71151
@@ -53,6 +55,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "EGORRES when EGTESTCD = TECHQUAL"
       sdtmVariables:
@@ -68,6 +71,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: EVAL
       conceptId: C78735

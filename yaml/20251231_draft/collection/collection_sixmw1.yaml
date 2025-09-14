@@ -17,6 +17,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -40,6 +41,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "FTDTC"
       sdtmVariables:
@@ -52,6 +54,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: FTCAT
       conceptId: C115304
@@ -72,6 +75,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "FTASTDEV in SUPPFT"
       sdtmVariables:

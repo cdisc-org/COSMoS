@@ -5,6 +5,8 @@ shortName: "CDISC ADAS-Cog - Spoken Language Ability"
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100276
 sdtmDatasetSpecializationId: ADCSL
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Degree of Impairment"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     length: 5
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "No instances where it is difficult to understand the subject"
         value: "No instances where it is difficult to understand the subject"

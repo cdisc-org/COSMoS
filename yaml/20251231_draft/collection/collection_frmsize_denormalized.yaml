@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -33,6 +34,7 @@ items:
     length: 4
     significantDigits: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: SIZE
       conceptId: C66733

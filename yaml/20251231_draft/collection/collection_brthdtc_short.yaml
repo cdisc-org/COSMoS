@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "BRTHDTC"
       sdtmVariables:

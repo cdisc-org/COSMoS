@@ -6,6 +6,8 @@ standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
 implementationOption: Denormalized
+categories:
+  - "360"
 domain: SC
 biomedicalConceptId: C122393
 sdtmDatasetSpecializationId: EDUYRNUM
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "EDUCATION"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     length: 4
     significantDigits: 1
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "SCORRES when SCTESTCD = EDUYRNUM"
       sdtmVariables:
@@ -49,6 +53,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: UNIT
       conceptId: C71620

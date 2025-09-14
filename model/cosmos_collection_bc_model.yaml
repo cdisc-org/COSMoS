@@ -26,6 +26,7 @@ classes:
       - standardEndVersion
       - implementationOption
       - scenario
+      - categories
       - domain
       - biomedicalConceptId
       - sdtmDatasetSpecializationId
@@ -44,6 +45,8 @@ classes:
       - length
       - significantDigits
       - displayHidden
+      - derivedVariable
+      - derivationDescription
       - codelist
       - valueList
       - selectionType
@@ -163,6 +166,11 @@ slots:
     range: string
     aliases:
       - scenario
+  categories:
+    description: Collection Dataset Specialization category for the faciliation of API search and extract
+    range: string
+    multivalued: true
+    inlined_as_list: true
   domain:
     description: Domain for the data collection specialization group
     range: string
@@ -250,6 +258,12 @@ slots:
     range: boolean
     aliases:
       - display_hidden
+  derivedVariable:
+    description: Indicator that variable is derived
+    range: boolean
+  derivationDescription:
+    description: Description of the derivation. Required when derivedVariable is true.
+    range: string
   codelist:
     description: Codelist
     range: CodeList

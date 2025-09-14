@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -32,6 +33,7 @@ items:
     dataType: integer
     length: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSORRES when VSTESTCD = RESP"
       sdtmVariables:
@@ -47,6 +49,7 @@ items:
     dataType: text
     length: 10
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: VSRESU
       conceptId: C66770

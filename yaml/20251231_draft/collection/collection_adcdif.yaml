@@ -5,6 +5,8 @@ shortName: "CDISC ADAS-Cog - Word Difficulty in Spontaneous Speech"
 standard: CDASHIG
 standardStartVersion: "2-3"
 standardEndVersion:  
+categories:
+  - "360"
 domain: FT
 biomedicalConceptId: C100277
 sdtmDatasetSpecializationId: ADCDIF
@@ -18,6 +20,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     prepopulatedValue:
       value: "Degree of Impairment"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     length: 5
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "No evidence of word finding difficulty in spontaneous speech"
         value: "No evidence of word finding difficulty in spontaneous speech"
@@ -63,6 +67,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "Participant refused"
         value: "Participant refused"

@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "AETERM"
       sdtmVariables:
@@ -32,6 +33,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "AESTDAT"
       sdtmVariables:
@@ -45,6 +47,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     valueList:
       - displayValue: "No"
         value: "N"
@@ -66,6 +69,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "AEENDAT"
       sdtmVariables:
@@ -79,6 +83,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: AESEV
       conceptId: C66769
@@ -104,6 +109,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -127,6 +133,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -150,6 +157,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -173,6 +181,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -196,6 +205,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -219,6 +229,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -242,6 +253,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -265,6 +277,7 @@ items:
     dataType: text
     length: 1
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -288,6 +301,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: ACN
       conceptId: C66767
@@ -323,6 +337,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "AEACNOTH"
       sdtmVariables:
@@ -336,6 +351,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: OUT
       conceptId: C66768

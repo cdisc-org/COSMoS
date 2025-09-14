@@ -68,9 +68,10 @@ def get_collection_data(collection):
     collection_group_id = collection.get("collectionSpecializationId", "")
     implementation_option = collection.get("implementationOption", "")
     scenario = collection.get("scenario", "")
+    categories = create_string(collection, "categories")
     short_name = collection.get("shortName", "")
     return [package_date, bc_id, vlm_group_id, standard, standard_start_version, standard_end_version, domain,
-            collection_group_id, implementation_option, scenario, short_name]
+            collection_group_id, implementation_option, scenario, categories, short_name]
 
 
 def get_collection_item_data(collection):
@@ -88,6 +89,8 @@ def get_collection_item_data(collection):
         length = v.get("length", None)
         significant_digits = v.get("significantDigits", None)
         display_hidden = string_from_boolean(v, "displayHidden")
+        derived_variable = string_from_boolean(v, "derivedVariable")
+        derivation_description = v.get("derivationDescription", "")
         if v.get("codelist"):
             codelist = v.get("codelist").get("conceptId", "")
             codelist_submission_value = v.get("codelist").get("submissionValue", "")
@@ -130,9 +133,9 @@ def get_collection_item_data(collection):
 
         item_list.append([
             collection_item, variable_name, dec_id, question_text, prompt, order_number, mandatory_variable,
-            data_type, length, significant_digits, display_hidden, codelist, codelist_submission_value,
-            value_list, value_display_list, selection_type, prepopulated_term, prepopulated_code,
-            sdtm_target_variable, sdtm_annotation, sdtm_mapping
+            data_type, length, significant_digits, display_hidden, derived_variable, derivation_description,
+            codelist, codelist_submission_value, value_list, value_display_list, selection_type,
+            prepopulated_term, prepopulated_code, sdtm_target_variable, sdtm_annotation, sdtm_mapping
         ])
     return item_list
 
@@ -190,7 +193,7 @@ def write_collection_dataset_specializations_to_excel(workbook, sheetname, df):
             else:
                 ws.cell(row=row_num, column=col_num).value = col_data
             if headers_bc[col_num - 1] in [
-                'short_name', 'question_text', 'prompt', 'value_list',
+                'short_name', 'question_text', 'prompt', 'derivation_description', 'value_list',
                 'value_display_list', 'sdtm_annotation', 'sdtm_mapping'
             ]:
                 ws.cell(row=row_num, column=col_num).alignment = Alignment(wrap_text=True)
@@ -243,11 +246,12 @@ def main():
     HEADERS_COLLECTION_CORE = [
         "package_date", "bc_id", "vlm_group_id", "standard", "standard_start_version",
         "standard_end_version", "domain", "collection_group_id", "implementation_option",
-        "scenario", "short_name"
+        "scenario", "categories", "short_name"
     ]
     HEADERS_COLLECTION_ITEM = [
         "collection_item", "variable_name", "dec_id", "question_text", "prompt", "order_number",
         "mandatory_variable", "data_type", "length", "significant_digits", "display_hidden",
+        'derived_variable', 'derivation_description',
         "codelist", "codelist_submission_value", "value_list", "value_display_list",
         "selection_type", "prepopulated_term", "prepopulated_code", "sdtm_target_variable",
         "sdtm_annotation", "sdtm_mapping"

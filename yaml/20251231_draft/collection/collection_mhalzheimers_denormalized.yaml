@@ -6,6 +6,8 @@ standard: CDASHIG
 standardStartVersion: "2-1"
 standardEndVersion:  
 implementationOption: Denormalized
+categories:
+  - "360"
 domain: MH
 biomedicalConceptId: C200145
 sdtmDatasetSpecializationId: MHALZHEIMERS
@@ -19,6 +21,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "ALZHEIMER'S DISEASE"
     sdtmTarget:
@@ -34,6 +37,7 @@ items:
     dataType: text
     length: 1
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -54,6 +58,7 @@ items:
     dataType: text
     length: 1
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742
@@ -73,6 +78,7 @@ items:
     dataType: text
     length: 100
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: MHEDTTYP
       conceptId: C124301
@@ -93,6 +99,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "MHSTDTC"
       sdtmVariables:
@@ -106,6 +113,7 @@ items:
     dataType: text
     length: 1
     displayHidden: true 
+    derivedVariable: false
     codelist:
       submissionValue: NY
       conceptId: C66742

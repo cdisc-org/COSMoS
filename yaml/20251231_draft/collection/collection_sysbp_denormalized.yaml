@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -32,6 +33,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: POSITION
       conceptId: C71148
@@ -61,6 +63,7 @@ items:
     dataType: text
     length: 10
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: LOC
       conceptId: C74456
@@ -88,6 +91,7 @@ items:
     dataType: integer
     length: 3
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSORRES when VSTESTCD = SYSBP"
       sdtmVariables:
@@ -103,6 +107,7 @@ items:
     dataType: text
     length: 10
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: VSRESU
       conceptId: C66770

@@ -20,6 +20,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "EGDTC"
       sdtmVariables:
@@ -33,6 +34,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: EGMETHOD
       conceptId: C71151
@@ -53,6 +55,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: POSITION
       conceptId: C71148
@@ -81,6 +84,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
   - name: EGTEST
     variableName: EGTEST
     prompt: Test
@@ -89,6 +93,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: EGTEST
       conceptId: C71152
@@ -110,6 +115,7 @@ items:
     dataType: text
     length: 200
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "EGORRES when EGTESTCD = PACEMAKR"
       sdtmVariables:

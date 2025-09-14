@@ -19,6 +19,7 @@ items:
     dataType: text
     length: 100
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: SEX
       conceptId: C66731

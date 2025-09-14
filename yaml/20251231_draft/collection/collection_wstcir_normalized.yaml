@@ -19,6 +19,7 @@ items:
     dataType: date
     length: 10
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSDTC"
       sdtmVariables:
@@ -31,6 +32,7 @@ items:
     dataType: text
     length: 40
     displayHidden: false
+    derivedVariable: false
     prepopulatedValue:
       value: "Waist Circumference"
       conceptId: C100948
@@ -48,6 +50,7 @@ items:
     dataType: text
     length: 50
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: LOC
       conceptId: C74456
@@ -69,6 +72,7 @@ items:
     length: 4
     significantDigits: 2
     displayHidden: false
+    derivedVariable: false
     sdtmTarget:
       sdtmAnnotation: "VSORRES when VSTESTCD = WSTCIR"
       sdtmVariables:
@@ -84,6 +88,7 @@ items:
     dataType: text
     length: 2
     displayHidden: false
+    derivedVariable: false
     codelist:
       submissionValue: VSRESU
       conceptId: C66770
