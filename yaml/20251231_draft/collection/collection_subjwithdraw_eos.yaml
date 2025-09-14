@@ -43,8 +43,6 @@ items:
       submissionValue: DSSCAT
       conceptId: C170443
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170443
-    prepopulatedValue:
-      value: "STUDY PARTICIPATION"
     sdtmTarget:
       sdtmAnnotation: "DSSCAT"
       sdtmVariables:
@@ -62,9 +60,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Withdrawal By Subject"
-        value: "WITHDRAWAL BY SUBJECT"
+    prepopulatedValue:
+      value: "WITHDRAWAL BY SUBJECT"
+      conceptId: C49634
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

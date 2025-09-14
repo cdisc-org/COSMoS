@@ -26,6 +26,7 @@ items:
   - name: DIABP_VSPOS
     variableName: VSPOS
     dataElementConceptId: C62164
+    questionText: What was the position of the subject during the Diastolic Blood Pressure measurement?
     orderNumber: 2
     mandatoryVariable: false
     dataType: text
@@ -81,6 +82,7 @@ items:
   - name: DIABP_VSORRES
     variableName: VSORRES
     dataElementConceptId: C70856
+    questionText: What was the result of the Diastolic Blood Pressure measurement?
     orderNumber: 4
     mandatoryVariable: true 
     dataType: integer

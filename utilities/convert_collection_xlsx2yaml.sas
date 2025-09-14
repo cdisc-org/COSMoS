@@ -14,8 +14,6 @@ run;
 
 %create_template(type=COLLECTION_ISSUE, out=work.all_issues_collection);
 
-options mprint;
-
 %let release=xx;
 %let package=20251231;
 %let folder=20251231_draft;

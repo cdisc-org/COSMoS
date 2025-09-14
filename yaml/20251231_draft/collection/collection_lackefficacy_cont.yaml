@@ -60,9 +60,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Lack of Efficacy"
-        value: "LACK OF EFFICACY"
+    prepopulatedValue:
+      value: "LACK OF EFFICACY"
+      conceptId: C48226
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

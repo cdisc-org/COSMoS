@@ -62,9 +62,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Adverse Event"
-        value: "ADVERSE EVENT"
+    prepopulatedValue:
+      value: "ADVERSE EVENT"
+      conceptId: C41331
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

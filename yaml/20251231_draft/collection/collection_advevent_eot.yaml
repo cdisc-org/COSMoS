@@ -43,8 +43,6 @@ items:
       submissionValue: DSSCAT
       conceptId: C170443
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170443
-    prepopulatedValue:
-      value: "STUDY TREATMENT"
     sdtmTarget:
       sdtmAnnotation: "DSSCAT"
       sdtmVariables:

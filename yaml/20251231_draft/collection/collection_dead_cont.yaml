@@ -60,9 +60,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Death"
-        value: "DEATH"
+    prepopulatedValue:
+      value: "DEATH"
+      conceptId: C28554
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

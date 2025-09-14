@@ -43,8 +43,6 @@ items:
       submissionValue: DSSCAT
       conceptId: C170443
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170443
-    prepopulatedValue:
-      value: "STUDY TREATMENT"
     sdtmTarget:
       sdtmAnnotation: "DSSCAT"
       sdtmVariables:
@@ -62,9 +60,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Physician Decision"
-        value: "PHYSICIAN DECISION"
+    prepopulatedValue:
+      value: "PHYSICIAN DECISION"
+      conceptId: C48250
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

@@ -59,9 +59,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Failure to Meet Randomization Criteria"
-        value: "FAILURE TO MEET RANDOMIZATION CRITERIA"
+    prepopulatedValue:
+      value: "FAILURE TO MEET RANDOMIZATION CRITERIA"
+      conceptId: C105448
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

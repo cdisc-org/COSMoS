@@ -60,9 +60,9 @@ items:
       submissionValue: NCOMPLT
       conceptId: C66727
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
-    valueList:
-      - displayValue: "Physician Decision"
-        value: "PHYSIAN DECISON"
+    prepopulatedValue:
+      value: "PHYSICIAN DECISION"
+      conceptId: C48250
     sdtmTarget:
       sdtmAnnotation: "DSDECOD"
       sdtmVariables:

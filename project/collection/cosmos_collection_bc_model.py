@@ -1,5 +1,5 @@
 # Auto generated from cosmos_collection_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-13T11:24:12
+# Generation date: 2025-09-14T10:08:14
 # Schema: COSMoS-Biomedical-Concepts-Collection-Schema
 #
 # id: https://www.cdisc.org/cosmos/collection_v1.0
@@ -371,24 +371,12 @@ class ImplementationOptionEnum(EnumDefinitionImpl):
 
 class CollectionItemDataTypeEnum(EnumDefinitionImpl):
 
-    decimal = PermissibleValue(
-        text="decimal",
-        title="decimal")
-    float = PermissibleValue(
-        text="float",
-        title="float")
-    integer = PermissibleValue(
-        text="integer",
-        title="integer")
-    text = PermissibleValue(
-        text="text",
-        title="text")
-    date = PermissibleValue(
-        text="date",
-        title="date")
-    time = PermissibleValue(
-        text="time",
-        title="time")
+    decimal = PermissibleValue(text="decimal")
+    float = PermissibleValue(text="float")
+    integer = PermissibleValue(text="integer")
+    text = PermissibleValue(text="text")
+    date = PermissibleValue(text="date")
+    time = PermissibleValue(text="time")
 
     _defn = EnumDefinition(
         name="CollectionItemDataTypeEnum",
@@ -549,4 +537,3 @@ slots.CodeList_conceptId = Slot(uri=COSMOS_COLLECTION.conceptId, name="CodeList_
 
 slots.CodeList_href = Slot(uri=COSMOS_COLLECTION.href, name="CodeList_href", curie=COSMOS_COLLECTION.curie('href'),
                    model_uri=COSMOS_COLLECTION.CodeList_href, domain=CodeList, range=Optional[Union[str, URI]])
-
