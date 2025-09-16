@@ -1,5 +1,6 @@
 import argparse
 import yaml
+from datetime import date
 import pandas as pd
 import os
 from openpyxl import load_workbook, Workbook
@@ -164,6 +165,37 @@ def process_collection_dataset_specializations(collection_list, headers_collecti
     return df, df_domain
 
 
+def update_readme(workbook, sheetname, source, date, count):
+
+    print(f"Writing {sheetname} sheet")
+    ws = workbook[sheetname]
+    if source.lower() == "yaml":
+        intro_text = (
+            (
+                f"This spreadsheet contains CDISC Collection Dataset Specializations loaded from "
+                f"{count} YAML files as of {date}.\n"
+                f"The spreadsheet contains {count} unique CDISC Collection Dataset Specializations.\n"
+                "The image on the right shows the relation between Biomedical Concepts, "
+                "Collection Dataset Specializations and SDTM Dataset Specializations. "
+                "Only a few attributes are shown in the image."
+            )
+        )
+    else:
+        intro_text = (
+            f"This spreadsheet contains the latest versions of CDISC Collection Dataset Specializations "
+            f"in the CDISC Library as of {date}.\n"
+            f"There are currently {count} unique CDISC Collection Dataset Specializations in the CDISC Library.\n"
+            "The image on the right shows the relation between Biomedical Concepts, "
+            "Collection Dataset Specializations and SDTM Dataset Specializations. "
+            "Only a few attributes are shown in the image."
+        )
+
+    ws.cell(row=1, column=1).value = intro_text
+    ws.cell(row=1, column=1).alignment = Alignment(wrap_text=True)
+
+    return workbook
+
+
 def write_collection_dataset_specializations_to_excel(workbook, sheetname, df):
 
     print(f"Writing {sheetname} sheet")
@@ -281,10 +313,11 @@ def main():
         HEADERS_COLLECTION_CORE,
         HEADERS_COLLECTION_ITEM
     )
+    current_date = date.today()
 
     workbook = Workbook()
     workbook = load_workbook(collection_template)
-    # workbook = update_readme(workbook, "ReadMe", args.bc_date, len(collection_list))
+    workbook = update_readme(workbook, "ReadMe", args.source, current_date.isoformat(), len(collection_list))
     workbook = write_collection_dataset_specializations_to_excel(workbook, "Collection Specializations", df)
     workbook = write_dataframe_to_excel(workbook, "Domains", df_domain)
     workbook.save(args.excel_file)
