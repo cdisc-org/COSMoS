@@ -28,7 +28,7 @@
           if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
                              else do;
                                put "ER" "ROR: " TypeGuessRows= /;
-                               call symput('TypeGuessRows_ACE',TypeGuessRows);
+                               call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
                              end;
         end;
     run;
@@ -51,7 +51,7 @@
           if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
                              else do;
                                put "ER" "ROR: " TypeGuessRows= /;
-                               call symput('TypeGuessRows_ACE',TypeGuessRows);
+                               call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
                              end;
         end;
     run;

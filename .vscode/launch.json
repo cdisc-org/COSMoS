@@ -28,7 +28,7 @@
             "-o",
             "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r13.xlsx",
             "-d",
-            "2025-07-01"
+            "2025-09-23"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -46,7 +46,7 @@
             "-o",
             "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r13.xlsx",
             "-d",
-            "2025-07-01"
+            "2025-09-23"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -80,7 +80,7 @@
             "-o",
             "${workspaceFolder}/export/cdisc_biomedical_concepts_latest.xlsx",
             "-d",
-            "2025-07-01"
+            "2025-09-23"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -96,7 +96,7 @@
             "-o",
             "${workspaceFolder}/export/cdisc_sdtm_dataset_specializations_latest.xlsx",
             "-d",
-            "2025-07-01"
+            "2025-09-23"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
