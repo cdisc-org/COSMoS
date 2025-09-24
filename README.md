@@ -30,6 +30,8 @@ Below is an overview of the contents of this repository.
   - [Latest CDISC Biomedical Concepts (hierarchy)](export/cdisc_biomedical_concepts_latest_hierarchy.csv) (CSV)
   - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.xlsx) (Excel spreadsheet)
   - [Latest SDTM Dataset Specializations](export/cdisc_sdtm_dataset_specializations_latest.csv) (CSV)
+  - [Latest Collection Dataset Specializations (DRAFT)](export/cdisc_collection_dataset_specializations_draft.xlsx) (Excel spreadsheet)
+  - [Latest Collection Dataset Specializations (DRAFT)](export/cdisc_collection_dataset_specializations_draft.csv) (CSV)
 
 - **model**
 
