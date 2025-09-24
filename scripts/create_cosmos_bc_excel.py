@@ -404,7 +404,10 @@ def main():
     df.to_csv(csv_file, index=False, columns=HEADERS_BC)
     print(f"CSV file saved as {csv_file}")
 
-    csv_file = args.excel_file.replace(".xlsx", "_hierarchy.csv")
+    if "latest" in args.excel_file:
+        csv_file = args.excel_file.replace("_latest.xlsx", "_hierarchy_latest.csv")
+    else:
+        csv_file = args.excel_file.replace(".xlsx", "_hierarchy.csv")
     df_hierarchy.to_csv(csv_file, index=False)
     print(f"CSV file saved as {csv_file}")
 
