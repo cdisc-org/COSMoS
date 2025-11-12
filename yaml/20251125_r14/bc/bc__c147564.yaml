@@ -1,0 +1,52 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C147564
+ncitCode: C147564
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147564
+parentConceptId: C36285
+categories:
+  - Laboratory Tests
+  - Hormone Measurements
+  - Endocrine Tests
+  - Protein or Enzyme Type Measurements
+shortName: Hormone Resistance
+synonyms:
+  - Endocrine Resistance
+  - Hormone Therapy Resistance
+resultScales:
+  - Ordinal
+definition: A finding indicating decreased tissue sensitivity to a hormone.
+dataElementConcepts:
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Present"
+      - "Absent"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string

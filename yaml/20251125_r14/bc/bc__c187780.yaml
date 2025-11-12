@@ -1,0 +1,10 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C187780
+ncitCode: C187780
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C187780
+categories:
+  - Laboratory Tests
+  - Immunogenicity Specimen Assessments
+shortName: "Microbial-induced Antibody Measurement"
+definition: "The determination of the amount of total microbial-induced antibody in a sample."

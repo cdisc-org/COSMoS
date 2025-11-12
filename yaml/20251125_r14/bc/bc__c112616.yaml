@@ -1,0 +1,42 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C112616
+ncitCode: C112616
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112616
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Presence of Temporal Pallor"
+synonyms:
+  - "KFSS1-Presence of Temporal Pallor"
+  - KFSS106A
+  - "KFSS - Presence of Temporal Pallor"
+resultScales:
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Record number 1 in small box for presence of temporal pallor.
+dataElementConcepts:
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "CHECKED"
+      - "NOT CHECKED"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"

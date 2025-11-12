@@ -1,0 +1,19 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C102118
+ncitCode: C102118
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102118
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Hamilton Anxiety Rating Scale Clinical Classification
+  - "HAM-A"
+  - HAMA
+  - HAMA1
+shortName: Hamilton Anxiety Rating Scale Clinical Classification
+synonyms:
+  - "HAM-A"
+  - HAMA
+  - HAMA1
+definition: "A standardized rating scale developed by M. Hamilton in 1959 which is used to evaluate the severity of an individual's state of neurotic anxiety. This instrument contains 14 questions or types of symptoms associated with anxiety such as fear, mood, insomnia, and somatic symptoms, which is completed during a semi-structured interview. Each symptom is rated on a scale of 0-4 with 0 being none and 4 being the most severe. A score of 0-17 is considered 'mild', while a score of 18-24 is 'mild to moderate' and a score greater than 24 is 'moderate to severe.'"

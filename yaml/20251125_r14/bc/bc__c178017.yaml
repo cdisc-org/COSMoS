@@ -1,0 +1,55 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C178017
+ncitCode: C178017
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C178017
+parentConceptId: C112025
+categories:
+  - Musculoskeletal Finding
+  - Mass Measurements
+shortName: Skeletal Muscle Mass Measurement
+synonyms:
+  - SMMASS
+  - Skeletal Muscle Mass
+resultScales:
+  - Quantitative
+definition: A measurement of the mass of all skeletal muscle in the body.
+dataElementConcepts:
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C42579
+    ncitCode: C42579
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
+    shortName: Unit of Mass
+    dataType: string
+    exampleSet:
+      - "Kilogram"
+      - "Gram"
+      - "Pound"
+      - "Ounce"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

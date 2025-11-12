@@ -1,0 +1,52 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C147845
+ncitCode: C147845
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147845
+parentConceptId: C147551
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - ATLAS Score Clinical Classification
+  - ATLAS
+  - ATLAS1
+  - ATLAS Clinical Classification Question
+shortName: "ATLAS - Leukocyte Count"
+synonyms:
+  - "ATLAS1-Leukocyte Count"
+  - ATLAS103
+  - "ATLAS - Leukocyte Count"
+resultScales:
+  - Ordinal
+definition: ATLAS Score (ATLAS) Leukocyte count (total).
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "< 16,000"
+      - "16,000 - 25,000"
+      - "> 25,000"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ATLAS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

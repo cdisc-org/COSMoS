@@ -1,0 +1,58 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C117807
+ncitCode: C117807
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117807
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+  - ECG Technical Quality
+shortName: ECG Technical Quality
+synonyms:
+  - TECHQUAL
+resultScales:
+  - Nominal
+definition: A statement about an electrocardiographic recording describing technical issues or interference during the recording, processing, or transmission of the data. This does not represent an electrocardiographic diagnosis. (CDISC)
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C114120
+    ncitCode: C114120
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C114120
+    shortName: ECG Recording Quality
+    dataType: string
+    exampleSet:
+      - "Incomplete ECG"
+      - "Poor Quality ECG"
+      - "Muscle Tremor Artifact"
+      - "ECG Waveforms Not Present"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"

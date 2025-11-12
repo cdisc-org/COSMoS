@@ -108,7 +108,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20250923_r13/bc",
+            "${workspaceFolder}/yaml/20251125_r14/bc",
             "-s",
             "${workspaceFolder}/model/cosmos_bc_model.yaml",
             "-c",

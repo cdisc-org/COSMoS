@@ -1,0 +1,57 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C121102
+ncitCode: C121102
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121102
+parentConceptId: C120994
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+  - APACHE II Clinical Classification Question
+shortName: "APACHE II - Arterial pH"
+synonyms:
+  - "APCH1-Arterial pH"
+  - APCH106A
+resultScales:
+  - Ordinal
+definition: Acute Physiology and Chronic Health Evaluation II (APACHE II) Arterial pH (preferred).
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<7.15 (4)"
+      - "7.15-7.24 (3)"
+      - "7.25-7.32 (2)"
+      - "7.33-7.49 (0)"
+      - "7.5-7.59 (1)"
+      - "7.6-7.69 (3)"
+      - ">=7.7 (4)"

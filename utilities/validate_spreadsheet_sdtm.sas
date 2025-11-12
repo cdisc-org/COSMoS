@@ -7,6 +7,13 @@
 title01 "&now";
 
 
+%let excel_file=&root/export/cdisc_biomedical_concepts_latest.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=_bc_latest);
+
+%let excel_file=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=_sdtm_latest);
+
+
 /* Package 1*/
 
 %let excel_file=&root/curation/package01/BC_Package_2022_10_26.xlsx;
@@ -433,6 +440,12 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc13_21);
 %ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
 
+/* Package 14 - */
+
+%let release=14;
+%let excel_file=&root/curation/draft/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
@@ -440,7 +453,7 @@ data bc(drop=change_history F1: F2: i vname vvalue);
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc:(where=(not missing(bc_id)));
+  set bc14:(where=(not missing(bc_id))) _bc_latest(where=(not missing(bc_id)));
 
   array carray{*} _character_;
   * if missing(bc_id) then delete;
@@ -453,12 +466,6 @@ data bc(drop=change_history F1: F2: i vname vvalue);
   end;
   package_date = upcase(package_date);
 run;
-
-%if &_debug gt 1 %then %do;
-  proc freq data=bc;
-    tables bc_id * package_date / nopercent norow nocol;
-  run;
-%end;
 
 %if &print_html=1 %then %do;
   ods listing close;
@@ -483,7 +490,7 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set sdtm:(where=(not missing(vlm_group_id)));
+  set /* sdtm14:(where=(not missing(vlm_group_id))) */ _sdtm_latest(where=(not missing(vlm_group_id)));
   order=_n_;
   package_date = upcase(package_date);
   array carray{*} _character_;
@@ -495,14 +502,6 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
     end;
   end;
 run;
-
-%if &_debug gt 1 %then %do;
-  proc freq data=sdtm;
-    tables vlm_group_id * package_date / nopercent norow nocol;
-    tables linking_phrase / nopercent norow nocol;
-    tables predicate_term / nopercent norow nocol;
-  run;
-%end;
 
 proc sql;
   create table sdtm_merged(drop=order)
@@ -566,12 +565,12 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       from sdtm_merged
       where not missing(dec_id);
 
-      select sbdi.package_date, sbdi._excel_file_, sbdi._tab_, sbdi.vlm_group_id, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id
+      select sbdi.package_date, sbdi._excel_file_, sbdi._tab_, sbdi.domain, sbdi.vlm_group_id, sbdi.short_name, sbdi.sdtm_variable, sbdi.bc_id, sbdi.dec_id
       from sdtm_bc_dec sbd, sdtm_merged sbdi
       where
         sbd.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
         catx('-', sbdi.bc_id, sbdi.dec_id) = sbd.bc_dec
-      order by _excel_file_, _tab_, vlm_group_id, sdtm_variable
+      order by domain, vlm_group_id, sdtm_variable
       ;
   quit;
 
@@ -589,11 +588,11 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
   /* Duplicate SDTM records */
   proc sql;
     title02 "Duplicate SDTM Specialization records (package_date, vlm_group_id, sdtm_variable)";
-      select package_date, _excel_file_, _tab_, _record_, vlm_group_id, short_name, sdtm_variable, sdtmig_start_version,sdtmig_end_version
+      select package_date, _excel_file_, _tab_, _record_, domain, vlm_group_id, short_name, sdtm_variable, sdtmig_start_version,sdtmig_end_version
       from sdtm_merged
       group by package_date, vlm_group_id, sdtm_variable
       having count(*) > 1
-      order by _excel_file_, _tab_, _record_, vlm_group_id, sdtm_variable
+      order by _excel_file_, _tab_, _record_, domain, vlm_group_id, sdtm_variable
       ;
   run;
 

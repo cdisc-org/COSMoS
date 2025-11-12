@@ -1,0 +1,190 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C102072
+ncitCode: C102072
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102072
+parentConceptId: C101875
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - European Quality of Life Five Dimension Five Level Scale Questionnaire
+  - "EQ-5D-5L"
+  - EQ5D02
+  - "EQ-5D-5L Questionnaire Question"
+shortName: "EQ-5D-5L - EQ VAS Score"
+synonyms:
+  - "EQ5D02-EQ VAS Score"
+  - EQ5D0206
+resultScales:
+  - Ordinal
+definition: "The EuroQol (European Quality of Life) Five Dimension Five Level Scale (EQ-5D-5L) Mark an X on the scale to indicate how your health is today and write the number you marked on the scale in the box below."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+      - "7"
+      - "8"
+      - "9"
+      - "10"
+      - "11"
+      - "12"
+      - "13"
+      - "14"
+      - "15"
+      - "16"
+      - "17"
+      - "18"
+      - "19"
+      - "20"
+      - "21"
+      - "22"
+      - "23"
+      - "24"
+      - "25"
+      - "26"
+      - "27"
+      - "28"
+      - "29"
+      - "30"
+      - "31"
+      - "32"
+      - "33"
+      - "34"
+      - "35"
+      - "36"
+      - "37"
+      - "38"
+      - "39"
+      - "40"
+      - "41"
+      - "42"
+      - "43"
+      - "44"
+      - "45"
+      - "46"
+      - "47"
+      - "48"
+      - "49"
+      - "50"
+      - "51"
+      - "52"
+      - "53"
+      - "54"
+      - "55"
+      - "56"
+      - "57"
+      - "58"
+      - "59"
+      - "60"
+      - "61"
+      - "62"
+      - "63"
+      - "64"
+      - "65"
+      - "66"
+      - "67"
+      - "68"
+      - "69"
+      - "70"
+      - "71"
+      - "72"
+      - "73"
+      - "74"
+      - "75"
+      - "76"
+      - "77"
+      - "78"
+      - "79"
+      - "80"
+      - "81"
+      - "82"
+      - "83"
+      - "84"
+      - "85"
+      - "86"
+      - "87"
+      - "88"
+      - "89"
+      - "90"
+      - "91"
+      - "92"
+      - "93"
+      - "94"
+      - "95"
+      - "96"
+      - "97"
+      - "98"
+      - "99"
+      - "100"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "EQ-5D-5L"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C121935
+    ncitCode: C121935
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121935
+    shortName: High Reference Range in Text Format
+    dataType: string
+    exampleSet:
+      - "The best health you can imagine"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Visual Analog Scale (1-100)"
+  - conceptId: C82534
+    ncitCode: C82534
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82534
+    shortName: Evaluation Interval
+    dataType: string
+    exampleSet:
+      - "Today"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "The worst health you can imagine"
+      - "The best health you can imagine"
+  - conceptId: C70933
+    ncitCode: C70933
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70933
+    shortName: High Test Reference Range
+    dataType: integer
+    exampleSet:
+      - "100"
+  - conceptId: C70934
+    ncitCode: C70934
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70934
+    shortName: Low Test Reference Range
+    dataType: integer
+    exampleSet:
+      - "0"
+  - conceptId: C121936
+    ncitCode: C121936
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121936
+    shortName: Low Reference Range in Text Format
+    dataType: string
+    exampleSet:
+      - "The worst health you can imagine"

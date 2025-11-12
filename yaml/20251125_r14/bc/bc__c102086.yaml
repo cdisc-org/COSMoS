@@ -1,0 +1,57 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C102086
+ncitCode: C102086
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102086
+parentConceptId: C101876
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Hamilton Anxiety Rating Scale Clinical Classification
+  - "HAM-A"
+  - HAMA
+  - HAMA1
+  - HAMA Questionnaire Question
+shortName: "HAMA - Behavior at Interview"
+synonyms:
+  - "HAMA1-Behavior at Interview"
+  - HAMA114
+  - "HAMA - Behavior at Interview"
+resultScales:
+  - Ordinal
+definition: Hamilton Anxiety Rating Scale (HAMA) Behavior at interview; fidgeting, restlessness or pacing, tremor of hands, furrowed brow, strained face, sighing or rapid respiration, facial pallor, swallowing, etc.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "HAM-A"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Not present"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+      - "Very severe"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"

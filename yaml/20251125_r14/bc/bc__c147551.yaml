@@ -1,0 +1,10 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C147551
+ncitCode: C147551
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147551
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: ATLAS Clinical Classification Question
+definition: A question associated with the ATLAS clinical classification.

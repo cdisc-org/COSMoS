@@ -1,0 +1,75 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C118165
+ncitCode: C118165
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118165
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Measurements
+  - ECG Measurements
+shortName: QRS Axis
+resultScales:
+  - Quantitative
+definition: A numerical representation of the electrocardiographic vector assessed at maximum deviation of the QRS complex from the isoelectric baseline, usually reported for the frontal plane. (CDISC)
+coding:
+  - code: 8632-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Measurement"
+  - conceptId: C82516
+    ncitCode: C82516
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82516
+    shortName: Observation End Date Time
+    dataType: datetime
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C68667
+    ncitCode: C68667
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C68667
+    shortName: Degree Unit of Plane Angle
+    dataType: string
+    exampleSet:
+      - "Degree"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

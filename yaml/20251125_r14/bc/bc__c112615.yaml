@@ -1,0 +1,62 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C112615
+ncitCode: C112615
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112615
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Visual (or Optic) Functions"
+synonyms:
+  - "KFSS1-Visual or Optic Functions"
+  - KFSS106
+  - "KFSS - Visual (or Optic) Functions"
+resultScales:
+  - Ordinal
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Visual function.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Scotoma with visual acuity (corrected) better than 20/30"
+      - "Worse eye with scotoma with maximal visual acuity (corrected) of 20/30 to 20/59"
+      - "Worse eye with large scotoma, or moderate decrease in fields, but with maximal visual acuity (corrected) of 20/60 to 20/99"
+      - "Worse eye with marked decrease of fields and maximal visual acuity (corrected) of 20/100 to 20/200, grade 3 plus maximal acuity of better eye of 20/60 or less"
+      - "Worse eye with maximal visual acuity (corrected) less than 20/200, grade 4 plus maximal acuity of better eye of 20/60 or less"
+      - "Grade 5 plus maximal visual acuity of better eye of 20/60 or less"
+      - "Unknown"

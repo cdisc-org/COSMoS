@@ -1,0 +1,60 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C112617
+ncitCode: C112617
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112617
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Cerebral (or Mental) Functions"
+synonyms:
+  - "KFSS1-Cerebral or Mental Functions"
+  - KFSS107
+  - "KFSS - Cerebral (or Mental) Functions"
+resultScales:
+  - Ordinal
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Cerebral (or mental) functions.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Mood alteration only (does not affect DSS score)"
+      - "Mild decrease in mentation"
+      - "Moderate decrease in mentation"
+      - "Marked decrease in mentation (chronic brain syndrome - moderate)"
+      - "Dementia or chronic brain syndrome - severe or incompetent"
+      - "Unknown"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"

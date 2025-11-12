@@ -1,14 +1,23 @@
-%macro generate_yaml_from_bc(excel_file=, range=, type=, package=, override_package_date=, out_folder=, debug=0);
+%macro generate_yaml_from_bc(
+  excel_file=, range=, type=, package=, override_package_date=, 
+  out_folder=, 
+  debug=0
+  );
 
   %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
   
   %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package, print=999);
 
   data bc_&type._&package;
+    length _order_ 8;
     set bc_&type._&package(where=(not missing(bc_id)));
     bc_id = kcompress(bc_id, , 's');
+    _order_ = _n_;
   run;
 
+  proc sort data = bc_&type._&package;
+    by bc_id _order_;
+  run;
 
   %if &debug %then %do;
 
@@ -30,7 +39,7 @@
     length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $1000 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
            short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value actual_value comment $2048;
-    set work.bc_&type._&package;
+    set work.bc_&type._&package(drop = _order_);
     retain prev_BC_ID "" count decs 0 result_scales_yn 0;
 
     call missing(concept_status, short_name_parent, short_name_nci, parent_bc_id_nci, short_name_dec_nci, short_name_parent_nci, definition_nci, definition_cdisc);

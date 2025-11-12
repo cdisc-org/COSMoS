@@ -1,0 +1,44 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C147848
+ncitCode: C147848
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147848
+parentConceptId: C147551
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - ATLAS Score Clinical Classification
+  - ATLAS
+  - ATLAS1
+  - ATLAS Clinical Classification Question
+shortName: "ATLAS - Score"
+synonyms:
+  - "ATLAS1-Score"
+  - ATLAS106
+  - "ATLAS - Score"
+resultScales:
+  - Ordinal
+definition: ATLAS Score (ATLAS) Score.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ATLAS"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

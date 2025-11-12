@@ -1,0 +1,11 @@
+packageDate: "2025-11-25"
+packageType: bc
+conceptId: C91102
+ncitCode: C91102
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91102
+categories:
+  - QRS Instrument Questions
+shortName: Clinical or Research Assessment Question
+synonyms:
+  - Clinical or Research Assessment Question
+definition: A question pertaining to a clinical or research assessment.

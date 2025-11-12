@@ -13,6 +13,10 @@
     order=_n_;
   run;
 
+  proc sort data = bc_sdtm_&type._&package;
+    by vlm_group_id order;
+  run;
+
   proc sql;
     create table &type._&package._mrgd
     as select
