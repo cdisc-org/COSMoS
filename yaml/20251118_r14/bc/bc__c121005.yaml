@@ -1,0 +1,16 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C121005
+ncitCode: C121005
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121005
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+shortName: Acute Physiology and Chronic Health Evaluation II Clinical Classification
+synonyms:
+  - APACHE II
+definition: A standardized rating scale developed by Knaus et al in 1985, which is a classification system used to measure severity of disease. This instrument uses a point score system based on physiological measurements, age and previous health status.

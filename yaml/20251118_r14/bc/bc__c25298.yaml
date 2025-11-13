@@ -1,0 +1,93 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C25298
+ncitCode: C25298
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25298
+parentConceptId: C54706
+categories:
+  - Vital Signs
+  - Blood Pressure
+shortName: Systolic Blood Pressure
+synonyms:
+  - SYSBP
+resultScales:
+  - Quantitative
+definition: The maximum pressure exerted into the systemic arterial circulation during the contraction of the left ventricle of the heart.
+coding:
+  - code: 8480-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Auscultation automatic"
+      - "Auscaltation manual"
+      - "Cuff-manual palpated"
+      - "Doppler"
+      - "Oscillometry"
+      - "Arterial line"
+      - "Venous line"
+      - "Continuous noninvasive arterial pressure (CNAP)"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Decubitus"
+      - "Fowlers"
+      - "Lateral Decupitus"
+      - "Prone"
+      - "Reverse Trendelenburg"
+      - "Semi-Fowlers"
+      - "Semi-Recumbent"
+      - "Sitting"
+      - "Sitting Legs Dependent"
+      - "Sling"
+      - "Standing"
+      - "Supine"
+      - "Trendelenburg"
+      - "Unconstrained"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C49669
+    ncitCode: C49669
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49669
+    shortName: Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "cmHg"
+      - "mmHG"
+      - "Pascal"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Arm"
+      - "Forearm"
+      - "Thigh"
+      - "Calf"
+      - "Artery"
+      - "Vein"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

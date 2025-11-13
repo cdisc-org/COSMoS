@@ -1,0 +1,62 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C102039
+ncitCode: C102039
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102039
+parentConceptId: C101869
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Abnormal Involuntary Movement Scale Clinical Classification
+  - AIMS
+  - AIMS01
+  - AIMS Clinical Classification Question
+shortName: "AIMS - Lower Extremities"
+synonyms:
+  - "AIMS01-Lower Extremities"
+  - AIMS0106
+resultScales:
+  - Ordinal
+definition: Abnormal Involuntary Movement Scale (AIMS) Extremity Movements, Lower (legs, knees, ankles, toes), e.g., lateral knee movement, foot tapping, heel dropping, foot squirming, inversion and eversion of foot.
+dataElementConcepts:
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "EXTREMITY MOVEMENTS"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "None"
+      - "Minimal, may be extreme normal"
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AIMS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

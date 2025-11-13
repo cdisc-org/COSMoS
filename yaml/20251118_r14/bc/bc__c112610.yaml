@@ -1,0 +1,60 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C112610
+ncitCode: C112610
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112610
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Cerebellar Functions"
+synonyms:
+  - "KFSS1-Cerebellar Functions"
+  - KFSS102
+  - "KFSS - Cerebellar Functions"
+resultScales:
+  - Ordinal
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Cerebellar functions.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Abnormal signs without disability"
+      - "Mild ataxia"
+      - "Moderate truncal or limb ataxia"
+      - "Severe ataxia, all limbs"
+      - "Unable to perform coordinated movements due to ataxia"
+      - "Unknown"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"

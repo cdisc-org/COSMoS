@@ -1,0 +1,88 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C117772
+ncitCode: C117772
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117772
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Measurements
+  - ECG Measurements
+shortName: Single Measurement PP Interval
+synonyms:
+  - PP Interval, Single Measurement
+  - Single Measurement PP Interval
+  - PPSM
+resultScales:
+  - Quantitative
+definition: An electrocardiographic measurement of the interval between the onsets of two consecutive P waves. (CDISC)
+coding:
+  - code: 8624-9
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Interval"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82516
+    ncitCode: C82516
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82516
+    shortName: Observation End Date Time
+    dataType: datetime
+  - conceptId: C50282
+    ncitCode: C50282
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50282
+    shortName: Lead Device
+    dataType: string
+    exampleSet:
+      - "Lead 1"
+      - "Lead 2"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Milliseconds"
+      - "Seconds"
+  - conceptId: C25330
+    ncitCode: C25330
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25330
+    shortName: Duration
+    dataType: integer
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"

@@ -1,0 +1,63 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C121098
+ncitCode: C121098
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121098
+parentConceptId: C120994
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+  - APACHE II Clinical Classification Question
+shortName: "APACHE II - Heart Rate"
+synonyms:
+  - "APCH1-Heart Rate"
+  - APCH103
+resultScales:
+  - Ordinal
+definition: Acute Physiology and Chronic Health Evaluation II (APACHE II) Heart rate (ventricular response).
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "2"
+      - "3"
+      - "4"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<=39 (4)"
+      - "40-54 (3)"
+      - "55-69 (2)"
+      - "70-109 (0)"
+      - "110-139 (2)"
+      - "140-179 (3)"
+      - ">=180 (4)"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C44278
+    ncitCode: C44278
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44278
+    shortName: Unit
+    dataType: string
+    exampleSet:
+      - "Beats per Minute"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

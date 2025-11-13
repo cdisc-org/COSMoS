@@ -1,0 +1,14 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C112522
+ncitCode: C112522
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112522
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+shortName: Kurtzke Functional Systems Scores Clinical Classification
+definition: A standardized rating scale developed by John F. Kurtzke in 1983 to measure the level of functioning in people with multiple sclerosis based on a standard neurological examination. The questionnaire contains 7 functional system; pyramidal functions, cerebellar functions, brainstem functions, sensory function, bowel and bladder function, visual function, and cerebral (or mental) functions. The functional system (FS) scores collected from this questionnaire are used in conjunction with observations and information regarding ambulation and the use of assistive devices to rate the EDSS.

@@ -1,0 +1,11 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C81250
+ncitCode: C81250
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81250
+categories:
+  - Research or Clinical Assessment Tools
+shortName: Functional Assessment
+synonyms:
+  - FT
+definition: An appraisal of the operation and performance of an object of interest.

@@ -1,0 +1,59 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C147843
+ncitCode: C147843
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147843
+parentConceptId: C147551
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - ATLAS Score Clinical Classification
+  - ATLAS
+  - ATLAS1
+  - ATLAS Clinical Classification Question
+shortName: "ATLAS - Age"
+synonyms:
+  - "ATLAS1-Age"
+  - ATLAS101
+  - "ATLAS - Age"
+resultScales:
+  - Ordinal
+definition: ATLAS Score (ATLAS) Age.
+dataElementConcepts:
+  - conceptId: C50400
+    ncitCode: C50400
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C50400
+    shortName: Age Unit
+    dataType: integer
+    exampleSet:
+      - "Years"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "< 60"
+      - "60 - 79"
+      - ">= 80"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ATLAS"

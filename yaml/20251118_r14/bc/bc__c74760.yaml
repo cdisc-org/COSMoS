@@ -1,0 +1,11 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C74760
+ncitCode: C74760
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74760
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Type Measurements
+shortName: Urine Protein Measurement
+definition: The determination of the amount of protein present in a urine sample.

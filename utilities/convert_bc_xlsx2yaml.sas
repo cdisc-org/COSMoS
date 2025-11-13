@@ -344,10 +344,10 @@
 
 
 %let release=14;
-%let package=202511253;
-%let folder=20251125_r14;
+%let package=20251118;
+%let folder=20251118_r14;
 %let TargetFolder=&root/yaml/&folder/bc;
-%let OverrideDate=%str(2025-11-25);
+%let OverrideDate=%str(2025-11-18);
 
 %let excel_file=&root/curation/draft/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Biomedical Concepts));

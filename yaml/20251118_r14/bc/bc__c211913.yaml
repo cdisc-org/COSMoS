@@ -1,0 +1,12 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C211913
+ncitCode: C211913
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C211913
+parentConceptId: C91102
+categories:
+  - CDISC QRS Instruments Questions
+shortName: CDISC QRS Instruments Questions
+synonyms:
+  - CDISC QRS Instruments Questions
+definition: A header for CDISC Questionnaires, Ratings and Scales.

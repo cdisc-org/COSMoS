@@ -1,0 +1,49 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C121112
+ncitCode: C121112
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121112
+parentConceptId: C120994
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+  - APACHE II Clinical Classification Question
+shortName: "APACHE II - C, Chronic Health Points"
+synonyms:
+  - "APCH1-C: Chronic Health Points"
+  - APCH115
+resultScales:
+  - Ordinal
+definition: "Acute Physiology and Chronic Health Evaluation II (APACHE II) C: Chronic health points."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "2"
+      - "5"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: integer
+    exampleSet:
+      - "2"
+      - "5"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"

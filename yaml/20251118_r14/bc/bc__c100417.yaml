@@ -1,0 +1,72 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C100417
+ncitCode: C100417
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100417
+parentConceptId: C100116
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Karnofsky Performance Status Scale Clinical Classification
+  - KPS SCALE
+  - KPSS01
+  - KPS Scale Questionnaire Question
+shortName: "KPS Scale - Karnofsky Performance Status"
+synonyms:
+  - "KPSS01-Karnofsky Performance Status"
+  - KPSS0101
+  - "KPS Scale - Karnofsky Performance Status"
+resultScales:
+  - Ordinal
+definition: Karnofsky Performance Status Scale (KPS Scale) Karnofsky Performance Status.
+coding:
+  - code: 89243-0
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal no complaints, no evidence of disease."
+      - "Able to carry on normal activity, minor signs or symptoms of disease."
+      - "Normal activity with effort, some signs or symptoms of disease."
+      - "Cares for self, unable to carry on normal activity or to do active work."
+      - "Requires occasional assistance, but is able to care for most of his personal needs."
+      - "Requires considerable assistance and frequent medical care."
+      - "Disabled, requires special care and assistance."
+      - "Severely disabled, hospital admission is indicated although death not imminent."
+      - "Very sick, hospital admission necessary, active supportive treatment necessary."
+      - "Moribund, fatal processes progressing rapidly."
+      - "Dead"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KPS SCALE"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "100"
+      - "90"
+      - "80"
+      - "70"
+      - "60"
+      - "50"
+      - "40"
+      - "30"
+      - "20"
+      - "10"
+      - "0"

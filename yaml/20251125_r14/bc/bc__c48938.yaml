@@ -1,9 +1,0 @@
-packageDate: "2025-11-25"
-packageType: bc
-conceptId: C48938
-ncitCode: C48938
-href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48938
-categories:
-  - Laboratory Tests
-shortName: Cell Count
-definition: A procedure to determine the number of cells in a sample.

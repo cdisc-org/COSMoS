@@ -1,0 +1,10 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C112460
+ncitCode: C112460
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112460
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: KFSS Questionnaire Question
+definition: A question associated with the KFSS questionnaire.

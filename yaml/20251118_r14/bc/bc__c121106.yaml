@@ -1,0 +1,66 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C121106
+ncitCode: C121106
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121106
+parentConceptId: C120994
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+  - APACHE II Clinical Classification Question
+shortName: "APACHE II - Serum Creatinine"
+synonyms:
+  - "APCH1-Serum Creatinine"
+  - APCH109
+resultScales:
+  - Ordinal
+definition: Acute Physiology and Chronic Health Evaluation II (APACHE II) Serum creatinine (mg/100 mL) (double point score for acute renal failure).
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "2"
+      - "3"
+      - "4"
+      - "6"
+      - "8"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<0.6 (2)"
+      - "0.6-1.4 (0)"
+      - "1.5-1.9 (2)"
+      - "2-3.4 (3)"
+      - ">=3.5 (4)"
+      - "1.5-1.9 and acute renal failure (4)"
+      - "2-3.4 and acute renal failure (6)"
+      - ">=3.5 and acute renal failure (8)"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C44278
+    ncitCode: C44278
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44278
+    shortName: Unit
+    dataType: string
+    exampleSet:
+      - "mg/100 mL"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"

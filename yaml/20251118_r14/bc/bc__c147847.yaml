@@ -1,0 +1,59 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C147847
+ncitCode: C147847
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147847
+parentConceptId: C147551
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - ATLAS Score Clinical Classification
+  - ATLAS
+  - ATLAS1
+  - ATLAS Clinical Classification Question
+shortName: "ATLAS - Serum Creatinine"
+synonyms:
+  - "ATLAS1-Serum Creatinine"
+  - ATLAS105
+  - "ATLAS - Serum Creatinine"
+resultScales:
+  - Ordinal
+definition: ATLAS Score (ATLAS) Serum creatinine (as a measure of renal function).
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<= 120"
+      - "121 - 179"
+      - ">= 180"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ATLAS"
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "umol/L"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

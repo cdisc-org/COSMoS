@@ -24,11 +24,11 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20250923_r13/bc",
+            "${workspaceFolder}/yaml/20251118_r14/bc",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r13.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r14.xlsx",
             "-d",
-            "2025-09-23"
+            "2025-11-18"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -42,11 +42,11 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20250923_r13/sdtm",
+            "${workspaceFolder}/yaml/20251118_r14/sdtm",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r13.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r14.xlsx",
             "-d",
-            "2025-09-23"
+            "2025-11-18"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -108,7 +108,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20251125_r14/bc",
+            "${workspaceFolder}/yaml/20251118_r14/bc",
             "-s",
             "${workspaceFolder}/model/cosmos_bc_model.yaml",
             "-c",
@@ -140,7 +140,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20250923_r13/sdtm",
+            "${workspaceFolder}/yaml/2025118_r14/sdtm",
             "-s",
             "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
             "-c",

@@ -1,0 +1,17 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C191036
+ncitCode: C191036
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191036
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Harvey-Bradshaw Index Clinical Classification"
+  - HBI
+  - HBI01
+shortName: "Harvey-Bradshaw Index Clinical Classification"
+synonyms:
+  - HBI01
+  - HBI
+definition: "A standardized clinical tool, published in 1980 by Harvey et al. as a simplified version of the Crohn Disease Activity Index (CDAI), that assesses and scores five patient parameters (well-being, abdominal pain, number of liquid or soft stools, abdominal mass, and complications) to stratify Crohn's disease severity."
