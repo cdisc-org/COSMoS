@@ -443,7 +443,7 @@ title01 "&now";
 /* Package 14 - */
 
 %let release=14;
-%let excel_file=&root/curation/draft/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
+%let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
 
 /************************************************************************************************************************/
