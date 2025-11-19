@@ -1,0 +1,79 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C119259
+ncitCode: C119259
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119259
+parentConceptId: C62085
+categories:
+  - Electrocardiogram Findings
+  - Electrocardiogram Measurements
+  - ECG Measurements
+shortName: Mean Heart Rate by Electrocardiogram
+synonyms:
+  - ECG Mean Heart Rate
+  - EKG Mean Heart Rate
+  - EGHRMN
+resultScales:
+  - Quantitative
+definition: The calculated average rate of depolarisation of a specific region of the heart, most often the ventricles, as measured and recorded by an electrocardiograph during a specified, extended period of time, and which is usually expressed in beats per minute.
+coding:
+  - code: 76282-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Measurement"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Vendor"
+      - "Adjudication Committee"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "12 Lead Standard"
+      - "12 Lead Continuous ECG"
+      - "10 Lead Standard"
+      - "6 Lead Standard"
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73688
+    shortName: Count per Minute
+    dataType: string
+    exampleSet:
+      - "Beats per Minute"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Supine"
+      - "Sitting"
+  - conceptId: C82516
+    ncitCode: C82516
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82516
+    shortName: Observation End Date Time
+    dataType: datetime
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

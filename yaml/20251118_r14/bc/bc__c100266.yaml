@@ -1,0 +1,82 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C100266
+ncitCode: C100266
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100266
+parentConceptId: C100106
+categories:
+  - QRS
+  - Functional Assessment
+  - "Alzheimer's Disease Assessment Scale-Cognitive CDISC Version Functional Test"
+  - "ADAS-Cog"
+  - ADC
+  - "ADAS-Cog CDISC Version Functional Test Question"
+shortName: "CDISC ADAS-Cog - Word Recognition: Word 16"
+synonyms:
+  - ADCRGW16
+  - "Word Recognition: Word [16]"
+  - "CDISC ADAS-Cog - Word Recognition: Word 16"
+resultScales:
+  - Ordinal
+definition: "Alzheimer's Disease Assessment Scale-Cognitive CDISC Version (ADAS-Cog CDISC Version) Word recognition task for word 16 Trials 1, 2, 3."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string
+    exampleSet:
+      - "Participant refused"
+      - "Participant unable for physical reasons"
+      - "Participant unable for cognitive reasons"
+      - "Not done for reasons other than physical/cognitive"
+  - conceptId: C41202
+    ncitCode: C41202
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41202
+    shortName: Completion Status
+    dataType: string
+    exampleSet:
+      - "Not Done"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "WORD RECOGNITION TASK"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ADAS-COG"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Neurologist"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

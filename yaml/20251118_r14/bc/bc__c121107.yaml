@@ -1,0 +1,62 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C121107
+ncitCode: C121107
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121107
+parentConceptId: C120994
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Acute Physiology and Chronic Health Evaluation II Clinical Classification
+  - APACHE II
+  - APCH1
+  - APACHE II Clinical Classification Question
+shortName: "APACHE II - Hematocrit"
+synonyms:
+  - "APCH1-Hematocrit"
+  - APCH110
+resultScales:
+  - Ordinal
+definition: Acute Physiology and Chronic Health Evaluation II (APACHE II) Hematocrit (%).
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C44278
+    ncitCode: C44278
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44278
+    shortName: Unit
+    dataType: string
+    exampleSet:
+      - "Percent"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "<20 (4)"
+      - "20-29.9 (2)"
+      - "30-45.9 (0)"
+      - "46-49.9 (1)"
+      - "50-59.9 (2)"
+      - ">=60 (4)"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "APACHE II"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "4"

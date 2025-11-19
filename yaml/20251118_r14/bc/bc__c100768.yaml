@@ -1,0 +1,17 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C100768
+ncitCode: C100768
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100768
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Karnofsky Performance Status Scale Clinical Classification
+  - KPS SCALE
+  - KPSS01
+shortName: Karnofsky Performance Status Scale Clinical Classification
+synonyms:
+  - KPS SCALE
+  - KPSS01
+definition: "A standardized rating scale originally developed by David A. Karnofsky and Joseph H. Burchenal in 1949 which is used to evaluate the degree to which a patient is functionally impaired. This instrument consists of 3 sections, no special care needed, unable to work, and unable to care for one's self and is completed by a clinician based on their observations. There are a total of eleven levels ranging from 0-100 where 0 indicates that the patient is dead and 100 indicates that the patient is normal."

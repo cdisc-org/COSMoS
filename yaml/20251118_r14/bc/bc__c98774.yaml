@@ -1,0 +1,16 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C98774
+ncitCode: C98774
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C98774
+categories:
+  - Laboratory Tests
+  - ChemistryTests
+  - Protein or Enzyme Type Measurements
+  - Prothrombin Measurements
+  - Coagulation Study
+shortName: Prothrombin Activity Measurement
+synonyms:
+  - Factor II Activity
+  - Prothrombin Activity
+definition: The determination of the biological activity of prothrombin in a sample.

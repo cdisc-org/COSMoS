@@ -1,0 +1,12 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C101875
+ncitCode: C101875
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101875
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: "EQ-5D-5L Questionnaire Question"
+synonyms:
+  - "EQ-5D-5L Questionnaire Question"
+definition: "A question associated with the EQ-5D-5L questionnaire."

@@ -1,0 +1,42 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C112611
+ncitCode: C112611
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112611
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Weakness Interferes With Testing"
+synonyms:
+  - "KFSS1-Weakness Interferes With Testing"
+  - KFSS102A
+  - "KFSS - Weakness Interferes With Testing"
+resultScales:
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Record number 1 in small box when weakness (grade 3 or worse on pyramidal) interferes with testing.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "CHECKED"
+      - "NOT CHECKED"

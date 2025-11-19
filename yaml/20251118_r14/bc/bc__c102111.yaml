@@ -1,0 +1,17 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C102111
+ncitCode: C102111
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102111
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Abnormal Involuntary Movement Scale Clinical Classification
+  - AIMS
+  - AIMS01
+shortName: Abnormal Involuntary Movement Scale Clinical Classification
+synonyms:
+  - AIMS
+  - AIMS01
+definition: A standardized rating scale developed by William Guy in 1976 which is used to evaluate the severity of tardive dyskinesia in individuals taking neuroleptic agents. This instrument contains 5 sections with a total of 12 items pertaining to facial and oral movements, global judgments, trunk movements, dental status, and extremity movements. Each item is rated on either a 0 to 4 scale with 0 being none and 4 being severe, or as 'yes' or 'no.'

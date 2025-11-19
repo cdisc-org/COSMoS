@@ -1,0 +1,62 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C112613
+ncitCode: C112613
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112613
+parentConceptId: C112460
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Kurtzke Functional Systems Scores Clinical Classification
+  - KFSS
+  - KFSS1
+  - KFSS Questionnaire Question
+shortName: "KFSS - Sensory Functions"
+synonyms:
+  - "KFSS1-Sensory Functions"
+  - KFSS104
+  - "KFSS - Sensory Functions"
+resultScales:
+  - Ordinal
+  - Nominal
+definition: Kurtzke Functional Systems Scores (KFSS) Sensory function.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "KFSS"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Vibration or figure-writing decrease only, in one or two limbs"
+      - "Mild decrease in touch or pain or position sense, and/or moderate decrease in vibration in one or two limbs, or vibratory (c/s figure writing) decrease alone in three or four limbs"
+      - "Moderate decrease in touch or pain or position sense, and/or lost vibration in 1 or 2 limbs, or mild decrease in touch or pain and/or moderate decrease in all proprioceptive tests in 3 or 4 limbs"
+      - "Marked decrease in touch or pain or loss of proprioception, alone or combined, in one or two limbs, or moderate decrease in touch or pain and/or severe proprioceptive decrease in more than two limbs"
+      - "Loss (essentially) of sensation in one or two limbs, or moderate decrease in touch or pain and/or loss of proprioception for most of the body below the head"
+      - "Sensation essentially lost below the head"
+      - "Unknown"

@@ -1,0 +1,46 @@
+packageDate: "2025-11-18"
+packageType: bc
+conceptId: C102117
+ncitCode: C102117
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102117
+parentConceptId: C91105
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - European Quality of Life Five Dimension Five Level Scale Questionnaire
+  - "EQ-5D-5L"
+  - EQ5D02
+shortName: European Quality of Life Five Dimension Five Level Scale Questionnaire
+synonyms:
+  - EQ5D02
+  - "EQ-5D-5L"
+  - European Quality of Life Five Dimension Five Level Scale Questionnaire
+definition: "A standardized rating scale which is used as a measure of health outcome. This instrument is a descriptive system consisting of 5 dimensions: mobility, self-care, usual activity, pain/discomfort, and anxiety/depression. Each dimension has 5 levels ranging from no problem to extreme problem or incapable, which are assessed by the patient."
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "EQ-5D-5L"
+  - conceptId: C82534
+    ncitCode: C82534
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82534
+    shortName: Evaluation Interval
+    dataType: string
+    exampleSet:
+      - "Today"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
