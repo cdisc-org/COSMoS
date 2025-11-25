@@ -1,0 +1,43 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C191065
+ncitCode: C191065
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191065
+parentConceptId: C190945
+categories:
+  - Clinical or Research Assessment Classification
+  - Modified Van Assche Index Clinical Classification Question
+  - Modified Van Assche Index Clinical Classification
+  - MVAI
+  - MVAI1
+shortName: "MVAI - Total Score"
+synonyms:
+  - "MVAI1-Total Score"
+  - MVAI106
+  - "MVAI - Total Score"
+resultScales:
+  - Ordinal
+definition: Modified Van Assche Index (MVAI) Total score.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "MVAI"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

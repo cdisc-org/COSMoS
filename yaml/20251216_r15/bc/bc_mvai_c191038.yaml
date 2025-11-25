@@ -1,0 +1,16 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C191038
+ncitCode: C191038
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191038
+categories:
+  - Clinical or Research Assessment Classification
+  - Modified Van Assche Index Clinical Classification Question
+  - Modified Van Assche Index Clinical Classification
+  - MVAI
+  - MVAI1
+shortName: Modified Van Assche Index Clinical Classification
+synonyms:
+  - MVAI
+  - MVAI1
+definition: A standardized scoring system originally developed in 2003 and modified in 2017 that utilizes quantitative radiological evaluation to assess the severity and disease response in perianal fistulizing Crohn disease.

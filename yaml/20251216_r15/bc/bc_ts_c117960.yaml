@@ -1,0 +1,35 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C117960
+ncitCode: C117960
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117960
+parentConceptId: C25466
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Diagnostic Criteria
+synonyms:
+  - DXCRIT
+resultScales:
+  - Nominal
+definition: A standard from which a judgment concerning a medical diagnosis can be established.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "Diagnostic Criteria"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "DXCRIT"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string

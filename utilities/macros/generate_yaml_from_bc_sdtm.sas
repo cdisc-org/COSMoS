@@ -263,8 +263,19 @@
           put +6 "object:" +1 object;
         end;
 
+        %add2issues_sdtm(prxmatch('/.*(TEST|TESTCD|TERM|DECOD|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_variable ne "Y"),
+              %str(MANDATORY_VARIABLE_EXPECTED), 
+              mandatory_variable, "", "",
+              severity=ERROR, extracode= 
+              );
         if missing(mandatory_variable) then mandatory_variable="N";
         put +4 "mandatoryVariable:" +1 mandatory_variable $YN.;
+        
+        %add2issues_sdtm(prxmatch('/.*(TEST|TESTCD|TERM|DECOD|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_value ne "Y"),
+              %str(MANDATORY_VALUE_EXPECTED), 
+              mandatory_value, "", "",
+              severity=ERROR, extracode= 
+              );
         if missing(mandatory_value) then mandatory_value="N";
         put +4 "mandatoryValue:" +1 mandatory_value $YN.;
 
