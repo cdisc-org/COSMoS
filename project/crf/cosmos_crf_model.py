@@ -1,5 +1,5 @@
 # Auto generated from cosmos_crf_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-25T17:09:12
+# Generation date: 2025-11-26T10:21:57
 # Schema: COSMoS-Biomedical-Concepts-CRF-Schema
 #
 # id: https://www.cdisc.org/cosmos/crf_v1.0

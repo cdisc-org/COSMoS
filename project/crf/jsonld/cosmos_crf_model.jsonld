@@ -722,7 +722,7 @@
     {
       "name": "completionInstructions",
       "definition_uri": "https://www.cdisc.org/cosmos/crf_v1.0completionInstructions",
-      "description": "Item completion instructions",
+      "description": "Item completion instructions for the clinical site on how to enter collected information on the CRF",
       "from_schema": "https://www.cdisc.org/cosmos/crf_v1.0",
       "aliases": [
         "completion_instructions"
@@ -1319,9 +1319,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_crf_model.yaml",
-  "source_file_date": "2025-11-25T17:08:33",
-  "source_file_size": 9090,
-  "generation_date": "2025-11-25T17:09:05",
+  "source_file_date": "2025-11-26T10:20:59",
+  "source_file_size": 9161,
+  "generation_date": "2025-11-26T10:21:50",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/crf/jsonld/cosmos_crf_model.context.jsonld",

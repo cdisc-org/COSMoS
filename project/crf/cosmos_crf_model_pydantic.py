@@ -183,7 +183,7 @@ class CRFItem(ConfiguredBaseModel):
          'aliases': ['question_text'],
          'domain_of': ['CRFItem']} })
     prompt: Optional[str] = Field(default=None, description="""Item prompt""", json_schema_extra = { "linkml_meta": {'alias': 'prompt', 'aliases': ['prompt'], 'domain_of': ['CRFItem']} })
-    completionInstructions: Optional[str] = Field(default=None, description="""Item completion instructions""", json_schema_extra = { "linkml_meta": {'alias': 'completionInstructions',
+    completionInstructions: Optional[str] = Field(default=None, description="""Item completion instructions for the clinical site on how to enter collected information on the CRF""", json_schema_extra = { "linkml_meta": {'alias': 'completionInstructions',
          'aliases': ['completion_instructions'],
          'domain_of': ['CRFItem']} })
     orderNumber: int = Field(default=..., description="""Item order number""", json_schema_extra = { "linkml_meta": {'alias': 'orderNumber', 'aliases': ['order_number'], 'domain_of': ['CRFItem']} })

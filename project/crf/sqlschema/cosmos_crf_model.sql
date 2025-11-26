@@ -17,7 +17,7 @@
 --     * Slot: dataElementConceptId Description: Biomedical Concept Data Element Concept identifier foreign key
 --     * Slot: questionText Description: Item question text
 --     * Slot: prompt Description: Item prompt
---     * Slot: completionInstructions Description: Item completion instructions
+--     * Slot: completionInstructions Description: Item completion instructions for the clinical site on how to enter collected information on the CRF
 --     * Slot: orderNumber Description: Item order number
 --     * Slot: mandatoryVariable Description: Indicator that the item must be present within the CRF group
 --     * Slot: dataType Description: Item data type

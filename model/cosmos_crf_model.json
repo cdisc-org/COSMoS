@@ -117,7 +117,7 @@
                     "description": "Codelist"
                 },
                 "completionInstructions": {
-                    "description": "Item completion instructions",
+                    "description": "Item completion instructions for the clinical site on how to enter collected information on the CRF",
                     "type": [
                         "string",
                         "null"

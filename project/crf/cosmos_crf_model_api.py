@@ -58,7 +58,7 @@ class COSMoS-Biomedical-Concepts-CRF-SchemaAPI:
         :param dataElementConceptId: Biomedical Concept Data Element Concept identifier foreign key
         :param questionText: Item question text
         :param prompt: Item prompt
-        :param completionInstructions: Item completion instructions
+        :param completionInstructions: Item completion instructions for the clinical site on how to enter collected information on the CRF
         :param orderNumber: Item order number
         :param mandatoryVariable: Indicator that the item must be present within the CRF group
         :param dataType: Item data type

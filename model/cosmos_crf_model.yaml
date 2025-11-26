@@ -226,7 +226,7 @@ slots:
     aliases:
       - prompt
   completionInstructions:
-    description: Item completion instructions
+    description: Item completion instructions for the clinical site on how to enter collected information on the CRF
     range: string
     aliases:
       - completion_instructions
