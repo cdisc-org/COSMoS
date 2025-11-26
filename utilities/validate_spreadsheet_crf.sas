@@ -440,58 +440,58 @@ title01 "&now";
 %let dropit=package_date categories length significant_digits;
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_AE.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_CM.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_CM)$, dsout=collectxx_02, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_CM)$, dsout=collectxx_02, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_DM.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_DM)$, dsout=collectxx_03, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_DM)$, dsout=collectxx_03, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_DS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_DS)$, dsout=collectxx_04, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_DS)$, dsout=collectxx_04, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_EC.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_EC)$, dsout=collectxx_05, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_EC)$, dsout=collectxx_05, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_EG_local.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_EG)$, dsout=collectxx_06, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_EG)$, dsout=collectxx_06, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_IE.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_IE)$, dsout=collectxx_07, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_IE)$, dsout=collectxx_07, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_LB.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_LB)$, dsout=collectxx_08, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_LB)$, dsout=collectxx_08, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_MB.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_MB)$, dsout=collectxx_09, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_MB)$, dsout=collectxx_09, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_MH.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_MH)$, dsout=collectxx_10, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_MH)$, dsout=collectxx_10, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_PR.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_PR)$, dsout=collectxx_11, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_PR)$, dsout=collectxx_11, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_SC.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_SC)$, dsout=collectxx_12, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_SC)$, dsout=collectxx_12, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_SU.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_SU)$, dsout=collectxx_13, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_SU)$, dsout=collectxx_13, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_VS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_VS)$, dsout=collectxx_14, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_VS)$, dsout=collectxx_14, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_QRS_ADAS_COG.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_ADAS-COG)$, dsout=collectxx_15, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_ADAS-COG)$, dsout=collectxx_15, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_QRS_6MWT.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_QRS_6MWT)$, dsout=collectxx_16, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_6MWT)$, dsout=collectxx_16, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_QRS_EQ5D-5L.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_QRS_EQ5D-5L)$, dsout=collectxx_17, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_EQ5D-5L)$, dsout=collectxx_17, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/crf_specialization_QRS_TTS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(Collection_QRS_TTS)$, dsout=collectxx_18, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_TTS)$, dsout=collectxx_18, drop=%str(drop=&dropit));
 
 /************************************************************************************************************************/
 
