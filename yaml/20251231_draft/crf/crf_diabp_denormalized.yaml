@@ -101,7 +101,7 @@ items:
   - name: DIABP_VSORRESU
     variableName: VSORRESU
     dataElementConceptId: C49669
-    questionText: What was the result of the Diastolic Blood Pressure measurement?
+    questionText: What was the unit of the Diastolic Blood Pressure measurement?
     orderNumber: 5
     mandatoryVariable: true 
     dataType: text
