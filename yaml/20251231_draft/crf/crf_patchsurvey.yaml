@@ -1,0 +1,45 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: PATCHSURVEY
+shortName: TTS Acceptability Survey
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+categories:
+  - "360"
+domain: QS
+biomedicalConceptId: NEW_LZZT
+items:
+  - name: QSCAT
+    variableName: QSCAT
+    prompt: Category
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: QSCAT
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+    prepopulatedValue:
+      value: "TTS ACCEPTABILITY SURVEY - LZZT"
+    sdtmTarget:
+      sdtmAnnotation: "QSCAT = TTS ACCEPTABILITY SURVEY - LZZT"
+      sdtmVariables:
+        -  "QSCAT"
+  - name: QSDAT
+    variableName: QSDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "QSDTC"
+      sdtmVariables:
+        -  "QSDTC"

@@ -1,0 +1,41 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EQ5D0203
+shortName: "EQ5D02-Usual Activities"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: QS
+biomedicalConceptId: C102069
+sdtmDatasetSpecializationId: EQ5D0203
+items:
+  - name: EQ5D0203_QSORRES
+    variableName: QSORRES
+    dataElementConceptId: C46126
+    prompt: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "I have no problems doing my usual activities"
+        value: "I have no problems doing my usual activities"
+      - displayValue: "I have slight problems doing my usual activities"
+        value: "I have slight problems doing my usual activities"
+      - displayValue: "I have moderate problems doing my usual activities"
+        value: "I have moderate problems doing my usual activities"
+      - displayValue: "I have severe problems doing my usual activities"
+        value: "I have severe problems doing my usual activities"
+      - displayValue: "I am unable to do my usual activities"
+        value: "I am unable to do my usual activities"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0203"
+      sdtmVariables:
+        -  "QSORRES"
+        -  "QSSTRESC"
+        -  "QSSTRESN"
+        -  "QSTESTCD"
+        -  "QSTEST"

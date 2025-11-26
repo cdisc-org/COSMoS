@@ -1,0 +1,71 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: FRMSIZE_NORMALIZED
+shortName: Frame Size (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Normalized
+domain: VS
+biomedicalConceptId: C49680
+sdtmDatasetSpecializationId: FRMSIZE
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    questionText: What was the date of the measurement?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "VSDTC"
+      sdtmVariables:
+        -  "VSDTC"
+  - name: VSTEST
+    variableName: VSTEST
+    prompt: Test
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Frame Size"
+      conceptId: C49680
+    sdtmTarget:
+      sdtmAnnotation: "VSTEST = Frame Size"
+      sdtmVariables:
+        -  "VSTEST"
+        -  "VSTESTCD"
+  - name: VSORRES
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    questionText: What was the result of the Frame Size Measurement?
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: SIZE
+      conceptId: C66733
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66733
+    valueList:
+      - displayValue: "Small"
+        value: "SMALL"
+      - displayValue: "Medium"
+        value: "MEDIUM"
+      - displayValue: "Large"
+        value: "LARGE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "VSORRES when VSTESTCD = FRMSIZE"
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"

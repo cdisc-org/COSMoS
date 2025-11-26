@@ -1,0 +1,64 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C156604
+ncitCode: C156604
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156604
+parentConceptId: C25714
+categories:
+  - Clinical Trial Attribute
+  - Trial Summary
+shortName: Study Data Tabulation Model Implementation Guide Version
+synonyms:
+  - SDTIGVER
+  - SDTM IG Version
+  - SDTM Implementation Guide Version
+  - SDTMIG Version
+resultScales:
+  - Nominal
+definition: The version of the CDISC Study Data Tabulation Model implementation guide that is being used in the study submission.
+dataElementConcepts:
+  - conceptId: C49691
+    ncitCode: C49691
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49691
+    shortName: Trial Summary Parameter
+    dataType: string
+    exampleSet:
+      - "SDTM IG Version"
+  - conceptId: C83445
+    ncitCode: C83445
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83445
+    shortName: Trial Summary Parameter Code
+    dataType: string
+    exampleSet:
+      - "SDTIGVER"
+  - conceptId: C83447
+    ncitCode: C83447
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83447
+    shortName: Trial Summary Parameter Value
+    dataType: string
+    exampleSet:
+      - "3.2"
+      - "3.3"
+      - "3.4"
+  - conceptId: C117458
+    ncitCode: C117458
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117458
+    shortName: Trial Summary Parameter Value Code
+    dataType: string
+    exampleSet:
+      - "C161436l C161437"
+      - "C161438"
+  - conceptId: C117460
+    ncitCode: C117460
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117460
+    shortName: Trial Summary Parameter Name of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "CDISC CT"
+  - conceptId: C117461
+    ncitCode: C117461
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117461
+    shortName: Trial Summary Parameter Version of the Reference Terminology
+    dataType: string
+    exampleSet:
+      - "2024-09-27"

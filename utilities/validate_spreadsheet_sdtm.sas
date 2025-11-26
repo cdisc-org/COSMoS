@@ -446,6 +446,18 @@ title01 "&now";
 %let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
 
+/* Package 15 - */
+
+%let release=15;
+%let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc15_01);
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MVAI)$, dsout=bc15_02);
+%ReadExcel(file=&excel_file, range=%str(SDTM_MVAI)$, dsout=sdtm15_01);
+
+
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history F1: F2: i vname vvalue);
@@ -453,7 +465,7 @@ data bc(drop=change_history F1: F2: i vname vvalue);
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc14:(where=(not missing(bc_id))) _bc_latest(where=(not missing(bc_id)));
+  set bc15:(where=(not missing(bc_id))) _bc_latest(where=(not missing(bc_id)));
 
   array carray{*} _character_;
   * if missing(bc_id) then delete;
@@ -490,7 +502,7 @@ data sdtm(drop=change_history F3: F4:  i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set /* sdtm14:(where=(not missing(vlm_group_id))) */ _sdtm_latest(where=(not missing(vlm_group_id)));
+  set sdtm15:(where=(not missing(vlm_group_id))) _sdtm_latest(where=(not missing(vlm_group_id)));
   order=_n_;
   package_date = upcase(package_date);
   array carray{*} _character_;

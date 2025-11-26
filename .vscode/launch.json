@@ -51,18 +51,18 @@
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
         {
-          "name": "DRAFT: Create Collection Excel",
+          "name": "DRAFT: Create CRF Excel",
           "type": "debugpy",
           "request": "launch",
-          "program": "${workspaceFolder}/scripts/create_cosmos_collection_excel.py",
+          "program": "${workspaceFolder}/scripts/create_cosmos_crf_excel.py",
           "console": "integratedTerminal",
           "args": [
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20251231_draft/collection",
+            "${workspaceFolder}/yaml/20251231_draft/crf",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_collection_dataset_specializations_draft.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_crf_specializations_draft.xlsx",
             "-d",
             "2025-12-31"
           ],
@@ -140,9 +140,9 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/2025118_r14/sdtm",
+            "${workspaceFolder}/yaml/20250923_r13/sdtm",
             "-s",
-            "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
+            "${workspaceFolder}/model/cosmos_sdtm_model.yaml",
             "-c",
             "SDTMGroup"
           ],
@@ -158,25 +158,25 @@
             "-y",
             "${workspaceFolder}/yaml/latest/sdtm",
             "-s",
-            "${workspaceFolder}/model/cosmos_sdtm_bc_model.yaml",
+            "${workspaceFolder}/model/cosmos_sdtm_model.yaml",
             "-c",
             "SDTMGroup"
           ],
           "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
         {
-          "name": "Validate Collection YAML",
+          "name": "Validate CRF YAML",
           "type": "debugpy",
           "request": "launch",
           "program": "${workspaceFolder}/scripts/validate_yaml.py",
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20251231_draft/collection",
+            "${workspaceFolder}/yaml/20251231_draft/crf",
             "-s",
-            "${workspaceFolder}/model/cosmos_collection_bc_model.yaml",
+            "${workspaceFolder}/model/cosmos_crf_model.yaml",
             "-c",
-            "DataCollectionGroup"
+            "CRFGroup"
           ],
           "env": { "PYTHONPATH": "${workspaceRoot}"}
         }

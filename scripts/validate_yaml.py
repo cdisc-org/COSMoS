@@ -15,9 +15,8 @@ The script will print any validation errors found in the YAML files.
 
 Examples:
   python ./validate_yaml.py -y ../yaml/20250701_r12/bc -s ../model/cosmos_bc_model.yaml -c BiomedicalConcept
-  python ./validate_yaml.py -y ../yaml/20250701_r12/sdtm -s ../model/cosmos_sdtm_bc_model.yaml -c DatasetSpecialization
-  python ./validate_yaml.py -y ../yaml/20251231_draft/bc \
-    -s ../model/cosmos_collection_bc_model.yaml -c CollectionDatasetSpecialization
+  python ./validate_yaml.py -y ../yaml/20250701_r12/sdtm -s ../model/cosmos_sdtm_model.yaml -c SDTMGroup
+  python ./validate_yaml.py -y ../yaml/20251231_draft/bc -s ../model/cosmos_crf_model.yaml -c CRFGroup
 """
 
 

@@ -1,0 +1,507 @@
+{
+    "$defs": {
+        "CRFGroup": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "biomedicalConceptId": {
+                    "description": "Biomedical Concept identifier foreign key",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "categories": {
+                    "description": "CRF Dataset Specialization category for the faciliation of API search and extract",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "crfSpecializationId": {
+                    "description": "Identifier for CRF specialization group",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
+                    "type": "string"
+                },
+                "domain": {
+                    "description": "Domain for the CRF specialization group",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "implementationOption": {
+                    "$ref": "#/$defs/ImplementationOptionEnum",
+                    "description": "Implementation option for the CRF specialization group"
+                },
+                "items": {
+                    "description": "Items included in the CRF specialization",
+                    "items": {
+                        "$ref": "#/$defs/CRFItem"
+                    },
+                    "type": "array"
+                },
+                "packageDate": {
+                    "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+                    "format": "date",
+                    "type": "string"
+                },
+                "packageType": {
+                    "$ref": "#/$defs/PackageTypeEnum",
+                    "description": "Package type for CRF specializations (crf)"
+                },
+                "scenario": {
+                    "description": "Scenario for the CRF specialization group",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "sdtmDatasetSpecializationId": {
+                    "description": "Identifier for SDTM Dataset Specialization group",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "shortName": {
+                    "description": "Short name which provides a user friendly and intuitive name for the CRF group",
+                    "type": "string"
+                },
+                "standard": {
+                    "description": "Standard for the CRF specialization group",
+                    "type": "string"
+                },
+                "standardEndVersion": {
+                    "description": "The last CRF IG version that is applicable to the CRF specialization",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "standardStartVersion": {
+                    "description": "The earliest CRF IG version applicable to the CRF specialization",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "packageDate",
+                "packageType",
+                "crfSpecializationId",
+                "shortName",
+                "standard",
+                "standardStartVersion",
+                "items"
+            ],
+            "title": "CRFGroup",
+            "type": "object"
+        },
+        "CRFItem": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "codelist": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/CodeList"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Codelist"
+                },
+                "completionInstructions": {
+                    "description": "Item completion instructions for the clinical site on how to enter collected information on the CRF",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "dataElementConceptId": {
+                    "description": "Biomedical Concept Data Element Concept identifier foreign key",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "dataType": {
+                    "$ref": "#/$defs/CRFItemDataTypeEnum",
+                    "description": "Item data type"
+                },
+                "derivationDescription": {
+                    "description": "Description of the derivation. Required when derivedVariable is true.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "derivedVariable": {
+                    "description": "Indicator that variable is derived",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "displayHidden": {
+                    "description": "Indicator that the item is hidden from the user",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "length": {
+                    "description": "Item length",
+                    "minimum": 1,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "mandatoryVariable": {
+                    "description": "Indicator that the item must be present within the CRF group",
+                    "type": "boolean"
+                },
+                "name": {
+                    "description": "Item name as it appears on the CRF instrument",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "orderNumber": {
+                    "description": "Item order number",
+                    "type": "integer"
+                },
+                "prepopulatedValue": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/PrepopulatedValue"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Pre-populated value for the CRF instrument"
+                },
+                "prompt": {
+                    "description": "Item prompt",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "questionText": {
+                    "description": "Item question text",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "sdtmTarget": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/SDTMTarget"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "SDTM target variables for CRF item variable"
+                },
+                "selectionType": {
+                    "$ref": "#/$defs/SelectionTypeEnum",
+                    "description": "Type of selection used for set-up of the CRF instrument"
+                },
+                "significantDigits": {
+                    "description": "Item significant_digits",
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "valueList": {
+                    "description": "A set of values for a CRF item",
+                    "items": {
+                        "$ref": "#/$defs/ListValue"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "variableName": {
+                    "description": "Variable name of the CRF item for which data are being collected.",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "variableName",
+                "orderNumber",
+                "mandatoryVariable",
+                "dataType"
+            ],
+            "title": "CRFItem",
+            "type": "object"
+        },
+        "CRFItemDataTypeEnum": {
+            "description": "",
+            "enum": [
+                "decimal",
+                "float",
+                "integer",
+                "text",
+                "date",
+                "time"
+            ],
+            "title": "CRFItemDataTypeEnum",
+            "type": "string"
+        },
+        "CodeList": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "conceptId": {
+                    "description": "C-code for codelist in NCIt",
+                    "pattern": "^(C[0-9]+)$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "href": {
+                    "description": "Link to NCIt for the codelist",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "submissionValue": {
+                    "description": "CDISC submission value for the codelist",
+                    "pattern": "^[A-Z][A-Z0-9_]*$",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "submissionValue"
+            ],
+            "title": "CodeList",
+            "type": "object"
+        },
+        "ImplementationOptionEnum": {
+            "description": "",
+            "enum": [
+                "Normalized",
+                "Denormalized"
+            ],
+            "title": "ImplementationOptionEnum",
+            "type": "string"
+        },
+        "ListValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "displayValue": {
+                    "description": "CDISC submission value for the CRF item",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "User-friendly display value for the CRF item",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "displayValue"
+            ],
+            "title": "ListValue",
+            "type": "object"
+        },
+        "PackageTypeEnum": {
+            "description": "",
+            "enum": [
+                "crf"
+            ],
+            "title": "PackageTypeEnum",
+            "type": "string"
+        },
+        "PrepopulatedValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "conceptId": {
+                    "description": "C-code for pre-populated term in NCIt",
+                    "pattern": "^(C[0-9]+)$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "value": {
+                    "description": "Submission value for pre-populated term in NCIt",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "value"
+            ],
+            "title": "PrepopulatedValue",
+            "type": "object"
+        },
+        "SDTMTarget": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "sdtmAnnotation": {
+                    "description": "Annotation of the SDTM target in the CRF instrument",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "sdtmTargetMapping": {
+                    "description": "Rule for mapping from CRF item to SDTM target variable.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "sdtmVariables": {
+                    "description": "SDTM target variable for CRF item variable",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "title": "SDTMTarget",
+            "type": "object"
+        },
+        "SelectionTypeEnum": {
+            "description": "",
+            "enum": [
+                "Multiple",
+                "Single"
+            ],
+            "title": "SelectionTypeEnum",
+            "type": "string"
+        }
+    },
+    "$id": "https://www.cdisc.org/cosmos/crf_v1.0",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "",
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "biomedicalConceptId": {
+            "description": "Biomedical Concept identifier foreign key",
+            "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "categories": {
+            "description": "CRF Dataset Specialization category for the faciliation of API search and extract",
+            "items": {
+                "type": "string"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "crfSpecializationId": {
+            "description": "Identifier for CRF specialization group",
+            "pattern": "^[A-Z][A-Z0-9_]*$",
+            "type": "string"
+        },
+        "domain": {
+            "description": "Domain for the CRF specialization group",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "implementationOption": {
+            "$ref": "#/$defs/ImplementationOptionEnum",
+            "description": "Implementation option for the CRF specialization group"
+        },
+        "items": {
+            "description": "Items included in the CRF specialization",
+            "items": {
+                "$ref": "#/$defs/CRFItem"
+            },
+            "type": "array"
+        },
+        "packageDate": {
+            "description": "Biomedical Concept package release date indicating when the BC package was published to production",
+            "format": "date",
+            "type": "string"
+        },
+        "packageType": {
+            "$ref": "#/$defs/PackageTypeEnum",
+            "description": "Package type for CRF specializations (crf)"
+        },
+        "scenario": {
+            "description": "Scenario for the CRF specialization group",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "sdtmDatasetSpecializationId": {
+            "description": "Identifier for SDTM Dataset Specialization group",
+            "pattern": "^[A-Z][A-Z0-9_]*$",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "shortName": {
+            "description": "Short name which provides a user friendly and intuitive name for the CRF group",
+            "type": "string"
+        },
+        "standard": {
+            "description": "Standard for the CRF specialization group",
+            "type": "string"
+        },
+        "standardEndVersion": {
+            "description": "The last CRF IG version that is applicable to the CRF specialization",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "standardStartVersion": {
+            "description": "The earliest CRF IG version applicable to the CRF specialization",
+            "type": "string"
+        }
+    },
+    "required": [
+        "packageDate",
+        "packageType",
+        "crfSpecializationId",
+        "shortName",
+        "standard",
+        "standardStartVersion",
+        "items"
+    ],
+    "title": "COSMoS-Biomedical-Concepts-CRF-Schema",
+    "type": "object",
+    "version": null
+}

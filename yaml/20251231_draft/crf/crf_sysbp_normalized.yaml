@@ -1,0 +1,154 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: SYSBP_NORMALIZED
+shortName: Systolic Blood Pressure (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Normalized
+domain: VS
+biomedicalConceptId: C25298
+sdtmDatasetSpecializationId: SYSBP
+items:
+  - name: VSDAT
+    variableName: VSDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "VSDTC"
+      sdtmVariables:
+        -  "VSDTC"
+  - name: VSTPT
+    variableName: VSTPT
+    prompt: Timepoint
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "VSTPT"
+      sdtmVariables:
+        -  "VSTPT"
+  - name: VSTEST
+    variableName: VSTEST
+    prompt: Test
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 40
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Systolic Blood Pressure"
+      conceptId: C25298
+    sdtmTarget:
+      sdtmAnnotation: "VSTEST = Systolic Blood Pressure"
+      sdtmVariables:
+        -  "VSTEST"
+        -  "VSTESTCD"
+  - name: VSPOS
+    variableName: VSPOS
+    dataElementConceptId: C62164
+    prompt: Position
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Prone"
+        value: "PRONE"
+      - displayValue: "Semi-recumbent"
+        value: "SEMI-RECUMBENT"
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "VSPOS when VSTESTCD = SYSBP"
+      sdtmVariables:
+        -  "VSPOS"
+  - name: VSLOC
+    variableName: VSLOC
+    dataElementConceptId: C13717
+    prompt: Anatomical Location
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: LOC
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+    valueList:
+      - displayValue: "Brachial Artery"
+        value: "BRACHIAL ARTERY"
+      - displayValue: "Femoral Artery"
+        value: "FEMORAL ARTERY"
+      - displayValue: "Peripheral Artery"
+        value: "PERIPHERAL ARTERY"
+      - displayValue: "Radial Artery"
+        value: "RADIAL ARTERY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "VSLOC when VSTESTCD = SYSBP"
+      sdtmVariables:
+        -  "VSLOC"
+  - name: VSORRES
+    variableName: VSORRES
+    dataElementConceptId: C70856
+    prompt: Result
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    significantDigits: 1
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "VSORRES when VSTESTCD = SYSBP"
+      sdtmVariables:
+        -  "VSORRES"
+        -  "VSTESTCD"
+        -  "VSTEST"
+  - name: VSORRESU
+    variableName: VSORRESU
+    dataElementConceptId: C49669
+    prompt: Unit
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: text
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: VSRESU
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+    prepopulatedValue:
+      value: "mmHg"
+      conceptId: C49670
+    sdtmTarget:
+      sdtmAnnotation: "VSORRESU = mmHg when VSTESTCD = SYSBP"
+      sdtmVariables:
+        -  "VSORRESU"
+        -  "VSTESTCD"
+        -  "VSTEST"

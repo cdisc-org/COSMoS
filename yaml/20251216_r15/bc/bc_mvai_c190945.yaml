@@ -1,0 +1,10 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C190945
+ncitCode: C190945
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190945
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: Modified Van Assche Index Clinical Classification Question
+definition: A question associated with the Modified Van Assche Index clinical classification.

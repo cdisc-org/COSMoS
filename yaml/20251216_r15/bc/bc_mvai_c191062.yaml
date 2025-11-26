@@ -1,0 +1,51 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C191062
+ncitCode: C191062
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191062
+parentConceptId: C190945
+categories:
+  - Clinical or Research Assessment Classification
+  - Modified Van Assche Index Clinical Classification Question
+  - Modified Van Assche Index Clinical Classification
+  - MVAI
+  - MVAI1
+shortName: "MVAI - Rectal Wall Involvement"
+synonyms:
+  - "MVAI1-Rectal Wall Involvement"
+  - MVAI103
+  - "MVAI - Rectal Wall Involvement"
+resultScales:
+  - Ordinal
+definition: Modified Van Assche Index (MVAI) Rectal wall involvement.
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Normal"
+      - "Thickened"
+      - "Increased signal intensity"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "MVAI"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,211 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: GGTSERPL_DENORMALIZED
+shortName: Gamma Glutamyl Transpeptidase Concentration in Serum or Plasma (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C64847
+sdtmDatasetSpecializationId: GGTSERPL
+items:
+  - name: GGT_LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "CHEMISTRY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: GGT_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: GGT_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: GGT_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: GGT_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "SERUM OR PLASMA"
+      conceptId: C105706
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: GGT_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: GGT_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Gamma Glutamyl Transferase
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = GGT"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: GGT_LBORRESU
+    variableName: LBORRESU
+    dataElementConceptId: C67365
+    prompt: Unit
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "U/L"
+        value: "U/L"
+      - displayValue: "IU/L"
+        value: "IU/L"
+      - displayValue: "nkat/L"
+        value: "nkat/L"
+      - displayValue: "ukat/L"
+        value: "ukat/L"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBORRESU when LBTESTCD = GGT"
+      sdtmVariables:
+        -  "LBORRESU"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: GGT_LBORNRLO
+    variableName: LBORNRLO
+    prompt: Normal Range Lower Limit
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRLO"
+      sdtmVariables:
+        -  "LBORNRLO"
+  - name: GGT_LBORNRHI
+    variableName: LBORNRHI
+    prompt: Normal Range Upper Limit
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRHI"
+      sdtmVariables:
+        -  "LBORNRHI"
+  - name: GGT_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

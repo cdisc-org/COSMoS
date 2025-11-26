@@ -1,0 +1,34 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: PR_SHORT
+shortName: Medical Procedure Yes No Indicator
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+categories:
+  - "360"
+domain: PR
+biomedicalConceptId: C219640
+items:
+  - name: PRYN
+    variableName: PRYN
+    dataElementConceptId: C219640
+    questionText: Were any procedures performed?
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"

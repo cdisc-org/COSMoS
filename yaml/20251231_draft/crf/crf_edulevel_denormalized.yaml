@@ -1,0 +1,45 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EDULEVEL_DENORMALIZED
+shortName: Education Level (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Denormalized
+categories:
+  - "360"
+domain: SC
+biomedicalConceptId: C17953
+sdtmDatasetSpecializationId: EDULEVEL
+items:
+  - name: EDULEVEL_SCCAT
+    variableName: SCCAT
+    prompt: Subject Characteristics Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "EDUCATION"
+    sdtmTarget:
+      sdtmAnnotation: "SCCAT = EDUCATION"
+      sdtmVariables:
+        -  "SCCAT"
+  - name: EDULEVEL_SCORRES
+    variableName: SCORRES
+    dataElementConceptId: C25554
+    prompt: Level of Education Attained
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "SCORRES when SCTESTCD = EDULEVEL"
+      sdtmVariables:
+        -  "SCORRES"
+        -  "SCTESTCD"
+        -  "SCTEST"

@@ -1,0 +1,188 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EXPOSCOLL_XANOMELINEPLACEBO25_DENORMALIZED
+shortName: Exposure as Collected Xanomeline (LY246708) or Placebo (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: Patch 25cm2
+categories:
+  - "360"
+domain: EC
+biomedicalConceptId: C117466
+sdtmDatasetSpecializationId: EXPOSCOLL_XANOMELINEPLACEBO
+items:
+  - name: ECTRT
+    variableName: ECTRT
+    dataElementConceptId: C117473
+    prompt: Study Drug
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Xanomeline (LY246708) or Placebo"
+    sdtmTarget:
+      sdtmAnnotation: "ECTRT = Xanomeline (LY246708) or Placebo"
+      sdtmVariables:
+        -  "ECTRT"
+  - name: ECDOSE
+    variableName: ECDOSE
+    dataElementConceptId: C117479
+    prompt: Number of 25cm2 patches prescribed/day
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: integer
+    length: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSE"
+      sdtmVariables:
+        -  "ECDOSE"
+  - name: ECDOSU
+    variableName: ECDOSU
+    dataElementConceptId: C117481
+    prompt: Unit
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "PATCH"
+      conceptId: C48524
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSU"
+      sdtmVariables:
+        -  "ECDOSU"
+  - name: ECDOSFRM
+    variableName: ECDOSFRM
+    dataElementConceptId: C117482
+    prompt: Dose Form
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: FRM
+      conceptId: C66726
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66726
+    prepopulatedValue:
+      value: "PATCH"
+      conceptId: C42968
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSFRM = PATCH"
+      sdtmVariables:
+        -  "ECDOSFRM"
+  - name: ECDOSFRQ
+    variableName: ECDOSFRQ
+    dataElementConceptId: C117483
+    prompt: Frequency
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: FREQ
+      conceptId: C71113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71113
+    prepopulatedValue:
+      value: "QD"
+      conceptId: C25473
+    sdtmTarget:
+      sdtmAnnotation: "ECDOSFRQ = QD"
+      sdtmVariables:
+        -  "ECDOSFRQ"
+  - name: ECROUTE
+    variableName: ECROUTE
+    dataElementConceptId: C117486
+    prompt: Route
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: ROUTE
+      conceptId: C66729
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66729
+    prepopulatedValue:
+      value: "TRANSDERMAL"
+      conceptId: C38305
+    sdtmTarget:
+      sdtmAnnotation: "ECROUTE = TRANSDERMAL"
+      sdtmVariables:
+        -  "ECROUTE"
+  - name: ECPSTRG
+    variableName: ECPSTRG
+    prompt: Dose Strength
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "27"
+    sdtmTarget:
+      sdtmAnnotation: "ECPSTRG"
+      sdtmVariables:
+        -  "ECPSTRG"
+  - name: ECPSTRGU
+    variableName: ECPSTRGU
+    prompt: Dose Strength Unit
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "mg"
+      conceptId: C28253
+    sdtmTarget:
+      sdtmAnnotation: "ECPSTRGU"
+      sdtmVariables:
+        -  "ECPSTRGU"
+  - name: ECSTDAT
+    variableName: ECSTDAT
+    dataElementConceptId: C117496
+    prompt: Start Date
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "ECSTDTC"
+      sdtmVariables:
+        -  "ECSTDTC"
+  - name: ECENDAT
+    variableName: ECENDAT
+    dataElementConceptId: C117497
+    prompt: End Date
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "ECENDTC"
+      sdtmVariables:
+        -  "ECENDTC"

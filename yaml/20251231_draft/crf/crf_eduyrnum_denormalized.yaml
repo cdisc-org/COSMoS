@@ -1,0 +1,69 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EDUYRNUM_DENORMALIZED
+shortName: Number of Years of Education (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Denormalized
+categories:
+  - "360"
+domain: SC
+biomedicalConceptId: C122393
+sdtmDatasetSpecializationId: EDUYRNUM
+items:
+  - name: EDUYRNUM_SCCAT
+    variableName: SCCAT
+    prompt: Subject Characteristics Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "EDUCATION"
+    sdtmTarget:
+      sdtmAnnotation: "SCCAT = EDUCATION"
+      sdtmVariables:
+        -  "SCCAT"
+  - name: EDUYRNUM_SCORRES
+    variableName: SCORRES
+    dataElementConceptId: C127787
+    prompt: Number of Years of Education
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: decimal
+    length: 4
+    significantDigits: 1
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "SCORRES when SCTESTCD = EDUYRNUM"
+      sdtmVariables:
+        -  "SCORRES"
+        -  "SCTESTCD"
+        -  "SCTEST"
+  - name: EDUYRNUM_SCORRESU
+    variableName: SCORRESU
+    dataElementConceptId: C42574
+    prompt: Unit
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "YEARS"
+      conceptId: C29848
+    sdtmTarget:
+      sdtmAnnotation: "SCORRESU when SCTESTCD = EDUYRNUM"
+      sdtmVariables:
+        -  "SCORRESU"
+        -  "SCTESTCD"
+        -  "SCTEST"

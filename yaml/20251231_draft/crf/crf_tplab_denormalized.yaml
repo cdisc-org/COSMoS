@@ -1,0 +1,153 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: TPLAB_DENORMALIZED
+shortName: Treponema pallidum Antibody Detection in Serum (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+domain: MB
+biomedicalConceptId: C132388
+sdtmDatasetSpecializationId: TPLAB
+items:
+  - name: TPLAB_MBCAT
+    variableName: MBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "MBCAT"
+      sdtmVariables:
+        -  "MBCAT"
+  - name: TPLAB_MBSCAT
+    variableName: MBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "MBSCAT"
+      sdtmVariables:
+        -  "MBSCAT"
+  - name: TPLAB_MBNAM
+    variableName: MBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "MBNAM"
+      sdtmVariables:
+        -  "MBNAM"
+  - name: TPLAB_MBDAT
+    variableName: MBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "MBDAT"
+      sdtmVariables:
+        -  "MBDAT"
+  - name: TPLAB_MBSPEC
+    variableName: MBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "SERUM"
+      conceptId: C13325
+    sdtmTarget:
+      sdtmAnnotation: "MBSPEC"
+      sdtmVariables:
+        -  "MBSPEC"
+  - name: TPLAB_MBORRES
+    variableName: MBORRES
+    dataElementConceptId: C70856
+    prompt: Treponema pallidum Antibody Detection
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "MBORRES"
+      sdtmVariables:
+        -  "MBORRES"
+  - name: TPLAB_MBTSTDTL
+    variableName: MBTSTDTL
+    dataElementConceptId: C117062
+    prompt: Test Detail
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: MBFTSDTL
+      conceptId: C174225
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174225
+    prepopulatedValue:
+      value: "DETECTION"
+      conceptId: C174330
+    sdtmTarget:
+      sdtmAnnotation: "MBTSTDTL = DETECTION"
+      sdtmVariables:
+        -  "MBTSTDTL"
+  - name: TPLAB_MBMETHOD
+    variableName: MBMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: METHOD
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+    valueList:
+      - displayValue: "Fluorescent Immunoassay"
+        value: "FLUORESCENT IMMUNOASSAY"
+      - displayValue: "Hemagglutination Assay"
+        value: "HEMAGGLUTINATION ASSAY"
+      - displayValue: "Chemiluminescent Microparticle Immunoassay"
+        value: "CHEMILUMINESCENT MICROPARTICLE IMMUNOASSAY"
+      - displayValue: "PCR"
+        value: "POLYMERASE CHAIN REACTION"
+      - displayValue: "Immunoblot"
+        value: "IMMUNOBLOT"
+      - displayValue: "Rapid Immunoassay"
+        value: "RAPID IMMUNOASSAY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "MBMETHOD"
+      sdtmVariables:
+        -  "MBMETHOD"

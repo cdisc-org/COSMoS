@@ -1,0 +1,120 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: QTCFAG_DENORMALIZED
+shortName: QTCF Interval Aggregate (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: LOCAL READING
+domain: EG
+biomedicalConceptId: C117786
+sdtmDatasetSpecializationId: QTCFAG
+items:
+  - name: EGDAT
+    variableName: EGDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "EGDTC"
+      sdtmVariables:
+        -  "EGDTC"
+  - name: EGMETHOD
+    variableName: EGMETHOD
+    dataElementConceptId: C82535
+    prompt: Method
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: EGMETHOD
+      conceptId: C71151
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71151
+    prepopulatedValue:
+      value: "12 LEAD STANDARD"
+      conceptId: C71102
+    sdtmTarget:
+      sdtmAnnotation: "EGMETHOD = 12 LEAD STANDARD"
+      sdtmVariables:
+        -  "EGMETHOD"
+  - name: EGPOS
+    variableName: EGPOS
+    dataElementConceptId: C62164
+    prompt: Position
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: POSITION
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+    valueList:
+      - displayValue: "Semi-Fowlers"
+        value: "SEMI-FOWLERS"
+      - displayValue: "Semi-Recumbent"
+        value: "SEMI-RECUMBENT"
+      - displayValue: "Sitting"
+        value: "SITTING"
+      - displayValue: "Standing"
+        value: "STANDING"
+      - displayValue: "Supine"
+        value: "SUPINE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGPOS"
+      sdtmVariables:
+        -  "EGPOS"
+  - name: QTCFAG_EGORRES
+    variableName: EGORRES
+    dataElementConceptId: C25330
+    prompt: QTcF Interval, Aggregate Result
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "EGORRES when EGTESTCD = QTCFAG"
+      sdtmVariables:
+        -  "EGORRES"
+        -  "EGTEST"
+        -  "EGTESTCD"
+  - name: QTCFAG_EGORRESU
+    variableName: EGORRESU
+    dataElementConceptId: C42574
+    prompt: Unit
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "msec"
+        value: "ms"
+      - displayValue: "per sec"
+        value: "/s"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "EGORRESU when EGTESTCD = QTCFAG"
+      sdtmVariables:
+        -  "EGORRESU"
+        -  "EGTEST"
+        -  "EGTESTCD"

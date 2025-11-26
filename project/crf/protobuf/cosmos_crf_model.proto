@@ -1,0 +1,64 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
+message CodeList
+ {
+  string submissionValue = 0
+  string conceptId = 0
+  uri href = 0
+ }
+message CRFGroup
+ {
+  date packageDate = 0
+  packageTypeEnum packageType = 0
+  string crfSpecializationId = 0
+  string shortName = 0
+  string standard = 0
+  string standardStartVersion = 0
+  string standardEndVersion = 0
+  implementationOptionEnum implementationOption = 0
+  string scenario = 0
+ repeated  string categories = 0
+  string domain = 0
+  string biomedicalConceptId = 0
+  string sdtmDatasetSpecializationId = 0
+ repeated  cRFItem items = 0
+ }
+message CRFItem
+ {
+  string name = 0
+  string variableName = 0
+  string dataElementConceptId = 0
+  string questionText = 0
+  string prompt = 0
+  string completionInstructions = 0
+  integer orderNumber = 0
+  boolean mandatoryVariable = 0
+  cRFItemDataTypeEnum dataType = 0
+  integer length = 0
+  integer significantDigits = 0
+  boolean displayHidden = 0
+  boolean derivedVariable = 0
+  string derivationDescription = 0
+  codeList codelist = 0
+ repeated  listValue valueList = 0
+  selectionTypeEnum selectionType = 0
+  prepopulatedValue prepopulatedValue = 0
+  sDTMTarget sdtmTarget = 0
+ }
+message ListValue
+ {
+  string displayValue = 0
+  string value = 0
+ }
+message PrepopulatedValue
+ {
+  string value = 0
+  string conceptId = 0
+ }
+message SDTMTarget
+ {
+  string sdtmAnnotation = 0
+ repeated  string sdtmVariables = 0
+  string sdtmTargetMapping = 0
+ }

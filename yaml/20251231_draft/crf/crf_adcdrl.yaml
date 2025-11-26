@@ -1,0 +1,93 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: ADCDRL
+shortName: "CDISC ADAS-Cog - Delayed Word Recall Summary Score"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+categories:
+  - "360"
+domain: FT
+biomedicalConceptId: C100215
+sdtmDatasetSpecializationId: ADCDRL
+items:
+  - name: ADCDRL_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Delayed Word Recall"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Delayed Word Recall"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCDRL_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: DELAYED WORD RECALL
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: integer
+    length: 2
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "0"
+        value: "0"
+      - displayValue: "1"
+        value: "1"
+      - displayValue: "2"
+        value: "2"
+      - displayValue: "3"
+        value: "3"
+      - displayValue: "4"
+        value: "4"
+      - displayValue: "5"
+        value: "5"
+      - displayValue: "6"
+        value: "6"
+      - displayValue: "7"
+        value: "7"
+      - displayValue: "8"
+        value: "8"
+      - displayValue: "9"
+        value: "9"
+      - displayValue: "10"
+        value: "10"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCDRL"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCDRL_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

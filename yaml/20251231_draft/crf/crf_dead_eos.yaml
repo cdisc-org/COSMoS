@@ -1,0 +1,100 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: DEAD_EOS
+shortName: Dead
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: End of Study
+domain: DS
+biomedicalConceptId: C28554
+sdtmDatasetSpecializationId: DEAD
+items:
+  - name: DSCAT
+    variableName: DSCAT
+    dataElementConceptId: C82977
+    prompt: Disposition Category
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: DSCAT
+      conceptId: C74558
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74558
+    prepopulatedValue:
+      value: "DISPOSITION EVENT"
+      conceptId: C74590
+    sdtmTarget:
+      sdtmAnnotation: "DSCAT"
+      sdtmVariables:
+        -  "DSCAT"
+  - name: DSSCAT
+    variableName: DSSCAT
+    dataElementConceptId: C25692
+    prompt: Disposition Subcategory
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: DSSCAT
+      conceptId: C170443
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170443
+    sdtmTarget:
+      sdtmAnnotation: "DSSCAT"
+      sdtmVariables:
+        -  "DSSCAT"
+  - name: DSDECOD
+    variableName: DSDECOD
+    dataElementConceptId: C82977
+    questionText: What was the subject's status at the end of study?
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NCOMPLT
+      conceptId: C66727
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66727
+    prepopulatedValue:
+      value: "DEATH"
+      conceptId: C28554
+    sdtmTarget:
+      sdtmAnnotation: "DSDECOD"
+      sdtmVariables:
+        -  "DSDECOD"
+  - name: DSTERM
+    variableName: DSTERM
+    dataElementConceptId: C82571
+    prompt: If death, specify
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "DSTERM"
+      sdtmVariables:
+        -  "DSTERM"
+  - name: DSSTDAT
+    variableName: DSSTDAT
+    dataElementConceptId: C82517
+    questionText: What was the date of disontinuation?
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "DSSTDTC"
+      sdtmVariables:
+        -  "DSSTDTC"

@@ -1,0 +1,53 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: SEX
+shortName: SEX
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: DM
+biomedicalConceptId: C28421
+sdtmDatasetSpecializationId: SEX
+items:
+  - name: DMDAT
+    variableName: DMDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "DMDTC"
+      sdtmVariables:
+        -  "DMDTC"
+  - name: SEX
+    variableName: SEX
+    dataElementConceptId: C28421
+    questionText: What is the sex of the subject?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: SEX
+      conceptId: C66731
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66731
+    valueList:
+      - displayValue: "Female"
+        value: "F"
+      - displayValue: "Male"
+        value: "M"
+      - displayValue: "Unknown"
+        value: "U"
+      - displayValue: "Intersex"
+        value: "INTERSEX"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "SEX"
+      sdtmVariables:
+        -  "SEX"

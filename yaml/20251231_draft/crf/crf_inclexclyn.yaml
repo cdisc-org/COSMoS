@@ -1,0 +1,46 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: INCLEXCLYN
+shortName: Inclusion Exclusion Criteria Yes No
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: IE
+biomedicalConceptId: C83063
+items:
+  - name: IEYN
+    variableName: IEYN
+    dataElementConceptId: C83063
+    questionText: Were all eligibility criteria met?
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+  - name: IEDAT
+    variableName: IEDAT
+    dataElementConceptId: C82515
+    questionText: What was the date the eligibility criteria assessment was performed?
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "IEDTC"
+      sdtmVariables:
+        -  "IEDTC"
