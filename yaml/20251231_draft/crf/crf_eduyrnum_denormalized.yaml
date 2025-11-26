@@ -29,7 +29,7 @@ items:
         -  "SCCAT"
   - name: EDUYRNUM_SCORRES
     variableName: SCORRES
-    dataElementConceptId: C127787
+    dataElementConceptId: C70856
     prompt: Number of Years of Education
     orderNumber: 2
     mandatoryVariable: false

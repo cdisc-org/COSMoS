@@ -29,7 +29,7 @@ items:
         -  "SCCAT"
   - name: EDULEVEL_SCORRES
     variableName: SCORRES
-    dataElementConceptId: C25554
+    dataElementConceptId: C70856
     prompt: Level of Education Attained
     orderNumber: 2
     mandatoryVariable: false

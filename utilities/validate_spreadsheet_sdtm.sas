@@ -11,7 +11,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=_bc_latest);
 
 %let excel_file=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
-%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=_sdtm_latest);
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=_sdtm_latest, drop=%str(drop=length significant_digits format));
 
 
 /* Package 1*/

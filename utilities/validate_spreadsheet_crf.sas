@@ -7,6 +7,13 @@
 title01 "&now";
 
 
+%let excel_file=&root/export/cdisc_biomedical_concepts_latest.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=_bc_latest);
+
+%let excel_file=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=_sdtm_latest, drop=%str(drop=length significant_digits format));
+
+
 /* Package 1*/
 
 %let excel_file=&root/curation/package01/BC_Package_2022_10_26.xlsx;
@@ -433,64 +440,79 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc13_21);
 %ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
 
+/* Package 14 - */
+
+%let release=14;
+%let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
+
+/* Package 15 - */
+
+%let release=15;
+%let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc15_01);
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MVAI)$, dsout=bc15_02);
+%ReadExcel(file=&excel_file, range=%str(SDTM_MVAI)$, dsout=sdtm15_01);
 
 /* Package crf test - */
 
 %let release=xx;
 %let dropit=package_date categories length significant_digits;
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_AE.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_CM.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_CM.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_CM)$, dsout=collectxx_02, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_DM.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_DM.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_DM)$, dsout=collectxx_03, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_DS.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_DS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_DS)$, dsout=collectxx_04, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_EC.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_EC.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_EC)$, dsout=collectxx_05, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_EG_local.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_EG_local.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_EG)$, dsout=collectxx_06, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_IE.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_IE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_IE)$, dsout=collectxx_07, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_LB.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_LB.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_LB)$, dsout=collectxx_08, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_MB.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_MB.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_MB)$, dsout=collectxx_09, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_MH.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_MH.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_MH)$, dsout=collectxx_10, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_PR.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_PR.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_PR)$, dsout=collectxx_11, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_SC.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_SC.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_SC)$, dsout=collectxx_12, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_SU.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_SU.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_SU)$, dsout=collectxx_13, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_VS.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_VS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_VS)$, dsout=collectxx_14, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_QRS_ADAS_COG.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_QRS_ADAS_COG.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_ADAS-COG)$, dsout=collectxx_15, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_QRS_6MWT.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_QRS_6MWT.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_6MWT)$, dsout=collectxx_16, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_QRS_EQ5D-5L.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_QRS_EQ5D-5L.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_EQ5D-5L)$, dsout=collectxx_17, drop=%str(drop=&dropit));
 
-%let excel_file=&root/curation/draft/crf/crf_specialization_QRS_TTS.xlsx;
+%let excel_file=&root/curation/draft/crf/CRF_QRS_TTS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_TTS)$, dsout=collectxx_18, drop=%str(drop=&dropit));
 
 /************************************************************************************************************************/
@@ -500,7 +522,7 @@ data bc(drop=change_history F1: F2: i vname vvalue);
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc:(where=(not missing(bc_id)));
+  set bc15:(where=(not missing(bc_id))) _bc_latest(where=(not missing(bc_id)));
 
   array carray{*} _character_;
   * if missing(bc_id) then delete;
@@ -508,17 +530,11 @@ data bc(drop=change_history F1: F2: i vname vvalue);
     vname = vname(carray[i]);
     vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if vvalue ne carray[i] then do;
-     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue;
+     put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= _record_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue;
     end;
   end;
   package_date = upcase(package_date);
 run;
-
-%if &_debug gt 1 %then %do;
-  proc freq data=bc;
-    tables bc_id * package_date / nopercent norow nocol;
-  run;
-%end;
 
 %if &print_html=1 %then %do;
   ods listing close;
@@ -537,13 +553,13 @@ run;
 
 data sdtm(drop=change_history F3: F4: i vname vvalue);
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
-         codelist codelist_submission_value subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object
+         codelist_submission_value codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object
          short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set sdtm:(where=(not missing(vlm_group_id)));
+  set sdtm15:(where=(not missing(vlm_group_id))) _sdtm_latest(where=(not missing(vlm_group_id)));
   order=_n_;
   package_date = upcase(package_date);
   array carray{*} _character_;
@@ -555,14 +571,6 @@ data sdtm(drop=change_history F3: F4: i vname vvalue);
     end;
   end;
 run;
-
-%if &_debug gt 1 %then %do;
-  proc freq data=sdtm;
-    tables vlm_group_id * package_date / nopercent norow nocol;
-    tables linking_phrase / nopercent norow nocol;
-    tables predicate_term / nopercent norow nocol;
-  run;
-%end;
 
 proc sql;
   create table sdtm_merged(drop=order)
@@ -667,7 +675,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       from crf
       where not missing(dec_id);
 
-      select col.package_date, col._excel_file_, col._tab_, col.crf_group_id, col.crf_item, col.bc_id, col.dec_id
+      select col.package_date, col._excel_file_, col._tab_, col.domain, col.crf_group_id, col.crf_item, col.bc_id, col.dec_id
       from crf_bc_dec cold, crf col
       where
         cold.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
@@ -679,7 +687,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
   /* Unresolved SDTM vlm_group_id */
   proc sql;
     title02 "Missing CRF Specialization vlm_group_id link to SDTM vlm_group_id";
-      select package_date,  _excel_file_, _tab_, crf_group_id, crf_item, col.vlm_group_id
+      select package_date,  _excel_file_, _tab_, domain, crf_group_id, crf_item, col.vlm_group_id
       from crf col
       where
         (not missing(col.vlm_group_id)) and (col.vlm_group_id not in (select vlm_group_id from sdtm_merged))
@@ -701,11 +709,11 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
   /* Duplicate CRF records */
   proc sql;
     title02 "Duplicate CRF Specialization records (package_date, crf_group_id, crf_item)";
-      select package_date, _excel_file_, _tab_, standard, _record_, crf_group_id, crf_item, order_number, standard_start_version,	standard_end_version
+      select package_date, _excel_file_, _tab_, standard, _record_, domain, crf_group_id, crf_item, order_number, standard_start_version,	standard_end_version
       from crf
       group by package_date, standard, crf_group_id, crf_item
       having count(*) > 1
-      order by _excel_file_, _tab_, _record_, crf_group_id, crf_item
+      order by _excel_file_, _tab_, _record_, domain, crf_group_id, crf_item
       ;
   run;
 

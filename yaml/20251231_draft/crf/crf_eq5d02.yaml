@@ -69,7 +69,7 @@ items:
         -  "QSDTC"
   - name: EQ5D02_QSEVINTX
     variableName: QSEVINTX
-    dataElementConceptId: C117044
+    dataElementConceptId: C82534
     prompt: Collected Evaluation Interval
     orderNumber: 4
     mandatoryVariable: true 
