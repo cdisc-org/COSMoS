@@ -7,42 +7,42 @@ config:
 erDiagram
 	direction LR
 	BiomedicalConcept {
-		string bc_id PK ""  
-		string ncit_code  ""  
+		string bc_id PK ""
+		string ncit_code  ""
 	}
 	DataElementConcept {
-		string dec_id PK ""  
-		string ncitCode  ""  
+		string dec_id PK ""
+		string ncitCode  ""
 	}
 	SDTMGroup {
-		string vlm_group_id PK ""  
-		string bc_id FK ""  
+		string vlm_group_id PK ""
+		string bc_id FK ""
 	}
 	SDTMVariable {
-		string sdtm_variable PK ""  
-		string vlm_group_id FK ""  
-		string dec_id FK ""  
-		string bc_id FK ""  
+		string sdtm_variable PK ""
+		string vlm_group_id FK ""
+		string dec_id FK ""
+		string bc_id FK ""
 	}
-	DataCollectionGroup {
-		string data_collection_group_id PK ""  
-		string bc_id FK ""  
-		string vlm_group_id FK ""  
-		string section_id FK ""  
+	CRFGroup {
+		string crf_group_id PK ""
+		string bc_id FK ""
+		string vlm_group_id FK ""
+		string section_id FK ""
 	}
-	DataCollectionItem {
-		string data_collection_variable PK ""  
-		string data_collection_group_id FK ""  
-		string dec_id FK ""  
-		string bc_id FK ""  
-		string sdtm_variable FK ""  
+	CRFItem {
+		string crf_variable PK ""
+		string crf_group_id FK ""
+		string dec_id FK ""
+		string bc_id FK ""
+		string sdtm_variable FK ""
 	}
 	BiomedicalConcept||--o{DataElementConcept:"Data Element Concepts"
 	BiomedicalConcept|o..o{SDTMGroup:"SDTM Specializations"
-	BiomedicalConcept|o..o{DataCollectionGroup:"Data Collection Specializations"
+	BiomedicalConcept|o..o{CRFGroup:"CRF Specializations"
 	SDTMGroup||--|{SDTMVariable:"SDTM Variables"
-	DataCollectionGroup||--|{DataCollectionItem:"Data Collection Items"
-	DataCollectionGroup||--o|SDTMGroup:"  "
+	CRFGroup||--|{CRFItem:"CRF Items"
+	CRFGroup||--o|SDTMGroup:"  "
 	DataElementConcept|o..||SDTMVariable:"  "
-	DataElementConcept|o..||DataCollectionItem:"  "
-	SDTMVariable}o..||DataCollectionItem:"  "
+	DataElementConcept|o..||CRFItem:"  "
+	SDTMVariable}o..||CRFItem:"  "

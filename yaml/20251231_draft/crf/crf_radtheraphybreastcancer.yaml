@@ -1,0 +1,281 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: RADTHERAPHYBREASTCANCER
+shortName: Radiation Therapy Breast Cancer
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: PR
+biomedicalConceptId: C15313
+sdtmDatasetSpecializationId: RADTHERAPHYBREASTCANCER
+items:
+  - name: PRCAT
+    variableName: PRCAT
+    dataElementConceptId: C25372
+    prompt: Procedure Category
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "RADIATION THERAPHY"
+    sdtmTarget:
+      sdtmAnnotation: "PRCAT = RADIATION THERAPY"
+      sdtmVariables:
+        -  "PRCAT"
+  - name: PRSCAT
+    variableName: PRSCAT
+    dataElementConceptId: C25692
+    prompt: ProcedureSubcategory
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Internal Radiation Therapy"
+        value: "INTERNAL RADIATION THERAPY"
+      - displayValue: "External Beam Radiation Therapy"
+        value: "EXTERNAL BEAM RADIATION THERAPY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRSCAT"
+      sdtmVariables:
+        -  "PRSCAT"
+  - name: PRINDC
+    variableName: PRINDC
+    dataElementConceptId: C41184
+    prompt: Indication
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "BREAST CANCER"
+    sdtmTarget:
+      sdtmAnnotation: "PRINDC = BREAST CANCER"
+      sdtmVariables:
+        -  "PRINDC"
+  - name: PRTRT
+    variableName: PRTRT
+    dataElementConceptId: C117511
+    prompt: Procedure Name
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: PROCEDUR
+      conceptId: C101858
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101858
+    valueList:
+      - displayValue: "3D Conformal Radiation Therapy"
+        value: "3D CONFORMAL RADIATION THERAPY"
+      - displayValue: "Intensity Modulated Radiation Therapy"
+        value: "INTENSITY MODULATED RADIATION THERAPY"
+      - displayValue: "Radiosurgery"
+        value: "RADIOSURGERY"
+      - displayValue: "Stereotactic Body Radiation Therapy"
+        value: "STEREOTACTIC BODY RADIATION THERAPY"
+      - displayValue: "Total Body Irradiation"
+        value: "TOTAL BODY IRRADIATION"
+      - displayValue: "Intracavity Brachytherapy"
+        value: "INTRACAVITY BRACHYTHERAPY"
+      - displayValue: "Interstitial Brachytherapy"
+        value: "INTERSTITIAL BRACHYTHERAPY"
+      - displayValue: "Radioembolization"
+        value: "RADIOEMBOLIZATION"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRT"
+      sdtmVariables:
+        -  "PRTRT"
+  - name: PRTRTSTT
+    variableName: PRTRTSTT
+    dataElementConceptId: C124444
+    prompt: Procedure Setting
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: TRTSET
+      conceptId: C124308
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124308
+    valueList:
+      - displayValue: "Adjuvant"
+        value: "ADJUVANT"
+      - displayValue: "Metastatic"
+        value: "METASTATIC"
+      - displayValue: "Neo-Adjuvant"
+        value: "NEO-ADJUVANT"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRTSTT in SUPPPR"
+      sdtmVariables:
+        -  "PRTRTSTT"
+  - name: PRTRTINT
+    variableName: PRTRTINT
+    dataElementConceptId: C210652
+    prompt: Procedure Intent
+    orderNumber: 6
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: TRTINTNT
+      conceptId: C124307
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124307
+    valueList:
+      - displayValue: "Palliative"
+        value: "PALLIATIVE"
+      - displayValue: "Curative"
+        value: "CURATIVE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRTINT in SUPPPR"
+      sdtmVariables:
+        -  "PRTRTINT"
+  - name: PRPRESP
+    variableName: PRPRESP
+    dataElementConceptId: C171000
+    prompt: Prespecified
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "PRPRESP = Y"
+      sdtmVariables:
+        -  "PRPRESP"
+  - name: PROCCUR
+    variableName: PROCCUR
+    dataElementConceptId: C127786
+    questionText: Was the Radiotherapy perfomed?
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PROCCUR"
+      sdtmVariables:
+        -  "PROCCUR"
+  - name: PRSTDAT
+    variableName: PRSTDAT
+    dataElementConceptId: C117529
+    prompt: Start Date
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSTDTC"
+      sdtmVariables:
+        -  "PRSTDTC"
+  - name: PRDSTXT
+    variableName: PRDSTXT
+    prompt: Dose
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRDOSE;PRDOSTXT"
+      sdtmVariables:
+        -  "PRDOSE"
+        -  "PRDOSTXT"
+  - name: PRDOSU
+    variableName: PRDOSU
+    dataElementConceptId: C18068
+    prompt: Unit
+    orderNumber: 11
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Gy"
+      conceptId: C18063
+    sdtmTarget:
+      sdtmAnnotation: "PRDOSU = Gy"
+      sdtmVariables:
+        -  "PRDOSU"
+  - name: PRSTTIM
+    variableName: PRSTTIM
+    dataElementConceptId: C117529
+    prompt: Start Time
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSTDTC"
+      sdtmVariables:
+        -  "PRSTDTC"
+  - name: PRLOC
+    variableName: PRLOC
+    dataElementConceptId: C13717
+    prompt: Location
+    orderNumber: 13
+    mandatoryVariable: false
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: LOC
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+    valueList:
+      - displayValue: "Supraclavicular Lymph Node"
+        value: "SUPRACLAVICULAR LYMPH NODE"
+      - displayValue: "Breast"
+        value: "BREAST"
+      - displayValue: "Lumbar Vertebra"
+        value: "LUMBAR VERTEBRA"
+      - displayValue: "Axillary Lymph Node"
+        value: "AXILLARY LYMPH NODE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRLOC"
+      sdtmVariables:
+        -  "PRLOC"

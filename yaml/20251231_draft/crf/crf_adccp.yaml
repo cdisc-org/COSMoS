@@ -1,0 +1,84 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: ADCCP
+shortName: "CDISC ADAS-Cog - Constructional Praxis Summary Score"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+categories:
+  - "360"
+domain: FT
+biomedicalConceptId: C100226
+sdtmDatasetSpecializationId: ADCCP
+items:
+  - name: ADCCP_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Constructional Praxis"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Constructional Praxis"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCCP_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: CONSTRUCTIONAL PRAXIS
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "All 4 drawings correct"
+        value: "all 4 drawings correct"
+      - displayValue: "1 form drawn incorrectly"
+        value: "1 form drawn incorrectly"
+      - displayValue: "2 forms drawn incorrectly"
+        value: "2 forms drawn incorrectly"
+      - displayValue: "3 forms drawn incorrectly"
+        value: "3 forms drawn incorrectly"
+      - displayValue: "4 forms drawn incorrectly (but one or more side/section of at least one shape drawn)"
+        value: "4 forms drawn incorrectly (but one or more side/section of at least one shape drawn)"
+      - displayValue: "No figures drawn, no recognizable attempt at drawing any side/section of any figure"
+        value: "No figures drawn, no recognizable attempt at drawing any side/section of any figure"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCCP"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCCP_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

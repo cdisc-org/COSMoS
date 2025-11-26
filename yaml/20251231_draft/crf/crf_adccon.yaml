@@ -1,0 +1,84 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: ADCCON
+shortName: "CDISC ADAS-Cog - Concentration/Distractibility"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+categories:
+  - "360"
+domain: FT
+biomedicalConceptId: C100279
+sdtmDatasetSpecializationId: ADCCON
+items:
+  - name: ADCCON_FTSCAT
+    variableName: FTSCAT
+    dataElementConceptId: C25692
+    prompt: Subcategory
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "Degree of Impairment"
+    sdtmTarget:
+      sdtmAnnotation: "FTSCAT = Degree of Impairment"
+      sdtmVariables:
+        -  "FTSCAT"
+  - name: ADCCON_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: CONCENTRATION/DISTRACTABILITY
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "No evidence of poor concentration or distractibility"
+        value: "No evidence of poor concentration or distractibility"
+      - displayValue: "Very mild - one instance of poor concentration"
+        value: "Very mild - one instance of poor concentration"
+      - displayValue: "Mild - 2-3 instances of poor concentration/distractibility, signs of restlessness and inattentiveness"
+        value: "Mild - 2-3 instances of poor concentration/distractibility, signs of restlessness and inattentiveness"
+      - displayValue: "Moderate - 4-5 instances during interview"
+        value: "Moderate - 4-5 instances during interview"
+      - displayValue: "Moderately severe - poor concentration/distractibility throughout much of interview"
+        value: "Moderately severe - poor concentration/distractibility throughout much of interview"
+      - displayValue: "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks"
+        value: "Severe - extreme difficulty in concentration and extremely distractible, unable to complete tasks"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = ADCCON"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: ADCCON_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"

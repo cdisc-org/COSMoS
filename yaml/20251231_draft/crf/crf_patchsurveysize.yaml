@@ -1,0 +1,62 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: PATCHSURVEYSIZE
+shortName: "TTS Acceptability Survey - Patch Size"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+categories:
+  - "360"
+domain: QS
+biomedicalConceptId: NEW_LZZT2
+sdtmDatasetSpecializationId: PATCHSURVEYSIZE
+items:
+  - name: TTSACC02_QSORRES
+    variableName: QSORRES
+    dataElementConceptId: C46126
+    questionText: The size of the patch is acceptable
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "1 Strongly Disagree"
+        value: "1 Strongly Disagree"
+      - displayValue: "2"
+        value: "2"
+      - displayValue: "3"
+        value: "3"
+      - displayValue: "4 Neutral"
+        value: "4 Neutral"
+      - displayValue: "5"
+        value: "5"
+      - displayValue: "6"
+        value: "6"
+      - displayValue: "7 Strongly Agree"
+        value: "7 Strongly Agree"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "QSORRES when QSTESTCD = TTSACC02 - Size"
+      sdtmVariables:
+        -  "QSORRES"
+        -  "QSTESTCD"
+        -  "QSTEST"
+  - name: TTSACC02_QSEVAL
+    variableName: QSEVAL
+    dataElementConceptId: C51824
+    prompt: Evaluator
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "CAREGIVER"
+      conceptId: C17445
+    sdtmTarget:
+      sdtmAnnotation: "QSEVAL = CAREGIVER"
+      sdtmVariables:
+        -  "QSEVAL"

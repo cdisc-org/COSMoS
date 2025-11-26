@@ -1,0 +1,85 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EQ5D02
+shortName: "EQ-5D-5L Questionnaire"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: QS
+biomedicalConceptId: C102117
+items:
+  - name: EQ5D02_QSCAT
+    variableName: QSCAT
+    dataElementConceptId: C25372
+    prompt: Category of Questionnaire
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: QSCAT
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+    prepopulatedValue:
+      value: "EQ-5D-5L"
+      conceptId: C102117
+    sdtmTarget:
+      sdtmAnnotation: "QSCAT = EQ-5D-5L"
+      sdtmVariables:
+        -  "QSCAT"
+  - name: EQ5D02_QSPERF
+    variableName: QSPERF
+    dataElementConceptId: C82525
+    questionText: "Was the EQ-5D-5L questionnaire performed?"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]; QSSTAT = NOT DONE"
+      sdtmVariables:
+        -  "QSSTAT"
+  - name: EQ5D02_QSDAT
+    variableName: QSDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "QSDTC"
+      sdtmVariables:
+        -  "QSDTC"
+  - name: EQ5D02_QSEVINTX
+    variableName: QSEVINTX
+    dataElementConceptId: C117044
+    prompt: Collected Evaluation Interval
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 5
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "TODAY"
+    sdtmTarget:
+      sdtmAnnotation: "QSEVINTX = TODAY"
+      sdtmVariables:
+        -  "QSEVINTX"

@@ -1,0 +1,63 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: CHEMISTRY_PERF
+shortName: "Laboratory Test Performed - Chemistry"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: LB
+biomedicalConceptId: C82525
+items:
+  - name: LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "CHEMISTRY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: LBPERF
+    variableName: LBPERF
+    dataElementConceptId: C82525
+    questionText: Was the sample collected?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]; LBSTAT = NOT DONE when LBTESTCD = LBALL"
+      sdtmVariables:
+        -  "LBSTAT"
+  - name: LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"

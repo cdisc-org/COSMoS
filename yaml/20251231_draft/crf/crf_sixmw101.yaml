@@ -1,0 +1,48 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: SIXMW101
+shortName: "SIXMW1-Distance at 1 Minute"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+domain: FT
+biomedicalConceptId: C115800
+sdtmDatasetSpecializationId: SIXMW101
+items:
+  - name: SIXMW101_FTORRES
+    variableName: FTORRES
+    dataElementConceptId: C91106
+    prompt: Distance at 1 Minute
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "FTORRES when FTTESTCD = SIXMW101"
+      sdtmVariables:
+        -  "FTORRES"
+        -  "FTTESTCD"
+        -  "FTTEST"
+  - name: SIXMW101_FTORRESU
+    variableName: FTORRESU
+    dataElementConceptId: C42578
+    prompt: Unit
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "m"
+      conceptId: C41139
+    sdtmTarget:
+      sdtmAnnotation: "FTORRESU = m when FTTESTCD = SIXMW101"
+      sdtmVariables:
+        -  "FTORRESU"

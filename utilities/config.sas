@@ -60,7 +60,7 @@ libname data "&root/utilities/data";
   end;  
 %mend add2issues_sdtm;
 
-%macro add2issues_collection(condition, type, expected, actual, comment, extracode=, severity=WARNING);
+%macro add2issues_crf(condition, type, expected, actual, comment, extracode=, severity=WARNING);
   if &condition then do;
     severity="&severity";
     issue_type = "&type";
@@ -68,7 +68,7 @@ libname data "&root/utilities/data";
     actual_value=&actual;
     comment=&comment;
 
-    putlog "&severity.: &type " _excel_file_= _tab_= collection_group_id= collection_item=
+    putlog "&severity.: &type " _excel_file_= _tab_= crf_group_id= crf_item=
       %if &actual NE "" %then &actual.= ;
       %if &expected NE "" %then &expected.= ;
       comment;
@@ -76,4 +76,4 @@ libname data "&root/utilities/data";
     &extracode;
     output;
   end;  
-%mend add2issues_collection;
+%mend add2issues_crf;

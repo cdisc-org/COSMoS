@@ -1,0 +1,309 @@
+@prefix cosmos_crf: <https://www.cdisc.org/cosmos/crf_v1.0> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cosmos_crf:CRFGroup a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:date ;
+            sh:description "Biomedical Concept package release date indicating when the BC package was published to production" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:packageDate ],
+        [ sh:description "Implementation option for the CRF specialization group" ;
+            sh:in ( "Normalized" "Denormalized" ) ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path cosmos_crf:implementationOption ],
+        [ sh:datatype xsd:string ;
+            sh:description "The earliest CRF IG version applicable to the CRF specialization" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path cosmos_crf:standardStartVersion ],
+        [ sh:datatype xsd:string ;
+            sh:description "Scenario for the CRF specialization group" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path cosmos_crf:scenario ],
+        [ sh:datatype xsd:string ;
+            sh:description "CRF Dataset Specialization category for the faciliation of API search and extract" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path cosmos_crf:categories ],
+        [ sh:datatype xsd:string ;
+            sh:description "Domain for the CRF specialization group" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path cosmos_crf:domain ],
+        [ sh:datatype xsd:string ;
+            sh:description "Short name which provides a user friendly and intuitive name for the CRF group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path cosmos_crf:shortName ],
+        [ sh:datatype xsd:string ;
+            sh:description "Identifier for CRF specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_crf:crfSpecializationId ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "The last CRF IG version that is applicable to the CRF specialization" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_crf:standardEndVersion ],
+        [ sh:description "Package type for CRF specializations (crf)" ;
+            sh:in ( "crf" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 1 ;
+            sh:path cosmos_crf:packageType ],
+        [ sh:class cosmos_crf:CRFItem ;
+            sh:description "Items included in the CRF specialization" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:order 13 ;
+            sh:path cosmos_crf:items ],
+        [ sh:datatype xsd:string ;
+            sh:description "Biomedical Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path cosmos_crf:biomedicalConceptId ;
+            sh:pattern "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "Standard for the CRF specialization group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_crf:standard ],
+        [ sh:datatype xsd:string ;
+            sh:description "Identifier for SDTM Dataset Specialization group" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path cosmos_crf:sdtmDatasetSpecializationId ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ] ;
+    sh:targetClass cosmos_crf:CRFGroup .
+
+cosmos_crf:CRFItem a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Description of the derivation. Required when derivedVariable is true." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path cosmos_crf:derivationDescription ],
+        [ sh:datatype xsd:string ;
+            sh:description "Item completion instructions" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path cosmos_crf:completionInstructions ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Indicator that the item is hidden from the user" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path cosmos_crf:displayHidden ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Indicator that the item must be present within the CRF group" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path cosmos_crf:mandatoryVariable ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Item order number" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path cosmos_crf:orderNumber ],
+        [ sh:datatype xsd:string ;
+            sh:description "Item name as it appears on the CRF instrument" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:name ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ],
+        [ sh:class cosmos_crf:CodeList ;
+            sh:description "Codelist" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 14 ;
+            sh:path cosmos_crf:codelist ],
+        [ sh:datatype xsd:string ;
+            sh:description "Item prompt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path cosmos_crf:prompt ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Indicator that variable is derived" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path cosmos_crf:derivedVariable ],
+        [ sh:datatype xsd:string ;
+            sh:description "Biomedical Concept Data Element Concept identifier foreign key" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_crf:dataElementConceptId ;
+            sh:pattern "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "Variable name of the CRF item for which data are being collected." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_crf:variableName ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ],
+        [ sh:description "Type of selection used for set-up of the CRF instrument" ;
+            sh:in ( "Multiple" "Single" ) ;
+            sh:maxCount 1 ;
+            sh:order 16 ;
+            sh:path cosmos_crf:selectionType ],
+        [ sh:class cosmos_crf:PrepopulatedValue ;
+            sh:description "Pre-populated value for the CRF instrument" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 17 ;
+            sh:path cosmos_crf:prepopulatedValue ],
+        [ sh:datatype xsd:string ;
+            sh:description "Item question text" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path cosmos_crf:questionText ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Item significant_digits" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path cosmos_crf:significantDigits ],
+        [ sh:class cosmos_crf:ListValue ;
+            sh:description "A set of values for a CRF item" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 15 ;
+            sh:path cosmos_crf:valueList ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Item length" ;
+            sh:maxCount 1 ;
+            sh:minInclusive 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path cosmos_crf:length ],
+        [ sh:class cosmos_crf:SDTMTarget ;
+            sh:description "SDTM target variables for CRF item variable" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 18 ;
+            sh:path cosmos_crf:sdtmTarget ],
+        [ sh:description "Item data type" ;
+            sh:in ( "decimal" "float" "integer" "text" "date" "time" ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 8 ;
+            sh:path cosmos_crf:dataType ] ;
+    sh:targetClass cosmos_crf:CRFItem .
+
+cosmos_crf:CodeList a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "CDISC submission value for the codelist" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:submissionValue ;
+            sh:pattern "^[A-Z][A-Z0-9_]*$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "C-code for codelist in NCIt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_crf:conceptId ;
+            sh:pattern "^(C[0-9]+)$" ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "Link to NCIt for the codelist" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_crf:href ] ;
+    sh:targetClass cosmos_crf:CodeList .
+
+cosmos_crf:ListValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "CDISC submission value for the CRF item" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:displayValue ],
+        [ sh:datatype xsd:string ;
+            sh:description "User-friendly display value for the CRF item" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_crf:value ] ;
+    sh:targetClass cosmos_crf:ListValue .
+
+cosmos_crf:PrepopulatedValue a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "C-code for pre-populated term in NCIt" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_crf:conceptId ;
+            sh:pattern "^(C[0-9]+)$" ],
+        [ sh:datatype xsd:string ;
+            sh:description "Submission value for pre-populated term in NCIt" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:value ] ;
+    sh:targetClass cosmos_crf:PrepopulatedValue .
+
+cosmos_crf:SDTMTarget a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Rule for mapping from CRF item to SDTM target variable." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path cosmos_crf:sdtmTargetMapping ],
+        [ sh:datatype xsd:string ;
+            sh:description "Annotation of the SDTM target in the CRF instrument" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path cosmos_crf:sdtmAnnotation ],
+        [ sh:datatype xsd:string ;
+            sh:description "SDTM target variable for CRF item variable" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path cosmos_crf:sdtmVariables ] ;
+    sh:targetClass cosmos_crf:SDTMTarget .
+

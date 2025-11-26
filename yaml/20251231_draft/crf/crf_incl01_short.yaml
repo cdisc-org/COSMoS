@@ -1,0 +1,57 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: INCL01_SHORT
+shortName: Inclusion Criteria 01
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+scenario: Without Date
+domain: IE
+biomedicalConceptId: C25532
+sdtmDatasetSpecializationId: INCL01
+items:
+  - name: IECAT
+    variableName: IECAT
+    dataElementConceptId: C25372
+    questionText: What was the category of the criterion?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 15
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: IECAT
+      conceptId: C66797
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66797
+    prepopulatedValue:
+      value: "INCLUSION"
+      conceptId: C25532
+    sdtmTarget:
+      sdtmAnnotation: "IECAT = INCLUSION"
+      sdtmVariables:
+        -  "IECAT"
+  - name: IEORRES
+    variableName: IEORRES
+    dataElementConceptId: C181043
+    questionText: What was the identifier of the inclusion criterion the subject did not meet ?
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "INCL01"
+        value: "INCL01"
+      - displayValue: "INCL02"
+        value: "INCL02"
+      - displayValue: "INCL03"
+        value: "INCL03"
+    selectionType: Multiple
+    sdtmTarget:
+      sdtmAnnotation: "IETESTCD when IECAT = INCLUSION"
+      sdtmVariables:
+        -  "IEORRES"
+        -  "IETESTCD"
+        -  "IETEST"

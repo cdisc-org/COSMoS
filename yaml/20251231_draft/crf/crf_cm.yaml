@@ -1,0 +1,40 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: CM
+shortName: Concomittant Medications Yes No Indicator
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: CM
+biomedicalConceptId: C83056
+items:
+  - name: CMYN
+    variableName: CMYN
+    questionText: Were any concomitant medications taken?
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+  - name: CMDAT
+    variableName: CMDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "CMDTC"
+      sdtmVariables:
+        -  "CMDTC"

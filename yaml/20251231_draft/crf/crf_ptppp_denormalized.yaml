@@ -1,0 +1,218 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: PTPPP_DENORMALIZED
+shortName: Prothrombin Time in Platelet Poor Plasma (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+implementationOption: Denormalized
+scenario: Local Processing
+domain: LB
+biomedicalConceptId: C62656
+sdtmDatasetSpecializationId: PTPPP
+items:
+  - name: PT_LBCAT
+    variableName: LBCAT
+    prompt: Lab Panel Name
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    prepopulatedValue:
+      value: "CHEMISTRY"
+    sdtmTarget:
+      sdtmAnnotation: "LBCAT = CHEMISTRY"
+      sdtmVariables:
+        -  "LBCAT"
+  - name: PT_LBSCAT
+    variableName: LBSCAT
+    prompt: "Lab Sub-Panel Name"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBSCAT"
+      sdtmVariables:
+        -  "LBSCAT"
+  - name: PT_LBNAM
+    variableName: LBNAM
+    questionText: What was the name of the laboratory used?
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBNAM"
+      sdtmVariables:
+        -  "LBNAM"
+  - name: PT_LBDAT
+    variableName: LBDAT
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Date
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: PT_LBTIM
+    variableName: LBTIM
+    dataElementConceptId: C82515
+    prompt: Specimen Collection Time
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: time
+    length: 5
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBDTC"
+      sdtmVariables:
+        -  "LBDTC"
+  - name: PT_LBSPEC
+    variableName: LBSPEC
+    dataElementConceptId: C70713
+    prompt: Specimen Material
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: SPECTYPE
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+    prepopulatedValue:
+      value: "PLATELET POOR PLASMA"
+      conceptId: C106556
+    sdtmTarget:
+      sdtmAnnotation: "LBSPEC = PLATELET POOR PLASMA"
+      sdtmVariables:
+        -  "LBSPEC"
+  - name: PT_LBFAST
+    variableName: LBFAST
+    dataElementConceptId: C93566
+    questionText: Was the subject fasting?
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBFAST"
+      sdtmVariables:
+        -  "LBFAST"
+  - name: PT_LBORRES
+    variableName: LBORRES
+    dataElementConceptId: C70856
+    prompt: Prothrombin Time
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORRES when LBTESTCD = PT"
+      sdtmVariables:
+        -  "LBORRES"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: PT_LBORRESU
+    variableName: LBORRESU
+    dataElementConceptId: C42574
+    prompt: Unit
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    prepopulatedValue:
+      value: "s"
+      conceptId: C42535
+    sdtmTarget:
+      sdtmAnnotation: "LBORRESU when LBTESTCD = PT"
+      sdtmVariables:
+        -  "LBORRESU"
+        -  "LBTESTCD"
+        -  "LBTEST"
+  - name: PT_LBORNRLO
+    variableName: LBORNRLO
+    prompt: Normal Range Lower Limit
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRLO"
+      sdtmVariables:
+        -  "LBORNRLO"
+  - name: PT_LBORNRHI
+    variableName: LBORNRHI
+    prompt: Normal Range Upper Limit
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: decimal
+    length: 8
+    significantDigits: 2
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "LBORNRHI"
+      sdtmVariables:
+        -  "LBORNRHI"
+  - name: PT_LBCLSIG
+    variableName: LBCLSIG
+    questionText: Was this result clinically significant?
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "LBCLSIG"
+      sdtmVariables:
+        -  "LBCLSIG"

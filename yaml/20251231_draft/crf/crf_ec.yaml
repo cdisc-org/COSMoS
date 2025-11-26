@@ -1,0 +1,46 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: EC
+shortName: Exposure Yes No Indicator
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: EC
+biomedicalConceptId: C87885
+items:
+  - name: ECYN
+    variableName: ECYN
+    dataElementConceptId: C87885
+    questionText: Was any study treatment administered?
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+  - name: ECDAT
+    variableName: ECDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "ECDTC"
+      sdtmVariables:
+        -  "ECDTC"

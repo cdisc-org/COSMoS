@@ -1,0 +1,53 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: ETHNIC
+shortName: ETHNIC
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion:  
+domain: DM
+biomedicalConceptId: C16564
+sdtmDatasetSpecializationId: ETHNIC
+items:
+  - name: DMDAT
+    variableName: DMDAT
+    dataElementConceptId: C82515
+    prompt: Collection Date
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "DMDTC"
+      sdtmVariables:
+        -  "DMDTC"
+  - name: ETHNIC
+    variableName: ETHNIC
+    dataElementConceptId: C16564
+    questionText: What is the ethnicity of the subject?
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: ETHNIC
+      conceptId: C66790
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66790
+    valueList:
+      - displayValue: "Hispanic Or Latino"
+        value: "HISPANIC OR LATINO"
+      - displayValue: "Not Hispanic Or Latino"
+        value: "NOT HISPANIC OR LATINO"
+      - displayValue: "Not Reported"
+        value: "NOT REPORTED"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "ETHNIC"
+      sdtmVariables:
+        -  "ETHNIC"

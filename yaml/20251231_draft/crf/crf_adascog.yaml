@@ -1,0 +1,95 @@
+packageDate: "2025-12-31"
+packageType: crf
+crfSpecializationId: ADASCOG
+shortName: "Alzheimer's Disease Assessment Scale-Cognitive CDISC Version Functional Test"
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion:  
+categories:
+  - "360"
+domain: FT
+biomedicalConceptId: C100762
+items:
+  - name: ADASCOG_FTCAT
+    variableName: FTCAT
+    dataElementConceptId: C25372
+    prompt: Category of Functional Test
+    orderNumber: 1
+    mandatoryVariable: false
+    dataType: text
+    length: 100
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: FTCAT
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+    prepopulatedValue:
+      value: "ADAS-COG"
+      conceptId: C100191
+    sdtmTarget:
+      sdtmAnnotation: "FTCAT = ADAS-COG"
+      sdtmVariables:
+        -  "FTCAT"
+  - name: ADASCOG_FTPERF
+    variableName: FTPERF
+    dataElementConceptId: C82525
+    questionText: "Was the ADAS-COG Functional Test performed?"
+    orderNumber: 2
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]; FTSTAT = NOT DONE"
+      sdtmVariables:
+        -  "FTSTAT"
+  - name: ADASCOG_FTDAT
+    variableName: FTDTC
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "FTDTC"
+      sdtmVariables:
+        -  "FTDTC"
+  - name: ADASCOG_FTREASND
+    variableName: FTREASND
+    dataElementConceptId: C82556
+    questionText: "If any item(s) are incomplete or not done, please specify reason:"
+    orderNumber: 4
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Participant refused"
+        value: "Participant refused"
+      - displayValue: "Participant unable for physical reasons"
+        value: "Participant unable for physical reasons"
+      - displayValue: "Participant unable for cognitive reasons"
+        value: "Participant unable for cognitive reasons"
+      - displayValue: "Not done for reasons other than physical/cognitive"
+        value: "Not done for reasons other than physical/cognitive"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FTREASND"
+      sdtmVariables:
+        -  "FTREASND"
