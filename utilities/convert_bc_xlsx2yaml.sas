@@ -365,6 +365,9 @@
 %let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=mvai, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MVAI));
 
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_VS));
+
 /************************************************************************************************************************/
 
 ods listing close;

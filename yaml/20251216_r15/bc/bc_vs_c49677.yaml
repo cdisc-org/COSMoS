@@ -1,0 +1,93 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C49677
+ncitCode: C49677
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49677
+parentConceptId: C49672
+categories:
+  - Vital Signs
+shortName: Heart Rate
+synonyms:
+  - HR
+resultScales:
+  - Quantitative
+definition: The number of heartbeats per unit of time, usually expressed as beats per minute.
+coding:
+  - code: 8867-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "Decubitus"
+      - "Fowlers"
+      - "Lateral Decubitus"
+      - "Left Lateral Decubitus"
+      - "Prone"
+      - "Reverse Trendelenburg"
+      - "Right Lateral Decubitus"
+      - "Semi-Fowlers"
+      - "Semi-Recumbent"
+      - "Sitting"
+      - "Sitting"
+      - "Legs Dependent"
+      - "Sling"
+      - "Standing"
+      - "Standing"
+      - "Bent Forward"
+      - "Supine"
+      - "Trendelenburg"
+      - "Unconstrained"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Acoustic Monitoring"
+      - "Auscaltation Manual"
+      - "Palpation"
+      - "Oscillometry"
+      - "Pulse Oximetry"
+      - "EKG/ECG"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Wrist"
+      - "Neck"
+      - "Temple"
+      - "Groin"
+      - "Behind the knees"
+      - "On top of the foot"
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73688
+    shortName: Count per Minute
+    dataType: string
+    exampleSet:
+      - "Beats per Minute"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer

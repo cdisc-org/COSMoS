@@ -1,0 +1,216 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: HR_EXT
+domain: VS
+shortName: Heart Rate Extended
+source: VS.VSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C49677
+variables:
+  - name: VSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C66741
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66741
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C49677
+      value: "HR"
+    role: Topic
+    relationship:
+      subject: VSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: VSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: VSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67153
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67153
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C49677
+      value: "Heart Rate"
+    role: Qualifier
+    relationship:
+      subject: VSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: VSORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: VSORRESU
+    dataElementConceptId: C73688
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C49673
+      value: "beats/min"
+    role: Qualifier
+    relationship:
+      subject: VSORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 3
+    relationship:
+      subject: VSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESU
+    dataElementConceptId: C73688
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+      submissionValue: VSRESU
+    assignedTerm:
+      conceptId: C49673
+      value: "beats/min"
+    role: Qualifier
+    relationship:
+      subject: VSSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSPOS
+    dataElementConceptId: C62164
+    isNonStandard: false
+    codelist:
+      conceptId: C71148
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71148
+      submissionValue: POSITION
+    valueList:
+      - "DECUBITUS"
+      - "FOWLERS"
+      - "LATERAL DECUBITUS"
+      - "LEFT LATERAL DECUBITUS"
+      - "PRONE"
+      - "REVERSE TRENDELENBURG"
+      - "RIGHT LATERAL DECUBITUS"
+      - "SEMI-FOWLERS"
+      - "SEMI-RECUMBENT"
+      - "SITTING"
+      - "SITTING, LEGS DEPENDENT"
+      - "SLING"
+      - "STANDING"
+      - "STANDING, BENT FORWARD"
+      - "SUPINE"
+      - "TRENDELENBURG"
+      - "UNCONSTRAINED"
+    role: Qualifier
+    relationship:
+      subject: VSPOS
+      linkingPhrase: is the subject position during performance of the test in
+      predicateTerm: IS_SUBJECT_STATE_FOR
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: VSLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "BRACHIAL ARTERY"
+      - "CAROTID ARTERY"
+      - "CEREBRAL ARTERY"
+      - "DORSALIS PEDIS ARTERY"
+      - "FEMORAL ARTERY"
+      - "PERIPHERAL ARTERY"
+      - "RADIAL ARTERY"
+    role: Qualifier
+    relationship:
+      subject: VSLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: VSLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    subsetCodelist: VSLAT_BP
+    valueList:
+      - "LEFT"
+      - "RIGHT"
+    role: Qualifier
+    relationship:
+      subject: VSLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: VSLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: VSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: VSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

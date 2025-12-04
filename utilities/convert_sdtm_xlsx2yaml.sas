@@ -384,6 +384,9 @@ run;
 %let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=mvai, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_MVAI), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS), debug=0, check_relationships=&checkrelationships);
+
 /************************************************************************************************************************/
 
 ods listing close;

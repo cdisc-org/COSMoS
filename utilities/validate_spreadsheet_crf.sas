@@ -13,8 +13,11 @@ title01 "&now";
 %let excel_file=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=_sdtm_latest, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
-/* Package 1*/
+/*
+%* Package 1 ;
 
 %let excel_file=&root/curation/package01/BC_Package_2022_10_26.xlsx;
 
@@ -25,7 +28,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM LB BC)$, dsout=sdtm1_2);
 
 
-/* Package 2 */
+%* Package 2 ;
 
 %let excel_file=&root/curation/package02/BC_Package_2023_02_13.xlsx;
 
@@ -38,7 +41,7 @@ title01 "&now";
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelists$, dsout=subsets);
 
 
-/* Package 3 */
+%* Package 3 ;
 
 %let excel_file=&root/curation/package03/BC_Package_2023_03_31.xlsx;
 
@@ -56,7 +59,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc3_13);
 
 
-/* Package 4 - Oncology */
+%* Package 4 - Oncology ;
 
 %let excel_file=&root/curation/package04/BC_Package_R4_Oncology_RECIST11_2023_07_06.xlsx;
 
@@ -67,7 +70,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_RS)$, dsout=sdtm4_onco_3, drop=%str(drop=length significant_digits));
 
 
-/* Package 4 - Non-oncology*/
+%* Package 4 - Non-oncology ;
 
 %let excel_file=&root/curation/package04/BC_Package_R4_2023_07_06.xlsx;
 
@@ -97,7 +100,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS_EDITS)$, dsout=sdtm4_12, drop=%str(drop=length significant_digits format));
 
 
-/* Package 5 - */
+%* Package 5 ;
 
 %let excel_file=&root/curation/package05/BC_Package_R5_LZZT.xlsx;
 
@@ -124,7 +127,7 @@ title01 "&now";
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
 
-/* Package 6 - */
+%* Package 6 ;
 
 %let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
 
@@ -159,7 +162,7 @@ title01 "&now";
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
 
-/* Package 7 - */
+%* Package 7 ;
 
 %let excel_file=&root/curation/package07/BC_Package_R7_GF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_GF)$, dsout=bc7_01, drop=%str(drop=change_history));
@@ -180,7 +183,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm7_04, drop=%str(drop=length significant_digits format));
 
 
-/* Package 8 - */
+%* Package 8 ;
 
 %let excel_file=&root/curation/package08/BC_Package_R8_LUGANO_RS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RS)$, dsout=bc8_01, drop=%str(drop=change_history));
@@ -201,7 +204,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_New)$, dsout=sdtm8_06, drop=%str(drop=length significant_digits format));
 
 
-/* Package 9 - */
+%* Package 9 ;
 
 %let release=9;
 %let excel_file=&root/curation/package09/BC_Package_R9_public_review_updates.xlsx;
@@ -209,7 +212,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_Corrections)$, dsout=sdtm9_01, drop=%str(drop=length significant_digits format));
 
 
-/* Package 10 - */
+%* Package 10 ;
 
 %let release=10;
 %let excel_file=&root/curation/package10/BC_Package_R10.xlsx;
@@ -232,7 +235,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_EG)$, dsout=sdtm10_06, drop=%str(drop=length significant_digits format));
 
 
-/* Package 11 - */
+%* Package 11 ;
 
 %let release=11;
 %let excel_file=&root/curation/package11/BC_Package_R11_BC_Lindus Health.xlsx;
@@ -263,7 +266,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_AE)$, dsout=sdtm11_07, drop=%str(drop=length significant_digits format));
 
 
-/* Package 12 - */
+%* Package 12 ;
 
 %let release=12;
 %let excel_file=&root/curation/package12/R12_BC_SDTM_QRS_6MWT.xlsx;
@@ -362,7 +365,8 @@ title01 "&now";
 %let excel_file=&root/curation/package12/R12_BC_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS2)$, dsout=bc12_24);
 
-/* Package 13 - */
+
+%* Package 13 ;
 
 %let release=13;
 %let excel_file=&root/curation/package13/R13_BC_SDTM_Edits.xlsx;
@@ -440,13 +444,16 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_EDITS)$, dsout=bc13_21);
 %ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
 
-/* Package 14 - */
+
+%* Package 14 ;
 
 %let release=14;
 %let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
+*/
 
-/* Package 15 - */
+
+%* Package 15 ;
 
 %let release=15;
 %let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
@@ -456,7 +463,39 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(BC_MVAI)$, dsout=bc15_02);
 %ReadExcel(file=&excel_file, range=%str(SDTM_MVAI)$, dsout=sdtm15_01);
 
-/* Package crf test - */
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc15_03);
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm15_02, drop=%str(drop=length significant_digits format change_history));
+
+/* Select BCs and SDTMs*/
+
+data bc_set;
+  length bc_id $64;
+  set bc15:(where=(not missing(bc_id)) keep=bc_id);
+run;  
+  
+proc sql noprint;
+  select distinct bc_id into :bc_set separated by '","'
+  from bc_set(where=(not missing(bc_id)))
+  ;
+quit;
+
+%put bc_set = "&bc_set";
+
+data sdtm_set;
+  length vlm_group_id $128;
+  set sdtm15:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
+run;  
+  
+proc sql noprint;
+  select distinct vlm_group_id into :sdtm_set separated by '","'
+  from sdtm_set(where=(not missing(vlm_group_id)))
+  ;
+quit;
+
+%put bc_set = "&sdtm_set";
+
+%* Package crf test ;
 
 %let release=xx;
 %let dropit=package_date categories length significant_digits;
@@ -522,8 +561,8 @@ data bc(drop=change_history F1: F2: i vname vvalue);
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc15:(where=(not missing(bc_id))) _bc_latest(where=(not missing(bc_id)));
-
+  set bc15:(where=(not missing(bc_id))) 
+      _bc_latest(where=((not missing(bc_id)) and bc_id notin ("&bc_set")));
   array carray{*} _character_;
   * if missing(bc_id) then delete;
   do i=1 to dim(carray);
@@ -559,7 +598,8 @@ data sdtm(drop=change_history F3: F4: i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set sdtm15:(where=(not missing(vlm_group_id))) _sdtm_latest(where=(not missing(vlm_group_id)));
+  set sdtm15:(where=(not missing(vlm_group_id))) 
+      _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;
   package_date = upcase(package_date);
   array carray{*} _character_;
@@ -644,7 +684,7 @@ run;
 ods listing close;
 ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_R&release._&todays..html";
 
-  /* Unresolved BC Parent BCs */
+  %* Unresolved BC Parent BCs ;
   proc sql;
     title02 "Missing BC parent_bc_id link to BC bc_id";
       select package_date, _excel_file_, _tab_, bc_categories, bc_id, short_name, parent_bc_id
@@ -656,7 +696,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       ;
   quit;
 
-  /* Unresolved CRF BCs */
+  %* Unresolved CRF BCs ;
   proc sql;
     title02 "Missing CRF Specialization bc_id link to BC bc_id";
       select package_date, _excel_file_, _tab_, crf_group_id, crf_item, col.bc_id
@@ -667,7 +707,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       ;
   quit;
 
-  /* Unresolved Colection BCs/DECs */
+  %* Unresolved Colection BCs/DECs ;
   proc sql;
     title02 "Missing CRF Specialization bc_id/dec_id link to BC bc_id/dec_id";
     create table crf_bc_dec as
@@ -684,7 +724,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       ;
   quit;
 
-  /* Unresolved SDTM vlm_group_id */
+  %* Unresolved SDTM vlm_group_id ;
   proc sql;
     title02 "Missing CRF Specialization vlm_group_id link to SDTM vlm_group_id";
       select package_date,  _excel_file_, _tab_, domain, crf_group_id, crf_item, col.vlm_group_id
@@ -695,7 +735,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       ;
   quit;
 
-  /* Duplicate BC records */
+  %* Duplicate BC records ;
   proc sql;
     title02 "Duplicate BC records (package_date, bc_id, dec_id)";
       select package_date, _excel_file_, _tab_, _record_, bc_id, short_name, dec_id, dec_label, bc_categories
@@ -706,7 +746,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       ;
   run;
 
-  /* Duplicate CRF records */
+  %* Duplicate CRF records ;
   proc sql;
     title02 "Duplicate CRF Specialization records (package_date, crf_group_id, crf_item)";
       select package_date, _excel_file_, _tab_, standard, _record_, domain, crf_group_id, crf_item, order_number, standard_start_version,	standard_end_version
