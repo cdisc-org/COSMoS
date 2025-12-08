@@ -454,6 +454,7 @@ title01 "&now";
 
 
 %* Package 15 ;
+%let _debug=0;
 
 %let release=15;
 %let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
@@ -466,6 +467,45 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc15_03);
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm15_02, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package15/R15_BC_APACHE_PERF.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_APACHE_PERF)$, dsout=bc15_04);
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_05);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_03, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_06);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_04, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_Retired.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc15_07);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS)$, dsout=sdtm15_05, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package15/R15_BC_Spelling_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Spelling_Corrections)$, dsout=bc15_08);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_CM_PR_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm15_06, drop=%str(drop=length significant_digits format change_history));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm15_07, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_DEC_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_DEC_Edits)$, dsout=sdtm15_08, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_Imaging_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_Imaging)$, dsout=sdtm15_09, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_1)$, dsout=sdtm15_10, drop=%str(drop=length significant_digits format change_history));
+%ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_2)$, dsout=sdtm15_11, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_QRS_Rule_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_QRS_Mand_Value_Edits)$, dsout=sdtm15_12, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_RS_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_RS_Edits)$, dsout=sdtm15_13, drop=%str(drop=length significant_digits format change_history));
+
 
 /* Select BCs and SDTMs*/
 
@@ -497,7 +537,7 @@ quit;
 
 /************************************************************************************************************************/
 
-data bc(drop=change_history F1: F2: i vname vvalue);
+data bc(drop=change_history i vname vvalue);
   length package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
@@ -531,7 +571,7 @@ run;
 
 /************************************************************************************************************************/
 
-data sdtm(drop=change_history F3: F4:  i vname vvalue);
+data sdtm(drop=change_history i vname vvalue);
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
          codelist_submission_value codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object
          short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
