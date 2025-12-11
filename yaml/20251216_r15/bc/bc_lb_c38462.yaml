@@ -1,0 +1,50 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C38462
+ncitCode: C38462
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38462
+parentConceptId: C81959
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hematology Tests
+  - Coagulation Study
+  - Blood Protein Measurements
+  - Factor III Measurements
+shortName: Activated Partial Thromboplastin Time
+synonyms:
+  - APTT
+resultScales:
+  - Quantitative
+definition: A measurement of the length of time that it takes for clotting to occur when activating reagents are added to a plasma specimen. The test is partial due to the absence of tissue factor (Factor III) from the reaction mixture.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Seconds"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Platelet Poor Plasma"
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer

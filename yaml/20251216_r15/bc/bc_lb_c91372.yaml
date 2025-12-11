@@ -1,0 +1,53 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C91372
+ncitCode: C91372
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91372
+parentConceptId: C25163
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Immunohematology Tests
+  - Autoantibody Measurements
+  - Antibody Measurements
+  - Immunology Tests
+  - Coombs Tests
+shortName: Indirect Antiglobulin Test
+synonyms:
+  - ANGLBIND
+  - Indirect Coombs Test
+  - "Indirect Anti-human Globulin Test"
+  - Antiglobulin Test Indirect
+resultScales:
+  - Ordinal
+  - Quantitative
+definition: "A test that uses Coombs' reagent to detect the presence of anti-erythrocyte antibodies in serum."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+      - "1:8"
+      - "1:64"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"

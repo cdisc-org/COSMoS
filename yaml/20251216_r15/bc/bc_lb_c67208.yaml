@@ -1,0 +1,12 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C67208
+ncitCode: C67208
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67208
+parentConceptId: C28133
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Blood Cell Counts
+shortName: Blood Cell Count Ratio Measurement
+definition: The determination of the ratio of one blood cell component to another in a blood sample. The measurement may be expressed as either a ratio or a percentage.

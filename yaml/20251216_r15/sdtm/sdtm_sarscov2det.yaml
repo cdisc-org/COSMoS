@@ -1,0 +1,166 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: SARSCOV2DET
+domain: MB
+shortName: "SARS-CoV-2 Detection"
+source: MB-MBTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C171532
+variables:
+  - name: MBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120527
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120527
+      submissionValue: MBTESTCD
+    assignedTerm:
+      conceptId: C171532
+      value: "SARSCOV2"
+    role: Topic
+    relationship:
+      subject: MBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MBTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120528
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120528
+      submissionValue: MBTEST
+    assignedTerm:
+      conceptId: C171532
+      value: "Severe Acute Resp Syndrome Coronavirus 2"
+    role: Qualifier
+    relationship:
+      subject: MBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MBTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C174225
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174225
+      submissionValue: MBFTSDTL
+    assignedTerm:
+      conceptId: C174330
+      value: "DETECTION"
+    role: Qualifier
+    relationship:
+      subject: MBTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: MBSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: MBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    valueList:
+      - "ENDOTRACHEAL FLUID"
+      - "LAVAGE FLUID"
+      - "SALIVA"
+      - "SERUM OR PLASMA"
+      - "SERUM OR PLASMA OR BLOOD"
+      - "SWABBED MATERIAL"
+    role: Qualifier
+    relationship:
+      subject: MBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MBLOC
+    dataElementConceptId: C171435
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "ALVEOLUS"
+      - "NASOPHARYNX"
+      - "OROPHARYNX"
+      - "UPPER RESPIRATORY SYSTEM"
+    role: Qualifier
+    relationship:
+      subject: MBLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MBMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C28408
+      value: "QUANTITATIVE REVERSE TRANSCRIPTASE POLYMERASE CHAIN REACTION"
+    role: Qualifier
+    relationship:
+      subject: MBMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MBDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

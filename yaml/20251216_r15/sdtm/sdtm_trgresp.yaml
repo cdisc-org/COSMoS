@@ -1,0 +1,176 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: TRGRESP
+domain: RS
+shortName: Target Response (RECIST 1.1)
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C94534
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C96782
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96782
+      submissionValue: ONCRTSCD
+    assignedTerm:
+      conceptId: C94534
+      value: "TRGRESP"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C96781
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96781
+      submissionValue: ONCRTS
+    assignedTerm:
+      conceptId: C94534
+      value: "Target Response"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C124298
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124298
+      submissionValue: ONCRSCAT
+    assignedTerm:
+      conceptId: C124415
+      value: "RECIST 1.1"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C96785
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96785
+      submissionValue: ONCRSR
+    valueList:
+      - "CR"
+      - "NE"
+      - "PD"
+      - "PR"
+      - "SD"
+    role: Qualifier
+    dataType: text
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C96785
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96785
+      submissionValue: ONCRSR
+    valueList:
+      - "CR"
+      - "NE"
+      - "PD"
+      - "PR"
+      - "SD"
+    role: Qualifier
+    dataType: text
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    valueList:
+      - "INVESTIGATOR"
+      - "INDEPENDENT ASSESSOR"
+    role: Qualifier
+    relationship:
+      subject: RSEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: RSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: IN
+  - name: RSEVALID
+    dataElementConceptId: C117043
+    isNonStandard: false
+    codelist:
+      conceptId: C96777
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96777
+      submissionValue: MEDEVAL
+    valueList:
+      - "RADIOLOGIST 1"
+      - "RADIOLOGIST 2"
+      - "RADIOLOGIST 3"
+    role: Qualifier
+    relationship:
+      subject: RSEVALID
+      linkingPhrase: is an identifier for the evaluator with the role in
+      predicateTerm: IDENTIFIES
+      object: RSEVAL
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    comparator: IN
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Sponsor

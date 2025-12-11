@@ -1,0 +1,14 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C111327
+ncitCode: C111327
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111327
+parentConceptId: C64430
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Type Measurements
+shortName: Troponin Measurement
+synonyms:
+  - Troponin
+definition: The determination of the amount of total troponin present in a sample.

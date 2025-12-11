@@ -1,0 +1,247 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: RADIATIONCANCER
+domain: PR
+shortName: Radiation Therapy Cancer
+source: PR.PRTRT
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C15313
+variables:
+  - name: PRTRT
+    dataElementConceptId: C117511
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: PRDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: PRDECOD
+    dataElementConceptId: C117512
+    isNonStandard: false
+    codelist:
+      conceptId: C101858
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101858
+      submissionValue: PROCEDUR
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "RADIATION THERAPY"
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    valueList:
+      - "INTERNAL RADIATION THERAPY"
+      - "EXTERNAL BEAM RADIATION THERAPY"
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: PRPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PROCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: PROCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRINDC
+    dataElementConceptId: C41184
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRINDC
+      linkingPhrase: is the medical condition that is the reason for the treatment in
+      predicateTerm: INDICATES
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRDOSE
+    dataElementConceptId: C25488
+    isNonStandard: false
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: PRDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRDOSU
+    dataElementConceptId: C18068
+    isNonStandard: false
+    valueList:
+      - "Gy"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: PRDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: PRDOSE
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: PRLOC
+      linkingPhrase: is the administration anatomical location for the treatment in
+      predicateTerm: SPECIFIES
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRSTDTC
+    dataElementConceptId: C117529
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: PRSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: PRTRT
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRENDTC
+    dataElementConceptId: C117530
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: PRENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRTRTSTT
+    dataElementConceptId: C124444
+    isNonStandard: true 
+    codelist:
+      conceptId: C124308
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124308
+      submissionValue: TRTSET
+    valueList:
+      - "ADJUVANT"
+      - "METASTATIC"
+      - "NEO-ADJUVANT"
+      - "LOCALLY ADVANCED"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRTRTSTT
+      linkingPhrase: is the clinical trial or treatment setting for
+      predicateTerm: QUALIFIES
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRTRTINT
+    dataElementConceptId: C210652
+    isNonStandard: true 
+    codelist:
+      conceptId: C124307
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124307
+      submissionValue: TRTINTNT
+    valueList:
+      - "PALLIATIVE"
+      - "CURATIVE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRTRTINT
+      linkingPhrase: is the intended disease outcome for
+      predicateTerm: QUALIFIES
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

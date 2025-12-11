@@ -36,8 +36,8 @@
 
 
   data issues(keep=_excel_file_ _tab_ package_date severity BC_ID short_name dec_id dec_label issue_type expected_value actual_value comment);
-    length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 value qvalue $1000 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
-           short_name short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
+    length prev_BC_ID parent_bc_id_nci $32 concept_status $32 outname $512 short_name $256 value qvalue $1000 package_date qpackage_date $64 definition2 definition_nci definition_cdisc 
+           short_name_parent short_name_nci dec_label short_name_dec_nci short_name_parent_nci $4000
            issue_type $64 expected_value actual_value comment $2048;
     set work.bc_&type._&package(drop = _order_);
     retain prev_BC_ID "" count decs 0 result_scales_yn 0;

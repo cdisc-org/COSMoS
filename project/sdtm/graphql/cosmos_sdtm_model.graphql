@@ -23,81 +23,85 @@ enum LinkingPhraseEnum
     identifies_an_observation_described_by
     identifies_overall_response_supported_by_tumor_assessments_identified_by
     identifies_the_image_from_the_procedure_in
+    identifies_the_reference_used_in_the_genomic_test_in
     identifies_the_tumor_found_by_the_test_in
+    indicates_heritability_of_the_genetic_variant_in
     indicates_occurrence_of_the_value_in
     indicates_pre__HYPHEN_MINUS__specification_of_the_value_in
     indicates_severity_of
+    indicates_the_location_detail_for_the_tumor_identified_by
     indicates_the_previous_irradiation_status_of_the_tumor_identified_by
     indicates_the_progression_status_of_the_previous_irradiated_tumor_identified_by
-    is_a_dictionary__HYPHEN_MINUS__derived_term_for_the_value_in
     is_a_dictionary__HYPHEN_MINUS__derived_class_code_for_the_value_in
     is_a_dictionary__HYPHEN_MINUS__derived_class_name_for_the_value_in
+    is_a_dictionary__HYPHEN_MINUS__derived_term_for_the_value_in
+    is_a_grouping_of_values_in
+    is_a_reference_range_value_for
+    is_an_identifier_for_a_published_reference_for_the_genetic_variant_in
+    is_an_identifier_for_the_copy__COMMA___on_one_of_two_homologous_chromosones__COMMA___of_the_genetic_variant_in
+    is_an_identifier_for_the_evaluator_with_the_role_in
+    is_an_identifier_for_the_genetic_sequence_of_the_genetic_entity_represented_by
     is_decoded_by_the_value_in
     is_original_text_for
     is_the_administered_amount_of_the_treatment_in
     is_the_administration_anatomical_location_for_the_treatment_in
     is_the_aspect_of_the_event_used_to_define_the_date_in
+    is_the_chromosome_that_is_the_position_of_the_result_in
     is_the_clinical_significance_interpretation_for
+    is_the_clinical_trial_or_treatment_setting_for
     is_the_code_for_the_value_in
+    is_the_date_of_occurrence_for
+    is_the_date_of_occurrence
     is_the_dictionary_code_for_the_test_in
-    is_the_dictionary__HYPHEN_MINUS__derived_term_for_the_value_in
     is_the_dictionary__HYPHEN_MINUS__derived_class_code_for_the_value_in
     is_the_dictionary__HYPHEN_MINUS__derived_class_name_for_the_value_in
+    is_the_dictionary__HYPHEN_MINUS__derived_term_for_the_value_in
     is_the_duration_for
     is_the_end_date_for
     is_the_epoch_of_the_performance_of_the_test_in
     is_the_frequency_of_administration_of_the_amount_in
+    is_the_genetic_sub__HYPHEN_MINUS__location_of_the_result_in
+    is_the_identifier_for_the_device_which_collected_data_for_the_test_in
     is_the_identifier_for_the_source_data_used_in_the_performance_of_the_test_in
+    is_the_intended_disease_outcome_for
     is_the_material_type_of_the_subject_of_the_activity_in
     is_the_medical_condition_that_is_the_reason_for_the_treatment_in
     is_the_method_for_the_test_in
+    is_the_method_of_secondary_analysis_of_results_in
+    is_the_name_of_the_reference_terminology_for
+    is_the_numeric_location__COMMA___within_a_chromosone__COMMA___genetic_entity__COMMA___or_genetic_sub__HYPHEN_MINUS__region__COMMA___of_the_result_in
+    is_the_object_of_the_observation_in
+    is_the_operational_objective_of_the_test_in
     is_the_part_of_the_body_through_which_is_administered_the_treatment_in
+    is_the_period_of_time_for_the_test_in
+    is_the_period_of_time_to_be_considered_when_answering_the_question_in
     is_the_physical_form_of_the_product_in
+    is_the_reason_for_stopping_administration_of
+    is_the_reason_for_the_status_of_the_value_in
+    is_the_reason_the_lesion_was_not_evaluable_in
     is_the_result_of_the_test_in
     is_the_role_of_the_assessor_who_performed_the_test_in
+    is_the_severity_of_the_toxicity_in
     is_the_specimen_tested_in
     is_the_start_date_for
+    is_the_status_of_the_value_in
     is_the_subject_position_during_performance_of_the_test_in
     is_the_subject__APOSTROPHE__s_fasting_status_during_the_performance_of_the_test_in
+    is_the_substance_bound_to_the_analyte_in
+    is_the_symbol_for_the_genomic_entity_that_is_the_position_of_the_result_in
+    is_the_textual_description_of_the_intended_dose_regimen_for
+    is_the_type_of_genomic_entity_that_is_the_position_of_the_result_in
     is_the_unit_for_the_value_in
     is_the_unit_for
+    is_the_value_of_the_property_identified_by
+    is_the_version_of_the_reference_terminology_in
     specifies_the_anatomical_location_in
-    specifies_the_anatomical_location_of
     specifies_the_anatomical_location_of_the_performance_of_the_test_in
     specifies_the_anatomical_location_of_the_tumor_identified_by
+    specifies_the_anatomical_location_of
     specifies_the_severity_of
     values_are_grouped_by
     was_the_subject_position_during_performance_of_the_test_in
-    identifies_the_reference_used_in_the_genomic_test_in
-    indicates_heritability_of_the_genetic_variant_in
-    is_an_identifier_for_a_published_reference_for_the_genetic_variant_in
-    is_an_identifier_for_the_copy__COMMA___on_one_of_two_homologous_chromosones__COMMA___of_the_genetic_variant_in
-    is_an_identifier_for_the_genetic_sequence_of_the_genetic_entity_represented_by
-    is_the_chromosome_that_is_the_position_of_the_result_in
-    is_the_clinical_trial_or_treatment_setting_for
-    is_the_date_of_occurrence
-    is_the_date_of_occurrence_for
-    is_the_intended_disease_outcome_for
-    is_the_method_of_secondary_analysis_of_results_in
-    is_the_numeric_location__COMMA___within_a_chromosone__COMMA___genetic_entity__COMMA___or_genetic_sub__HYPHEN_MINUS__region__COMMA___of_the_result_in
-    is_the_symbol_for_the_genomic_entity_that_is_the_position_of_the_result_in
-    is_the_type_of_genomic_entity_that_is_the_position_of_the_result_in
-    is_the_genetic_sub__HYPHEN_MINUS__location_of_the_result_in
-    is_the_object_of_the_observation_in
-    is_an_identifier_for_the_evaluator_with_the_role_in
-    is_the_severity_of_the_toxicity_in
-    is_a_grouping_of_values_in
-    is_the_textual_description_of_the_intended_dose_regimen_for
-    is_the_reason_for_stopping_administration_of
-    is_the_value_of_the_property_identified_by
-    is_the_name_of_the_reference_terminology_for
-    is_the_version_of_the_reference_terminology_in
-    is_the_period_of_time_for_the_test_in
-    is_a_reference_range_value_for
-    is_the_identifier_for_the_device_which_collected_data_for_the_test_in
-    is_the_substance_bound_to_the_analyte_in
-    is_the_operational_objective_of_the_test_in
-    is_the_period_of_time_to_be_considered_when_answering_the_question_in
   }
 
 enum OriginSourceEnum

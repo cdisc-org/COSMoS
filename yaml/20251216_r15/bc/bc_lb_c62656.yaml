@@ -1,0 +1,50 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C62656
+ncitCode: C62656
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62656
+parentConceptId: C98774
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Coagulation Study
+  - Prothrombin Activity Measurements
+  - "Drug-Induced Liver Injury"
+  - DILI
+shortName: Prothrombin Time
+synonyms:
+  - PT
+resultScales:
+  - Quantitative
+definition: A measurement of the clotting time of plasma recalcified in the presence of excess tissue thromboplastin; it is a measure of the extrinsic pathway of coagulation. It is used to determine the clotting tendency of blood, in the measure of warfarin dosage, liver damage and vitamin K status. Factors measured are fibrinogen, prothrombin, and factors V, VII, and X.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Platelet Poor Plasma"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Seconds"

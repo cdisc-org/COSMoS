@@ -1,0 +1,20 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C25163
+ncitCode: C25163
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25163
+categories:
+  - Laboratory Tests
+  - Hematology Tests
+  - Immunohematology Tests
+  - Autoantibody Measurements
+  - Antibody Measurements
+  - Immunology Tests
+shortName: Coombs Test
+synonyms:
+  - Antiglobulin test
+  - Coombs
+resultScales:
+  - Ordinal
+  - Quantitative
+definition: "A hemagglutination test using anti-human globulin (antiglobulin, Coombs reagent) to detect antibodies that react with a subject's red blood cells. The test takes two forms: the direct test is used to diagnose autoimmune hemolytic anemia; the indirect test is used for prenatal Rhesus factor compatibility, blood and tissue typing, and transplant cross-matching."

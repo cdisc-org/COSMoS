@@ -44,9 +44,9 @@
 
   %end;
 
-  data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment);
+  data issues(keep=_excel_file_ _tab_ package_date severity vlm_group_id short_name sdtm_variable issue_type expected_value actual_value comment);
     length prev_vlm_group_id $128 outname $512 package_date qpackage_date $64 qsdtmig_start_version qsdtmig_end_version qformat $20  
-           codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc value_code_cdisc_up linking_phrase_low lookup_predicate $512 
+           short_name $256 codelist_submission_value_cdisc assigned_term_cdisc value_code_cdisc value_code_cdisc_up linking_phrase_low lookup_predicate $512 
            codelist_extensible $3 lookup_term_exist 8 value value_up qvalue $1024 subset_value_list value_list $8192
            issue_type $64 expected_value  actual_value comment $2048;
     retain prev_vlm_group_id "" count 0;
@@ -263,7 +263,7 @@
           put +6 "object:" +1 object;
         end;
 
-        %add2issues_sdtm(prxmatch('/.*(TEST|TESTCD|TERM|DECOD|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_variable ne "Y"),
+        %add2issues_sdtm(prxmatch('/^[A-Z]{0,2}(TEST|TESTCD|TERM|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_variable ne "Y"),
               %str(MANDATORY_VARIABLE_EXPECTED), 
               mandatory_variable, "", "",
               severity=ERROR, extracode= 
@@ -271,7 +271,7 @@
         if missing(mandatory_variable) then mandatory_variable="N";
         put +4 "mandatoryVariable:" +1 mandatory_variable $YN.;
         
-        %add2issues_sdtm(prxmatch('/.*(TEST|TESTCD|TERM|DECOD|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_value ne "Y"),
+        %add2issues_sdtm(prxmatch('/^[A-Z]{0,2}(TEST|TESTCD|TERM|TRT|QSCAT|FTCAT|IECAT)$/',strip(sdtm_variable)) and (mandatory_value ne "Y"),
               %str(MANDATORY_VALUE_EXPECTED), 
               mandatory_value, "", "",
               severity=ERROR, extracode= 
@@ -317,6 +317,10 @@
                           index(sdtm_variable, "VAL")=0 and index(sdtm_variable, "VCDREF")=0 and index(sdtm_variable, "VCDVER")=0
                           ),
               %str(VLM_TARGET_UNEXPECTED), 
+              "", "", %str(cats("sdtm_variable=", sdtm_variable, ", comparator=", comparator, ", vlm_target=", vlm_target)));
+
+        %add2issues_sdtm((missing(vlm_target) and prxmatch('/.*(ORRES|ORRESU|STRESC|STRESN|STRESU)$/',strip(sdtm_variable))),
+              %str(VLM_TARGET_EXPECTED), 
               "", "", %str(cats("sdtm_variable=", sdtm_variable, ", comparator=", comparator, ", vlm_target=", vlm_target)));
 
         if not missing(comparator) then put +4 "comparator:" +1 comparator;

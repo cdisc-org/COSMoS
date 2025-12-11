@@ -387,6 +387,39 @@ run;
 %let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS), debug=0, check_relationships=&checkrelationships);
 
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_New.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_CM_PR_New.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=cm, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_CM), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=pr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PR), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_DEC_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=dec, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DEC_Edits), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_Imaging_New.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=imaging, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Imaging), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(LinkPhr_MandVal_Edits_1), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(LinkPhr_MandVal_Edits_2), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_QRS_Rule_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_QRS_Mand_Value_Edits), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_RS_Edits.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RS_Edits), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_SDTM_TU_TR_RECIST1_1_New.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=tu, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TU), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=tr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_TR), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_IS_New.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IS), debug=0, check_relationships=&checkrelationships);
+
 /************************************************************************************************************************/
 
 ods listing close;
@@ -395,7 +428,7 @@ ods excel options(sheet_name="SDTM_&package" flow="tables" autofilter = 'all') f
 
 proc print data=all_issues_sdtm;
   title "SDTM Specialization Issues - &todays";
-  var _excel_file_ _tab_ package_date severity vlm_group_id sdtm_variable issue_type expected_value actual_value comment;
+  var _excel_file_ _tab_ package_date severity vlm_group_id short_name sdtm_variable issue_type expected_value actual_value comment;
 run;
 
 ods listing;

@@ -1,0 +1,52 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C64805
+ncitCode: C64805
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64805
+parentConceptId: C62656
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hematology Tests
+  - Protein or Enzyme Type Measurements
+  - Prothrombin Measurements
+  - Coagulation Study
+shortName: International Normalized Ratio of Prothrombin Time
+synonyms:
+  - INR
+  - Prothrombin Intl. Normalized Ratio
+resultScales:
+  - Quantitative
+definition: A measure of the extrinsic pathway of coagulation. The International Normalized Ratio of Prothrombin Time (INR) is the ratio of a patient prothrombin time to a normal (control) sample raised to the power of the International Sensitivity Index (ISI) with a range of 0.8 to 1.2 seconds.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Seconds"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Platelet Poor Plasma"
+      - "Capillary Blood"
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer

@@ -1,0 +1,274 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: NONNODAL_TUMSTATE_RECIST1_1
+domain: TR
+shortName: "Non-nodal Tumor State (RECIST 1.1 Classification)"
+source: TR.TRTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C96643
+variables:
+  - name: TRTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C96779
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96779
+      submissionValue: TRTESTCD
+    assignedTerm:
+      conceptId: C96643
+      value: "TUMSTATE"
+    role: Topic
+    relationship:
+      subject: TRTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: TRTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TRTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C96778
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96778
+      submissionValue: TRTEST
+    assignedTerm:
+      conceptId: C96643
+      value: "Tumor State"
+    role: Qualifier
+    relationship:
+      subject: TRTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: TRORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C124309
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124309
+      submissionValue: TRPROPRS
+    valueList:
+      - "PRESENT"
+      - "ABSENT"
+      - "ENLARGEMENT FROM NADIR"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: TRORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: TRSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C124309
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124309
+      submissionValue: TRPROPRS
+    valueList:
+      - "PRESENT"
+      - "ABSENT"
+      - "ENLARGEMENT FROM NADIR"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: TRSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: TRMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "CT SCAN"
+      - "CALIPER MEASUREMENT METHOD"
+      - "ENDOSCOPY"
+      - "LYMPHANGIOGRAPHY"
+      - "MAMMOGRAPHY"
+      - "MRI"
+      - "NUCLEAR RADIOLOGY"
+      - "PET SCAN"
+      - "PET/CT SCAN"
+      - "PET/MRI SCAN"
+      - "PHOTOGRAPHY"
+      - "SCINTIGRAPHY"
+      - "TOTAL BODY RADIOGRAPHY"
+      - "ULTRASOUND"
+      - "X-RAY"
+    role: Qualifier
+    relationship:
+      subject: TRMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    comparator: IN
+  - name: TREVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    valueList:
+      - "INVESTIGATOR"
+      - "INDEPENDENT ASSESSOR"
+      - "RADIOLOGIST"
+    role: Qualifier
+    relationship:
+      subject: TREVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: TRTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: IN
+  - name: TREVALID
+    dataElementConceptId: C117043
+    isNonStandard: false
+    codelist:
+      conceptId: C96777
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96777
+      submissionValue: MEDEVAL
+    valueList:
+      - "RADIOLOGIST 1"
+      - "RADIOLOGIST 2"
+      - "RADIOLOGIST 3"
+    role: Qualifier
+    relationship:
+      subject: TREVALID
+      linkingPhrase: is an identifier for the evaluator with the role in
+      predicateTerm: IDENTIFIES
+      object: TREVAL
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    comparator: IN
+  - name: TRGRPID
+    dataElementConceptId: C117411
+    isNonStandard: false
+    assignedTerm:
+      value: "NON-TARGET"
+    role: Identifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TRREFID
+    dataElementConceptId: C117419
+    isNonStandard: false
+    role: Identifier
+    relationship:
+      subject: TRREFID
+      linkingPhrase: is the identifier for the source data used in the performance of the test in
+      predicateTerm: IDENTIFIES_PRODUCT_IN
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+  - name: TRLNKGRP
+    dataElementConceptId: C117412
+    isNonStandard: false
+    role: Identifier
+    relationship:
+      subject: TRLNKGRP
+      linkingPhrase: groups tumor assessments used in overall response identified by
+      predicateTerm: GROUPS_BY
+      object: RSLNKGRP
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+  - name: TRSTAT
+    isNonStandard: false
+    codelist:
+      conceptId: C66789
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66789
+      submissionValue: ND
+    valueList:
+      - "NOT DONE"
+    role: Qualifier
+    relationship:
+      subject: TRSTAT
+      linkingPhrase: is the status of the value in
+      predicateTerm: SPECIFIES
+      object: TRSTRESC
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TRREASND
+    isNonStandard: false
+    valueList:
+      - "NOT EVALUABLE"
+    role: Qualifier
+    relationship:
+      subject: TRREASND
+      linkingPhrase: is the reason for the status of the value in
+      predicateTerm: SPECIFIES
+      object: TRSTRESC
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TRREASNE
+    isNonStandard: true 
+    valueList:
+      - "POOR SCAN QUALITY"
+      - "NON-COMPATIBLE TECHNIQUE"
+      - "OBSCURING DUE TO PHYSICAL CHANGES"
+      - "RESECTION OR FOCAL THERAPY PERFORMED"
+    role: Qualifier
+    relationship:
+      subject: TRREASNE
+      linkingPhrase: is the reason the lesion was not evaluable in
+      predicateTerm: SPECIFIES
+      object: TRSTRESC
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: TRDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: TRDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: TRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

@@ -24,7 +24,7 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "Auscultation automatic"
-      - "Auscaltation manual"
+      - "Auscultation manual"
       - "Cuff-manual palpated"
       - "Doppler"
       - "Oscillometry"

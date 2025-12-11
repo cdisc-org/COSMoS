@@ -1,0 +1,42 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: NEW_1
+parentConceptId: C147905
+categories:
+  - Laboratory Tests
+shortName: Urine Glucose Test Strip Measurement [RETIRED]
+synonyms:
+  - Urine Glucose Dipstick
+resultScales:
+  - Ordinal
+definition: An ordinal measurement of glucose present in a sample. [RETIRED]
+coding:
+  - code: 2349-9
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Test Strip"
+      - "Dipstick"

@@ -1,0 +1,161 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: WHEALSZ
+domain: SR
+shortName: Wheal Size
+source: SR.SRTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C112429
+variables:
+  - name: SRTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C112024
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112024
+      submissionValue: SRTESTCD
+    assignedTerm:
+      conceptId: C112429
+      value: "WHEALSZ"
+    role: Topic
+    relationship:
+      subject: SRTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: SRTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: SRTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C112023
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112023
+      submissionValue: SRTEST
+    assignedTerm:
+      conceptId: C112429
+      value: "Wheal Size"
+    role: Qualifier
+    relationship:
+      subject: SRTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: SRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: SROBJ
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: SROBJ
+      linkingPhrase: is the object of the observation in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: SRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: SRORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66733
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66733
+      submissionValue: SIZE
+    valueList:
+      - "LARGE"
+      - "MEDIUM"
+      - "SMALL"
+    role: Qualifier
+    dataType: text
+    length: 10
+    relationship:
+      subject: SRORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SRSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66733
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66733
+      submissionValue: SIZE
+    valueList:
+      - "LARGE"
+      - "MEDIUM"
+      - "SMALL"
+    role: Qualifier
+    dataType: text
+    length: 10
+    relationship:
+      subject: SRSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SRLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: SRLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: SRTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SRLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    role: Qualifier
+    relationship:
+      subject: SRLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: SRLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SRMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    role: Qualifier
+    relationship:
+      subject: SRMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: SRTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: SRDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: SRDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: SRTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

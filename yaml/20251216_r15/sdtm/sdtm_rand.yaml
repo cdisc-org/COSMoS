@@ -1,0 +1,79 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: RAND
+domain: DS
+shortName: Randomized
+source: DS.DECODE
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C114209
+variables:
+  - name: DSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C74558
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74558
+      submissionValue: DSCAT
+    assignedTerm:
+      conceptId: C74588
+      value: "PROTOCOL MILESTONE"
+    role: Qualifier
+    relationship:
+      subject: DSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: DSDECOD
+    dataElementConceptId: C82977
+    isNonStandard: false
+    codelist:
+      conceptId: C114118
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C114118
+      submissionValue: PROTMLST
+    assignedTerm:
+      conceptId: C114209
+      value: "RANDOMIZED"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: DSTERM
+    dataElementConceptId: C82571
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: DSTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: DSDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: DSSTDTC
+    dataElementConceptId: C82517
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: DSSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: DSTERM
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

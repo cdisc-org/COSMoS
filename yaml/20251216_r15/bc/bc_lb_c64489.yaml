@@ -1,0 +1,58 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C64489
+ncitCode: C64489
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64489
+parentConceptId: C64430
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Type Measurements
+shortName: Creatine Kinase Measurement
+synonyms:
+  - CK
+  - CPK
+  - Creatine Kinase
+  - Creatine Phosphokinase
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: A quantitative measurement of the amount of creatine kinase present in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "U/L"
+      - "IU/L"
+      - "ukat/L"
+      - "nkat/L"
+      - "ug/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Plasma"
+      - "Serum"
+      - "Cerebral Spinal Fluid"
+      - "Body Fluid"

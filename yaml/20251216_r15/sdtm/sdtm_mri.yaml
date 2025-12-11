@@ -1,0 +1,161 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: MRI
+domain: PR
+shortName: MRI
+source: PR.PRTRT
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C16809
+variables:
+  - name: PRTRT
+    dataElementConceptId: C117511
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: PRDECOD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator
+  - name: PRDECOD
+    dataElementConceptId: C117512
+    isNonStandard: false
+    codelist:
+      conceptId: C101858
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101858
+      submissionValue: PROCEDUR
+    assignedTerm:
+      conceptId: C16809
+      value: "MRI"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: PRTRT
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PRPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_Y
+    valueList:
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: PRPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: PROCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: PROCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "BRAIN, HEART, SPINAL CORD,CERVICAL SPINE, THORACIC SPINE, LUMBAR SPINE"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: PRLOC
+      linkingPhrase: is the administration anatomical location for the treatment in
+      predicateTerm: SPECIFIES
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRSTDTC
+    dataElementConceptId: C117529
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: PRSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRENDTC
+    dataElementConceptId: C117530
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: PRENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

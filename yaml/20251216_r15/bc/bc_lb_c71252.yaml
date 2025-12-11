@@ -1,0 +1,12 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C71252
+ncitCode: C71252
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71252
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Arterial Blood Gas Measurement
+synonyms:
+  - ABG
+definition: Measures the acidity (pH) and the levels of oxygen, carbon dioxide, and bicarbonate in the blood.
