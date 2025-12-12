@@ -52,7 +52,7 @@ variables:
       submissionValue: ISBDAGT
     assignedTerm:
       conceptId: C187772
-      value: "HERPES SIMPLEX VIRUSES"
+      value: "HERPES SIMPLEX VIRUSES MIX"
     role: Qualifier
     relationship:
       subject: ISBDAGNT

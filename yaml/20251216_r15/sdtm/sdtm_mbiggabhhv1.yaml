@@ -52,7 +52,7 @@ variables:
       submissionValue: MICROORG
     assignedTerm:
       conceptId: C14311
-      value: "HUMAN HERPESVIRUS 1"
+      value: "HERPES SIMPLEX VIRUS 1"
     role: Qualifier
     relationship:
       subject: ISBDAGNT
