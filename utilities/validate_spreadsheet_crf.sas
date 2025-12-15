@@ -457,57 +457,57 @@ title01 "&now";
 %let _debug=0;
 
 %let release=15;
-%let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_TS_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc15_01);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_MVAI)$, dsout=bc15_02);
 %ReadExcel(file=&excel_file, range=%str(SDTM_MVAI)$, dsout=sdtm15_01);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_VS_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc15_03);
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm15_02, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_APACHE_PERF.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_APACHE_PERF.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_APACHE_PERF)$, dsout=bc15_04);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_Edits.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_05);
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_03, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_LB_New.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_06);
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_04, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_Retired.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_Retired.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc15_07);
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_CM_PR_New.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_CM_PR_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm15_05, drop=%str(drop=length significant_digits format change_history));
 %ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm15_06, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_DEC_Edits.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_DEC_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_DEC_Edits)$, dsout=sdtm15_07, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_Imaging_New.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_Imaging_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_Imaging)$, dsout=sdtm15_08, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_MB_Edits)$, dsout=bc15_08);
 %ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_1)$, dsout=sdtm15_9, drop=%str(drop=length significant_digits format change_history));
 %ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_2)$, dsout=sdtm15_10, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_QRS_Rule_Edits.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_QRS_Rule_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_QRS_Mand_Value_Edits)$, dsout=sdtm15_11, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_RS_Edits.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_RS_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_RS_Edits)$, dsout=sdtm15_12, drop=%str(drop=length significant_digits format change_history));
 
-%let excel_file=&root/curation/draft/package15/R15_SDTM_TU_TR_RECIST1_1_New.xlsx;
+%let excel_file=&root/curation/package15/R15_SDTM_TU_TR_RECIST1_1_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm15_13, drop=%str(drop=length significant_digits format));
 %ReadExcel(file=&excel_file, range=%str(SDTM_TR)$, dsout=sdtm15_14, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_IS_New.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc15_09);
 %ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm15_15, drop=%str(drop=length significant_digits format));
 
@@ -515,7 +515,7 @@ title01 "&now";
 
 data bc_set;
   length bc_id $64;
-  set bc15:(where=(not missing(bc_id)) keep=bc_id);
+  set bc&release.:(where=(not missing(bc_id)) keep=bc_id);
 run;  
   
 proc sql noprint;
@@ -528,7 +528,7 @@ quit;
 
 data sdtm_set;
   length vlm_group_id $128;
-  set sdtm15:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
+  set sdtm&release.:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
 run;  
   
 proc sql noprint;
@@ -541,7 +541,7 @@ quit;
 
 %* Package crf test ;
 
-%let release=xx;
+%let release_crf=xx;
 %let dropit=package_date categories length significant_digits;
 
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
@@ -605,7 +605,7 @@ data bc(drop=change_history i vname vvalue);
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc15:(where=(not missing(bc_id))) 
+  set bc&release.:(where=(not missing(bc_id))) 
       _bc_latest(where=((not missing(bc_id)) and bc_id notin ("&bc_set")));
   array carray{*} _character_;
   * if missing(bc_id) then delete;
@@ -650,7 +650,7 @@ data sdtm(drop=change_history i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set sdtm15:(where=(not missing(vlm_group_id))) 
+  set sdtm&release.:(where=(not missing(vlm_group_id))) 
       _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;
   package_date = upcase(package_date);
@@ -720,8 +720,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..html";
-  ods excel options(sheet_name="crf &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_R&release_crf._&todays..html";
+  ods excel options(sheet_name="crf &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_R&release_crf._&todays..xlsx";
 
     proc print data=crf;
     run;
@@ -734,7 +734,7 @@ run;
 /************************************************************************************************************************/
 
 ods listing close;
-ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_R&release._&todays..html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_R&release_crf._&todays..html";
 
   %* Unresolved BC Parent BCs ;
   proc sql;
