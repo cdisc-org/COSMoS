@@ -81,7 +81,7 @@ ods excel options(sheet_name="Collection_&package" flow="tables" autofilter = 'a
 
 proc print data=all_issues_crf;
   title "CRF Specialization Issues - &todays";
-  var _excel_file_ _tab_ package_date severity crf_group_id crf_item issue_type expected_value actual_value comment;
+  var _excel_file_ _tab_ package_date severity crf_group_id short_name crf_item issue_type expected_value actual_value comment;
 run;
 
 ods listing;

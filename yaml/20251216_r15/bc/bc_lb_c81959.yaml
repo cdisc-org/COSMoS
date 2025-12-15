@@ -1,0 +1,18 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C81959
+ncitCode: C81959
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81959
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Hematology Tests
+  - Coagulation Study
+  - Blood Protein Measurements
+shortName: Factor III Measurement
+synonyms:
+  - Factor III
+  - FACTIII
+  - Soluble CD142
+  - Tissue Factor CD142
+definition: The determination of the amount of factor III present in a sample.

@@ -1,0 +1,129 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: TIND_RECIST1_1
+domain: TU
+shortName: Target Indicator (RECIST 1.1 Classification)
+source: TU.TUTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C178053
+variables:
+  - name: TUTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C96784
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96784
+      submissionValue: TUTESTCD
+    assignedTerm:
+      conceptId: C178053
+      value: "TIND"
+    role: Topic
+    relationship:
+      subject: TUTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: TUTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TUTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C96783
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96783
+      submissionValue: TUTEST
+    assignedTerm:
+      conceptId: C178053
+      value: "Target Indicator"
+    role: Qualifier
+    relationship:
+      subject: TUTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: TUORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "Y"
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: TUORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: TUSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "Y"
+      - "N"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: TUSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: TUEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    assignedTerm:
+      conceptId: C25936
+      value: "INVESTIGATOR"
+    role: Qualifier
+    relationship:
+      subject: TUEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: TUTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: TUDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: TUDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: TUTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

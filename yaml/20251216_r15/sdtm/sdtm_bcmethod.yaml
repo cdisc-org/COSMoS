@@ -1,0 +1,100 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: BCMETHOD
+domain: RP
+shortName: Birth Control Method
+source: RP.RPTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C106501
+variables:
+  - name: RPTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C106479
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106479
+      submissionValue: RPTESTCD
+    assignedTerm:
+      conceptId: C106501
+      value: "BCMETHOD"
+    role: Topic
+    relationship:
+      subject: RPTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RPTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RPTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C106478
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106478
+      submissionValue: RPTEST
+    assignedTerm:
+      conceptId: C106501
+      value: "Birth Control Method"
+    role: Qualifier
+    relationship:
+      subject: RPTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: RPCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: RPCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RPORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: RPORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RPSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 40
+    relationship:
+      subject: RPSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RPTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RPDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RPDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RPTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

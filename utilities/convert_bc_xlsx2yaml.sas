@@ -352,21 +352,38 @@
 %let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Biomedical Concepts));
 */
-
 %let release=15;
 %let package=20251216;
 %let folder=20251216_r15;
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2025-12-16);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_TS_updates.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=ts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TS));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=mvai, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MVAI));
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_VS_updates.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_VS));
+
+%let excel_file=&root/curation/package15/R15_BC_APACHE_PERF.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=apache, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_APACHE_PERF));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_New.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_Retired.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=ds, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DS));
+
+%let excel_file=&root/curation/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=mb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MB_Edits));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_IS));
 
 /************************************************************************************************************************/
 

@@ -1,0 +1,47 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C71251
+ncitCode: C71251
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71251
+parentConceptId: C71252
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Arterial Blood Gas Measurements
+shortName: Partial Pressure of Oxygen Measurement
+synonyms:
+  - PaO2
+  - Partial Pressure O2
+  - PO2
+resultScales:
+  - Quantitative
+definition: Measures the pressure of oxygen dissolved in the blood and how well oxygen is able to move from the airspace of the lungs into the blood.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Arterial Blood"
+      - "Venous Blood"
+      - "Arterial Cord Blood"
+      - "Venous Cord Blood"
+  - conceptId: C49669
+    ncitCode: C49669
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49669
+    shortName: Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "mmHg"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

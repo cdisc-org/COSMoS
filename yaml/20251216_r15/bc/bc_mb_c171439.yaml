@@ -1,0 +1,60 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C171439
+ncitCode: C171439
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171439
+parentConceptId: C171532
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Virology Tests
+  - "COVID-19 Tests"
+  - "SARS-CoV-2 Tests"
+shortName: Severe Acute Respiratory Syndrome Coronavirus 2 Antibody Measurement
+synonyms:
+  - "SARS-CoV-2 Antibody Detection"
+  - "SARS-CoV-2 Antibody Test"
+  - "COVID-19 Antibody Test"
+  - "COVID-19 Antibody Detection"
+  - SAR2AB
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of severe acute respiratory syndrome coronavirus 2 antibody in a sample.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Positive"
+      - "Negative"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunofluorescence"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Detection"
+      - "Antibody Titer"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

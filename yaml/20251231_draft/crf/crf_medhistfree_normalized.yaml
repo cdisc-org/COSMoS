@@ -12,7 +12,7 @@ sdtmDatasetSpecializationId: MEDHISTFREE
 items:
   - name: MHCAT
     variableName: MHCAT
-    dataElementConceptId: C83018
+    dataElementConceptId: C25372
     prompt: Medical History Category
     orderNumber: 1
     mandatoryVariable: false
@@ -28,7 +28,7 @@ items:
         -  "MHCAT"
   - name: MHSCAT
     variableName: MHSCAT
-    dataElementConceptId: C83143
+    dataElementConceptId: C25692
     prompt: Medical History Subcategory
     orderNumber: 2
     mandatoryVariable: false

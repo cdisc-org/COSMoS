@@ -12,7 +12,7 @@ sdtmDatasetSpecializationId: MEDHISTPRESP
 items:
   - name: MHCAT
     variableName: MHCAT
-    dataElementConceptId: C83018
+    dataElementConceptId: C25372
     prompt: Medical History Category
     orderNumber: 1
     mandatoryVariable: false
@@ -28,7 +28,7 @@ items:
         -  "MHCAT"
   - name: MHSCAT
     variableName: MHSCAT
-    dataElementConceptId: C83143
+    dataElementConceptId: C25692
     prompt: Medical History Subcategory
     orderNumber: 2
     mandatoryVariable: false
@@ -56,7 +56,7 @@ items:
         -  "MHTERM"
   - name: MHPRESP
     variableName: MHPRESP
-    dataElementConceptId: C87897
+    dataElementConceptId: C171000
     prompt: Prespecified Medical History Event
     orderNumber: 4
     mandatoryVariable: true 
@@ -77,7 +77,7 @@ items:
         -  "MHPRESP"
   - name: MHOCCUR
     variableName: MHOCCUR
-    dataElementConceptId: C83067
+    dataElementConceptId: C127786
     prompt: Did the subject have [prespecified medical event]
     orderNumber: 5
     mandatoryVariable: true 

@@ -1,0 +1,54 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C184647
+ncitCode: C184647
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C184647
+parentConceptId: C154812
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Serology Tests
+  - Gram Negative Bacteria Measurements
+shortName: Treponema pallidum Measurement
+synonyms:
+  - TPA
+resultScales:
+  - Ordinal
+definition: The determination of the amount of Treponema pallidum in a biological sample.
+dataElementConcepts:
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Blood"
+      - "Serum"
+      - "Urine"
+      - "Cerebrospinal Fluid"
+      - "Body Fluid"
+      - "Swabbed Material"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Detection"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunofluorescence"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -30,7 +30,7 @@ items:
         -  "MHTERM"
   - name: MHPRESP
     variableName: MHPRESP
-    dataElementConceptId: C87897
+    dataElementConceptId: C171000
     prompt: Prespecified Medical History Event
     orderNumber: 2
     mandatoryVariable: true 
@@ -51,7 +51,7 @@ items:
         -  "MHPRESP"
   - name: MHOCCUR
     variableName: MHOCCUR
-    dataElementConceptId: C83067
+    dataElementConceptId: C127786
     prompt: Did the subject have Alzheimer's Disease
     orderNumber: 3
     mandatoryVariable: false

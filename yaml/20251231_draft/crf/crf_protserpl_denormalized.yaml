@@ -130,7 +130,7 @@ items:
         -  "LBTEST"
   - name: PROT_LBORRESU
     variableName: LBORRESU
-    dataElementConceptId: C64571
+    dataElementConceptId: C48207
     prompt: Unit
     orderNumber: 8
     mandatoryVariable: true 

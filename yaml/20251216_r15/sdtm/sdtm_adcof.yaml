@@ -1,0 +1,187 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: ADCOF
+domain: FT
+shortName: "CDISC ADAS-Cog - Naming Objects and Fingers Summary Score"
+source: FT.FTTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C100191
+variables:
+  - name: FTTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C100132
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100132
+      submissionValue: ADCTC
+    assignedTerm:
+      conceptId: C100191
+      value: "ADCOF"
+    role: Topic
+    relationship:
+      subject: FTTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: FTTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: FTTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C100131
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100131
+      submissionValue: ADCTN
+    assignedTerm:
+      conceptId: C100191
+      value: "Naming Objects and Fingers"
+    role: Qualifier
+    relationship:
+      subject: FTTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: FTCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C115304
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C115304
+      submissionValue: FTCAT
+    assignedTerm:
+      conceptId: C100762
+      value: "ADAS-COG"
+    role: Qualifier
+    relationship:
+      subject: FTCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: FTSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    assignedTerm:
+      value: "NAMING TASK"
+    role: Qualifier
+    relationship:
+      subject: FTSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: FTCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: FTORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "0-2 items (objects and fingers) named incorrectly"
+      - "3-5 items (objects and fingers) named incorrectly"
+      - "6-8 items (objects and fingers) named incorrectly"
+      - "9-11 items (objects and fingers) named incorrectly"
+      - "12-14 items (objects and fingers) named incorrectly"
+      - "15-17 items (objects and fingers) named incorrectly"
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "5.2"
+    significantDigits: 2
+    relationship:
+      subject: FTORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: FTSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "5.2"
+    significantDigits: 2
+    relationship:
+      subject: FTSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: float
+    length: 4
+    format: "5.2"
+    significantDigits: 2
+    relationship:
+      subject: FTSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: FTSTAT
+    dataElementConceptId: C41202
+    isNonStandard: false
+    codelist:
+      conceptId: C66789
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66789
+      submissionValue: ND
+    valueList:
+      - "NOT DONE"
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: FTREASND
+    dataElementConceptId: C82556
+    isNonStandard: false
+    valueList:
+      - "Subject too cognitively impaired to complete"
+      - "Subject was unable to complete for physical reasons"
+      - "Subject refused"
+      - "Not Done for reason other than above - explain"
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: FTDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: FTDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: FTTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

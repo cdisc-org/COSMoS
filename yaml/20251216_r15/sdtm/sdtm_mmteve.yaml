@@ -1,0 +1,161 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: MMTEVE
+domain: MK
+shortName: MRC MMT Score, Eversion
+source: MK.MKTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C139235
+variables:
+  - name: MKTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C127269
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127269
+      submissionValue: MUSCTSCD
+    assignedTerm:
+      conceptId: C139235
+      value: "MMTEVE"
+    role: Topic
+    relationship:
+      subject: MKTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MKTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MKTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C127270
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127270
+      submissionValue: MUSCTS
+    assignedTerm:
+      conceptId: C139235
+      value: "MRC MMT Score, Eversion"
+    role: Qualifier
+    relationship:
+      subject: MKTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MKORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "0 No visible or palpable contraction"
+      - "1 Visible or palpable contraction without motion"
+      - "2 Full range of motion, gravity eliminated"
+      - "3 Full range of motion against gravity"
+      - "4 Full range of motion against gravity, moderate resistance"
+      - "5 Full range of motion against gravity, maximal resistance"
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MKORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MKSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    role: Qualifier
+    dataType: integer
+    length: 8
+    relationship:
+      subject: MKSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: MKLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MKLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "RIGHT"
+      - "LEFT"
+    role: Qualifier
+    relationship:
+      subject: MKLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MKLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MKDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

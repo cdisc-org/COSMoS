@@ -1,0 +1,55 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C83118
+ncitCode: C83118
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83118
+parentConceptId: C82571
+categories:
+  - Reported Events
+  - Medical History Events
+  - Medical Conditions
+  - Presenting Conditions
+shortName: Medical History Reported Term [RETIRED]
+synonyms:
+  - Medical History
+  - MHTERM
+resultScales:
+  - Nominal
+definition: The verbatim description of the medical history being reported. [RETIRED]
+dataElementConcepts:
+  - conceptId: C83346
+    ncitCode: C83346
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83346
+    shortName: Medical History Dictionary Derived Term
+    dataType: string
+  - conceptId: C83067
+    ncitCode: C83067
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83067
+    shortName: Medical History Occurrence
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C87897
+    ncitCode: C87897
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87897
+    shortName: Medical History Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83118
+    ncitCode: C83118
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83118
+    shortName: Medical History Reported Term
+    dataType: string
+  - conceptId: C83018
+    ncitCode: C83018
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83018
+    shortName: Medical History Category
+    dataType: string
+  - conceptId: C83143
+    ncitCode: C83143
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83143
+    shortName: Medical History Subcategory
+    dataType: string

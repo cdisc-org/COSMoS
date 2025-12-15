@@ -1,0 +1,54 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C64481
+ncitCode: C64481
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C64481
+parentConceptId: C74954
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Liver Function Tests
+shortName: Direct Bilirubin Measurement
+synonyms:
+  - BILDIR
+  - "Conjugated Bilirubin + Albumin-Bound Bilirubin"
+  - Conjugated Bilirubin + Delta Bilirubin
+  - Direct Bilirubin
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The bilirubin is bound to glucuronide to form conjugated bilirubin (direct bilirubin). Direct Bilirubin measurement is accomplished by a colorimetric method. Direct Bilirubin in biological fluids reacts with sulfanilic acid at acidic pH to produce a red colored complex. The optical density of produced color has a direct relationship with Direct Bilirubin concentration in the solution.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "umol/L"
+      - "mg/dL"
+      - "mg/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Plasma"
+      - "Serum"
+      - "Body Fluid"

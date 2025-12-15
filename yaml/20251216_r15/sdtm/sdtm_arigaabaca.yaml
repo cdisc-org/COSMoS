@@ -1,0 +1,231 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: ARIGAABACA
+domain: IS
+shortName: "Allergen-induced IgA Antibody for American Cockroach Antigen"
+source: IS.ISTESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C187776
+variables:
+  - name: ISTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120525
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120525
+      submissionValue: ISTESTCD
+    assignedTerm:
+      conceptId: C187776
+      value: "ARIGAAB"
+    role: Topic
+    relationship:
+      subject: ISTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: ISTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: ISTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120526
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120526
+      submissionValue: ISTEST
+    assignedTerm:
+      conceptId: C187776
+      value: "Allergen-induced IgA Antibody"
+    role: Qualifier
+    relationship:
+      subject: ISTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: ISBDAGNT
+    dataElementConceptId: C42647
+    isNonStandard: false
+    codelist:
+      conceptId: C181169
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181169
+      submissionValue: ISBDAGT
+    assignedTerm:
+      conceptId: C189452
+      value: "AMERICAN COCKROACH ANTIGEN"
+    role: Qualifier
+    relationship:
+      subject: ISBDAGNT
+      linkingPhrase: is the substance bound to the analyte in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: ISCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: ISORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: ISORRESU
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "g/L"
+      - "mg/L"
+      - "mg/dL"
+      - "IU/L"
+      - "umol/L"
+    role: Qualifier
+    relationship:
+      subject: ISORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: ISORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: ISSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: ISSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: ISSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: ISSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: ISSTRESU
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C48508
+      value: "umol/L"
+    role: Qualifier
+    relationship:
+      subject: ISSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: ISORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: ISSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    valueList:
+      - "SERUM"
+      - "SERUM OR PLASMA"
+      - "BLOOD"
+    role: Qualifier
+    relationship:
+      subject: ISSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: ISMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "IMMUNOASSAY"
+      - "RIA"
+    role: Qualifier
+    relationship:
+      subject: ISMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: ISDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: ISDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

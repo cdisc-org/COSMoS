@@ -6,6 +6,7 @@ href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25299
 parentConceptId: C54706
 categories:
   - Vital Signs
+  - Blood Pressure
 shortName: Diastolic Blood Pressure
 synonyms:
   - DIABP
@@ -32,7 +33,7 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "Auscultation automatic"
-      - "Auscaltation manual"
+      - "Auscultation manual"
       - "Cuff-manual palpated"
       - "Doppler"
       - "Oscillometry"

@@ -106,7 +106,7 @@ items:
         -  "LBTEST"
   - name: CMONOX_LBORRESU
     variableName: LBORRESU
-    dataElementConceptId: C25709
+    dataElementConceptId: C48207
     prompt: Unit
     orderNumber: 7
     mandatoryVariable: true 

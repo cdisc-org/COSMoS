@@ -1,0 +1,222 @@
+packageDate: "2025-12-16"
+packageType: bc
+conceptId: C156629
+ncitCode: C156629
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156629
+parentConceptId: C41331
+categories:
+  - Events
+  - Reported Events
+  - Adverse Events
+shortName: Anticipated Adverse Event [RETIRED]
+synonyms:
+  - Adverse Event
+  - Prespecified Adverse Event
+resultScales:
+  - Nominal
+definition: "An adverse event that is reasonably expected and/or listed in the clinical protocol or other study-related document. [RETIRED]"
+dataElementConcepts:
+  - conceptId: C49489
+    ncitCode: C49489
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49489
+    shortName: Adverse Event Outcome
+    dataType: string
+    exampleSet:
+      - "Fatal"
+      - "Not Recovered/Not Resolved"
+      - "Recovered/Resolved With Sequelae"
+      - "Recovered/Resolved"
+      - "Recovering/Resolving"
+      - "Unknown"
+  - conceptId: C83208
+    ncitCode: C83208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83208
+    shortName: Adverse Event Pattern
+    dataType: string
+    exampleSet:
+      - "Intermittent"
+      - "Continuous"
+      - "Single Event"
+  - conceptId: C83210
+    ncitCode: C83210
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83210
+    shortName: Adverse Event Relationship to Non Study Treatment
+    dataType: string
+    exampleSet:
+      - "Not related"
+      - "Unlikely Related"
+      - "Possibly Related"
+      - "Related"
+  - conceptId: C41358
+    ncitCode: C41358
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41358
+    shortName: Adverse Event Attribution to Product or Procedure
+    dataType: string
+    exampleSet:
+      - "Not related"
+      - "Unlikely Related"
+      - "Possibly Related"
+      - "Related"
+  - conceptId: C83109
+    ncitCode: C83109
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83109
+    shortName: Other Actions taken in Response to Adverse Event
+    dataType: string
+    exampleSet:
+      - "Treatment Unblinded"
+      - "Ptrimary Care Physician Notified"
+  - conceptId: C53252
+    ncitCode: C53252
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C53252
+    shortName: Seriousness of Adverse Event
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C53253
+    ncitCode: C53253
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C53253
+    shortName: Severity of Adverse Event
+    dataType: string
+    exampleSet:
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C83212
+    ncitCode: C83212
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83212
+    shortName: Adverse Event Subcategory
+    dataType: string
+  - conceptId: C87840
+    ncitCode: C87840
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87840
+    shortName: Adverse Event Pre-specified
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C78541
+    ncitCode: C78541
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78541
+    shortName: Adverse Event Verbatim Description
+    dataType: string
+  - conceptId: C83205
+    ncitCode: C83205
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83205
+    shortName: Adverse Event Location
+    dataType: string
+  - conceptId: C83013
+    ncitCode: C83013
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83013
+    shortName: Adverse Event Action Taken with Study Treatment
+    dataType: string
+    exampleSet:
+      - "Drug Withdrawn"
+      - "Dose Reduced"
+      - "Dose Increased"
+      - "Dose Not Changed"
+      - "Unknown"
+  - conceptId: C78605
+    ncitCode: C78605
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78605
+    shortName: Adverse Event Toxicity Grade
+    dataType: string
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+  - conceptId: C83198
+    ncitCode: C83198
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83198
+    shortName: Adverse Event Category
+    dataType: string
+  - conceptId: C83211
+    ncitCode: C83211
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83211
+    shortName: Adverse Event Involves Cancer
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83344
+    ncitCode: C83344
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83344
+    shortName: Adverse Event Dictionary Derived Term
+    dataType: string
+  - conceptId: C83199
+    ncitCode: C83199
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83199
+    shortName: Adverse Event Concomitant Treatment
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83201
+    ncitCode: C83201
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83201
+    shortName: Adverse Event End Date Time
+    dataType: datetime
+  - conceptId: C113380
+    ncitCode: C113380
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C113380
+    shortName: Disabling Adverse Event
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83215
+    ncitCode: C83215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83215
+    shortName: Adverse Event Start Date Time
+    dataType: datetime
+  - conceptId: C83117
+    ncitCode: C83117
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83117
+    shortName: Adverse Event Seriousness Due to Congenital Anomaly
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C48275
+    ncitCode: C48275
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48275
+    shortName: Death Related to Adverse Event
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83052
+    ncitCode: C83052
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83052
+    shortName: Adverse Event associated with Hospitalization
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C84266
+    ncitCode: C84266
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C84266
+    shortName: Life Threatening Adverse Event
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83214
+    ncitCode: C83214
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83214
+    shortName: Adverse Event Occurred with Overdose
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C83053
+    ncitCode: C83053
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83053
+    shortName: Adverse Event Associated with Serious Medical Event
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"

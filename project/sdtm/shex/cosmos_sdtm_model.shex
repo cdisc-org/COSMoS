@@ -85,81 +85,85 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20an%20observation%20described%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20overall%20response%20supported%20by%20tumor%20assessments%20identified%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20image%20from%20the%20procedure%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20reference%20used%20in%20the%20genomic%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20tumor%20found%20by%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20heritability%20of%20the%20genetic%20variant%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20occurrence%20of%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20pre-specification%20of%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20severity%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20location%20detail%20for%20the%20tumor%20identified%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20previous%20irradiation%20status%20of%20the%20tumor%20identified%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20progression%20status%20of%20the%20previous%20irradiated%20tumor%20identified%20by>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20class%20code%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20class%20name%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20dictionary-derived%20term%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20grouping%20of%20values%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20reference%20range%20value%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20a%20published%20reference%20for%20the%20genetic%20variant%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20copy%2C%20on%20one%20of%20two%20homologous%20chromosones%2C%20of%20the%20genetic%20variant%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20genetic%20sequence%20of%20the%20genetic%20entity%20represented%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20decoded%20by%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20original%20text%20for>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administered%20amount%20of%20the%20treatment%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20administration%20anatomical%20location%20for%20the%20treatment%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20aspect%20of%20the%20event%20used%20to%20define%20the%20date%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20chromosome%20that%20is%20the%20position%20of%20the%20result%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20clinical%20significance%20interpretation%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20clinical%20trial%20or%20treatment%20setting%20for>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20code%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary%20code%20for%20the%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20term%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20class%20code%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20class%20name%20for%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20dictionary-derived%20term%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20duration%20for>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20end%20date%20for>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20epoch%20of%20the%20performance%20of%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20frequency%20of%20administration%20of%20the%20amount%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20genetic%20sub-location%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20device%20which%20collected%20data%20for%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20source%20data%20used%20in%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20intended%20disease%20outcome%20for>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20material%20type%20of%20the%20subject%20of%20the%20activity%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20medical%20condition%20that%20is%20the%20reason%20for%20the%20treatment%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20of%20secondary%20analysis%20of%20results%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20name%20of%20the%20reference%20terminology%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20numeric%20location%2C%20within%20a%20chromosone%2C%20genetic%20entity%2C%20or%20genetic%20sub-region%2C%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20operational%20objective%20of%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20part%20of%20the%20body%20through%20which%20is%20administered%20the%20treatment%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20to%20be%20considered%20when%20answering%20the%20question%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20physical%20form%20of%20the%20product%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20stopping%20administration%20of>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20the%20status%20of%20the%20value%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20the%20lesion%20was%20not%20evaluable%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20result%20of%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20role%20of%20the%20assessor%20who%20performed%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20specimen%20tested%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20start%20date%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20status%20of%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20subject%27s%20fasting%20status%20during%20the%20performance%20of%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20substance%20bound%20to%20the%20analyte%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20symbol%20for%20the%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20textual%20description%20of%20the%20intended%20dose%20regimen%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20type%20of%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for%20the%20value%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20unit%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20value%20of%20the%20property%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20version%20of%20the%20reference%20terminology%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20performance%20of%20the%20test%20in>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of%20the%20tumor%20identified%20by>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20anatomical%20location%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20severity%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#identifies%20the%20reference%20used%20in%20the%20genomic%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20heritability%20of%20the%20genetic%20variant%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20a%20published%20reference%20for%20the%20genetic%20variant%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20copy%2C%20on%20one%20of%20two%20homologous%20chromosones%2C%20of%20the%20genetic%20variant%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20genetic%20sequence%20of%20the%20genetic%20entity%20represented%20by>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20chromosome%20that%20is%20the%20position%20of%20the%20result%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20clinical%20trial%20or%20treatment%20setting%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20occurrence%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20intended%20disease%20outcome%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20method%20of%20secondary%20analysis%20of%20results%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20numeric%20location%2C%20within%20a%20chromosone%2C%20genetic%20entity%2C%20or%20genetic%20sub-region%2C%20of%20the%20result%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20symbol%20for%20the%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20type%20of%20genomic%20entity%20that%20is%20the%20position%20of%20the%20result%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20genetic%20sub-location%20of%20the%20result%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20object%20of%20the%20observation%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20an%20identifier%20for%20the%20evaluator%20with%20the%20role%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20severity%20of%20the%20toxicity%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20grouping%20of%20values%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20textual%20description%20of%20the%20intended%20dose%20regimen%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20reason%20for%20stopping%20administration%20of>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20value%20of%20the%20property%20identified%20by>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20name%20of%20the%20reference%20terminology%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20version%20of%20the%20reference%20terminology%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20for%20the%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20a%20reference%20range%20value%20for>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20identifier%20for%20the%20device%20which%20collected%20data%20for%20the%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20substance%20bound%20to%20the%20analyte%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20operational%20objective%20of%20the%20test%20in>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20to%20be%20considered%20when%20answering%20the%20question%20in>
              ] ;
           <predicateTerm> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES>

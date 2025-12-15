@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-25T16:43:48
+# Generation date: 2025-12-11T11:12:45
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -464,24 +464,42 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="identifies overall response supported by tumor assessments identified by"))
         setattr(cls, "identifies the image from the procedure in",
             PermissibleValue(text="identifies the image from the procedure in"))
+        setattr(cls, "identifies the reference used in the genomic test in",
+            PermissibleValue(text="identifies the reference used in the genomic test in"))
         setattr(cls, "identifies the tumor found by the test in",
             PermissibleValue(text="identifies the tumor found by the test in"))
+        setattr(cls, "indicates heritability of the genetic variant in",
+            PermissibleValue(text="indicates heritability of the genetic variant in"))
         setattr(cls, "indicates occurrence of the value in",
             PermissibleValue(text="indicates occurrence of the value in"))
         setattr(cls, "indicates pre-specification of the value in",
             PermissibleValue(text="indicates pre-specification of the value in"))
         setattr(cls, "indicates severity of",
             PermissibleValue(text="indicates severity of"))
+        setattr(cls, "indicates the location detail for the tumor identified by",
+            PermissibleValue(text="indicates the location detail for the tumor identified by"))
         setattr(cls, "indicates the previous irradiation status of the tumor identified by",
             PermissibleValue(text="indicates the previous irradiation status of the tumor identified by"))
         setattr(cls, "indicates the progression status of the previous irradiated tumor identified by",
             PermissibleValue(text="indicates the progression status of the previous irradiated tumor identified by"))
-        setattr(cls, "is a dictionary-derived term for the value in",
-            PermissibleValue(text="is a dictionary-derived term for the value in"))
         setattr(cls, "is a dictionary-derived class code for the value in",
             PermissibleValue(text="is a dictionary-derived class code for the value in"))
         setattr(cls, "is a dictionary-derived class name for the value in",
             PermissibleValue(text="is a dictionary-derived class name for the value in"))
+        setattr(cls, "is a dictionary-derived term for the value in",
+            PermissibleValue(text="is a dictionary-derived term for the value in"))
+        setattr(cls, "is a grouping of values in",
+            PermissibleValue(text="is a grouping of values in"))
+        setattr(cls, "is a reference range value for",
+            PermissibleValue(text="is a reference range value for"))
+        setattr(cls, "is an identifier for a published reference for the genetic variant in",
+            PermissibleValue(text="is an identifier for a published reference for the genetic variant in"))
+        setattr(cls, "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in",
+            PermissibleValue(text="is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in"))
+        setattr(cls, "is an identifier for the evaluator with the role in",
+            PermissibleValue(text="is an identifier for the evaluator with the role in"))
+        setattr(cls, "is an identifier for the genetic sequence of the genetic entity represented by",
+            PermissibleValue(text="is an identifier for the genetic sequence of the genetic entity represented by"))
         setattr(cls, "is decoded by the value in",
             PermissibleValue(text="is decoded by the value in"))
         setattr(cls, "is original text for",
@@ -492,18 +510,26 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="is the administration anatomical location for the treatment in"))
         setattr(cls, "is the aspect of the event used to define the date in",
             PermissibleValue(text="is the aspect of the event used to define the date in"))
+        setattr(cls, "is the chromosome that is the position of the result in",
+            PermissibleValue(text="is the chromosome that is the position of the result in"))
         setattr(cls, "is the clinical significance interpretation for",
             PermissibleValue(text="is the clinical significance interpretation for"))
+        setattr(cls, "is the clinical trial or treatment setting for",
+            PermissibleValue(text="is the clinical trial or treatment setting for"))
         setattr(cls, "is the code for the value in",
             PermissibleValue(text="is the code for the value in"))
+        setattr(cls, "is the date of occurrence for",
+            PermissibleValue(text="is the date of occurrence for"))
+        setattr(cls, "is the date of occurrence",
+            PermissibleValue(text="is the date of occurrence"))
         setattr(cls, "is the dictionary code for the test in",
             PermissibleValue(text="is the dictionary code for the test in"))
-        setattr(cls, "is the dictionary-derived term for the value in",
-            PermissibleValue(text="is the dictionary-derived term for the value in"))
         setattr(cls, "is the dictionary-derived class code for the value in",
             PermissibleValue(text="is the dictionary-derived class code for the value in"))
         setattr(cls, "is the dictionary-derived class name for the value in",
             PermissibleValue(text="is the dictionary-derived class name for the value in"))
+        setattr(cls, "is the dictionary-derived term for the value in",
+            PermissibleValue(text="is the dictionary-derived term for the value in"))
         setattr(cls, "is the duration for",
             PermissibleValue(text="is the duration for"))
         setattr(cls, "is the end date for",
@@ -512,108 +538,90 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="is the epoch of the performance of the test in"))
         setattr(cls, "is the frequency of administration of the amount in",
             PermissibleValue(text="is the frequency of administration of the amount in"))
+        setattr(cls, "is the genetic sub-location of the result in",
+            PermissibleValue(text="is the genetic sub-location of the result in"))
+        setattr(cls, "is the identifier for the device which collected data for the test in",
+            PermissibleValue(text="is the identifier for the device which collected data for the test in"))
         setattr(cls, "is the identifier for the source data used in the performance of the test in",
             PermissibleValue(text="is the identifier for the source data used in the performance of the test in"))
+        setattr(cls, "is the intended disease outcome for",
+            PermissibleValue(text="is the intended disease outcome for"))
         setattr(cls, "is the material type of the subject of the activity in",
             PermissibleValue(text="is the material type of the subject of the activity in"))
         setattr(cls, "is the medical condition that is the reason for the treatment in",
             PermissibleValue(text="is the medical condition that is the reason for the treatment in"))
         setattr(cls, "is the method for the test in",
             PermissibleValue(text="is the method for the test in"))
+        setattr(cls, "is the method of secondary analysis of results in",
+            PermissibleValue(text="is the method of secondary analysis of results in"))
+        setattr(cls, "is the name of the reference terminology for",
+            PermissibleValue(text="is the name of the reference terminology for"))
+        setattr(cls, "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
+            PermissibleValue(text="is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in"))
+        setattr(cls, "is the object of the observation in",
+            PermissibleValue(text="is the object of the observation in"))
+        setattr(cls, "is the operational objective of the test in",
+            PermissibleValue(text="is the operational objective of the test in"))
         setattr(cls, "is the part of the body through which is administered the treatment in",
             PermissibleValue(text="is the part of the body through which is administered the treatment in"))
+        setattr(cls, "is the period of time for the test in",
+            PermissibleValue(text="is the period of time for the test in"))
+        setattr(cls, "is the period of time to be considered when answering the question in",
+            PermissibleValue(text="is the period of time to be considered when answering the question in"))
         setattr(cls, "is the physical form of the product in",
             PermissibleValue(text="is the physical form of the product in"))
+        setattr(cls, "is the reason for stopping administration of",
+            PermissibleValue(text="is the reason for stopping administration of"))
+        setattr(cls, "is the reason for the status of the value in",
+            PermissibleValue(text="is the reason for the status of the value in"))
+        setattr(cls, "is the reason the lesion was not evaluable in",
+            PermissibleValue(text="is the reason the lesion was not evaluable in"))
         setattr(cls, "is the result of the test in",
             PermissibleValue(text="is the result of the test in"))
         setattr(cls, "is the role of the assessor who performed the test in",
             PermissibleValue(text="is the role of the assessor who performed the test in"))
+        setattr(cls, "is the severity of the toxicity in",
+            PermissibleValue(text="is the severity of the toxicity in"))
         setattr(cls, "is the specimen tested in",
             PermissibleValue(text="is the specimen tested in"))
         setattr(cls, "is the start date for",
             PermissibleValue(text="is the start date for"))
+        setattr(cls, "is the status of the value in",
+            PermissibleValue(text="is the status of the value in"))
         setattr(cls, "is the subject position during performance of the test in",
             PermissibleValue(text="is the subject position during performance of the test in"))
         setattr(cls, "is the subject's fasting status during the performance of the test in",
             PermissibleValue(text="is the subject's fasting status during the performance of the test in"))
+        setattr(cls, "is the substance bound to the analyte in",
+            PermissibleValue(text="is the substance bound to the analyte in"))
+        setattr(cls, "is the symbol for the genomic entity that is the position of the result in",
+            PermissibleValue(text="is the symbol for the genomic entity that is the position of the result in"))
+        setattr(cls, "is the textual description of the intended dose regimen for",
+            PermissibleValue(text="is the textual description of the intended dose regimen for"))
+        setattr(cls, "is the type of genomic entity that is the position of the result in",
+            PermissibleValue(text="is the type of genomic entity that is the position of the result in"))
         setattr(cls, "is the unit for the value in",
             PermissibleValue(text="is the unit for the value in"))
         setattr(cls, "is the unit for",
             PermissibleValue(text="is the unit for"))
+        setattr(cls, "is the value of the property identified by",
+            PermissibleValue(text="is the value of the property identified by"))
+        setattr(cls, "is the version of the reference terminology in",
+            PermissibleValue(text="is the version of the reference terminology in"))
         setattr(cls, "specifies the anatomical location in",
             PermissibleValue(text="specifies the anatomical location in"))
-        setattr(cls, "specifies the anatomical location of",
-            PermissibleValue(text="specifies the anatomical location of"))
         setattr(cls, "specifies the anatomical location of the performance of the test in",
             PermissibleValue(text="specifies the anatomical location of the performance of the test in"))
         setattr(cls, "specifies the anatomical location of the tumor identified by",
             PermissibleValue(text="specifies the anatomical location of the tumor identified by"))
+        setattr(cls, "specifies the anatomical location of",
+            PermissibleValue(text="specifies the anatomical location of"))
         setattr(cls, "specifies the severity of",
             PermissibleValue(text="specifies the severity of"))
         setattr(cls, "values are grouped by",
             PermissibleValue(text="values are grouped by"))
         setattr(cls, "was the subject position during performance of the test in",
             PermissibleValue(text="was the subject position during performance of the test in"))
-        setattr(cls, "identifies the reference used in the genomic test in",
-            PermissibleValue(text="identifies the reference used in the genomic test in"))
-        setattr(cls, "indicates heritability of the genetic variant in",
-            PermissibleValue(text="indicates heritability of the genetic variant in"))
-        setattr(cls, "is an identifier for a published reference for the genetic variant in",
-            PermissibleValue(text="is an identifier for a published reference for the genetic variant in"))
-        setattr(cls, "is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in",
-            PermissibleValue(text="is an identifier for the copy, on one of two homologous chromosones, of the genetic variant in"))
-        setattr(cls, "is an identifier for the genetic sequence of the genetic entity represented by",
-            PermissibleValue(text="is an identifier for the genetic sequence of the genetic entity represented by"))
-        setattr(cls, "is the chromosome that is the position of the result in",
-            PermissibleValue(text="is the chromosome that is the position of the result in"))
-        setattr(cls, "is the clinical trial or treatment setting for",
-            PermissibleValue(text="is the clinical trial or treatment setting for"))
-        setattr(cls, "is the date of occurrence",
-            PermissibleValue(text="is the date of occurrence"))
-        setattr(cls, "is the date of occurrence for",
-            PermissibleValue(text="is the date of occurrence for"))
-        setattr(cls, "is the intended disease outcome for",
-            PermissibleValue(text="is the intended disease outcome for"))
-        setattr(cls, "is the method of secondary analysis of results in",
-            PermissibleValue(text="is the method of secondary analysis of results in"))
-        setattr(cls, "is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in",
-            PermissibleValue(text="is the numeric location, within a chromosone, genetic entity, or genetic sub-region, of the result in"))
-        setattr(cls, "is the symbol for the genomic entity that is the position of the result in",
-            PermissibleValue(text="is the symbol for the genomic entity that is the position of the result in"))
-        setattr(cls, "is the type of genomic entity that is the position of the result in",
-            PermissibleValue(text="is the type of genomic entity that is the position of the result in"))
-        setattr(cls, "is the genetic sub-location of the result in",
-            PermissibleValue(text="is the genetic sub-location of the result in"))
-        setattr(cls, "is the object of the observation in",
-            PermissibleValue(text="is the object of the observation in"))
-        setattr(cls, "is an identifier for the evaluator with the role in",
-            PermissibleValue(text="is an identifier for the evaluator with the role in"))
-        setattr(cls, "is the severity of the toxicity in",
-            PermissibleValue(text="is the severity of the toxicity in"))
-        setattr(cls, "is a grouping of values in",
-            PermissibleValue(text="is a grouping of values in"))
-        setattr(cls, "is the textual description of the intended dose regimen for",
-            PermissibleValue(text="is the textual description of the intended dose regimen for"))
-        setattr(cls, "is the reason for stopping administration of",
-            PermissibleValue(text="is the reason for stopping administration of"))
-        setattr(cls, "is the value of the property identified by",
-            PermissibleValue(text="is the value of the property identified by"))
-        setattr(cls, "is the name of the reference terminology for",
-            PermissibleValue(text="is the name of the reference terminology for"))
-        setattr(cls, "is the version of the reference terminology in",
-            PermissibleValue(text="is the version of the reference terminology in"))
-        setattr(cls, "is the period of time for the test in",
-            PermissibleValue(text="is the period of time for the test in"))
-        setattr(cls, "is a reference range value for",
-            PermissibleValue(text="is a reference range value for"))
-        setattr(cls, "is the identifier for the device which collected data for the test in",
-            PermissibleValue(text="is the identifier for the device which collected data for the test in"))
-        setattr(cls, "is the substance bound to the analyte in",
-            PermissibleValue(text="is the substance bound to the analyte in"))
-        setattr(cls, "is the operational objective of the test in",
-            PermissibleValue(text="is the operational objective of the test in"))
-        setattr(cls, "is the period of time to be considered when answering the question in",
-            PermissibleValue(text="is the period of time to be considered when answering the question in"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 

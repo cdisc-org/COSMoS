@@ -1,0 +1,165 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: ISOMSER
+domain: MK
+shortName: Isometric Muscle Strength, Extern Rotat
+source: MK.MKTESTCD
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C181499
+variables:
+  - name: MKTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C127269
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127269
+      submissionValue: MUSCTSCD
+    assignedTerm:
+      conceptId: C181499
+      value: "ISOMSER"
+    role: Topic
+    relationship:
+      subject: MKTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MKTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: MKTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C127270
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127270
+      submissionValue: MUSCTS
+    assignedTerm:
+      conceptId: C181499
+      value: "Isometric Muscle Strength, Extern Rotat"
+    role: Qualifier
+    relationship:
+      subject: MKTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: MKORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: MKSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: MKLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    role: Qualifier
+    relationship:
+      subject: MKLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MKLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "RIGHT"
+      - "LEFT"
+    role: Qualifier
+    relationship:
+      subject: MKLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MKLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "DYNAMOMETRY"
+      - "HAND-HELD DYNAMOMETRY"
+    role: Qualifier
+    relationship:
+      subject: MKMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MKTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MKDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MKDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MKTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

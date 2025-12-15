@@ -1,0 +1,182 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: URHEMIND
+domain: UR
+shortName: Urinary System Hematoma Indicator
+source: UR.URTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C179823
+variables:
+  - name: URTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C129942
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129942
+      submissionValue: URNSTSCD
+    assignedTerm:
+      conceptId: C179823
+      value: "HEMAIND"
+    role: Topic
+    relationship:
+      subject: URTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: URTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: URTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C129941
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C129941
+      submissionValue: URNSTS
+    assignedTerm:
+      conceptId: C179823
+      value: "Hematoma Indicator"
+    role: Qualifier
+    relationship:
+      subject: URTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: URCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: URCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: URORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: URORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: URSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: URTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: URLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    valueList:
+      - "KIDNEY"
+      - "BLADDER"
+    role: Qualifier
+    relationship:
+      subject: URLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URLAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "LEFT"
+      - "RIGHT"
+    role: Qualifier
+    relationship:
+      subject: URLAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: URLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URDIR
+    dataElementConceptId: C54215
+    isNonStandard: false
+    codelist:
+      conceptId: C99074
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99074
+      submissionValue: DIR
+    role: Qualifier
+    relationship:
+      subject: URDIR
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: URLOC
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    role: Qualifier
+    relationship:
+      subject: URMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: URDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: URDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: URTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

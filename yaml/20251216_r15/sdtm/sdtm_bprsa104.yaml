@@ -1,0 +1,152 @@
+packageDate: "2025-12-16"
+packageType: sdtm
+datasetSpecializationId: BPRSA104
+domain: RS
+shortName: "BPRSA1-Conceptual Disorganization"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C100375
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C100134
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100134
+      submissionValue: BPRSA1TC
+    assignedTerm:
+      conceptId: C100375
+      value: "BPRSA104"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C100133
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100133
+      submissionValue: BPRSA1TN
+    assignedTerm:
+      conceptId: C100375
+      value: "BPRSA1-Conceptual Disorganization"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C118971
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C118971
+      submissionValue: CCCAT
+    assignedTerm:
+      conceptId: C100761
+      value: "BPRS-A"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    codelist:
+      conceptId: C189691
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189691
+      submissionValue: BPRSA1SET2OR
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C189692
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189692
+      submissionValue: BPRSA1SET2STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    codelist:
+      conceptId: C189692
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189692
+      submissionValue: BPRSA1SET2STR
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: RSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: RSEVINTX
+    dataElementConceptId: C82534
+    isNonStandard: false
+    assignedTerm:
+      value: "DURING INTERVIEW"
+    role: Timing
+    relationship:
+      subject: RSEVINTX
+      linkingPhrase: is the period of time to be considered when answering the question in
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

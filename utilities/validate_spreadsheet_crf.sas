@@ -454,24 +454,68 @@ title01 "&now";
 
 
 %* Package 15 ;
+%let _debug=0;
 
 %let release=15;
-%let excel_file=&root/curation/draft/package15/R15_BC_TS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_TS_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_TS)$, dsout=bc15_01);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_QRS_MVAI.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_MVAI)$, dsout=bc15_02);
 %ReadExcel(file=&excel_file, range=%str(SDTM_MVAI)$, dsout=sdtm15_01);
 
-%let excel_file=&root/curation/draft/package15/R15_BC_SDTM_VS_updates.xlsx;
+%let excel_file=&root/curation/package15/R15_BC_SDTM_VS_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc15_03);
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm15_02, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_BC_APACHE_PERF.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_APACHE_PERF)$, dsout=bc15_04);
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_05);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_03, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_LB_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bc15_06);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtm15_04, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_Retired.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_DS)$, dsout=bc15_07);
+
+%let excel_file=&root/curation/package15/R15_SDTM_CM_PR_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_CM)$, dsout=sdtm15_05, drop=%str(drop=length significant_digits format change_history));
+%ReadExcel(file=&excel_file, range=%str(SDTM_PR)$, dsout=sdtm15_06, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/package15/R15_SDTM_DEC_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_DEC_Edits)$, dsout=sdtm15_07, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_SDTM_Imaging_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_Imaging)$, dsout=sdtm15_08, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/package15/R15_SDTM_LinkPhr_MandVal_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MB_Edits)$, dsout=bc15_08);
+%ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_1)$, dsout=sdtm15_9, drop=%str(drop=length significant_digits format change_history));
+%ReadExcel(file=&excel_file, range=%str(LinkPhr_MandVal_Edits_2)$, dsout=sdtm15_10, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_SDTM_QRS_Rule_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_QRS_Mand_Value_Edits)$, dsout=sdtm15_11, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_SDTM_RS_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_RS_Edits)$, dsout=sdtm15_12, drop=%str(drop=length significant_digits format change_history));
+
+%let excel_file=&root/curation/package15/R15_SDTM_TU_TR_RECIST1_1_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_TU)$, dsout=sdtm15_13, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_TR)$, dsout=sdtm15_14, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc15_09);
+%ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm15_15, drop=%str(drop=length significant_digits format));
 
 /* Select BCs and SDTMs*/
 
 data bc_set;
   length bc_id $64;
-  set bc15:(where=(not missing(bc_id)) keep=bc_id);
+  set bc&release.:(where=(not missing(bc_id)) keep=bc_id);
 run;  
   
 proc sql noprint;
@@ -484,7 +528,7 @@ quit;
 
 data sdtm_set;
   length vlm_group_id $128;
-  set sdtm15:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
+  set sdtm&release.:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
 run;  
   
 proc sql noprint;
@@ -493,11 +537,11 @@ proc sql noprint;
   ;
 quit;
 
-%put bc_set = "&sdtm_set";
+%put sdtm_set = "&sdtm_set";
 
 %* Package crf test ;
 
-%let release=xx;
+%let release_crf=xx;
 %let dropit=package_date categories length significant_digits;
 
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
@@ -556,12 +600,12 @@ quit;
 
 /************************************************************************************************************************/
 
-data bc(drop=change_history F1: F2: i vname vvalue);
+data bc(drop=change_history i vname vvalue);
   length package_date $64 bc_id ncit_code parent_bc_id dec_id ncit_dec_code $64 bc_categories synonyms result_scales definition
          system	system_name	code change_history $5124 short_name dec_label data_type $512 example_set vvalue $32000 vname $32;
   retain _excel_file_ _tab_ package_date bc_id ncit_code parent_bc_id bc_categories short_name
          synonyms result_scales definition system system_name code dec_id ncit_dec_code dec_label data_type example_set;
-  set bc15:(where=(not missing(bc_id))) 
+  set bc&release.:(where=(not missing(bc_id))) 
       _bc_latest(where=((not missing(bc_id)) and bc_id notin ("&bc_set")));
   array carray{*} _character_;
   * if missing(bc_id) then delete;
@@ -574,6 +618,14 @@ data bc(drop=change_history F1: F2: i vname vvalue);
   end;
   package_date = upcase(package_date);
 run;
+
+proc sql noprint;
+  select distinct bc_id into :bc_set_retired separated by '","'
+  from bc(where=(not missing(bc_id) and (index(short_name, '[RETIRED]') > 0 )));
+  ;
+quit;
+
+%put bc_set_retired = "&bc_set_retired";
 
 %if &print_html=1 %then %do;
   ods listing close;
@@ -590,7 +642,7 @@ run;
 
 /************************************************************************************************************************/
 
-data sdtm(drop=change_history F3: F4: i vname vvalue);
+data sdtm(drop=change_history i vname vvalue);
   length order 8 package_date $64 sdtmig_start_version sdtmig_end_version bc_id dec_id $64 domain vlm_group_id vlm_source sdtm_variable $128
          codelist_submission_value codelist subset_codelist value_list assigned_value assigned_term subject linking_phrase predicate_term object
          short_name role format data_type origin_type origin_source vlm_target change_history vvalue $32000 vname $32;
@@ -598,7 +650,7 @@ data sdtm(drop=change_history F3: F4: i vname vvalue);
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
          vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
-  set sdtm15:(where=(not missing(vlm_group_id))) 
+  set sdtm&release.:(where=(not missing(vlm_group_id))) 
       _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;
   package_date = upcase(package_date);
@@ -668,8 +720,8 @@ run;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..html";
-  ods excel options(sheet_name="crf &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_R&release_crf._&todays..html";
+  ods excel options(sheet_name="crf &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_R&release_crf._&todays..xlsx";
 
     proc print data=crf;
     run;
@@ -682,7 +734,7 @@ run;
 /************************************************************************************************************************/
 
 ods listing close;
-ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_R&release._&todays..html";
+ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_R&release_crf._&todays..html";
 
   %* Unresolved BC Parent BCs ;
   proc sql;
@@ -715,23 +767,23 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       from crf
       where not missing(dec_id);
 
-      select col.package_date, col._excel_file_, col._tab_, col.domain, col.crf_group_id, col.crf_item, col.bc_id, col.dec_id
+      select col.package_date, col._excel_file_, col._tab_, col.domain, col.crf_group_id, col.order_number, col.crf_item, col.bc_id, col.dec_id
       from crf_bc_dec cold, crf col
       where
         cold.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
         catx('-', col.bc_id, col.dec_id) = cold.bc_dec
-      order by _excel_file_, _tab_, crf_group_id, crf_item
+      order by _excel_file_, _tab_, crf_group_id, order_number
       ;
   quit;
 
   %* Unresolved SDTM vlm_group_id ;
   proc sql;
     title02 "Missing CRF Specialization vlm_group_id link to SDTM vlm_group_id";
-      select package_date,  _excel_file_, _tab_, domain, crf_group_id, crf_item, col.vlm_group_id
+      select package_date,  _excel_file_, _tab_, domain, crf_group_id, order_number, crf_item, col.vlm_group_id
       from crf col
       where
         (not missing(col.vlm_group_id)) and (col.vlm_group_id not in (select vlm_group_id from sdtm_merged))
-      order by _excel_file_, _tab_, crf_group_id, crf_item
+      order by _excel_file_, _tab_, crf_group_id, order_number
       ;
   quit;
 
@@ -756,6 +808,17 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
       order by _excel_file_, _tab_, _record_, domain, crf_group_id, crf_item
       ;
   run;
+
+ %* CRFs pointing to Retired BCs;
+  proc sql;
+    title02 "CRF Specializations pointing to retired BCs";
+      select package_date, _excel_file_, _tab_, domain, crf_group_id, order_number, crf_item, bc_id
+      from crf
+      where
+        bc_id in ("&bc_set_retired")
+      order by _excel_file_, _tab_, domain, crf_group_id, order_number
+      ;
+  quit;
 
 ods html5 close;
 ods listing;

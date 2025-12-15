@@ -106,7 +106,7 @@ items:
         -  "LBTEST"
   - name: INTLK6_LBORRESU
     variableName: LBORRESU
-    dataElementConceptId: NEW_6
+    dataElementConceptId: C48207
     prompt: Unit
     orderNumber: 7
     mandatoryVariable: true 
