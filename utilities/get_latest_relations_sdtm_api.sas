@@ -200,7 +200,7 @@ data data.sdtm_predicateTerms(keep=predicateTerm linkingPhrases);
   if first.predicateTerm then linkingPhrases = 0;
   linkingPhrases + 1;
   if last.predicateTerm then do;
-    put predicateTerm "," linkingPhrases;
+    put predicateTerm +(-1) "," linkingPhrases;
     output;
   end;  
 run; 
@@ -239,39 +239,45 @@ proc sort data=_sdtm_api;
   by domain specializationId variable;
 run;  
 
+proc sql;
+  create table _sdtm_api2 as
+  select
+    t1.specializationId as id1,
+    t2.specializationId as id2,
+    t1.latest_package_date as latest1,
+    t2.latest_package_date as latest2,
+    t1.domain length=8,
+    t1.subject length=8,
+    t1.predicateTerm as predicateTerm1,
+    t2.predicateTerm as predicateTerm2,
+    t1.linkingPhrase as linkingPhrase1,
+    t2.linkingPhrase as linkingPhrase2,
+    t1.object length=8
+  from _sdtm_api t1, _sdtm_api t2
+  where (t1.subject = t2.subject) and (t1.object = t2.object) and 
+        (strip(t1.linkingPhrase) ne strip(t2.LinkingPhrase)) and 
+        (t1.specializationId le t2.specializationId)
+  order by t1.specializationId, t1.subject, t1.object, t1.linkingPhrase
+  ;
+quit;
 
 ods listing close;
-ods excel file="&root/utilities/reports/relationships_issues_&todays..xlsx"
+ods excel file="&root/utilities/reports/relationships_issues_&latest_package_date..xlsx"
     options(sheet_name="Potential issues" flow="tables" autofilter = 'all');
 
   proc report data=_sdtm_api;
     where (variable ne subject) or (variable eq object) or (substr(subject, 1, 2) ne substr(object, 1, 2));
     column latest_package_date domain specializationId variable subject linkingPhrase predicateTerm object;
-    define linkingPhrase / width = 256;
+    define linkingPhrase / width = 120;
   run;
 
 ods excel options(sheet_name="Link. Phrases - Pred. Terms" flow="tables" autofilter = 'all');
-  proc sql;
-    title "Multiple Phrases for same subject/object";
-    select
-      t1.specializationId as id1 length=15,
-      t2.specializationId as id2 length=15,
-      t1.latest_package_date as latest1,
-      t2.latest_package_date as latest2,
-      t1.domain length=8,
-      t1.subject length=8,
-      t1.predicateTerm as predicateTerm1 length=15,
-      t2.predicateTerm as predicateTerm2 length=15,
-      t1.linkingPhrase as linkingPhrase1 length=35,
-      t2.linkingPhrase as linkingPhrase2 length=35,
-      t1.object length=8
-    from _sdtm_api t1, _sdtm_api t2
-    where (t1.subject = t2.subject) and (t1.object = t2.object) and 
-          (strip(t1.linkingPhrase) ne strip(t2.LinkingPhrase)) and 
-          (t1.specializationId le t2.specializationId)
-    order by t1.specializationId, t1.subject, t1.object, t1.linkingPhrase
-    ;
-  quit;
+
+  proc report data=_sdtm_api2;
+    column id1 id2 latest1 latest2 domain subject predicateTerm1 predicateTerm2 linkingPhrase1 linkingPhrase2 object;
+    define linkingPhrase1 / width = 120;
+    define linkingPhrase2 / width = 120;
+  run;
 
 ods excel close;
 ods listing;
