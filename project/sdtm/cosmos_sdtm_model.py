@@ -1,5 +1,5 @@
 # Auto generated from cosmos_sdtm_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-12-11T11:12:45
+# Generation date: 2026-01-13T10:21:25
 # Schema: COSMoS-Biomedical-Concepts-SDTM-Schema
 #
 # id: https://www.cdisc.org/cosmos/sdtm_v1.0
@@ -622,6 +622,18 @@ class LinkingPhraseEnum(EnumDefinitionImpl):
             PermissibleValue(text="values are grouped by"))
         setattr(cls, "was the subject position during performance of the test in",
             PermissibleValue(text="was the subject position during performance of the test in"))
+        setattr(cls, "indicates the inclusion of non-resting time periods",
+            PermissibleValue(text="indicates the inclusion of non-resting time periods"))
+        setattr(cls, "is the analytical method for the test in",
+            PermissibleValue(text="is the analytical method for the test in"))
+        setattr(cls, "is the date of collection for",
+            PermissibleValue(text="is the date of collection for"))
+        setattr(cls, "is the device that performed the test in",
+            PermissibleValue(text="is the device that performed the test in"))
+        setattr(cls, "is the period of time considered for the test in",
+            PermissibleValue(text="is the period of time considered for the test in"))
+        setattr(cls, "is the value for the parameter in",
+            PermissibleValue(text="is the value for the parameter in"))
 
 class PredicateTermEnum(EnumDefinitionImpl):
 
@@ -657,6 +669,7 @@ class PredicateTermEnum(EnumDefinitionImpl):
     IS_VALUE_OF = PermissibleValue(text="IS_VALUE_OF")
     IS_REFERENCE_TERMINOLOGY_FOR = PermissibleValue(text="IS_REFERENCE_TERMINOLOGY_FOR")
     IS_REFERENCE_VALUE_FOR = PermissibleValue(text="IS_REFERENCE_VALUE_FOR")
+    IS_DEVICE_FOR = PermissibleValue(text="IS_DEVICE_FOR")
 
     _defn = EnumDefinition(
         name="PredicateTermEnum",
@@ -771,7 +784,7 @@ slots.sdtmigEndVersion = Slot(uri=COSMOS_SDTM.sdtmigEndVersion, name="sdtmigEndV
 
 slots.biomedicalConceptId = Slot(uri=COSMOS_SDTM.biomedicalConceptId, name="biomedicalConceptId", curie=COSMOS_SDTM.curie('biomedicalConceptId'),
                    model_uri=COSMOS_SDTM.biomedicalConceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$'))
 
 slots.variables = Slot(uri=COSMOS_SDTM.variables, name="variables", curie=COSMOS_SDTM.curie('variables'),
                    model_uri=COSMOS_SDTM.variables, domain=None, range=Union[dict[Union[str, SDTMVariableName], Union[dict, SDTMVariable]], list[Union[dict, SDTMVariable]]])
@@ -782,7 +795,7 @@ slots.name = Slot(uri=COSMOS_SDTM.name, name="name", curie=COSMOS_SDTM.curie('na
 
 slots.dataElementConceptId = Slot(uri=COSMOS_SDTM.dataElementConceptId, name="dataElementConceptId", curie=COSMOS_SDTM.curie('dataElementConceptId'),
                    model_uri=COSMOS_SDTM.dataElementConceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$'))
 
 slots.isNonStandard = Slot(uri=COSMOS_SDTM.isNonStandard, name="isNonStandard", curie=COSMOS_SDTM.curie('isNonStandard'),
                    model_uri=COSMOS_SDTM.isNonStandard, domain=None, range=Optional[Union[bool, Bool]])
@@ -796,7 +809,7 @@ slots.subsetCodelist = Slot(uri=COSMOS_SDTM.subsetCodelist, name="subsetCodelist
 
 slots.conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="conceptId", curie=COSMOS_SDTM.curie('conceptId'),
                    model_uri=COSMOS_SDTM.conceptId, domain=None, range=URIRef,
-                   pattern=re.compile(r'^C[0-9]+$'))
+                   pattern=re.compile(r'^(C[0-9]+|CNEW)$'))
 
 slots.href = Slot(uri=COSMOS_SDTM.href, name="href", curie=COSMOS_SDTM.curie('href'),
                    model_uri=COSMOS_SDTM.href, domain=None, range=Optional[Union[str, URI]])
@@ -882,7 +895,7 @@ slots.vlmTarget = Slot(uri=COSMOS_SDTM.vlmTarget, name="vlmTarget", curie=COSMOS
 
 slots.assignedTerm__conceptId = Slot(uri=COSMOS_SDTM.conceptId, name="assignedTerm__conceptId", curie=COSMOS_SDTM.curie('conceptId'),
                    model_uri=COSMOS_SDTM.assignedTerm__conceptId, domain=None, range=Optional[str],
-                   pattern=re.compile(r'^(C[0-9]+)$'))
+                   pattern=re.compile(r'^(C[0-9]+|CNEW)$'))
 
 slots.assignedTerm__value = Slot(uri=COSMOS_SDTM.value, name="assignedTerm__value", curie=COSMOS_SDTM.curie('value'),
                    model_uri=COSMOS_SDTM.assignedTerm__value, domain=None, range=str)

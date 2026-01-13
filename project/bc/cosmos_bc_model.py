@@ -1,5 +1,5 @@
 # Auto generated from cosmos_bc_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-07-29T11:22:06
+# Generation date: 2026-01-13T10:20:46
 # Schema: COSMoS-Biomedical-Concepts-Schema
 #
 # id: https://www.cdisc.org/cosmos/biomedical_concept_v1.0
@@ -264,6 +264,7 @@ class DataElementConceptDataTypeEnum(EnumDefinitionImpl):
     datetime = PermissibleValue(text="datetime")
     decimal = PermissibleValue(text="decimal")
     duration = PermissibleValue(text="duration")
+    float = PermissibleValue(text="float")
     integer = PermissibleValue(text="integer")
     string = PermissibleValue(text="string")
     uri = PermissibleValue(text="uri")
@@ -278,7 +279,7 @@ class slots:
 
 slots.conceptId = Slot(uri=COSMOS_BC.conceptId, name="conceptId", curie=COSMOS_BC.curie('conceptId'),
                    model_uri=COSMOS_BC.conceptId, domain=None, range=URIRef,
-                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$'))
 
 slots.ncitCode = Slot(uri=COSMOS_BC.ncitCode, name="ncitCode", curie=COSMOS_BC.curie('ncitCode'),
                    model_uri=COSMOS_BC.ncitCode, domain=None, range=Optional[str],
@@ -334,7 +335,7 @@ slots.exampleSet = Slot(uri=COSMOS_BC.exampleSet, name="exampleSet", curie=COSMO
 
 slots.BiomedicalConcept_conceptId = Slot(uri=COSMOS_BC.conceptId, name="BiomedicalConcept_conceptId", curie=COSMOS_BC.curie('conceptId'),
                    model_uri=COSMOS_BC.BiomedicalConcept_conceptId, domain=BiomedicalConcept, range=Union[str, BiomedicalConceptConceptId],
-                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$'))
 
 slots.BiomedicalConcept_ncitCode = Slot(uri=COSMOS_BC.ncitCode, name="BiomedicalConcept_ncitCode", curie=COSMOS_BC.curie('ncitCode'),
                    model_uri=COSMOS_BC.BiomedicalConcept_ncitCode, domain=BiomedicalConcept, range=Optional[str],
@@ -345,7 +346,7 @@ slots.BiomedicalConcept_href = Slot(uri=COSMOS_BC.href, name="BiomedicalConcept_
 
 slots.DataElementConcept_conceptId = Slot(uri=COSMOS_BC.conceptId, name="DataElementConcept_conceptId", curie=COSMOS_BC.curie('conceptId'),
                    model_uri=COSMOS_BC.DataElementConcept_conceptId, domain=DataElementConcept, range=Union[str, DataElementConceptConceptId],
-                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z]*[0-9]*)$'))
+                   pattern=re.compile(r'^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$'))
 
 slots.DataElementConcept_ncitCode = Slot(uri=COSMOS_BC.ncitCode, name="DataElementConcept_ncitCode", curie=COSMOS_BC.curie('ncitCode'),
                    model_uri=COSMOS_BC.DataElementConcept_ncitCode, domain=DataElementConcept, range=Optional[str],

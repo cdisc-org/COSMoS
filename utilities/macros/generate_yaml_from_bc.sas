@@ -98,9 +98,12 @@
         %*add2issues_bc((parent_bc_id ne parent_bc_id_nci) and (find_parent > 0), 
                        %str(PARENT_ID_MISMATCH), 
                        parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)), severity=NOTE);
-        %add2issues_bc(%str(find_parent = 0), 
+        %add2issues_bc(%str(find_parent = 0) and (not missing(parent_bc_id_nci)), 
                        %str(PARENT_ID_MISMATCH), 
                        parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)));
+        %add2issues_bc(%str(find_parent = 0) and (missing(parent_bc_id_nci)), 
+                       %str(PARENT_ID_MISMATCH), 
+                       parent_bc_id_nci, parent_bc_id, %str(cats("parent_shortname=", short_name_parent, ", parent_shortname_nci=", short_name_parent_nci)), severity=NOTE);
         put "parentConceptId:" +1 parent_bc_id;
       end;
 

@@ -6,7 +6,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
-                    "pattern": "^(C[0-9]+)$",
+                    "pattern": "^(C[0-9]+|CNEW)$",
                     "type": [
                         "string",
                         "null"
@@ -29,7 +29,7 @@
             "properties": {
                 "conceptId": {
                     "description": "C-code for a codelist in NCIt",
-                    "pattern": "^C[0-9]+$",
+                    "pattern": "^(C[0-9]+|CNEW)$",
                     "type": "string"
                 },
                 "href": {
@@ -179,7 +179,13 @@
                 "specifies the anatomical location of",
                 "specifies the severity of",
                 "values are grouped by",
-                "was the subject position during performance of the test in"
+                "was the subject position during performance of the test in",
+                "indicates the inclusion of non-resting time periods",
+                "is the analytical method for the test in",
+                "is the date of collection for",
+                "is the device that performed the test in",
+                "is the period of time considered for the test in",
+                "is the value for the parameter in"
             ],
             "title": "LinkingPhraseEnum",
             "type": "string"
@@ -249,7 +255,8 @@
                 "SPECIFIES",
                 "IS_VALUE_OF",
                 "IS_REFERENCE_TERMINOLOGY_FOR",
-                "IS_REFERENCE_VALUE_FOR"
+                "IS_REFERENCE_VALUE_FOR",
+                "IS_DEVICE_FOR"
             ],
             "title": "PredicateTermEnum",
             "type": "string"
@@ -301,7 +308,7 @@
             "properties": {
                 "biomedicalConceptId": {
                     "description": "Biomedical Concept identifier foreign key",
-                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -397,7 +404,7 @@
                 },
                 "dataElementConceptId": {
                     "description": "Biomedical Concept Data Element Concept identifier foreign key",
-                    "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+                    "pattern": "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$",
                     "type": [
                         "string",
                         "null"
@@ -566,7 +573,7 @@
     "properties": {
         "biomedicalConceptId": {
             "description": "Biomedical Concept identifier foreign key",
-            "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+            "pattern": "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$",
             "type": [
                 "string",
                 "null"

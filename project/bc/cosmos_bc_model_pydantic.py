@@ -92,6 +92,7 @@ class DataElementConceptDataTypeEnum(str, Enum):
     datetime = "datetime"
     decimal = "decimal"
     duration = "duration"
+    float = "float"
     integer = "integer"
     string = "string"
     uri = "uri"
@@ -132,7 +133,7 @@ class BiomedicalConcept(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):
@@ -190,7 +191,7 @@ class DataElementConcept(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):

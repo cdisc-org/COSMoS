@@ -658,6 +658,24 @@
         },
         {
           "text": "was the subject position during performance of the test in"
+        },
+        {
+          "text": "indicates the inclusion of non-resting time periods"
+        },
+        {
+          "text": "is the analytical method for the test in"
+        },
+        {
+          "text": "is the date of collection for"
+        },
+        {
+          "text": "is the device that performed the test in"
+        },
+        {
+          "text": "is the period of time considered for the test in"
+        },
+        {
+          "text": "is the value for the parameter in"
         }
       ]
     },
@@ -761,6 +779,9 @@
         },
         {
           "text": "IS_REFERENCE_VALUE_FOR"
+        },
+        {
+          "text": "IS_DEVICE_FOR"
         }
       ]
     },
@@ -986,7 +1007,7 @@
       ],
       "range": "string",
       "recommended": true,
-      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1033,7 +1054,7 @@
         "SDTMVariable"
       ],
       "range": "string",
-      "pattern": "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$",
+      "pattern": "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1090,7 +1111,7 @@
       ],
       "range": "string",
       "required": true,
-      "pattern": "^C[0-9]+$",
+      "pattern": "^(C[0-9]+|CNEW)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1465,7 +1486,7 @@
         "AssignedTerm"
       ],
       "range": "string",
-      "pattern": "^(C[0-9]+)$",
+      "pattern": "^(C[0-9]+|CNEW)$",
       "@type": "SlotDefinition"
     },
     {
@@ -1601,7 +1622,7 @@
           "name": "conceptId",
           "description": "C-code for assigned term in NCIt or left blank when CDISC terminology does not apply",
           "range": "string",
-          "pattern": "^(C[0-9]+)$",
+          "pattern": "^(C[0-9]+|CNEW)$",
           "@type": "SlotDefinition"
         },
         {
@@ -1618,9 +1639,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_sdtm_model.yaml",
-  "source_file_date": "2025-12-11T11:12:16",
-  "source_file_size": 15597,
-  "generation_date": "2025-12-11T11:12:38",
+  "source_file_date": "2026-01-12T10:35:35",
+  "source_file_size": 15928,
+  "generation_date": "2026-01-13T10:21:16",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/sdtm/jsonld/cosmos_sdtm_model.context.jsonld",
