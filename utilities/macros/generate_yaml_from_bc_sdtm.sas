@@ -204,6 +204,18 @@
         qformat=quote(strip(format));
         if not missing(format) then put +4 "format:" +1 qformat;
         if not missing(significant_digits) then put +4 "significantDigits:" +1 significant_digits;
+        
+        %add2issues_sdtm((not missing(data_type) and (data_type ne "float") and (not missing(format))), 
+              %str(DATATYPE_NOT_FLOAT_FORMAT), 
+              "", format, %str(cats("data_type=", data_type, ", format=", 
+              format, ", significant_digits=", significant_digits)));
+        %add2issues_sdtm((not missing(data_type) and (data_type ne "float") and (not missing(significant_digits))), 
+              %str(DATATYPE_NOT_FLOAT_SIGNIFICANT_DIGITS), 
+              "", significant_digits, %str(cats("data_type=", data_type, ", format=", format, ", significant_digits=", significant_digits)));
+        %add2issues_sdtm(((data_type eq "float") and (missing(significant_digits))), 
+              %str(DATATYPE_FLOAT_MISSING_SIGNIFICANT_DIGITS), 
+              "", significant_digits, %str(cats("data_type=", data_type, ", format=", format, ", significant_digits=", significant_digits)));
+        
 
         %add2issues_sdtm((missing(subject) or missing(linking_phrase) or missing(predicate_term) or missing(object)) and not (missing(subject) and missing(linking_phrase) and missing(predicate_term) and missing(object)),
               %str(RELATIONSHIP_ISSUE), 

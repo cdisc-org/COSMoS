@@ -91,6 +91,7 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#datetime>
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#decimal>
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#duration>
+             <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#float>
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#integer>
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#string>
              <https://www.cdisc.org/cosmos/biomedical_concept_v1.0DataElementConceptDataTypeEnum#uri> ] ;

@@ -65,7 +65,7 @@ slots:
     description: An identifier that uniquely represents an entity
     identifier: true
     range: string
-    pattern: "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$"
+    pattern: "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$"
     required: true
   ncitCode:
     description: NCIt code
@@ -160,6 +160,7 @@ enums:
       datetime:
       decimal:
       duration:
+      float:
       integer:
       string:
       uri:

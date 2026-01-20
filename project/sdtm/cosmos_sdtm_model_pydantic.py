@@ -182,6 +182,12 @@ class LinkingPhraseEnum(str, Enum):
     specifies_the_severity_of = "specifies the severity of"
     values_are_grouped_by = "values are grouped by"
     was_the_subject_position_during_performance_of_the_test_in = "was the subject position during performance of the test in"
+    indicates_the_inclusion_of_non_resting_time_periods = "indicates the inclusion of non-resting time periods"
+    is_the_analytical_method_for_the_test_in = "is the analytical method for the test in"
+    is_the_date_of_collection_for = "is the date of collection for"
+    is_the_device_that_performed_the_test_in = "is the device that performed the test in"
+    is_the_period_of_time_considered_for_the_test_in = "is the period of time considered for the test in"
+    is_the_value_for_the_parameter_in = "is the value for the parameter in"
 
 
 class PredicateTermEnum(str, Enum):
@@ -217,6 +223,7 @@ class PredicateTermEnum(str, Enum):
     IS_VALUE_OF = "IS_VALUE_OF"
     IS_REFERENCE_TERMINOLOGY_FOR = "IS_REFERENCE_TERMINOLOGY_FOR"
     IS_REFERENCE_VALUE_FOR = "IS_REFERENCE_VALUE_FOR"
+    IS_DEVICE_FOR = "IS_DEVICE_FOR"
 
 
 class OriginTypeEnum(str, Enum):
@@ -311,7 +318,7 @@ class SDTMGroup(ConfiguredBaseModel):
 
     @field_validator('biomedicalConceptId')
     def pattern_biomedicalConceptId(cls, v):
-        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):
@@ -361,7 +368,7 @@ class SDTMVariable(ConfiguredBaseModel):
 
     @field_validator('dataElementConceptId')
     def pattern_dataElementConceptId(cls, v):
-        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z]*[0-9]*)$")
+        pattern=re.compile(r"^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):
@@ -404,7 +411,7 @@ class CodeList(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^C[0-9]+$")
+        pattern=re.compile(r"^(C[0-9]+|CNEW)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):
@@ -492,7 +499,7 @@ class AssignedTerm(ConfiguredBaseModel):
 
     @field_validator('conceptId')
     def pattern_conceptId(cls, v):
-        pattern=re.compile(r"^(C[0-9]+)$")
+        pattern=re.compile(r"^(C[0-9]+|CNEW)$")
         if isinstance(v, list):
             for element in v:
                 if isinstance(element, str) and not pattern.match(element):

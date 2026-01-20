@@ -133,6 +133,22 @@
           "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
         {
+          "name": "Validate BC YAML (Test)",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/dht_test/bc",
+            "-s",
+            "${workspaceFolder}/model/cosmos_bc_model.yaml",
+            "-c",
+            "BiomedicalConcept"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
           "name": "Validate SDTM YAML",
           "type": "debugpy",
           "request": "launch",
@@ -157,6 +173,22 @@
           "args": [
             "-y",
             "${workspaceFolder}/yaml/latest/sdtm",
+            "-s",
+            "${workspaceFolder}/model/cosmos_sdtm_model.yaml",
+            "-c",
+            "SDTMGroup"
+          ],
+          "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "Validate SDTM YAML (Test)",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/validate_yaml.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-y",
+            "${workspaceFolder}/yaml/dht_test/sdtm",
             "-s",
             "${workspaceFolder}/model/cosmos_sdtm_model.yaml",
             "-c",

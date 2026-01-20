@@ -102,6 +102,12 @@ enum LinkingPhraseEnum
     specifies_the_severity_of
     values_are_grouped_by
     was_the_subject_position_during_performance_of_the_test_in
+    indicates_the_inclusion_of_non__HYPHEN_MINUS__resting_time_periods
+    is_the_analytical_method_for_the_test_in
+    is_the_date_of_collection_for
+    is_the_device_that_performed_the_test_in
+    is_the_period_of_time_considered_for_the_test_in
+    is_the_value_for_the_parameter_in
   }
 
 enum OriginSourceEnum
@@ -160,6 +166,7 @@ enum PredicateTermEnum
     IS_VALUE_OF
     IS_REFERENCE_TERMINOLOGY_FOR
     IS_REFERENCE_VALUE_FOR
+    IS_DEVICE_FOR
   }
 
 enum RoleEnum

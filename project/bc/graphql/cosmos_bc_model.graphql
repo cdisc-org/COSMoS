@@ -15,6 +15,7 @@ enum DataElementConceptDataTypeEnum
     datetime
     decimal
     duration
+    float
     integer
     string
     uri

@@ -164,7 +164,12 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#specifies%20the%20severity%20of>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#values%20are%20grouped%20by>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#was%20the%20subject%20position%20during%20performance%20of%20the%20test%20in>
-             ] ;
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#indicates%20the%20inclusion%20of%20non-resting%20time%20periods>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20analytical%20method%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20date%20of%20collection%20for>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20device%20that%20performed%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20period%20of%20time%20considered%20for%20the%20test%20in>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/LinkingPhraseEnum#is%20the%20value%20for%20the%20parameter%20in> ] ;
           <predicateTerm> [ <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#ASSESSES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#CLASSIFIES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#DECODES>
@@ -196,7 +201,8 @@ linkml:Sparqlpath xsd:string
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#SPECIFIES>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_VALUE_OF>
              <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REFERENCE_TERMINOLOGY_FOR>
-             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REFERENCE_VALUE_FOR> ] ;
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_REFERENCE_VALUE_FOR>
+             <https://www.cdisc.org/cosmos/sdtm_v1.0/PredicateTermEnum#IS_DEVICE_FOR> ] ;
           <object> @linkml:String
        ) ;
        rdf:type [ <RelationShip> ] ?

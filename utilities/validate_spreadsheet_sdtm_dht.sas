@@ -452,7 +452,7 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc14_01);
 */
 
-
+/*
 %* Package 15 ;
 %let _debug=0;
 
@@ -510,6 +510,30 @@ title01 "&now";
 %let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc15_09);
 %ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm15_15, drop=%str(drop=length significant_digits format));
+*/
+
+%* Package dht ;
+%let _debug=0;
+
+%let release=dht;
+%let excel_file=&root/curation/draft/dht/DHT_BC_SDTM.xlsx;
+
+%*ReadExcel(file=&excel_file, range=%str(BC_LB)$, dsout=bcdht_01);
+%*ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bcdht_02);
+%ReadExcel(file=&excel_file, range=%str(BC_DI)$, dsout=bcdht_03);
+%ReadExcel(file=&excel_file, range=%str(BC_Sleep)$, dsout=bcdht_04);
+%ReadExcel(file=&excel_file, range=%str(BC_MK)$, dsout=bcdht_05);
+%ReadExcel(file=&excel_file, range=%str(BC_HR)$, dsout=bcdht_06);
+
+%*ReadExcel(file=&excel_file, range=%str(SDTM_LB)$, dsout=sdtmdht_01, drop=%str(drop=nsv_flag length significant_digits format));
+%*ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtmdht_02, drop=%str(drop=nsv_flag length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_DI)$, dsout=sdtmdht_03, drop=%str(drop=nsv_flag length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_Sleep)$, dsout=sdtmdht_04, drop=%str(drop=nsv_flag length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_Steps)$, dsout=sdtmdht_05, drop=%str(drop=nsv_flag length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_HR)$, dsout=sdtmdht_06, drop=%str(drop=nsv_flag length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_Scratch)$, dsout=sdtmdht_07, drop=%str(drop=nsv_flag length significant_digits format));
+
+
 
 /* Select BCs and SDTMs*/
 
@@ -552,7 +576,7 @@ data bc(drop=change_history i vname vvalue);
   * if missing(bc_id) then delete;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
-    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 159))));
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if vvalue ne carray[i] then do;
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= _record_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue;
     end;
@@ -590,7 +614,7 @@ data sdtm(drop=change_history i vname vvalue);
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
-         vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
+         vlm_target role data_type mandatory_variable mandatory_value origin_type origin_source comparator;
   set sdtm&release.:(where=(not missing(vlm_group_id))) 
       _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;
@@ -598,7 +622,7 @@ data sdtm(drop=change_history i vname vvalue);
   array carray{*} _character_;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
-    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 159))));
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
     if vvalue ne carray[i] then do;
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 vvalue ;
     end;
@@ -639,7 +663,7 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
  %* Unresolved BC Parent BCs ;
   proc sql;
     title02 "Missing BC parent_bc_id link to BC bc_id";
-      select package_date, _excel_file_, _tab_, bc_categories, bc_id, short_name, parent_bc_id
+      select DISTINCT package_date, _excel_file_, _tab_, bc_categories, bc_id, short_name, parent_bc_id
       from bc
       where
         parent_bc_id not in (select bc_id from bc)

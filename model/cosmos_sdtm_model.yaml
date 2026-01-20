@@ -80,7 +80,7 @@ classes:
       conceptId:
         description: C-code for assigned term in NCIt or left blank when CDISC terminology does not apply
         range: string
-        pattern: "^(C[0-9]+)$"
+        pattern: "^(C[0-9]+|CNEW)$"
         required: false
       value:
         description: Submission value for assigned term in NCIt if it exists, or an assigned value which will be the default value
@@ -125,7 +125,7 @@ slots:
   biomedicalConceptId:
     description: Biomedical Concept identifier foreign key
     range: string
-    pattern: "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$"
+    pattern: "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$"
     recommended: true
   variables:
     description: Variable included in the SDTM dataset specialization
@@ -143,7 +143,7 @@ slots:
   dataElementConceptId:
     description: Biomedical Concept Data Element Concept identifier foreign key
     range: string
-    pattern: "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$"
+    pattern: "^(C[0-9]+|NEW_[A-Z_]*[0-9]*)$"
   isNonStandard:
     description: Flag that indicates if the variable is a non-standard variable
     range: boolean
@@ -160,7 +160,7 @@ slots:
     description: C-code for a codelist in NCIt
     identifier: true
     range: string
-    pattern: "^C[0-9]+$"
+    pattern: "^(C[0-9]+|CNEW)$"
     required: true
   href:
     description: Link to NCIt for the codelist
@@ -383,6 +383,12 @@ enums:
       specifies the severity of:
       values are grouped by:
       was the subject position during performance of the test in:
+      indicates the inclusion of non-resting time periods:
+      is the analytical method for the test in:
+      is the date of collection for:
+      is the device that performed the test in:
+      is the period of time considered for the test in:
+      is the value for the parameter in:
 
   PredicateTermEnum:
     permissible_values:
@@ -418,6 +424,7 @@ enums:
       IS_VALUE_OF:
       IS_REFERENCE_TERMINOLOGY_FOR:
       IS_REFERENCE_VALUE_FOR:
+      IS_DEVICE_FOR:
 
   OriginTypeEnum:
     description: Terminology relevant to the origin type for datasets in the Define-XML document.

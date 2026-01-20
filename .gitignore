@@ -15,6 +15,7 @@ _new/
 _done/
 yaml/latest
 yaml/*/*_test
+yaml/*_test
 ~$*.*
 *.log
 *.lst
