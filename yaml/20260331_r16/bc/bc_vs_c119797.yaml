@@ -1,0 +1,11 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C119797
+ncitCode: C119797
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119797
+categories:
+  - Clinical Observations
+shortName: Clinical Observations Category
+synonyms:
+  - CLCAT
+definition: A classification of clinical observation data.

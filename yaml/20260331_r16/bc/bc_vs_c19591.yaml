@@ -1,0 +1,11 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C19591
+ncitCode: C19591
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C19591
+categories:
+  - Diagnostic Factor
+shortName: Diagnostic Factor
+synonyms:
+  - Diagnostic Marker
+definition: A biological, physiological, behavioral, or molecular indicator of the presence or predisposition towards development of a specific disease.

@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C191363
+ncitCode: C191363
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191363
+parentConceptId: C49237
+categories:
+  - Vital Signs
+  - Body Water Measurement
+shortName: Extracellular Water to Total Body Water Ratio Measurement
+synonyms:
+  - ECW/TBW
+  - ECWTBW
+  - Extracellular Water/Total Body Water
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of extracellular water to total body water present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+      - "RATIO"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

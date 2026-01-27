@@ -1,0 +1,15 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C38081
+ncitCode: C38081
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38081
+categories:
+  - Pulmonary Function Tests
+shortName: Pulmonary Function Test
+synonyms:
+  - Pulmonary Function Tests
+  - lung function test
+  - PFT
+  - pulmonary function test
+  - Pulmonary Function Testing
+definition: A broad range of tests that are performed to assess how well lungs inhale and exhale air and how efficiently they transfer oxygen into the blood.

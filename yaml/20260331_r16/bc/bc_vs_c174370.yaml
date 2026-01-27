@@ -1,0 +1,54 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174370
+ncitCode: C174370
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174370
+parentConceptId: C164325
+categories:
+  - Vital Signs
+  - Temperature
+shortName: Core Body Temperature
+synonyms:
+  - TEMPCB
+resultScales:
+  - Quantitative
+definition: A measurement of the temperature within the deep tissues of the body.
+coding:
+  - code: 8329-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44276
+    ncitCode: C44276
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44276
+    shortName: Unit of Temperature
+    dataType: string
+    exampleSet:
+      - "C"
+      - "F"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "TYMPANIC MEMBRANE"
+      - "NASOPHARYNX"
+      - "ESOPHAGUS"
+      - "PULMONARY ARTERY BRANCH"
+      - "SUBLINGUAL REGION"
+      - "TYMPANIC MEMBRANE"
+      - "NASOPHARYNX"
+      - "ESOPHAGUS"
+      - "PULMONARY ARTERY BRANCH"
+      - "RECTUM"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

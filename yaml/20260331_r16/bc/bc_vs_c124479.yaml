@@ -1,0 +1,14 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C124479
+ncitCode: C124479
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124479
+parentConceptId: C81328
+categories:
+  - Vital Signs
+  - Body Measurements
+  - Fetal Body Measurements
+shortName: Fetal Body Weight
+synonyms:
+  - BWFETAL
+definition: An estimate or direct measurement of the heaviness of a fetus.

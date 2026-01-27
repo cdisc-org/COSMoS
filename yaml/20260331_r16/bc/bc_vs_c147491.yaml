@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C147491
+ncitCode: C147491
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147491
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Energy Expenditure
+shortName: Energy Expenditure
+synonyms:
+  - ENRGEXP
+resultScales:
+  - Quantitative
+definition: A measurement of the amount of energy used to carry out a physiological or physical function.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C67275
+    ncitCode: C67275
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67275
+    shortName: Unit of Energy
+    dataType: string
+    exampleSet:
+      - "MET"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

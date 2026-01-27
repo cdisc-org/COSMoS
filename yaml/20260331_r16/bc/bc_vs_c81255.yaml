@@ -1,0 +1,40 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C81255
+ncitCode: C81255
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81255
+parentConceptId: C172255
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Head Circumference
+synonyms:
+  - HDCIRC
+  - "Occipital-Frontal Circumference"
+resultScales:
+  - Quantitative
+definition: A circumferential measurement of the head at the widest point, which is traditionally above the eyebrows.
+coding:
+  - code: 9843-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "cm"
+      - "in"
+      - "mm"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

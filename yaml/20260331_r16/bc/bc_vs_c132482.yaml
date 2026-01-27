@@ -1,0 +1,40 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C132482
+ncitCode: C132482
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132482
+parentConceptId: C81328
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Estimated Body Weight
+synonyms:
+  - Estimated Weight
+  - EWEIGHT
+resultScales:
+  - Quantitative
+definition: An approximate determination of the weight of a body.
+coding:
+  - code: 8335-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

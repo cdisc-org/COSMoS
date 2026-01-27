@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C38082
+ncitCode: C38082
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38082
+parentConceptId: C38081
+categories:
+  - Vital Signs
+  - Oxygen Saturation Measurements
+  - Oximetry Tests
+shortName: Fraction of Inspired Oxygen
+synonyms:
+  - FIO2
+  - FiO2
+resultScales:
+  - Quantitative
+definition: The molar fraction of oxygen in an inhaled gas.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

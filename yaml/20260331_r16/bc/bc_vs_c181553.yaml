@@ -1,0 +1,42 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C181553
+ncitCode: C181553
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181553
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Arm Span
+synonyms:
+  - ARMSPAN
+  - Armspan
+  - Reach
+  - Wingspan
+resultScales:
+  - Quantitative
+definition: "A measurement of the length from the tip of the middle finger on one hand to the tip of the middle finger on the other hand with the individual standing against the wall with both arms abducted to 90 degrees, the elbows and wrists extended, and the palms facing directly forward. (Philip H. Quanjer, Andre Capderou, Mumtaz M. Mazicioglu, Ashutosh N. Aggarwal, Sudip Datta Banik, Stevo Popovic, Francis A.K. Tayie, Mohammad Golshan, Mary S.M. Ip, Marc Zelter. European Respiratory Journal 2014 44: 905-912)"
+coding:
+  - code: 56116-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "cm"
+      - "ft"
+      - "in"
+      - "m"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C16094
+ncitCode: C16094
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C16094
+categories:
+  - Cardiac Function Study
+shortName: Cardiac Function Study
+definition: "The study and analysis of the normal or abnormal functioning of the heart using methods such as echocardiography, exercise stress cardiography, 24-hour Holter EKG and magnetic resonance imaging."

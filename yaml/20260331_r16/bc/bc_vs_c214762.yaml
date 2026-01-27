@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C214762
+ncitCode: C214762
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C214762
+parentConceptId: C119797
+categories:
+  - Vital Signs
+  - Body Measurements
+  - Fetal Body Measurements
+shortName: "Fetal Size-for-Gestational Age Category"
+synonyms:
+  - FTSZGAC
+resultScales:
+  - Ordinal
+definition: An assessed relationship of the fetal size and gestational age to that of a reference population, expressed as a category.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

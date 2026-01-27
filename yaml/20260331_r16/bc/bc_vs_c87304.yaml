@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C87304
+ncitCode: C87304
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87304
+parentConceptId: C19591
+categories:
+  - Vital Signs
+  - Blood Pressure
+shortName: "Ankle-Brachial Index"
+synonyms:
+  - ABI
+  - "Ankle-Arm Index"
+  - "Ankle-Arm Pressure Index"
+  - "Ankle-Brachial Pressure Index"
+resultScales:
+  - Quantitative
+definition: The ratio of ankle systolic pressure to brachial systolic pressure, used to assess arterial insufficiency in the lower extremities.
+coding:
+  - code: 77194-9
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

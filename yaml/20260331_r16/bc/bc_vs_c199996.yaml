@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C199996
+ncitCode: C199996
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199996
+parentConceptId: C112025
+categories:
+  - Vital Signs
+  - Mass Measurement
+shortName: Body Cell Mass Measurement
+synonyms:
+  - BCM
+  - Body Cell Mass
+resultScales:
+  - Quantitative
+definition: An estimated measurement of the total mass of metabolically active cells in the body.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

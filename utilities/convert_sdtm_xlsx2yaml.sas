@@ -371,6 +371,7 @@ run;
 %ReadExcel(file=&excel_file, range=%str(SDTM_EDITS)$, dsout=sdtm13_16, drop=%str(drop=length significant_digits format change_history));
 */
 
+/*
 %let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
@@ -419,6 +420,20 @@ run;
 
 %let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IS), debug=0, check_relationships=&checkrelationships);
+*/
+
+%let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
+%let release=16;
+%let package=20260331;
+%let folder=20260331_r16;
+%let TargetFolder=&root/yaml/&folder/sdtm;
+%let OverrideDate=%str(2026-03-31);
+
+%let checkrelationships=1;
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
+%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_VS), debug=0, check_relationships=&checkrelationships);
 
 /************************************************************************************************************************/
 

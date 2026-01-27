@@ -1,0 +1,32 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C147492
+ncitCode: C147492
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147492
+parentConceptId: C49677
+categories:
+  - Vital Signs
+shortName: Maximum Predicted Heart Rate
+synonyms:
+  - MAXPREHR
+resultScales:
+  - Quantitative
+definition: The predicted upper limit for an individual's heart rate, which is calculated as 220 minus the subject's age for men, and 210 minus the subject's age for women.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73688
+    shortName: Count per Minute
+    dataType: decimal
+    exampleSet:
+      - "beats/min"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

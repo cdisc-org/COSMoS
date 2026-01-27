@@ -1,0 +1,30 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C205753
+ncitCode: C205753
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C205753
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: "Head Circumference-for-Age Percentile"
+synonyms:
+  - HCRAPCTL
+  - "Head Occipital-Frontal Circumference-for-Age Percentile"
+resultScales:
+  - Quantitative
+definition: A measurement of an individual's head circumference in relationship to age, in comparison to a reference percentile curve.
+coding:
+  - code: Jan-89
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

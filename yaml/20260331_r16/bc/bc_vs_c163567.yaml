@@ -1,0 +1,25 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C163567
+ncitCode: C163567
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163567
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: "BMI-for-Age Percentile"
+synonyms:
+  - BMIAPCTL
+resultScales:
+  - Quantitative
+definition: A measurement of an individual's body mass index in relationship to age, in comparison to a reference percentile curve.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

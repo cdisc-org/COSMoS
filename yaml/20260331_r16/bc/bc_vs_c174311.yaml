@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174311
+ncitCode: C174311
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174311
+parentConceptId: C38081
+categories:
+  - Vital Signs
+  - Oxygen Saturation Measurements
+  - Oximetry Tests
+shortName: Oxygen Saturation/Fraction Inspired O2
+synonyms:
+  - SAO2FIO2
+resultScales:
+  - Quantitative
+definition: "A relative measurement (ratio or percentage) of the oxygen-hemoglobin saturation of a volume of blood to the volumetric fraction of oxygen in the inhaled gas."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+      - "RATIO"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,38 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C168125
+ncitCode: C168125
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168125
+parentConceptId: C122008
+categories:
+  - Vital Signs
+  - Cardiovascular Examination
+shortName: Capillary Refill Test
+synonyms:
+  - Capillary Refill Time
+  - CPLRFLT
+resultScales:
+  - Quantitative
+definition: An assessment performed to estimate peripheral perfusion and hydration status. The test is most often conducted by applying constant manual pressure for a set time on a patient's nail bed and then releasing while observing the length of time it takes for color to return to the tissue. A prolonged return to baseline coloring may indicate compromise of peripheral blood flow.
+coding:
+  - code: 44971-0
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "s"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

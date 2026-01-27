@@ -1,0 +1,60 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C100945
+ncitCode: C100945
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100945
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Blood Pressure
+shortName: Pulse Pressure
+synonyms:
+  - PULSEPR
+resultScales:
+  - Quantitative
+definition: The force of a heart contraction measured by the difference between the diastolic and systolic blood pressure measurements.
+coding:
+  - code: 107146-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C49669
+    ncitCode: C49669
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49669
+    shortName: Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "mmHg"
+  - conceptId: C62164
+    ncitCode: C62164
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C62164
+    shortName: Body Position
+    dataType: string
+    exampleSet:
+      - "DECUBITUS"
+      - "FOWLERS"
+      - "LATERAL DECUBITUS"
+      - "LEFT LATERAL DECUBITUS"
+      - "PRONE"
+      - "REVERSE TRENDELENBURG"
+      - "RIGHT LATERAL DECUBITUS"
+      - "SEMI-FOWLERS"
+      - "SEMI-RECUMBENT"
+      - "SITTING"
+      - "SITTING, LEGS DEPENDENT"
+      - "SLING"
+      - "STANDING"
+      - "STANDING, BENT FORWARD"
+      - "SUPINE"
+      - "TRENDELENBURG"
+      - "UNCONSTRAINED"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

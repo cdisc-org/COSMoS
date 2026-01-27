@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C199997
+ncitCode: C199997
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199997
+parentConceptId: C112025
+categories:
+  - Vital Signs
+  - Mass Measurement
+shortName: Lean Tissue Mass Measurement
+synonyms:
+  - Lean Tissue Mass
+  - LTM
+resultScales:
+  - Quantitative
+definition: The weight of a tissue part or whole tissue in an individual less the weight of the individual's body fat within that tissue part or whole tissue.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

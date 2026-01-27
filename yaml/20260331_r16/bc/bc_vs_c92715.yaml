@@ -1,0 +1,12 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C92715
+ncitCode: C92715
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C92715
+parentConceptId: C35552
+categories:
+  - Vital Signs
+  - Heart Findings
+  - Fetal Heart Findings
+shortName: Fetal Heart Finding
+definition: An observation of the fetal heart that may or may not be abnormal.

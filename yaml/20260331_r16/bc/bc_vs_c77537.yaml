@@ -1,0 +1,12 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C77537
+ncitCode: C77537
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C77537
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Skinfold Thickness Analysis
+synonyms:
+  - Skinfold Test
+definition: Techniques for estimating body fat whereby a pinch of skin is precisely measured by calipers at several standardized points on the body to determine the subcutaneous fat layer thickness. These measurements are converted to an estimated body fat percentage by an equation.

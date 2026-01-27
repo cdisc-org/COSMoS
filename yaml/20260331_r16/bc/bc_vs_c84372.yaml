@@ -1,0 +1,38 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C84372
+ncitCode: C84372
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C84372
+parentConceptId: C49680
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Knee to Heel Length Measurement
+synonyms:
+  - Knee to Heel Length
+  - KNEEHEEL
+  - Knee Height
+  - Lower Leg Length
+resultScales:
+  - Quantitative
+definition: A measurement of the length of the lower leg from the top of the knee to the bottom of the heel. This measurement may be taken with a knemometer or calipers.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "cm"
+      - "in"
+      - "mm"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -453,6 +453,7 @@ title01 "&now";
 */
 
 
+/*
 %* Package 15 ;
 %let _debug=0;
 
@@ -510,6 +511,16 @@ title01 "&now";
 %let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc15_09);
 %ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm15_15, drop=%str(drop=length significant_digits format));
+
+*/
+
+%let _debug=0;
+
+%let release=16;
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
+
+%ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc16_01);
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm16_01, drop=%str(drop=length significant_digits format));
 
 /* Select BCs and SDTMs*/
 
@@ -590,7 +601,7 @@ data sdtm(drop=change_history i vname vvalue);
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
-         vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
+         vlm_target role data_type mandatory_variable mandatory_value origin_type origin_source comparator;
   set sdtm&release.:(where=(not missing(vlm_group_id))) 
       _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;

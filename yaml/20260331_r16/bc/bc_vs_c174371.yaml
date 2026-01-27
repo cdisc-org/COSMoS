@@ -1,0 +1,45 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174371
+ncitCode: C174371
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174371
+parentConceptId: C164325
+categories:
+  - Vital Signs
+  - Temperature
+shortName: Peripheral Body Temperature
+synonyms:
+  - TEMPPB
+resultScales:
+  - Quantitative
+definition: A measurement of the temperature on the surfaces of the outer areas or boundaries of the body.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44276
+    ncitCode: C44276
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44276
+    shortName: Unit of Temperature
+    dataType: string
+    exampleSet:
+      - "C"
+      - "F"
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "AXILLA"
+      - "EAR"
+      - "FOREHEAD"
+      - "RECTUM"
+      - "SUBLINGUAL REGION"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

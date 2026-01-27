@@ -1,0 +1,29 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C163569
+ncitCode: C163569
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163569
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: "Weight-for-Age Percentile"
+synonyms:
+  - WTAPCTL
+resultScales:
+  - Quantitative
+definition: A measurement of an individual's weight in relationship to age, in comparison to a reference percentile curve.
+coding:
+  - code: 8336-0
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

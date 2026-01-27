@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C92716
+ncitCode: C92716
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C92716
+parentConceptId: C92715
+categories:
+  - Vital Signs
+  - Heart Findings
+  - Fetal Heart Findings
+shortName: Fetal Heart Rate
+synonyms:
+  - Fetal HR
+  - FTHR
+resultScales:
+  - Quantitative
+definition: The number of fetal cardiac beats per minute.
+coding:
+  - code: 55283-6
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C73688
+    ncitCode: C73688
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C73688
+    shortName: Count per Minute
+    dataType: decimal
+    exampleSet:
+      - "beats/min"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

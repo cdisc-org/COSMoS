@@ -1,0 +1,10 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C171083
+ncitCode: C171083
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171083
+parentConceptId: C25447
+categories:
+  - Characteristic
+shortName: Organism Characteristic
+definition: A characteristic or attribute inherent or inherited to an organism.

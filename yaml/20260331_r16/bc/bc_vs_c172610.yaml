@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C172610
+ncitCode: C172610
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C172610
+categories:
+  - Vital Signs
+  - Blood Pressure
+shortName: "Diastolic Blood Pressure-for-Age Percentile"
+synonyms:
+  - DBPAPCTL
+  - "Diastolic BP-for-Age Percentile"
+resultScales:
+  - Quantitative
+definition: A measurement of an individual's diastolic blood pressure in relationship to age, in comparison to a reference percentile curve.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

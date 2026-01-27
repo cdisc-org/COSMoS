@@ -1,0 +1,38 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C126083
+ncitCode: C126083
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C126083
+parentConceptId: C171083
+categories:
+  - Vital Signs
+  - Energy Expenditure
+shortName: Basal Metabolic Rate
+synonyms:
+  - BMR
+resultScales:
+  - Quantitative
+definition: A patient's energy expenditure at rest.
+coding:
+  - code: 69429-9
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C69431
+    ncitCode: C69431
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C69431
+    shortName: Unit of Power
+    dataType: string
+    exampleSet:
+      - "kcal/day"
+      - "Watt"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

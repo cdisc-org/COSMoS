@@ -1,0 +1,40 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C76325
+ncitCode: C76325
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C76325
+parentConceptId: C25208
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Birth Weight
+synonyms:
+  - BRTHWT
+resultScales:
+  - Quantitative
+definition: The first weight of a newborn obtained after birth.
+coding:
+  - code: 8339-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+      - "oz"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

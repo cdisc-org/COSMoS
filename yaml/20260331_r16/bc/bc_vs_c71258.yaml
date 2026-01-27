@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C71258
+ncitCode: C71258
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71258
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Mass Measurement
+shortName: Lean Body Mass
+synonyms:
+  - LBM
+resultScales:
+  - Quantitative
+definition: The mass of the body minus the fat.
+coding:
+  - code: 91557-9
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,32 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174374
+ncitCode: C174374
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174374
+parentConceptId: C163569
+categories:
+  - Vital Signs
+  - Body Measurements
+  - Fetal Body Measurements
+shortName: "Fetal Weight-for-Gestational Age Percentile"
+synonyms:
+  - "Fetal Weight-for-Gest Age Percentile"
+  - FTWTGAPL
+resultScales:
+  - Quantitative
+definition: An assessed relationship of the fetus' weight and gestational age to that of a reference population, expressed as a percentile.
+coding:
+  - code: 11766-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C81298
+ncitCode: C81298
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C81298
+parentConceptId: C25334
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Total Body Length
+synonyms:
+  - BODLNGTH
+  - Body Length
+resultScales:
+  - Quantitative
+definition: The total linear extent of the body.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "cm"
+      - "in"
+      - "mm"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

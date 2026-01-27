@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C122232
+ncitCode: C122232
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122232
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Body Fat Measurement
+synonyms:
+  - BODYFATM
+resultScales:
+  - Quantitative
+definition: A measurement of the total fat mass within the subject's body.
+coding:
+  - code: 41982-0
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "kg"
+      - "g"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

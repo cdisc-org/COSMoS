@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C199682
+ncitCode: C199682
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199682
+parentConceptId: C16094
+categories:
+  - Cardiac Function Study
+  - Heart Rate Variability
+shortName: Heart Rate Variability, Standard Deviation NN Interval Measurement
+synonyms:
+  - Heart Rate Variability, SDNN
+  - Heart Rate Variability, Standard Deviation NN Interval
+  - HRVSDNN
+resultScales:
+  - Quantitative
+definition: A measurement of the fluctuation in the time intervals between adjacent heartbeats, based on the standard deviation of the NN interval.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "ms"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

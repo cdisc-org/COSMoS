@@ -1,0 +1,37 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174373
+ncitCode: C174373
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174373
+parentConceptId: C87054
+categories:
+  - Vital Signs
+  - Body Measurements
+  - Fetal Body Measurements
+shortName: Fetal Sagittal Abdominal Diameter
+synonyms:
+  - Fetal SAD
+  - FTSAD
+resultScales:
+  - Quantitative
+definition: A measurement of the sagittal abdominal diameter of the fetus.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "cm"
+      - "in"
+      - "mm"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

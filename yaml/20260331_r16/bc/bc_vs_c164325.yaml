@@ -1,0 +1,13 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C164325
+ncitCode: C164325
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C164325
+parentConceptId: C83119
+categories:
+  - Vital Signs
+  - Temperature
+shortName: Body Temperature Measurement
+synonyms:
+  - "Vital Signs - Body Temperature"
+definition: The result of the measurement of the body temperature.

@@ -1,0 +1,41 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174372
+ncitCode: C174372
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174372
+parentConceptId: C124479
+categories:
+  - Vital Signs
+  - Body Measurements
+  - Fetal Body Measurements
+shortName: Fetal Estimated Weight
+synonyms:
+  - FTEWT
+resultScales:
+  - Quantitative
+definition: An approximate determination of the weight of the fetus.
+coding:
+  - code: 89087-1
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+      - "oz"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

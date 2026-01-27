@@ -1,0 +1,34 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C17651
+ncitCode: C17651
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17651
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: "Waist-Hip Ratio"
+synonyms:
+  - Waist to Hip Ratio
+  - WAISTHIP
+resultScales:
+  - Quantitative
+definition: The ratio of the abdominal circumference at the navel to maximum hip and buttocks circumference; looks at the proportion of fat stored on the body around the waist and hip. Carrying extra weight around the waist is a greater health risk than carrying extra weight around the hips or thighs.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "RATIO"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

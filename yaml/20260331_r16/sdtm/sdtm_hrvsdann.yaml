@@ -1,0 +1,142 @@
+packageDate: "2026-03-31"
+packageType: sdtm
+datasetSpecializationId: HRVSDANN
+domain: VS
+shortName: Heart Rate Variability, SDANN
+source: VS.VSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C199998
+variables:
+  - name: VSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C66741
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66741
+      submissionValue: VSTESTCD
+    assignedTerm:
+      conceptId: C199998
+      value: "HRVSDANN"
+    role: Topic
+    relationship:
+      subject: VSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: VSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: VSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C67153
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67153
+      submissionValue: VSTEST
+    assignedTerm:
+      conceptId: C199998
+      value: "Heart Rate Variability, SDANN"
+    role: Qualifier
+    relationship:
+      subject: VSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: VSORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: VSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: VSORRESU
+    dataElementConceptId: C42574
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+      submissionValue: VSRESU
+    valueList:
+      - "ms"
+    role: Qualifier
+    relationship:
+      subject: VSORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: VSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: VSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: VSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSSTRESU
+    dataElementConceptId: C42574
+    isNonStandard: false
+    codelist:
+      conceptId: C66770
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66770
+      submissionValue: VSRESU
+    valueList:
+      - "ms"
+    role: Qualifier
+    relationship:
+      subject: VSSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: VSSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: VSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: VSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: VSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

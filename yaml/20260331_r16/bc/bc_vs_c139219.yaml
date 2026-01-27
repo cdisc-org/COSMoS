@@ -1,0 +1,34 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139219
+ncitCode: C139219
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139219
+parentConceptId: C19332
+categories:
+  - Vital Signs
+  - Mass Measurement
+shortName: Lean Body Mass to Total Body Mass Ratio
+synonyms:
+  - LBMTBMR
+resultScales:
+  - Quantitative
+definition: The proportion of an individual's lean body mass to his total body weight; lean body mass is calculated by subtracting body fat from total body weight.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "RATIO"
+      - "%"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

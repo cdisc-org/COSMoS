@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C87054
+ncitCode: C87054
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87054
+parentConceptId: C25285
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Sagittal Abdominal Diameter
+synonyms:
+  - SAD
+resultScales:
+  - Quantitative
+definition: A standard measure of visceral obesity, or abdominal fat, which is measured from the patient's back to upper abdomen between the bottom of the rib cage and the top of the pelvic area. This measurement may be taken with the patient standing or in the supine position.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "mm"
+      - "cm"
+      - "in"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

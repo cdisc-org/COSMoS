@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C117976
+ncitCode: C117976
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117976
+parentConceptId: C81328
+categories:
+  - Vital Signs
+  - Body Measurements
+shortName: Ideal Body Weight
+synonyms:
+  - IDEALWT
+resultScales:
+  - Quantitative
+definition: A person's optimum weight as calculated by a standard methodology.
+coding:
+  - code: 50064-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48208
+    ncitCode: C48208
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48208
+    shortName: Unit of Weight
+    dataType: string
+    exampleSet:
+      - "g"
+      - "kg"
+      - "LB"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

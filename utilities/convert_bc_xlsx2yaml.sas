@@ -352,6 +352,8 @@
 %let excel_file=&root/curation/package14/R14_cdisc_biomedical_concepts_new_categories.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(Biomedical Concepts));
 */
+
+/*
 %let release=15;
 %let package=20251216;
 %let folder=20251216_r15;
@@ -384,6 +386,17 @@
 
 %let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_IS));
+*/
+
+
+%let release=16;
+%let package=20260331;
+%let folder=20260331_r16;
+%let TargetFolder=&root/yaml/&folder/bc;
+%let OverrideDate=%str(2026-03-31);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_VS));
 
 /************************************************************************************************************************/
 
