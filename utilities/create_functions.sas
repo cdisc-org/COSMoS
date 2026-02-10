@@ -10,6 +10,16 @@
 
 proc fcmp outlib=macros.funcs.python;
 
+  function exists_enum_term(enum $, value $);
+    declare hash hh(dataset: "data.linkml_enums");
+    rc=hh.definedata("value");
+    rc=hh.definekey("enum", "value");
+    rc=hh.definedone();
+    rc=hh.find();
+    if rc eq 0 then return(1);
+    else return (0);
+  endsub;
+
   function get_predicateterm(linkingPhrase $) $;
     length predicateTerm $128;
     declare hash hh(dataset: "data.sdtm_linkingphrases_predterms");
@@ -401,3 +411,17 @@ ods html5 file="&root/utilities/create_functions.html";
 
 ods html5 close;
 ods listing;
+
+data _null_;
+  found = 1;
+  notfound = 0;
+  
+  x = exists_enum_term("LinkingPhrase", "assesses seriousness of");
+  %assert_equal(x, found);
+
+  y = exists_enum_term("LinkingPhrase", "groups tumor assessments used in overall responses identified by");
+  %assert_equal(y, notfound);
+
+  z = exists_enum_term("Comparator", "EQ");
+  %assert_equal(z, found);
+run;  
