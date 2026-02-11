@@ -47,7 +47,7 @@ variables:
     dataElementConceptId: C70856
     isNonStandard: false
     role: Qualifier
-    dataType: string
+    dataType: text
     length: 20
     relationship:
       subject: VSORRES
@@ -63,7 +63,7 @@ variables:
     dataElementConceptId: C70856
     isNonStandard: false
     role: Qualifier
-    dataType: string
+    dataType: text
     length: 20
     relationship:
       subject: VSSTRESC

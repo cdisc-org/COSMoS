@@ -12,7 +12,7 @@ synonyms:
   - BSA
 resultScales:
   - Quantitative
-definition: "A measure of the 2-dimensional extent of the body surface (i.e., the skin). Body surface area (BSA) can be calculated by mathematical formula or from a chart that relates height to weight.  BSA is often an important factor in dosing."
+definition: "A measure of the 2-dimensional extent of the body surface (i.e., the skin). Body surface area (BSA) can be calculated by mathematical formula or from a chart that relates height to weight. BSA is often an important factor in dosing."
 coding:
   - code: 8277-6
     system: http://loinc.org/

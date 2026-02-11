@@ -59,7 +59,7 @@
     short_Name = compress(short_Name, , 'kw');
     
     definition = strip(definition);
-    definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
+    definition2 = translate (definition, "", cats(collate (1, 31), collate (128, 255)));
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -152,7 +152,12 @@
         countwords=countw(result_scales, ";");
         do i=1 to countwords;
           value=strip(scan(result_scales, i, ";"));
-          if not missing(value) then put +2 "-" +1 value;
+          if not missing(value) then do;
+            put +2 "-" +1 value;
+            %add2issues_bc(exists_enum_term("BiomedicalConceptResultScale", value) = 0, 
+                           %str(INVALID_VALUE_RESULTSCALE), 
+                           "", value, %str(cats("result_scales=", result_scales)), severity=ERROR);
+          end;
         end;
       end;
       
@@ -174,6 +179,7 @@
 
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
+        definition=compbl(definition);
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;
@@ -250,6 +256,10 @@
       %add2issues_bc(missing(data_type), 
                      %str(BC_DEC_DATATYPE_MISSING), 
                      "", "", %str(cats("dec_label=", dec_label)));
+      %add2issues_bc(exists_enum_term("DataElementConceptDataType", data_type) = 0, 
+                     %str(INVALID_VALUE_DATATYPE), 
+                     "", data_type, "", severity=ERROR);
+                     
       
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 

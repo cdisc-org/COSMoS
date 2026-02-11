@@ -197,9 +197,19 @@
           end;
 
         end;
-        if not missing(role) then put +4 "role:" +1 role;
+        if not missing(role) then do;
+          %add2issues_bc(exists_enum_term("Role", role) = 0, 
+                         %str(INVALID_VALUE_ROLE), 
+                         "", role, "", severity=ERROR);
+          put +4 "role:" +1 role;
+        end;  
 
-        if not missing(data_type) then put +4 "dataType:" +1 data_type;
+        if not missing(data_type) then do;
+          %add2issues_bc(exists_enum_term("SDTMVariableDataType", data_type) = 0, 
+                         %str(INVALID_VALUE_DATATYPE), 
+                         "", data_type, "", severity=ERROR);
+          put +4 "dataType:" +1 data_type;
+        end;  
         if not missing(length) then put +4 "length:" +1 length;
         qformat=quote(strip(format));
         if not missing(format) then put +4 "format:" +1 qformat;
@@ -225,18 +235,27 @@
         %if &check_relationships %then %do;
           if not(missing(linking_phrase)) then do;
             lookup_predicate = get_predicateterm(linking_phrase);
-            %add2issues_sdtm(missing(lookup_predicate),
+
+            %*add2issues_sdtm(missing(lookup_predicate),
                   %str(RELATIONSHIP_ISSUE_PHRASE_NOTFOUND), 
                   "", linking_phrase, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
                   );
+            %add2issues_bc(exists_enum_term("LinkingPhrase", linking_phrase) = 0, 
+                           %str(INVALID_VALUE_LINKING_PHRASE), 
+                           "", linking_phrase, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)), severity=ERROR);
+
           end;
           
           if not(missing(predicate_term)) then do;
             lookup_term_exist = exists_predicateterm(predicate_term);
-            %add2issues_sdtm(%str(lookup_term_exist = 0),
+            %*add2issues_sdtm(%str(lookup_term_exist = 0),
                   %str(RELATIONSHIP_ISSUE_TERM_NOTFOUND), 
                   "", predicate_term, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object))
                   );
+
+            %add2issues_bc(exists_enum_term("PredicateTerm", predicate_term) = 0, 
+                           %str(INVALID_VALUE_PREDICATE_TERM), 
+                           "", predicate_term, %str(cats("subject=", subject, ", linking_phrase=", linking_phrase, ", predicate_term=", predicate_term, ", object=", object)), severity=ERROR);
           end;
           
           if not(missing(predicate_term)) and not(missing(linking_phrase)) then do;
@@ -291,8 +310,18 @@
         if missing(mandatory_value) then mandatory_value="N";
         put +4 "mandatoryValue:" +1 mandatory_value $YN.;
 
-        if not missing(origin_type) then put +4 "originType:" +1 origin_type;
-        if not missing(origin_source) then put +4 "originSource:" +1 origin_source;
+        if not missing(origin_type) then do;
+          %add2issues_bc(exists_enum_term("OriginType", origin_type) = 0, 
+                         %str(INVALID_VALUE_ORIGIN_TYPE), 
+                         "", origin_type, "", severity=ERROR);
+          put +4 "originType:" +1 origin_type;
+        end;  
+        if not missing(origin_source) then do;
+          %add2issues_bc(exists_enum_term("OriginSource", origin_source) = 0, 
+                         %str(INVALID_VALUE_ORIGIN_SOURCE), 
+                         "", origin_source, "", severity=ERROR);
+          put +4 "originSource:" +1 origin_source;
+        end;  
 
         /* xxTEST and xxxxRESU variables should not be used in the whereclauses */
         if length(sdtm_variable) >= 4 then do;
@@ -335,7 +364,12 @@
               %str(VLM_TARGET_EXPECTED), 
               "", "", %str(cats("sdtm_variable=", sdtm_variable, ", comparator=", comparator, ", vlm_target=", vlm_target)));
 
-        if not missing(comparator) then put +4 "comparator:" +1 comparator;
+        if not missing(comparator) then do;
+          %add2issues_bc(exists_enum_term("Comparator", comparator) = 0, 
+                         %str(INVALID_VALUE_COMPARATOR), 
+                         "", comparator, "", severity=ERROR);
+          put +4 "comparator:" +1 comparator;
+        end;  
 
         if upcase(vlm_target)= "Y" then put +4 "vlmTarget:" +1 vlm_target $YN.;
 
