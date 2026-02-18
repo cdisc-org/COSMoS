@@ -4,7 +4,7 @@ crfSpecializationId: ADASCOG
 shortName: "Alzheimer's Disease Assessment Scale-Cognitive CDISC Version Functional Test"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

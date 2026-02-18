@@ -4,7 +4,7 @@ crfSpecializationId: QTCBAG_DENORMALIZED
 shortName: QTCB Interval Aggregate (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

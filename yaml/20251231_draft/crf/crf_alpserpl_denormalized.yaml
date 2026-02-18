@@ -4,7 +4,7 @@ crfSpecializationId: ALPSERPL_DENORMALIZED
 shortName: Alkaline Phosphatase Concentration in Serum/Plasma (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

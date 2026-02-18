@@ -4,7 +4,7 @@ crfSpecializationId: CMFREE_NORMALIZED
 shortName: Concomitant Medication Free Text Format (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: CM
 biomedicalConceptId: C53630

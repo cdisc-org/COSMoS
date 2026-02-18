@@ -4,7 +4,7 @@ crfSpecializationId: T3UPSERPL_DENORMALIZED
 shortName: Triiodothyronine Uptake in Serum or Plasma
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

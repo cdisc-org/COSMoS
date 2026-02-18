@@ -4,7 +4,7 @@ crfSpecializationId: SU_360
 shortName: Substance Use Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: SU

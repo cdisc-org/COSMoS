@@ -4,7 +4,7 @@ crfSpecializationId: HCGURIN_DENORMALIZED
 shortName: HCG Presence in Urine (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

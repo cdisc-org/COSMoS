@@ -4,7 +4,7 @@ crfSpecializationId: EQ5D0206
 shortName: "EQ-5D-5L - EQ VAS Score"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102072
 sdtmDatasetSpecializationId: EQ5D0206

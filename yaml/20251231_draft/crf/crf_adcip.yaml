@@ -4,7 +4,7 @@ crfSpecializationId: ADCIP
 shortName: "CDISC ADAS-Cog - Ideational Praxis Summary Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

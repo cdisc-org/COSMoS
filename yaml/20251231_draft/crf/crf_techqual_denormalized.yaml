@@ -4,7 +4,7 @@ crfSpecializationId: TECHQUAL_DENORMALIZED
 shortName: ECG Technical Quality (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

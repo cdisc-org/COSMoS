@@ -4,7 +4,7 @@ crfSpecializationId: DISTILLEDSPIRITSHX_360
 shortName: Distilled Spirits Use History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: SU

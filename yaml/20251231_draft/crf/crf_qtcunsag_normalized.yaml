@@ -4,7 +4,7 @@ crfSpecializationId: QTCUNSAG_NORMALIZED
 shortName: QTC Aggregate Method Unspecified (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 scenario: LOCAL READING
 domain: EG

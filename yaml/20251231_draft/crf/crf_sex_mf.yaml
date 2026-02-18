@@ -4,7 +4,7 @@ crfSpecializationId: SEX_MF
 shortName: SEX
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Sex Male Female Only
 domain: DM
 biomedicalConceptId: C28421

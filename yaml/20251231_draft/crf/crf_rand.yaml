@@ -4,7 +4,7 @@ crfSpecializationId: RAND
 shortName: Randomized
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Randomization
 domain: DS
 biomedicalConceptId: C114209

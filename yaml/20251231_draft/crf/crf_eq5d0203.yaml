@@ -4,7 +4,7 @@ crfSpecializationId: EQ5D0203
 shortName: "EQ5D02-Usual Activities"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102069
 sdtmDatasetSpecializationId: EQ5D0203

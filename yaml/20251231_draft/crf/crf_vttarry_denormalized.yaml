@@ -4,7 +4,7 @@ crfSpecializationId: VTTARRY_DENORMALIZED
 shortName: Ventricular Tachyarrhythmia ECG Assessment (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

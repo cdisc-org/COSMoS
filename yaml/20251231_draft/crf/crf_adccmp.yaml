@@ -4,7 +4,7 @@ crfSpecializationId: ADCCMP
 shortName: "CDISC ADAS-Cog - Comprehension"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT
@@ -47,10 +47,8 @@ items:
         value: "Mild - 3-5 instances of misunderstanding"
       - displayValue: "Moderate - requires several repetitions and rephrasings"
         value: "Moderate - requires several repetitions and rephrasings"
-      - displayValue: "Moderately severe - patient only occasionally responds correctly (i.e., yes/no questions)"
-        value: "Moderately severe - patient only occasionally responds correctly (i.e., yes/no questions)"
-      - displayValue: "Severe - patient rarely responds to questions appropriately, not due to poverty of speech"
-        value: "Severe - patient rarely responds to questions appropriately, not due to poverty of speech"
+      - displayValue: "Moderately severe - patient only occasionally responds correctly (i.e., yes"
+        value: "Moderately severe - patient only occasionally responds correctly (i.e., yes"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCCMP"

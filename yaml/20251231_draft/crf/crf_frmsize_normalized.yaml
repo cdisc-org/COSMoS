@@ -4,7 +4,7 @@ crfSpecializationId: FRMSIZE_NORMALIZED
 shortName: Frame Size (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
 biomedicalConceptId: C49680

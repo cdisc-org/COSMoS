@@ -4,7 +4,7 @@ crfSpecializationId: VSPERF
 shortName: Vital Signs Performed
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: VS
 biomedicalConceptId: C82525
 items:

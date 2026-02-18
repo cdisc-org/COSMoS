@@ -4,7 +4,7 @@ crfSpecializationId: PATCHSURVEYACCEPTABILITY
 shortName: "TTS Acceptability Survey - Patch Acceptability"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: QS
@@ -14,7 +14,7 @@ items:
   - name: TTSACC04_QSORRES
     variableName: QSORRES
     dataElementConceptId: C46126
-    questionText: Based on the experience of applying and wearing this patch, if the patient were prescribed a drug for Alzheimer's disease and was given the choice of this patch or an oral pill given twice daily (assume that both formulations are equally effective), would you (the caregiver)
+    questionText: Based on the experience of applying and wearing this patch, if the patient were prescribed a drug for Alzheimer's disease and was given the choice of this patch or an oral pill given twice daily (assume that both formulations are equally effective), would
     orderNumber: 1
     mandatoryVariable: true 
     dataType: text

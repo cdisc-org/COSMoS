@@ -4,7 +4,7 @@ crfSpecializationId: EXPOSCOLL_XANOMELINEPLACEBO50_DENORMALIZED
 shortName: Exposure as Collected Xanomeline (LY246708) or Placebo (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Patch 50cm2
 categories:

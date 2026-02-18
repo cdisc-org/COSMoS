@@ -4,7 +4,7 @@ crfSpecializationId: CIGARHX_360
 shortName: Cigar History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: SU

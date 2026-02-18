@@ -4,7 +4,7 @@ crfSpecializationId: NEUTLEBLD_DENORMALIZED
 shortName: Neutrophils/Leukocytes in Blood (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

@@ -4,7 +4,7 @@ crfSpecializationId: PATCHSURVEY
 shortName: TTS Acceptability Survey
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: QS

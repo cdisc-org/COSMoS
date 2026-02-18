@@ -4,7 +4,7 @@ crfSpecializationId: PROGDISEASE_EOS
 shortName: Progressive Disease
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: End of Study
 domain: DS
 biomedicalConceptId: C35571

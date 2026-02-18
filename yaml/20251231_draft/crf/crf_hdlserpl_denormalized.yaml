@@ -4,7 +4,7 @@ crfSpecializationId: HDLSERPL_DENORMALIZED
 shortName: HDL Cholesterol in Serum or Plasma (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

@@ -4,7 +4,7 @@ crfSpecializationId: ETHNIC
 shortName: ETHNIC
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: DM
 biomedicalConceptId: C16564
 sdtmDatasetSpecializationId: ETHNIC

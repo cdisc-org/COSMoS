@@ -4,7 +4,7 @@ crfSpecializationId: HR_DENORMALIZED
 shortName: Heart Rate (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C49677

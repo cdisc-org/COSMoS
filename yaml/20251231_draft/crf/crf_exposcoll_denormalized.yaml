@@ -4,7 +4,7 @@ crfSpecializationId: EXPOSCOLL_DENORMALIZED
 shortName: Exposure as Collected Name of Treatment (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: EC
 biomedicalConceptId: C117466

@@ -4,7 +4,7 @@ crfSpecializationId: ADCRL
 shortName: "CDISC ADAS-Cog - Word Recall Average Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

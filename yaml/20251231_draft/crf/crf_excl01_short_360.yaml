@@ -4,7 +4,7 @@ crfSpecializationId: EXCL01_SHORT_360
 shortName: Exclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: IE

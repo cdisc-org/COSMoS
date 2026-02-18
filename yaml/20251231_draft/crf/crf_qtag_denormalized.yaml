@@ -4,7 +4,7 @@ crfSpecializationId: QTAG_DENORMALIZED
 shortName: QT Interval Aggregate (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

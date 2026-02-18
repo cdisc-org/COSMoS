@@ -4,7 +4,7 @@ crfSpecializationId: PROGDISEASE_CONT
 shortName: Progressive Disease
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Study Continuation
 domain: DS
 biomedicalConceptId: C35571

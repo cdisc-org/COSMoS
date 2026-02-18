@@ -4,7 +4,7 @@ crfSpecializationId: INCL01_SHORT
 shortName: Inclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Without Date
 domain: IE
 biomedicalConceptId: C25532

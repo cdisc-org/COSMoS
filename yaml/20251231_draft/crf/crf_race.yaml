@@ -4,7 +4,7 @@ crfSpecializationId: RACE
 shortName: RACE
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: DM
 biomedicalConceptId: C17049
 sdtmDatasetSpecializationId: RACE

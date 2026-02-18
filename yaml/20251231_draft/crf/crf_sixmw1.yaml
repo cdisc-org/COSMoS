@@ -4,7 +4,7 @@ crfSpecializationId: SIXMW1
 shortName: Six Minute Walk Test
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 domain: FT
 biomedicalConceptId: C115789
 items:

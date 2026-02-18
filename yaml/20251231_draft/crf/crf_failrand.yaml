@@ -4,7 +4,7 @@ crfSpecializationId: FAILRAND
 shortName: Failure to Meet Randomization Criteria
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Study Continuation
 domain: DS
 biomedicalConceptId: C49634

@@ -4,7 +4,7 @@ crfSpecializationId: WSTCIR_NORMALIZED
 shortName: Waist Circumference (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
 biomedicalConceptId: C100948

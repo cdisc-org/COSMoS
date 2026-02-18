@@ -4,7 +4,7 @@ crfSpecializationId: DEAD_CONT
 shortName: Dead
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Study Continuation
 domain: DS
 biomedicalConceptId: C28554

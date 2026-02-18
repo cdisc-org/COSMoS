@@ -4,7 +4,7 @@ crfSpecializationId: XRAYCHEST_SHORT
 shortName: "Chest X-Ray"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: PR

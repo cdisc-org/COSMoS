@@ -4,7 +4,7 @@ crfSpecializationId: ADCCP
 shortName: "CDISC ADAS-Cog - Constructional Praxis Summary Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT
@@ -49,8 +49,8 @@ items:
         value: "3 forms drawn incorrectly"
       - displayValue: "4 forms drawn incorrectly (but one or more side/section of at least one shape drawn)"
         value: "4 forms drawn incorrectly (but one or more side/section of at least one shape drawn)"
-      - displayValue: "No figures drawn, no recognizable attempt at drawing any side/section of any figure"
-        value: "No figures drawn, no recognizable attempt at drawing any side/section of any figure"
+      - displayValue: "No figures drawn, no recognizable attempt at drawing any side/section"
+        value: "No figures drawn, no recognizable attempt at drawing any side/sec"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCCP"

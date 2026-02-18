@@ -4,7 +4,7 @@ crfSpecializationId: CHYPTENL_DENORMALIZED
 shortName: Chamber Hypertrophy or Enlargement ECG Assessment (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

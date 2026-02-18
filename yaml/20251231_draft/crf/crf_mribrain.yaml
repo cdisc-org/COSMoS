@@ -4,7 +4,7 @@ crfSpecializationId: MRIBRAIN
 shortName: MRI Brain
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: PR
 biomedicalConceptId: C16809
 sdtmDatasetSpecializationId: MRIBRAIN

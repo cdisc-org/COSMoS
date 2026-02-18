@@ -4,7 +4,7 @@ crfSpecializationId: HR_NORMALIZED
 shortName: Heart Rate (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
 biomedicalConceptId: C49677

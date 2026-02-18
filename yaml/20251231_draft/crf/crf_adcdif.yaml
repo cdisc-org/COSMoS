@@ -4,7 +4,7 @@ crfSpecializationId: ADCDIF
 shortName: "CDISC ADAS-Cog - Word Difficulty in Spontaneous Speech"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT
@@ -47,10 +47,8 @@ items:
         value: "Mild - noticeable circumlocution or synonym substitution"
       - displayValue: "Moderate - loss of words without compensation on occasion"
         value: "Moderate - loss of words without compensation on occasion"
-      - displayValue: "Moderately severe - frequent loss of words without compensation"
-        value: "Moderately severe - frequent loss of words without compensation"
-      - displayValue: "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances"
-        value: "Severe - nearly total loss of content of words, speech sounds empty, 1-2 word utterances"
+      - displayValue: "Moderately severe - fr"
+        value: "Moderately severe - fr"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FTORRES when FTTESTCD = ADCDIF"

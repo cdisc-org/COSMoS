@@ -4,7 +4,7 @@ crfSpecializationId: BMI_DENORMALIZED
 shortName: Body Mass Index (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C16358

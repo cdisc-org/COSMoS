@@ -4,7 +4,7 @@ crfSpecializationId: PATCHSURVEYDURABILITY
 shortName: "TTS Acceptability Survey - Patch Durability"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: QS

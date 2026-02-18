@@ -4,7 +4,7 @@ crfSpecializationId: T4FRIDXSERPL_DENORMALIZED
 shortName: Thyroxine, Free Index in Serum or Plasma
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

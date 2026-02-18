@@ -4,7 +4,7 @@ crfSpecializationId: TPADNA_DENORMALIZED
 shortName: Treponema pallidum DNA by Nucleic Acid Amplification (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: MB
 biomedicalConceptId: C198341

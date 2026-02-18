@@ -4,7 +4,7 @@ crfSpecializationId: MH
 shortName: Medical History Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: MH
 biomedicalConceptId: C85522
 items:

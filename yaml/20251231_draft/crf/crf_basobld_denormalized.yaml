@@ -4,7 +4,7 @@ crfSpecializationId: BASOBLD_DENORMALIZED
 shortName: Basophil Count in Blood (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

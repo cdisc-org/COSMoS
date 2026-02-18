@@ -4,7 +4,7 @@ crfSpecializationId: PR
 shortName: Medical Procedure Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: PR
 biomedicalConceptId: C219640
 items:

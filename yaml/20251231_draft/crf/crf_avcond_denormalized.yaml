@@ -4,7 +4,7 @@ crfSpecializationId: AVCOND_DENORMALIZED
 shortName: Atrioventricular Conduction ECG Assessment (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

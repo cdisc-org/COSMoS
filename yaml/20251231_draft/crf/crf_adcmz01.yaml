@@ -4,7 +4,7 @@ crfSpecializationId: ADCMZ01
 shortName: "CDISC ADAS-Cog - Executive Function Maze: Errors"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 domain: FT
 biomedicalConceptId: C100285
 sdtmDatasetSpecializationId: ADCMZ01

@@ -4,7 +4,7 @@ crfSpecializationId: BRTHDTC_SHORT
 shortName: Date of Birth
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Date Only
 domain: DM
 biomedicalConceptId: C83217
