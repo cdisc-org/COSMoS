@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C112333
+ncitCode: C112333
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112333
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Maximum Forced Inspiratory Flow
+synonyms:
+  - FIFMAX
+  - FIFmax
+resultScales:
+  - Quantitative
+definition: Forced inspiratory flow for a portion of the FVC curve at the point where the maximum portion of FVC is already inhaled. (CDISC)
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/s"
+      - "L/min"

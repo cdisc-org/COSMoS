@@ -1,0 +1,32 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C170622
+ncitCode: C170622
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170622
+parentConceptId: C170457
+categories:
+  - Respiratory System Findings
+shortName: Percent Predicted Specific Airway Volume
+synonyms:
+  - SAWVOLPP
+resultScales:
+  - Quantitative
+definition: A parameter used in functional respiratory imaging, derived by dividing the airway volume of a specified intrapulmonary region by the total volume of the same specified intrapulmonary region, expressed as a proportion of the predicted normal value.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"

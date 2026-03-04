@@ -398,6 +398,11 @@
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_VS));
 
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=RE, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RE));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Updates));
 /************************************************************************************************************************/
 
 ods listing close;

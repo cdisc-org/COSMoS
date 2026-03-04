@@ -1,0 +1,28 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C201472
+ncitCode: C201472
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C201472
+parentConceptId: C124425
+categories:
+  - Respiratory System Findings
+shortName: Lung Clearance Index to 5% Initial Concentration
+synonyms:
+  - LCI to 1/20th Initial Concentration
+  - LCI to 5% Initial Concentration
+  - LCI5
+  - Lung Clearance Index to 1/20th Initial Concentration
+resultScales:
+  - Quantitative
+definition: A representative measurement of the number of times the volume of air in the lung at the start of the washout (the Functional Residual Capacity) must be recycled to decrease the tracer to 5% (or 1/20th) of its initial concentration.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

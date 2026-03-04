@@ -1,0 +1,29 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C161422
+ncitCode: C161422
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161422
+parentConceptId: C119241
+categories:
+  - Respiratory System Findings
+shortName: Effusion Indicator
+synonyms:
+  - EFFIND
+resultScales:
+  - Nominal
+definition: An indication as to whether effusion is present.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "U"
+      - "N"
+      - "Y"

@@ -1,0 +1,34 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174362
+ncitCode: C174362
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174362
+parentConceptId: C120933
+categories:
+  - Respiratory System Findings
+shortName: Forced Expiratory Volume in 0.75 Second
+synonyms:
+  - FEV_75
+  - FEV 0.75s
+resultScales:
+  - Quantitative
+definition: The volume of air that can be forcibly exhaled during the first 3/4 second following maximal inhalation.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "L"
+      - "mL"

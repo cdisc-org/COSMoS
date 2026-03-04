@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C123909
+ncitCode: C123909
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123909
+categories:
+  - Respiratory System Findings
+shortName: Ventilatory Threshold
+definition: The point during exercise at which pulmonary ventilation becomes disproportionately high with respect to oxygen consumption.

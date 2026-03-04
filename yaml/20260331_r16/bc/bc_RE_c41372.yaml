@@ -1,0 +1,38 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C41372
+ncitCode: C41372
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41372
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Peak Expiratory Flow
+synonyms:
+  - PEF
+resultScales:
+  - Quantitative
+definition: The maximum rate of gas flow, beginning at the point of peak inspiratory capacity, that can be sustained during forced exhalation for a defined period of time. This test is most often used in combination with other studies of lung function to diagnose and monitor obstructive and restrictive lung disease(s).
+coding:
+  - code: 33452-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/s"
+      - "L/min"

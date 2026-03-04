@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C123567
+ncitCode: C123567
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123567
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Pulmonary Reactance
+synonyms:
+  - PLMXRS
+resultScales:
+  - Quantitative
+definition: "The measurement of the ability of the lung to store energy, which is required for passive expiration. Reactance consists of two components: the negative component reflects capacitive behavior (C) and corresponds to both the thoraco-pulmonary elasticity and to changes in the available lung volumes in the distal compartments of the lung; the positive component of reactance has inertial characteristics (I) describing the moving air column in the bronchial tree."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

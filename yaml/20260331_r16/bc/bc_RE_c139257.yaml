@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139257
+ncitCode: C139257
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139257
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: "Salazar-Knowles Equation Parameter B"
+synonyms:
+  - SALKB
+resultScales:
+  - Quantitative
+definition: The difference between the volume at total lung capacity and the hypothesized volume at a transpulmonary pressure of zero.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

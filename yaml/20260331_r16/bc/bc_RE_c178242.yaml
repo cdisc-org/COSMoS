@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C178242
+ncitCode: C178242
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C178242
+parentConceptId: C45233
+categories:
+  - Respiratory System Findings
+shortName: Maximal Oxygen Uptake
+synonyms:
+  - Maximal Oxygen Consumption
+  - VO2MAX
+  - V'O2 Max
+  - VO2 Max
+  - VO2max
+resultScales:
+  - Quantitative
+definition: The point at which oxygen uptake no longer increases and beyond which no level of effort can raise it.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/min"

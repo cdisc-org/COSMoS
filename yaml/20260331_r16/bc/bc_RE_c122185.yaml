@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C122185
+ncitCode: C122185
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122185
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Total Respiratory System Resistance
+synonyms:
+  - RRS
+resultScales:
+  - Quantitative
+definition: A calculated value based on all factors that influence the flow of gas from the airway opening to the alveoli, including airway resistance, and tissue resistance of the lung and chest wall.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C67332
+    ncitCode: C67332
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67332
+    shortName: Manometric Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "cmH2O*s/mL"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

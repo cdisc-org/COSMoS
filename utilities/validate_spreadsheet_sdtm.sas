@@ -518,9 +518,15 @@ title01 "&now";
 
 %let release=16;
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
-
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc16_01);
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm16_01, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc16_02);
+%ReadExcel(file=&excel_file, range=%str(SDTM_RE)$, dsout=sdtm16_02, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc16_03);
 
 /* Select BCs and SDTMs*/
 

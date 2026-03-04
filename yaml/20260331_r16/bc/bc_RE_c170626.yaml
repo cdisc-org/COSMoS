@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C170626
+ncitCode: C170626
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170626
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Forced Expiratory Volume in 1 Second to Slow Vital Capacity Ratio Measurement
+synonyms:
+  - FEV1/SVC
+  - FEV1SVC
+resultScales:
+  - Quantitative
+definition: A relative measurement (ratio or percentage) of the forced expiratory volume during the first second of exhalation to the largest observed expired volume during a slow vital capacity maneuver.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "RATIO"
+      - "%"

@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174363
+ncitCode: C174363
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174363
+parentConceptId: C123570
+categories:
+  - Respiratory System Findings
+shortName: Maximal Oxygen Consumption, Estimated
+synonyms:
+  - Estimated Maximal Aerobic Capacity
+  - VO2MAXE
+resultScales:
+  - Quantitative
+definition: The predicted maximum rate of oxygen uptake that is derived from physiological responses to submaximal exercise performance and is used as a measure of cardiorespiratory fitness.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/min"

@@ -1,0 +1,18 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C119241
+ncitCode: C119241
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C119241
+categories:
+  - Musculoskeletal Finding
+  - Symptom Indicator
+  - Reproductive Findings
+  - Clinical Findings Indicator
+  - Symptom Indicator
+  - Skin Response
+  - Reproductive Findings
+  - Respiratory System Findings
+shortName: Symptom Indicator
+synonyms:
+  - SYMPINDC
+definition: An indication as to whether the subject had symptoms related to the clinical event of interest.

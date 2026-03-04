@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120831
+ncitCode: C120831
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120831
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Percent Predicted Diffusion Capacity of the Lung for Carbon Monoxide/Alveolar Volume Ratio
+synonyms:
+  - DLCOVAPP
+  - Percent Predicted DLCO/VA
+resultScales:
+  - Quantitative
+definition: The calculated ratio of the lung's alveolar volume with respect to its diffusion capacity for carbon monoxide, expressed as a proportion of the predicted normal value.
+coding:
+  - code: 98203-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+      - "RATIO"

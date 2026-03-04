@@ -1,0 +1,37 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C123570
+ncitCode: C123570
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123570
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Oxygen Consumption
+synonyms:
+  - VO2
+resultScales:
+  - Quantitative
+definition: The rate at which oxygen is absorbed and utilized by any given tissue in the body.
+coding:
+  - code: 60842-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/min"

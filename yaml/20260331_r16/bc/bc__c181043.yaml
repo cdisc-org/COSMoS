@@ -1,0 +1,16 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C181043
+ncitCode: C181043
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181043
+categories:
+  - Respiratory System Findings
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+shortName: Clinical Findings Indicator
+synonyms:
+  - Clinical Finding Indicator
+definition: Specifies whether a clinical finding was observed.

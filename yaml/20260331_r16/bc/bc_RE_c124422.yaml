@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C124422
+ncitCode: C124422
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124422
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Airway Conductance
+synonyms:
+  - GAW
+resultScales:
+  - Quantitative
+definition: The instantaneous rate of gas flow in the airway, expressed as the pressure difference between any given part of the airway and the alveoli; it is the reciprocal of airway resistance (Raw).
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

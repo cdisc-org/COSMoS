@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C135493
+ncitCode: C135493
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135493
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Elastance
+synonyms:
+  - ELSTNCE
+resultScales:
+  - Quantitative
+definition: A measure of the resistance of a system to expand, i.e. the pressure change that is required to elicit a unit volume change in the lungs; elastance is the reciprocal of compliance.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C49669
+    ncitCode: C49669
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49669
+    shortName: Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "mL/cm H2O"

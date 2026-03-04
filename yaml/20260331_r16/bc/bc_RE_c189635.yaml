@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C189635
+ncitCode: C189635
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189635
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Oxygenation Index
+synonyms:
+  - OI
+resultScales:
+  - Quantitative
+definition: A measurement of the efficiency of oxygen exchange by the lungs, which is calculated by multiplying the fraction of inspired oxygen (FiO2) (in %) to mean airway pressure (Mpaw) and dividing by pressure of arterial oxygen (PaO2).
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

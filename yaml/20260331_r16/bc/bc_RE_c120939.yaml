@@ -1,0 +1,40 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120939
+ncitCode: C120939
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120939
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Peak Inspiratory Flow Rate
+synonyms:
+  - Peak Inspiratory Flow
+  - PIF
+  - PKINSFL
+resultScales:
+  - Quantitative
+definition: The fastest flow rate of gas noted during the inspiratory cycle.
+coding:
+  - code: 60948-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48568
+    ncitCode: C48568
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48568
+    shortName: Unit of Volumetric Flow Rate
+    dataType: string
+    exampleSet:
+      - "L/s"
+      - "L/min"

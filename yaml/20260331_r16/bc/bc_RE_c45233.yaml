@@ -1,0 +1,13 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C45233
+ncitCode: C45233
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C45233
+categories:
+  - Respiratory System Findings
+shortName: Respiratory System Finding
+synonyms:
+  - Respiratory
+  - RESPIRATORY SYSTEM
+  - Respiratory Finding
+definition: Symptoms, physical examination results, and/or laboratory test results related to the respiratory system.

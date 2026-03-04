@@ -1,0 +1,29 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C171512
+ncitCode: C171512
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171512
+parentConceptId: C25180
+categories:
+  - Respiratory System Findings
+shortName: Infiltrates Indicator
+synonyms:
+  - INFLTIND
+resultScales:
+  - Nominal
+definition: An indication as to whether infiltrates have occurred.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "U"
+      - "N"
+      - "Y"

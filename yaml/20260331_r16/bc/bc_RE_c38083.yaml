@@ -1,0 +1,44 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C38083
+ncitCode: C38083
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38083
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Carbon Monoxide Diffusing Capability Test
+synonyms:
+  - Diffusion Capacity of Lung for CO
+  - DLCO
+  - TLCO
+  - Transfer Factor of Lung for CO
+  - Diffusion Capacity of the Lung for Carbon Monoxide
+  - PFT/DLCO
+  - Pulmonary Function Test/Carbon Monoxide Diffusing Capability
+resultScales:
+  - Quantitative
+definition: A measurement of carbon monoxide (CO) transfer from inspired gas to pulmonary capillary blood. During the test, the subject inspires a gas containing CO and one or more tracer gases to allow determination of the gas exchanging capability of the lungs.
+coding:
+  - code: 19911-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "L"
+      - "mL"
