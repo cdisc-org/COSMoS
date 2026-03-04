@@ -31,3 +31,8 @@ dataElementConcepts:
     exampleSet:
       - "X-Ray"
       - "CT Scan"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
