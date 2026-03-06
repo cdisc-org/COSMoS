@@ -1,4 +1,4 @@
-%macro generate_yaml_from_bc_sdtm(
+%macro generate_yaml_from_sdtm(
   excel_file=, range=, type=, package=, override_package_date=, 
   out_folder=, subsetsDS=, 
   debug=0, check_relationships=1
@@ -383,4 +383,4 @@
   proc delete data=work.bc_sdtm_&type._&package work.&type._&package._mrgd work.issues;
   run;  
 
-%mend generate_yaml_from_bc_sdtm;
+%mend generate_yaml_from_sdtm;

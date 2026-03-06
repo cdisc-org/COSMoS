@@ -26,11 +26,11 @@ run;
 
 %let checkrelationships=1;
 %let excel_file=&root/curation/draft/dht/DHT_BC_SDTM.xlsx;
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=di, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DI), debug=0, check_relationships=&checkrelationships);
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=sleep, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Sleep), debug=0, check_relationships=&checkrelationships);
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=steps, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Steps), debug=0, check_relationships=&checkrelationships);
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=hr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_HR), debug=0, check_relationships=&checkrelationships);
-%generate_yaml_from_bc_sdtm(excel_file=&excel_file, type=scratch, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Scratch), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=di, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DI), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=sleep, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Sleep), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=steps, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Steps), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=hr, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_HR), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=scratch, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_Scratch), debug=0, check_relationships=&checkrelationships);
 
 /************************************************************************************************************************/
 
