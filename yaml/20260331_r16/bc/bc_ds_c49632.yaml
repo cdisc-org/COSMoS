@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C49632
+ncitCode: C49632
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49632
+categories:
+  - Subject Disposition
+shortName: Study Terminated By Sponsor [RETIRED]
+definition: An indication that a clinical study was stopped by its sponsor. [RETIRED]

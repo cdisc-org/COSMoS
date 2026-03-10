@@ -437,6 +437,18 @@ run;
 
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=re, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_RE), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_DS_Edits.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist$, dsout=subsets);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=ds, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DS_New), debug=0, check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=ds, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_DS_Retired), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_LB_New.xlsx;
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB_Edits), debug=0, check_relationships=&checkrelationships);
+
 /************************************************************************************************************************/
 
 ods listing close;

@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C105448
+ncitCode: C105448
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C105448
+categories:
+  - Subject Disposition
+shortName: Failure to Meet Randomization Criteria [RETIRED]
+definition: An indication that the subject has been unable to fulfill the criteria required for assignment into a randomized group. [RETIRED]

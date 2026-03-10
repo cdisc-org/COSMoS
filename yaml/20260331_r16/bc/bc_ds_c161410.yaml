@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C161410
+ncitCode: C161410
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161410
+categories:
+  - Subject Disposition
+shortName: Subject Removed at Sponsor Request [RETIRED]
+definition: An indication that the study subject was removed from the study at the sponsor's request. [RETIRED]

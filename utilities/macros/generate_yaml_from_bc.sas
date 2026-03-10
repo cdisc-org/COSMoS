@@ -129,9 +129,9 @@
       end;
       
       call get_shortname(ncit_code, short_name_nci);
-      %add2issues_bc(((short_name ne short_name_nci) and not missing(short_name_nci)) or (missing(short_name)), 
+      %add2issues_bc(((short_name ne short_name_nci) and index(short_name, "[RETIRED]")=0 and not missing(short_name_nci)) or (missing(short_name)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "");
-      %add2issues_bc(((short_name ne short_name_nci)) and (missing(short_name_nci)), 
+      %add2issues_bc(((short_name ne short_name_nci)) and index(short_name, "[RETIRED]")=0 and (missing(short_name_nci)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "", severity=NOTE);
       if not missing(synonyms) then do;
         %add2issues_bc(index(synonyms, ",") > 0, 
@@ -168,9 +168,9 @@
       */
       %add2issues_bc(index(definition, '"') > 0, 
                      %str(DEFINITION_QUOTE), "", definition, "");
-      %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
+      %add2issues_bc(((definition ne definition_nci) and index(definition, "[RETIRED]")=0 and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
-      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
+      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci) and index(definition, "[RETIRED]")=0), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
       if count = 0 then do;

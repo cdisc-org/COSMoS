@@ -528,6 +528,20 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc16_03);
 
+%let excel_file=&root/curation/draft/package16/R16_BC_Misc_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MK_Edits)$, dsout=bc16_04);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_DS_Edits.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist$, dsout=subsets);
+%ReadExcel(file=&excel_file, range=%str(BC_DS_New)$, dsout=bc16_05);
+%ReadExcel(file=&excel_file, range=%str(BC_DS_Retired)$, dsout=bc16_06);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_New)$, dsout=sdtm16_03);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_Retired)$, dsout=sdtm16_04);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_LB_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB_Edits)$, dsout=bc16_07);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_Edits)$, dsout=sdtm16_05, drop=%str(drop=length significant_digits format));
+
 /* Select BCs and SDTMs*/
 
 data bc_set;
@@ -688,7 +702,8 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
       from sdtm_bc_dec sbd, sdtm_merged sbdi
       where
         sbd.bc_dec not in (select unique catx('-', bc_id, dec_id) from bc) and
-        catx('-', sbdi.bc_id, sbdi.dec_id) = sbd.bc_dec
+        catx('-', sbdi.bc_id, sbdi.dec_id) = sbd.bc_dec and
+        index(sbdi.short_name, "[RETIRED]") = 0
       order by domain, vlm_group_id, sdtm_variable
       ;
   quit;
@@ -719,10 +734,10 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_sdtm_bc_issues_R&re
  %* SDTM pointing to Retired BCs;
   proc sql;
     title02 "SDTM Specializations pointing to retired BCs";
-      select package_date, _excel_file_, _tab_, domain, vlm_group_id, sdtm_variable, bc_id
+      select package_date, _excel_file_, _tab_, domain, vlm_group_id, short_name, sdtm_variable, bc_id
       from sdtm_merged
       where
-        bc_id in ("&bc_set_retired")
+        bc_id in ("&bc_set_retired") and index(short_name, "[RETIRED]") = 0
       order by _excel_file_, _tab_, domain, vlm_group_id, sdtm_variable
       ;
   quit;

@@ -1,0 +1,12 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C85534
+ncitCode: C85534
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85534
+categories:
+  - Laboratory Tests
+  - Biological Clearance Rates
+  - Clearance Rates
+  - Excreation Rates
+shortName: Excretion Rate
+definition: The speed relative to time that an exogenous compound is removed from a body system.
