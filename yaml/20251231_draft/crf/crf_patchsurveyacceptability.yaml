@@ -14,7 +14,7 @@ items:
   - name: TTSACC04_QSORRES
     variableName: QSORRES
     dataElementConceptId: C46126
-    questionText: Based on the experience of applying and wearing this patch, if the patient were prescribed a drug for Alzheimer's disease and was given the choice of this patch or an oral pill given twice daily (assume that both formulations are equally effective), would
+    questionText: Based on the experience of applying and wearing this patch, if the patient were prescribed a drug for Alzheimer's disease and was given the choice of this patch or an oral pill given twice daily (assume that both formulations are equally effective), would you (the caregiver)
     orderNumber: 1
     mandatoryVariable: true 
     dataType: text
