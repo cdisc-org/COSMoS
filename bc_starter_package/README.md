@@ -47,6 +47,7 @@ This [paper](https://www.lexjansen.com/pharmasug/2023/SS/PharmaSUG-2023-SS-140.p
 
 - [Biomedical Concepts Overview Training](doc/BC%20Overview%20Training.pdf)
 - [BC Governance Process](doc/BC%20Governance%20Process.jpg)
+- [CDISC Biomedical Concepts and SDTM Dataset Specializations - Reviewer Tip Sheet](doc/BC%20Review%20Tip%20Sheet.pdf)
 
 Give feedback or gain clarification on BC and Dataset Specialization content, data models, APIs
 
