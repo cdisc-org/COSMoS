@@ -62,15 +62,15 @@ variables:
     originSource: Investigator
     vlmTarget: true 
   - name: REORRESU
-    dataElementConceptId: C48570
+    dataElementConceptId: C49669
     isNonStandard: false
     codelist:
       conceptId: C71620
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
-    valueList:
-      - "RATIO"
-      - "%"
+    assignedTerm:
+      conceptId: C49670
+      value: "mmHg"
     role: Qualifier
     relationship:
       subject: REORRESU
@@ -113,15 +113,15 @@ variables:
     mandatoryValue: false
     vlmTarget: true 
   - name: RESTRESU
-    dataElementConceptId: C48570
+    dataElementConceptId: C49669
     isNonStandard: false
     codelist:
       conceptId: C71620
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
-    valueList:
-      - "RATIO"
-      - "%"
+    assignedTerm:
+      conceptId: C49670
+      value: "mmHg"
     role: Qualifier
     relationship:
       subject: RESTRESU

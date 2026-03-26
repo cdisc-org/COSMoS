@@ -25,11 +25,10 @@
       if (find(_infile_,'TypeGuessRows')>0) then
         do;
           TypeGuessRows = input(trim(scan(_infile_,-1,'x')),hex2.);
-          if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
-                             else do;
-                               put "ER" "ROR: " TypeGuessRows= /;
-                               call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
-                             end;
+          if TypeGuessRows ne 0 then do;
+            put "ER" "ROR: " TypeGuessRows= /;
+            call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
+          end;
         end;
     run;
      
@@ -48,11 +47,10 @@
       if (find(_infile_,'TypeGuessRows')>0) then
         do;
           TypeGuessRows = input(trim(scan(_infile_,-1,'x')),hex2.);
-          if TypeGuessRows=0 then put "NOTE: " TypeGuessRows= /;
-                             else do;
-                               put "ER" "ROR: " TypeGuessRows= /;
-                               call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
-                             end;
+          if TypeGuessRows ne 0 then do;
+            put "ER" "ROR: " TypeGuessRows= /;
+            call symput('TypeGuessRows_ACE', put(TypeGuessRows, best.));
+          end;
         end;
     run;
      

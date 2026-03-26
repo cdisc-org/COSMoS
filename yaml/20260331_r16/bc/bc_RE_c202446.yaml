@@ -13,6 +13,10 @@ synonyms:
 resultScales:
   - Quantitative
 definition: The point during activity or exercise at which ventilation begins to increase at a faster rate than oxygen consumption. This threshold is characterized by aerobic metabolism.
+coding:
+  - code: 94124-5
+    system: http://loinc.org/
+    systemName: LOINC
 dataElementConcepts:
   - conceptId: C82515
     ncitCode: C82515

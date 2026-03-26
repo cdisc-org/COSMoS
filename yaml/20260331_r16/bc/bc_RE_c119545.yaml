@@ -14,6 +14,10 @@ synonyms:
 resultScales:
   - Quantitative
 definition: "The mean forced expiratory flow rate at 25-75% of the forced vital capacity."
+coding:
+  - code: 19945-5
+    system: http://loinc.org/
+    systemName: LOINC
 dataElementConcepts:
   - conceptId: C82515
     ncitCode: C82515
