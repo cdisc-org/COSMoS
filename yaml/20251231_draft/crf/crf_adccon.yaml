@@ -4,7 +4,7 @@ crfSpecializationId: ADCCON
 shortName: "CDISC ADAS-Cog - Concentration/Distractibility"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

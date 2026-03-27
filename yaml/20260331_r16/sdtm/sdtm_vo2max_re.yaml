@@ -1,0 +1,144 @@
+packageDate: "2026-03-31"
+packageType: sdtm
+datasetSpecializationId: VO2MAX_RE
+domain: RE
+shortName: Maximal Oxygen Consumption (RE)
+source: RE.RETESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C178242
+variables:
+  - name: RETESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C111106
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111106
+      submissionValue: RETESTCD
+    assignedTerm:
+      conceptId: C178242
+      value: "VO2MAX"
+    role: Topic
+    relationship:
+      subject: RETESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RETEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RETEST
+    isNonStandard: false
+    codelist:
+      conceptId: C111107
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111107
+      submissionValue: RETEST
+    assignedTerm:
+      conceptId: C178242
+      value: "Maximal Oxygen Consumption"
+    role: Qualifier
+    relationship:
+      subject: RETEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: REORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: REORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: REORRESU
+    dataElementConceptId: C48568
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C67388
+      value: "L/min"
+    role: Qualifier
+    relationship:
+      subject: REORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: REORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: RESTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: RESTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RETESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: RESTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: RESTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RETESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: RESTRESU
+    dataElementConceptId: C48568
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C67388
+      value: "L/min"
+    role: Qualifier
+    relationship:
+      subject: RESTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: RESTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: REDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: REDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

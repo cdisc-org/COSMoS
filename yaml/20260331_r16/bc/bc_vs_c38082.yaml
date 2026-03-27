@@ -5,11 +5,13 @@ ncitCode: C38082
 href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C38082
 parentConceptId: C38081
 categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
   - Vital Signs
-  - Oxygen Saturation Measurements
-  - Oximetry Tests
 shortName: Fraction of Inspired Oxygen
 synonyms:
+  - Maximum fraction of inspired oxygen (FiO2)
+  - Inhaled oxygen concentration
   - FIO2
   - FiO2
 resultScales:
@@ -20,7 +22,7 @@ dataElementConcepts:
     ncitCode: C70856
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
     shortName: Observation Result
-    dataType: decimal
+    dataType: float
   - conceptId: C48570
     ncitCode: C48570
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570

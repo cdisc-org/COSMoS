@@ -4,7 +4,7 @@ crfSpecializationId: PATCHSURVEYAPPEARANCE
 shortName: "TTS Acceptability Survey - Patch Appearance"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: QS

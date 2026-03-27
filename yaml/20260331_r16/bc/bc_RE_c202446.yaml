@@ -1,0 +1,37 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C202446
+ncitCode: C202446
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C202446
+parentConceptId: C123909
+categories:
+  - Respiratory System Findings
+shortName: First Ventilatory Threshold
+synonyms:
+  - Ventilatory Threshold 1
+  - VT1
+resultScales:
+  - Quantitative
+definition: The point during activity or exercise at which ventilation begins to increase at a faster rate than oxygen consumption. This threshold is characterized by aerobic metabolism.
+coding:
+  - code: 94124-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C66973
+    ncitCode: C66973
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66973
+    shortName: Unit of Dose Calculation
+    dataType: string
+    exampleSet:
+      - "mL/kg/min"

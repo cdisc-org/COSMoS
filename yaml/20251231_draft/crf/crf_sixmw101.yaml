@@ -4,7 +4,7 @@ crfSpecializationId: SIXMW101
 shortName: "SIXMW1-Distance at 1 Minute"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 domain: FT
 biomedicalConceptId: C115800
 sdtmDatasetSpecializationId: SIXMW101

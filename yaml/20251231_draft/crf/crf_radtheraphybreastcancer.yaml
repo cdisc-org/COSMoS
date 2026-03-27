@@ -4,7 +4,7 @@ crfSpecializationId: RADTHERAPHYBREASTCANCER
 shortName: Radiation Therapy Breast Cancer
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: PR
 biomedicalConceptId: C15313
 sdtmDatasetSpecializationId: RADTHERAPHYBREASTCANCER

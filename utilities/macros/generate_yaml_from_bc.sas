@@ -59,7 +59,7 @@
     short_Name = compress(short_Name, , 'kw');
     
     definition = strip(definition);
-    definition2 = compbl (translate (definition, "", cats(collate (1, 31), collate (128, 255))));
+    definition2 = translate (definition, "", cats(collate (1, 31), collate (128, 255)));
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -129,9 +129,9 @@
       end;
       
       call get_shortname(ncit_code, short_name_nci);
-      %add2issues_bc(((short_name ne short_name_nci) and not missing(short_name_nci)) or (missing(short_name)), 
+      %add2issues_bc(((short_name ne short_name_nci) and index(short_name, "[RETIRED]")=0 and not missing(short_name_nci)) or (missing(short_name)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "");
-      %add2issues_bc(((short_name ne short_name_nci)) and (missing(short_name_nci)), 
+      %add2issues_bc(((short_name ne short_name_nci)) and index(short_name, "[RETIRED]")=0 and (missing(short_name_nci)), 
                      %str(BC_SHORTNAME_MISMATCH_OR_MISSING), short_name_nci, short_name, "", severity=NOTE);
       if not missing(synonyms) then do;
         %add2issues_bc(index(synonyms, ",") > 0, 
@@ -152,7 +152,12 @@
         countwords=countw(result_scales, ";");
         do i=1 to countwords;
           value=strip(scan(result_scales, i, ";"));
-          if not missing(value) then put +2 "-" +1 value;
+          if not missing(value) then do;
+            put +2 "-" +1 value;
+            %add2issues_bc(exists_enum_term("BiomedicalConceptResultScale", value) = 0, 
+                           %str(INVALID_VALUE_RESULTSCALE), 
+                           "", value, %str(cats("result_scales=", result_scales)), severity=ERROR);
+          end;
         end;
       end;
       
@@ -163,9 +168,9 @@
       */
       %add2issues_bc(index(definition, '"') > 0, 
                      %str(DEFINITION_QUOTE), "", definition, "");
-      %add2issues_bc(((definition ne definition_nci) and not missing(definition_nci)) or (missing(definition)), 
+      %add2issues_bc(((definition ne definition_nci) and index(definition, "[RETIRED]")=0 and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");
-      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci)), 
+      %add2issues_bc((definition ne definition_nci) and (missing(definition_nci) and index(definition, "[RETIRED]")=0), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
       if count = 0 then do;
@@ -174,6 +179,7 @@
 
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
+        definition=compbl(definition);
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;
@@ -250,6 +256,10 @@
       %add2issues_bc(missing(data_type), 
                      %str(BC_DEC_DATATYPE_MISSING), 
                      "", "", %str(cats("dec_label=", dec_label)));
+      %add2issues_bc(exists_enum_term("DataElementConceptDataType", data_type) = 0, 
+                     %str(INVALID_VALUE_DATATYPE), 
+                     "", data_type, "", severity=ERROR);
+                     
       
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 

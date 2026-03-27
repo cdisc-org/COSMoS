@@ -4,7 +4,7 @@ crfSpecializationId: AE
 shortName: Adverse Event Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: AE
 biomedicalConceptId: C83347
 items:

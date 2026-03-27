@@ -4,7 +4,7 @@ crfSpecializationId: TPLAB_DENORMALIZED
 shortName: Treponema pallidum Antibody Detection in Serum (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: MB
 biomedicalConceptId: C132388

@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C124425
+ncitCode: C124425
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124425
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Lung Clearance Index
+synonyms:
+  - LCI
+resultScales:
+  - Quantitative
+definition: "A representative measurement of the number of times the volume of gas in the lung at the start of the washout (the Functional Residual Capacity) must be recycled to eliminate the tracer to the pre-defined endpoint. Practically, this is the point where the end tidal concentration of inert gas is less than 1/40th of the opening concentration."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

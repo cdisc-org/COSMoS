@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C161312
+ncitCode: C161312
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161312
+parentConceptId: C25365
+categories:
+  - Respiratory System Findings
+shortName: Evidence of Malignant Disease Description
+synonyms:
+  - MALEVDES
+  - Malignancy Evidence Description
+resultScales:
+  - Nominal
+  - Narrative
+definition: A description of the basis for the determination that a malignancy is present.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string

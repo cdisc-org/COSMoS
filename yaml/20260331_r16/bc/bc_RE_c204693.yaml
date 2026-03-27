@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C204693
+ncitCode: C204693
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C204693
+parentConceptId: C123909
+categories:
+  - Respiratory System Findings
+shortName: Second Ventilatory Threshold
+synonyms:
+  - Anaerobic Threshold
+  - Lactate Threshold
+  - Respiratory Compensation Threshold
+  - Ventilatory Threshold 2
+  - VT2
+resultScales:
+  - Quantitative
+definition: The point during activity or exercise at which the effort to ventilate increases such that the exerciser experiences duress and can no longer speak. This threshold is characterized by anaerobic metabolism and lactate buildup.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C66973
+    ncitCode: C66973
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66973
+    shortName: Unit of Dose Calculation
+    dataType: string
+    exampleSet:
+      - "mL/kg/min"

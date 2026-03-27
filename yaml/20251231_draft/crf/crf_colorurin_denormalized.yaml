@@ -4,7 +4,7 @@ crfSpecializationId: COLORURIN_DENORMALIZED
 shortName: Color Assessment in Urine (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

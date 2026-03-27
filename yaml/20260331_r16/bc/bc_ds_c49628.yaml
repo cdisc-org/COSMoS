@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C49628
+ncitCode: C49628
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49628
+categories:
+  - Subject Disposition
+shortName: Trial Screen Failure [RETIRED]
+definition: The failure of a potential subject of meeting one or more criteria required for participation in a trial. [RETIRED]

@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139261
+ncitCode: C139261
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139261
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Tissue Hysteresivity Measurement
+synonyms:
+  - Tissue Hysteresivity
+  - TSUHYS
+resultScales:
+  - Quantitative
+definition: "The energy dissipated relative to the elastic energy stored in the tissue in a P-V cycle. Fredberg, J.J., Stamenovic, D. (1 December 1989). On the Imperfect Elasticity of Lung Tissue. Journal of Applied Physiology, Vol. 67. Retrieved from https://owl.english.purdue.edu/owl/resource/560/10/"
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

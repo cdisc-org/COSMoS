@@ -4,7 +4,7 @@ crfSpecializationId: FRMSIZE_DENORMALIZED
 shortName: Frame Size (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C49680

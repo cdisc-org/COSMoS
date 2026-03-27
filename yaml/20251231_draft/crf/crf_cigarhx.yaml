@@ -4,7 +4,7 @@ crfSpecializationId: CIGARHX
 shortName: Cigar History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: SU
 biomedicalConceptId: C181760
 sdtmDatasetSpecializationId: CIGARHX

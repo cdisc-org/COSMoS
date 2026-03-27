@@ -4,7 +4,7 @@ crfSpecializationId: EGPERF
 shortName: ECG Performed
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: EG
 biomedicalConceptId: C82525
 items:

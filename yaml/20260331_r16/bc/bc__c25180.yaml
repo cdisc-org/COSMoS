@@ -1,0 +1,23 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C25180
+ncitCode: C25180
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25180
+categories:
+  - Clinical Findings Indicator
+  - Clinical Trial Attribute
+  - Death Diagnosis and Details
+  - Disease Response
+  - Event Occurrence Indicators
+  - Exposure
+  - Indicator
+  - Oncology Standards
+  - Recurrence
+  - Reproductive Findings
+  - Respiratory System Findings
+  - Trial Summary
+  - TU
+  - Tumor/Lesion Identification
+  - Urinary System Findings
+shortName: Indicator
+definition: An event, entity or condition that typically characterizes a prescribed environment or situation and determines or aids in determining whether certain stated circumstances exist or criteria are satisfied.

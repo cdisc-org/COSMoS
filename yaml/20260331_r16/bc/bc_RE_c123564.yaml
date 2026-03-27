@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C123564
+ncitCode: C123564
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123564
+parentConceptId: C38083
+categories:
+  - Respiratory System Findings
+shortName: Mean Carbon Monoxide Diffusing Capability Test
+synonyms:
+  - DLCOM
+  - Mean Diffusion Capacity of Lung for CO
+  - Mean TLCO
+resultScales:
+  - Quantitative
+definition: The mean volume of the carbon monoxide that is transferred from inspired gas into the pulmonary capillary blood.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "L"
+      - "mL"

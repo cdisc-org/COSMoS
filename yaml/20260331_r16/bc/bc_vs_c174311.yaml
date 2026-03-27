@@ -5,9 +5,10 @@ ncitCode: C174311
 href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174311
 parentConceptId: C38081
 categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
   - Vital Signs
   - Oxygen Saturation Measurements
-  - Oximetry Tests
 shortName: Oxygen Saturation/Fraction Inspired O2
 synonyms:
   - SAO2FIO2
@@ -19,15 +20,15 @@ dataElementConcepts:
     ncitCode: C70856
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
     shortName: Observation Result
-    dataType: decimal
+    dataType: float
   - conceptId: C48570
     ncitCode: C48570
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
     shortName: Percent Unit
     dataType: string
     exampleSet:
-      - "%"
       - "RATIO"
+      - "%"
   - conceptId: C82515
     ncitCode: C82515
     href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515

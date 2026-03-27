@@ -4,7 +4,7 @@ crfSpecializationId: CMPRESP_NORMALIZED
 shortName: Concomitant Medication Prespecified (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: CM
 biomedicalConceptId: C53630

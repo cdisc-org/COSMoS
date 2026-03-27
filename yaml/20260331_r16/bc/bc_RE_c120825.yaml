@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120825
+ncitCode: C120825
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120825
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Hemoglobin Corrected Diffusion Capacity of the Lung for Carbon Monoxide
+synonyms:
+  - DLCOHC
+  - HGB Corrected DLCO
+resultScales:
+  - Quantitative
+definition: An assessment of the diffusion capacity of the lungs for carbon monoxide adjusted for hemoglobin concentration.
+coding:
+  - code: 19913-3
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "L"
+      - "mL"

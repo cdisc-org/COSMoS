@@ -4,7 +4,7 @@ crfSpecializationId: TEMP_DENORMALIZED
 shortName: Temperature (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C174446

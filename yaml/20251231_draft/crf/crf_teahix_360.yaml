@@ -4,7 +4,7 @@ crfSpecializationId: TEAHIX_360
 shortName: Tea Use History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: SU

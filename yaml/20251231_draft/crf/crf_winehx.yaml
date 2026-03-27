@@ -4,7 +4,7 @@ crfSpecializationId: WINEHX
 shortName: Wine Use History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: SU
 biomedicalConceptId: C81229
 sdtmDatasetSpecializationId: WINEHX

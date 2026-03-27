@@ -1,0 +1,32 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C170619
+ncitCode: C170619
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170619
+parentConceptId: C170457
+categories:
+  - Respiratory System Findings
+shortName: Airway Wall Volume
+synonyms:
+  - AWWVOL
+resultScales:
+  - Quantitative
+definition: The volume of the entirety of the airway tissue in a specified intrapulmonary region.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "mL"

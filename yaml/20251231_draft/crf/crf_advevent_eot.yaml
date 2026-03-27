@@ -4,7 +4,7 @@ crfSpecializationId: ADVEVENT_EOT
 shortName: Adverse Event
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: End of Treatment
 domain: DS
 biomedicalConceptId: C41331

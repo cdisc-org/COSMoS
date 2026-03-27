@@ -1,0 +1,54 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C25747
+ncitCode: C25747
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25747
+parentConceptId: C64547
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Clearance Rates
+  - Creatinine Measurements
+shortName: Creatinine Clearance
+synonyms:
+  - CREATCLR
+resultScales:
+  - Quantitative
+definition: The determination of the clearance of endogenous creatinine, used for evaluating the glomerular filtration rate.
+dataElementConcepts:
+  - conceptId: C48567
+    ncitCode: C48567
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48567
+    shortName: Unit of Flow Rate
+    dataType: string
+    exampleSet:
+      - "ml/min"
+      - "mL/s"
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+      - "Serum or Plasma"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C83308
+    ncitCode: C83308
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C83308
+    shortName: Laboratory Test End Date Time
+    dataType: datetime

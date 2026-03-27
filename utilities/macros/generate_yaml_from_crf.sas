@@ -64,7 +64,7 @@
       qstandard_start_version = quote(strip(standard_start_version));
       put "standardStartVersion:" +1 qstandard_start_version;
       qstandard_end_version = quote(strip(standard_end_version));
-      put "standardEndVersion:" +1 standard_end_version;
+      put "standardEndVersion:" +1 qstandard_end_version;
       if not missing(implementation_option) then put "implementationOption:" +1 implementation_option;
       if not missing(scenario) then put "scenario:" +1 scenario;
 

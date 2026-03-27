@@ -4,7 +4,7 @@ crfSpecializationId: EXCL01
 shortName: Exclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: IE
 biomedicalConceptId: C25370
 sdtmDatasetSpecializationId: EXCL01

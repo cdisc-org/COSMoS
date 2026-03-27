@@ -4,7 +4,7 @@ crfSpecializationId: MEDHISTPRESP_NORMALIZED
 shortName: Medical History Prespecified (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: MH
 biomedicalConceptId: C200145

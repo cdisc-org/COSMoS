@@ -4,7 +4,7 @@ crfSpecializationId: SNRARRY_NORMALIZED
 shortName: Sinus Node Rhythm and Arrhythmia ECG Assessment (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 scenario: LOCAL READING
 domain: EG

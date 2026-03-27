@@ -4,7 +4,7 @@ crfSpecializationId: EXCL01_SHORT
 shortName: Exclusion Criteria 01
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Without Date
 domain: IE
 biomedicalConceptId: C25370

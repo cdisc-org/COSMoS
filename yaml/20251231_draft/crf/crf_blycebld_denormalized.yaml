@@ -4,7 +4,7 @@ crfSpecializationId: BLYCEBLD_DENORMALIZED
 shortName: "B-Lymphocytes in Blood (Denormalized)"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

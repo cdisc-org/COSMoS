@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C41255
+ncitCode: C41255
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41255
+parentConceptId: C25391
+categories:
+  - Respiratory System Findings
+shortName: Interpretation
+synonyms:
+  - INTERPRETATION
+  - INTP
+resultScales:
+  - Nominal
+  - Narrative
+definition: An act or process of elucidation, explication, or explanation of the meaning of an event or thing.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string

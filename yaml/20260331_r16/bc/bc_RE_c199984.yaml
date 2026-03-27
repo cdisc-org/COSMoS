@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C199984
+ncitCode: C199984
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C199984
+parentConceptId: C147484
+categories:
+  - Respiratory System Findings
+shortName: Percent Predicted Expiratory Vital Capacity
+synonyms:
+  - EVCPP
+  - Percent Predicted EVC
+resultScales:
+  - Quantitative
+definition: The maximum volume of air an individual can exhale from the point of maximal inhalation as a percentage of the predicted normal value.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"

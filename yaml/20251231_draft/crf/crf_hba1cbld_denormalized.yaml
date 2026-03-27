@@ -4,7 +4,7 @@ crfSpecializationId: HBA1CBLD_DENORMALIZED
 shortName: Hemoglobin A1C Concentration in Blood (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

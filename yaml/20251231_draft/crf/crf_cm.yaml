@@ -4,7 +4,7 @@ crfSpecializationId: CM
 shortName: Concomittant Medications Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: CM
 biomedicalConceptId: C83056
 items:

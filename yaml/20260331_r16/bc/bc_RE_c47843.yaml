@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C47843
+ncitCode: C47843
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C47843
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Forced Expiratory Volume in 6 Seconds
+synonyms:
+  - FEV6
+  - Forced Expiratory Volume 6
+  - Forced Expiratory Volume 6 Test
+resultScales:
+  - Quantitative
+definition: A test of lung function, the FEV6 is the volume exhaled during six seconds of a forced expiratory maneuver started from the level of total lung capacity.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "L"
+      - "mL"

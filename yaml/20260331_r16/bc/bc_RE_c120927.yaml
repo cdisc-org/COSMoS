@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120927
+ncitCode: C120927
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120927
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Airway Resistance
+synonyms:
+  - AIRRES
+  - RAW
+  - Raw
+resultScales:
+  - Quantitative
+definition: An assessment of the opposition to airflow through the respiratory tract on inspiration and/or expiration.
+coding:
+  - code: 75946-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C67332
+    ncitCode: C67332
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67332
+    shortName: Manometric Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "cmH2O*s/mL"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

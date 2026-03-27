@@ -4,7 +4,7 @@ crfSpecializationId: WEIGHT_DENORMALIZED
 shortName: Weight (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C81328

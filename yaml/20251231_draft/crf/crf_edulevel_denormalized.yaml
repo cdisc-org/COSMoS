@@ -4,7 +4,7 @@ crfSpecializationId: EDULEVEL_DENORMALIZED
 shortName: Education Level (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 categories:
   - "360"

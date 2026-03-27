@@ -4,7 +4,7 @@ crfSpecializationId: FAILCONT
 shortName: Failure to Meet Continuation Criteria
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Study Continuation
 domain: DS
 biomedicalConceptId: C49634

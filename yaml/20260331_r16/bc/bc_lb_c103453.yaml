@@ -1,0 +1,50 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C103453
+ncitCode: C103453
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C103453
+parentConceptId: C64431
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Ratio Measurements
+shortName: Albumin to Total Protein Ratio Measurement
+synonyms:
+  - Albumin/Total Protein
+  - ALBPROT
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of the albumin compared with total protein in a biological sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C48566
+    ncitCode: C48566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48566
+    shortName: Unit of Mass Fraction
+    dataType: string
+    exampleSet:
+      - "%"
+      - "Ratio"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Urine"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

@@ -1,0 +1,12 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C25335
+ncitCode: C25335
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25335
+categories:
+  - Respiratory System Findings
+shortName: Volume
+synonyms:
+  - Vol
+  - Total Volume
+definition: The amount of three dimensional space occupied by an object or the capacity of a space or container.

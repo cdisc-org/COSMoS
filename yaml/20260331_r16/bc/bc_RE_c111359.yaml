@@ -1,0 +1,39 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C111359
+ncitCode: C111359
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111359
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Forced Expiratory Volume in 1 Second to Forced Vital Capacity Ratio Measurement
+synonyms:
+  - FEV1/FVC
+  - FEV1FVC
+resultScales:
+  - Quantitative
+definition: The proportion of total forced vital capacity that is expelled during the first second of a forced exhalation.
+coding:
+  - code: 19926-5
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "RATIO"
+      - "%"

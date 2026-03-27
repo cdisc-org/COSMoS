@@ -4,7 +4,7 @@ crfSpecializationId: PROTDEV_EOS
 shortName: Protocol Deviation
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: End of Study
 domain: DS
 biomedicalConceptId: C49634

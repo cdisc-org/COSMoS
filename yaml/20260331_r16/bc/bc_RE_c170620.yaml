@@ -1,0 +1,35 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C170620
+ncitCode: C170620
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170620
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Air Trapping Measurement
+synonyms:
+  - Air Trapping
+  - AIRTRAP
+resultScales:
+  - Quantitative
+definition: A measurement of the gas retention in a specified intrapulmonary space at the end of exhalation.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "mL"
+      - "L"

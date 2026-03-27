@@ -43,8 +43,8 @@ ods excel close;
 %let TargetFolder=&root/yaml/latest/sdtm;
 
 %create_template(type=SDTM_ISSUE, out=work.all_issues_sdtm);
-%generate_yaml_from_bc_sdtm(excel_file=&Excelfile, type=latest, package=&package, override_package_date=, out_folder=&TargetFolder, subsetsDS=subsets, 
-                            range=%str(SDTM Dataset Specializations), check_relationships=&checkrelationships);
+%generate_yaml_from_sdtm(excel_file=&Excelfile, type=latest, package=&package, override_package_date=, out_folder=&TargetFolder, subsetsDS=subsets, 
+                         range=%str(SDTM Dataset Specializations), check_relationships=&checkrelationships);
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_sdtm_xlsx2yaml_issues_latest_%sysfunc(date(), b8601da8.).html";

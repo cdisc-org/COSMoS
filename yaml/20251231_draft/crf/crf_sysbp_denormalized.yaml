@@ -4,7 +4,7 @@ crfSpecializationId: SYSBP_DENORMALIZED
 shortName: Systolic Blood Pressure (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C25298

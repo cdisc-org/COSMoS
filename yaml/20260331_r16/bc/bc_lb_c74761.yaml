@@ -1,0 +1,52 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C74761
+ncitCode: C74761
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74761
+parentConceptId: C64431
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Ratio Measurements
+shortName: Albumin to Creatinine Ratio Measurement
+synonyms:
+  - Albumin/Creatinine
+  - Albumin/creatinine ratio
+  - Albumin/creatinine ratio measurement
+  - Microalbumin/Creatinine Ratio
+  - ALBCREAT
+resultScales:
+  - Quantitative
+definition: The determination of the ratio of albumin compared to creatinine present in a sample. The measurement may be expressed as a ratio or percentage.
+dataElementConcepts:
+  - conceptId: C93566
+    ncitCode: C93566
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C93566
+    shortName: Fasting Status Indicator
+    dataType: boolean
+  - conceptId: C179809
+    ncitCode: C179809
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179809
+    shortName: Ratio Result Type
+    dataType: string
+    exampleSet:
+      - "g/kg"
+      - "mmol/mol"
+      - "g/mol"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Urine"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

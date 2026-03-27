@@ -4,7 +4,7 @@ crfSpecializationId: EQ5D0205
 shortName: "EQ5D02-Anxiety/Depression"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102071
 sdtmDatasetSpecializationId: EQ5D0205

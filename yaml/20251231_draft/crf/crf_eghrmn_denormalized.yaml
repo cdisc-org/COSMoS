@@ -4,7 +4,7 @@ crfSpecializationId: EGHRMN_DENORMALIZED
 shortName: Mean Heart Rate by Electrocardiogram (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: LOCAL READING
 domain: EG

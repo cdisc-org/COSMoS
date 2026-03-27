@@ -4,7 +4,7 @@ crfSpecializationId: ELIGMET
 shortName: Eligibility Criteria Met
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Eligibility Criteria
 domain: DS
 biomedicalConceptId: C132447

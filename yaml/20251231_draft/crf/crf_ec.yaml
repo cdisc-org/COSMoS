@@ -4,7 +4,7 @@ crfSpecializationId: EC
 shortName: Exposure Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: EC
 biomedicalConceptId: C87885
 items:

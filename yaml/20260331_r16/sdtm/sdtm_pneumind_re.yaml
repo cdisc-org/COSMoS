@@ -1,0 +1,102 @@
+packageDate: "2026-03-31"
+packageType: sdtm
+datasetSpecializationId: PNEUMIND_RE
+domain: RE
+shortName: Pneumonia Indicator (RE)
+source: RE.RETESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C171521
+variables:
+  - name: RETESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C111106
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111106
+      submissionValue: RETESTCD
+    assignedTerm:
+      conceptId: C171521
+      value: "PNEUMIND"
+    role: Topic
+    relationship:
+      subject: RETESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RETEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RETEST
+    isNonStandard: false
+    codelist:
+      conceptId: C111107
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111107
+      submissionValue: RETEST
+    assignedTerm:
+      conceptId: C171521
+      value: "Pneumonia Indicator"
+    role: Qualifier
+    relationship:
+      subject: RETEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+  - name: REORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: REORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RESTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    valueList:
+      - "N"
+      - "Y"
+      - "U"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: RESTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RETESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    vlmTarget: true 
+  - name: REDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: REDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RETESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

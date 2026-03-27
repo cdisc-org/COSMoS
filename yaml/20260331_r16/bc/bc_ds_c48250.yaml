@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C48250
+ncitCode: C48250
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48250
+categories:
+  - Subject Disposition
+shortName: Physician Decision [RETIRED]
+definition: A position, opinion or judgment reached after consideration by a physician with reference to subject. [RETIRED]

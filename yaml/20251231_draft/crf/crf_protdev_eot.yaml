@@ -4,7 +4,7 @@ crfSpecializationId: PROTDEV_EOT
 shortName: Protocol Deviation
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: End of Treatment
 domain: DS
 biomedicalConceptId: C49634

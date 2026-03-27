@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C106576
+ncitCode: C106576
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C106576
+categories:
+  - Subject Disposition
+shortName: Trial Site Terminated by Sponsor [RETIRED]
+definition: An indication that a clinical study was stopped at a particular site by its sponsor. [RETIRED]

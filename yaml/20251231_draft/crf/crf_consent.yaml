@@ -4,7 +4,7 @@ crfSpecializationId: CONSENT
 shortName: Informed Consent Obtained
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Informed Consent
 domain: DS
 biomedicalConceptId: C16735

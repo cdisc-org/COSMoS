@@ -4,7 +4,7 @@ crfSpecializationId: AE_DENORMALIZED
 shortName: Adverse Event Free Text Format (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: AE
 biomedicalConceptId: C179175

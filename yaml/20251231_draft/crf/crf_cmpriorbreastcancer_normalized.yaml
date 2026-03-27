@@ -4,7 +4,7 @@ crfSpecializationId: CMPRIORBREASTCANCER_NORMALIZED
 shortName: Concomitant Therapy Breast Cancer Prior Treatment (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: CM
 biomedicalConceptId: C53630

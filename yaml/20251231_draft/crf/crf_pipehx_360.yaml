@@ -4,7 +4,7 @@ crfSpecializationId: PIPEHX_360
 shortName: Pipe History
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: SU

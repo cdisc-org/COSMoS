@@ -4,7 +4,7 @@ crfSpecializationId: RESP_NORMALIZED
 shortName: Respiratory Rate (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
 biomedicalConceptId: C49678

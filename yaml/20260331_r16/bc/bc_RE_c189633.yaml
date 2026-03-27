@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C189633
+ncitCode: C189633
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189633
+parentConceptId: C18190
+categories:
+  - Respiratory System Findings
+shortName: Dominant Lung Pattern Distribution Assessment
+synonyms:
+  - Dominant Lung Pattern Distribution
+  - DOMLGPTD
+resultScales:
+  - Nominal
+  - Narrative
+definition: A subjective assessment of the distribution of the primary lung abnormality pattern.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string

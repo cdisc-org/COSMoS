@@ -1,0 +1,14 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C82554
+ncitCode: C82554
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82554
+categories:
+  - Findings
+  - Clinical Test Result
+  - Respiratory System Findings
+shortName: Flow Rate
+synonyms:
+  - flowRate
+  - FLRT
+definition: The speed of movement of a liquid.

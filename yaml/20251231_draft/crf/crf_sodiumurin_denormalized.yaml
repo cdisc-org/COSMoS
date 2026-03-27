@@ -4,7 +4,7 @@ crfSpecializationId: SODIUMURIN_DENORMALIZED
 shortName: Sodium Concentration in Urine (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

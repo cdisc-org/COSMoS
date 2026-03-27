@@ -4,7 +4,7 @@ crfSpecializationId: OXYSAT_DENORMALIZED
 shortName: Oxygen Saturation (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 domain: VS
 biomedicalConceptId: C60832

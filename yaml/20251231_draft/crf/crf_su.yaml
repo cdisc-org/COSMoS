@@ -4,7 +4,7 @@ crfSpecializationId: SU
 shortName: Substance Use Yes No Indicator
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: SU
 biomedicalConceptId: C219639
 items:

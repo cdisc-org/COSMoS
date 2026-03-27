@@ -4,7 +4,7 @@ crfSpecializationId: HBA1CHGBBLD_DENORMALIZED
 shortName: Hemoglobin A1C to Hemoglobin Ratio Measurement (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

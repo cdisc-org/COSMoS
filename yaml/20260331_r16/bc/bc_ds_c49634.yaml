@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C49634
+ncitCode: C49634
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C49634
+categories:
+  - Subject Disposition
+shortName: Withdrawal by Subject [RETIRED]
+definition: An indication that a study participant has removed themself from the study or from one or more segments of the study. [RETIRED]

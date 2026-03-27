@@ -4,7 +4,7 @@ crfSpecializationId: SEX
 shortName: SEX
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: DM
 biomedicalConceptId: C28421
 sdtmDatasetSpecializationId: SEX

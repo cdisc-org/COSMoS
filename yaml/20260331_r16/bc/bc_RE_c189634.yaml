@@ -1,0 +1,26 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C189634
+ncitCode: C189634
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189634
+parentConceptId: C36291
+categories:
+  - Respiratory System Findings
+shortName: "Additional Disease-Related Findings"
+synonyms:
+  - ADDRELF
+resultScales:
+  - Nominal
+  - Narrative
+definition: A determination of additional abnormalities and/or other observations that may be associated with the disease of interest, for which a targeted test has not been identified in the data.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string

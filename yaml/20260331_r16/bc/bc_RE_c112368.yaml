@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C112368
+ncitCode: C112368
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112368
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Peak Expiratory Flow Reversibility
+synonyms:
+  - PEF Reversibility
+  - PEFREV
+resultScales:
+  - Quantitative
+definition: "The change in PEF following administration of a bronchodilator relative to the pre-treatment PEF value. (CDISC)"
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

@@ -1,0 +1,10 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C36291
+ncitCode: C36291
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C36291
+categories:
+  - Findings
+  - Respiratory System Findings
+shortName: Finding by Cause
+definition: A term that refers to the classification of a clinical or laboratory finding according to the underlying factors.

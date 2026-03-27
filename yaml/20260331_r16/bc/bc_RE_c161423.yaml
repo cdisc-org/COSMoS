@@ -1,0 +1,30 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C161423
+ncitCode: C161423
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161423
+parentConceptId: C181043
+categories:
+  - Respiratory System Findings
+shortName: Malignant Disease Indicator
+synonyms:
+  - Malignancy Indicator
+  - MALIND
+resultScales:
+  - Nominal
+definition: An indication as to whether a malignancy is present.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "U"
+      - "N"
+      - "Y"

@@ -4,7 +4,7 @@ crfSpecializationId: EQ5D0204
 shortName: "EQ5D02-Pain/Discomfort"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102070
 sdtmDatasetSpecializationId: EQ5D0204

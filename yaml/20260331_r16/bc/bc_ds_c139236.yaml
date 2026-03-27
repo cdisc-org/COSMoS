@@ -1,0 +1,9 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139236
+ncitCode: C139236
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139236
+categories:
+  - Subject Disposition
+shortName: Failure To Meet Continuation Criteria [RETIRED]
+definition: "An indication that the subject has not been able to meet protocol-defined continuation criteria and will not continue to participate in the clinical trial. [RETIRED]"

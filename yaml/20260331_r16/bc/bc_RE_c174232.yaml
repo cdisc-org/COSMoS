@@ -1,0 +1,34 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C174232
+ncitCode: C174232
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174232
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Lobar Volume
+synonyms:
+  - LOBVOL
+resultScales:
+  - Quantitative
+definition: A measurement of the total volume of gas in a lobe of the lung at a specified point in time during the respiratory cycle.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "mL"
+      - "L"

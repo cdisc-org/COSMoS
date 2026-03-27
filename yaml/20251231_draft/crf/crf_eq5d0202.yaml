@@ -4,7 +4,7 @@ crfSpecializationId: EQ5D0202
 shortName: "EQ5D02-Self-Care"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102068
 sdtmDatasetSpecializationId: EQ5D0202

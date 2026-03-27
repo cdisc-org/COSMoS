@@ -4,7 +4,7 @@ crfSpecializationId: CHEMISTRY_PERF
 shortName: "Laboratory Test Performed - Chemistry"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 domain: LB
 biomedicalConceptId: C82525
 items:

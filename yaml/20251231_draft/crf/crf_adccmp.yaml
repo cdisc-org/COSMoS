@@ -4,7 +4,7 @@ crfSpecializationId: ADCCMP
 shortName: "CDISC ADAS-Cog - Comprehension"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

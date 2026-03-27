@@ -4,7 +4,7 @@ crfSpecializationId: CONSWDRL
 shortName: "Withdrawal of Consent from Protocol-Specified Activity"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Consent Withdrawal
 domain: DS
 biomedicalConceptId: C49634

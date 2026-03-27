@@ -4,7 +4,7 @@ crfSpecializationId: INCLEXCLYN
 shortName: Inclusion Exclusion Criteria Yes No
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: IE
 biomedicalConceptId: C83063
 items:

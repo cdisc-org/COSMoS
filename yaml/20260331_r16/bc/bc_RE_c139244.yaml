@@ -1,0 +1,36 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139244
+ncitCode: C139244
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139244
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Forced Expiratory Volume in 0.1 Second to FVC Ratio Measurement
+synonyms:
+  - EV_1FVC
+  - Forced Expiratory Volume in 0.1 S/FVC
+  - Forced Expiratory Volume in 0.1 Seconds over FVC
+resultScales:
+  - Quantitative
+definition: The ratio of the volume of gas that is forcibly exhaled during the first 0.1 seconds following maximal inhalation to that of the forced vital capacity.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "RATIO"
+      - "%"

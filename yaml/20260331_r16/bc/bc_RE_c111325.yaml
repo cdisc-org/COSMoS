@@ -1,0 +1,41 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C111325
+ncitCode: C111325
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C111325
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Total Lung Capacity
+synonyms:
+  - Lung volume test
+  - TLC
+  - TLUNGCAP
+  - Total lung capacity
+resultScales:
+  - Quantitative
+definition: The total volume of air in the lungs after maximum inhalation.
+coding:
+  - code: 19862-2
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "mL"
+      - "L"

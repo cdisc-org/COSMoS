@@ -4,7 +4,7 @@ crfSpecializationId: HEMATOLOGY_PERF
 shortName: "Laboratory Test Performed - Hematology"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 domain: LB
 biomedicalConceptId: C82525
 items:

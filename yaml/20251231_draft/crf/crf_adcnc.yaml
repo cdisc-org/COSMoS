@@ -4,7 +4,7 @@ crfSpecializationId: ADCNC
 shortName: "CDISC ADAS-Cog - Number Cancellation Summary Score"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

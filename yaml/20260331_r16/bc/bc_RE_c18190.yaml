@@ -1,0 +1,15 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C18190
+ncitCode: C18190
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18190
+categories:
+  - Respiratory System Findings
+shortName: Histopathologic Examination
+synonyms:
+  - Histopathological
+  - HISTOPATHOLOGY
+  - histopathology
+  - Histopathologic Study
+  - Histopathology
+definition: The microscopic study of characteristic tissue abnormalities by employing various cytochemical and immunocytochemical stains.

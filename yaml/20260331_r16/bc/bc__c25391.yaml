@@ -1,0 +1,18 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C25391
+ncitCode: C25391
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25391
+categories:
+  - Analysis
+  - Respiratory System Findings
+  - Electrocardiogram Findings
+  - Electrocardiogram Interpretation
+  - ECG Findings
+  - ECG Interpretation
+shortName: Analysis
+synonyms:
+  - Analyze
+  - Analytical
+  - Analyzed
+definition: Examination and interpretation; the process of identifying an issue to be understood and addressed, modelling the issue, investigating the model results, interpreting the results, and possibly making a recommendation. The concept also refers to the examination and study of a whole in terms of the parts composing it.

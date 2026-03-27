@@ -4,7 +4,7 @@ crfSpecializationId: ADCMZ02
 shortName: "CDISC ADAS-Cog - Executive Function Maze: Time"
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 categories:
   - "360"
 domain: FT

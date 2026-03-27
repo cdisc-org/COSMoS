@@ -1,0 +1,11 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120933
+ncitCode: C120933
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120933
+categories:
+  - Respiratory System Findings
+shortName: Forced Expiratory Volume
+synonyms:
+  - FEV
+definition: The volume of gas an individual can forcible exhale from the lungs in one breath.

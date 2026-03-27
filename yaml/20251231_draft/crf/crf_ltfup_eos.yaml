@@ -4,7 +4,7 @@ crfSpecializationId: LTFUP_EOS
 shortName: Lost to Follow Up
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: End of Study
 domain: DS
 biomedicalConceptId: C48227

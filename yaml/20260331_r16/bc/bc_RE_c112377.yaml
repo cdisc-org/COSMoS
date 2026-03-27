@@ -1,0 +1,38 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C112377
+ncitCode: C112377
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112377
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Percent Predicted Forced Expiratory Volume in 1 Second Divided by Forced Vital Capacity
+synonyms:
+  - FEV1FVCP
+  - Percent Predicted FEV1/FVC
+resultScales:
+  - Quantitative
+definition: The proportion of total forced vital capacity that is expelled during the first second of a forced exhalation as a proportion of the predicted normal value. (CDISC)
+coding:
+  - code: 19925-7
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"

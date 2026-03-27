@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139260
+ncitCode: C139260
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139260
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Tissue Elastance
+synonyms:
+  - TSUELAS
+resultScales:
+  - Quantitative
+definition: A reflection of energy conservation within a given tissue.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C67333
+    ncitCode: C67333
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C67333
+    shortName: Non-Manometric Unit of Pressure
+    dataType: string
+    exampleSet:
+      - "kPa"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

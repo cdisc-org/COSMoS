@@ -1,0 +1,12 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C120932
+ncitCode: C120932
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120932
+categories:
+  - Respiratory System Findings
+shortName: Expiratory Time
+synonyms:
+  - Expiration Time
+  - EXPTIME
+definition: The recorded time interval between the initiation of exhalation and the time at which no further lung volume reduction occurs.

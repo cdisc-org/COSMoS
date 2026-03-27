@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C139254
+ncitCode: C139254
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139254
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Pulmonary Inertance
+synonyms:
+  - INERTANC
+  - Inertance
+resultScales:
+  - Quantitative
+definition: The measure of the force of the column of air in the conducting airways.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

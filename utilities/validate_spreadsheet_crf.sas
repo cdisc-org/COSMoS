@@ -453,6 +453,7 @@ title01 "&now";
 */
 
 
+/*
 %* Package 15 ;
 %let _debug=0;
 
@@ -510,6 +511,36 @@ title01 "&now";
 %let excel_file=&root/curation/package15/R15_BC_SDTM_IS_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_IS)$, dsout=bc15_09);
 %ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm15_15, drop=%str(drop=length significant_digits format));
+
+*/
+
+%let _debug=0;
+
+%let release=16;
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc16_01);
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm16_01, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc16_02);
+%ReadExcel(file=&excel_file, range=%str(SDTM_RE)$, dsout=sdtm16_02, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc16_03);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_Misc_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_MK_Edits)$, dsout=bc16_04);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_DS_Edits.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist$, dsout=subsets);
+%ReadExcel(file=&excel_file, range=%str(BC_DS_New)$, dsout=bc16_05);
+%ReadExcel(file=&excel_file, range=%str(BC_DS_Retired)$, dsout=bc16_06);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_New)$, dsout=sdtm16_03);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_Retired)$, dsout=sdtm16_04);
+
+%let excel_file=&root/curation/draft/package16/R16_BC_LB_New.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_LB_Edits)$, dsout=bc16_07);
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_Edits)$, dsout=sdtm16_05, drop=%str(drop=length significant_digits format));
 
 /* Select BCs and SDTMs*/
 
@@ -611,7 +642,7 @@ data bc(drop=change_history i vname vvalue);
   * if missing(bc_id) then delete;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
-    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 159))));
     if vvalue ne carray[i] then do;
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= _record_= vname= bc_id= short_name= dec_id= dec_label= / @10 carray[i] / @10 vvalue;
     end;
@@ -629,8 +660,8 @@ quit;
 
 %if &print_html=1 %then %do;
   ods listing close;
-  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..html";
-  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_R&release._&todays..xlsx";
+  ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_bc_R&release._&todays..html";
+  ods excel options(sheet_name="BC &todays" flow="tables" autofilter = 'all') file="&root/utilities/reports/validate_spreadsheet_crf_bc_R&release._&todays..xlsx";
 
     proc print data=bc;
     run;
@@ -657,7 +688,7 @@ data sdtm(drop=change_history i vname vvalue);
   array carray{*} _character_;
   do i=1 to dim(carray);
     vname = vname(carray[i]);
-    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 255))));
+    vvalue = (translate (carray[i], "", cats(collate (1, 31), collate (128, 159))));
     if vvalue ne carray[i] then do;
      put '### CHARACTER CODING ISSUE: ' _excel_file_= _tab_= vname= vlm_group_id= short_name= sdtm_variable= bc_id= dec_id= / @10 carray[i] / @10 vvalue ;
     end;

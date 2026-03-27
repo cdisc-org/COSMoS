@@ -1,0 +1,27 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C122186
+ncitCode: C122186
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C122186
+parentConceptId: C38081
+categories:
+  - Respiratory System Findings
+  - Pulmonary Function Test
+shortName: Specific Airway Conductance
+synonyms:
+  - SGAW
+  - sGaw
+resultScales:
+  - Quantitative
+definition: A measurement of the airway conductance relative to lung volume.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal

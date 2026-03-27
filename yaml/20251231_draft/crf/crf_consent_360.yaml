@@ -4,7 +4,7 @@ crfSpecializationId: CONSENT_360
 shortName: Informed Consent Obtained
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: LZZT study - 360i pilot
 domain: DS
 biomedicalConceptId: C16735

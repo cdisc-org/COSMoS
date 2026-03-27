@@ -398,6 +398,22 @@
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=vs, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_VS));
 
+%let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=re, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_RE));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Updates));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_Misc_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=mk, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_MK_Edits));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_DS_Edits.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=ds, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DS_New));
+%generate_yaml_from_bc(excel_file=&excel_file, type=ds, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_DS_Retired));
+
+%let excel_file=&root/curation/draft/package16/R16_BC_LB_New.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB_Edits));
+
 /************************************************************************************************************************/
 
 ods listing close;

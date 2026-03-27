@@ -1,0 +1,33 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C161424
+ncitCode: C161424
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161424
+parentConceptId: C74720
+categories:
+  - Respiratory System Findings
+shortName: Effusion Volume Measurement
+synonyms:
+  - Effusion Volume
+  - EFFVOL
+resultScales:
+  - Quantitative
+definition: The amount of three dimensional space occupied by the effusion fluid.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C44279
+    ncitCode: C44279
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C44279
+    shortName: Unit of Volume
+    dataType: string
+    exampleSet:
+      - "mL"

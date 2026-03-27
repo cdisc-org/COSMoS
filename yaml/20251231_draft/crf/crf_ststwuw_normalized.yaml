@@ -4,7 +4,7 @@ crfSpecializationId: STSTWUW_NORMALIZED
 shortName: ST Segment, T wave, and U wave ECG Assessment (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 scenario: LOCAL READING
 domain: EG

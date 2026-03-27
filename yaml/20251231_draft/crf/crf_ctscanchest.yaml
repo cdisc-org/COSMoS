@@ -4,7 +4,7 @@ crfSpecializationId: CTSCANCHEST
 shortName: Chest CT Scan
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 domain: PR
 biomedicalConceptId: C17204
 sdtmDatasetSpecializationId: CTSCANCHEST

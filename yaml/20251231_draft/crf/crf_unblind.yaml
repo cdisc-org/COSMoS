@@ -4,7 +4,7 @@ crfSpecializationId: UNBLIND
 shortName: Treatment Unblinded
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 scenario: Unblinding
 domain: DS
 biomedicalConceptId: C142742

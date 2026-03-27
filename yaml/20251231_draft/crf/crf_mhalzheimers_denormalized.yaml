@@ -4,7 +4,7 @@ crfSpecializationId: MHALZHEIMERS_DENORMALIZED
 shortName: "Medical History Prespecified: Alzheimer's Disease (Denormalized)"
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 categories:
   - "360"

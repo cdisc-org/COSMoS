@@ -4,7 +4,7 @@ crfSpecializationId: HEIGHT_NORMALIZED
 shortName: Height (Normalized)
 standard: CDASHIG
 standardStartVersion: "2-1"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
 biomedicalConceptId: C164634

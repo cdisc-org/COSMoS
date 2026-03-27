@@ -4,7 +4,7 @@ crfSpecializationId: INTLK6SERPL_DENORMALIZED
 shortName: Interleukin 6 in Serum or Plasma (Denormalized)
 standard: CDASHIG
 standardStartVersion: "2-3"
-standardEndVersion:  
+standardEndVersion: ""
 implementationOption: Denormalized
 scenario: Local Processing
 domain: LB

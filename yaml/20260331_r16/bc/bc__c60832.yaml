@@ -1,0 +1,71 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C60832
+ncitCode: C60832
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C60832
+parentConceptId: C215116
+categories:
+  - Respiratory System Findings
+  - Vital Signs
+  - Oxygen Saturation Measurements
+  - Oximetry Tests
+shortName: Oxygen Saturation Measurement
+synonyms:
+  - Blood Oxygen Saturation
+  - Hemoglobin Saturation Measurement
+  - Hemoglobin Saturation
+  - O2 Saturation
+  - Oximetry
+  - Oxygen Content Measurement
+  - Oxygen Saturation
+  - OXYSAT
+  - SpO2
+  - "Vital Signs - Oxygen Saturation"
+resultScales:
+  - Quantitative
+definition: The measurement of the ratio of oxygenated hemoglobin to total hemoglobin in the blood.
+dataElementConcepts:
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Finger"
+      - "Earlobe"
+      - "Radial Artery"
+      - "Brachial Artery"
+      - "Femeral Artery"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Pulse Oximetry"
+      - "Arterial Blood Gas (ABG) Stick"

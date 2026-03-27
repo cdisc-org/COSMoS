@@ -1,0 +1,54 @@
+packageDate: "2026-03-31"
+packageType: bc
+conceptId: C224898
+ncitCode: C224898
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C224898
+parentConceptId: C74590
+categories:
+  - Protocol Events
+  - Protocol Disposition Events
+shortName: Study Participation Disposition
+resultScales:
+  - Nominal
+definition: The way in which study participation is ended based on the reason for ending study participation.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Disposition Event"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+    exampleSet:
+      - "Study Participation"
+  - conceptId: C25638
+    ncitCode: C25638
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25638
+    shortName: Reason
+    dataType: string
+    exampleSet:
+      - "Adverse Event"
+      - "Completed"
+      - "Death"
+      - "Disease Relapse"
+      - "Failure To Meet Continuation Criteria"
+      - "Lack Of Efficacy"
+      - "Lost To Follow-Up"
+      - "Physician Decision"
+      - "Pregnancy"
+      - "Progressive Disease"
+      - "Protocol Deviation"
+      - "Screen Failure"
+      - "Site Terminated By Sponsor"
+      - "Study Terminated By Sponsor"
+      - "Other"
+  - conceptId: C82517
+    ncitCode: C82517
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82517
+    shortName: Observation Start Date Time
+    dataType: datetime
