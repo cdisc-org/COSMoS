@@ -4,12 +4,12 @@ from cdisc_library_client import CDISCLibraryClient
 import argparse
 
 RESPONSE_DATA = {
-    "bc_latest_package_date": "2026-03-27,
+    "bc_latest_package_date": "2026-03-31",
     "bc_packages": 16,
-    "bc_biomedicalconcepts": 1127,
+    "bc_biomedicalconcepts": 1345,
     "bc_categories": 430,
     "bc_latest_package_biomedicalconcepts": 249,
-    "sdtm_latest_package_date": "2025-12-16",
+    "sdtm_latest_package_date": "2026-03-31",
     "sdtm_packages": 14,
     "sdtm_datasetspecializations": 1326,
     "sdtm_domains": 32,
@@ -36,6 +36,7 @@ if __name__ == "__main__":
     if args.env.lower() == "dev":
         api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
         base_api_url = os.environ.get("CDISC_LIBRARY_API_URL_DEV")
+        base_api_url = "https://apidev.cdisclibrary.org/api"
         client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
         client._session.verify = False
         requests.urllib3.disable_warnings()
