@@ -520,10 +520,11 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_VS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_VS)$, dsout=bc16_01);
 %ReadExcel(file=&excel_file, range=%str(SDTM_VS)$, dsout=sdtm16_01, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_VS_Updates)$, dsout=sdtm16_02, drop=%str(drop=length significant_digits format change_history));
 
 %let excel_file=&root/curation/draft/package16/R16_BC_SDTM_RE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_RE)$, dsout=bc16_02);
-%ReadExcel(file=&excel_file, range=%str(SDTM_RE)$, dsout=sdtm16_02, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_RE)$, dsout=sdtm16_03, drop=%str(drop=length significant_digits format));
 
 %let excel_file=&root/curation/draft/package16/R16_BC_updates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc16_03);
@@ -535,12 +536,12 @@ title01 "&now";
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist$, dsout=subsets);
 %ReadExcel(file=&excel_file, range=%str(BC_DS_New)$, dsout=bc16_05);
 %ReadExcel(file=&excel_file, range=%str(BC_DS_Retired)$, dsout=bc16_06);
-%ReadExcel(file=&excel_file, range=%str(SDTM_DS_New)$, dsout=sdtm16_03);
-%ReadExcel(file=&excel_file, range=%str(SDTM_DS_Retired)$, dsout=sdtm16_04);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_New)$, dsout=sdtm16_04);
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_Retired)$, dsout=sdtm16_05);
 
 %let excel_file=&root/curation/draft/package16/R16_BC_LB_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB_Edits)$, dsout=bc16_07);
-%ReadExcel(file=&excel_file, range=%str(SDTM_LB_Edits)$, dsout=sdtm16_05, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_LB_Edits)$, dsout=sdtm16_06, drop=%str(drop=length significant_digits format change_history));
 
 /* Select BCs and SDTMs*/
 
