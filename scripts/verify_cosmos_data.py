@@ -36,7 +36,6 @@ if __name__ == "__main__":
     if args.env.lower() == "dev":
         api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
         base_api_url = os.environ.get("CDISC_LIBRARY_API_URL_DEV")
-        base_api_url = "https://apidev.cdisclibrary.org/api"
         client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
         client._session.verify = False
         requests.urllib3.disable_warnings()
