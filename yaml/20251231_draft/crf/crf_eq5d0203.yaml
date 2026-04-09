@@ -3,7 +3,7 @@ packageType: crf
 crfSpecializationId: EQ5D0203
 shortName: "EQ5D02-Usual Activities"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102069
@@ -32,7 +32,7 @@ items:
         value: "I am unable to do my usual activities"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0203"
+      sdtmAnnotation: "QSORRES when QSTESTCD = EQ5D0203"
       sdtmVariables:
         -  "QSORRES"
         -  "QSSTRESC"

@@ -3,7 +3,7 @@ packageType: crf
 crfSpecializationId: EQ5D0205
 shortName: "EQ5D02-Anxiety/Depression"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102071
@@ -32,7 +32,7 @@ items:
         value: "I am extremely anxious or depressed"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0205"
+      sdtmAnnotation: "QSORRES when QSTESTCD = EQ5D0205"
       sdtmVariables:
         -  "QSORRES"
         -  "QSSTRESC"

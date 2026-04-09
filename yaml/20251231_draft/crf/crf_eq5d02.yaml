@@ -3,10 +3,11 @@ packageType: crf
 crfSpecializationId: EQ5D02
 shortName: "EQ-5D-5L Questionnaire"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102117
+sdtmDatasetSpecializationId: EQ5D02
 items:
   - name: EQ5D02_QSCAT
     variableName: QSCAT
@@ -16,7 +17,7 @@ items:
     mandatoryVariable: true 
     dataType: text
     length: 50
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     codelist:
       submissionValue: QSCAT
@@ -50,7 +51,7 @@ items:
         value: "Y"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "[NOT SUBMITTED]; QSSTAT = NOT DONE"
+      sdtmAnnotation: "If the CDASH variable --PERF=""N"", the value of the STDM variable --STAT is ""NOT DONE"". If --PERF= ""Y"", --STAT is null."
       sdtmVariables:
         -  "QSSTAT"
   - name: EQ5D02_QSDAT
@@ -67,15 +68,15 @@ items:
       sdtmAnnotation: "QSDTC"
       sdtmVariables:
         -  "QSDTC"
-  - name: EQ5D02_QSEVINTX
-    variableName: QSEVINTX
-    dataElementConceptId: C82534
+  - name: EQ5D02_QSCEVINT
+    variableName: QSCEVINT
+    dataElementConceptId: C117044
     prompt: Collected Evaluation Interval
     orderNumber: 4
     mandatoryVariable: true 
     dataType: text
     length: 5
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "TODAY"
