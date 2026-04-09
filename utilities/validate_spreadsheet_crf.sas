@@ -514,6 +514,7 @@ title01 "&now";
 
 */
 
+/*
 %let _debug=0;
 
 %let release=16;
@@ -542,14 +543,31 @@ title01 "&now";
 %let excel_file=&root/curation/package16/R16_BC_LB_New.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_LB_Edits)$, dsout=bc16_07);
 %ReadExcel(file=&excel_file, range=%str(SDTM_LB_Edits)$, dsout=sdtm16_06, drop=%str(drop=length significant_digits format change_history));
+*/
+
+%let _debug=0;
+
+%let release=17;
+%let excel_file=&root/scripts/templates/cdisc_biomedical_concepts_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc&release._00);
+
+%let excel_file=&root/scripts/templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm&release._00, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_6MWT.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_6MWT)$, dsout=sdtm17_01, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_EQ5D.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_EQ5D5L)$, dsout=sdtm17_02, drop=%str(drop=length significant_digits format));
 
 /* Select BCs and SDTMs*/
 
+%let bc_set =;  
 data bc_set;
   length bc_id $64;
   set bc&release.:(where=(not missing(bc_id)) keep=bc_id);
 run;  
-  
+
 proc sql noprint;
   select distinct bc_id into :bc_set separated by '","'
   from bc_set(where=(not missing(bc_id)))
@@ -558,6 +576,7 @@ quit;
 
 %put bc_set = "&bc_set";
 
+%let sdtm_set =;  
 data sdtm_set;
   length vlm_group_id $128;
   set sdtm&release.:(where=(not missing(vlm_group_id)) keep=vlm_group_id);
@@ -681,7 +700,7 @@ data sdtm(drop=change_history i vname vvalue);
   retain _excel_file_ _tab_ order package_date sdtmig_start_version sdtmig_end_version bc_id domain vlm_group_id short_name vlm_source
          sdtm_variable dec_id nsv_flag codelist codelist_submission_value assigned_term subset_codelist value_list assigned_value
          subject linking_phrase predicate_term object format
-         vlm_target role data_type length significant_digits mandatory_variable mandatory_value origin_type origin_source comparator;
+         vlm_target role data_type mandatory_variable mandatory_value origin_type origin_source comparator;
   set sdtm&release.:(where=(not missing(vlm_group_id))) 
       _sdtm_latest(where=((not missing(vlm_group_id)) and vlm_group_id notin ("&sdtm_set")));
   order=_n_;

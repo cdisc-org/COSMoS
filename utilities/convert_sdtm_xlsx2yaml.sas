@@ -422,6 +422,7 @@ run;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IS), debug=0, check_relationships=&checkrelationships);
 */
 
+/*
 %let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
@@ -449,6 +450,23 @@ run;
 
 %let excel_file=&root/curation/package16/R16_BC_LB_New.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_LB_Edits), debug=0, check_relationships=&checkrelationships);
+*/
+
+%let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
+%get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
+
+%let release=17;
+%let package=20260630;
+%let folder=20260630_r17;
+%let TargetFolder=&root/yaml/&folder/sdtm;
+%let OverrideDate=%str(2026-06-30);
+
+%let checkrelationships=1;
+%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_6MWT.xlsx;
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=smwt, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_6MWT), debug=0, check_relationships=&checkrelationships);
+
+%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_EQ5D.xlsx;
+%generate_yaml_from_sdtm(excel_file=&excel_file, type=eq5d, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_EQ5D5L), debug=0, check_relationships=&checkrelationships);
 
 /************************************************************************************************************************/
 
