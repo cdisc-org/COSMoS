@@ -142,10 +142,15 @@
                 
                 codelist_extensible = get_codelist_extensible(codelist);
                 %add2issues_sdtm(missing(value_code_cdisc) and (codelist_extensible = "No"), 
-                      %str(CODELIST_VALUE_LIST_TERM_CDISC_MISSING), 
+                      %str(CODELIST_NOTEXTENSIBLE_VALUE_LIST_TERM_CDISC_MISSING), 
                       value_code_cdisc, "", %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                       codelist_submission_value, ", value_list=", value_list, ", value=", value)));
                       
+                %add2issues_sdtm(missing(value_code_cdisc) and (codelist_extensible = "Yes"), 
+                      %str(CODELIST_EXTENSIBLE_VALUE_LIST_TERM_CDISC_MISSING), 
+                      value_code_cdisc, "", %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                      codelist_submission_value, ", value_list=", value_list, ", value=", value)), severity=WARNING);
+
                 %add2issues_sdtm(value_code_cdisc ne value_code_cdisc_up and (not missing(value_code_cdisc_up)), 
                       %str(CODELIST_VALUE_LIST_TERM_WRONG_CASE), 
                       value_up, value, %str(cats("codelist=", codelist, ", codelist_submission_value=", 
@@ -190,9 +195,14 @@
                   codelist_submission_value, ", assigned_value=", assigned_value)));
 
             %add2issues_sdtm(missing(assigned_term_cdisc) and (codelist_extensible = "No"), 
-                  %str(CODELIST_TERM_CCODE_MISSING_NOTEXTENSIBLE), 
+                  %str(CODELIST_NOTEXTENSIBLE_TERM_CCODE_MISSING), 
                   assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
                   codelist_submission_value, ", assigned_value=", assigned_value)));
+
+            %add2issues_sdtm(missing(assigned_term_cdisc) and (codelist_extensible = "Yes"), 
+                  %str(CODELIST_EXTENSIBLE_TERM_CCODE_MISSING), 
+                  assigned_term_cdisc, assigned_term, %str(cats("codelist_extensible=", codelist_extensible, ", codelist=", codelist, ", codelist_submission_value=", 
+                  codelist_submission_value, ", assigned_value=", assigned_value)), severity=WARNING);
 
             %add2issues_sdtm(assigned_term_cdisc ne value_code_cdisc_up and (not missing(value_code_cdisc_up)), 
                   %str(CODELIST_ASSIGNED_TERM_WRONG_CASE), 
