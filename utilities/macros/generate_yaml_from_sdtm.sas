@@ -127,6 +127,13 @@
         end;
 
         if not missing(value_list) then do;
+          
+          %add2issues_sdtm((index(value_list, ",") > 0), 
+                %str(VALUE_LIST_COMMA), 
+                "", value_list, 
+                %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
+                          ", value_list=", value_list)));
+          
           put +4 "valueList:";
           countwords=countw(value_list, ";");
           do i=1 to countwords;
@@ -172,6 +179,12 @@
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", value_list=", value_list, ", assigned_value=", assigned_value)));
+          
+          %add2issues_sdtm((index(assigned_value, ";") > 0), 
+                %str(ASSIGNED_VALUE_SEMI-COLON), 
+                "", assigned_value, 
+                %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
+                          ", assigned_value=", assigned_value)));
           
           if not missing(codelist) then do                          
             assigned_term_cdisc = get_term_code(codelist, assigned_value);

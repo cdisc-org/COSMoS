@@ -137,6 +137,19 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq SUBSET %then %do;
+    proc sql;
+      create table &out
+        (
+         subset_short_name char(128),
+         subset_label char(256),
+         parent_codelist char(64),
+         submission_value char(1024),
+         term char(64)                  
+        );
+    quit;
+  %end;
+
   %if %upcase(&type) eq BC_ISSUE %then %do;
     proc sql;
     create table &out
