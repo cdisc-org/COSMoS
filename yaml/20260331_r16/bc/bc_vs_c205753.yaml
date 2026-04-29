@@ -14,7 +14,7 @@ resultScales:
   - Quantitative
 definition: A measurement of an individual's head circumference in relationship to age, in comparison to a reference percentile curve.
 coding:
-  - code: Jan-89
+  - code: 8289-1
     system: http://loinc.org/
     systemName: LOINC
 dataElementConcepts:
