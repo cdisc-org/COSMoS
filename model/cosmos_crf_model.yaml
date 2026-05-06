@@ -110,7 +110,6 @@ classes:
     slots:
       - sdtmAnnotation
       - sdtmVariables
-      - sdtmTargetMapping
 
 slots:
 
@@ -324,11 +323,6 @@ slots:
     inlined_as_list: true
     aliases:
       - sdtm_target_variable
-  sdtmTargetMapping:
-    description: Rule for mapping from CRF item to SDTM target variable.
-    range: string
-    aliases:
-      - sdtm_mapping
 
 enums:
 

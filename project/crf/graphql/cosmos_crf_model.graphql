@@ -90,6 +90,5 @@ type SDTMTarget
   {
     sdtmAnnotation: String
     sdtmVariables: [String]
-    sdtmTargetMapping: String
   }
 

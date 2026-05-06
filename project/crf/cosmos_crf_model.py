@@ -1,5 +1,5 @@
 # Auto generated from cosmos_crf_model.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-11-26T10:21:57
+# Generation date: 2026-05-06T14:07:26
 # Schema: COSMoS-Biomedical-Concepts-CRF-Schema
 #
 # id: https://www.cdisc.org/cosmos/crf_v1.0
@@ -352,7 +352,6 @@ class SDTMTarget(YAMLRoot):
 
     sdtmAnnotation: Optional[str] = None
     sdtmVariables: Optional[Union[str, list[str]]] = empty_list()
-    sdtmTargetMapping: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self.sdtmAnnotation is not None and not isinstance(self.sdtmAnnotation, str):
@@ -361,9 +360,6 @@ class SDTMTarget(YAMLRoot):
         if not isinstance(self.sdtmVariables, list):
             self.sdtmVariables = [self.sdtmVariables] if self.sdtmVariables is not None else []
         self.sdtmVariables = [v if isinstance(v, str) else str(v) for v in self.sdtmVariables]
-
-        if self.sdtmTargetMapping is not None and not isinstance(self.sdtmTargetMapping, str):
-            self.sdtmTargetMapping = str(self.sdtmTargetMapping)
 
         super().__post_init__(**kwargs)
 
@@ -539,9 +535,6 @@ slots.sdtmAnnotation = Slot(uri=COSMOS_CRF.sdtmAnnotation, name="sdtmAnnotation"
 
 slots.sdtmVariables = Slot(uri=COSMOS_CRF.sdtmVariables, name="sdtmVariables", curie=COSMOS_CRF.curie('sdtmVariables'),
                    model_uri=COSMOS_CRF.sdtmVariables, domain=None, range=Optional[Union[str, list[str]]])
-
-slots.sdtmTargetMapping = Slot(uri=COSMOS_CRF.sdtmTargetMapping, name="sdtmTargetMapping", curie=COSMOS_CRF.curie('sdtmTargetMapping'),
-                   model_uri=COSMOS_CRF.sdtmTargetMapping, domain=None, range=Optional[str])
 
 slots.ListValue_displayValue = Slot(uri=COSMOS_CRF.displayValue, name="ListValue_displayValue", curie=COSMOS_CRF.curie('displayValue'),
                    model_uri=COSMOS_CRF.ListValue_displayValue, domain=ListValue, range=str)

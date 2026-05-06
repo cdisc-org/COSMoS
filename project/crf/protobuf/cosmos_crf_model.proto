@@ -60,5 +60,4 @@ message SDTMTarget
  {
   string sdtmAnnotation = 0
  repeated  string sdtmVariables = 0
-  string sdtmTargetMapping = 0
  }

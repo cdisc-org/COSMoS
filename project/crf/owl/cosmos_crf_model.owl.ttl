@@ -10,55 +10,37 @@ cosmos_crf:CRFGroup a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CRFGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:PackageTypeEnum ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:packageType ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:categories ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:standardEndVersion ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
-            owl:onProperty cosmos_crf:sdtmDatasetSpecializationId ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:scenario ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:domain ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
             owl:onProperty cosmos_crf:standard ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:standardEndVersion ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Date ;
-            owl:onProperty cosmos_crf:packageDate ],
+            owl:onProperty cosmos_crf:categories ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:shortName ],
+            owl:onProperty cosmos_crf:standardEndVersion ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos_crf:standardStartVersion ],
         [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:ImplementationOptionEnum ;
-            owl:onProperty cosmos_crf:implementationOption ],
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:biomedicalConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:standard ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:packageDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:biomedicalConceptId ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:standardEndVersion ],
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:categories ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:sdtmDatasetSpecializationId ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom cosmos_crf:PackageTypeEnum ;
             owl:onProperty cosmos_crf:packageType ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
@@ -68,52 +50,19 @@ cosmos_crf:CRFGroup a owl:Class,
             owl:onProperty cosmos_crf:crfSpecializationId ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:standardStartVersion ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:crfSpecializationId ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:shortName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:standardStartVersion ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:items ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:domain ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:implementationOption ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:categories ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:standard ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:shortName ],
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
+            owl:onProperty cosmos_crf:sdtmDatasetSpecializationId ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:packageDate ],
+            owl:onProperty cosmos_crf:crfSpecializationId ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:scenario ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:implementationOption ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:packageType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:standard ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:packageDate ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty cosmos_crf:sdtmDatasetSpecializationId ],
@@ -124,20 +73,71 @@ cosmos_crf:CRFGroup a owl:Class,
                                 owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$" ] ) ] ) ] ;
             owl:onProperty cosmos_crf:biomedicalConceptId ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:implementationOption ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:biomedicalConceptId ],
+            owl:onProperty cosmos_crf:implementationOption ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:standardEndVersion ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:standardStartVersion ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:shortName ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty cosmos_crf:scenario ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:domain ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:items ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:domain ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_crf:ImplementationOptionEnum ;
+            owl:onProperty cosmos_crf:implementationOption ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:scenario ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:standardStartVersion ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:crfSpecializationId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Date ;
+            owl:onProperty cosmos_crf:packageDate ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:packageType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:sdtmDatasetSpecializationId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:shortName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:standard ],
+        [ a owl:Restriction ;
             owl:allValuesFrom cosmos_crf:CRFItem ;
             owl:onProperty cosmos_crf:items ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:crfSpecializationId ],
-        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:domain ] ;
+            owl:onProperty cosmos_crf:standardEndVersion ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:packageDate ] ;
     skos:inScheme cosmos_crf: .
 
 <https://www.cdisc.org/cosmos/crf_v1.0PackageTypeEnum#crf> a owl:Class,
@@ -149,29 +149,53 @@ cosmos_crf:CRFItem a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CRFItem" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:significantDigits ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$" ] ) ] ) ] ;
             owl:onProperty cosmos_crf:dataElementConceptId ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty cosmos_crf:orderNumber ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:questionText ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:variableName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:SDTMTarget ;
             owl:onProperty cosmos_crf:sdtmTarget ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:mandatoryVariable ],
+            owl:onProperty cosmos_crf:dataType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_crf:SelectionTypeEnum ;
+            owl:onProperty cosmos_crf:selectionType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:completionInstructions ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:dataElementConceptId ],
+            owl:onProperty cosmos_crf:prompt ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty cosmos_crf:derivedVariable ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:derivationDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:codelist ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:displayHidden ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:selectionType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:questionText ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
+            owl:onProperty cosmos_crf:variableName ],
         [ a owl:Restriction ;
             owl:allValuesFrom cosmos_crf:ListValue ;
             owl:onProperty cosmos_crf:valueList ],
@@ -179,155 +203,131 @@ cosmos_crf:CRFItem a owl:Class,
             owl:minCardinality 1 ;
             owl:onProperty cosmos_crf:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:derivationDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:displayHidden ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:completionInstructions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
+            owl:onProperty cosmos_crf:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:orderNumber ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:prompt ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_crf:PrepopulatedValue ;
+            owl:onProperty cosmos_crf:prepopulatedValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:sdtmTarget ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:completionInstructions ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:valueList ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:prepopulatedValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:derivationDescription ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:questionText ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:codelist ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:questionText ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_crf:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:dataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:variableName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:mandatoryVariable ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_crf:SDTMTarget ;
+            owl:onProperty cosmos_crf:sdtmTarget ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:variableName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:prompt ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cosmos_crf:CodeList ;
+            owl:onProperty cosmos_crf:codelist ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty cosmos_crf:derivedVariable ],
+        [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
                     owl:intersectionOf ( linkml:Integer [ a rdfs:Datatype ;
                                 owl:onDatatype xsd:integer ;
                                 owl:withRestrictions ( [ xsd:minInclusive 1 ] ) ] ) ] ;
             owl:onProperty cosmos_crf:length ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:orderNumber ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Integer ;
-            owl:onProperty cosmos_crf:orderNumber ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:variableName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:name ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:valueList ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:mandatoryVariable ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:selectionType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Integer ;
             owl:onProperty cosmos_crf:significantDigits ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:significantDigits ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:prepopulatedValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
-            owl:onProperty cosmos_crf:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty cosmos_crf:derivedVariable ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:derivedVariable ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:questionText ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:completionInstructions ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:prepopulatedValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
-            owl:onProperty cosmos_crf:variableName ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty cosmos_crf:displayHidden ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:completionInstructions ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:selectionType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:dataType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:derivationDescription ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:prompt ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:dataType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:derivationDescription ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:orderNumber ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:codelist ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:questionText ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:codelist ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:completionInstructions ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+|NEW_[A-Z]*[0-9]*)$" ] ) ] ) ] ;
-            owl:onProperty cosmos_crf:dataElementConceptId ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:derivationDescription ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:CodeList ;
-            owl:onProperty cosmos_crf:codelist ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:prompt ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:PrepopulatedValue ;
-            owl:onProperty cosmos_crf:prepopulatedValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:sdtmTarget ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:displayHidden ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Boolean ;
-            owl:onProperty cosmos_crf:mandatoryVariable ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:prompt ],
         [ a owl:Restriction ;
             owl:allValuesFrom cosmos_crf:CRFItemDataTypeEnum ;
             owl:onProperty cosmos_crf:dataType ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom linkml:Boolean ;
             owl:onProperty cosmos_crf:displayHidden ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:sdtmTarget ],
+            owl:minCardinality 1 ;
+            owl:onProperty cosmos_crf:orderNumber ],
         [ a owl:Restriction ;
-            owl:allValuesFrom cosmos_crf:SelectionTypeEnum ;
-            owl:onProperty cosmos_crf:selectionType ] ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:prepopulatedValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:significantDigits ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:derivedVariable ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:dataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:selectionType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:dataElementConceptId ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty cosmos_crf:significantDigits ] ;
     skos:inScheme cosmos_crf: .
 
 <https://www.cdisc.org/cosmos/crf_v1.0CRFItemDataTypeEnum#date> a owl:Class,
@@ -364,23 +364,17 @@ cosmos_crf:CodeList a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "CodeList" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty cosmos_crf:submissionValue ],
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:href ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:conceptId ],
+            owl:onProperty cosmos_crf:href ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uri ;
             owl:onProperty cosmos_crf:href ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:href ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:string ;
-                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
-            owl:onProperty cosmos_crf:submissionValue ],
+            owl:onProperty cosmos_crf:conceptId ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:conceptId ],
@@ -391,11 +385,17 @@ cosmos_crf:CodeList a owl:Class,
                                 owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ) ] ;
             owl:onProperty cosmos_crf:conceptId ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 1 ;
             owl:onProperty cosmos_crf:submissionValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:href ] ;
+            owl:onProperty cosmos_crf:submissionValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:string ;
+                                owl:withRestrictions ( [ xsd:pattern "^[A-Z][A-Z0-9_]*$" ] ) ] ) ] ;
+            owl:onProperty cosmos_crf:submissionValue ] ;
     skos:inScheme cosmos_crf: .
 
 <https://www.cdisc.org/cosmos/crf_v1.0ImplementationOptionEnum#Denormalized> a owl:Class,
@@ -415,28 +415,31 @@ cosmos_crf:ListValue a owl:Class,
             owl:minCardinality 0 ;
             owl:onProperty cosmos_crf:value ],
         [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:value ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:displayValue ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_crf:displayValue ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:displayValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
+            owl:maxCardinality 1 ;
             owl:onProperty cosmos_crf:value ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:value ] ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:displayValue ] ;
     skos:inScheme cosmos_crf: .
 
 cosmos_crf:PrepopulatedValue a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "PrepopulatedValue" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:value ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:conceptId ],
+            owl:onProperty cosmos_crf:value ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
                     owl:intersectionOf ( linkml:String [ a rdfs:Datatype ;
@@ -444,17 +447,14 @@ cosmos_crf:PrepopulatedValue a owl:Class,
                                 owl:withRestrictions ( [ xsd:pattern "^(C[0-9]+)$" ] ) ] ) ] ;
             owl:onProperty cosmos_crf:conceptId ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:conceptId ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:value ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty cosmos_crf:value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:value ] ;
+            owl:onProperty cosmos_crf:conceptId ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:conceptId ] ;
     skos:inScheme cosmos_crf: .
 
 cosmos_crf:SDTMTarget a owl:Class,
@@ -462,28 +462,19 @@ cosmos_crf:SDTMTarget a owl:Class,
     rdfs:label "SDTMTarget" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:sdtmTargetMapping ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:sdtmTargetMapping ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:sdtmTargetMapping ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty cosmos_crf:sdtmAnnotation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cosmos_crf:sdtmAnnotation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:sdtmAnnotation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty cosmos_crf:sdtmVariables ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty cosmos_crf:sdtmVariables ] ;
+            owl:onProperty cosmos_crf:sdtmVariables ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cosmos_crf:sdtmAnnotation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty cosmos_crf:sdtmAnnotation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty cosmos_crf:sdtmAnnotation ] ;
     skos:inScheme cosmos_crf: .
 
 <https://www.cdisc.org/cosmos/crf_v1.0SelectionTypeEnum#Multiple> a owl:Class,
@@ -741,14 +732,6 @@ cosmos_crf:sdtmTarget a owl:ObjectProperty,
     rdfs:label "sdtmTarget" ;
     rdfs:range cosmos_crf:SDTMTarget ;
     skos:definition "SDTM target variables for CRF item variable" ;
-    skos:inScheme cosmos_crf: .
-
-cosmos_crf:sdtmTargetMapping a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "sdtmTargetMapping" ;
-    rdfs:range linkml:String ;
-    skos:altLabel "sdtm_mapping" ;
-    skos:definition "Rule for mapping from CRF item to SDTM target variable." ;
     skos:inScheme cosmos_crf: .
 
 cosmos_crf:selectionType a owl:ObjectProperty,

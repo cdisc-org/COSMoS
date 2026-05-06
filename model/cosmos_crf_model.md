@@ -48,7 +48,6 @@ CodeList {
 SDTMTarget {
     string sdtmAnnotation  
     stringList sdtmVariables  
-    string sdtmTargetMapping  
 }
 
 CRFGroup ||--}| CRFItem : "items"

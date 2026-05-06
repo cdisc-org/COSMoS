@@ -362,9 +362,6 @@ class SDTMTarget(ConfiguredBaseModel):
     sdtmVariables: Optional[list[str]] = Field(default=None, description="""SDTM target variable for CRF item variable""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmVariables',
          'aliases': ['sdtm_target_variable'],
          'domain_of': ['SDTMTarget']} })
-    sdtmTargetMapping: Optional[str] = Field(default=None, description="""Rule for mapping from CRF item to SDTM target variable.""", json_schema_extra = { "linkml_meta": {'alias': 'sdtmTargetMapping',
-         'aliases': ['sdtm_mapping'],
-         'domain_of': ['SDTMTarget']} })
 
 
 # Model rebuild
