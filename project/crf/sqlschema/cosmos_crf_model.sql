@@ -48,7 +48,6 @@
 -- # Class: "SDTMTarget" Description: ""
 --     * Slot: id Description: 
 --     * Slot: sdtmAnnotation Description: Annotation of the SDTM target in the CRF instrument
---     * Slot: sdtmTargetMapping Description: Rule for mapping from CRF item to SDTM target variable.
 -- # Class: "CRFGroup_categories" Description: ""
 --     * Slot: CRFGroup_crfSpecializationId Description: Autocreated FK slot
 --     * Slot: categories Description: CRF Dataset Specialization category for the faciliation of API search and extract
@@ -87,7 +86,6 @@ CREATE TABLE "CodeList" (
 CREATE TABLE "SDTMTarget" (
 	id INTEGER NOT NULL, 
 	"sdtmAnnotation" TEXT, 
-	"sdtmTargetMapping" TEXT, 
 	PRIMARY KEY (id)
 );
 CREATE TABLE "CRFItem" (

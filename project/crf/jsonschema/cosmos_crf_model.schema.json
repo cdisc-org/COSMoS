@@ -370,13 +370,6 @@
                         "null"
                     ]
                 },
-                "sdtmTargetMapping": {
-                    "description": "Rule for mapping from CRF item to SDTM target variable.",
-                    "type": [
-                        "string",
-                        "null"
-                    ]
-                },
                 "sdtmVariables": {
                     "description": "SDTM target variable for CRF item variable",
                     "items": {

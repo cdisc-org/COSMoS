@@ -1042,22 +1042,6 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "sdtmTargetMapping",
-      "definition_uri": "https://www.cdisc.org/cosmos/crf_v1.0sdtmTargetMapping",
-      "description": "Rule for mapping from CRF item to SDTM target variable.",
-      "from_schema": "https://www.cdisc.org/cosmos/crf_v1.0",
-      "aliases": [
-        "sdtm_mapping"
-      ],
-      "slot_uri": "https://www.cdisc.org/cosmos/crf_v1.0sdtmTargetMapping",
-      "owner": "SDTMTarget",
-      "domain_of": [
-        "SDTMTarget"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "ListValue_displayValue",
       "definition_uri": "https://www.cdisc.org/cosmos/crf_v1.0displayValue",
       "description": "CDISC submission value for the CRF item",
@@ -1309,8 +1293,7 @@
       "from_schema": "https://www.cdisc.org/cosmos/crf_v1.0",
       "slots": [
         "sdtmAnnotation",
-        "sdtmVariables",
-        "sdtmTargetMapping"
+        "sdtmVariables"
       ],
       "slot_usage": {},
       "class_uri": "https://www.cdisc.org/cosmos/crf_v1.0SDTMTarget",
@@ -1319,9 +1302,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "cosmos_crf_model.yaml",
-  "source_file_date": "2025-11-26T10:20:59",
-  "source_file_size": 9161,
-  "generation_date": "2025-11-26T10:21:50",
+  "source_file_date": "2026-05-06T14:05:59",
+  "source_file_size": 8983,
+  "generation_date": "2026-05-06T14:07:19",
   "@type": "SchemaDefinition",
   "@context": [
     "../project/crf/jsonld/cosmos_crf_model.context.jsonld",
