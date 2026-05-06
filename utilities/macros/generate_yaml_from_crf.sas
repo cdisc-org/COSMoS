@@ -30,16 +30,16 @@
   %end;
 
   data issues(keep=_excel_file_ _tab_ package_date severity crf_group_id short_name crf_item issue_type expected_value actual_value comment);
-    length prev_crf_group_id crf_group_id $128 outname $512 package_date qpackage_date standard crf_item $64 qstandard_start_version qstandard_end_version $20  
-           short_name $256 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
-           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 categories derivation_description value_list value_display_list sdtm_annotation qsdtm_annotation $8192
+    length prev_crf_group_id crf_group_id $256 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
+           crf_item $128 short_name $512 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
+           codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 categories derivation_description value_list value_display_list sdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
     retain prev_crf_group_id "" count 0;
     set work.bc_crf_&type._&package;
 
     call missing(codelist_submission_value_cdisc, prepopulated_term_cdisc, prepopulated_code_cdisc, prepopulated_term_cdisc_preferd, value_code_cdisc, lookup_term_exist);
     
-    outname=catt("&out_folder\crf_", lowcase(strip(crf_group_id)), ".yaml");
+    outname=catt("&out_folder\crf_", lowcase(strip(domain)), "_", lowcase(strip(crf_group_id)), ".yaml");
     file dummy filevar=outname dlm=",";
     
     %if %sysevalf(%superq(override_package_date)=, boolean)=0 %then package_date="&override_package_date";;
@@ -263,8 +263,10 @@
           put +4 "sdtmTarget:";
 
           if not missing(sdtm_annotation) then do;
-            qsdtm_annotation = quote(strip(sdtm_annotation));
-            put +6 "sdtmAnnotation:" +1 qsdtm_annotation;
+            sdtm_annotation=tranwrd(sdtm_annotation, '"', '\"');
+            sdtm_annotation=compbl(sdtm_annotation);
+            sdtm_annotation=cats('"', sdtm_annotation, '"');;
+            put +6 "sdtmAnnotation:" +1 sdtm_annotation;
           end;  
           
           if not missing(sdtm_target_variable) then do;
@@ -275,7 +277,7 @@
               if not missing(value) then do;
                 qvalue=quote(strip(value));
                 put +8 "- " +1 qvalue;
-                if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping;
+                /* if not missing(sdtm_mapping) then put +6 "  sdtmTargetMapping:" +1 sdtm_mapping; */
               end;
             end;
           end;            
