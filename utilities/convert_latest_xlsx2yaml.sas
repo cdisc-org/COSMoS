@@ -36,8 +36,18 @@ ods html5 close;
 ods excel close;  
 
 
+
 %let ExcelFile=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
-%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets);
+%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist Example$, dsout=subsets1);
+
+%let ExcelFile=&root/curation/package16/R16_BC_DS_Edits.xlsx;
+%get_Subset_Codelists(file=&Excelfile, range=Subset Codelist$, dsout=subsets2);
+
+%create_template(type=SUBSET, out=work.subsets);
+
+data subsets;
+  set work.subsets subsets1 subsets2;
+run;  
 
 %let ExcelFile=&root/export/cdisc_sdtm_dataset_specializations_latest.xlsx;
 %let TargetFolder=&root/yaml/latest/sdtm;

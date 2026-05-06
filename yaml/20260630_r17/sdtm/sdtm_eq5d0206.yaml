@@ -1,0 +1,227 @@
+packageDate: "2026-06-30"
+packageType: sdtm
+datasetSpecializationId: EQ5D0206
+domain: QS
+shortName: "EQ5D02-EQ VAS Score"
+source: QS.QSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C102072
+variables:
+  - name: QSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C101817
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101817
+      submissionValue: EQ5D02TC
+    assignedTerm:
+      conceptId: C102072
+      value: "EQ5D0206"
+    role: Topic
+    relationship:
+      subject: QSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: QSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: QSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C101818
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101818
+      submissionValue: EQ5D02TN
+    assignedTerm:
+      conceptId: C102072
+      value: "EQ5D02-EQ VAS Score"
+    role: Qualifier
+    relationship:
+      subject: QSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C100129
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100129
+      submissionValue: QSCAT
+    assignedTerm:
+      conceptId: C102117
+      value: "EQ-5D-5L"
+    role: Qualifier
+    relationship:
+      subject: QSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: QSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 3
+    relationship:
+      subject: QSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: QSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 3
+    relationship:
+      subject: QSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 3
+    relationship:
+      subject: QSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: QSMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C158113
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C158113
+      submissionValue: QRSMTHOD
+    assignedTerm:
+      conceptId: C179788
+      value: "VISUAL ANALOG SCALE (1-100)"
+    role: Qualifier
+    relationship:
+      subject: QSMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: QSANTXLO
+    dataElementConceptId: C70934
+    isNonStandard: true 
+    assignedTerm:
+      value: "THE WORST HEALTH YOU CAN IMAGINE"
+    role: Qualifier
+    relationship:
+      subject: QSANTXLO
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANTXHI
+    dataElementConceptId: C121936
+    isNonStandard: true 
+    assignedTerm:
+      value: "THE BEST HEALTH YOU CAN IMAGINE"
+    role: Qualifier
+    relationship:
+      subject: QSANTXHI
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANVLLO
+    dataElementConceptId: C70933
+    isNonStandard: true 
+    assignedTerm:
+      value: "0"
+    role: Qualifier
+    relationship:
+      subject: QSANVLLO
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSANVLHI
+    dataElementConceptId: C121935
+    isNonStandard: true 
+    assignedTerm:
+      value: "100"
+    role: Qualifier
+    relationship:
+      subject: QSANVLHI
+      linkingPhrase: is a reference range value for
+      predicateTerm: IS_REFERENCE_VALUE_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: QSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: QSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: QSEVINTX
+    dataElementConceptId: C82534
+    isNonStandard: false
+    assignedTerm:
+      value: "TODAY"
+    role: Timing
+    relationship:
+      subject: QSEVINTX
+      linkingPhrase: is the period of time to be considered when answering the question in
+      predicateTerm: IS_TIMING_FOR
+      object: QSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

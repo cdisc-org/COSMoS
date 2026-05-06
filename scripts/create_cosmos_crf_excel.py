@@ -127,17 +127,15 @@ def get_crf_item_data(crf):
                 sdtm_target_variable = create_string(v.get("sdtmTarget"), "sdtmVariables")
             else:
                 sdtm_target_variable = ""
-            sdtm_mapping = v.get("sdtmTarget").get("sdtmTargetMapping", "")
         else:
             sdtm_annotation = ""
             sdtm_target_variable = ""
-            sdtm_mapping = ""
 
         item_list.append([
             crf_item, variable_name, dec_id, question_text, prompt, completion_instructions, order_number,
             mandatory_variable, data_type, length, significant_digits, display_hidden, derived_variable,
             derivation_description, codelist, codelist_submission_value, value_list, value_display_list, selection_type,
-            prepopulated_term, prepopulated_code, sdtm_target_variable, sdtm_annotation, sdtm_mapping
+            prepopulated_term, prepopulated_code, sdtm_target_variable, sdtm_annotation
         ])
     return item_list
 
@@ -227,7 +225,7 @@ def write_crf_dataset_specializations_to_excel(workbook, sheetname, df):
                 ws.cell(row=row_num, column=col_num).value = col_data
             if headers_bc[col_num - 1] in [
                 'short_name', 'question_text', 'prompt', 'complertion_instructions', 'derivation_description',
-                'value_list', 'value_display_list', 'sdtm_annotation', 'sdtm_mapping'
+                'value_list', 'value_display_list', 'sdtm_annotation'
             ]:
                 ws.cell(row=row_num, column=col_num).alignment = Alignment(wrap_text=True)
 
@@ -287,7 +285,7 @@ def main():
         "display_hidden", 'derived_variable', 'derivation_description',
         "codelist", "codelist_submission_value", "value_list", "value_display_list",
         "selection_type", "prepopulated_term", "prepopulated_code", "sdtm_target_variable",
-        "sdtm_annotation", "sdtm_mapping"
+        "sdtm_annotation"
     ]
     HEADERS_CRF = HEADERS_CRF_CORE + HEADERS_CRF_ITEM
 

@@ -3,7 +3,7 @@ packageType: crf
 crfSpecializationId: EQ5D0206
 shortName: "EQ-5D-5L - EQ VAS Score"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102072
@@ -15,12 +15,12 @@ items:
     prompt: YOUR HEALTH TODAY
     orderNumber: 1
     mandatoryVariable: true 
-    dataType: integer
+    dataType: float
     length: 3
     displayHidden: false
     derivedVariable: false
     sdtmTarget:
-      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0206"
+      sdtmAnnotation: "QSORRES when QSTESTCD = EQ5D0206"
       sdtmVariables:
         -  "QSORRES"
         -  "QSSTRESC"
@@ -35,7 +35,7 @@ items:
     mandatoryVariable: true 
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "VISUAL ANALOG SCALE (1-100)"
@@ -52,7 +52,7 @@ items:
     mandatoryVariable: true 
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "The worst health you can imagine"
@@ -68,7 +68,7 @@ items:
     mandatoryVariable: true 
     dataType: text
     length: 100
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "The best health you can imagine"
@@ -84,7 +84,7 @@ items:
     mandatoryVariable: true 
     dataType: integer
     length: 3
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "0"
@@ -100,7 +100,7 @@ items:
     mandatoryVariable: true 
     dataType: integer
     length: 3
-    displayHidden: false
+    displayHidden: true 
     derivedVariable: false
     prepopulatedValue:
       value: "100"

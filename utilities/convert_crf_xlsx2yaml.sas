@@ -15,10 +15,10 @@ run;
 %create_template(type=CRF_ISSUE, out=work.all_issues_crf);
 
 %let release=xx;
-%let package=20251231;
-%let folder=20251231_draft;
+%let package=20260630;
+%let folder=20260630_draft;
 %let TargetFolder=&root/yaml/&folder/crf;
-%let OverrideDate=%str(2025-12-31);
+%let OverrideDate=%str(2026-06-30);
 
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_AE), type=ae, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);

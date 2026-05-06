@@ -3,7 +3,7 @@ packageType: crf
 crfSpecializationId: EQ5D0201
 shortName: "EQ5D02-Mobility"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102067
@@ -32,7 +32,7 @@ items:
         value: "I am unable to walk"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0201"
+      sdtmAnnotation: "QSORRES when QSTESTCD = EQ5D0201"
       sdtmVariables:
         -  "QSORRES"
         -  "QSSTRESC"

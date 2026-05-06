@@ -3,7 +3,7 @@ packageType: crf
 crfSpecializationId: EQ5D0204
 shortName: "EQ5D02-Pain/Discomfort"
 standard: CDASHIG
-standardStartVersion: "2-1"
+standardStartVersion: "2-3"
 standardEndVersion: ""
 domain: QS
 biomedicalConceptId: C102070
@@ -32,7 +32,7 @@ items:
         value: "I have extreme pain or discomfort"
     selectionType: Single
     sdtmTarget:
-      sdtmAnnotation: "QSORRES where QSTESTCD = EQ5D0204"
+      sdtmAnnotation: "QSORRES when QSTESTCD = EQ5D0204"
       sdtmVariables:
         -  "QSORRES"
         -  "QSSTRESC"

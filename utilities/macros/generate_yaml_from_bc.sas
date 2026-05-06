@@ -166,7 +166,7 @@
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
       */
-      %add2issues_bc(index(definition, '"') > 0, 
+      %*add2issues_bc(index(definition, '"') > 0, 
                      %str(DEFINITION_QUOTE), "", definition, "");
       %add2issues_bc(((definition ne definition_nci) and index(definition, "[RETIRED]")=0 and not missing(definition_nci)) or (missing(definition)), 
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "");

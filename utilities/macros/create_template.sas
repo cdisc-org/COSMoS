@@ -137,6 +137,19 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq SUBSET %then %do;
+    proc sql;
+      create table &out
+        (
+         subset_short_name char(128),
+         subset_label char(256),
+         parent_codelist char(64),
+         submission_value char(1024),
+         term char(64)                  
+        );
+    quit;
+  %end;
+
   %if %upcase(&type) eq BC_ISSUE %then %do;
     proc sql;
     create table &out
@@ -180,9 +193,9 @@
        _excel_file_  char(128),
        _tab_  char(128),
        severity char(10),
-       crf_group_id char(128),
-       short_name char(256),
-       crf_item char(64),
+       crf_group_id char(256),
+       short_name char(512),
+       crf_item char(128),
        issue_type char(64),
        expected_value char(8192),
        actual_value char(8192),
