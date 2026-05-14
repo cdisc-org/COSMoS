@@ -150,6 +150,54 @@
     quit;
   %end;
 
+  %if %upcase(&type) eq CRF %then %do;
+    proc sql;
+      create table &out
+        (
+         packageDate char(10),
+         biomedicalConceptId char(64),
+         dataElementConceptId char(64),
+         standard char(32),
+         standardStartVersion char(32),
+         standardEndVersion char(32),
+         domain char(32),
+         implementationOption char(64),
+         scenario char(64),
+         crfSpecializationId char(64),
+         sdtmpecializationId char(64),
+         shortName char(256),
+         crfItem char(32),
+         variable char(32),
+         questionText char(128),
+         prompt char(64),
+         completionInstructions char(1024),
+         orderNumber num,
+         mandatoryVariable num,
+         dataType char(16),
+         length num,
+         significantDigits num,
+         displayHidden num,
+         derivedVariable num,
+         derivationDescription char(512),
+         codelist char(64),
+         codelist_href char(1024),
+         codelist_submission_value char(32),
+         value_list char(8192),
+         value_list_display char(8192),
+         selectType char(64),
+         prepopulated_term char(64),
+         prepopulated_code char(1024),
+         sdtm_target_variable char(512),
+         sdtm_annotation char(512)
+        );
+    quit;
+  %end;
+
+
+ 
+              
+              
+              
   %if %upcase(&type) eq BC_ISSUE %then %do;
     proc sql;
     create table &out

@@ -7,7 +7,7 @@ standardStartVersion: "2-1"
 standardEndVersion: ""
 implementationOption: Normalized
 domain: VS
-biomedicalConceptId: C25298
+biomedicalConceptId: C49676
 sdtmDatasetSpecializationId: PULSE
 items:
   - name: VSDAT
