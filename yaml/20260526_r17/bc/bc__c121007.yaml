@@ -1,0 +1,43 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C121007
+ncitCode: C121007
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C121007
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Child-Pugh Clinical Classification"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh"
+  - CPS01
+  - "Child-Pugh Clinical Classification Question"
+shortName: "Child-Pugh Clinical Classification"
+synonyms:
+  - "Child-Pugh"
+  - "CHILD-PUGH CLASSIFICATION"
+  - "Child-Pugh Classification"
+  - "Child-Pugh Score"
+  - CPS01
+definition: "A standardized rating scale used to assess the severity of liver cirrhosis and determine the prognosis, the required strength of treatment, and the necessity of liver transplantation. This instrument uses the following clinical and lab criteria: encephalopathy grade, ascites, bilirubin, albumin, and prothrombin index."
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CHILD-PUGH CLASSIFICATION"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

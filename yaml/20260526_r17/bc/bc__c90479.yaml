@@ -1,0 +1,11 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C90479
+ncitCode: C90479
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90479
+categories:
+  - Medical Examination
+shortName: Tumor Examination
+synonyms:
+  - TUMEX
+definition: An assessment or evaluation of a neoplastic mass.

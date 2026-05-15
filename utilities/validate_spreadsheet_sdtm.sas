@@ -554,11 +554,35 @@ title01 "&now";
 %let excel_file=&root/scripts/templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm&release._00, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_6MWT.xlsx;
+%let excel_file=&root/curation/draft/package17/R17_DSS_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_validation_fixes)$, dsout=bc17_01);
+%ReadExcel(file=&excel_file, range=%str(SDTM_validation_fixes_1)$, dsout=sdtm17_01, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(SDTM_validation_fixes_2)$, dsout=sdtm17_02, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package17/R17_DS_DefineXML_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM_DS_Edits)$, dsout=sdtm17_03, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package17/R17_BC_QRS_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc17_02);
+
+%let excel_file=&root/curation/draft/package17/R17_BC_Misc_Edits.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_TU_TR_Edits)$, dsout=bc17_03);
+%ReadExcel(file=&excel_file, range=%str(BC_Misc_Edits)$, dsout=bc17_04);
+
+/*
+%let release=18;
+%let excel_file=&root/scripts/templates/cdisc_biomedical_concepts_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc&release._00);
+
+%let excel_file=&root/scripts/templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm&release._00, drop=%str(drop=length significant_digits format));
+
+%let excel_file=&root/curation/draft/package18/R18_BC_SDTM_QRS_6MWT.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_6MWT)$, dsout=sdtm17_01, drop=%str(drop=length significant_digits format));
 
-%let excel_file=&root/curation/draft/package17/R17_BC_SDTM_QRS_EQ5D.xlsx;
+%let excel_file=&root/curation/draft/package18/R18_BC_SDTM_QRS_EQ5D.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_EQ5D5L)$, dsout=sdtm17_02, drop=%str(drop=length significant_digits format));
+*/
 
 /* Select BCs and SDTMs*/
 

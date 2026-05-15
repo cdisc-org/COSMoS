@@ -108,18 +108,18 @@
         end;
         if not missing(subset_codelist) then do;
           put +4 "subsetCodelist:" +1 subset_codelist;
-          %add2issues_sdtm((not missing(value_list) and (value_list ne subset_value_list)), 
-                %str(SUBSETCODELIST_VALUE_LIST_NOT_MISSING), 
-                "", value_list, 
+          %add2issues_sdtm((not missing(value_list) and not missing(subset_value_list) and (value_list ne subset_value_list)), 
+                %str(SUBSETCODELIST_VALUE_LIST_NOT_MISSING_AND_NOT_EQUAL), 
+                subset_value_list, value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", subset_codelist=", subset_codelist, ", value_list=", value_list)));
           %add2issues_sdtm(missing(value_list) and missing(subset_value_list), 
-                %str(SUBSET_VALUE_LIST_VALUE_LIST_MISSING), 
+                %str(SUBSETCODELIST_SUBSET_VALUE_LIST_AND_VALUE_LIST_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", subset_codelist=", subset_codelist, ", subset_value_list=", subset_value_list, ", value_list=", value_list)));
           %add2issues_sdtm(missing(subset_value_list), 
-                %str(SUBSET_VALUE_LIST_MISSING), 
+                %str(SUBSETCODELIST_SUBSET_VALUE_LIST_MISSING), 
                 "", value_list, 
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value, 
                           ", subset_codelist=", subset_codelist, ", subset_value_list=", subset_value_list, ", value_list=", value_list)));
@@ -381,7 +381,7 @@
     
         %add2issues_sdtm((not missing(vlm_target) and 
                          (
-                          index(sdtm_variable, "ORRES")=0 and index(sdtm_variable, "ORRESU")=0 and 
+                          index(sdtm_variable, "ORRES")=0 and index(sdtm_variable, "ORRESU")=0 and index(sdtm_variable, "DECOD")=0 and 
                           index(sdtm_variable, "STRESC")=0 and index(sdtm_variable, "STRESN")=0 and index(sdtm_variable, "STRESU")=0) and
                           index(sdtm_variable, "VAL")=0 and index(sdtm_variable, "VCDREF")=0 and index(sdtm_variable, "VCDVER")=0
                           ),

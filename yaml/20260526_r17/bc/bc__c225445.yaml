@@ -1,0 +1,34 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C225445
+ncitCode: C225438
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C225438
+parentConceptId: C90479
+categories:
+  - Oncology Standards
+  - Tumor/Lesion Identification
+  - TU
+shortName: Tumor Fragmentation Assessment
+synonyms:
+  - TUSPLIT
+  - Tumor Split
+resultScales:
+  - Nominal
+definition: An assessment as to whether a single tumor has divided into two or more tumors.
+dataElementConcepts:
+  - conceptId: C117442
+    ncitCode: C117442
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117442
+    shortName: Tumor Identifier Reference Identifier
+    dataType: string
+    exampleSet:
+      - "IMG-00001"
+      - "IMG-00002"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"

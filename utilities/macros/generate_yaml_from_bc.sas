@@ -162,6 +162,8 @@
       end;
       
       call get_definitions(ncit_code, definition_nci, definition_cdisc);
+      definition_nci = compbl(definition_nci);
+      definition=compbl(definition);
       /*
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
@@ -179,7 +181,6 @@
 
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
-        definition=compbl(definition);
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;

@@ -1,0 +1,100 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C96642
+ncitCode: C96642
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96642
+parentConceptId: C82547
+categories:
+  - Abnormal Finding
+  - Tumor Identification
+shortName: Tumor Fragmentation
+synonyms:
+  - Tumor Split
+  - Tumor Mass Fragmentation
+resultScales:
+  - Nominal
+definition: A finding indicating that a tumor mass has been divided into two or more tumors.
+dataElementConcepts:
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54215
+    shortName: Directionality
+    dataType: string
+    exampleSet:
+      - "Upper"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Right"
+      - "Left"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Target"
+  - conceptId: C170500
+    ncitCode: C170500
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C170500
+    shortName: Result Anatomical Location
+    dataType: string
+    exampleSet:
+      - "Supraclavicular Lymph Node"
+      - "Thoracic Lymph Node"
+      - "Thyroid Gland"
+      - "Skin of the Trunk"
+      - "Mediastinal Lymph Node"
+      - "Cerebellum"
+      - "Lung, Left Lower Lobe"
+      - "Femoral Lymph Node"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "MRI"
+      - "CT Scan"
+      - "Ultrasound"
+      - "Photography"
+  - conceptId: C117436
+    ncitCode: C117436
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117436
+    shortName: Tumor Identifier Link Identifier
+    dataType: string
+    exampleSet:
+      - "T04.1"
+      - "T04.2"
+  - conceptId: C117442
+    ncitCode: C117442
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117442
+    shortName: Tumor Identifier Reference Identifier
+    dataType: string
+    exampleSet:
+      - "IMG-00001"
+      - "IMG-00002"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"

@@ -1,0 +1,64 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C142362
+ncitCode: C142362
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C142362
+parentConceptId: C181043
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+  - iRECIST
+  - LUGANO CLASSIFICATION
+  - RANO
+  - IRANO 2015
+shortName: New Lesion Indicator
+synonyms:
+  - NEWLIND
+resultScales:
+  - Nominal
+definition: An indication as to whether a lesion is newly identified, in comparison to a previous timepoint.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Independent Assessor"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "U"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "LUGANO CLASSIFICATION"
+      - "iRECIST"
+      - "RANO"
+      - "IRANO 2015"
