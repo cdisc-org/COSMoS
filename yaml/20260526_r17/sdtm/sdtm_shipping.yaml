@@ -43,8 +43,8 @@ variables:
       object: BETERM
     mandatoryVariable: true 
     mandatoryValue: false
-    originType: Collected
-    originSource: Investigator
+    originType: Assigned
+    originSource: Sponsor
   - name: BETERM
     dataElementConceptId: C82571
     isNonStandard: false

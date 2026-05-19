@@ -116,7 +116,7 @@ variables:
       object: FTTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
-    originType: Assigned
+    originType: Derived
     originSource: Sponsor
     vlmTarget: true 
   - name: FTSTRESN
@@ -132,7 +132,7 @@ variables:
       object: FTTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
-    originType: Assigned
+    originType: Derived
     originSource: Sponsor
     vlmTarget: true 
   - name: FTSTRESU

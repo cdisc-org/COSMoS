@@ -66,6 +66,8 @@ variables:
       object: LBTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
     vlmTarget: true 
   - name: LBORRESU
     dataElementConceptId: C48207

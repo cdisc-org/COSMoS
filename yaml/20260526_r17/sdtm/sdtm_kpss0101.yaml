@@ -5,7 +5,7 @@ domain: RS
 shortName: "KPSS01-Karnofsky Performance Status"
 source: RS.RSTESTCD
 sdtmigStartVersion: "3-2"
-sdtmigEndVersion: "R12"
+sdtmigEndVersion: ""
 biomedicalConceptId: C100417
 variables:
   - name: RSTESTCD

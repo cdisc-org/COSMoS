@@ -68,6 +68,8 @@ variables:
       object: LBTESTCD
     mandatoryVariable: true 
     mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
     vlmTarget: true 
   - name: LBSTRESC
     dataElementConceptId: C70856

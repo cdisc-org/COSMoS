@@ -119,6 +119,8 @@ variables:
       object: GFORRES
     mandatoryVariable: false
     mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
     vlmTarget: true 
   - name: GFSTRESC
     dataElementConceptId: C70856
