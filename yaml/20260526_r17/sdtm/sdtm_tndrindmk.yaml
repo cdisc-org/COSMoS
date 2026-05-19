@@ -25,6 +25,8 @@ variables:
       object: MKTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: MKTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: MKTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: MKORRES
     dataElementConceptId: C70856
     isNonStandard: false

@@ -25,6 +25,8 @@ variables:
       object: URTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: URTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: URTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: URCAT
     isNonStandard: false
     role: Qualifier

@@ -31,6 +31,8 @@ variables:
       object: GFTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: GFTEST
     isNonStandard: false
@@ -49,6 +51,8 @@ variables:
       object: GFTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: GFTSTDTL
     dataElementConceptId: C117062
     isNonStandard: false

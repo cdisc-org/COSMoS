@@ -25,6 +25,8 @@ variables:
       object: VSTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: VSTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: VSTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: VSORRES
     dataElementConceptId: C70856
     isNonStandard: false

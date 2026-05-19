@@ -25,6 +25,8 @@ variables:
       object: SRTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: SRTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: SRTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: SROBJ
     isNonStandard: false
     role: Qualifier

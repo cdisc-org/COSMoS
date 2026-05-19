@@ -25,6 +25,8 @@ variables:
       object: FTTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: FTTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: FTTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: FTCAT
     dataElementConceptId: C25372
     isNonStandard: false

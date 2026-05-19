@@ -25,6 +25,8 @@ variables:
       object: LBTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: LBTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: LBTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: LBCAT
     isNonStandard: false
     assignedTerm:

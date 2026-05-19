@@ -25,6 +25,8 @@ variables:
       object: EGTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: EGTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: EGTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: EGORRES
     dataElementConceptId: C25330
     isNonStandard: false

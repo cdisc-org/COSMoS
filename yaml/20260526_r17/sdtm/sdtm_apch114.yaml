@@ -25,6 +25,8 @@ variables:
       object: RSTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: RSTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: RSTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: RSCAT
     dataElementConceptId: C25372
     isNonStandard: false

@@ -20,6 +20,8 @@ variables:
       object: QSTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: QSTEST
     isNonStandard: false
@@ -33,6 +35,8 @@ variables:
       object: QSTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: QSCAT
     isNonStandard: false
     codelist:

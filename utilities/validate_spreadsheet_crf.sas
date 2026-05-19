@@ -563,11 +563,11 @@ title01 "&now";
 %ReadExcel(file=&excel_file, range=%str(SDTM_DS_Edits)$, dsout=sdtm17_03, drop=%str(drop=length significant_digits format));
 
 %let excel_file=&root/curation/draft/package17/R17_BC_QRS_Edits.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc17_02, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc17_02);
 
 %let excel_file=&root/curation/draft/package17/R17_BC_Misc_Edits.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_TU_TR_Edits)$, dsout=bc17_03, drop=%str(drop=length significant_digits format));
-%ReadExcel(file=&excel_file, range=%str(BC_Misc_Edits)$, dsout=bc17_04, drop=%str(drop=length significant_digits format));
+%ReadExcel(file=&excel_file, range=%str(BC_TU_TR_Edits)$, dsout=bc17_03);
+%ReadExcel(file=&excel_file, range=%str(BC_Misc_Edits)$, dsout=bc17_04);
 
 /*
 %let release=18;

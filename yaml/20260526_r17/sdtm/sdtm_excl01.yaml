@@ -108,7 +108,7 @@ variables:
       object: IETESTCD
     mandatoryVariable: true 
     mandatoryValue: false
-    originType: Assigned
+    originType: Derived
     originSource: Sponsor
     vlmTarget: true 
   - name: IEDTC

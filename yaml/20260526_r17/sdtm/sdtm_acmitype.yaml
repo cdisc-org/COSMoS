@@ -25,6 +25,8 @@ variables:
       object: FATEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: FATEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: FATESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: FAOBJ
     dataElementConceptId: C82546
     isNonStandard: false

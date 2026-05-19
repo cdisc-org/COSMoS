@@ -25,6 +25,8 @@ variables:
       object: MBTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: MBTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: MBTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: MBTSTDTL
     dataElementConceptId: C117062
     isNonStandard: false

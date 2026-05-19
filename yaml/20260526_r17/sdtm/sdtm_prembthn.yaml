@@ -25,6 +25,8 @@ variables:
       object: RPTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: RPTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: RPTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: RPCAT
     isNonStandard: false
     role: Qualifier

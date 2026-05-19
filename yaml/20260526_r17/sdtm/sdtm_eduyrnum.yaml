@@ -25,6 +25,8 @@ variables:
       object: SCTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: SCTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: SCTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: SCCAT
     isNonStandard: false
     role: Qualifier

@@ -25,6 +25,8 @@ variables:
       object: ISTEST
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
     comparator: EQ
   - name: ISTEST
     isNonStandard: false
@@ -43,6 +45,8 @@ variables:
       object: ISTESTCD
     mandatoryVariable: true 
     mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
   - name: ISBDAGNT
     dataElementConceptId: C42647
     isNonStandard: false
