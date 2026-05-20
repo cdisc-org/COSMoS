@@ -114,7 +114,6 @@ variables:
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
       submissionValue: UNIT
     valueList:
-      - "BAU/mL"
       - "IU/mL"
       - "U/mL"
       - "titer"

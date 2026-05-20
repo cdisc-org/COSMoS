@@ -318,7 +318,7 @@ def main():
     workbook = load_workbook(crf_template)
     workbook = update_readme(workbook, "ReadMe", args.source, current_date.isoformat(), len(crf_list))
     workbook = write_crf_dataset_specializations_to_excel(workbook, "CRF Specializations", df)
-    workbook = write_dataframe_to_excel(workbook, "Domains", df_domain)
+    # workbook = write_dataframe_to_excel(workbook, "Domains", df_domain)
     workbook.save(args.excel_file)
     print(f"Excel file saved as {args.excel_file}")
 
