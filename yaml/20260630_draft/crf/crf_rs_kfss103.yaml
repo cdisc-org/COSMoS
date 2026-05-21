@@ -1,0 +1,49 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS103
+shortName: "KFSS1-Brain Stem Functions"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112612
+sdtmDatasetSpecializationId: KFSS103
+items:
+  - name: KFSS103_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: BRAIN STEM FUNCTIONS
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: KFSS103OR
+      conceptId: C182478
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182478
+    valueList:
+      - displayValue: "Normal"
+        value: "0"
+      - displayValue: "Signs only"
+        value: "1"
+      - displayValue: "Moderate nystagmus or other mild disability"
+        value: "2"
+      - displayValue: "Severe nystagmus, marked extraocular weakness, or moderate disability of other cranial nerves"
+        value: "3"
+      - displayValue: "Marked dysarthria or other marked disability"
+        value: "4"
+      - displayValue: "Inability to swallow or speak"
+        value: "5"
+      - displayValue: "Unknown"
+        value: "Unknown"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS103"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

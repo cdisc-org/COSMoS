@@ -74,6 +74,12 @@ run;
 %let excel_file=&root/curation/draft/crf/CRF_QRS_TTS.xlsx;
 %generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_TTS), type=tts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
 
+%let excel_file=&root/curation/draft/crf/CRF_QRS_ECOG.xlsx;
+%generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_ECOG), type=ecog, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
+
+%let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
+%generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_KFSS), type=kfss, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
+
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_crf_xlsx2yaml_issues_R&release._&todays..html";

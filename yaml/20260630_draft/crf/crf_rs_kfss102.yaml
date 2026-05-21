@@ -1,0 +1,49 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS102
+shortName: "KFSS1-Cerebellar Functions"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112610
+sdtmDatasetSpecializationId: KFSS102
+items:
+  - name: KFSS102_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: CEREBELLAR FUNCTIONS
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: KFSS102OR
+      conceptId: C182476
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182476
+    valueList:
+      - displayValue: "Normal"
+        value: "0"
+      - displayValue: "Abnormal signs without disability"
+        value: "1"
+      - displayValue: "Mild ataxia"
+        value: "2"
+      - displayValue: "Moderate truncal or limb ataxia"
+        value: "3"
+      - displayValue: "Severe ataxia, all limbs"
+        value: "4"
+      - displayValue: "Unable to perform coordinated movements due to ataxia"
+        value: "5"
+      - displayValue: "Unknown"
+        value: "Unknown"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS102"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

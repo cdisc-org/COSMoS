@@ -1,0 +1,30 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS108A
+shortName: "KFSS1-Other Functions Specify"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C113885
+sdtmDatasetSpecializationId: KFSS108A
+items:
+  - name: KFSS108A_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: ANY OTHER NEUROLOGIC FINDINGS ATTRIBUTED TO MS (SPECIFY)
+    orderNumber: 11
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS108A"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

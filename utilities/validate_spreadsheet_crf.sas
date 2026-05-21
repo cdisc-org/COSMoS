@@ -673,6 +673,12 @@ quit;
 %let excel_file=&root/curation/draft/crf/CRF_QRS_TTS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_TTS)$, dsout=collectxx_18, drop=%str(drop=&dropit));
 
+%let excel_file=&root/curation/draft/crf/CRF_QRS_ECOG.xlsx;
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_ECOG)$, dsout=collectxx_19, drop=%str(drop=&dropit));
+
+%let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_KFSS)$, dsout=collectxx_20, drop=%str(drop=&dropit));
+
 /************************************************************************************************************************/
 
 data bc(drop=change_history i vname vvalue);

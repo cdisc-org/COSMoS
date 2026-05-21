@@ -1,0 +1,51 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS104
+shortName: "KFSS1-Sensory Functions"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112613
+sdtmDatasetSpecializationId: KFSS104
+items:
+  - name: KFSS104_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: SENSORY FUNCTIONS
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: KFSS104OR
+      conceptId: C182479
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182479
+    valueList:
+      - displayValue: "Normal"
+        value: "0"
+      - displayValue: "Vibration or figure-writing decrease only, in one or two limbs"
+        value: "1"
+      - displayValue: "Mild decrease in touch or pain or position sense, and/or moderate decrease in vibration in one or two limbs, or vibratory (c/s figure writing) decrease alone in three or four limbs"
+        value: "2"
+      - displayValue: "Moderate decrease in touch or pain or position sense, and/or lost vibration in 1 or 2 limbs, or mild decrease in touch or pain and/or moderate decrease in all proprioceptive tests in 3 or 4 limbs"
+        value: "3"
+      - displayValue: "Marked decrease in touch or pain or loss of proprioception, alone or combined, in one or two limbs, or moderate decrease in touch or pain and/or severe proprioceptive decrease in more than two limbs"
+        value: "4"
+      - displayValue: "Loss (essentially) of sensation in one or two limbs, or moderate decrease in touch or pain and/or loss of proprioception for most of the body below the head"
+        value: "5"
+      - displayValue: "Sensation essentially lost below the head"
+        value: "6"
+      - displayValue: "Unknown"
+        value: "Unknown"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS104"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

@@ -267,8 +267,7 @@
         end;
 
         if (not missing(sdtm_target_variable)) or 
-           (not missing(sdtm_annotation)) or 
-           (not missing(sdtm_mapping)) then do;
+           (not missing(sdtm_annotation)) then do;
           
           put +4 "sdtmTarget:";
 

@@ -1,0 +1,39 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS102A
+shortName: "KFSS1-Weakness Interferes With Testing"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112611
+sdtmDatasetSpecializationId: KFSS102A
+items:
+  - name: KFSS102A_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: CHECK HERE WHEN WEAKNESS (GRADE 3 OR MORE ON PYRAMIDAL) INTERFERES WITH TESTING
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: KFSS1SET1OR
+      conceptId: C182477
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182477
+    valueList:
+      - displayValue: "No"
+        value: "NOT CHECKED"
+      - displayValue: "Yes"
+        value: "CHECKED"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS102A"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"
