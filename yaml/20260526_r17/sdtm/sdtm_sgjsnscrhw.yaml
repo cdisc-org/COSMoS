@@ -148,7 +148,7 @@ variables:
       - "CARPOMETACARPAL JOINT 4"
       - "CARPOMETACARPAL JOINT 5"
       - "SCAPHOID-LUNATE-CAPITATE JOINT"
-      - "RADIOCARPAL JOINT"
+      - "WRIST JOINT"
     role: Qualifier
     relationship:
       subject: MKLOC

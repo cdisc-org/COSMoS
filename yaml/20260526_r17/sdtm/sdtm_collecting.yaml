@@ -28,7 +28,7 @@ variables:
       conceptId: C189265
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189265
       submissionValue: ACCPARTY
-    role: Topic
+    role: Qualifier
     dataType: text
     length: 200
     mandatoryVariable: false
@@ -40,7 +40,7 @@ variables:
       conceptId: C78734
       href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
       submissionValue: SPECTYPE
-    role: Topic
+    role: Qualifier
     dataType: text
     length: 200
     relationship:
