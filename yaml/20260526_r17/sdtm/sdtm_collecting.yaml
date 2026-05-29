@@ -1,0 +1,52 @@
+packageDate: "2026-05-26"
+packageType: sdtm
+datasetSpecializationId: COLLECTING
+domain: BE
+shortName: Biospecimen Collection
+source: BE.BETERM
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C70945
+variables:
+  - name: BECAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: BECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: BETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: BEPARTY
+    dataElementConceptId: C117052
+    isNonStandard: false
+    codelist:
+      conceptId: C189265
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189265
+      submissionValue: ACCPARTY
+    role: Qualifier
+    dataType: text
+    length: 200
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: BESPEC
+    dataElementConceptId: C70713
+    isNonStandard: true 
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: BESPEC
+      linkingPhrase: is the material type of the subject of the activity in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: BETERM
+    mandatoryVariable: false
+    mandatoryValue: false

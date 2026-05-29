@@ -1,0 +1,48 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C161483
+ncitCode: C161483
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C161483
+parentConceptId: C25180
+categories:
+  - Oncology Standards
+  - Tumor/Lesion Identification
+  - TU
+  - RECIST 1.1
+shortName: "Non-Target Indicator"
+synonyms:
+  - NTIND
+resultScales:
+  - Nominal
+definition: "An indication as to whether a non-target tumor, lesion, or site of disease is present."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

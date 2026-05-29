@@ -1,0 +1,10 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C222260
+ncitCode: C222260
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C222260
+categories:
+  - QRS
+  - Functional Assessment
+shortName: Clinical or Research Functional Assessment Tool
+definition: Any evaluation or assessment tool used to ascertain the physical capacities or deficits of an individual.

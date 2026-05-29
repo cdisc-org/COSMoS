@@ -1,0 +1,38 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C139218
+ncitCode: C139218
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139218
+parentConceptId: C19332
+categories:
+  - Musculoskeletal Finding
+  - Personal Attribute
+shortName: Total Body Fat to Total Body Mass Ratio Measurement
+synonyms:
+  - BODYFATP
+resultScales:
+  - Quantitative
+definition: The amount of an individual's total body mass that is fat, expressed as a percent.
+dataElementConcepts:
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C48570
+    ncitCode: C48570
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48570
+    shortName: Percent Unit
+    dataType: string
+    exampleSet:
+      - "%"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

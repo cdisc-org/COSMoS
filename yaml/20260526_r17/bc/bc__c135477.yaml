@@ -1,0 +1,61 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C135477
+ncitCode: C135477
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135477
+parentConceptId: C181043
+categories:
+  - Oncology Standards
+  - Disease Response
+  - Disease Response Criteria
+  - Disease Response and Clinical Classification
+  - RS
+  - LUGANO CLASSIFICATION
+shortName: Bone Marrow Disease Involvement Indicator
+synonyms:
+  - BMIVLIND
+  - Bone Marrow Involvement Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether disease is present in the bone marrow.
+dataElementConcepts:
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+      - "Hematologist 1"
+      - "Hematologist 2"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Independent Assessor"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "U"
+      - "Y"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "LUGANO CLASSIFICATION"

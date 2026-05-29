@@ -38,11 +38,6 @@
     set &template %if %sysfunc(exist(&jsonlib..items)) %then &jsonlib..items;;
   run;  
   
-  %if %sysfunc(exist(&jsonlib..items_prepopulatedvalue)) %then %do;    
-    data work.items_prepopulatedvalue;
-      set &jsonlib..items_prepopulatedvalue;
-  %end;
-
   %if %sysfunc(exist(&jsonlib..items_valuelist)) %then %do;    
     data work.items_valuelist;
       set &jsonlib..items_valuelist end=end;
@@ -56,6 +51,19 @@
       _valuedisplay = catx(";", _valuedisplay, displayValue);
       if end then output;
     run;
+  %end;
+
+  %if %sysfunc(exist(&jsonlib..sdtmtarget_sdtmvariables)) %then %do;    
+    data work.sdtmtarget_sdtmvariables(drop=sdtmVariables:);
+      set &jsonlib..sdtmtarget_sdtmvariables;
+      length _sdtmVariables $ 512;
+      array sdtmVariables_{*} $ 512 sdtmVariables:;
+      _sdtmVariables = catx(";", OF sdtmVariables_{*});
+    run;
+    
+    proc print data=work.sdtmtarget_sdtmvariables;
+    run;
+    
   %end;
 
   proc sql;
@@ -138,6 +146,14 @@
         %end;
         , itempv.value as prepopulated_term
       %end;
+
+      %if %sysfunc(exist(&jsonlib..items_sdtmtarget)) %then %do;    
+        , itemst.sdtmAnnotation as sdtm_annotation
+      %end;  
+            
+      %if %sysfunc(exist(work.sdtmtarget_sdtmvariables)) %then %do;    
+        , stsv._sdtmVariables as sdtm_target_variable
+      %end;  
             
     from
       work.root root
@@ -169,6 +185,15 @@
       left join work.items_valuelist itemvl 
     on (itemvl.ordinal_items=item.ordinal_items)
   %end;  
+  %if %sysfunc(exist(&jsonlib..items_sdtmtarget)) %then %do;    
+      left join &jsonlib..items_sdtmtarget itemst 
+    on (itemst.ordinal_items=item.ordinal_items)
+  %end;
+  %if %sysfunc(exist(work.sdtmtarget_sdtmvariables)) %then %do;    
+      left join work.sdtmtarget_sdtmvariables stsv 
+    on (stsv.ordinal_sdtmTarget=itemst.ordinal_sdtmTarget)
+  %end;  
+    
     order by crfSpecializationId, crfItem
       ;
     ;

@@ -1,11 +1,13 @@
 %macro generate_yaml_from_crf(
   excel_file=, range=, type=, package=, override_package_date=, 
-  out_folder=, debug=0
+  out_folder=,
+  select=,
+  debug=0
   );
 
   %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
 
-  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_crf_&type._&package, drop=%str(drop=package_date));
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_crf_&type._&package, drop=%str(drop=package_date), where=&select);
 
   data bc_crf_&type._&package;
     set bc_crf_&type._&package(where=(not missing(crf_group_id)));
@@ -126,6 +128,14 @@
         if not missing(order_number) then put +4 "orderNumber:" +1 order_number;
         if missing(mandatory_variable) then mandatory_variable="N";
         put +4 "mandatoryVariable:" +1 mandatory_variable $YN.;
+        
+        %add2issues_crf(prxmatch('/^[A-Z]{0,2}(TEST|TERM|TRT)$/',strip(variable_name)) and (mandatory_variable ne "Y"),
+              %str(MANDATORY_VARIABLE_EXPECTED),
+              mandatory_variable, "", "",
+              severity=ERROR, extracode=
+              );
+        
+        
 
         if not missing(data_type) then put +4 "dataType:" +1 data_type;
         if not missing(length) then put +4 "length:" +1 length;

@@ -332,7 +332,7 @@ def main():
     workbook = load_workbook(sdtm_template)
     workbook = update_readme(workbook, "ReadMe", args.source, args.bc_date, len(sdtm_list))
     workbook = write_sdtm_dataset_specializations_to_excel(workbook, "SDTM Dataset Specializations", df)
-    workbook = write_dataframe_to_excel(workbook, "Domains", df_domain)
+    # workbook = write_dataframe_to_excel(workbook, "Domains", df_domain)
     workbook.save(args.excel_file)
     print(f"Excel file saved as {args.excel_file}")
 

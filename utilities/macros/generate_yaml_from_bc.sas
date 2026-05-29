@@ -1,12 +1,13 @@
 %macro generate_yaml_from_bc(
   excel_file=, range=, type=, package=, override_package_date=, 
   out_folder=, 
+  select=,
   debug=0
   );
 
   %let type = %sysfunc(tranwrd(&type, %str(-), %str(_)));
   
-  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package, print=999);
+  %ReadExcel(file=&excel_file, range=&range.$, dsout=bc_&type._&package, where=&select);
 
   data bc_&type._&package;
     length _order_ 8;
@@ -60,6 +61,8 @@
     
     definition = strip(definition);
     definition2 = translate (definition, "", cats(collate (1, 31), collate (128, 255)));
+    definition2 = strip(definition2);
+    definition2 = compbl(definition2);
 
     BC_ID=strip(BC_ID);
     prev_BC_ID = lag(BC_ID);
@@ -162,6 +165,9 @@
       end;
       
       call get_definitions(ncit_code, definition_nci, definition_cdisc);
+      definition_nci = compbl(definition_nci);
+      definition_nci=strip(definition_nci);
+      definition=compbl(definition);
       /*
       definition_nci=tranwrd(definition_nci, '"', '\"');
       definition_cdisc=tranwrd(definition_cdisc, '"', '\"');
@@ -174,12 +180,13 @@
                      %str(DEFINITION_MISMATCH_OR_MISSING), definition_nci, definition, "", severity=NOTE);
 
       if count = 0 then do;
-        if definition ne definition2 then putlog / "WAR" "NING: (DEFINITION) " _excel_file_ _tab_ bc_id "definition" / @5 definition / @4 definition2;
+        if definition ne definition2 then do;
+          putlog / "WAR" "NING: (DEFINITION) " _excel_file_ _tab_ bc_id "definition" / @5 definition / @5 definition2;
+        end;  
       end;
 
       if not missing(definition) then do;
         definition=tranwrd(definition, '"', '\"');
-        definition=compbl(definition);
         if index(definition, '"') or index(definition, ":") or index(definition, "-") 
           then definition=cats('"', definition, '"');;
         put "definition:" +1 definition;

@@ -1,0 +1,99 @@
+packageDate: "2026-05-26"
+packageType: bc
+conceptId: C96684
+ncitCode: C96684
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96684
+parentConceptId: C25285
+categories:
+  - Oncology Standards
+  - Tumor/Lesion Results
+  - TR
+  - RECIST 1.1
+shortName: Longest Diameter
+synonyms:
+  - LDIAM
+resultScales:
+  - Quantitative
+definition: The longest possible length of a straight line passing through the center of a circular or spheroid object that connects two points on the circumference.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "12"
+      - "15"
+      - "17"
+      - "Too Small to Measure"
+  - conceptId: C117411
+    ncitCode: C117411
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117411
+    shortName: Tumor Results Group Identifier
+    dataType: string
+    exampleSet:
+      - "Target"
+      - "New"
+  - conceptId: C117419
+    ncitCode: C117419
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117419
+    shortName: Tumor Results Reference Identifier
+    dataType: string
+    exampleSet:
+      - "IMG-00001"
+      - "IMG-00002"
+  - conceptId: C117412
+    ncitCode: C117412
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117412
+    shortName: Tumor Results Link Group
+    dataType: string
+    exampleSet:
+      - "A1"
+      - "A2"
+      - "A3"
+  - conceptId: C117413
+    ncitCode: C117413
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117413
+    shortName: Tumor Results Link Identifier
+    dataType: string
+    exampleSet:
+      - "T01"
+      - "NEW01"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "MRI"
+      - "CT Scan"
+      - "Ultrasound"
+      - "Photography"
+  - conceptId: C42578
+    ncitCode: C42578
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42578
+    shortName: Unit of Length
+    dataType: string
+    exampleSet:
+      - "mm"
