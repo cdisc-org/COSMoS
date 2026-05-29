@@ -421,13 +421,13 @@
 %let TargetFolder=&root/yaml/&folder/bc;
 %let OverrideDate=%str(2026-05-26);
 
-%let excel_file=&root/curation/draft/package17/R17_DSS_Edits.xlsx;
+%let excel_file=&root/curation/package17/R17_DSS_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_validation_fixes));
 
-%let excel_file=&root/curation/draft/package17/R17_BC_QRS_Edits.xlsx;
+%let excel_file=&root/curation/package17/R17_BC_QRS_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_QRS_Edits));
 
-%let excel_file=&root/curation/draft/package17/R17_BC_Misc_Edits.xlsx;
+%let excel_file=&root/curation/package17/R17_BC_Misc_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TU_TR_Edits));
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Misc_Edits));
 

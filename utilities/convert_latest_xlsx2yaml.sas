@@ -131,5 +131,5 @@ run;
 %mend run_latest_sdtm;
 
 
-%*run_latest_bc(release=r17);
+%run_latest_bc(release=r17);
 %run_latest_sdtm(release=r17);

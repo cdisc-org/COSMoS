@@ -92,6 +92,10 @@ variables:
   - name: URSPEC
     dataElementConceptId: C70713
     isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
     assignedTerm:
       conceptId: C13283
       value: "URINE"

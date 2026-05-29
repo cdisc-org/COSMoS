@@ -138,7 +138,7 @@ variables:
     assignedTerm:
       conceptId: C17445
       value: "CAREGIVER"
-    role: Topic
+    role: Qualifier
     relationship:
       subject: QSEVAL
       linkingPhrase: is the role of the assessor who performed the test in

@@ -4,16 +4,16 @@ from cdisc_library_client import CDISCLibraryClient
 import argparse
 
 RESPONSE_DATA = {
-    "bc_latest_package_date": "2026-03-31",
-    "bc_packages": 16,
-    "bc_biomedicalconcepts": 1345,
-    "bc_categories": 430,
-    "bc_latest_package_biomedicalconcepts": 249,
-    "sdtm_latest_package_date": "2026-03-31",
-    "sdtm_packages": 14,
+    "bc_latest_package_date": "2026-05-26",
+    "bc_packages": 17,
+    "bc_biomedicalconcepts": 1350,
+    "bc_categories": 431,
+    "bc_latest_package_biomedicalconcepts": 87,
+    "sdtm_latest_package_date": "2026-05-26",
+    "sdtm_packages": 15,
     "sdtm_datasetspecializations": 1326,
     "sdtm_domains": 32,
-    "sdtm_latest_package_datasetspecializations": 227
+    "sdtm_latest_package_datasetspecializations": 1149
 }
 
 

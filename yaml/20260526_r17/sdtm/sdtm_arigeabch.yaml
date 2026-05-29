@@ -8,6 +8,26 @@ sdtmigStartVersion: "3-4"
 sdtmigEndVersion: ""
 biomedicalConceptId: C181398
 variables:
+  - name: ISTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120525
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120525
+      submissionValue: ISTESTCD
+    assignedTerm:
+      conceptId: C181398
+      value: "ARIGEAB"
+    role: Topic
+    relationship:
+      subject: ISTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: ISTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
   - name: ISTEST
     isNonStandard: false
     codelist:
