@@ -136,6 +136,12 @@
                 %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value,
                           ", value_list=", value_list)));
 
+          %add2issues_sdtm((index(value_list, ";") = 0),
+                %str(VALUE_LIST_1_TERM),
+                "", value_list,
+                %str(cats("codelist=", codelist, ", codelist_submission_value=", codelist_submission_value,
+                          ", value_list=", value_list)), severity=NOTE);
+
           put +4 "valueList:";
           countwords=countw(value_list, ";");
           do i=1 to countwords;

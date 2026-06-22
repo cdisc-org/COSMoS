@@ -415,6 +415,7 @@
 %generate_yaml_from_bc(excel_file=&excel_file, type=lb, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_LB_Edits));
 */
 
+/*
 %let release=17;
 %let package=20260526;
 %let folder=20260526_r17;
@@ -430,6 +431,13 @@
 %let excel_file=&root/curation/package17/R17_BC_Misc_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_TU_TR_Edits));
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_Misc_Edits));
+*/
+
+%let release=18;
+%let package=20260825;
+%let folder=20260825_r18;
+%let TargetFolder=&root/yaml/&folder/bc;
+%let OverrideDate=%str(2026-08-25);
 
 /************************************************************************************************************************/
 
