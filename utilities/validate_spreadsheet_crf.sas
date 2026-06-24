@@ -588,7 +588,6 @@ title01 "&now";
 
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_QRS_Edits.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc18_02);
-%ReadExcel(file=&excel_file, range=%str(SDTM_DSS_Edits)$, dsout=sdtm18_03, drop=%str(drop=length significant_digits format));
 
 %let excel_file=&root/curation/draft/package18/R18_BC_PASI_FREDRIKSSON.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_PASI_FREDRIKSSON)$, dsout=bc18_03);
@@ -597,6 +596,7 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package18/R18_BC_Surrogates.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_SURROGATES)$, dsout=bc18_04);
 %ReadExcel(file=&excel_file, range=%str(SDTM_SURROGATES)$, dsout=sdtm18_05, drop=%str(drop=length significant_digits format));
+
 
 /* Select BCs and SDTMs*/
 
