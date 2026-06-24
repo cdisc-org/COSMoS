@@ -24,9 +24,9 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20260526_r17/bc",
+            "${workspaceFolder}/yaml/20260825_r18/bc",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r17_draft.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r18_draft.xlsx",
             "-d",
             "2026-05-26"
           ],
@@ -42,9 +42,9 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20260526_r17/sdtm",
+            "${workspaceFolder}/yaml/20260825_r18/sdtm",
             "-o",
-            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r17_draft.xlsx",
+            "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r18_draft.xlsx",
             "-d",
             "2026-05-26"
           ],
@@ -108,7 +108,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20260526_r17/bc",
+            "${workspaceFolder}/yaml/20260825_r18/bc",
             "-s",
             "${workspaceFolder}/model/cosmos_bc_model.yaml",
             "-c",
@@ -156,7 +156,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20260526_r17/sdtm",
+            "${workspaceFolder}/yaml/20260825_r18/sdtm",
             "-s",
             "${workspaceFolder}/model/cosmos_sdtm_model.yaml",
             "-c",
