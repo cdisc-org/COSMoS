@@ -28,7 +28,7 @@
             "-o",
             "${workspaceFolder}/curation/draft/cdisc_biomedical_concepts_r18_draft.xlsx",
             "-d",
-            "2026-05-26"
+            "2026-08-25"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -46,7 +46,7 @@
             "-o",
             "${workspaceFolder}/curation/draft/cdisc_sdtm_dataset_specializations_r18_draft.xlsx",
             "-d",
-            "2026-05-26"
+            "2026-08-25"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },

@@ -442,6 +442,9 @@
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BrCa));
 
+%let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BrCa));
+
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_QRS_Edits.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_QRS_Edits));
 
@@ -451,6 +454,8 @@
 %let excel_file=&root/curation/draft/package18/R18_BC_Surrogates.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_SURROGATES));
 
+%let excel_file=&root/curation/draft/package18/R18_BC_SDTM_SC.xlsx;
+%generate_yaml_from_bc(excel_file=&excel_file, type=sc, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_SC));
 
 /************************************************************************************************************************/
 

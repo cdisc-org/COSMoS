@@ -168,7 +168,7 @@
          shortName char(256),
          crfItem char(32),
          variable char(32),
-         questionText char(128),
+         questionText char(1024),
          prompt char(64),
          completionInstructions char(1024),
          orderNumber num,

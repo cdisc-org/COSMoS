@@ -581,22 +581,28 @@ title01 "&now";
 %let excel_file=&root/curation/draft/package18/R18_SDTM_IS_MAST7.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM_IS)$, dsout=sdtm18_01, drop=%str(drop=length significant_digits format));
 
-
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_BrCa)$, dsout=bc18_01);
 %ReadExcel(file=&excel_file, range=%str(SDTM_BrCa)$, dsout=sdtm18_02, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_BrCa)$, dsout=bc18_02);
+%ReadExcel(file=&excel_file, range=%str(SDTM_BrCa)$, dsout=sdtm18_03, drop=%str(drop=length significant_digits format));
+
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_QRS_Edits.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc18_02);
+%ReadExcel(file=&excel_file, range=%str(BC_QRS_Edits)$, dsout=bc18_03);
 
 %let excel_file=&root/curation/draft/package18/R18_BC_PASI_FREDRIKSSON.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_PASI_FREDRIKSSON)$, dsout=bc18_03);
+%ReadExcel(file=&excel_file, range=%str(BC_PASI_FREDRIKSSON)$, dsout=bc18_04);
 %ReadExcel(file=&excel_file, range=%str(SDTM_PASI_FREDRIKSSON)$, dsout=sdtm18_04, drop=%str(drop=length significant_digits format));
 
 %let excel_file=&root/curation/draft/package18/R18_BC_Surrogates.xlsx;
-%ReadExcel(file=&excel_file, range=%str(BC_SURROGATES)$, dsout=bc18_04);
+%ReadExcel(file=&excel_file, range=%str(BC_SURROGATES)$, dsout=bc18_05);
 %ReadExcel(file=&excel_file, range=%str(SDTM_SURROGATES)$, dsout=sdtm18_05, drop=%str(drop=length significant_digits format));
 
+%let excel_file=&root/curation/draft/package18/R18_BC_SDTM_SC.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_SC)$, dsout=bc18_06);
+%ReadExcel(file=&excel_file, range=%str(SDTM_SC)$, dsout=sdtm18_06, drop=%str(drop=length significant_digits format));
 
 /* Select BCs and SDTMs*/
 
@@ -633,6 +639,11 @@ quit;
 %let release_crf=xx;
 %let dropit=package_date categories length significant_digits;
 
+
+%let excel_file=&root/curation/draft/crf/cdisc_crf_specializations_draft_20260623.xlsx;
+%ReadExcel(file=&excel_file, range=%str(CRF Specializations)$, dsout=collectxx_01, drop=%str(drop=&dropit));
+
+/*
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
 
@@ -692,6 +703,7 @@ quit;
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_KFSS)$, dsout=collectxx_20, drop=%str(drop=&dropit));
+*/
 
 /************************************************************************************************************************/
 
