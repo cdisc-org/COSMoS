@@ -5,6 +5,19 @@ nav:
     #- About: about.md
 plugins:
     - search
-    - mermaid2
+    - mermaid2:
+        arguments:
+          startOnLoad: false
+          mermaid:
+              er:
+                  useMaxWidth: true
+markdown_extensions:
+    - markdown.extensions.md_in_html
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:mermaid2.fence_mermaid_custom
+
 docs_dir: project/docs
 site_dir: docs
