@@ -66,7 +66,6 @@ Below is an overview of the contents of this repository.
   The [utilities](https://github.com/cdisc-org/COSMoS/tree/main/utilities) folder contains utilities to:
   - Validate the curation spreadsheets
   - Generate YAML files from the curation spreadsheets
-  - Create Excel spreadsheets from JSON files requested through the API
 
 - **yaml**
 
