@@ -3,8 +3,8 @@ call python create_svg.py ../model/cosmos_crf_model.yaml ../model/cosmos_crf_mod
 ..\venv\Scripts\gen-erdiagram.exe --no-structural ../model/cosmos_crf_model.yaml > ../model/cosmos_crf_model.md
 call gen-yuml ../model/cosmos_crf_model.yaml > ../model/cosmos_crf_model.yuml
 call gen-plantuml ../model/cosmos_crf_model.yaml --directory ..\model
-call gen-project -d ../project/crf ../model/cosmos_crf_model.yaml
-
+REM  call gen-project -d ../project/crf ../model/cosmos_crf_model.yaml
+call gen-doc .\model\cosmos_crf_model.yaml --directory project/crf/docs/ --subfolder-type-separation --hierarchical-class-view --diagram-type er_diagram --sort-by rank --include-top-level-diagram --truncate-descriptions false
 call gen-python ../model/cosmos_crf_model.yaml > ../project/crf/cosmos_crf_model.py
 call gen-python-api -R CRFGroup ../model/cosmos_crf_model.yaml > ../project/crf/cosmos_crf_model_api.py
 call gen-pydantic ../model/cosmos_crf_model.yaml > ../project/crf/cosmos_crf_model_pydantic.py
