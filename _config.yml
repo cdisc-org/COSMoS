@@ -1,0 +1,8 @@
+exclude:
+  - curation/
+  - yaml/
+  - scripts/
+  - utilities/
+  - .vscode/
+  - LICENSE
+  - requirements.txt
