@@ -3,7 +3,6 @@ exclude:
   - yaml/
   - scripts/
   - utilities/
-  - bc_starter_package/
   - .vscode/
   - LICENSE
   - requirements.txt
