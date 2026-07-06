@@ -1,0 +1,57 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C141697
+ncitCode: C141697
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C141697
+parentConceptId: C141675
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - AJCC Cancer Staging Manual 7th Edition Clincal Classification
+  - AJCC V7
+  - AJCC V7 Clinical Classification Question
+shortName: "AJCC v7 - Regional Lymph Nodes (N)"
+synonyms:
+  - "AJCC1-Regional Lymph Nodes (N)"
+  - AJCC102
+definition: AJCC Cancer Staging Manual 7th Edition (AJCC v7) Regional lymph nodes (N).
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AJCC V7"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "NX"
+      - "N0"
+      - "N1"
+      - "N2"
+      - "N3"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: string
+    exampleSet:
+      - "NX"
+      - "N0"
+      - "N1"
+      - "N2"
+      - "N3"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

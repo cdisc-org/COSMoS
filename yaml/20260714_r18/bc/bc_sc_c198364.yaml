@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C198364
+ncitCode: C198364
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198364
+categories:
+  - Subject Characteristics
+shortName: Socioeconomic Class
+synonyms:
+  - SOCECCLS
+  - Socioeconomic Class
+  - Socioeconomic Classification
+resultScales:
+  - Ordinal
+definition: A characterization or classification of an individual that takes into account economics, demographics, and social interactions, used to stratify individual behaviors within a society or culture.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

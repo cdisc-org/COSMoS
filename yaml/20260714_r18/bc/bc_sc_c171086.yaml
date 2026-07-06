@@ -1,0 +1,9 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C171086
+ncitCode: C171086
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171086
+categories:
+  - Personal Attributes
+shortName: Person Status
+definition: The status of a person at a given time.

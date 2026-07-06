@@ -1,0 +1,47 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102711
+ncitCode: C102711
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102711
+parentConceptId: C17103
+categories:
+  - Subject Characteristics
+shortName: Social Risk Factor
+synonyms:
+  - RISKSOC
+  - Social Risk Factor
+resultScales:
+  - Nominal
+  - Narrative
+definition: Social factors such as personal behavior, lifestyle, or environment belonging to the subject which are known to increase the likelihood of infection and disease.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "CONTACT WITH TUBERCULOSIS SOURCE"
+      - "CURRENT OR RECENT EMPLOYEE OR VOLUNTEER IN HOMELESS SHELTER"
+      - "CURRENT OR RECENT EMPLOYEE OR VOLUNTEER IN JAIL OR PRISON"
+      - "CURRENT OR RECENT EMPLOYEE OR VOLUNTEER IN NURSING HOME"
+      - "HOMELESS DURING PAST YEAR"
+      - "IMMIGRANT FROM HIGH TUBERCULOSIS PREVALENT AREA"
+      - "INCARCERATION"
+      - "LIVED IN REFUGEE CAMP"
+      - "LONG-TERM FACILITY RESIDENT"
+      - "MIGRATORY WORKER"
+      - "REFUGEE FROM HIGH TUBERCULOSIS PREVALENT AREA"
+      - "TRAVEL TO HIGH BURDEN COUNTRY"
+      - "UNEMPLOYMENT"
+      - "CURRENTLY OR PREVIOUSLY TATTOOED"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

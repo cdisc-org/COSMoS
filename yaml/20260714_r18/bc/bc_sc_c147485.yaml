@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C147485
+ncitCode: C147485
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C147485
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Student Indicator
+synonyms:
+  - STDNTIND
+  - Student Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the subject or associated person is enrolled in school.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

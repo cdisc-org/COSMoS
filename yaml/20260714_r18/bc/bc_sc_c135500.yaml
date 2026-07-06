@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C135500
+ncitCode: C135500
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135500
+parentConceptId: C25337
+categories:
+  - Subject Characteristics
+shortName: Number of Biological Brothers
+synonyms:
+  - BIOBRON
+  - Number of Biological Brothers
+  - Number of Brothers, Biological
+resultScales:
+  - Quantitative
+definition: The number of brothers that are biologically related to the subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: integer
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

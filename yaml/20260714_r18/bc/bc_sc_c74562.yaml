@@ -1,0 +1,9 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C74562
+ncitCode: C74562
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74562
+categories:
+  - Integumentary System Findings
+shortName: Skin Classification Scheme
+definition: A data system used to specify attributes of the skin.

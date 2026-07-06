@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C184481
+ncitCode: C184481
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C184481
+parentConceptId: C184335
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Dietary Mineral Measurements
+shortName: Dietary Phosphorus Measurement
+synonyms:
+  - DP
+  - Dietary Phosphorus
+resultScales:
+  - Quantitative
+definition: A determination of the phosphorus in a nutritional product or meal, or a portion thereof.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42579
+    ncitCode: C42579
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
+    shortName: Unit of Mass
+    dataType: string
+    exampleSet:
+      - "Milligrams"

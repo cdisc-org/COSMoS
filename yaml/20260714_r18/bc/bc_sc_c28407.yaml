@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C28407
+ncitCode: C28407
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28407
+parentConceptId: C19332
+categories:
+  - Subject Characteristics
+shortName: National Origin
+synonyms:
+  - NATORIG
+  - National Origin
+resultScales:
+  - Nominal
+definition: System of classification based on nation from which a person originates, regardless of the nation in which he/she currently resides.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+    exampleSet:
+      - "USA"
+      - "CAN"
+      - "MEX"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

@@ -1,0 +1,9 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C41085
+ncitCode: C41085
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41085
+categories:
+  - Contact Information
+shortName: Person Contact Information
+definition: Information regarding the person who is acting as a channel for communication between groups.

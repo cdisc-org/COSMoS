@@ -1,0 +1,37 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C198362
+ncitCode: C198362
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C198362
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Enrolled in Daycare Indicator
+synonyms:
+  - DAYCRIND
+  - Day Care Indicator
+  - Daycare Indicator
+  - Enrolled in Daycare Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the individual is enrolled at a daycare facility.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

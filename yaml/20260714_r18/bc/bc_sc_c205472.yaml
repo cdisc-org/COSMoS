@@ -1,0 +1,36 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C205472
+ncitCode: C205472
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C205472
+categories:
+  - Subject Characteristics
+shortName: Sex Assigned at Birth
+synonyms:
+  - SEXABRTH
+  - Birth Sex
+  - Sex Assigned at Birth
+resultScales:
+  - Nominal
+definition: The male or female designation that doctors ascribe to a newborn infant, usually based on the appearance of the child's external genitalia, and that is marked on their birth records.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "FEMAL"
+      - "MALE"
+      - "INTERSEX"
+      - "NOT REPORTED"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

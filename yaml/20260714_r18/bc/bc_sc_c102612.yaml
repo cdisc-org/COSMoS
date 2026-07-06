@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102612
+ncitCode: C102612
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102612
+parentConceptId: C16632
+categories:
+  - Subject Characteristics
+shortName: Country of Potential Disease Exposure
+synonyms:
+  - CTRYDEXP
+  - Country of Potential Disease Exposure
+resultScales:
+  - Nominal
+definition: System of classification based on the nation in which an individual was exposed to a disease, regardless of the nation in which he/she currently resides.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "USA"
+      - "CAN"
+      - "MEX"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

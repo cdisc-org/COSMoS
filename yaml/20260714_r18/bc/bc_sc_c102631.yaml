@@ -1,0 +1,34 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102631
+ncitCode: C102631
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102631
+parentConceptId: C25164
+categories:
+  - Subject Characteristics
+shortName: Entry Date from Country of Potential Disease Exposure
+synonyms:
+  - CTRYDDTC
+  - Entry Date from Country of Potential Disease Exposure
+  - Entry Date from Ptntl Cntry Disease Exp
+resultScales:
+  - Temporal
+definition: The date on which the subject arrived in the reporting country from the country of potential disease exposure.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: datetime
+    exampleSet:
+      - "ISO 8601"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

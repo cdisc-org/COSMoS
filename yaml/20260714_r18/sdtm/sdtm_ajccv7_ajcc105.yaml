@@ -1,0 +1,134 @@
+packageDate: "2026-07-14"
+packageType: sdtm
+datasetSpecializationId: AJCCV7_AJCC105
+domain: RS
+shortName: "AJCC v7 - Residual Tumor (R)"
+source: RS.RSTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: "3-4"
+biomedicalConceptId: C176205
+variables:
+  - name: RSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C141655
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C141655
+      submissionValue: AJCC1TC
+    assignedTerm:
+      conceptId: C176205
+      value: "AJCC105"
+    role: Topic
+    relationship:
+      subject: RSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: RSTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: RSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C141654
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C141654
+      submissionValue: AJCC1TN
+    assignedTerm:
+      conceptId: C176205
+      value: "AJCC1-Residual Tumor (R)"
+    role: Qualifier
+    relationship:
+      subject: RSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: RSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    codelist:
+      conceptId: C124298
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124298
+      submissionValue: ONCRSCAT
+    assignedTerm:
+      conceptId: C125755
+      value: "AJCC V7"
+    role: Qualifier
+    relationship:
+      subject: RSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    comparator: EQ
+  - name: RSSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: RSSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: RSCAT
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: RSORRES
+    dataElementConceptId: C91106
+    isNonStandard: false
+    valueList:
+      - "RX"
+      - "R0"
+      - "R1"
+      - "R2"
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: RSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: RSSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "RX"
+      - "R0"
+      - "R1"
+      - "R2"
+    role: Qualifier
+    dataType: text
+    length: 2
+    relationship:
+      subject: RSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: RSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: RSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: RSTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

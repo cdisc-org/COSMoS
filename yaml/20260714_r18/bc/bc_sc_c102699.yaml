@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102699
+ncitCode: C102699
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102699
+parentConceptId: C41085
+categories:
+  - Subject Characteristics
+shortName: Priority of Disease Contact
+synonyms:
+  - PRICON
+  - Priority of Disease Contact
+resultScales:
+  - Ordinal
+definition: The categorization of individuals with or without the potential for having tuberculosis.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

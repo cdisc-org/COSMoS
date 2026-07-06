@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C205754
+ncitCode: C205754
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C205754
+parentConceptId: C18823
+categories:
+  - Subject Characteristics
+shortName: Tribal Affiliation
+synonyms:
+  - TRIBAFIL
+  - Tribal Affiliation
+resultScales:
+  - Nominal
+definition: The tribe that an individual associates themselves with, regardless of whether or not they are an enrolled member.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

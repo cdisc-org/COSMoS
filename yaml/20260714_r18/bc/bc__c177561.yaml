@@ -1,0 +1,15 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C177561
+ncitCode: C177561
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C177561
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - AJCC Cancer Staging Manual
+shortName: AJCC Cancer Staging Manual
+synonyms:
+  - AJCC Cancer Staging Manual
+  - ajcc staging system edition
+definition: The criteria developed by the American Joint Committee on Cancer (AJCC) for the classification and staging of neoplastic diseases.

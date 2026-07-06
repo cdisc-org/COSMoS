@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C209685
+ncitCode: C209685
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C209685
+parentConceptId: C209446
+categories:
+  - Subject Characteristics
+shortName: Military Health Insurance Indicator
+synonyms:
+  - HIMILIND
+  - Military Health Insurance Indicator
+resultScales:
+  - Nominal
+definition: "An indication as to whether the subject is covered by their own or a family member's military-based health insurance."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

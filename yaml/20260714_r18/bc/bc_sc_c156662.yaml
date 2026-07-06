@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C156662
+ncitCode: C156662
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C156662
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Small for Gestational Age Indicator
+synonyms:
+  - SMGAIND
+  - Small for Gestational Age Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the fetus or infant is small for the gestational age.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

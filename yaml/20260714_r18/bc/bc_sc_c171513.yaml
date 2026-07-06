@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C171513
+ncitCode: C171513
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171513
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Infant Less Than One Year Indicator
+synonyms:
+  - INL1YIND
+  - Infant Less Than One Year Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the subject is less than one year of age.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

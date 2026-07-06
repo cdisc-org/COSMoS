@@ -1,0 +1,10 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C79427
+ncitCode: C79427
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C79427
+categories:
+  - Procedures
+  - Interventions
+shortName: Breast Cancer Diagnostic or Therapeutic Procedure
+definition: Any procedure for diagnosis or treatment of breast cancer.

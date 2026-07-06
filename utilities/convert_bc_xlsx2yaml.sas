@@ -434,10 +434,10 @@
 */
 
 %let release=18;
-%let package=20260825;
-%let folder=20260825_r18;
+%let package=20260714;
+%let folder=20260714_r18;
 %let TargetFolder=&root/yaml/&folder/bc;
-%let OverrideDate=%str(2026-08-25);
+%let OverrideDate=%str(2026-07-14);
 
 %let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG.xlsx;
 %generate_yaml_from_bc(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, range=%str(BC_BrCa));

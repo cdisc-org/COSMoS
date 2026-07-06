@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C209691
+ncitCode: C209691
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C209691
+parentConceptId: C209447
+categories:
+  - Subject Characteristics
+shortName: "State-Specific Medicaid Program Name"
+synonyms:
+  - SSMCDNAM
+  - "State-Specific Medicaid Program Name"
+resultScales:
+  - Nominal
+definition: "The name of the U.S. state-specific Medicaid program."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

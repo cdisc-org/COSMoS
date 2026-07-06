@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C139271
+ncitCode: C139271
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139271
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: CDC HIV High Risk Donor Indicator
+synonyms:
+  - HIVHRIND
+  - CDC HIV High Risk Donor Indicator
+resultScales:
+  - Nominal
+definition: "An indication as to whether an organ donor may fall into one or more behavioral categories associated with increased risk of human immunodeficiency virus (HIV) infection, as defined by the 1994 Centers for Disease Control (CDC) Public Health Service Criteria for High Risk Behavior (Guidelines for preventing transmission of human immunodeficiency virus through transplantation of human tissue and organs. Centers for Disease Control and Prevention. MMWR Recomm Rep 1994; 43: 1-17)."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

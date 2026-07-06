@@ -1,0 +1,232 @@
+packageDate: "2026-07-14"
+packageType: sdtm
+datasetSpecializationId: ARIGEABTMAST7
+domain: IS
+shortName: "Allergen-induced IgE Antibody for Tomato Antigen Mast 7-Class"
+source: IS.ISTESTCD
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C181398
+variables:
+  - name: ISTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120525
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120525
+      submissionValue: ISTESTCD
+    assignedTerm:
+      conceptId: C181398
+      value: "ARIGEAB"
+    role: Topic
+    relationship:
+      subject: ISTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: ISTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: ISTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120526
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120526
+      submissionValue: ISTEST
+    assignedTerm:
+      conceptId: C181398
+      value: "Allergen-induced IgE Antibody"
+    role: Qualifier
+    relationship:
+      subject: ISTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: ISBDAGNT
+    dataElementConceptId: C42647
+    isNonStandard: false
+    codelist:
+      conceptId: C181169
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C181169
+      submissionValue: ISBDAGT
+    assignedTerm:
+      conceptId: C202356
+      value: "TOMATO ANTIGEN"
+    role: Qualifier
+    relationship:
+      subject: ISBDAGNT
+      linkingPhrase: is the substance bound to the analyte in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C189267
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C189267
+      submissionValue: ISFTSDTL
+    assignedTerm:
+      conceptId: C202374
+      value: "MAST 7-CLASS"
+    role: Qualifier
+    relationship:
+      subject: ISTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: ISSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: ISCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: ISORRES
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "CLASS 0"
+      - "CLASS 1"
+      - "CLASS 2"
+      - "CLASS 3"
+      - "CLASS 4"
+      - "CLASS 5"
+      - "CLASS 6"
+    role: Qualifier
+    dataType: text
+    length: 10
+    relationship:
+      subject: ISORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: ISSTRESC
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: ISSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true 
+  - name: ISSTRESN
+    dataElementConceptId: C46126
+    isNonStandard: false
+    valueList:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+    role: Qualifier
+    dataType: integer
+    length: 1
+    relationship:
+      subject: ISSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true 
+  - name: ISSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C13325
+      value: "SERUM"
+    role: Qualifier
+    relationship:
+      subject: ISSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    assignedTerm:
+      conceptId: C111235
+      value: "IMMUNOCHEMILUMINOMETRIC ASSAY"
+    role: Qualifier
+    relationship:
+      subject: ISMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: ISTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: ISDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: ISDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: ISTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Collected
+    originSource: Investigator

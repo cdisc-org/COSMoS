@@ -476,10 +476,10 @@ run;
 */
 
 %let release=18;
-%let package=20260825;
-%let folder=20260825_r18;
+%let package=20260714;
+%let folder=20260714_r18;
 %let TargetFolder=&root/yaml/&folder/sdtm;
-%let OverrideDate=%str(2026-08-25);
+%let OverrideDate=%str(2026-07-14);
 
 %let checkrelationships=1;
 

@@ -1,0 +1,108 @@
+packageDate: "2026-07-14"
+packageType: sdtm
+datasetSpecializationId: INCMLVL
+domain: SC
+shortName: Income Level
+source: SC.SCTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C154890
+variables:
+  - name: SCTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C74559
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74559
+      submissionValue: SCTESTCD
+    assignedTerm:
+      conceptId: C154890
+      value: "INCMLVL"
+    role: Topic
+    relationship:
+      subject: SCTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: SCTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: SCTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C103330
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C103330
+      submissionValue: SCTEST
+    assignedTerm:
+      conceptId: C154890
+      value: "Income Level"
+    role: Qualifier
+    relationship:
+      subject: SCTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: SCCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: SCCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: SCORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: SCORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true 
+  - name: SCDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: SCDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: SCTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Sponsor
+  - name: SCSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: SCSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: SCTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 

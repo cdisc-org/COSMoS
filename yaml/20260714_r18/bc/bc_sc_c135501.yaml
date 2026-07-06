@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C135501
+ncitCode: C135501
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135501
+parentConceptId: C25337
+categories:
+  - Subject Characteristics
+shortName: Number of Biological Sisters
+synonyms:
+  - BIOSISN
+  - Number of Biological Sisters
+  - Number of Sisters, Biological
+resultScales:
+  - Quantitative
+definition: The number of sisters that are biologically related to the subject.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

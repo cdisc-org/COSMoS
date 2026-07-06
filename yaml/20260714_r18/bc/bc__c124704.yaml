@@ -1,0 +1,47 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C124704
+ncitCode: C124704
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124704
+parentConceptId: C82394
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - "Tanner Scale-Girl Clinical Classification Question"
+  - Tanner Scale Girl Version
+  - TANN01
+  - TANNER SCALE GIRL
+  - Tanner Scale Girl Version
+  - "Tanner Scale-Girl"
+shortName: Tanner Scale Girl Version
+synonyms:
+  - TANN01
+  - TANNER SCALE GIRL
+  - "Tanner Scale-Girl"
+definition: A standardized rating scale developed by Marshal and Tanner in 1969, which is a classification system used to measure physical development in children, adolescents and adults. The girl version of the tanner scale assesses the different stages of physical maturity based on breast development and the growth of pubic hair. This instrument has 5 stages.
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "TANNER SCALE GIRL"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

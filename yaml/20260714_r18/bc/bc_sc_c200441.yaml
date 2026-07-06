@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C200441
+ncitCode: C200441
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C200441
+parentConceptId: C16632
+categories:
+  - Subject Characteristics
+shortName: Birth Country
+synonyms:
+  - BRCTRY
+  - Country of Birth
+  - Birth Country
+resultScales:
+  - Nominal
+definition: The country where a subject was born.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Australia"
+      - "Austria"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
