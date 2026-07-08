@@ -158,6 +158,8 @@ variables:
     isNonStandard: false
     valueList:
       - "Gy"
+      - "cGy"
+      - "Rad"
     role: Qualifier
     dataType: text
     length: 20
@@ -282,6 +284,21 @@ variables:
       linkingPhrase: is the intended disease outcome for
       predicateTerm: QUALIFIES
       object: PRTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: PRLNTX
+    isNonStandard: true 
+    valueList:
+      - "FIRST LINE"
+      - "SECOND LINE"
+      - "THIRD LINE"
+      - "FOURTH LINE"
+      - "FIFTH LINE OR GREATER"
+    role: Qualifier
+    dataType: text
+    length: 40
     mandatoryVariable: false
     mandatoryValue: false
     originType: Collected

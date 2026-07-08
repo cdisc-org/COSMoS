@@ -137,3 +137,5 @@ dataElementConcepts:
     dataType: string
     exampleSet:
       - "Gy"
+      - "cGy"
+      - "Rad"
