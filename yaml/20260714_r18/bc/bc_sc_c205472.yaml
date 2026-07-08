@@ -25,7 +25,7 @@ dataElementConcepts:
     shortName: Observation Result
     dataType: string
     exampleSet:
-      - "FEMAL"
+      - "FEMALE"
       - "MALE"
       - "INTERSEX"
       - "NOT REPORTED"
