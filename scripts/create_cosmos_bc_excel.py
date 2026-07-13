@@ -329,8 +329,12 @@ def update_readme(workbook, sheetname, source, date, count):
 
 def set_cmd_line_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--source", required=True, default="API", help="Input source (YAML/API)", dest="source")
-    parser.add_argument("-y", "--directory", help="Input folder with YAML files", dest="directory")
+    parser.add_argument(
+        "-s", "--source", required=True, default="API", help="Input source (YAML/APIDEV/API)", dest="source"
+    )
+    parser.add_argument(
+        "-y", "--directory", help="Input folder with YAML files", dest="directory"
+    )
     parser.add_argument(
         "-o",
         "--excel_file",
@@ -376,6 +380,21 @@ def main():
             client._session.verify = False
             requests.urllib3.disable_warnings()
 
+    if args.source.lower() == "apidev":
+        api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
+        base_api_url = os.environ.get("CDISC_LIBRARY_API_URL_DEV")
+        if not api_key or not base_api_url:
+            print("Please set the CDISC_LIBRARY_API_KEY_DEV and CDISC_LIBRARY_API_URL_DEV environment variables.")
+            return
+
+        cosmos_api_version = "v2"
+        client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
+
+        print(f"URL: {base_api_url}")
+        if "dev" in base_api_url:
+            client._session.verify = False
+            requests.urllib3.disable_warnings()
+
     if args.source.lower() == "yaml":
         if args.directory is None:
             print("Please provide a directory with YAML files using -y or --directory")
@@ -404,12 +423,12 @@ def main():
     df.to_csv(csv_file, index=False, columns=HEADERS_BC)
     print(f"CSV file saved as {csv_file}")
 
-    if "latest" in args.excel_file:
-        csv_file = args.excel_file.replace("_latest.xlsx", "_hierarchy_latest.csv")
-    else:
-        csv_file = args.excel_file.replace(".xlsx", "_hierarchy.csv")
-    df_hierarchy.to_csv(csv_file, index=False)
-    print(f"CSV file saved as {csv_file}")
+    csv_file_hierarchy = args.excel_file
+    csv_file_hierarchy = csv_file_hierarchy.replace("_latest.xlsx", "_hierarchy_latest.csv")
+    csv_file_hierarchy = csv_file_hierarchy.replace("_latest_dev.xlsx", "_hierarchy_latest_dev.csv")
+    csv_file_hierarchy = csv_file_hierarchy.replace("_draft.xlsx", "_draft_hierarchy.csv")
+    df_hierarchy.to_csv(csv_file_hierarchy, index=False)
+    print(f"CSV file saved as {csv_file_hierarchy}")
 
 
 if __name__ == "__main__":

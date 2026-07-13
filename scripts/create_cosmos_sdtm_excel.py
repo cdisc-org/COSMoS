@@ -266,7 +266,9 @@ def write_dataframe_to_excel(workbook, sheetname, df):
 
 def set_cmd_line_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--source", required=True, default="API", help="Input source (YAML/API)", dest="source")
+    parser.add_argument(
+        "-s", "--source", required=True, default="API", help="Input source (YAML/APIDEV/API)", dest="source"
+    )
     parser.add_argument("-y", "--directory", help="Input folder with YAML files", dest="directory")
     parser.add_argument(
         "-o",
@@ -304,6 +306,21 @@ def main():
         base_api_url = os.environ.get("CDISC_LIBRARY_API_URL")
         if not api_key or not base_api_url:
             print("Please set the CDISC_LIBRARY_API_KEY and CDISC_LIBRARY_API_URL environment variables.")
+            return
+
+        cosmos_api_version = "v2"
+        client = CDISCLibraryClient(api_key=api_key, base_api_url=base_api_url)
+
+        print(f"URL: {base_api_url}")
+        if "dev" in base_api_url:
+            client._session.verify = False
+            requests.urllib3.disable_warnings()
+
+    if args.source.lower() == "apidev":
+        api_key = os.environ.get("CDISC_LIBRARY_API_KEY_DEV")
+        base_api_url = os.environ.get("CDISC_LIBRARY_API_URL_DEV")
+        if not api_key or not base_api_url:
+            print("Please set the CDISC_LIBRARY_API_KEY_DEV and CDISC_LIBRARY_API_URL_DEV environment variables.")
             return
 
         cosmos_api_version = "v2"

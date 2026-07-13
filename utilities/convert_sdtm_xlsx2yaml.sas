@@ -486,22 +486,22 @@ run;
 %let excel_file=&root/curation/package06/BC_Package_R6_LZZT.xlsx;
 %get_Subset_Codelists(file=&excel_file, range=Subset Codelist Example$, dsout=subsets);
 
-%let excel_file=&root/curation/draft/package18/R18_SDTM_IS_MAST7.xlsx;
+%let excel_file=&root/curation/package18/R18_SDTM_IS_MAST7.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=is, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_IS), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG.xlsx;
+%let excel_file=&root/curation/package18/R18_BC_DSS_BrCa_TAUG.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_BrCa), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx;
+%let excel_file=&root/curation/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_BrCa), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package18/R18_BC_PASI_FREDRIKSSON.xlsx;
+%let excel_file=&root/curation/package18/R18_BC_PASI_FREDRIKSSON.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_PASI_FREDRIKSSON), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package18/R18_BC_Surrogates.xlsx;
+%let excel_file=&root/curation/package18/R18_BC_Surrogates.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SURROGATES), debug=0, check_relationships=&checkrelationships);
 
-%let excel_file=&root/curation/draft/package18/R18_BC_SDTM_SC.xlsx;
+%let excel_file=&root/curation/package18/R18_BC_SDTM_SC.xlsx;
 %generate_yaml_from_sdtm(excel_file=&excel_file, type=, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, subsetsDS=subsets, range=%str(SDTM_SC), debug=0, check_relationships=&checkrelationships);
 
 

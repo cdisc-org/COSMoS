@@ -69,6 +69,38 @@
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
         {
+          "name": "DEV:Create BC Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_bc_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "APIDEV",
+            "-o",
+            "${workspaceFolder}/export/cdisc_biomedical_concepts_latest_dev.xlsx",
+            "-d",
+            "2026-07-14"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
+          "name": "DEV:Create SDTM Excel",
+          "type": "debugpy",
+          "request": "launch",
+          "program": "${workspaceFolder}/scripts/create_cosmos_sdtm_excel.py",
+          "console": "integratedTerminal",
+          "args": [
+            "-s",
+            "APIDEV",
+            "-o",
+            "${workspaceFolder}/export/cdisc_sdtm_dataset_specializations_latest_dev.xlsx",
+            "-d",
+            "2026-07-14"
+          ],
+            "env": { "PYTHONPATH": "${workspaceRoot}"}
+        },
+        {
           "name": "Create BC Excel",
           "type": "debugpy",
           "request": "launch",
