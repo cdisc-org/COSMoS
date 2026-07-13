@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C154890
+ncitCode: C154890
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C154890
+parentConceptId: C41150
+categories:
+  - Subject Characteristics
+shortName: Income Level
+synonyms:
+  - INCMLVL
+  - Income Level
+resultScales:
+  - Ordinal
+  - Quantitative
+definition: An indication of the position on a scale measuring compensation or monetary support.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

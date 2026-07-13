@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C132460
+ncitCode: C132460
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132460
+parentConceptId: C19332
+categories:
+  - Subject Characteristics
+shortName: Secondary Language Spoken
+synonyms:
+  - LNGSPS
+  - Secondary Language Spoken
+resultScales:
+  - Nominal
+definition: Additional language(s) that is spoken by the subject but which is not considered the primary language.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

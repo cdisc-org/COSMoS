@@ -17,9 +17,13 @@ run;
 %let release=xx;
 %let package=20260630;
 %let folder=20260630_draft;
-%let TargetFolder=&root/yaml/&folder/crf;
+%let TargetFolder=&root/yaml/&folder.2/crf;
 %let OverrideDate=%str(2026-06-30);
 
+%let excel_file=&root/curation/draft/crf/cdisc_crf_specializations_draft_20260623.xlsx;
+%generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF Specializations), type=ae, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
+
+/*
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_AE), type=ae, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
 
@@ -74,6 +78,12 @@ run;
 %let excel_file=&root/curation/draft/crf/CRF_QRS_TTS.xlsx;
 %generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_TTS), type=tts, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
 
+%let excel_file=&root/curation/draft/crf/CRF_QRS_ECOG.xlsx;
+%generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_ECOG), type=ecog, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
+
+%let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
+%generate_yaml_from_crf(excel_file=&excel_file, range=%str(CRF_QRS_KFSS), type=kfss, package=&package, override_package_date=&OverrideDate, out_folder=&TargetFolder, debug=0);
+*/
 
 ods listing close;
 ods html5 file="&root/utilities/reports/convert_crf_xlsx2yaml_issues_R&release._&todays..html";

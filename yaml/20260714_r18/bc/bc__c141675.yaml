@@ -1,0 +1,10 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C141675
+ncitCode: C141675
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C141675
+parentConceptId: C91102
+categories:
+  - QRS Instrument Questions
+shortName: AJCC v7 Clinical Classification Question
+definition: A question associated with the AJCC v7 clinical classification.

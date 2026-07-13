@@ -13,9 +13,6 @@ proc format;
   ;
 run;
 
-
-%let release=r17;
-
 %macro run_latest_bc(release=);
   
   %local bc_set TargetFolder;
@@ -131,5 +128,5 @@ run;
 %mend run_latest_sdtm;
 
 
-%run_latest_bc(release=r17);
-%run_latest_sdtm(release=r17);
+%run_latest_bc(release=r18);
+%run_latest_sdtm(release=r18);

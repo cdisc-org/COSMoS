@@ -1,0 +1,46 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C25188
+ncitCode: C25188
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25188
+parentConceptId: C171086
+categories:
+  - Subject Characteristics
+shortName: Marital Status
+synonyms:
+  - MARISTAT
+  - Marital or partnership status
+  - Marital Status
+  - marital_status
+  - MaritalStatus
+  - MaritalStatusUB92
+resultScales:
+  - Nominal
+definition: A demographic parameter indicating a person's current conjugal status.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "ANNULLED"
+      - "DIVORCED"
+      - "DOMESTIC PARTNER"
+      - "INTERLOCUTORY"
+      - "LEGALLY SEPARATED"
+      - "MARRIED"
+      - "NEVER MARRIED"
+      - "POLYGAMOUS"
+      - "SEPARATED"
+      - "WIDOWED"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

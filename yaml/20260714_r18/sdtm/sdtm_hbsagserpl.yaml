@@ -1,0 +1,217 @@
+packageDate: "2026-07-14"
+packageType: sdtm
+datasetSpecializationId: HBSAGSERPL
+domain: MB
+shortName: Hepatitis B Virus Surface Antigen Concentration in Serum
+source: MB.MBTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C64850
+variables:
+  - name: MBTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C120527
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120527
+      submissionValue: MBTESTCD
+    assignedTerm:
+      conceptId: C64850
+      value: "HBSAG"
+    role: Topic
+    relationship:
+      subject: MBTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MBTEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MBTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C120528
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C120528
+      submissionValue: MBTEST
+    assignedTerm:
+      conceptId: C64850
+      value: "Hepatitis B Virus Surface Antigen"
+    role: Qualifier
+    relationship:
+      subject: MBTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MBTSTDTL
+    dataElementConceptId: C117062
+    isNonStandard: false
+    codelist:
+      conceptId: C174225
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C174225
+      submissionValue: MBFTSDTL
+    role: Qualifier
+    relationship:
+      subject: MBTSTDTL
+      linkingPhrase: further describes the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MBCAT
+    isNonStandard: false
+    valueList:
+      - "SEROLOGY"
+      - "VIROLOGY"
+    role: Qualifier
+    relationship:
+      subject: MBCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+  - name: MBORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MBORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MBORRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "IU/mL"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: MBORRES
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MBSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MBSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MBSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MBSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MBSTRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C67377
+      value: "IU/mL"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MBSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: MBSTRESN
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MBSPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C105706
+      value: "SERUM OR PLASMA"
+    role: Qualifier
+    relationship:
+      subject: MBSPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    comparator: EQ
+  - name: MBMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: MBMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MBTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MBDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MBDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: MBTESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false

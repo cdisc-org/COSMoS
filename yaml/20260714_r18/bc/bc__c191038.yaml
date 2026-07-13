@@ -1,0 +1,42 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C191038
+ncitCode: C191038
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191038
+categories:
+  - Clinical or Research Assessment Classification
+  - Modified Van Assche Index Clinical Classification Question
+  - Modified Van Assche Index Clinical Classification
+  - MVAI
+  - MVAI1
+shortName: Modified Van Assche Index Clinical Classification
+synonyms:
+  - MVAI
+  - MVAI1
+definition: A standardized scoring system originally developed in 2003 and modified in 2017 that utilizes quantitative radiological evaluation to assess the severity and disease response in perianal fistulizing Crohn disease.
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "MVAI"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

@@ -1,0 +1,30 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C176363
+ncitCode: C176363
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C176363
+categories:
+  - Subject Characteristics
+shortName: District of Permanent Address
+synonyms:
+  - DISTPAD
+  - District of Permanent Address
+resultScales:
+  - Nominal
+definition: The district in which an individual permanently resides.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

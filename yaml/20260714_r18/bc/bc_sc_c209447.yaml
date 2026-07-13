@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C209447
+ncitCode: C209447
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C209447
+parentConceptId: C42614
+categories:
+  - Subject Characteristics
+shortName: "State-Specific Health Insurance Program Name"
+synonyms:
+  - SSHIPNAM
+  - "State-Specific Health Ins Program Name"
+  - "State-Specific Health Insurance Program Name"
+resultScales:
+  - Nominal
+definition: "The name of the U.S. state-specific health insurance program."
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

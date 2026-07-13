@@ -1,0 +1,13 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C210012
+ncitCode: C210012
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C210012
+parentConceptId: C16723
+categories:
+  - Laboratory Tests
+  - Immunology Tests
+shortName: "Virus-Based Immunology Test"
+synonyms:
+  - Virus Immunoassay
+definition: Any laboratory test designed for the detection and/or quantification of viral antigens or their specific antibodies within a biological specimen.

@@ -33,7 +33,7 @@
 
   data issues(keep=_excel_file_ _tab_ package_date severity crf_group_id short_name crf_item issue_type expected_value actual_value comment);
     length prev_crf_group_id crf_group_id $256 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
-           crf_item $128 short_name $512 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
+           crf_item $128 short_name $512 questionText qquestionText $1064 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
            codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 categories derivation_description value_list value_display_list sdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
     retain prev_crf_group_id "" count 0;
@@ -108,8 +108,9 @@
 
         if not missing(question_text) then do;
           question_text=tranwrd(question_text, '"', '\"');
-          if index(question_text, '"') or index(question_text, ":") or index(question_text, "-") 
-            then question_text=cats('"', question_text, '"');
+          question_text=tranwrd(question_text, '0D0A'x, '\r');
+          question_text=tranwrd(question_text, '0A'x, '\r');
+          question_text=cats('"', question_text, '"');
           put +4 "questionText:" +1 question_text;
         end;  
         if not missing(prompt) then do;
@@ -267,8 +268,7 @@
         end;
 
         if (not missing(sdtm_target_variable)) or 
-           (not missing(sdtm_annotation)) or 
-           (not missing(sdtm_mapping)) then do;
+           (not missing(sdtm_annotation)) then do;
           
           put +4 "sdtmTarget:";
 

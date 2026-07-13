@@ -1,0 +1,42 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C74563
+ncitCode: C74563
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74563
+parentConceptId: C74562
+categories:
+  - Subject Characteristics
+shortName: Fitzpatrick Classification Scale
+synonyms:
+  - SKINCLAS
+  - Fitzpatrick Classification Scale
+  - Fitzpatrick Skin Classification
+  - Fitzpatrick Skin Phototype
+  - Fitzpatrick Skin Type System
+  - Skin Classification
+resultScales:
+  - Ordinal
+definition: A classification system used by dermatologists to determine a person's risk for sunburn. The classification is based on the skin complexion and the degree of tolerance to sun exposure and it relates to the amount of melanin pigment in the skin. It was developed by Dr. Thomas Fitzpatrick in 1975 to determine patient's skin reaction to laser and light therapy treatments. According to this system, there are six skin varieties classified from I to VI.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Type I"
+      - "Type II"
+      - "Type III"
+      - "Type IV"
+      - "Type V"
+      - "Type VI"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

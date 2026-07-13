@@ -1,0 +1,36 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C202576
+ncitCode: C202576
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C202576
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Disease Contact Investigation Indicator
+synonyms:
+  - CINVIND
+  - Contact Investigation Indicator
+  - Disease Contact Investigation Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether a contact investigation (a public health activity whereby individuals who have been exposed to a person with a suspected or confirmed contagious illness are identified for contact tracing) has been carried out for the subject.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

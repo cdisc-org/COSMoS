@@ -1,0 +1,30 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C4876
+ncitCode: C4876
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C4876
+categories:
+  - Subject Characteristics
+shortName: Symptom
+synonyms:
+  - Symptom
+resultScales:
+  - Nominal
+  - Narrative
+definition: Subjective evidence of disease perceived by the patient.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

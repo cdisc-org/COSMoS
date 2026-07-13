@@ -1,0 +1,9 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C159525
+ncitCode: C159525
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C159525
+categories:
+  - Person Status
+shortName: Donor Status
+definition: Vital information about a donor at the time of donation.

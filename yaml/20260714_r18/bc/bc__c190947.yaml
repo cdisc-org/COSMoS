@@ -1,0 +1,10 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C190947
+ncitCode: C190947
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C190947
+parentConceptId: C211913
+categories:
+  - QRS Instrument Questions
+shortName: Psoriasis Area and Severity Index Fredriksson Version Clinical Classification Question
+definition: A question associated with the Psoriasis Area and Severity Index Fredriksson Version clinical classification.

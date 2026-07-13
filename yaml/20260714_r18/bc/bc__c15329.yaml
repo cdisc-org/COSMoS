@@ -1,0 +1,91 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C15329
+ncitCode: C15329
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C15329
+parentConceptId: C25218
+categories:
+  - Clinical Interventions
+  - Procedures
+  - Operations
+shortName: Surgical Procedure
+synonyms:
+  - Operation
+  - Surgery
+  - Procedure
+resultScales:
+  - Nominal
+definition: A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.
+dataElementConcepts:
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C117529
+    ncitCode: C117529
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117529
+    shortName: Start Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117530
+    ncitCode: C117530
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117530
+    shortName: End Date and Time of Procedure
+    dataType: datetime
+  - conceptId: C117512
+    ncitCode: C117512
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117512
+    shortName: Standardized Name of Procedure
+    dataType: string
+  - conceptId: C117511
+    ncitCode: C117511
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117511
+    shortName: Reported Name of Procedure
+    dataType: string
+  - conceptId: C41184
+    ncitCode: C41184
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41184
+    shortName: Indication
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+  - conceptId: C54215
+    ncitCode: C54215
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C54215
+    shortName: Directionality
+    dataType: string
+    exampleSet:
+      - "Upper"
+      - "Lower"
+      - "Inner"
+      - "Outer"
+      - "Peripheral"

@@ -1,0 +1,11 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C132301
+ncitCode: C132301
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132301
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Microbiology Tests
+shortName: Ribonucleic Acid Measurement
+definition: The determination of the amount of ribonucleic acids in a biological sample.

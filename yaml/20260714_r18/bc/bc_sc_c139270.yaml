@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C139270
+ncitCode: C139270
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C139270
+categories:
+  - Subject Characteristics
+shortName: Deceased Donor Donation Condition
+synonyms:
+  - DDDTYPE
+  - Deceased Donor Donation Condition
+  - Deceased Donor Donation Type
+resultScales:
+  - Nominal
+definition: The conditions under which an organ is harvested from a dead donor, including the condition of the donor and the environment.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

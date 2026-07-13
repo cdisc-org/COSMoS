@@ -1,0 +1,49 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS107
+shortName: "KFSS1-Cerebral or Mental Functions"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112617
+sdtmDatasetSpecializationId: KFSS107
+items:
+  - name: KFSS107_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C46126
+    prompt: CEREBRAL OR MENTAL FUNCTIONS
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: KFSS107OR
+      conceptId: C182482
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C182482
+    valueList:
+      - displayValue: "Normal"
+        value: "0"
+      - displayValue: "Mood alteration only (does not affect DSS score)"
+        value: "1"
+      - displayValue: "Mild decrease in mentation"
+        value: "2"
+      - displayValue: "Moderate decrease in mentation"
+        value: "3"
+      - displayValue: "Marked decrease in mentation (chronic brain syndrome-moderate)"
+        value: "4"
+      - displayValue: "Dementia or chronic brain syndrome-severe or incompetent"
+        value: "5"
+      - displayValue: "Unknown"
+        value: "Unknown"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = KFSS107"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

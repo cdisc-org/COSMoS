@@ -1,0 +1,206 @@
+packageDate: "2026-07-14"
+packageType: sdtm
+datasetSpecializationId: SURGMARGSTATBREAST
+domain: MI
+shortName: Surgical Margins Status Breast Tissue
+source: MI.MITESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C123560
+variables:
+  - name: MITESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C132263
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132263
+      submissionValue: MITSCD
+    assignedTerm:
+      conceptId: C123560
+      value: "SGMGSTAT"
+    role: Topic
+    relationship:
+      subject: MITESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MITEST
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MITEST
+    isNonStandard: false
+    codelist:
+      conceptId: C132262
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132262
+      submissionValue: MITS
+    assignedTerm:
+      conceptId: C123560
+      value: "Surgical Margins Status"
+    role: Qualifier
+    relationship:
+      subject: MITEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: true 
+    originType: Assigned
+    originSource: Sponsor
+  - name: MIORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    valueList:
+      - "NEGATIVE TUMOR TISSUE MARGIN"
+      - "POSITIVE TUMOR TISSUE MARGINS"
+      - "POSITIVE TUMOR TISSUE MARGINS -- INVASIVE CELLS ON INKED TISSUE EDGE (WITH OR WITHOUT DCIS)"
+      - "POSITIVE TUMOR TISSUE MARGINS ONLY DCIS CELLS -- ON INKED TISSUE EDGE"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MIORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true 
+  - name: MISTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    valueList:
+      - "NEGATIVE TUMOR TISSUE MARGIN"
+      - "POSITIVE TUMOR TISSUE MARGINS"
+      - "POSITIVE TUMOR TISSUE MARGINS -- INVASIVE CELLS ON INKED TISSUE EDGE (WITH OR WITHOUT DCIS)"
+      - "POSITIVE TUMOR TISSUE MARGINS ONLY DCIS CELLS -- ON INKED TISSUE EDGE"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MISTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true 
+  - name: MISPEC
+    dataElementConceptId: C70713
+    isNonStandard: false
+    codelist:
+      conceptId: C78734
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78734
+      submissionValue: SPECTYPE
+    assignedTerm:
+      conceptId: C12801
+      value: "TISSUE"
+    role: Qualifier
+    relationship:
+      subject: MISPEC
+      linkingPhrase: is the specimen tested in
+      predicateTerm: IS_SPECIMEN_TESTED_IN
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MILOC
+    dataElementConceptId: C171435
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    assignedTerm:
+      conceptId: C12971
+      value: "BREAST"
+    role: Qualifier
+    relationship:
+      subject: MILOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    comparator: EQ
+  - name: MILAT
+    dataElementConceptId: C25185
+    isNonStandard: false
+    codelist:
+      conceptId: C99073
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99073
+      submissionValue: LAT
+    valueList:
+      - "LEFT"
+      - "RIGHT"
+    role: Qualifier
+    relationship:
+      subject: MILAT
+      linkingPhrase: further specifies the anatomical location in
+      predicateTerm: SPECIFIES
+      object: MILOC
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    comparator: IN
+  - name: MIDIR
+    dataElementConceptId: C54215
+    isNonStandard: false
+    codelist:
+      conceptId: C99074
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C99074
+      submissionValue: DIR
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MILOCDTL
+    dataElementConceptId: NEW_DEC1
+    isNonStandard: true 
+    role: Qualifier
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MIEVAL
+    dataElementConceptId: C51824
+    isNonStandard: false
+    codelist:
+      conceptId: C78735
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78735
+      submissionValue: EVAL
+    assignedTerm:
+      conceptId: C17723
+      value: "PATHOLOGIST"
+    role: Qualifier
+    relationship:
+      subject: MIEVAL
+      linkingPhrase: is the role of the assessor who performed the test in
+      predicateTerm: PERFORMS
+      object: MITESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: EQ
+  - name: MIDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MIDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MITESTCD
+    mandatoryVariable: true 
+    mandatoryValue: false
+    originType: Collected
+    originSource: Sponsor

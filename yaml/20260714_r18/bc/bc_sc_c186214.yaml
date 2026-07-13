@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C186214
+ncitCode: C186214
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C186214
+parentConceptId: C16669
+categories:
+  - Subject Characteristics
+shortName: Fertility Status
+synonyms:
+  - FRTLSTAT
+  - Fertility Status
+resultScales:
+  - Nominal
+definition: The status of an individual with respect to their ability to produce offspring.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

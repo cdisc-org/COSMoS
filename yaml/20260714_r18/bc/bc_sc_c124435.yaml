@@ -1,0 +1,40 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C124435
+ncitCode: C124435
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124435
+categories:
+  - Subject Characteristics
+shortName: Gestational Age at Birth
+synonyms:
+  - GSTABRTH
+  - Gestational Age at Birth
+  - weeks gestation at birth
+  - weeks_gestation_at_birth
+resultScales:
+  - Quantitative
+definition: The gestational age of the subject at birth.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C42574
+    ncitCode: C42574
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42574
+    shortName: Unit of Time
+    dataType: string
+    exampleSet:
+      - "Weeks"
+      - "Days"

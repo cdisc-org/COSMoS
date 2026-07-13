@@ -1,0 +1,45 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C191040
+ncitCode: C191040
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191040
+parentConceptId: C118969
+categories:
+  - QRS
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Psoriasis Area and Severity Index Fredriksson Version Clinical Classification
+  - PASI FREDRIKSSON
+  - PASI03
+shortName: Psoriasis Area and Severity Index Fredriksson Version Clinical Classification
+synonyms:
+  - PASI FREDRIKSSON
+  - PASI Fredriksson Version
+  - PASI03
+definition: A standardized index developed in 1978 by Fredriksson et al. that combines psoriasis disease severity (measured as erythema, infiltration, and desquamation) and body surface area involvement over 4 body regions (head, trunk, upper and lower extremities) to assess progress during treatment.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "PASI FREDRIKSSON"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

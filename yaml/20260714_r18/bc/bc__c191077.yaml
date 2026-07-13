@@ -1,0 +1,81 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C191077
+ncitCode: C191077
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C191077
+parentConceptId: C190947
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Psoriasis Area and Severity Index Fredriksson Version Clinical Classification
+  - PASI FREDRIKSSON
+  - PASI03
+  - Psoriasis Area and Severity Index Fredriksson Version Clinical Classification Question
+shortName: "PASI Fredriksson Version - Trunk: Area Score"
+resultScales:
+  - Ordinal
+definition: "Psoriasis Area and Severity Index Fredriksson Version (PASI Fredriksson Version) Trunk: Area score."
+dataElementConcepts:
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: integer
+    exampleSet:
+      - "0"
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "No involvement"
+      - "<10%"
+      - "10-<30%"
+      - "30-<50%"
+      - "50-<70%"
+      - "70-<90%"
+      - "90-100%"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "PASI FREDRIKSSON"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C41202
+    ncitCode: C41202
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C41202
+    shortName: Completion Status
+    dataType: string
+    exampleSet:
+      - "Not Done"
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Dematologist"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

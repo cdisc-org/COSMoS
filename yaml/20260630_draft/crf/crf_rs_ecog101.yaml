@@ -1,0 +1,49 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: ECOG101
+shortName: "ECOG1-Performance Status"
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+categories:
+  - "QRS"
+  - "RS"
+domain: RS
+biomedicalConceptId: C102408
+sdtmDatasetSpecializationId: ECOG101
+items:
+  - name: ECOG101_RSORRES
+    variableName: RSORRES
+    dataElementConceptId: C91106
+    prompt: ECOG PERFORMANCE STATUS
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: ECOG101OR
+      conceptId: C179943
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179943
+    valueList:
+      - displayValue: "Fully active, able to carry on all pre-disease performance without restriction"
+        value: "0"
+      - displayValue: "Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work"
+        value: "1"
+      - displayValue: "Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours"
+        value: "2"
+      - displayValue: "Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours"
+        value: "3,4"
+      - displayValue: "Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair"
+        value: "5"
+      - displayValue: "Dead"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD = ECOG1"
+      sdtmVariables:
+        -  "RSORRES"
+        -  "RSSTRESC"
+        -  "RSSTRESN"
+        -  "RSTESTCD"
+        -  "RSTEST"

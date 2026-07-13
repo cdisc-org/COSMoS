@@ -1,0 +1,47 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C123621
+ncitCode: C123621
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C123621
+parentConceptId: C93645
+categories:
+  - Oncology Standards
+  - Disease Response
+  - RS
+shortName: Disease Recurrence Indicator
+synonyms:
+  - DRCRIND
+resultScales:
+  - Nominal
+definition: An indication as to whether disease recurrence occurred.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Investigator"
+      - "Radiologist"
+  - conceptId: C117043
+    ncitCode: C117043
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117043
+    shortName: Evaluator Identifier
+    dataType: string
+    exampleSet:
+      - "Radiologist 1"
+      - "Radiologist 2"
+      - "Radiologist 3"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

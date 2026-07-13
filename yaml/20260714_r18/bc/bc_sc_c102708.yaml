@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102708
+ncitCode: C102708
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102708
+categories:
+  - Subject Characteristics
+shortName: Setting of Disease Contact
+synonyms:
+  - SETCON
+  - Setting of Contact
+  - Setting of Disease Contact
+resultScales:
+  - Nominal
+definition: The environment within which the person may have come into contact with a disease carrier, or played the role of a disease carrier.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

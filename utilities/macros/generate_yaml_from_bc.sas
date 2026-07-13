@@ -259,14 +259,17 @@
       end;
       put +4 "shortName:" +1 dec_label;
       
-      if not missing(data_type) then put +4 "dataType:" +1 data_type;
       %add2issues_bc(missing(data_type), 
                      %str(BC_DEC_DATATYPE_MISSING), 
                      "", "", %str(cats("dec_label=", dec_label)));
-      %add2issues_bc(exists_enum_term("DataElementConceptDataType", data_type) = 0, 
-                     %str(INVALID_VALUE_DATATYPE), 
-                     "", data_type, "", severity=ERROR);
-                     
+      if not missing(data_type) then do;
+
+        %add2issues_bc(exists_enum_term("DataElementConceptDataType", data_type) = 0, 
+                       %str(INVALID_VALUE_DATATYPE), 
+                       "", data_type, "", severity=ERROR);
+
+        put +4 "dataType:" +1 data_type;
+      end;  
       
       if not missing(example_set) then do;
         %add2issues_bc(index(example_set, ",") > 0, 

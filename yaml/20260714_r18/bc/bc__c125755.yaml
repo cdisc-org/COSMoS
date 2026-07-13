@@ -1,0 +1,19 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C125755
+ncitCode: C125755
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C125755
+parentConceptId: C177561
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - AJCC Cancer Staging Manual 7th Edition Clinical Classification
+  - AJCC V7
+  - AJCC1
+  - AJCC7
+shortName: AJCC Cancer Staging Manual 7th Edition
+synonyms:
+  - AJCC V7
+  - AJCC1
+  - AJCC7
+definition: The 7th edition of the criteria developed by the American Joint Committee on Cancer (AJCC) in 2010, used for the classification and staging of neoplastic diseases.

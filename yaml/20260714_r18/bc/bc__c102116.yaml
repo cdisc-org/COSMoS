@@ -1,0 +1,42 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102116
+ncitCode: C102116
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102116
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Eastern Cooperative Oncology Group Performance Status Clinical Classification
+  - ECOG
+  - ECOG1
+shortName: Eastern Cooperative Oncology Group Performance Status Clinical Classification
+synonyms:
+  - ECOG
+definition: A standardized classification scale, published by Oken et al. in 1982 for the Eastern Cooperative Oncology Group (ECOG), that utilizes a six point rating scale to assess a patient's functional status.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "ECOG"
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

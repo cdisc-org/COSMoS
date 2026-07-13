@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C132459
+ncitCode: C132459
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C132459
+parentConceptId: C19332
+categories:
+  - Subject Characteristics
+shortName: Primary Language Spoken
+synonyms:
+  - LNGSPP
+  - Primary Language Spoken
+  - Primary Language Spoken at Home
+resultScales:
+  - Nominal
+definition: The main language that is spoken by the subject most frequently or dominantly.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

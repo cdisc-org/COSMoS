@@ -1,0 +1,69 @@
+packageDate: "2026-06-30"
+packageType: crf
+crfSpecializationId: KFSS10
+shortName: KFSS Clinical Classification
+standard: CDASHIG
+standardStartVersion: "2-1"
+standardEndVersion: ""
+domain: RS
+biomedicalConceptId: C112460
+items:
+  - name: KFSS10_RSPERF
+    variableName: RSPERF
+    dataElementConceptId: C82525
+    questionText: Was the Kurtzke Functional Systems Scores performed?
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "If the CDASH variable --PERF=\"N\", the value of the STDM variable --STAT is \"NOT DONE\". If --PERF= \"Y\", --STAT is null."
+      sdtmVariables:
+        -  "RSSTAT"
+  - name: KFSS10_RSDAT
+    variableName: RSDAT
+    dataElementConceptId: C82515
+    prompt: Date of Assessment
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "RSDTC"
+      sdtmVariables:
+        -  "RSDTC"
+  - name: KFSS10_RSCAT
+    variableName: RSCAT
+    dataElementConceptId: C25372
+    prompt: Category of Clinical Classification
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 50
+    displayHidden: true 
+    derivedVariable: false
+    codelist:
+      submissionValue: CCCAT
+      conceptId: C112522
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C112522
+    prepopulatedValue:
+      value: "KFSS"
+      conceptId: C112522
+    sdtmTarget:
+      sdtmAnnotation: "RSCAT = KFSS"
+      sdtmVariables:
+        -  "RSCAT"

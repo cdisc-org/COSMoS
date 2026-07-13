@@ -1,0 +1,44 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C100761
+ncitCode: C100761
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C100761
+parentConceptId: C118969
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - Brief Psychiatric Rating Scale A Clinical Classification
+  - "BPRS-A"
+  - BPRSA1
+shortName: Brief Psychiatric Rating Scale A Clinical Classification
+synonyms:
+  - "BPRS-A"
+  - BPRSA1
+  - "Brief Psychiatric Rating Scale - Anchored"
+definition: "A standardized rating scale originally developed by Margaret G. Woerner, Salvatore Mannuzza and John M. Kane in 1988 which is used to evaluate the severity of an individual's psychiatric symptoms. This version consists of 18 questions or types of psychiatric symptoms such as depression, anxiety, hallucinations, motor skills, or other unusual behaviors and is completed during a semi-structured interview. Each symptom is rated on a scale of 1-7 or 1-9 with 1 being non-existent and 7 being very severe; 9 represents 'can not be assessed'."
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "BPRS-A"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

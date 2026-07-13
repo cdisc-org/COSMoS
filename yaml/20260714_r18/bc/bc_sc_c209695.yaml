@@ -1,0 +1,31 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C209695
+ncitCode: C209695
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C209695
+categories:
+  - Subject Characteristics
+shortName: Number of Work Days Per Week Question
+synonyms:
+  - WRKDYWKN
+  - Number of Work Days Per Week
+  - Number of Work Days Per Week Question
+resultScales:
+  - Quantitative
+definition: A question regarding the number of days per week the subject works.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

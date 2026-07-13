@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C102723
+ncitCode: C102723
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C102723
+parentConceptId: C25284
+categories:
+  - Subject Characteristics
+shortName: Type of Contagion Contact
+synonyms:
+  - TYPCON
+  - Type of Contact
+  - Type of Contagion Contact
+resultScales:
+  - Nominal
+definition: Identification and clinical investigation of disease contacts.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

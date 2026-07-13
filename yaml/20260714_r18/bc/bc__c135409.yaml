@@ -1,0 +1,11 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C135409
+ncitCode: C135409
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135409
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Microbiology Tests
+shortName: Deoxyribonucleic Acid Measurement
+definition: The determination of the amount of deoxyribonucleic acid (DNA) in a biological sample.

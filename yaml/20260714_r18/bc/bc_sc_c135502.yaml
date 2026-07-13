@@ -1,0 +1,35 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C135502
+ncitCode: C135502
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135502
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+shortName: Living with Subject Indicator
+synonyms:
+  - LVSBJIND
+  - Living with Subject Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the associated person is living with the subject.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

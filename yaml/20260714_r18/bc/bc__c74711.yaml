@@ -1,0 +1,55 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C74711
+ncitCode: C74711
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74711
+parentConceptId: C125944
+categories:
+  - Laboratory Tests
+  - Immunology Tests
+  - Microbiology Tests
+shortName: Hepatitis B Surface Antibody Measurement
+synonyms:
+  - HBV Surface Antibody
+  - HBV Surface Antibody Measurement
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the surface antibody reaction of a sample to the Hepatitis B virus.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "mIU/mL"
+      - "IU/L"
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Cerebral Spinal Fluid"

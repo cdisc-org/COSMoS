@@ -28,7 +28,7 @@ items:
     variableName: VSTEST
     prompt: Test
     orderNumber: 2
-    mandatoryVariable: false
+    mandatoryVariable: true 
     dataType: text
     length: 40
     displayHidden: false

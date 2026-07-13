@@ -1,0 +1,43 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C135738
+ncitCode: C135738
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C135738
+parentConceptId: C91105
+categories:
+  - QRS
+  - Clinical or Research Assessment Questionnaire
+  - Clinical Global Impression Generic Modification Version Questionnaire
+  - CGI02
+  - CGI
+shortName: Clinical Global Impression Generic Modification Version Questionnaire
+synonyms:
+  - CGI
+  - CGI02
+definition: "A modified version of a standardized questionnaire published in 1976 by Guy et al. that was initially created to provide a clinician-determined summary measure of a patient's global functioning prior to and after initiating a study medication. It has been modified for use in any disease/condition concept use case."
+dataElementConcepts:
+  - conceptId: C82525
+    ncitCode: C82525
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82525
+    shortName: Test Occurrence
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "CGI"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82556
+    ncitCode: C82556
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82556
+    shortName: Not-Done Reason
+    dataType: string

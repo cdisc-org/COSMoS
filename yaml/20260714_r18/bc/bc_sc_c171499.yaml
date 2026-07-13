@@ -1,0 +1,36 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C171499
+ncitCode: C171499
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171499
+parentConceptId: C25180
+categories:
+  - Subject Characteristics
+  - Indicators
+shortName: Appropriate Developmental Age Indicator
+synonyms:
+  - ADEVAIND
+  - Appropriate Development For Age Indicator
+resultScales:
+  - Nominal
+definition: An indication as to whether the subject's chronological age matches their physical, emotional, social, and cognitive functioning.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "N"
+      - "Y"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

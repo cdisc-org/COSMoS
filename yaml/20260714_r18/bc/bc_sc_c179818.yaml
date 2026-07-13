@@ -1,0 +1,32 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C179818
+ncitCode: C179818
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C179818
+parentConceptId: C16795
+categories:
+  - Subject Characteristics
+shortName: Physical Activity Lifestyle
+synonyms:
+  - PHYACLFS
+  - Physical Activity Lifestyle
+resultScales:
+  - Ordinal
+  - Quantitative
+definition: A description of the subject's lifestyle with respect to physical activity.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

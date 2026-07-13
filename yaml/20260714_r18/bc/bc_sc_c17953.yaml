@@ -1,0 +1,37 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C17953
+ncitCode: C17953
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C17953
+parentConceptId: C17468
+categories:
+  - Subject Characteristics
+shortName: Education Level
+synonyms:
+  - EDULEVEL
+  - Education
+  - Education Level
+  - Education Level Completed
+  - education_level
+  - Educational Attainment
+  - Educational Level
+  - Level of Education Attained
+resultScales:
+  - Ordinal
+definition: An indication of the years of schooling completed in graded public, private, or parochial schools, and in colleges, universities, or professional schools.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

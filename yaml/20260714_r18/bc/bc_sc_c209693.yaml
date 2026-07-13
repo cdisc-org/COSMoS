@@ -1,0 +1,37 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C209693
+ncitCode: C209693
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C209693
+parentConceptId: C28421
+categories:
+  - Subject Characteristics
+shortName: Sex Assigned for Clinical Purpose
+synonyms:
+  - SXCLUSE
+  - Sex Assigned for Clinical Purpose
+  - Sex for Clinical Use
+resultScales:
+  - Nominal
+definition: An arbitrary categorization of individuals based on the assemblage of physical properties related to reproduction, and commonly associated with the designation of such categories as female and male. This designation is based on some combination of observable information from organ inventories, morphological assessment, hormone assessments, genetic testing, observed primary and secondary sex characteristics, menstrual status, and/or obstetric history. Current sex designation may or may not be the same as an individual's sex assigned or reported at birth. (NCI)
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "F"
+      - "INTERSEX"
+      - "M"
+      - "U"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

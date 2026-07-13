@@ -1,0 +1,15 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C125944
+ncitCode: C125944
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C125944
+parentConceptId: C16723
+categories:
+  - Laboratory Tests
+  - Immunology Tests
+  - Microbiology Tests
+shortName: Hepatitis B Virus Antibody Measurement
+resultScales:
+  - Quantitative
+  - Ordinal
+definition: The determination of the amount of hepatitis B virus antibody present in a sample.

@@ -1,0 +1,34 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C114182
+ncitCode: C114182
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C114182
+parentConceptId: C19332
+categories:
+  - Subject Characteristics
+shortName: Dominant Hand
+synonyms:
+  - HANDDOM
+  - Dominant Hand
+resultScales:
+  - Nominal
+definition: The preferred hand of use for controlled and efficient performance of motor tasks.
+dataElementConcepts:
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "LEFT"
+      - "RIGHT"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string

@@ -1,0 +1,68 @@
+packageDate: "2026-07-14"
+packageType: bc
+conceptId: C141699
+ncitCode: C141699
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C141699
+parentConceptId: C141675
+categories:
+  - QRS
+  - Clinical or Research Assessment Classification
+  - AJCC Cancer Staging Manual 7th Edition Clinical Classification
+  - AJCC V7
+  - AJCC V7 Clinical Classification Question
+shortName: "AJCC v7 - Anatomic Stage"
+synonyms:
+  - "AJCC1-Anatomic"
+  - Stage
+  - AJCC104
+definition: AJCC Cancer Staging Manual 7th Edition (AJCC v7) Anatomic stage.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "AJCC V7"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C91106
+    ncitCode: C91106
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C91106
+    shortName: Clinical or Research Assessment Answer
+    dataType: string
+    exampleSet:
+      - "Occult"
+      - "0"
+      - "1A"
+      - "1B"
+      - "IIA"
+      - "IIB"
+      - "IIIA"
+      - "IIIB"
+      - "IV"
+      - "Stage unknown"
+  - conceptId: C46126
+    ncitCode: C46126
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C46126
+    shortName: Ordinal Position
+    dataType: string
+    exampleSet:
+      - "Occult"
+      - "0"
+      - "1A"
+      - "1B"
+      - "IIA"
+      - "IIB"
+      - "IIIA"
+      - "IIIB"
+      - "IV"
+      - "Stage unknown"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
