@@ -48,6 +48,8 @@ Below is an overview of the contents of this repository.
 
   The [openapi](https://github.com/cdisc-org/COSMoS/tree/main/openapi) folder contains the OpenAPI definition of the COSMoS API (cosmos.yaml)
 
+  Browse the generated [COSMoS API reference](https://cdisc-org.github.io/COSMoS/reference/).
+
   More information about using the CDISC Library API can be found on the [CDISC Library API Portal](https://api.developer.library.cdisc.org/) and the [Biomedical Concepts and Dataset Specializations Release Notes](https://wiki.cdisc.org/pages/viewpage.action?pageId=169412277) on the CDISC Wiki.
   Use your cdiscID credentials to login to the [CDISC Library API Portal](https://api.developer.library.cdisc.org/).
 

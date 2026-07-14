@@ -1,0 +1,315 @@
+# COSMoS API Reference
+
+REST API documentation for COSMoS
+
+## API Reference
+
+### CDISC Conceptual and Operational Standards Metadata (COSMoS)
+
+Path: `/COSMoS/reference/`
+Version: 2.0
+
+REST API documentation for COSMoS
+
+#### Operations
+
+##### GET /mdr/bc/packages
+
+Get Biomedical Concept Package List
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/bc/packages/{package}/biomedicalconcepts
+
+Get Biomedical Concept List
+
+Parameters:
+- `package` (path, string, required) - Biomedical Concept Package Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}
+
+Get Biomedical Concept
+
+Parameters:
+- `package` (path, string, required) - Biomedical Concept Package Identifier
+- `biomedicalconcept` (path, string, required) - Biomedical Concept Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/bc/categories
+
+Get Biomedical Concept Categories List
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/bc/biomedicalconcepts
+
+Get Biomedical Concept List across Packages, optionally limited to a category
+
+Parameters:
+- `category` (query, string, optional) - Biomedical Concept Category
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/bc/biomedicalconcepts/{biomedicalconcept}
+
+Get Biomedical Concept (Latest)
+
+Parameters:
+- `biomedicalconcept` (path, string, required) - Biomedical Concept Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/packages
+
+Get SDTM Dataset Specialization Package List
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations
+
+Get SDTM Dataset Specialization List
+
+Parameters:
+- `package` (path, string, required) - SDTM Dataset Specialization Package Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}
+
+Get SDTM Dataset Specialization
+
+Parameters:
+- `package` (path, string, required) - SDTM Dataset Specialization Package Identifier
+- `datasetspecialization` (path, string, required) - SDTM Dataset Specialization Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/domains
+
+Get SDTM Dataset Specialization Domains List
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/datasetspecializations
+
+Get SDTM Dataset Specialization List across Packages, optionally limited to a domain
+
+Parameters:
+- `domain` (query, string, optional) - SDTM Dataset Specialization Domain
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/sdtm/datasetspecializations/{datasetspecialization}
+
+Get SDTM Dataset Specialization (Latest)
+
+Parameters:
+- `datasetspecialization` (path, string, required) - SDTM Dataset Specialization Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+##### GET /mdr/specializations/datasetspecializations
+
+Get Dataset Specializations that specialize a Biomedical Concept
+
+Parameters:
+- `biomedicalconcept` (query, string, optional) - Biomedical Concept Identifier
+
+Responses:
+- 200: OK
+- 400: Bad Request
+- 401: Unauthorized
+- 403: Forbidden
+- 404: Not Found
+- 405: Method Not Allowed
+- 406: Not Acceptable
+- 500: Internal Server Error
+- 503: Service Unavailable
+- 504: Gateway Timeout Error
+
+#### Models
+
+- defaultErrorResponse
+- bcPackages
+- bcPackagesLinks
+- bcPackagesRef
+- bcPackageRef
+- bcBiomedicalConcepts
+- bcBiomedicalConceptsLinks
+- bcBiomedicalConceptsRef: Biomedical Concepts Reference
+- bcBiomedicalConceptRef: Biomedical Concept Reference
+- bcBiomedicalConcept
+- bcBiomedicalConceptLinks
+- bcBiomedicalConceptParentRef: Biomedical Concept Parent Reference
+- bcBiomedicalConceptCoding
+- bcDataElementConceptElement
+- bcBiomedicalConceptsCategories
+- bcBiomedicalConceptsCategoriesCategoriesLinks
+- bcBiomedicalConceptsCategoriesLinks
+- bcBiomedicalConceptsCategoryRef
+- bcBiomedicalConceptsCategoriesLinksRef
+- bcBiomedicalConceptsLatest
+- bcBiomedicalConceptsLatestLinks
+- bcBiomedicalConceptsLatestRef: Biomedical Concepts Reference
+- bcBiomedicalConceptLatestRef: Biomedical Concept Reference
+- bcBiomedicalConceptLatest
+- bcBiomedicalConceptLatestLinks
+- bcBiomedicalConceptParentLatestRef: Biomedical Concept Parent Reference
+- bcPackageLatestRef
+- sdtmPackages
+- sdtmPackagesLinks
+- sdtmPackagesRef
+- sdtmPackageRef
+- sdtmDatasetSpecializations
+- sdtmDatasetSpecializationsLinks
+- sdtmDatasetSpecializationsRef: SDTM Dataset Specializations Reference
+- sdtmDatasetSpecializationRef: SDTM Dataset Specialization Reference
+- sdtmDatasetSpecialization
+- sdtmDatasetSpecializationLinks
+- sdtmBiomedicalConceptRef: Biomedical Concept Parent Reference
+- sdtmDatasetSpecializationVariableElement
+- sdtmDatasetpecializationRelationship
+- sdtmDatasetpecializationAssignedTerm
+- sdtmDatasetSpecializationCodeList
+- sdtmDatasetSpecializationDomains
+- sdtmDatasetSpecializationDomainsDomainsLinks
+- sdtmDatasetSpecializationDomainsLinks
+- sdtmDatasetSpecializationDomainRef
+- sdtmDatasetSpecializationDomainsLinksRef
+- sdtmDatasetSpecializationsLatest
+- sdtmDatasetSpecializationsLatestLinks
+- sdtmDatasetSpecializationsLatestRef: SDTM Dataset Specializations Reference
+- sdtmDatasetSpecializationLatestRef: SDTM Dataset Specialization Reference
+- sdtmDatasetSpecializationLatest
+- sdtmDatasetSpecializationLatestLinks
+- sdtmBiomedicalConceptLatestRef: Biomedical Concept Parent Reference
+- sdtmPackageLatestRef
+- datasetSpecializationsBiomedicalConcept
+- datasetSpecializationsLatestLinks
+- biomedicalConceptLatestRef: Biomedical Concept Parent Reference
+- datasetSpecilatizationTypesRef
+- datasetSpecializationsLatestRef: Dataset Specializations Reference
+- datasetSpecializationLatestRef: SDTM Dataset Specialization Reference

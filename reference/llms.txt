@@ -1,0 +1,20 @@
+# COSMoS API Reference
+
+> REST API documentation for COSMoS
+
+## API Reference
+
+- [CDISC Conceptual and Operational Standards Metadata (COSMoS)](/COSMoS/reference/): REST API documentation for COSMoS
+- [GET /mdr/bc/packages](/COSMoS/reference/#operation-mdr-bc-packages-get): GET /mdr/bc/packages - Get Biomedical Concept Package List
+- [GET /mdr/bc/packages/{package}/biomedicalconcepts](/COSMoS/reference/#operation-mdr-bc-packages-package-biomedicalconcepts-get): GET /mdr/bc/packages/{package}/biomedicalconcepts - Get Biomedical Concept List
+- [GET /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept}](/COSMoS/reference/#operation-mdr-bc-packages-package-biomedicalconcepts-biomedicalconcept-get): GET /mdr/bc/packages/{package}/biomedicalconcepts/{biomedicalconcept} - Get Biomedical Concept
+- [GET /mdr/bc/categories](/COSMoS/reference/#operation-mdr-bc-categories-get): GET /mdr/bc/categories - Get Biomedical Concept Categories List
+- [GET /mdr/bc/biomedicalconcepts](/COSMoS/reference/#operation-mdr-bc-biomedicalconcepts-get): GET /mdr/bc/biomedicalconcepts - Get Biomedical Concept List across Packages, optionally limited to a category
+- [GET /mdr/bc/biomedicalconcepts/{biomedicalconcept}](/COSMoS/reference/#operation-mdr-bc-biomedicalconcepts-biomedicalconcept-get): GET /mdr/bc/biomedicalconcepts/{biomedicalconcept} - Get Biomedical Concept (Latest)
+- [GET /mdr/specializations/sdtm/packages](/COSMoS/reference/#operation-mdr-specializations-sdtm-packages-get): GET /mdr/specializations/sdtm/packages - Get SDTM Dataset Specialization Package List
+- [GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations](/COSMoS/reference/#operation-mdr-specializations-sdtm-packages-package-datasetspecializations-get): GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations - Get SDTM Dataset Specialization List
+- [GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization}](/COSMoS/reference/#operation-mdr-specializations-sdtm-packages-package-datasetspecializations-datasetspecialization-get): GET /mdr/specializations/sdtm/packages/{package}/datasetspecializations/{datasetspecialization} - Get SDTM Dataset Specialization
+- [GET /mdr/specializations/sdtm/domains](/COSMoS/reference/#operation-mdr-specializations-sdtm-domains-get): GET /mdr/specializations/sdtm/domains - Get SDTM Dataset Specialization Domains List
+- [GET /mdr/specializations/sdtm/datasetspecializations](/COSMoS/reference/#operation-mdr-specializations-sdtm-datasetspecializations-get): GET /mdr/specializations/sdtm/datasetspecializations - Get SDTM Dataset Specialization List across Packages, optionally limited to a domain
+- [GET /mdr/specializations/sdtm/datasetspecializations/{datasetspecialization}](/COSMoS/reference/#operation-mdr-specializations-sdtm-datasetspecializations-datasetspecialization-get): GET /mdr/specializations/sdtm/datasetspecializations/{datasetspecialization} - Get SDTM Dataset Specialization (Latest)
+- [GET /mdr/specializations/datasetspecializations](/COSMoS/reference/#operation-mdr-specializations-datasetspecializations-get): GET /mdr/specializations/datasetspecializations - Get Dataset Specializations that specialize a Biomedical Concept
