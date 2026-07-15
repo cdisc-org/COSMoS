@@ -639,11 +639,11 @@ quit;
 %let release_crf=xx;
 %let dropit=package_date categories length significant_digits;
 
-
-%let excel_file=&root/curation/draft/crf/cdisc_crf_specializations_draft_20260623.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF Specializations)$, dsout=collectxx_01, drop=%str(drop=&dropit));
-
 /*
+%let excel_file=&root/curation/draft/crf/_archive/cdisc_crf_specializations_draft_20260623.xlsx;
+%ReadExcel(file=&excel_file, range=%str(CRF Specializations)$, dsout=collectxx_01, drop=%str(drop=&dropit));
+*/
+
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
 
@@ -703,7 +703,6 @@ quit;
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_QRS_KFSS)$, dsout=collectxx_20, drop=%str(drop=&dropit));
-*/
 
 /************************************************************************************************************************/
 
@@ -782,6 +781,15 @@ proc sql;
   order by _excel_file_, _tab_, vlm_group_id, order
   ;
 quit;
+
+proc sql noprint;
+  select distinct vlm_group_id into :sdtm_set_retired separated by '","'
+  from sdtm_merged(where=(not missing(vlm_group_id) and (index(short_name, '[RETIRED]') > 0 )));
+  ;
+quit;
+
+%put sdtm_set_retired = "&sdtm_set_retired";
+
 
 %if &print_html=1 %then %do;
   ods listing close;
@@ -919,10 +927,21 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
  %* CRFs pointing to Retired BCs;
   proc sql;
     title02 "CRF Specializations pointing to retired BCs";
-      select package_date, _excel_file_, _tab_, domain, crf_group_id, order_number, crf_item, bc_id
+      select package_date, _excel_file_, _tab_, domain, crf_group_id, short_name, order_number, crf_item, bc_id
       from crf
       where
         bc_id in ("&bc_set_retired")
+      order by _excel_file_, _tab_, domain, crf_group_id, order_number
+      ;
+  quit;
+
+ %* CRFs pointing to Retired SDTM Specializationss;
+  proc sql;
+    title02 "CRF Specializations pointing to retired SDTM Specializations";
+      select package_date, _excel_file_, _tab_, domain, crf_group_id, short_name, order_number, crf_item, vlm_group_id
+      from crf
+      where
+        vlm_group_id in ("&sdtm_set_retired")
       order by _excel_file_, _tab_, domain, crf_group_id, order_number
       ;
   quit;
