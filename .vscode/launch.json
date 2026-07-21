@@ -60,11 +60,11 @@
             "-s",
             "YAML",
             "-y",
-            "${workspaceFolder}/yaml/20260630_draft/crf",
+            "${workspaceFolder}/yaml/20260731_draft/crf",
             "-o",
             "${workspaceFolder}/curation/draft/cdisc_crf_specializations_draft.xlsx",
             "-d",
-            "2026-06-30"
+            "2026-07-31"
           ],
             "env": { "PYTHONPATH": "${workspaceRoot}"}
         },
@@ -236,7 +236,7 @@
           "console": "integratedTerminal",
           "args": [
             "-y",
-            "${workspaceFolder}/yaml/20260630_draft/crf",
+            "${workspaceFolder}/yaml/20260731_draft/crf",
             "-s",
             "${workspaceFolder}/model/cosmos_crf_model.yaml",
             "-c",

@@ -1,0 +1,324 @@
+packageDate: "2026-07-31"
+packageType: crf
+crfSpecializationId: AE_NORMALIZED
+shortName: Adverse Event Free Text Format (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: ""
+implementationOption: Normalized
+domain: AE
+biomedicalConceptId: C179175
+sdtmDatasetSpecializationId: AE
+items:
+  - name: AETERM
+    variableName: AETERM
+    dataElementConceptId: C78541
+    prompt: Adverse Event
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AETERM"
+      sdtmVariables:
+        -  "AETERM"
+  - name: AESTDAT
+    variableName: AESTDAT
+    dataElementConceptId: C83215
+    prompt: Start Date
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AESTDTC"
+      sdtmVariables:
+        -  "AESTDTC"
+  - name: AEONGO
+    variableName: AEONGO
+    dataElementConceptId: C83051
+    prompt: "Ongoing (as of [the study-specific time point or period])"
+    orderNumber: 3
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AEENRTPT;AEENRF"
+      sdtmVariables:
+        -  "AEENRTPT"
+        -  "AEENRF"
+  - name: AEENDAT
+    variableName: AEENDAT
+    dataElementConceptId: C83201
+    prompt: End Date
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AEENDTC"
+      sdtmVariables:
+        -  "AEENDTC"
+  - name: AESEV
+    variableName: AESEV
+    dataElementConceptId: C53253
+    prompt: Severity
+    orderNumber: 5
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: AESEV
+      conceptId: C66769
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66769
+    valueList:
+      - displayValue: "Mild"
+        value: "MILD"
+      - displayValue: "Moderate"
+        value: "MODERATE"
+      - displayValue: "Severe"
+        value: "SEVERE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESEV"
+      sdtmVariables:
+        -  "AESEV"
+  - name: AESER
+    variableName: AESER
+    dataElementConceptId: C53252
+    questionText: "Was the adverse event serious?"
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESER"
+      sdtmVariables:
+        -  "AESER"
+  - name: AESDTH
+    variableName: AESDTH
+    dataElementConceptId: C48275
+    questionText: "Did the adverse event result in death?"
+    orderNumber: 7
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESDTH"
+      sdtmVariables:
+        -  "AESDTH"
+  - name: AESLIFE
+    variableName: AESLIFE
+    dataElementConceptId: C84266
+    questionText: "Was the adverse event life threatening?"
+    orderNumber: 8
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESLIFE"
+      sdtmVariables:
+        -  "AESLIFE"
+  - name: AESHOSP
+    variableName: AESHOSP
+    dataElementConceptId: C83052
+    questionText: "Did the adverse event result in initial or prolonged hospitalization for the subject?"
+    orderNumber: 9
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESHOSP"
+      sdtmVariables:
+        -  "AESHOSP"
+  - name: AESDISAB
+    variableName: AESDISAB
+    dataElementConceptId: C113380
+    questionText: "Did the adverse event result in disability or permanent damage?"
+    orderNumber: 10
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESDISAB"
+      sdtmVariables:
+        -  "AESDISAB"
+  - name: AESCONG
+    variableName: AESCONG
+    dataElementConceptId: C83117
+    questionText: "Was the adverse event associated with a congenital anomaly or birth defect?"
+    orderNumber: 11
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESCONG"
+      sdtmVariables:
+        -  "AESCONG"
+  - name: AESMIE
+    variableName: AESMIE
+    dataElementConceptId: C83053
+    questionText: "Was the adverse event a medically important event not covered by other serious criteria?"
+    orderNumber: 12
+    mandatoryVariable: false
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AESMIE"
+      sdtmVariables:
+        -  "AESMIE"
+  - name: AEREL
+    variableName: AEREL
+    dataElementConceptId: C41358
+    prompt: Relationship to Study Treatment
+    orderNumber: 13
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AEREL"
+      sdtmVariables:
+        -  "AEREL"
+  - name: AEACN
+    variableName: AEACN
+    dataElementConceptId: C83013
+    prompt: Action Taken with Study Treatment
+    orderNumber: 14
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: ACN
+      conceptId: C66767
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66767
+    valueList:
+      - displayValue: "Dose Increased"
+        value: "DOSE INCREASED"
+      - displayValue: "Dose Not Changed"
+        value: "DOSE NOT CHANGED"
+      - displayValue: "Dose Rate Reduced"
+        value: "DOSE RATE REDUCED"
+      - displayValue: "Dose Reduced"
+        value: "DOSE REDUCED"
+      - displayValue: "Drug Interrupted"
+        value: "DRUG INTERRUPTED"
+      - displayValue: "Drug Withdrawn"
+        value: "DRUG WITHDRAWN"
+      - displayValue: "Not Applicable"
+        value: "NOT APPLICABLE"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+    selectionType: Multiple
+    sdtmTarget:
+      sdtmAnnotation: "AEACN"
+      sdtmVariables:
+        -  "AEACN"
+  - name: AEACNOTH
+    variableName: AEACNOTH
+    dataElementConceptId: C83109
+    prompt: Other Action Taken
+    orderNumber: 15
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "AEACNOTH"
+      sdtmVariables:
+        -  "AEACNOTH"
+  - name: AEOUT
+    variableName: AEOUT
+    dataElementConceptId: C49489
+    questionText: "What is the outcome of this adverse event?"
+    orderNumber: 16
+    mandatoryVariable: false
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: OUT
+      conceptId: C66768
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66768
+    valueList:
+      - displayValue: "Fatal"
+        value: "FATAL"
+      - displayValue: "Not Recovered/Not Resolved"
+        value: "NOT RECOVERED/NOT RESOLVED"
+      - displayValue: "Recovered/Resolved"
+        value: "RECOVERED/RESOLVED"
+      - displayValue: "Recovered/Resolved With Sequelae"
+        value: "RECOVERED/RESOLVED WITH SEQUELAE"
+      - displayValue: "Recovering/Resolving"
+        value: "RECOVERING/RESOLVING"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "AEOUT"
+      sdtmVariables:
+        -  "AEOUT"

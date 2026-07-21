@@ -33,7 +33,7 @@
 
   data issues(keep=_excel_file_ _tab_ package_date severity crf_group_id short_name crf_item issue_type expected_value actual_value comment);
     length prev_crf_group_id crf_group_id $256 outname $512 package_date qpackage_date standard $64 qstandard_start_version qstandard_end_version $20  
-           crf_item $128 short_name $512 questionText qquestionText $1064 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
+           crf_item $128 short_name $512 question_Text $1064 codelist_submission_value_cdisc prepopulated_term_cdisc prepopulated_code_cdisc value_code_cdisc prepopulated_term_cdisc_preferd $512 
            codelist_extensible $3 lookup_term_exist 8 value qvalue $1024 categories derivation_description value_list value_display_list sdtm_annotation $8192
            severity $10 issue_type $64 expected_value actual_value comment $2048;
     retain prev_crf_group_id "" count 0;
@@ -121,8 +121,9 @@
         end;  
         if not missing(completion_instructions) then do;
           completion_instructions=tranwrd(completion_instructions, '"', '\"');
-          if index(completion_instructions, '"') or index(completion_instructions, ":") or index(completion_instructions, "-") 
-            then completion_instructions=cats('"', completion_instructions, '"');
+          completion_instructions=tranwrd(completion_instructions, '0D0A'x, '\r');
+          completion_instructions=tranwrd(completion_instructions, '0A'x, '\r');
+          completion_instructions=cats('"', completion_instructions, '"');
           put +4 "completionIinstructions:" +1 completion_instructions;
         end;  
 
