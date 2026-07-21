@@ -1,3 +1,329 @@
+packageDate: "2026-07-31"
+packageType: crf
+crfSpecializationId: SUBSEQUENTRADTHERAPY
+shortName: Subsequent Radiotherapy (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: ""
+implementationOption: Normalized
+domain: PR
+biomedicalConceptId: C15313
+sdtmDatasetSpecializationId: SUBSEQUENT_RAD_THERAPY
+items:
+  - name: PRGRPID
+    variableName: PRGRPID
+    prompt: Regimen ID
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "RELREC when PRGRPID = CMGRPID"
+      sdtmVariables:
+        -  "PRGRPID"
+  - name: PRCAT
+    variableName: PRCAT
+    dataElementConceptId: C25372
+    prompt: Procedure Category
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    prepopulatedValue:
+      value: "SUBSEQUENT RADIATION THERAPHY"
+    sdtmTarget:
+      sdtmAnnotation: "PRCAT = PRIOR RADIATION THERAPY"
+      sdtmVariables:
+        -  "PRCAT"
+  - name: PRSCAT
+    variableName: PRSCAT
+    dataElementConceptId: C25692
+    prompt: Radiation Therapy Type
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "Internal Radiation Therapy"
+        value: "INTERNAL RADIATION THERAPY"
+      - displayValue: "External Beam Radiation Therapy"
+        value: "EXTERNAL BEAM RADIATION THERAPY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRSCAT"
+      sdtmVariables:
+        -  "PRSCAT"
+  - name: PRTRT
+    variableName: PRTRT
+    dataElementConceptId: C117511
+    prompt: Procedure Name
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: PROCEDUR
+      conceptId: C101858
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101858
+    valueList:
+      - displayValue: "3D Conformal Radiation Therapy"
+        value: "3D CONFORMAL RADIATION THERAPY"
+      - displayValue: "Intensity Modulated Radiation Therapy"
+        value: "INTENSITY-MODULATED RADIATION THERAPY"
+      - displayValue: "Radiosurgery"
+        value: "RADIOSURGERY"
+      - displayValue: "Stereotactic Body Radiation Therapy"
+        value: "STEREOTACTIC BODY RADIATION THERAPY"
+      - displayValue: "Total Body Irradiation"
+        value: "TOTAL BODY IRRADIATION"
+      - displayValue: "Intracavitary Brachytherapy"
+        value: "BRACHYTHERAPY, INTRACAVITARY"
+      - displayValue: "Interstitial Brachytherapy"
+        value: "BRACHYTHERAPY, INTERSTITIAL"
+      - displayValue: "Radioembolization"
+        value: "RADIOEMBOLIZATION"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRT"
+      sdtmVariables:
+        -  "PRTRT"
+  - name: PRPRESP
+    variableName: PRPRESP
+    dataElementConceptId: C171000
+    prompt: Prespecified
+    orderNumber: 5
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "PRPRESP = Y"
+      sdtmVariables:
+        -  "PRPRESP"
+  - name: PROCCUR
+    variableName: PROCCUR
+    dataElementConceptId: C127786
+    prompt: Radiotherapy Perfomed
+    orderNumber: 6
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    prepopulatedValue:
+      value: "Y"
+      conceptId: C49488
+    sdtmTarget:
+      sdtmAnnotation: "PROCCUR"
+      sdtmVariables:
+        -  "PROCCUR"
+  - name: PRTRTINT
+    variableName: PRTRTINT
+    dataElementConceptId: C210652
+    prompt: Treatment Intent
+    orderNumber: 7
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: TRTINTNT
+      conceptId: C124307
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124307
+    valueList:
+      - displayValue: "Palliative"
+        value: "PALLIATIVE"
+      - displayValue: "Curative"
+        value: "CURATIVE"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRTINT in SUPPPR"
+      sdtmVariables:
+        -  "PRTRTINT"
+  - name: PRTRTSTT
+    variableName: PRTRTSTT
+    dataElementConceptId: C124444
+    prompt: Treatment Setting
+    orderNumber: 8
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: TRTSET
+      conceptId: C124308
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124308
+    valueList:
+      - displayValue: "Adjuvant"
+        value: "ADJUVANT"
+      - displayValue: "Metastatic"
+        value: "METASTATIC"
+      - displayValue: "Neo-Adjuvant"
+        value: "NEO-ADJUVANT"
+      - displayValue: "Definitive"
+        value: "DEFINITIVE"
+      - displayValue: "Not applicable"
+        value: "NOT APPLICABLE"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRTRTSTT in SUPPPR
+if NOT APPLICABLE is selected then NOT SUBMITTED"
+      sdtmVariables:
+        -  "PRTRTSTT"
+  - name: PRLNTX
+    variableName: PRLNTX
+    prompt: Line of Therapy
+    orderNumber: 9
+    mandatoryVariable: true 
+    dataType: text
+    length: 200
+    displayHidden: false
+    derivedVariable: false
+    valueList:
+      - displayValue: "First Line"
+        value: "FIRST LINE"
+      - displayValue: "Second Line"
+        value: "SECOND LINE"
+      - displayValue: "Third Line"
+        value: "THIRD LINE"
+      - displayValue: "Fourth Line"
+        value: "FOURTH LINE"
+      - displayValue: "Fifth Line or Greater"
+        value: "FIFTH LINE OR GREATER"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRLNTX in SUPPPR"
+      sdtmVariables:
+        -  "PRLNTX"
+  - name: PRSTDAT
+    variableName: PRSTDAT
+    dataElementConceptId: C117529
+    prompt: Start Date
+    orderNumber: 10
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRSTDTC"
+      sdtmVariables:
+        -  "PRSTDTC"
+  - name: PRENDAT
+    variableName: PRENDAT
+    dataElementConceptId: C117530
+    prompt: End Date
+    orderNumber: 11
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRENDTC"
+      sdtmVariables:
+        -  "PRENDTC"
+  - name: PRCMLDOS
+    variableName: PRCMLDOS
+    prompt: Total Dose
+    orderNumber: 12
+    mandatoryVariable: true 
+    dataType: integer
+    length: 3
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRCMLDOS in SUPPPR"
+      sdtmVariables:
+        -  "PRCMLDOS"
+  - name: PRDOSU
+    variableName: PRDOSU
+    prompt: Total Dose Unit
+    orderNumber: 13
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "Gy"
+        value: "Gy"
+      - displayValue: "Rad"
+        value: "Rad"
+      - displayValue: "cGY"
+        value: "cGY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "PRDOSU"
+      sdtmVariables:
+        -  "PRDOSU"
+  - name: DOSPF_FAORRES
+    variableName: FAORRES
+    prompt: Dose per Fraction
+    orderNumber: 14
+    mandatoryVariable: true 
+    dataType: decimal
+    length: 4
+    significantDigits: 1
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "FAORRES when FATESTCD=DOSPF"
+      sdtmVariables:
+        -  "FAORRES"
+  - name: DOSPF_FAORRESU
+    variableName: FAORRESU
+    prompt: Dose per Fraction Unit
+    orderNumber: 15
+    mandatoryVariable: true 
+    dataType: text
+    length: 20
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: UNIT
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+    valueList:
+      - displayValue: "Gy"
+        value: "Gy"
+      - displayValue: "Rad"
+        value: "Rad"
+      - displayValue: "cGY"
+        value: "cGY"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "FAORRESU when FATESTCD=DOSPF"
+      sdtmVariables:
+        -  "FAORRESU"
   - name: PRLOC
     variableName: PRLOC
     dataElementConceptId: C13717
