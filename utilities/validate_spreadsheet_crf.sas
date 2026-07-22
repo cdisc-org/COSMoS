@@ -613,6 +613,12 @@ title01 "&now";
 %let excel_file=&root/scripts/templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx;
 %ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm&release._00, drop=%str(drop=length significant_digits format));
 
+
+%let excel_file=&root/curation/draft/package19/R19_BC_SDTM_Updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc19_01);
+%ReadExcel(file=&excel_file, range=%str(SDTM_Updates)$, dsout=sdtm19_01, drop=%str(drop=length significant_digits format));
+
+
 /* Select BCs and SDTMs*/
 
 %let bc_set =;  
@@ -687,7 +693,7 @@ quit;
 %ReadExcel(file=&excel_file, range=%str(CRF_PR)$, dsout=collectxx_11, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_PR_RS_RadioTherapy.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_PR_RS)$, dsout=collectxx_12, drop=%str(drop=&dropit));
+%*ReadExcel(file=&excel_file, range=%str(CRF_PR_RS)$, dsout=collectxx_12, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_SC.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_SC)$, dsout=collectxx_13, drop=%str(drop=&dropit));
