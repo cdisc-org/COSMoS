@@ -12,10 +12,14 @@ BASE_URL = "https://library.cdisc.org/api"
 
 PRODUCTS_JSON = {
     "_links": {
-        "packages": [
-            {"href": "/mdr/ct/packages/sdtmct-2025-03-28"},
-            {"href": "/mdr/ct/packages/sdtmct-2026-06-26"},
-        ]
+        "terminology": {
+            "_links": {
+                "packages": [
+                    {"href": "/mdr/ct/packages/sdtmct-2025-03-28"},
+                    {"href": "/mdr/ct/packages/sdtmct-2026-06-26"},
+                ]
+            }
+        }
     }
 }
 
@@ -67,7 +71,8 @@ def test_refresh_one_package_fetches_latest_and_writes_cache(tmp_path):
 
 @responses.activate
 def test_refresh_one_package_skips_when_no_package_found(tmp_path):
-    responses.add(responses.GET, f"{BASE_URL}/mdr/products", json={"_links": {"packages": []}}, status=200)
+    empty_products = {"_links": {"terminology": {"_links": {"packages": []}}}}
+    responses.add(responses.GET, f"{BASE_URL}/mdr/products", json=empty_products, status=200)
 
     client = CDISCLibraryClient(api_key="fake-key", base_api_url=BASE_URL)
     out_file = str(tmp_path / "ddf_latest_codelist_package.json")

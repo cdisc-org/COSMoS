@@ -23,6 +23,15 @@ columns well past the real data (confirmed against R18_BC_SDTM_SC.xlsx's "SDTM_S
 which has ~400 such columns), and pandas can't concat/merge frames with duplicate ""
 column labels. No converter or validator ever references a column by that name, so dropping
 them is safe.
+
+Hyperlinks on EMPTY cells must not become values. Curation workbooks carry leftover
+hyperlinks on cells whose content was deleted (R18_BC_DSS_BrCa_TAUG.xlsx's "SDTM_BrCa" sheet
+has ~5,500 of them, mostly below the real table). Excel, and SAS's PROC IMPORT, read those
+cells as blank. openpyxl's normal (non-read-only) mode, however, binds each hyperlink to its cell
+and - when the cell has no value - sets the cell's value to the hyperlink target, so a blank cell
+reads as an NCIt explore URL (and the sheet's used range grows to cover every such cell). Reading
+in read-only mode returns the stored cell values only, which matches SAS. Do not switch this
+reader back to full mode (see tests/unit/test_excel_reader.py).
 """
 
 import os
@@ -59,7 +68,8 @@ def get_sheet_names(path):
 
 
 def read_named_range(path, range_name):
-    workbook = load_workbook(path, data_only=True)
+    # read_only: stored cell values only - see the module docstring on hyperlinks on empty cells.
+    workbook = load_workbook(path, read_only=True, data_only=True)
     try:
         bare_name = range_name.rstrip("$")
         defined_name = workbook.defined_names.get(range_name) or workbook.defined_names.get(bare_name)
@@ -84,6 +94,9 @@ def read_named_range(path, range_name):
             if sheet_name is None:
                 raise KeyError(f"Named range/sheet '{range_name}' not found in {path}")
             sheet = workbook[sheet_name]
+            # Do not trust the sheet's <dimension> tag: read every stored row. Rows can then be
+            # shorter than the header (trailing blanks), so they are padded below.
+            sheet.reset_dimensions()
             rows = list(sheet.iter_rows(values_only=True))
     finally:
         workbook.close()
@@ -94,7 +107,7 @@ def read_named_range(path, range_name):
     header = [_normalize_header(cell) for cell in rows[0]]
     keep_positions = [i for i, name in enumerate(header) if name != ""]
     header = [header[i] for i in keep_positions]
-    data_rows = [tuple(row[i] for i in keep_positions) for row in rows[1:]]
+    data_rows = [tuple(row[i] if i < len(row) else None for i in keep_positions) for row in rows[1:]]
     df = pd.DataFrame(data_rows, columns=header)
 
     df["_tab_"] = range_name.replace("$", "")

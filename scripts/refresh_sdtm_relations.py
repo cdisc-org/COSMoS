@@ -4,6 +4,7 @@ import os
 from datetime import datetime, timezone
 
 from cdisc_library_client import CDISCLibraryClient
+from dotenv import load_dotenv
 
 from cosmoslib.relations_cache import build_relation_caches, extract_relationships, save_relation_cache
 
@@ -70,6 +71,7 @@ def collect_all_relationships(client, api_version, logger):
 
 
 def main():
+    load_dotenv()
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S'
     )

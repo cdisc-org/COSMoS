@@ -24,14 +24,15 @@ import os
 
 def find_latest_package_href(products_json, package_substring):
     """`select href into :_latest_ctpackage ... where index(href, "&package") > 0 order by
-    href DESC` - among every href in the /mdr/products response, the lexically-last one
-    containing `package_substring` (e.g. "sdtmct"), matching a package family's dated hrefs
-    (.../ct/packages/sdtmct-2026-06-26) sorting correctly by date."""
-    hrefs = [
-        link.get("href", "")
-        for link in products_json.get("_links", {}).get("packages", [])
-        if package_substring in link.get("href", "")
-    ]
+    href DESC` - among every href in the /mdr/products response's terminology packages, the
+    lexically-last one containing `package_substring` (e.g. "sdtmct"), matching a package
+    family's dated hrefs (.../ct/packages/sdtmct-2026-06-26) sorting correctly by date.
+
+    The SAS reads `response._links_packages`, but that is the table name SAS's JSON engine
+    generates for the array at `_links.terminology._links.packages` - not a JSON path. The
+    live /mdr/products response has no top-level `_links.packages`."""
+    packages = products_json.get("_links", {}).get("terminology", {}).get("_links", {}).get("packages", [])
+    hrefs = [link.get("href", "") for link in packages if package_substring in link.get("href", "")]
     if not hrefs:
         return None
     return sorted(hrefs, reverse=True)[0]

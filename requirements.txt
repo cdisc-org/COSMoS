@@ -2,4 +2,5 @@ cdisc-library-client==0.1.6
 openpyxl==3.1.5
 pandas==2.2.3
 linkml==1.9.2
-linkml_runtime==1.11.1
+linkml_runtime==1.9.5
+python-dotenv==1.0.1

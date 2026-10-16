@@ -10,12 +10,16 @@ from cosmoslib.cdisc_library_cache import (
 
 PRODUCTS_JSON = {
     "_links": {
-        "packages": [
-            {"href": "/mdr/ct/packages/sdtmct-2025-03-28"},
-            {"href": "/mdr/ct/packages/sdtmct-2026-06-26"},
-            {"href": "/mdr/ct/packages/cdashct-2026-06-26"},
-            {"href": "/mdr/sdtm/1-4"},
-        ]
+        "terminology": {
+            "_links": {
+                "packages": [
+                    {"href": "/mdr/ct/packages/sdtmct-2025-03-28"},
+                    {"href": "/mdr/ct/packages/sdtmct-2026-06-26"},
+                    {"href": "/mdr/ct/packages/cdashct-2026-06-26"},
+                ]
+            }
+        },
+        "data-tabulation": {"_links": {"sdtm": [{"href": "/mdr/sdtm/1-4"}]}},
     }
 }
 

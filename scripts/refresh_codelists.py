@@ -4,6 +4,7 @@ import os
 from datetime import datetime, timezone
 
 from cdisc_library_client import CDISCLibraryClient
+from dotenv import load_dotenv
 
 from cosmoslib.cdisc_library_cache import find_latest_package_href, flatten_codelist_package, save_codelist_cache
 
@@ -52,6 +53,7 @@ def refresh_one_package(client, package_substring, out_file, logger):
 
 
 def main():
+    load_dotenv()
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S'
     )

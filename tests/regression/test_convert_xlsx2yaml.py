@@ -95,6 +95,16 @@ def _bc_pasi_fredriksson_job():
     return jobs[0]
 
 
+def _sdtm_brca_taug_job():
+    manifest = load_manifest(os.path.join(MANIFESTS_DIR, "sdtm", "20260714_r18.yaml"))
+    jobs = [job for job in manifest.jobs if os.path.basename(job.excel_file) == "R18_BC_DSS_BrCa_TAUG.xlsx"]
+    assert len(jobs) == 1
+    job = jobs[0]
+    job.subsets_source = dict(job.subsets_source)
+    job.subsets_source["file"] = os.path.join(REPO_ROOT, job.subsets_source["file"])
+    return job
+
+
 def _crf_draft_job():
     manifest = load_manifest(os.path.join(MANIFESTS_DIR, "crf", "20260630_draft.yaml"))
     assert len(manifest.jobs) == 1
@@ -158,6 +168,33 @@ def test_sdtm_pasi_fredriksson_matches_published_yaml(tmp_path):
     generated_names = {os.path.basename(path) for path in written}
     assert generated_names == golden_names
     assert golden_names <= set(os.listdir(GOLDEN_SDTM_DIR))
+
+    for name in generated_names:
+        with open(os.path.join(tmp_path, name), "r", encoding="utf-8") as fh:
+            generated = yaml.safe_load(fh)
+        with open(os.path.join(GOLDEN_SDTM_DIR, name), "r", encoding="utf-8") as fh:
+            golden = yaml.safe_load(fh)
+        assert generated == golden, name
+
+
+@pytest.mark.golden
+def test_sdtm_brca_taug_matches_published_yaml(tmp_path):
+    # This workbook's SDTM_BrCa sheet carries ~5,500 leftover hyperlinks on EMPTY cells (including a few
+    # inside the real table, e.g. J120). SAS reads them as blank; the port must too, or AJCCV7_AJCC101-105
+    # and RADIATIONCANCER gain dataElementConceptId/codelist values the curators never entered.
+    job = _sdtm_brca_taug_job()
+    job.excel_file = os.path.join(REPO_ROOT, job.excel_file)
+    job.out_folder = str(tmp_path)
+
+    enum_index = build_enum_index(SCHEMA_PATHS)
+    issue_log = IssueLog(SDTM_ISSUE_ID_COLUMNS)
+
+    written = convert_sdtm_job(job, enum_index, _StubCodelistIndex(), _StubRelationsIndex(), issue_log)
+
+    generated_names = {os.path.basename(path) for path in written}
+    affected = {f"sdtm_ajccv7_ajcc10{n}.yaml" for n in range(1, 6)} | {"sdtm_radiationcancer.yaml"}
+    assert affected <= generated_names
+    assert generated_names <= set(os.listdir(GOLDEN_SDTM_DIR))
 
     for name in generated_names:
         with open(os.path.join(tmp_path, name), "r", encoding="utf-8") as fh:

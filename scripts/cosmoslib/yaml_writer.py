@@ -12,16 +12,28 @@ terms) into always-quoted output where the source data requires it.
 
 _QUOTE_TRIGGER_CHARS = ('"', ':', '-')
 
+# YAML-FIX (deviates from SAS): the SAS rule above would emit these bare, producing YAML that
+# parses wrongly (`key: #x` loads as null, `key: *x` is an alias, `key: %x` a directive-like
+# token, ...). No already-published YAML contains such a value, so quoting them changes no
+# golden output.
+_YAML_INDICATOR_START_CHARS = ('#', '%', '*', '&', '!', '@', '`', '|', '>', '?', '[', ']', '{', '}', ',', "'")
+
 
 def needs_quoting(value):
     if value is None:
         return False
     text = str(value)
-    return any(char in text for char in _QUOTE_TRIGGER_CHARS)
+    if any(char in text for char in _QUOTE_TRIGGER_CHARS):
+        return True
+    if text != text.strip() or text.startswith(_YAML_INDICATOR_START_CHARS):
+        return True
+    return " #" in text
 
 
 def escape_and_quote(value):
-    text = str(value).replace('"', '\\"')
+    # YAML-FIX (deviates from SAS): backslash must be escaped first, or a value containing
+    # one produces an invalid/mis-decoded double-quoted escape sequence.
+    text = str(value).replace('\\', '\\\\').replace('"', '\\"')
     return f'"{text}"'
 
 

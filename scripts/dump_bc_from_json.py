@@ -6,6 +6,7 @@ import os
 import sys
 
 from cdisc_library_client import CDISCLibraryClient
+from dotenv import load_dotenv
 
 from cosmoslib.json_roundtrip import bc_rows_from_json
 
@@ -35,6 +36,7 @@ def set_cmd_line_args():
 
 
 def main():
+    load_dotenv()
     logging.basicConfig(
         level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S'
     )

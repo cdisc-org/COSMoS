@@ -91,3 +91,32 @@ def test_raw_writes_blank_value_instead_of_omitting():
     writer.raw("shortName", "", indent=4)
     writer.raw("shortName", None, indent=4)
     assert fh.getvalue().splitlines() == ["    shortName: ", "    shortName: "]
+
+
+def test_needs_quoting_true_for_yaml_indicator_start_chars():
+    for char in "#%*&!@`|>?[]{},'":
+        assert needs_quoting(f"{char}value"), char
+
+
+def test_needs_quoting_true_for_inline_comment_and_edge_whitespace():
+    assert needs_quoting("value #comment")
+    assert needs_quoting(" leading")
+    assert needs_quoting("trailing ")
+    assert not needs_quoting("C#")
+
+
+def test_escape_and_quote_escapes_backslash_before_quote():
+    from cosmoslib.yaml_writer import escape_and_quote
+    assert escape_and_quote('a\\b "c"') == '"a\\\\b \\"c\\""'
+
+
+def test_hazardous_values_round_trip_through_a_yaml_parser():
+    import yaml
+    values = ["#x", "%x", "*x", "&x", "!x", "@x", "`x", "x #y", " x", "a\\b", "[x]", "'x'"]
+    for value in values:
+        fh = io.StringIO()
+        YamlWriter(fh).scalar("key", value)
+        YamlWriter(fh).list_scalar(value, indent=0)
+        loaded = yaml.safe_load("a:\n" + "\n".join(f"  {line}" for line in fh.getvalue().splitlines()[:1]))
+        assert loaded["a"] == {"key": value}, value
+        assert yaml.safe_load(fh.getvalue().splitlines()[1]) == [value], value
