@@ -1,0 +1,32 @@
+packageDate: "2026-07-31"
+packageType: crf
+crfSpecializationId: CM_ANTICANCER
+shortName: Concomitant Medications Yes No Indicator
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: ""
+scenario: Anti-Cancer Treatment specific
+domain: CM
+biomedicalConceptId: C83056
+items:
+  - name: CMYN
+    variableName: CMYN
+    questionText: "Were any prior anti-cancer medications taken?"
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
