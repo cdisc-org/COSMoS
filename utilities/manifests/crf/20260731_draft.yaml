@@ -1,0 +1,66 @@
+# Transcribed from the active block of utilities/convert_crf_xlsx2yaml.sas (crf_updates branch).
+# Unlike the 20260630 draft (one combined workbook), this package reads one workbook per CRF
+# domain from curation/draft/crf/.
+release: "20260731_draft"
+domain: crf
+package: "20260731"
+override_package_date: "2026-07-31"
+out_folder: yaml/20260731_draft/crf
+jobs:
+  - excel_file: curation/draft/crf/CRF_AE.xlsx
+    range: "CRF_AE"
+    type: ae
+  - excel_file: curation/draft/crf/CRF_CM.xlsx
+    range: "CRF_CM"
+    type: cm
+  - excel_file: curation/draft/crf/CRF_DM.xlsx
+    range: "CRF_DM"
+    type: dm
+  - excel_file: curation/draft/crf/CRF_DS.xlsx
+    range: "CRF_DS"
+    type: ds
+  - excel_file: curation/draft/crf/CRF_EC.xlsx
+    range: "CRF_EC"
+    type: ec
+  - excel_file: curation/draft/crf/CRF_EG_Local.xlsx
+    range: "CRF_EG"
+    type: eg
+  - excel_file: curation/draft/crf/CRF_IE.xlsx
+    range: "CRF_IE"
+    type: ie
+  - excel_file: curation/draft/crf/CRF_LB.xlsx
+    range: "CRF_LB"
+    type: lb
+  - excel_file: curation/draft/crf/CRF_MB.xlsx
+    range: "CRF_MB"
+    type: mb
+  - excel_file: curation/draft/crf/CRF_MH.xlsx
+    range: "CRF_MH"
+    type: mh
+  - excel_file: curation/draft/crf/CRF_PR.xlsx
+    range: "CRF_PR"
+    type: pr
+  - excel_file: curation/draft/crf/CRF_PR_RS_RadioTherapy.xlsx
+    range: "CRF_PR_RS"
+    type: pr_rs
+  - excel_file: curation/draft/crf/CRF_SC.xlsx
+    range: "CRF_SC"
+    type: sc
+  - excel_file: curation/draft/crf/CRF_SU.xlsx
+    range: "CRF_SU"
+    type: su
+  - excel_file: curation/draft/crf/CRF_VS.xlsx
+    range: "CRF_VS"
+    type: vs
+  - excel_file: curation/draft/crf/CRF_QRS_6MWT.xlsx
+    range: "CRF_QRS_6MWT"
+    type: 6mwt
+  - excel_file: curation/draft/crf/CRF_QRS_ADAS_COG.xlsx
+    range: "CRF_ADAS-COG"
+    type: adas
+  - excel_file: curation/draft/crf/CRF_QRS_EQ5D-5L.xlsx
+    range: "CRF_QRS_EQ5D-5L"
+    type: eq5d
+  - excel_file: curation/draft/crf/CRF_QRS_TTS.xlsx
+    range: "CRF_QRS_TTS"
+    type: tts

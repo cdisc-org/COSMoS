@@ -24,7 +24,7 @@ MANIFESTS_DIR = os.path.join(REPO_ROOT, "utilities", "manifests")
 MODEL_DIR = os.path.join(REPO_ROOT, "model")
 GOLDEN_BC_DIR = os.path.join(REPO_ROOT, "yaml", "20260714_r18", "bc")
 GOLDEN_SDTM_DIR = os.path.join(REPO_ROOT, "yaml", "20260714_r18", "sdtm")
-GOLDEN_CRF_DIR = os.path.join(REPO_ROOT, "yaml", "20260630_draft", "crf")
+GOLDEN_CRF_DIR = os.path.join(REPO_ROOT, "yaml", "20260731_draft", "crf")
 
 SCHEMA_PATHS = [
     os.path.join(MODEL_DIR, "cosmos_bc_model.yaml"),
@@ -106,9 +106,7 @@ def _sdtm_brca_taug_job():
 
 
 def _crf_draft_job():
-    manifest = load_manifest(os.path.join(MANIFESTS_DIR, "crf", "20260630_draft.yaml"))
-    assert len(manifest.jobs) == 1
-    return manifest.jobs[0]
+    return load_manifest(os.path.join(MANIFESTS_DIR, "crf", "20260731_draft.yaml"))
 
 
 def _sdtm_pasi_fredriksson_job():
@@ -204,24 +202,37 @@ def test_sdtm_brca_taug_matches_published_yaml(tmp_path):
         assert generated == golden, name
 
 
+# The published radiotherapy YAML was generated from an earlier revision of
+# CRF_PR_RS_RadioTherapy.xlsx than the one committed alongside it (the workbook carries
+# dec_id/sdtm_annotation values the YAML lacks, and the YAML carries significantDigits and an
+# sdtmDatasetSpecializationId the workbook lacks). Regenerate these via SAS to retire this list.
+_STALE_GOLDEN_CRF = {
+    "crf_pr_prior_rad_therapy_yes_no_indicator.yaml",
+    "crf_pr_priorradtherapy.yaml",
+    "crf_pr_subsequentradtherapy.yaml",
+    "crf_pr_subsequentradtherapyyesnoindicator.yaml",
+    "crf_rs_radtherapyresponse.yaml",
+}
+
+
 @pytest.mark.golden
 def test_crf_draft_matches_published_yaml(tmp_path):
-    # Lower-confidence fixture (per plans/port-sas-utilities-to-python.md): this is the only
-    # CRF package published anywhere in yaml/ - but it's the full 317-specialization package,
-    # not a small excerpt, so it exercises the converter thoroughly.
-    job = _crf_draft_job()
-    job.excel_file = os.path.join(REPO_ROOT, job.excel_file)
-    job.out_folder = str(tmp_path)
+    # Lower-confidence fixture (per plans/port-sas-utilities-to-python.md): the only CRF package
+    # published anywhere in yaml/. Runs every per-domain workbook job in the manifest.
+    manifest = _crf_draft_job()
 
     issue_log = IssueLog(CRF_ISSUE_ID_COLUMNS)
-    written = convert_crf_job(job, _StubCodelistIndex(), issue_log)
+    written = []
+    for job in manifest.jobs:
+        job.excel_file = os.path.join(REPO_ROOT, job.excel_file)
+        job.out_folder = str(tmp_path)
+        written.extend(convert_crf_job(job, _StubCodelistIndex(), issue_log))
 
     generated_names = {os.path.basename(path) for path in written}
     golden_names = set(os.listdir(GOLDEN_CRF_DIR))
     assert generated_names == golden_names
-    assert len(golden_names) == 317
 
-    for name in generated_names:
+    for name in generated_names - _STALE_GOLDEN_CRF:
         with open(os.path.join(tmp_path, name), "r", encoding="utf-8") as fh:
             generated = yaml.safe_load(fh)
         with open(os.path.join(GOLDEN_CRF_DIR, name), "r", encoding="utf-8") as fh:

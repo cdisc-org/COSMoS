@@ -172,6 +172,8 @@ def _write_crf_header(writer, row, crf_group_id, package_date, emit_issue):
         writer.raw("scenario", scenario)
 
     categories = _get(row, "categories")
+    if categories and isinstance(row.get("categories"), float):
+        categories = format_number(row.get("categories"))  # numeric cell, e.g. 360 not 360.0
     if categories:
         writer.block_key("categories")
         for value in words(categories):
@@ -228,7 +230,8 @@ def _write_text_fields_block(writer, row, emit_issue):
 
     completion_instructions = _get(row, "completion_instructions")
     if completion_instructions:
-        writer.scalar("completionInstructions", completion_instructions, indent=4)
+        # SAS (crf_updates): always quoted, with CR/LF converted to a literal \r escape.
+        writer.raw("completionInstructions", _escape_question_text(completion_instructions), indent=4)
 
 
 def _escape_question_text(text):
