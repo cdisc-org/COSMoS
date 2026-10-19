@@ -54,7 +54,7 @@ items:
     displayHidden: false
     derivedVariable: false
     prepopulatedValue:
-      value: "PRIOR RADIATION THERAPHY"
+      value: "PRIOR RADIATION THERAPY"
     sdtmTarget:
       sdtmAnnotation: "PRCAT = PRIOR RADIATION THERAPY"
       sdtmVariables:
@@ -298,8 +298,8 @@ if NOT APPLICABLE is selected then NOT SUBMITTED"
         value: "Gy"
       - displayValue: "Rad"
         value: "Rad"
-      - displayValue: "cGY"
-        value: "cGY"
+      - displayValue: "cGy"
+        value: "cGy"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "PRDOSU"
@@ -337,8 +337,8 @@ if NOT APPLICABLE is selected then NOT SUBMITTED"
         value: "Gy"
       - displayValue: "Rad"
         value: "Rad"
-      - displayValue: "cGY"
-        value: "cGY"
+      - displayValue: "cGy"
+        value: "cGy"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FAORRESU when FATESTCD=DOSPF"

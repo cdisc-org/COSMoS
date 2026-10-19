@@ -34,9 +34,9 @@ items:
     displayHidden: false
     derivedVariable: false
     prepopulatedValue:
-      value: "SUBSEQUENT RADIATION THERAPHY"
+      value: "SUBSEQUENT RADIATION THERAPY"
     sdtmTarget:
-      sdtmAnnotation: "PRCAT = PRIOR RADIATION THERAPY"
+      sdtmAnnotation: "PRCAT = SUBSEQUENT RADIATION THERAPY"
       sdtmVariables:
         -  "PRCAT"
   - name: PRSCAT
@@ -278,8 +278,8 @@ if NOT APPLICABLE is selected then NOT SUBMITTED"
         value: "Gy"
       - displayValue: "Rad"
         value: "Rad"
-      - displayValue: "cGY"
-        value: "cGY"
+      - displayValue: "cGy"
+        value: "cGy"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "PRDOSU"
@@ -317,8 +317,8 @@ if NOT APPLICABLE is selected then NOT SUBMITTED"
         value: "Gy"
       - displayValue: "Rad"
         value: "Rad"
-      - displayValue: "cGY"
-        value: "cGY"
+      - displayValue: "cGy"
+        value: "cGy"
     selectionType: Single
     sdtmTarget:
       sdtmAnnotation: "FAORRESU when FATESTCD=DOSPF"
