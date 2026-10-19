@@ -1,0 +1,44 @@
+packageDate: "2026-07-31"
+packageType: crf
+crfSpecializationId: PRIOR_RAD_THERAPY_YES_NO_INDICATOR
+shortName: Prior Radiotherapy Yes No Indicator (Normalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: ""
+implementationOption: Normalized
+domain: PR
+items:
+  - name: PRYN
+    variableName: PRYN
+    questionText: "Was Prior Radiotherapy Performed?"
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "[NOT SUBMITTED]"
+  - name: PRDAT
+    variableName: PRDAT
+    prompt: Collection Date
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "PRDTC"
+      sdtmVariables:
+        -  "PRDTC"
