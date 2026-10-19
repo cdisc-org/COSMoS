@@ -1,0 +1,102 @@
+packageDate: "2026-07-31"
+packageType: crf
+crfSpecializationId: RADTHERAPYRESPONSE
+shortName: Prior Radiotherapy Response (Denormalized)
+standard: CDASHIG
+standardStartVersion: "2-3"
+standardEndVersion: ""
+implementationOption: Denormalized
+domain: RS
+sdtmDatasetSpecializationId: PRIOR_RAD_THERAPY_RESPONSE
+items:
+  - name: BESTRESP_RSORRES
+    variableName: RSORRES
+    prompt: Best Overall Response
+    orderNumber: 1
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: ONCRSR
+      conceptId: C96785
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C96785
+    valueList:
+      - displayValue: "Complete Response"
+        value: "COMPLETE RESPONSE"
+      - displayValue: "Partial Response"
+        value: "PARTIAL RESPONSE"
+      - displayValue: "Stable Disease"
+        value: "STABLE DISEASE"
+      - displayValue: "Progressive Disease"
+        value: "PROGRESSIVE DISEASE"
+      - displayValue: "Minimal Response"
+        value: "MINIMAL RESPONSE"
+      - displayValue: "Symptom Relief"
+        value: "SYMPTOM RELIEF"
+      - displayValue: "Not Evaluable"
+        value: "NOT EVALUABLE"
+      - displayValue: "Unknown"
+        value: "UNKNOWN"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES where RSTESTCD = BESTRESP"
+      sdtmVariables:
+        -  "RSORRES"
+  - name: RSCAT
+    variableName: RSCAT
+    prompt: Category for Response Assessment
+    orderNumber: 2
+    mandatoryVariable: true 
+    dataType: text
+    length: 100
+    displayHidden: false
+    derivedVariable: true 
+    codelist:
+      submissionValue: ONCRSCAT
+      conceptId: C124298
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C124298
+    prepopulatedValue:
+      value: "UNSPECIFIED"
+      conceptId: C38046
+    sdtmTarget:
+      sdtmAnnotation: "RSCAT"
+      sdtmVariables:
+        -  "RSCAT"
+  - name: PDIND_RSORRES
+    variableName: RSORRES
+    prompt: Progressive Disease Indicator
+    orderNumber: 3
+    mandatoryVariable: true 
+    dataType: text
+    length: 1
+    displayHidden: false
+    derivedVariable: false
+    codelist:
+      submissionValue: NY
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+    valueList:
+      - displayValue: "No"
+        value: "N"
+      - displayValue: "Yes"
+        value: "Y"
+    selectionType: Single
+    sdtmTarget:
+      sdtmAnnotation: "RSORRES when RSTESTCD=PDIND"
+      sdtmVariables:
+        -  "RSORRES"
+  - name: PDIND_RSDAT
+    variableName: RSDAT
+    prompt: Date of Progression/Recurrence
+    orderNumber: 4
+    mandatoryVariable: true 
+    dataType: date
+    length: 10
+    displayHidden: false
+    derivedVariable: false
+    sdtmTarget:
+      sdtmAnnotation: "RSDTC when RSTESTCD = PDIND"
+      sdtmVariables:
+        -  "RSDTC"

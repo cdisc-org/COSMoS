@@ -571,6 +571,7 @@ title01 "&now";
 
 %let _debug=0;
 
+/*
 %let release=18;
 %let excel_file=&root/scripts/templates/cdisc_biomedical_concepts_latest_template.xlsx;
 %ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc&release._00);
@@ -603,6 +604,20 @@ title01 "&now";
 %let excel_file=&root/curation/package18/R18_BC_SDTM_SC.xlsx;
 %ReadExcel(file=&excel_file, range=%str(BC_SC)$, dsout=bc18_06);
 %ReadExcel(file=&excel_file, range=%str(SDTM_SC)$, dsout=sdtm18_06, drop=%str(drop=length significant_digits format));
+*/
+
+%let release=19;
+%let excel_file=&root/scripts/templates/cdisc_biomedical_concepts_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(Biomedical Concepts)$, dsout=bc&release._00);
+
+%let excel_file=&root/scripts/templates/cdisc_sdtm_dataset_specializations_latest_template.xlsx;
+%ReadExcel(file=&excel_file, range=%str(SDTM Dataset Specializations)$, dsout=sdtm&release._00, drop=%str(drop=length significant_digits format));
+
+
+%let excel_file=&root/curation/draft/package19/R19_BC_SDTM_Updates.xlsx;
+%ReadExcel(file=&excel_file, range=%str(BC_Updates)$, dsout=bc19_01);
+%ReadExcel(file=&excel_file, range=%str(SDTM_Updates)$, dsout=sdtm19_01, drop=%str(drop=length significant_digits format));
+
 
 /* Select BCs and SDTMs*/
 
@@ -639,11 +654,11 @@ quit;
 %let release_crf=xx;
 %let dropit=package_date categories length significant_digits;
 
-
-%let excel_file=&root/curation/draft/crf/cdisc_crf_specializations_draft_20260623.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF Specializations)$, dsout=collectxx_01, drop=%str(drop=&dropit));
-
 /*
+%let excel_file=&root/curation/draft/crf/_archive/cdisc_crf_specializations_draft_20260623.xlsx;
+%ReadExcel(file=&excel_file, range=%str(CRF Specializations)$, dsout=collectxx_01, drop=%str(drop=&dropit));
+*/
+
 %let excel_file=&root/curation/draft/crf/CRF_AE.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_AE)$, dsout=collectxx_01, drop=%str(drop=&dropit));
 
@@ -677,33 +692,29 @@ quit;
 %let excel_file=&root/curation/draft/crf/CRF_PR.xlsx;
 %ReadExcel(file=&excel_file, range=%str(CRF_PR)$, dsout=collectxx_11, drop=%str(drop=&dropit));
 
+%let excel_file=&root/curation/draft/crf/CRF_PR_RS_RadioTherapy.xlsx;
+%*ReadExcel(file=&excel_file, range=%str(CRF_PR_RS)$, dsout=collectxx_12, drop=%str(drop=&dropit));
+
 %let excel_file=&root/curation/draft/crf/CRF_SC.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_SC)$, dsout=collectxx_12, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_SC)$, dsout=collectxx_13, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_SU.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_SU)$, dsout=collectxx_13, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_SU)$, dsout=collectxx_14, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_VS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_VS)$, dsout=collectxx_14, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_VS)$, dsout=collectxx_15, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_ADAS_COG.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_ADAS-COG)$, dsout=collectxx_15, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_ADAS-COG)$, dsout=collectxx_16, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_6MWT.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_QRS_6MWT)$, dsout=collectxx_16, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_6MWT)$, dsout=collectxx_17, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_EQ5D-5L.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_QRS_EQ5D-5L)$, dsout=collectxx_17, drop=%str(drop=&dropit));
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_EQ5D-5L)$, dsout=collectxx_18, drop=%str(drop=&dropit));
 
 %let excel_file=&root/curation/draft/crf/CRF_QRS_TTS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_QRS_TTS)$, dsout=collectxx_18, drop=%str(drop=&dropit));
-
-%let excel_file=&root/curation/draft/crf/CRF_QRS_ECOG.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_QRS_ECOG)$, dsout=collectxx_19, drop=%str(drop=&dropit));
-
-%let excel_file=&root/curation/draft/crf/CRF_QRS_KFSS.xlsx;
-%ReadExcel(file=&excel_file, range=%str(CRF_QRS_KFSS)$, dsout=collectxx_20, drop=%str(drop=&dropit));
-*/
+%ReadExcel(file=&excel_file, range=%str(CRF_QRS_TTS)$, dsout=collectxx_19, drop=%str(drop=&dropit));
 
 /************************************************************************************************************************/
 
@@ -782,6 +793,15 @@ proc sql;
   order by _excel_file_, _tab_, vlm_group_id, order
   ;
 quit;
+
+proc sql noprint;
+  select distinct vlm_group_id into :sdtm_set_retired separated by '","'
+  from sdtm_merged(where=(not missing(vlm_group_id) and (index(short_name, '[RETIRED]') > 0 )));
+  ;
+quit;
+
+%put sdtm_set_retired = "&sdtm_set_retired";
+
 
 %if &print_html=1 %then %do;
   ods listing close;
@@ -919,10 +939,21 @@ ods html5 file="&root/utilities/reports/validate_spreadsheet_crf_sdtm_bc_issues_
  %* CRFs pointing to Retired BCs;
   proc sql;
     title02 "CRF Specializations pointing to retired BCs";
-      select package_date, _excel_file_, _tab_, domain, crf_group_id, order_number, crf_item, bc_id
+      select package_date, _excel_file_, _tab_, domain, crf_group_id, short_name, order_number, crf_item, bc_id
       from crf
       where
         bc_id in ("&bc_set_retired")
+      order by _excel_file_, _tab_, domain, crf_group_id, order_number
+      ;
+  quit;
+
+ %* CRFs pointing to Retired SDTM Specializationss;
+  proc sql;
+    title02 "CRF Specializations pointing to retired SDTM Specializations";
+      select package_date, _excel_file_, _tab_, domain, crf_group_id, short_name, order_number, crf_item, vlm_group_id
+      from crf
+      where
+        vlm_group_id in ("&sdtm_set_retired")
       order by _excel_file_, _tab_, domain, crf_group_id, order_number
       ;
   quit;
