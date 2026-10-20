@@ -34,8 +34,8 @@ pip install -r requirements-dev.txt      # + pytest, responses (only needed to r
 ```
 
 Two live services are involved, and their credentials come from environment variables
-(typically via a gitignored `.env` file, loaded the same way the pre-existing
-`create_cosmos_*_excel.py` / `verify_cosmos_data.py` scripts already do):
+(typically via a gitignored `.env` file in the repo root; the `refresh_*` and `dump_*_from_json`
+scripts load it with `python-dotenv`, so no `export` is needed):
 
 | Variable | Used by | Required for |
 |---|---|---|
