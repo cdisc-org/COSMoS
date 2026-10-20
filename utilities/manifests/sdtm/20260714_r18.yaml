@@ -1,0 +1,29 @@
+# Transcribed from the currently-active (uncommented) block of utilities/convert_sdtm_xlsx2yaml.sas
+release: "20260714_r18"
+domain: sdtm
+package: "20260714"
+override_package_date: "2026-07-14"
+out_folder: yaml/20260714_r18/sdtm
+check_relationships: true
+subsets_source:
+  file: curation/package06/BC_Package_R6_LZZT.xlsx
+  range: "Subset Codelist Example"
+jobs:
+  - excel_file: curation/package18/R18_SDTM_IS_MAST7.xlsx
+    range: SDTM_IS
+    type: is
+  - excel_file: curation/package18/R18_BC_DSS_BrCa_TAUG.xlsx
+    range: SDTM_BrCa
+    type: ""
+  - excel_file: curation/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx
+    range: SDTM_BrCa
+    type: ""
+  - excel_file: curation/package18/R18_BC_PASI_FREDRIKSSON.xlsx
+    range: SDTM_PASI_FREDRIKSSON
+    type: ""
+  - excel_file: curation/package18/R18_BC_Surrogates.xlsx
+    range: SDTM_SURROGATES
+    type: ""
+  - excel_file: curation/package18/R18_BC_SDTM_SC.xlsx
+    range: SDTM_SC
+    type: ""
