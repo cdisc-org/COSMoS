@@ -1,0 +1,19 @@
+# Transcribed from utilities/convert_bc_xlsx2yaml_dht.sas
+release: "dht_test"
+domain: bc
+package: "20261231"
+override_package_date: "2026-12-31"
+out_folder: yaml/dht_test/bc
+jobs:
+  - excel_file: curation/draft/dht/DHT_BC_SDTM.xlsx
+    range: BC_DI
+    type: di
+  - excel_file: curation/draft/dht/DHT_BC_SDTM.xlsx
+    range: BC_Sleep
+    type: sleep
+  - excel_file: curation/draft/dht/DHT_BC_SDTM.xlsx
+    range: BC_MK
+    type: mk
+  - excel_file: curation/draft/dht/DHT_BC_SDTM.xlsx
+    range: BC_HR
+    type: hr
