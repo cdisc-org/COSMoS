@@ -53,3 +53,14 @@ c = CDISCLibraryClient(
 
 live = {x["name"] for x in c.get_bc_categories("v2")}
 print("bc_categories", len(live | {cat for b in bc for cat in b.get("categories", [])}))
+
+# Packages: live package dates plus this release's date. Using a set of dates means the
+# count stays correct whether or not the release has been published to the API yet.
+bc_dates = {p["href"].split("/")[-2] for p in c.get_bc_packages("v2")}
+sdtm_dates = {p["href"].split("/")[-2] for p in c.get_sdtm_packages("v2")}
+bc_date = max({b["packageDate"] for b in bc})
+sdtm_date = max({s["packageDate"] for s in sds})
+print("bc_latest_package_date", bc_date)
+print("bc_packages", len(bc_dates | {bc_date}))
+print("sdtm_latest_package_date", sdtm_date)
+print("sdtm_packages", len(sdtm_dates | {sdtm_date}))
