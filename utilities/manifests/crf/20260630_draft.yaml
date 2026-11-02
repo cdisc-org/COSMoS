@@ -1,0 +1,18 @@
+# Transcribed from the currently-active (uncommented) block of utilities/convert_crf_xlsx2yaml.sas.
+# NOTE: the SAS source targets yaml/20260630_draft2/crf (an apparent "&folder.2" typo, and that
+# folder does not exist on disk). Per the approved plan (plans/port-sas-utilities-to-python.md),
+# this manifest fixes the output path to the standard yaml/<folder>/crf convention instead.
+# NOTE: the SAS source also references curation/draft/crf/cdisc_crf_specializations_draft_20260623.xlsx,
+# which does not exist in this repo. curation/draft/cdisc_crf_specializations_draft.xlsx (same
+# "CRF Specializations" sheet, no date suffix) does, has the expected 317 distinct crf_group_id
+# values, and matches the 317 files already published under yaml/20260630_draft/crf/ - this
+# manifest points at that file instead.
+release: "20260630_draft"
+domain: crf
+package: "20260630"
+override_package_date: "2026-06-30"
+out_folder: yaml/20260630_draft/crf
+jobs:
+  - excel_file: curation/draft/cdisc_crf_specializations_draft.xlsx
+    range: "CRF Specializations"
+    type: ae

@@ -1,0 +1,25 @@
+# Transcribed from the currently-active (uncommented) block of utilities/convert_bc_xlsx2yaml.sas
+release: "20260714_r18"
+domain: bc
+package: "20260714"
+override_package_date: "2026-07-14"
+out_folder: yaml/20260714_r18/bc
+jobs:
+  - excel_file: curation/package18/R18_BC_DSS_BrCa_TAUG.xlsx
+    range: BC_BrCa
+    type: ""
+  - excel_file: curation/package18/R18_BC_DSS_BrCa_TAUG_2.xlsx
+    range: BC_BrCa
+    type: ""
+  - excel_file: curation/package18/R18_BC_DSS_QRS_Edits.xlsx
+    range: BC_QRS_Edits
+    type: ""
+  - excel_file: curation/package18/R18_BC_PASI_FREDRIKSSON.xlsx
+    range: BC_PASI_FREDRIKSSON
+    type: ""
+  - excel_file: curation/package18/R18_BC_Surrogates.xlsx
+    range: BC_SURROGATES
+    type: ""
+  - excel_file: curation/package18/R18_BC_SDTM_SC.xlsx
+    range: BC_SC
+    type: sc

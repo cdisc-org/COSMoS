@@ -1,7 +1,10 @@
 import os
 import requests
+from dotenv import load_dotenv
 from cdisc_library_client import CDISCLibraryClient
 import argparse
+
+load_dotenv()
 
 RESPONSE_DATA = {
     "bc_latest_package_date": "2026-07-14",
