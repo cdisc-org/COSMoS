@@ -24,14 +24,14 @@ PROD_DATA = {
 # packages, so package-history-based counts differ from prod.
 DEV_DATA = {
     "bc_latest_package_date": "2026-11-02",
-    "bc_packages": 4,
-    "bc_biomedicalconcepts": 166,
-    "bc_categories": 83,
+    "bc_packages": 1,
+    "bc_biomedicalconcepts": 140,
+    "bc_categories": 69,
     "bc_latest_package_biomedicalconcepts": 140,
     "sdtm_latest_package_date": "2026-11-02",
-    "sdtm_packages": 4,
-    "sdtm_datasetspecializations": 242,
-    "sdtm_domains": 25,
+    "sdtm_packages": 1,
+    "sdtm_datasetspecializations": 230,
+    "sdtm_domains": 24,
     "sdtm_latest_package_datasetspecializations": 230,
 }
 
