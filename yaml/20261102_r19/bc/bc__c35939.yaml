@@ -1,0 +1,13 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C35939
+ncitCode: C35939
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C35939
+categories:
+  - Microscopic Findings
+  - Pathology
+  - Oncology Standards
+  - Breast Cancer
+  - Disease Grade
+shortName: Tumor Vascular Invasion
+definition: A term referring to the presence of tumor emboli or tumor masses within any circulatory vessel.

@@ -1,0 +1,99 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C85540
+ncitCode: C85540
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85540
+parentConceptId: C49188
+categories:
+  - Laboratory Tests
+  - Microbiology Tests
+  - Microbial Susceptibility Tests
+shortName: Microbial Susceptibility Test
+synonyms:
+  - Microbial Susceptibility
+  - MICROSUS
+resultScales:
+  - Nominal
+definition: A method to determine whether microbial growth is affected by an antimicrobial compound.
+dataElementConcepts:
+  - conceptId: C227322
+    ncitCode: C227322
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227322
+    shortName: Non-Host Organism Identifier
+    dataType: string
+    exampleSet:
+      - "Streptococcus Pneumoniae"
+  - conceptId: C82531
+    ncitCode: C82531
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82531
+    shortName: Reference ID
+    dataType: string
+  - conceptId: C117050
+    ncitCode: C117050
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117050
+    shortName: Record Link Identifier
+    dataType: string
+  - conceptId: C117049
+    ncitCode: C117049
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117049
+    shortName: Link Group Identifier
+    dataType: string
+  - conceptId: C227288
+    ncitCode: C227288
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227288
+    shortName: Susceptibility Agent Name
+    dataType: string
+    exampleSet:
+      - "Penicillin"
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Susceptible"
+      - "Resistant"
+      - "Intermediate"
+  - conceptId: C227303
+    ncitCode: C227303
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227303
+    shortName: Susceptibility Agent Concentration
+    dataType: decimal
+  - conceptId: C227304
+    ncitCode: C227304
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227304
+    shortName: Susceptibility Agent Concentration Units
+    dataType: string
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Blood"
+      - "Urine"
+      - "Sputum"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Epsilometer"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

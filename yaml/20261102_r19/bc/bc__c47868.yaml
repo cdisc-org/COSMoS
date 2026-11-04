@@ -1,0 +1,10 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C47868
+ncitCode: C47868
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C47868
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Blood Chemistry Measurement
+definition: The determination of the measured concentrations of chemical constituents of the blood by assay in a clinical laboratory.

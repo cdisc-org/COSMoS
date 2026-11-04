@@ -1,0 +1,73 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C90384
+ncitCode: C90384
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C90384
+parentConceptId: C19706
+categories:
+  - Dietary Practices
+  - Meal Data
+shortName: Food Consumption
+resultScales:
+  - Nominal
+definition: A measurement of a subject's nutritional intake.
+dataElementConcepts:
+  - conceptId: C162140
+    ncitCode: C162140
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162140
+    shortName: Meal Data Name
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C82517
+    ncitCode: C82517
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82517
+    shortName: Observation Start Date Time
+    dataType: datetime
+  - conceptId: C82516
+    ncitCode: C82516
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82516
+    shortName: Observation End Date Time
+    dataType: datetime
+  - conceptId: C162265
+    ncitCode: C162265
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162265
+    shortName: Disease Milestone Instance Name
+    dataType: string
+  - conceptId: C162266
+    ncitCode: C162266
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C162266
+    shortName: Temporal Relation to Milestone Instance
+    dataType: string
+  - conceptId: C227319
+    ncitCode: C227319
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227319
+    shortName: Disease Milestone Instance Date and Time
+    dataType: datetime

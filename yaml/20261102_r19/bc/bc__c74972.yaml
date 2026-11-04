@@ -1,0 +1,12 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C74972
+ncitCode: C74972
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74972
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+shortName: Renal Function Test
+synonyms:
+  - Kidney Function Test
+definition: A laboratory procedure that evaluates the kidney function.

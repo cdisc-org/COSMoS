@@ -1,0 +1,23 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C117466
+ncitCode: C117466
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117466
+categories:
+  - RETIRED
+shortName: Exposure as Collected Domain [RETIRED]
+synonyms:
+  - EC
+  - Exposure as Collected
+resultScales:
+  - Nominal
+definition: "This interventions domain model reflects protocol-specified study treatment administrations, as collected. [RETIRED - Use Study Product Administration]"
+dataElementConcepts:
+  - conceptId: C117489
+    ncitCode: C117489
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117489
+    shortName: Exposure as Collected Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"

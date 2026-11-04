@@ -1,0 +1,174 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: MLFREE
+domain: ML
+shortName: Meal Data Free Text Format
+source: ML.MLTRT
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C90384
+variables:
+  - name: MLTRT
+    dataElementConceptId: C162140
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLTRT
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: MLDECOD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Collected
+    originSource: Investigator
+  - name: MLDECOD
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MLCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MLSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLSCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: MLCAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MLDOSE
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLDOSE
+      linkingPhrase: is the administered amount of the treatment in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MLDOSU
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLDOSU
+      linkingPhrase: is the unit for
+      predicateTerm: IS_UNIT_FOR
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MLDOSFRM
+    isNonStandard: false
+    codelist:
+      conceptId: C66726
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66726
+      submissionValue: FRM
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: MLDOSFRM
+      linkingPhrase: is the physical form of the product in
+      predicateTerm: IS_ATTRIBUTE_FOR
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MLSTDTC
+    dataElementConceptId: C82517
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: MLSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MLENDTC
+    dataElementConceptId: C82516
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: MLENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: MLTRT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: MIDS
+    dataElementConceptId: C162265
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: RELMIDS
+    dataElementConceptId: C162266
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MIDSDTC
+    dataElementConceptId: C227319
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

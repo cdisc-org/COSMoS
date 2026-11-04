@@ -1,0 +1,51 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C78721
+ncitCode: C78721
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C78721
+parentConceptId: C25256
+categories:
+  - Drug Accountability
+shortName: Dispensed Amount
+synonyms:
+  - DISPAMT
+  - Dispensed Amount
+resultScales:
+  - Quantitative
+definition: The quantity of a product that has been dispensed.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C82531
+    ncitCode: C82531
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82531
+    shortName: Reference ID
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: float
+  - conceptId: C25709
+    ncitCode: C25709
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25709
+    shortName: Unit of Measure
+    dataType: string
+    exampleSet:
+      - "BAG"
+      - "BOTTLE"
+      - "BOX"
+      - "CAPSULE"
+      - "PACKAGE"
+      - "PATCH"
+      - "TABLET"
+      - "TUBE"
+      - "VIAL"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

@@ -1,0 +1,9 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C28076
+ncitCode: C28076
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C28076
+categories:
+  - Disease Morphology
+shortName: Disease Grade Qualifier
+definition: "A term that refers to the cellular differentiation of a malignant cellular infiltrate. A cancer is defined through grades I-IV (or 1-4), or as well, moderately, poorly differentiated or undifferentiated."

@@ -1,0 +1,90 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C18000
+ncitCode: C18000
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C18000
+parentConceptId: C28076
+categories:
+  - Microscopic Findings
+  - Pathology
+  - Oncology Standards
+  - Breast Cancer
+  - Disease Grade
+shortName: Histologic Grade
+synonyms:
+  - OVLTGRD
+  - Overall Tumor Grade
+  - Grade
+  - Grading
+  - Histological Grade
+  - Histopathologic Grade
+resultScales:
+  - Ordinal
+definition: The degree of abnormality of cancer cells, a measure of differentiation, the extent to which cancer cells are similar in appearance and function to healthy cells of the same tissue type. The degree of differentiation often relates to the clinical behavior of the particular tumor. Based on the microscopic findings, tumor grade is commonly described by one of four degrees of severity. Histopathologic grade of a tumor may be used to plan treatment and estimate the future course, outcome, and overall prognosis of disease. Certain types of cancers, such as soft tissue sarcoma, primary brain tumors, lymphomas, and breast have special grading systems.
+coding:
+  - code: 44648-4
+    system: http://loinc.org/
+    systemName: LOINC
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C117062
+    ncitCode: C117062
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C117062
+    shortName: Measurement, Test or Examination Detail
+    dataType: string
+    exampleSet:
+      - "Nottingham Histologic Grade"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Tissue"
+  - conceptId: C171435
+    ncitCode: C171435
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171435
+    shortName: Specimen Anatomic Site
+    dataType: string
+    exampleSet:
+      - "Breast"
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C70714
+    ncitCode: C70714
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70714
+    shortName: Biospecimen Condition
+    dataType: string
+    exampleSet:
+      - "Paraffin Embedded"
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+    exampleSet:
+      - "Grade 1"
+      - "Grade 2"
+      - "Grade 3"
+  - conceptId: C51824
+    ncitCode: C51824
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C51824
+    shortName: Evaluator
+    dataType: string
+    exampleSet:
+      - "Pathologist"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
