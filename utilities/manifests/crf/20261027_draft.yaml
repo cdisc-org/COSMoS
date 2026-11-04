@@ -1,0 +1,36 @@
+# Transcribed from the active block of utilities/convert_crf_xlsx2yaml.sas (crf_updates branch).
+# Unlike the 20260630 draft (one combined workbook), this package reads one workbook per CRF
+# domain from curation/draft/crf/.
+# CRF Specializations were not released with Package 19.  This file is left to serve as an
+# example for Package 20. These lines can be removed for that release.
+release: "20261027_r19"
+domain: crf
+package: "20261027"
+override_package_date: "2026-10-27"
+out_folder: yaml/20261027_r19/crf
+jobs:
+  - excel_file: curation/draft/package19/R19_aims_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_apache_II_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_atlas_cdisc_crf_specialization.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_ces_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations-CES"
+    type: qs
+  - excel_file: curation/draft/package19/R19_child_pugh_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_ecog_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_kfss_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  - excel_file: curation/draft/package19/R19_pasi_fredriksson_cdisc_crf_specializations.xlsx
+    range: "CRF Specializations"
+    type: rs
+  

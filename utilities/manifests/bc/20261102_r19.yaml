@@ -1,0 +1,74 @@
+# Release 19 (package 19): Biomedical Concepts. One job per sheet in curation/package19/ that holds
+# Biomedical Concepts.
+release: "20261102_r19"
+domain: bc
+package: "20261102"
+override_package_date: "2026-11-02"
+out_folder: yaml/20261102_r19/bc
+jobs:
+  - excel_file: curation/package19/R19_BC_DDPERF.xlsx
+    range: BC_DD_Edits
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_BrCa.xlsx
+    range: BC_MI
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_BrCa.xlsx
+    range: BC_PR
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_BrCa.xlsx
+    range: BC_RS
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_HO.xlsx
+    range: "Biomedical Concepts"
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_LB.xlsx
+    range: BC_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_MS.xlsx
+    range: BC_MS
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: BC_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: BC_UR_HM_GI
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: BC_CV
+    type: ""
+  - excel_file: curation/package19/R19_BC_DA.xlsx
+    range: BC_DA
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: BC_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: BC_AG
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: BC_FA
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: BC_CE
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: BC_ML
+    type: ""
+  - excel_file: curation/package19/R19_BC_DSS_Misc_Edits.xlsx
+    range: BC
+    type: ""
+  - excel_file: curation/package19/R19_DSS_Misc_Edit_2.xlsx
+    range: BC_PR
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: BC_SU
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: BC_VS
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: BC_PR
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_Misc_3.xlsx
+    range: BC_RP
+    type: ""
