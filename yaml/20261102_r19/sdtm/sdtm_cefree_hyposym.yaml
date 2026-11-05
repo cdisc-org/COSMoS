@@ -1,0 +1,124 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: CEFREE_HYPOSYM
+domain: CE
+shortName: Clinical Event Hypo Symptoms Free Text
+source: CE.CETERM
+sdtmigStartVersion: "3-4"
+sdtmigEndVersion: ""
+biomedicalConceptId: C227825
+variables:
+  - name: CETERM
+    dataElementConceptId: C88021
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: CETERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: CEDECOD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Collected
+    originSource: Investigator
+  - name: CEDECOD
+    dataElementConceptId: C87846
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CEDECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: CETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CECAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    assignedTerm:
+      value: "HYPO SYMPTOMS"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CECAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: CETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CESCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: CESCAT
+      linkingPhrase: values are grouped by
+      predicateTerm: IS_GROUPED_BY
+      object: CECAT
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: CESTDTC
+    dataElementConceptId: C87855
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: CESTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: CETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: CEENDTC
+    dataElementConceptId: C87857
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: CEENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: CETERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: RELMIDS
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MIDS
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: MIDSDTC
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor

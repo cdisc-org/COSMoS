@@ -1,0 +1,208 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: VOLSPLEEN
+domain: HM
+shortName: Volume of Spleen
+source: HM.HMTESTCD
+sdtmigStartVersion: "4-0"
+sdtmigEndVersion: ""
+biomedicalConceptId: C74720
+variables:
+  - name: HMTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C228168
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C228168
+      submissionValue: HMTESTCD
+    assignedTerm:
+      conceptId: C74720
+      value: "VOLUME"
+    role: Topic
+    relationship:
+      subject: HMTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: HMTEST
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: HMTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C228167
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C228167
+      submissionValue: HMTEST
+    assignedTerm:
+      conceptId: C74720
+      value: "Volume"
+    role: Qualifier
+    relationship:
+      subject: HMTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+  - name: HMCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: HMCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: HMTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: HMMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "MRI"
+      - "ULTRASOUND"
+      - "CT SCAN"
+    role: Qualifier
+    relationship:
+      subject: HMMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: HMTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: HMORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: HMORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true
+  - name: HMORRESU
+    dataElementConceptId: C44279
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "mL"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: HMORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: HMORRES
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true
+  - name: HMSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: HMSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true
+  - name: HMSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: HMSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true
+  - name: HMSTRESU
+    dataElementConceptId: C44279
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C28254
+      value: "mL"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: HMSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: HMSTRESN
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true
+  - name: HMLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    assignedTerm:
+      conceptId: C12432
+      value: "SPLEEN"
+    role: Qualifier
+    relationship:
+      subject: HMLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    comparator: EQ
+  - name: HMDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: HMDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: HMTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false

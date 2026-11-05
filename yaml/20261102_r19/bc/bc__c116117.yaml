@@ -1,0 +1,9 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C116117
+ncitCode: C116117
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C116117
+categories:
+  - Laboratory Tests
+shortName: Inhibitory Concentration Test
+definition: A laboratory test to determine the concentration of a substance that will inhibit a biological or biochemical function, such as microorganism growth or enzymatic activity.

@@ -1,0 +1,150 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: CARDIOLOGYUNITVISIT
+domain: HO
+shortName: Cardiology Unit Visit
+source: HO.HODECOD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C177950
+variables:
+  - name: HOCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: HOCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: HOSCAT
+    dataElementConceptId: C25692
+    isNonStandard: false
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: HOSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: HODECOD
+    dataElementConceptId: C123944
+    isNonStandard: false
+    codelist:
+      conceptId: C171444
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171444
+      submissionValue: HODECOD
+    assignedTerm:
+      conceptId: C177950
+      value: "CARDIOLOGY UNIT VISIT"
+    role: Qualifier
+    dataType: text
+    length: 200
+    relationship:
+      subject: HODECOD
+      linkingPhrase: is a dictionary-derived term for the value in
+      predicateTerm: IS_DERIVED_FROM
+      object: HOTERM
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+  - name: HOTERM
+    dataElementConceptId: C124023
+    isNonStandard: false
+    role: Topic
+    dataType: text
+    length: 200
+    relationship:
+      subject: HOTERM
+      linkingPhrase: is original text for
+      predicateTerm: IS_ORIGINAL_TEXT_FOR
+      object: HODECOD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Collected
+    originSource: Investigator
+  - name: HOPRESP
+    dataElementConceptId: C171000
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    assignedTerm:
+      conceptId: C49488
+      value: "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: HOPRESP
+      linkingPhrase: indicates pre-specification of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+  - name: HOOCCUR
+    dataElementConceptId: C127786
+    isNonStandard: false
+    codelist:
+      conceptId: C66742
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C66742
+      submissionValue: NY
+    subsetCodelist: NY_NY
+    valueList:
+      - "N"
+      - "Y"
+    role: Qualifier
+    dataType: text
+    length: 1
+    relationship:
+      subject: HOOCCUR
+      linkingPhrase: indicates occurrence of the value in
+      predicateTerm: IS_INDICATOR_FOR
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: HOSTDTC
+    dataElementConceptId: C124009
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: HOSTDTC
+      linkingPhrase: is the start date for
+      predicateTerm: IS_TIMING_FOR
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+  - name: HOENDTC
+    dataElementConceptId: C123956
+    isNonStandard: false
+    role: Timing
+    dataType: datetime
+    relationship:
+      subject: HOENDTC
+      linkingPhrase: is the end date for
+      predicateTerm: IS_TIMING_FOR
+      object: HOTERM
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator

@@ -1,0 +1,50 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C43246
+ncitCode: C43246
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C43246
+categories:
+  - Body Measurements
+  - Cardiovascular Findings
+shortName: Mass
+synonyms:
+  - MASS
+resultScales:
+  - Quantitative
+definition: The amount of matter in an object.
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C42579
+    ncitCode: C42579
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C42579
+    shortName: Unit of Mass
+    dataType: string
+    exampleSet:
+      - "Grams"
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+  - conceptId: C13717
+    ncitCode: C13717
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C13717
+    shortName: Anatomic Site
+    dataType: string
+  - conceptId: C25185
+    ncitCode: C25185
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25185
+    shortName: Laterality
+    dataType: string
+    exampleSet:
+      - "Left"
+      - "Right"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

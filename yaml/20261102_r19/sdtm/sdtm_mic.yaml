@@ -1,0 +1,212 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: MIC
+domain: MS
+shortName: Minimum Inhibitory Concentration Test
+source: MS.MSTEST
+sdtmigStartVersion: "3-3"
+sdtmigEndVersion: ""
+biomedicalConceptId: C128985
+variables:
+  - name: MSTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C128688
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C128688
+      submissionValue: MSTESTCD
+    assignedTerm:
+      conceptId: C128985
+      value: "MIC"
+    role: Topic
+    relationship:
+      subject: MSTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: MSTEST
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: MSTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C128687
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C128687
+      submissionValue: MSTEST
+    assignedTerm:
+      conceptId: C128985
+      value: "Minimum Inhibitory Concentration"
+    role: Qualifier
+    relationship:
+      subject: MSTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: MSTESTCD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+  - name: MSREFID
+    dataElementConceptId: C82531
+    isNonStandard: false
+    role: Identifier
+    relationship:
+      subject: MSREFID
+      linkingPhrase: is the identifier for the source data used in the performance of the test in
+      predicateTerm: IDENTIFIES_PRODUCT_IN
+      object: MSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MSGRPID
+    dataElementConceptId: C117049
+    isNonStandard: false
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: MSCAT
+    dataElementConceptId: C25372
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: MSCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: MSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: NHOID
+    dataElementConceptId: C227322
+    isNonStandard: false
+    mandatoryVariable: true
+    mandatoryValue: false
+  - name: MSAGENT
+    dataElementConceptId: C227288
+    isNonStandard: false
+    mandatoryVariable: true
+    mandatoryValue: false
+  - name: MSORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MSORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MSTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true
+  - name: MSORRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MSORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: MSORRES
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Collected
+    originSource: Vendor
+    vlmTarget: true
+  - name: MSSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MSSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MSTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true
+  - name: MSSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 12
+    format: "12.4"
+    significantDigits: 4
+    relationship:
+      subject: MSSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: MSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Derived
+    originSource: Vendor
+    vlmTarget: true
+  - name: MSSTRESU
+    dataElementConceptId: C48207
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: MSSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: MSSTRESN
+    mandatoryVariable: false
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Vendor
+    vlmTarget: true
+  - name: MSMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "EPSILOMETER"
+      - "MACRO BROTH DILUTION"
+      - "MICRO BROTH DILUTION"
+      - "AGAR DILUTION"
+    role: Qualifier
+    relationship:
+      subject: MSMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: MSTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: MSDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: MSDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: MSTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
