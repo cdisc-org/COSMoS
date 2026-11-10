@@ -1,0 +1,41 @@
+name: Report a Bug
+description: An unexpected error or behavior
+projects:
+  - cdisc-org/COSMoS
+type: Bug
+body:
+  - type: dropdown
+    id: topic
+    validations:
+      required: true
+    attributes:
+      label: Topic
+      multiple: true
+      options:
+        - Biomedical Concepts
+        - SDTM Dataset Specializations
+        - CRF Specializations
+        - Custom
+  - type: markdown
+    attributes:
+      value: |
+        In the fields below, please provide a 
+        [Minimal Reproducible Example](https://stackoverflow.com/help/minimal-reproducible-example).
+  - type: textarea
+    id: problem
+    validations:
+      required: true
+    attributes:
+      label: Describe the issue you are having in detail. Provide steps to reproduce, if applicable.
+  - type: textarea
+    id: screenshots
+    validations:
+      required: false
+    attributes:
+      label: Paste any screenshots that help demonstrate your issue.
+  - type: textarea
+    id: files
+    validations:
+      required: false
+    attributes:
+      label: Attach any files that help reproducing or diagnosing your issue.

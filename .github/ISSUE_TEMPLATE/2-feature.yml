@@ -1,0 +1,30 @@
+name: Package Release Request
+description: A request for release of Biomedical Concept and/or Specialization Package
+projects:
+  - cdisc-org/COSMoS
+type: Feature
+body:
+  - type: dropdown
+    id: topic
+    validations:
+      required: true
+    attributes:
+      label: Topic
+      multiple: true
+      options:
+        - Biomedical Concepts
+        - SDTM Dataset Specializations
+        - CRF Specializations
+        - Custom
+  - type: textarea
+    id: feature-request
+    validations:
+      required: true
+    attributes:
+      label: Describe the package release in detail.
+  - type: textarea
+    id: screenshots
+    validations:
+      required: false
+    attributes:
+      label: Paste any screenshots or diagrams that help describe the Package.
