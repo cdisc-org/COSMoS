@@ -427,6 +427,9 @@ def main():
     csv_file_hierarchy = csv_file_hierarchy.replace("_latest.xlsx", "_hierarchy_latest.csv")
     csv_file_hierarchy = csv_file_hierarchy.replace("_latest_dev.xlsx", "_hierarchy_latest_dev.csv")
     csv_file_hierarchy = csv_file_hierarchy.replace("_draft.xlsx", "_draft_hierarchy.csv")
+    if csv_file_hierarchy == args.excel_file:
+        # Name didn't match a known suffix; never overwrite the Excel file.
+        csv_file_hierarchy = os.path.splitext(args.excel_file)[0] + "_hierarchy.csv"
     df_hierarchy.to_csv(csv_file_hierarchy, index=False)
     print(f"CSV file saved as {csv_file_hierarchy}")
 
