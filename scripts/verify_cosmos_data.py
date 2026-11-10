@@ -10,7 +10,7 @@ PROD_DATA = {
     "bc_latest_package_date": "2026-11-02",
     "bc_packages": 19,
     "bc_biomedicalconcepts": 1588,
-    "bc_categories": 455,
+    "bc_categories": 478,
     "bc_latest_package_biomedicalconcepts": 140,
     "sdtm_latest_package_date": "2026-11-02",
     "sdtm_packages": 17,
@@ -24,14 +24,14 @@ PROD_DATA = {
 # packages, so package-history-based counts differ from prod.
 DEV_DATA = {
     "bc_latest_package_date": "2026-11-02",
-    "bc_packages": 1,
-    "bc_biomedicalconcepts": 140,
-    "bc_categories": 69,
+    "bc_packages": 19,
+    "bc_biomedicalconcepts": 1588,
+    "bc_categories": 478,
     "bc_latest_package_biomedicalconcepts": 140,
     "sdtm_latest_package_date": "2026-11-02",
-    "sdtm_packages": 1,
-    "sdtm_datasetspecializations": 230,
-    "sdtm_domains": 24,
+    "sdtm_packages": 17,
+    "sdtm_datasetspecializations": 1641,
+    "sdtm_domains": 41,
     "sdtm_latest_package_datasetspecializations": 230,
 }
 
@@ -96,7 +96,11 @@ if __name__ == "__main__":
         "v2", bc_latest_package_date
     )
     check(type, len(bc_latest_package_biomedicalconcepts), expected.get(type))
-    check("bc_latest_package_date", bc_latest_package_date, expected.get("bc_latest_package_date"))
+    check(
+        "bc_latest_package_date",
+        bc_latest_package_date,
+        expected.get("bc_latest_package_date"),
+    )
 
     # Get latest BCs
     type = "bc_biomedicalconcepts"
@@ -125,7 +129,11 @@ if __name__ == "__main__":
         client.get_sdtm_package_datasetspecializations("v2", sdtm_latest_package_date)
     )
     check(type, len(sdtm_latest_package_datasetspecializations), expected.get(type))
-    check("sdtm_latest_package_date", sdtm_latest_package_date, expected.get("sdtm_latest_package_date"))
+    check(
+        "sdtm_latest_package_date",
+        sdtm_latest_package_date,
+        expected.get("sdtm_latest_package_date"),
+    )
 
     # Get latest SDTM Dataset Specializations
     type = "sdtm_datasetspecializations"
