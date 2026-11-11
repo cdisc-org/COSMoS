@@ -36,6 +36,45 @@ def fmt(value):
     return "<absent>" if value is None else json.dumps(value, ensure_ascii=False)
 
 
+def report_top_level(old, new):
+    top = list(diff_values(old, new))
+    if top:
+        print("== Top-level changes ==")
+        for path, o, n in top:
+            print(f"  {path}: {fmt(o)} -> {fmt(n)}")
+    return bool(top)
+
+
+def report_added_removed(old_vars, new_vars):
+    added = [n for n in new_vars if n not in old_vars]
+    removed = [n for n in old_vars if n not in new_vars]
+    if added:
+        print(f"\n== Variables added ({len(added)}) ==")
+        for name in added:
+            print(f"  + {name} ({new_vars[name].get('role')})")
+    if removed:
+        print(f"\n== Variables removed ({len(removed)}) ==")
+        for name in removed:
+            print(f"  - {name} ({old_vars[name].get('role')})")
+    return bool(added or removed)
+
+
+def report_changed(old_vars, new_vars):
+    var_changes = []
+    for name in old_vars:
+        if name in new_vars:
+            diffs = list(diff_values(old_vars[name], new_vars[name]))
+            if diffs:
+                var_changes.append((name, diffs))
+    if var_changes:
+        print(f"\n== Variables changed ({len(var_changes)}) ==")
+        for name, diffs in var_changes:
+            print(f"  ~ {name}")
+            for path, o, n in diffs:
+                print(f"      {path}: {fmt(o)} -> {fmt(n)}")
+    return bool(var_changes)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("old")
@@ -50,42 +89,12 @@ def main():
         old.pop("_links", None)
         new.pop("_links", None)
 
-    changed = False
-
-    top = list(diff_values(old, new))
-    if top:
-        changed = True
-        print("== Top-level changes ==")
-        for path, o, n in top:
-            print(f"  {path}: {fmt(o)} -> {fmt(n)}")
-
-    added = [n for n in new_vars if n not in old_vars]
-    removed = [n for n in old_vars if n not in new_vars]
-    if added:
-        changed = True
-        print(f"\n== Variables added ({len(added)}) ==")
-        for name in added:
-            print(f"  + {name} ({new_vars[name].get('role')})")
-    if removed:
-        changed = True
-        print(f"\n== Variables removed ({len(removed)}) ==")
-        for name in removed:
-            print(f"  - {name} ({old_vars[name].get('role')})")
-
-    var_changes = []
-    for name in old_vars:
-        if name in new_vars:
-            diffs = list(diff_values(old_vars[name], new_vars[name]))
-            if diffs:
-                var_changes.append((name, diffs))
-    if var_changes:
-        changed = True
-        print(f"\n== Variables changed ({len(var_changes)}) ==")
-        for name, diffs in var_changes:
-            print(f"  ~ {name}")
-            for path, o, n in diffs:
-                print(f"      {path}: {fmt(o)} -> {fmt(n)}")
-
+    results = [
+        report_top_level(old, new),
+        report_added_removed(old_vars, new_vars),
+        report_changed(old_vars, new_vars),
+    ]
+    changed = any(results)
     if not changed:
         print("No differences.")
     return 1 if changed else 0
