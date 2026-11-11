@@ -1,0 +1,98 @@
+# Release 19 (package 19): SDTM dataset specializations. One job per sheet in curation/package19/ that holds
+# SDTM specializations (the BC_* sheets are in utilities/manifests/bc/20261028_r19.yaml).
+release: "20261102_r19"
+domain: sdtm
+package: "20261102"
+override_package_date: "2026-11-02"
+out_folder: yaml/20261102_r19/sdtm
+check_relationships: true
+# Subset codelists: a variable row may name a subset of a CT codelist in its `subset_codelist` column
+# (e.g. only some of the terms in a larger codelist). The converter looks that name up in the sheet below,
+# joins the matching terms into the variable's value list, writes `subsetCodelist:` in the YAML, and flags
+# a mismatch if the row's own value_list disagrees. Every subset name used in the package 19 sheets exists
+# in this sheet, as in r18, so the same source is kept. Package 19 has no subset sheet of its own.
+subsets_source:
+  file: curation/package06/BC_Package_R6_LZZT.xlsx
+  range: "Subset Codelist Example"
+jobs:
+  - excel_file: curation/package19/R19_BC_DA.xlsx
+    range: SDTM
+    type: ""
+  - excel_file: curation/package19/R19_BC_DDPERF.xlsx
+    range: DSS_DD_Edits
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_MH
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_CM
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_AG
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_FA
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_CE
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_ML
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_EX
+    type: ""
+  - excel_file: curation/package19/R19_BC_DIABETES_latest_3_2.xlsx
+    range: SDTM_EC
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_BrCa.xlsx
+    range: SDTM_MI
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_BrCa.xlsx
+    range: SDTM_PR
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_HO.xlsx
+    range: "SDTM Dataset Specializations"
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_LB.xlsx
+    range: SDTM_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_MS.xlsx
+    range: SDTM_MS
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: SDTM_LB
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: SDTM_UR_HM_GI
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: SDTM_CV
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_PKD.xlsx
+    range: SDTM_MH
+    type: ""
+  - excel_file: curation/package19/R19_BC_DSS_Misc_Edits.xlsx
+    range: SDTM
+    type: ""
+  - excel_file: curation/package19/R19_DSS_Misc_Edit_2.xlsx
+    range: SDTM_LB
+    type: ""
+  - excel_file: curation/package19/R19_DSS_Misc_Edit_2.xlsx
+    range: SDTM_PR
+    type: ""
+  - excel_file: curation/package19/R19_BC_SDTM_Misc_3.xlsx
+    range: SDTM_RP
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: SDTM_SU
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: SDTM_VS
+    type: ""
+  - excel_file: curation/package19/R19_BC_PKD_additional.xlsx
+    range: SDTM_PR
+    type: ""

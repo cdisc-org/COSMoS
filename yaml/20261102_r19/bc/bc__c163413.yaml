@@ -1,0 +1,40 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C163413
+ncitCode: C163413
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C163413
+parentConceptId: C25506
+categories:
+  - Factor
+shortName: Precipitating Factor
+synonyms:
+  - PPTFCT
+resultScales:
+  - Nominal
+definition: The factor(s) that cause or trigger the onset of an occurrence.
+dataElementConcepts:
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C82546
+    ncitCode: C82546
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82546
+    shortName: Observation Object
+    dataType: string
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: string
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime

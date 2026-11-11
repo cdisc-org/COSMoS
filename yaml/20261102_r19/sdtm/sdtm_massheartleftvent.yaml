@@ -1,0 +1,206 @@
+packageDate: "2026-11-02"
+packageType: sdtm
+datasetSpecializationId: MASSHEARTLEFTVENT
+domain: CV
+shortName: Mass of Heart Left Ventricle
+source: CV.CVTESTCD
+sdtmigStartVersion: "3-2"
+sdtmigEndVersion: ""
+biomedicalConceptId: C43246
+variables:
+  - name: CVTESTCD
+    isNonStandard: false
+    codelist:
+      conceptId: C101847
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101847
+      submissionValue: CVTESTCD
+    assignedTerm:
+      conceptId: C43246
+      value: "MASS"
+    role: Topic
+    relationship:
+      subject: CVTESTCD
+      linkingPhrase: is the code for the value in
+      predicateTerm: IS_DECODED_BY
+      object: CVTEST
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+    comparator: EQ
+  - name: CVTEST
+    isNonStandard: false
+    codelist:
+      conceptId: C101846
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101846
+      submissionValue: CVTEST
+    assignedTerm:
+      conceptId: C43246
+      value: "Mass"
+    role: Qualifier
+    relationship:
+      subject: CVTEST
+      linkingPhrase: decodes the value in
+      predicateTerm: DECODES
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: true
+    originType: Assigned
+    originSource: Sponsor
+  - name: CVCAT
+    isNonStandard: false
+    role: Qualifier
+    relationship:
+      subject: CVCAT
+      linkingPhrase: groups values in
+      predicateTerm: GROUPS
+      object: CVTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+  - name: CVMETHOD
+    dataElementConceptId: C82535
+    isNonStandard: false
+    codelist:
+      conceptId: C85492
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C85492
+      submissionValue: METHOD
+    valueList:
+      - "ECHOCARDIOGRAPHY"
+    role: Qualifier
+    relationship:
+      subject: CVMETHOD
+      linkingPhrase: is the method for the test in
+      predicateTerm: SPECIFIES
+      object: CVTESTCD
+    mandatoryVariable: false
+    mandatoryValue: false
+    comparator: IN
+  - name: CVORRES
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: CVORRES
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true
+  - name: CVORRESU
+    dataElementConceptId: C42579
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    valueList:
+      - "g"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: CVORRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: CVORRES
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Collected
+    originSource: Investigator
+    vlmTarget: true
+  - name: CVSTRESC
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: CVSTRESC
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true
+  - name: CVSTRESN
+    dataElementConceptId: C70856
+    isNonStandard: false
+    role: Qualifier
+    dataType: float
+    length: 8
+    format: "8.3"
+    significantDigits: 3
+    relationship:
+      subject: CVSTRESN
+      linkingPhrase: is the result of the test in
+      predicateTerm: IS_RESULT_OF
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Derived
+    originSource: Sponsor
+    vlmTarget: true
+  - name: CVSTRESU
+    dataElementConceptId: C42579
+    isNonStandard: false
+    codelist:
+      conceptId: C71620
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C71620
+      submissionValue: UNIT
+    assignedTerm:
+      conceptId: C48155
+      value: "g"
+    role: Qualifier
+    dataType: text
+    length: 20
+    relationship:
+      subject: CVSTRESU
+      linkingPhrase: is the unit for the value in
+      predicateTerm: IS_UNIT_FOR
+      object: CVSTRESN
+    mandatoryVariable: true
+    mandatoryValue: false
+    originType: Assigned
+    originSource: Sponsor
+    vlmTarget: true
+  - name: CVLOC
+    dataElementConceptId: C13717
+    isNonStandard: false
+    codelist:
+      conceptId: C74456
+      href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C74456
+      submissionValue: LOC
+    assignedTerm:
+      conceptId: C12871
+      value: "HEART, LEFT VENTRICLE"
+    role: Qualifier
+    relationship:
+      subject: CVLOC
+      linkingPhrase: specifies the anatomical location of the performance of the test in
+      predicateTerm: SPECIFIES
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false
+    comparator: EQ
+  - name: CVDTC
+    dataElementConceptId: C82515
+    isNonStandard: false
+    role: Timing
+    relationship:
+      subject: CVDTC
+      linkingPhrase: is the date of occurrence for
+      predicateTerm: IS_TIMING_FOR
+      object: CVTESTCD
+    mandatoryVariable: true
+    mandatoryValue: false

@@ -1,0 +1,54 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C82032
+ncitCode: C82032
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82032
+parentConceptId: C74735
+categories:
+  - Laboratory Tests
+  - Chemistry Tests
+  - Protein or Enzyme Type Measurements
+shortName: "ProB-Type Natriuretic Peptide Measurement"
+synonyms:
+  - "ProB-type Natriuretic Peptide"
+  - BNPPRO
+  - proBNP
+resultScales:
+  - Quantitative
+definition: "The determination of the amount of proB-type natriuretic peptide present in a sample."
+dataElementConcepts:
+  - conceptId: C70856
+    ncitCode: C70856
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70856
+    shortName: Observation Result
+    dataType: decimal
+  - conceptId: C48207
+    ncitCode: C48207
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C48207
+    shortName: Unit of Concentration
+    dataType: string
+    exampleSet:
+      - "pg/mL"
+      - "ng/L"
+      - "pmol/L"
+  - conceptId: C70713
+    ncitCode: C70713
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C70713
+    shortName: Biospecimen Type
+    dataType: string
+    exampleSet:
+      - "Serum"
+      - "Plasma"
+      - "Blood"
+  - conceptId: C82515
+    ncitCode: C82515
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82515
+    shortName: Collection Date Time
+    dataType: datetime
+  - conceptId: C82535
+    ncitCode: C82535
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C82535
+    shortName: Test Method
+    dataType: string
+    exampleSet:
+      - "Immunoassay"

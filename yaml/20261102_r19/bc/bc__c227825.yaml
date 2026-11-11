@@ -1,0 +1,74 @@
+packageDate: "2026-11-02"
+packageType: bc
+conceptId: C227825
+ncitCode: C227825
+href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C227825
+categories:
+  - Events
+  - Reported Events
+  - Clinical Events
+shortName: Solicited Clinical Event
+synonyms:
+  - Solicited CE
+  - CE
+  - Clinical Event
+resultScales:
+  - Nominal
+  - Narrative
+definition: A clinical event that is reported through an organized data collection system.
+dataElementConcepts:
+  - conceptId: C88021
+    ncitCode: C88021
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C88021
+    shortName: Clinical Events Reported Term
+    dataType: string
+  - conceptId: C87846
+    ncitCode: C87846
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87846
+    shortName: Clinical Events Dictionary Derived Term
+    dataType: string
+  - conceptId: C25372
+    ncitCode: C25372
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25372
+    shortName: Category
+    dataType: string
+  - conceptId: C25692
+    ncitCode: C25692
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C25692
+    shortName: Subcategory
+    dataType: string
+  - conceptId: C171000
+    ncitCode: C171000
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C171000
+    shortName: Prespecified Event or Intervention Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C127786
+    ncitCode: C127786
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C127786
+    shortName: Occurrence Indicator
+    dataType: boolean
+    exampleSet:
+      - "Y"
+      - "N"
+  - conceptId: C87855
+    ncitCode: C87855
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87855
+    shortName: Clinical Events Severity
+    dataType: string
+    exampleSet:
+      - "Mild"
+      - "Moderate"
+      - "Severe"
+  - conceptId: C87857
+    ncitCode: C87857
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87857
+    shortName: Clinical Events Start Date Time
+    dataType: datetime
+  - conceptId: C87841
+    ncitCode: C87841
+    href: https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C87841
+    shortName: Clinical Event End Date Time
+    dataType: datetime
